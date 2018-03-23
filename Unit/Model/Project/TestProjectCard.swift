@@ -1,4 +1,5 @@
 import XCTest
+@testable import catban
 
 class TestProjectCard:XCTestCase {
     private var card:ProjectCard!

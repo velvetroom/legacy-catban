@@ -11,5 +11,7 @@ class TestProject:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.project.columns, "Failed to load columns")
+        XCTAssertNotNil(self.project.name, "Project has not name")
     }
 }

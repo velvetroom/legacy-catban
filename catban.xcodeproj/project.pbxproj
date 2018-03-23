@@ -33,6 +33,8 @@
 		DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F720654667002C0DEE /* ProjectColumn.swift */; };
 		DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F920654A21002C0DEE /* TestProjectCard.swift */; };
 		DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FB20654AF3002C0DEE /* ProjectCard.swift */; };
+		DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FD20654B67002C0DEE /* Project+Factory.swift */; };
+		DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		DAD433F720654667002C0DEE /* ProjectColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumn.swift; sourceTree = "<group>"; };
 		DAD433F920654A21002C0DEE /* TestProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectCard.swift; sourceTree = "<group>"; };
 		DAD433FB20654AF3002C0DEE /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
+		DAD433FD20654B67002C0DEE /* Project+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Factory.swift"; sourceTree = "<group>"; };
+		DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 				DA1AD549206531A1002A7493 /* TestProject.swift */,
 				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 				DAD433F920654A21002C0DEE /* TestProjectCard.swift */,
+				DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DA1AD54C2065328D002A7493 /* Project.swift */,
+				DAD433FD20654B67002C0DEE /* Project+Factory.swift */,
 				DAD433F720654667002C0DEE /* ProjectColumn.swift */,
 				DAD433FB20654AF3002C0DEE /* ProjectCard.swift */,
 			);
@@ -439,6 +445,7 @@
 			files = (
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
 				DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */,
+				DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
@@ -459,6 +466,7 @@
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
+				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
