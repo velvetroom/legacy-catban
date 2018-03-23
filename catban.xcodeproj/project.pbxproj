@@ -35,6 +35,7 @@
 		DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FB20654AF3002C0DEE /* ProjectCard.swift */; };
 		DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FD20654B67002C0DEE /* Project+Factory.swift */; };
 		DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */; };
+		DAE698CF20656A350046721C /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698CE20656A350046721C /* brand.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		DAD433FB20654AF3002C0DEE /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
 		DAD433FD20654B67002C0DEE /* Project+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Factory.swift"; sourceTree = "<group>"; };
 		DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Factory.swift; sourceTree = "<group>"; };
+		DAE698CE20656A350046721C /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */,
+				DAE698CE20656A350046721C /* brand.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE698CF20656A350046721C /* brand.xcassets in Resources */,
 				DA8AB2302064E484005A393E /* Design in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
@@ -627,6 +631,7 @@
 		DA8AB2172064E34A005A393E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Configuration/catbanInfo.plist";
@@ -642,6 +647,7 @@
 		DA8AB2182064E34A005A393E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Configuration/catbanInfo.plist";
