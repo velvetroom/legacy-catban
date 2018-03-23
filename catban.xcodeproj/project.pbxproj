@@ -45,6 +45,8 @@
 		DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698DC20657A560046721C /* ProjectLoader.swift */; };
 		DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698DE20657A850046721C /* MockProjectLoader.swift */; };
 		DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E020657AB40046721C /* TestProjectLoader.swift */; };
+		DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E32065812C0046721C /* TestLandingViewModel.swift */; };
+		DAE698E7206581840046721C /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E6206581840046721C /* LandingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		DAE698DC20657A560046721C /* ProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLoader.swift; sourceTree = "<group>"; };
 		DAE698DE20657A850046721C /* MockProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectLoader.swift; sourceTree = "<group>"; };
 		DAE698E020657AB40046721C /* TestProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectLoader.swift; sourceTree = "<group>"; };
+		DAE698E32065812C0046721C /* TestLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModel.swift; sourceTree = "<group>"; };
+		DAE698E6206581840046721C /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				DA8AB2512064EA5D005A393E /* Controller */,
 				DA8AB2542064EA5E005A393E /* Model */,
 				DA8AB24F2064EA5D005A393E /* View */,
+				DAE698E5206581770046721C /* ViewModel */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				DA8AB24C2064EA53005A393E /* Controller */,
 				DA8AB2482064EA53005A393E /* Model */,
 				DA8AB24A2064EA53005A393E /* View */,
+				DAE698E22065810E0046721C /* ViewModel */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -366,6 +372,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DAE698E22065810E0046721C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAE698E32065812C0046721C /* TestLandingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAE698E5206581770046721C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAE698E6206581840046721C /* LandingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,6 +513,7 @@
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
+				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +532,7 @@
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
+				DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */,
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
