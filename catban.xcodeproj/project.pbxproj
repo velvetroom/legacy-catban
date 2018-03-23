@@ -28,6 +28,7 @@
 		DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */; };
 		DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2722064FEC3005A393E /* TestStringExtension.swift */; };
 		DA8AB27620650388005A393E /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB27520650388005A393E /* ExtensionString.swift */; };
+		DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD433F2206540AC002C0DEE /* LocalizableProject.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DA8AB26D2064FE0E005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableLanding.strings; sourceTree = "<group>"; };
 		DA8AB2722064FEC3005A393E /* TestStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExtension.swift; sourceTree = "<group>"; };
 		DA8AB27520650388005A393E /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		DAD433F3206540AC002C0DEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableProject.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2222064E476005A393E /* InfoPlist.strings */,
+				DAD433F2206540AC002C0DEE /* LocalizableProject.strings */,
 				DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */,
 			);
 			path = Resources;
@@ -400,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8AB2302064E484005A393E /* Design in Resources */,
+				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
 				DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */,
@@ -472,6 +476,14 @@
 				DA8AB26D2064FE0E005A393E /* en */,
 			);
 			name = LocalizableLanding.strings;
+			sourceTree = "<group>";
+		};
+		DAD433F2206540AC002C0DEE /* LocalizableProject.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAD433F3206540AC002C0DEE /* en */,
+			);
+			name = LocalizableProject.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

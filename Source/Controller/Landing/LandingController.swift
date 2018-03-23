@@ -14,6 +14,11 @@ class LandingController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.adjustNavigationItem()
+        self.factoryOutlets()
+    }
+    
+    private func adjustNavigationItem() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
@@ -24,6 +29,5 @@ class LandingController:UIViewController {
             target:self,
             action:#selector(self.selectorEdit(sender:)))
         self.title = String.localizedLanding(key:"LandingController_title")
-        self.factoryOutlets()
     }
 }
