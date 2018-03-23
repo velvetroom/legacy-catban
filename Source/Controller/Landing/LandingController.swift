@@ -14,6 +14,7 @@ class LandingController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = String.localizedLanding(key:"LandingController_title")
         self.factoryOutlets()
     }
 }

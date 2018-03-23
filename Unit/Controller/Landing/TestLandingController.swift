@@ -16,6 +16,7 @@ class TestLandingController:XCTestCase {
     
     func testOutletsAreLoaded() {
         XCTAssertNotNil(self.controller.view, "Unable to load view from controller")
+        XCTAssertNotNil(self.controller.title, "Controller title not loaded")
         XCTAssertNotNil(self.controller.outlets.viewCollection, "View collection not loaded")
     }
 }

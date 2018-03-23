@@ -9,4 +9,9 @@ class ApplicationNavigationController:UINavigationController {
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationBar.prefersLargeTitles = true
+    }
 }
