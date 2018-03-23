@@ -51,6 +51,16 @@ class TestLandingController:XCTestCase {
         self.waitExpectations()
     }
     
+    func testLoadViewModel() {
+        self.startExpectation()
+        
+        self.controller.loadViewModel { [weak self] (viewModel:LandingViewModel) in
+            self?.expect?.fulfill()
+        }
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }
