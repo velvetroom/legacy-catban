@@ -11,5 +11,6 @@ class TestLandingController:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
+        XCTAssertNotNil(self.controller.outlets, "Controller doesn't have outlets")
     }
 }
