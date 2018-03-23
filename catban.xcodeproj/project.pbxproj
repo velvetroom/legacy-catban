@@ -29,6 +29,8 @@
 		DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2722064FEC3005A393E /* TestStringExtension.swift */; };
 		DA8AB27620650388005A393E /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB27520650388005A393E /* ExtensionString.swift */; };
 		DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD433F2206540AC002C0DEE /* LocalizableProject.strings */; };
+		DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */; };
+		DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F720654667002C0DEE /* ProjectColumn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		DA8AB2722064FEC3005A393E /* TestStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExtension.swift; sourceTree = "<group>"; };
 		DA8AB27520650388005A393E /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		DAD433F3206540AC002C0DEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableProject.strings; sourceTree = "<group>"; };
+		DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectColumn.swift; sourceTree = "<group>"; };
+		DAD433F720654667002C0DEE /* ProjectColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				DA1AD549206531A1002A7493 /* TestProject.swift */,
+				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DA1AD54C2065328D002A7493 /* Project.swift */,
+				DAD433F720654667002C0DEE /* ProjectColumn.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
+				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
 				DA8AB27620650388005A393E /* ExtensionString.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
@@ -448,6 +455,7 @@
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */,
+				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
