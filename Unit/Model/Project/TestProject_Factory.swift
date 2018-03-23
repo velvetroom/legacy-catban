@@ -14,4 +14,9 @@ class TestProject_Factory:XCTestCase {
         XCTAssertFalse(self.project.name.isEmpty, "Failed to assign default name")
         XCTAssertFalse(self.project.columns.isEmpty, "Failed to assign default columns")
     }
+    
+    func testFactoryColumns() {
+        let columns:[ProjectColumn] = Project.factoryDefaultColumns()
+        XCTAssertNotNil(columns, "Failed to factory columns")
+    }
 }
