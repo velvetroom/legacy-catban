@@ -2,9 +2,12 @@ import UIKit
 
 class LandingController:UIViewController {
     var outlets:LandingControllerOutlets
+    var projectLoader:ProjectLoaderProtocol
+    private(set) var project:Project?
     
     init() {
         self.outlets = LandingControllerOutlets()
+        self.projectLoader = ProjectLoader()
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -17,18 +20,8 @@ class LandingController:UIViewController {
         self.view.backgroundColor = UIColor.white
         self.adjustNavigationItem()
         self.factoryOutlets()
-    }
-    
-    private func adjustNavigationItem() {
-        self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem:UIBarButtonSystemItem.add,
-            target:self,
-            action:#selector(self.selectorAdd(sender:)))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem:UIBarButtonSystemItem.edit,
-            target:self,
-            action:#selector(self.selectorEdit(sender:)))
-        self.title = String.localizedLanding(key:"LandingController_title")
+        self.loadProject { [weak self] (project:Project) in
+            self?.project = project
+        }
     }
 }
