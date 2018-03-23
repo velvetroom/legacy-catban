@@ -1,7 +1,7 @@
 import UIKit
 
 class LandingController:UIViewController {
-    private(set) var outlets:LandingControllerOutlets
+    var outlets:LandingControllerOutlets
     
     init() {
         self.outlets = LandingControllerOutlets()
@@ -10,5 +10,10 @@ class LandingController:UIViewController {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.factoryOutlets()
     }
 }

@@ -22,6 +22,7 @@
 		DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2642064F380005A393E /* LandingViewCollection.swift */; };
 		DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */; };
 		DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */; };
+		DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DA8AB2642064F380005A393E /* LandingViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollection.swift; sourceTree = "<group>"; };
 		DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerOutlets.swift; sourceTree = "<group>"; };
 		DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerOutlets.swift; sourceTree = "<group>"; };
+		DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Outlets.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2602064F0A3005A393E /* LandingController.swift */,
+				DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */,
 				DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */,
 			);
 			path = Landing;
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
 				DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
