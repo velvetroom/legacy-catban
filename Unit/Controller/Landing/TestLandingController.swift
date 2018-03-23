@@ -17,6 +17,8 @@ class TestLandingController:XCTestCase {
     func testOutletsAreLoaded() {
         XCTAssertNotNil(self.controller.view, "Unable to load view from controller")
         XCTAssertNotNil(self.controller.title, "Controller title not loaded")
+        XCTAssertNotNil(self.controller.outlets.imageLogo, "Image logo not loaded")
+        XCTAssertNotNil(self.controller.outlets.imageLogo.image, "Image logo doesn't have an image")
         XCTAssertNotNil(self.controller.outlets.viewCollection, "View collection not loaded")
     }
 }

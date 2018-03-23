@@ -38,6 +38,7 @@
 		DAE698CF20656A350046721C /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698CE20656A350046721C /* brand.xcassets */; };
 		DAE698D120656C430046721C /* TestLandingViewCollection_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D020656C430046721C /* TestLandingViewCollection_Factory.swift */; };
 		DAE698D320656C970046721C /* LandingViewCollection+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D220656C970046721C /* LandingViewCollection+Factory.swift */; };
+		DAE698D520656F940046721C /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698D420656F940046721C /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		DAE698CE20656A350046721C /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAE698D020656C430046721C /* TestLandingViewCollection_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollection_Factory.swift; sourceTree = "<group>"; };
 		DAE698D220656C970046721C /* LandingViewCollection+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollection+Factory.swift"; sourceTree = "<group>"; };
+		DAE698D420656F940046721C /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */,
 				DAE698CE20656A350046721C /* brand.xcassets */,
+				DAE698D420656F940046721C /* assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
 				DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */,
+				DAE698D520656F940046721C /* assets.xcassets in Resources */,
 				DA8AB2312064E484005A393E /* Scripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

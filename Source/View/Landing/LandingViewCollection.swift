@@ -4,12 +4,20 @@ class LandingViewCollection:UICollectionView {
     init() {
         let layout:UICollectionViewFlowLayout = LandingViewCollection.factoryLayout()
         super.init(frame:CGRect.zero, collectionViewLayout:layout)
-        self.backgroundColor = UIColor.clear
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
+        self.configureView()
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    private func configureView() {
+        self.backgroundColor = UIColor.clear
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = true
+        self.alwaysBounceVertical = true
+        self.alwaysBounceHorizontal = true
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
     }
 }
