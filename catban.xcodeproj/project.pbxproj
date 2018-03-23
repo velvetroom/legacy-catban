@@ -14,6 +14,8 @@
 		DA8AB2312064E484005A393E /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22F2064E484005A393E /* Scripts */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
 		DA8AB2592064EB00005A393E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2582064EB00005A393E /* Application.swift */; };
+		DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB25A2064ED96005A393E /* TestApplicationNavigationController.swift */; };
+		DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB25C2064EDEE005A393E /* ApplicationNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = unitTestsInfo.plist; sourceTree = "<group>"; };
 		DA8AB2562064EA7F005A393E /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
 		DA8AB2582064EB00005A393E /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		DA8AB25A2064ED96005A393E /* TestApplicationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationNavigationController.swift; sourceTree = "<group>"; };
+		DA8AB25C2064EDEE005A393E /* ApplicationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2562064EA7F005A393E /* TestApplication.swift */,
+				DA8AB25A2064ED96005A393E /* TestApplicationNavigationController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2582064EB00005A393E /* Application.swift */,
+				DA8AB25C2064EDEE005A393E /* ApplicationNavigationController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
