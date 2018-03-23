@@ -6,8 +6,25 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
+		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
+		DA8AB22D2064E476005A393E /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2242064E476005A393E /* LocalizableError.strings */; };
+		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
+		DA8AB2312064E484005A393E /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22F2064E484005A393E /* Scripts */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DA8AB21E2064E476005A393E /* catbanInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = catbanInfo.plist; sourceTree = "<group>"; };
+		DA8AB21F2064E476005A393E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DA8AB2202064E476005A393E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA8AB2232064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA8AB2252064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
+		DA8AB22E2064E484005A393E /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
+		DA8AB22F2064E484005A393E /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +41,17 @@
 		DA8AB1FB2064E349005A393E = {
 			isa = PBXGroup;
 			children = (
+				DA8AB21A2064E476005A393E /* Assets */,
+				DA8AB21D2064E476005A393E /* Configuration */,
+				DA8AB2212064E476005A393E /* Resources */,
+				DA8AB2192064E476005A393E /* Source */,
+				DA8AB2262064E476005A393E /* Unit */,
 				DA8AB2052064E349005A393E /* Products */,
+				DA8AB22E2064E484005A393E /* Design */,
+				DA8AB22F2064E484005A393E /* Scripts */,
+				DA8AB21C2064E476005A393E /* .gitignore */,
+				DA8AB21F2064E476005A393E /* LICENSE */,
+				DA8AB2202064E476005A393E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -34,6 +61,45 @@
 				DA8AB2042064E349005A393E /* catban.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA8AB2192064E476005A393E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DA8AB21A2064E476005A393E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DA8AB21D2064E476005A393E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AB21E2064E476005A393E /* catbanInfo.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		DA8AB2212064E476005A393E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AB2222064E476005A393E /* InfoPlist.strings */,
+				DA8AB2242064E476005A393E /* LocalizableError.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA8AB2262064E476005A393E /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +161,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8AB2302064E484005A393E /* Design in Resources */,
+				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
+				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
+				DA8AB2312064E484005A393E /* Scripts in Resources */,
+				DA8AB22D2064E476005A393E /* LocalizableError.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +180,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA8AB2222064E476005A393E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA8AB2232064E476005A393E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA8AB2242064E476005A393E /* LocalizableError.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA8AB2252064E476005A393E /* en */,
+			);
+			name = LocalizableError.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA8AB2142064E34A005A393E /* Debug */ = {
