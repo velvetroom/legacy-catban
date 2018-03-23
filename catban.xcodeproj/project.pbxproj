@@ -14,6 +14,16 @@
 		DA8AB2312064E484005A393E /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22F2064E484005A393E /* Scripts */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DA8AB23B2064E59A005A393E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA8AB1FC2064E349005A393E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA8AB2032064E349005A393E;
+			remoteInfo = catban;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -25,10 +35,19 @@
 		DA8AB2252064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
 		DA8AB22E2064E484005A393E /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
 		DA8AB22F2064E484005A393E /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		DA8AB2362064E59A005A393E /* unitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = unitTestsInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA8AB2012064E349005A393E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA8AB2332064E59A005A393E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2042064E349005A393E /* catban.app */,
+				DA8AB2362064E59A005A393E /* unitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +101,7 @@
 		DA8AB21D2064E476005A393E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */,
 				DA8AB21E2064E476005A393E /* catbanInfo.plist */,
 			);
 			path = Configuration;
@@ -122,6 +143,24 @@
 			productReference = DA8AB2042064E349005A393E /* catban.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DA8AB2352064E59A005A393E /* unitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA8AB23D2064E59A005A393E /* Build configuration list for PBXNativeTarget "unitTests" */;
+			buildPhases = (
+				DA8AB2322064E59A005A393E /* Sources */,
+				DA8AB2332064E59A005A393E /* Frameworks */,
+				DA8AB2342064E59A005A393E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA8AB23C2064E59A005A393E /* PBXTargetDependency */,
+			);
+			name = unitTests;
+			productName = unitTests;
+			productReference = DA8AB2362064E59A005A393E /* unitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -135,6 +174,11 @@
 					DA8AB2032064E349005A393E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					DA8AB2352064E59A005A393E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DA8AB2032064E349005A393E;
 					};
 				};
 			};
@@ -152,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				DA8AB2032064E349005A393E /* catban */,
+				DA8AB2352064E59A005A393E /* unitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -169,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA8AB2342064E59A005A393E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -179,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA8AB2322064E59A005A393E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA8AB23C2064E59A005A393E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA8AB2032064E349005A393E /* catban */;
+			targetProxy = DA8AB23B2064E59A005A393E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA8AB2222064E476005A393E /* InfoPlist.strings */ = {
@@ -338,6 +405,38 @@
 			};
 			name = Release;
 		};
+		DA8AB23E2064E59A005A393E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = unitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.unitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/catban.app/catban";
+			};
+			name = Debug;
+		};
+		DA8AB23F2064E59A005A393E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = unitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.unitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/catban.app/catban";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +454,15 @@
 			buildConfigurations = (
 				DA8AB2172064E34A005A393E /* Debug */,
 				DA8AB2182064E34A005A393E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA8AB23D2064E59A005A393E /* Build configuration list for PBXNativeTarget "unitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8AB23E2064E59A005A393E /* Debug */,
+				DA8AB23F2064E59A005A393E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
