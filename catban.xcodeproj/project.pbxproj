@@ -20,6 +20,8 @@
 		DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2602064F0A3005A393E /* LandingController.swift */; };
 		DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2622064F303005A393E /* TestLandingViewCollection.swift */; };
 		DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2642064F380005A393E /* LandingViewCollection.swift */; };
+		DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */; };
+		DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		DA8AB2602064F0A3005A393E /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		DA8AB2622064F303005A393E /* TestLandingViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollection.swift; sourceTree = "<group>"; };
 		DA8AB2642064F380005A393E /* LandingViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollection.swift; sourceTree = "<group>"; };
+		DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerOutlets.swift; sourceTree = "<group>"; };
+		DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerOutlets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB25E2064F060005A393E /* TestLandingController.swift */,
+				DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2602064F0A3005A393E /* LandingController.swift */,
+				DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
@@ -380,6 +387,7 @@
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
+				DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
