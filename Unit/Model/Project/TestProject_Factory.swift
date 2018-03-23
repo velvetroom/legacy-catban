@@ -12,6 +12,6 @@ class TestProject_Factory:XCTestCase {
     func testFactory() {
         XCTAssertNotNil(self.project, "Failed to factorise new project")
         XCTAssertFalse(self.project.name.isEmpty, "Failed to assign default name")
-        XCTAssertFalse(self.project.columns.isEmpty, "Failedt to assign default columns")
+        XCTAssertFalse(self.project.columns.isEmpty, "Failed to assign default columns")
     }
 }
