@@ -1,12 +1,12 @@
 import UIKit
 
-class LandingViewCollection:UIScrollView {
+class LandingViewCollection:UICollectionView {
     init() {
-        super.init(frame:CGRect.zero)
-        self.backgroundColor = UIColor.white
+        let layout:UICollectionViewFlowLayout = LandingViewCollection.factoryLayout()
+        super.init(frame:CGRect.zero, collectionViewLayout:layout)
+        self.backgroundColor = UIColor.clear
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.contentSize = CGSize(width:300, height:900)
     }
     
     required init?(coder:NSCoder) {
