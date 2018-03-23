@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Selectors.swift"; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				DA8AB2602064F0A3005A393E /* LandingController.swift */,
 				DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */,
+				DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */,
 				DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */,
 			);
 			path = Landing;
@@ -400,6 +403,7 @@
 				DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
+				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
 				DA8AB27620650388005A393E /* ExtensionString.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
