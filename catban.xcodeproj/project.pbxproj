@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
-		DA8AB22D2064E476005A393E /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2242064E476005A393E /* LocalizableError.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
 		DA8AB2312064E484005A393E /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22F2064E484005A393E /* Scripts */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
@@ -23,6 +22,9 @@
 		DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */; };
 		DA8AB2692064F465005A393E /* LandingControllerOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */; };
 		DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */; };
+		DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */; };
+		DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2722064FEC3005A393E /* TestStringExtension.swift */; };
+		DA8AB27620650388005A393E /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB27520650388005A393E /* ExtensionString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,6 @@
 		DA8AB21F2064E476005A393E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DA8AB2202064E476005A393E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA8AB2232064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA8AB2252064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
 		DA8AB22E2064E484005A393E /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
 		DA8AB22F2064E484005A393E /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		DA8AB2362064E59A005A393E /* unitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +60,9 @@
 		DA8AB2662064F41E005A393E /* TestLandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerOutlets.swift; sourceTree = "<group>"; };
 		DA8AB2682064F465005A393E /* LandingControllerOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerOutlets.swift; sourceTree = "<group>"; };
 		DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Outlets.swift"; sourceTree = "<group>"; };
+		DA8AB26D2064FE0E005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableLanding.strings; sourceTree = "<group>"; };
+		DA8AB2722064FEC3005A393E /* TestStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExtension.swift; sourceTree = "<group>"; };
+		DA8AB27520650388005A393E /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		DA8AB2192064E476005A393E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DA8AB27420650369005A393E /* Extension */,
 				DA8AB2512064EA5D005A393E /* Controller */,
 				DA8AB2542064EA5E005A393E /* Model */,
 				DA8AB24F2064EA5D005A393E /* View */,
@@ -136,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2222064E476005A393E /* InfoPlist.strings */,
-				DA8AB2242064E476005A393E /* LocalizableError.strings */,
+				DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 		DA8AB2262064E476005A393E /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				DA8AB26F2064FE99005A393E /* Extension */,
 				DA8AB24C2064EA53005A393E /* Controller */,
 				DA8AB2482064EA53005A393E /* Model */,
 				DA8AB24A2064EA53005A393E /* View */,
@@ -268,6 +274,22 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
+		DA8AB26F2064FE99005A393E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AB2722064FEC3005A393E /* TestStringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA8AB27420650369005A393E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AB27520650388005A393E /* ExtensionString.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,8 +377,8 @@
 				DA8AB2302064E484005A393E /* Design in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
+				DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */,
 				DA8AB2312064E484005A393E /* Scripts in Resources */,
-				DA8AB22D2064E476005A393E /* LocalizableError.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +401,7 @@
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
+				DA8AB27620650388005A393E /* ExtensionString.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +414,7 @@
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
+				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,12 +438,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		DA8AB2242064E476005A393E /* LocalizableError.strings */ = {
+		DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA8AB2252064E476005A393E /* en */,
+				DA8AB26D2064FE0E005A393E /* en */,
 			);
-			name = LocalizableError.strings;
+			name = LocalizableLanding.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -473,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -526,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
