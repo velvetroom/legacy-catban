@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestApplication:XCTestCase {
-    private var application:UIApplication!
+    private var application:Application!
     
     override func setUp() {
         super.setUp()
