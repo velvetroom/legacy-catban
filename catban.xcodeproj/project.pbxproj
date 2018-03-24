@@ -10,6 +10,9 @@
 		DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */; };
 		DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD549206531A1002A7493 /* TestProject.swift */; };
 		DA1AD54D2065328D002A7493 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54C2065328D002A7493 /* Project.swift */; };
+		DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */; };
+		DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */; };
+		DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -63,6 +66,9 @@
 		DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Selectors.swift"; sourceTree = "<group>"; };
 		DA1AD549206531A1002A7493 /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA1AD54C2065328D002A7493 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelLoader.swift; sourceTree = "<group>"; };
+		DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoaderProtocol.swift; sourceTree = "<group>"; };
+		DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoader.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE698E32065812C0046721C /* TestLandingViewModel.swift */,
+				DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				DAE698E6206581840046721C /* LandingViewModel.swift */,
+				DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */,
+				DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,7 +523,9 @@
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
+				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
+				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +546,7 @@
 				DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DA8AB2672064F41E005A393E /* TestLandingControllerOutlets.swift in Sources */,
+				DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */,
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
