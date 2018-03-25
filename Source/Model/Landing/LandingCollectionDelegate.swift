@@ -8,8 +8,17 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
         super.init()
     }
     
+    func numberOfSections(in:UICollectionView) -> Int {
+        return self.viewModel.sections.count
+    }
+    
     func collectionView(_:UICollectionView, numberOfItemsInSection section:Int) -> Int {
-        return 0
+        guard
+            section < self.viewModel.sections.count
+        else {
+            return 0
+        }
+        return self.viewModel.sections[section].items.count
     }
     
     func collectionView(_:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
