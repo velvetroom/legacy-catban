@@ -3,6 +3,7 @@ import Foundation
 
 class MockProjectLoader:ProjectLoaderProtocol {
     var onLoadCalled:(() -> Void)?
+    
     func load(completion:@escaping((Project) -> Void)) {
         self.onLoadCalled?()
         

@@ -4,6 +4,7 @@ import XCTest
 class TestLandingController:XCTestCase {
     private var controller:LandingController!
     private var projectLoader:MockProjectLoader!
+    private var viewModelLoader:MockLandingViewModel!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,8 +13,10 @@ class TestLandingController:XCTestCase {
     override func setUp() {
         super.setUp()
         self.projectLoader = MockProjectLoader()
+        self.viewModelLoader = MockLandingViewModel()
         self.controller = LandingController()
         self.controller.projectLoader = self.projectLoader
+        self.controller.viewModelLoader = self.viewModelLoader
     }
     
     func testLoad() {
@@ -36,6 +39,17 @@ class TestLandingController:XCTestCase {
         self.startExpectation()
         XCTAssertNil(self.controller.project, "Project should be nil before loading")
         self.projectLoader.onLoadCalled = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        self.waitExpectations()
+    }
+    
+    func testViewModelIsLoadedOnViewDidLoad() {
+        self.startExpectation()
+        XCTAssertNil(self.controller.project, "Project should be nil before loading")
+        self.viewModelLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
         
