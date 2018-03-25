@@ -27,14 +27,13 @@ extension LandingController {
     func loadViewModel(completion:@escaping((LandingViewModel) -> Void)) {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
             guard
-                let project:Project = self?.project
+                let project:Project = self?.project,
+                let viewModel:LandingViewModel = self?.viewModelLoader.factoryViewModelWith(project:project)
             else {
                 return
             }
-            self?.viewModelLoader.load(project:project) { (viewModel:LandingViewModel) in
-                DispatchQueue.main.async {
-                    completion(viewModel)
-                }
+            DispatchQueue.main.async {
+                completion(viewModel)
             }
         }
     }

@@ -4,10 +4,10 @@ import Foundation
 class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
     var onLoadCalled:(() -> Void)?
     
-    func load(project:Project, completion:@escaping((LandingViewModel) -> Void)) {
+    func factoryViewModelWith(project:Project) -> LandingViewModel {
         self.onLoadCalled?()
         
         let viewModel:LandingViewModel = LandingViewModel()
-        completion(viewModel)
+        return viewModel
     }
 }

@@ -4,10 +4,6 @@ import XCTest
 class TestLandingViewModelLoader:XCTestCase {
     private var project:Project!
     private var loader:LandingViewModelLoader!
-    private var expect:XCTestExpectation?
-    private struct Constants {
-        static let wait:TimeInterval = 0.3
-    }
     
     override func setUp() {
         super.setUp()
@@ -20,24 +16,11 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     func testLoadViewModel() {
-        self.startExpectation()
-        
-        self.loader.load(project:project) { [weak self] (viewModel:LandingViewModel) in
-            self?.expect?.fulfill()
-        }
-        
-        self.waitExpectations()
+        let viewModel:LandingViewModel = self.loader.factoryViewModelWith(project:project)
+        self.validateViewModel(viewModel:viewModel)
     }
     
     private func validateViewModel(viewModel:LandingViewModel) {
-        
-    }
-    
-    private func startExpectation() {
-        self.expect = expectation(description:"Wait for expectation")
-    }
-    
-    private func waitExpectations() {
-        waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
+        XCTAssertEqual(self.project.columns.count, viewModel.collection.sections.count, "Invalid number of sections")
     }
 }
