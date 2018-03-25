@@ -29,6 +29,10 @@ class TestLandingViewModelLoader:XCTestCase {
         self.waitExpectations()
     }
     
+    private func validateViewModel(viewModel:LandingViewModel) {
+        
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }

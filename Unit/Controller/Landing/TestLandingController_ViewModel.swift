@@ -36,6 +36,26 @@ class TestLandingController_ViewModel:XCTestCase {
         self.waitExpectations()
     }
     
+    func testDisplayLogo() {
+        var viewModel:LandingViewModel = LandingViewModel()
+        viewModel.logoHidden = false
+        XCTAssertNotNil(self.controller.view)
+        
+        self.controller.updateViewModel(viewModel:viewModel)
+        
+        XCTAssertFalse(self.controller.outlets.imageLogo.isHidden)
+    }
+    
+    func testHideLogo() {
+        var viewModel:LandingViewModel = LandingViewModel()
+        viewModel.logoHidden = true
+        XCTAssertNotNil(self.controller.view)
+        
+        self.controller.updateViewModel(viewModel:viewModel)
+        
+        XCTAssertTrue(self.controller.outlets.imageLogo.isHidden)
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }
