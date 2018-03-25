@@ -8,6 +8,8 @@ extension LandingController {
     
     private func factoryViewCollection() {
         let viewCollection:LandingViewCollection = LandingViewCollection()
+        viewCollection.delegate = self.collectionDelegate
+        viewCollection.dataSource = self.collectionDelegate
         
         self.view.addSubview(viewCollection)
         self.outlets.viewCollection = viewCollection

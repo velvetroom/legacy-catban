@@ -33,6 +33,8 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets.imageLogo, "Image logo not loaded")
         XCTAssertNotNil(self.controller.outlets.imageLogo.image, "Image logo doesn't have an image")
         XCTAssertNotNil(self.controller.outlets.viewCollection, "View collection not loaded")
+        XCTAssertNotNil(self.controller.outlets.viewCollection.delegate, "Collection has no delegate")
+        XCTAssertNotNil(self.controller.outlets.viewCollection.dataSource, "Collection has no data source")
     }
     
     func testProjectIsLoadedOnViewDidLoad() {

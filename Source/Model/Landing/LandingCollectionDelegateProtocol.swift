@@ -1,5 +1,5 @@
-import Foundation
+import UIKit
 
-protocol LandingCollectionDelegateProtocol {
+protocol LandingCollectionDelegateProtocol:UICollectionViewDelegate, UICollectionViewDataSource {
     var viewModel:LandingViewModelCollection { get set }
 }
