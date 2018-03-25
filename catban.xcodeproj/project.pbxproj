@@ -13,8 +13,8 @@
 		DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */; };
 		DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */; };
 		DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */; };
-		DA2538E42067CED700EEB231 /* TestLandingControllerCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E32067CED700EEB231 /* TestLandingControllerCollectionDelegate.swift */; };
-		DA2538E62067CF1300EEB231 /* LandingControllerCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E52067CF1300EEB231 /* LandingControllerCollectionDelegate.swift */; };
+		DA2538E42067CED700EEB231 /* TestLandingCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E32067CED700EEB231 /* TestLandingCollectionDelegate.swift */; };
+		DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -71,8 +71,8 @@
 		DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelLoader.swift; sourceTree = "<group>"; };
 		DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoaderProtocol.swift; sourceTree = "<group>"; };
 		DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoader.swift; sourceTree = "<group>"; };
-		DA2538E32067CED700EEB231 /* TestLandingControllerCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerCollectionDelegate.swift; sourceTree = "<group>"; };
-		DA2538E52067CF1300EEB231 /* LandingControllerCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerCollectionDelegate.swift; sourceTree = "<group>"; };
+		DA2538E32067CED700EEB231 /* TestLandingCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionDelegate.swift; sourceTree = "<group>"; };
+		DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionDelegate.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -255,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2662064F41E005A393E /* TestLandingOutlets.swift */,
+				DA2538E32067CED700EEB231 /* TestLandingCollectionDelegate.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -289,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB25E2064F060005A393E /* TestLandingController.swift */,
-				DA2538E32067CED700EEB231 /* TestLandingControllerCollectionDelegate.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -337,7 +337,6 @@
 				DAE698D6206576770046721C /* LandingController+Navigation.swift */,
 				DA8AB26A2064F662005A393E /* LandingController+Outlets.swift */,
 				DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */,
-				DA2538E52067CF1300EEB231 /* LandingControllerCollectionDelegate.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -364,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2682064F465005A393E /* LandingOutlets.swift */,
+				DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -530,7 +530,7 @@
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
-				DA2538E62067CF1300EEB231 /* LandingControllerCollectionDelegate.swift in Sources */,
+				DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
 			);
@@ -540,7 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2538E42067CED700EEB231 /* TestLandingControllerCollectionDelegate.swift in Sources */,
+				DA2538E42067CED700EEB231 /* TestLandingCollectionDelegate.swift in Sources */,
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */,

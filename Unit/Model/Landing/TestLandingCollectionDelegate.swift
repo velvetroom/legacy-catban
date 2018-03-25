@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingControllerCollectionDelegate:XCTestCase {
-    private var delegate:LandingControllerCollectionDelegate!
+class TestLandingCollectionDelegate:XCTestCase {
+    private var delegate:LandingCollectionDelegate!
     
     override func setUp() {
         super.setUp()
-        self.delegate = LandingControllerCollectionDelegate()
+        self.delegate = LandingCollectionDelegate()
     }
     
     func testLoad() {
