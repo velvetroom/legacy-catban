@@ -20,6 +20,7 @@
 		DA2538EC2067D6F900EEB231 /* TestLandingViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */; };
 		DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */; };
 		DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538EF20681F1700EEB231 /* MockLandingViewCollection.swift */; };
+		DA2538F22068203C00EEB231 /* TestLandingController_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538F12068203C00EEB231 /* TestLandingController_Load.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -83,6 +84,7 @@
 		DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollection.swift; sourceTree = "<group>"; };
 		DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollection.swift; sourceTree = "<group>"; };
 		DA2538EF20681F1700EEB231 /* MockLandingViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingViewCollection.swift; sourceTree = "<group>"; };
+		DA2538F12068203C00EEB231 /* TestLandingController_Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_Load.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB25E2064F060005A393E /* TestLandingController.swift */,
+				DA2538F12068203C00EEB231 /* TestLandingController_Load.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			files = (
 				DA2538EC2067D6F900EEB231 /* TestLandingViewModelCollection.swift in Sources */,
 				DA2538E42067CED700EEB231 /* TestLandingCollectionDelegate.swift in Sources */,
+				DA2538F22068203C00EEB231 /* TestLandingController_Load.swift in Sources */,
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */,
