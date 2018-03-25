@@ -1,1 +1,4 @@
 Project_defaultName="My first project";
+Project_defaultColumnBacklog="Backlog";
+Project_defaultColumnProgress="Progress";
+Project_defaultColumnDone="Done";

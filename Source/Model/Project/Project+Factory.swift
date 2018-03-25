@@ -21,16 +21,19 @@ extension Project {
     
     private class func factoryColumnBacklog() -> ProjectColumn {
         let column:ProjectColumn = ProjectColumn()
+        column.name = String.localizaedProject(key:"Project_defaultColumnBacklog")
         return column
     }
     
     private class func factoryColumnProgress() -> ProjectColumn {
         let column:ProjectColumn = ProjectColumn()
+        column.name = String.localizaedProject(key:"Project_defaultColumnProgress")
         return column
     }
     
     private class func factoryColumnDone() -> ProjectColumn {
         let column:ProjectColumn = ProjectColumn()
+        column.name = String.localizaedProject(key:"Project_defaultColumnDone")
         return column
     }
 }

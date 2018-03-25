@@ -11,5 +11,6 @@ class TestProjectColumn:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.column, "Failed to load column")
+        XCTAssertNotNil(self.column.name, "Failed to load name")
     }
 }

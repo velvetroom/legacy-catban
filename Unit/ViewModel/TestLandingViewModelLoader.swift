@@ -21,6 +21,20 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     private func validateViewModel(viewModel:LandingViewModel) {
-        XCTAssertEqual(self.project.columns.count, viewModel.collection.sections.count, "Invalid number of sections")
+        self.validateCollection(collection:viewModel.collection)
+    }
+    
+    private func validateCollection(collection:LandingViewModelCollection) {
+        let sections:Int = collection.sections.count
+        XCTAssertEqual(self.project.columns.count, sections, "Invalid number of sections")
+        for index:Int in 0 ..< sections {
+            let section:LandingViewModelCollectionSection = collection.sections[index]
+            let column:ProjectColumn = self.project.columns[index]
+            self.validateSection(section:section, column:column)
+        }
+    }
+    
+    private func validateSection(section:LandingViewModelCollectionSection, column:ProjectColumn) {
+        XCTAssertEqual(section.title, column.name, "Failed to assign section title")
     }
 }
