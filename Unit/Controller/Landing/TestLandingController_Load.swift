@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingController:XCTestCase {
+class TestLandingController_Load:XCTestCase {
     private var controller:LandingController!
     private var projectLoader:MockProjectLoader!
     private var viewModelLoader:MockLandingViewModelLoader!

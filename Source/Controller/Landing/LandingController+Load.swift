@@ -4,9 +4,7 @@ extension LandingController {
     func loadDependencies() {
         self.loadProject { [weak self] (project:Project) in
             self?.project = project
-            self?.loadViewModel { [weak self] (viewModel:LandingViewModel) in
-                
-            }
+            self?.updateViewModel()
         }
     }
     
@@ -17,6 +15,13 @@ extension LandingController {
                     completion(project)
                 }
             }
+        }
+    }
+    
+    func updateViewModel() {
+        self.loadViewModel { [weak self] (viewModel:LandingViewModel) in
+            print(self?.outlets.viewCollection)
+            self?.outlets.viewCollection.reloadData()
         }
     }
     
