@@ -4,7 +4,7 @@ class LandingController:UIViewController {
     var outlets:LandingControllerOutlets
     var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
-    private(set) var project:Project?
+    var project:Project?
     
     init() {
         self.outlets = LandingControllerOutlets()
@@ -22,8 +22,6 @@ class LandingController:UIViewController {
         self.view.backgroundColor = UIColor.white
         self.adjustNavigationItem()
         self.factoryOutlets()
-        self.loadProject { [weak self] (project:Project) in
-            self?.project = project
-        }
+        self.loadDependencies()
     }
 }

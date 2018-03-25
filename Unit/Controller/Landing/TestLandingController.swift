@@ -55,8 +55,10 @@ class TestLandingController:XCTestCase {
     
     func testLoadViewModel() {
         self.startExpectation()
+        self.controller.project = Project.factoryNewProject()
         
         self.controller.loadViewModel { [weak self] (viewModel:LandingViewModel) in
+            XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
             self?.expect?.fulfill()
         }
         
