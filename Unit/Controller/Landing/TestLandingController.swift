@@ -4,7 +4,7 @@ import XCTest
 class TestLandingController:XCTestCase {
     private var controller:LandingController!
     private var projectLoader:MockProjectLoader!
-    private var viewModelLoader:MockLandingViewModel!
+    private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -13,7 +13,7 @@ class TestLandingController:XCTestCase {
     override func setUp() {
         super.setUp()
         self.projectLoader = MockProjectLoader()
-        self.viewModelLoader = MockLandingViewModel()
+        self.viewModelLoader = MockLandingViewModelLoader()
         self.controller = LandingController()
         self.controller.projectLoader = self.projectLoader
         self.controller.viewModelLoader = self.viewModelLoader

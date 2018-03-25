@@ -1,7 +1,7 @@
 import Foundation
 @testable import catban
 
-class MockLandingViewModel:LandingViewModelLoaderProtocol {
+class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
     var onLoadCalled:(() -> Void)?
     
     func load(project:Project, completion:@escaping((LandingViewModel) -> Void)) {
