@@ -17,6 +17,8 @@
 		DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */; };
 		DA2538E82067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E72067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift */; };
 		DA2538EA2067D52E00EEB231 /* MockLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E92067D52E00EEB231 /* MockLandingViewModel.swift */; };
+		DA2538EC2067D6F900EEB231 /* TestLandingViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */; };
+		DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -77,6 +79,8 @@
 		DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionDelegate.swift; sourceTree = "<group>"; };
 		DA2538E72067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionDelegateProtocol.swift; sourceTree = "<group>"; };
 		DA2538E92067D52E00EEB231 /* MockLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingViewModel.swift; sourceTree = "<group>"; };
+		DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollection.swift; sourceTree = "<group>"; };
+		DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollection.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -393,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE698E32065812C0046721C /* TestLandingViewModel.swift */,
+				DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */,
 				DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */,
 				DA2538E92067D52E00EEB231 /* MockLandingViewModel.swift */,
 			);
@@ -403,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE698E6206581840046721C /* LandingViewModel.swift */,
+				DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */,
 				DA2538DF2067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift */,
 				DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */,
 			);
@@ -523,6 +529,7 @@
 				DA8AB2692064F465005A393E /* LandingOutlets.swift in Sources */,
 				DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */,
 				DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */,
+				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
@@ -547,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2538EC2067D6F900EEB231 /* TestLandingViewModelCollection.swift in Sources */,
 				DA2538E42067CED700EEB231 /* TestLandingCollectionDelegate.swift in Sources */,
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,

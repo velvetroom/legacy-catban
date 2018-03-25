@@ -11,5 +11,6 @@ class TestLandingCollectionDelegate:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.delegate, "Failed to load delegate")
+        XCTAssertNotNil(self.delegate.viewModel, "Failed to load view model")
     }
 }
