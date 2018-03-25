@@ -1,5 +1,5 @@
 import Foundation
 
-class LandingCollectionDelegate {
+class LandingCollectionDelegate:LandingCollectionDelegateProtocol {
     
 }

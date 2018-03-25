@@ -15,6 +15,7 @@
 		DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */; };
 		DA2538E42067CED700EEB231 /* TestLandingCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E32067CED700EEB231 /* TestLandingCollectionDelegate.swift */; };
 		DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */; };
+		DA2538E82067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538E72067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -73,6 +74,7 @@
 		DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoader.swift; sourceTree = "<group>"; };
 		DA2538E32067CED700EEB231 /* TestLandingCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionDelegate.swift; sourceTree = "<group>"; };
 		DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionDelegate.swift; sourceTree = "<group>"; };
+		DA2538E72067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionDelegateProtocol.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB2682064F465005A393E /* LandingOutlets.swift */,
+				DA2538E72067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift */,
 				DA2538E52067CF1300EEB231 /* LandingCollectionDelegate.swift */,
 			);
 			path = Landing;
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2538E82067D18A00EEB231 /* LandingCollectionDelegateProtocol.swift in Sources */,
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
 				DA8AB2692064F465005A393E /* LandingOutlets.swift in Sources */,
 				DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */,
