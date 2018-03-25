@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingControllerOutlets:XCTestCase {
-    private var outlets:LandingControllerOutlets!
+class TestLandingOutlets:XCTestCase {
+    private var outlets:LandingOutlets!
     
     override func setUp() {
         super.setUp()
-        self.outlets = LandingControllerOutlets()
+        self.outlets = LandingOutlets()
     }
     
     func testLoad() {

@@ -1,6 +1,6 @@
 import UIKit
 
-struct LandingControllerOutlets {
+struct LandingOutlets {
     weak var viewCollection:LandingViewCollection!
     weak var imageLogo:UIImageView!
 }
