@@ -44,7 +44,7 @@ class TestLandingController_Collection:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.updateViewModel()
+        self.controller.reloadViewModel()
         
         self.waitExpectations()
     }
