@@ -20,7 +20,7 @@ extension LandingController {
     
     func updateViewModel() {
         self.loadViewModel { [weak self] (viewModel:LandingViewModel) in
-            print(self?.outlets.viewCollection)
+            self?.collectionDelegate.viewModel = viewModel.collection
             self?.outlets.viewCollection.reloadData()
         }
     }

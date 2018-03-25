@@ -1,9 +1,9 @@
 import XCTest
 @testable import catban
 
-class TestLandingController_Collection:XCTestCase {
+class TestLandingController_ViewModel:XCTestCase {
     private var controller:LandingController!
-    private var viewCollection:MockLandingViewCollection!
+    private var collectionDelegete:MockLandingCollectionDelegate!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -14,37 +14,24 @@ class TestLandingController_Collection:XCTestCase {
         self.controller = LandingController()
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
-        self.viewCollection = MockLandingViewCollection()
+        self.collectionDelegete = MockLandingCollectionDelegate()
+        self.controller.collectionDelegate = self.collectionDelegete
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.controller.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Failed to load view model loader")
-        XCTAssertNotNil(self.viewCollection, "Failed to load view collection")
+        XCTAssertNotNil(self.collectionDelegete, "Failed to load delegate")
     }
     
-    func testCollectionReloadDataAfterViewDidLoad() {
+    func testDelegateReceivesViewModelAfterViewDidLoad() {
         self.startExpectation()
-        self.viewCollection.onReloadDataCalled = { [weak self] in
+        self.collectionDelegete.onViewModelSet = { [weak self] in
             self?.expect?.fulfill()
         }
         
         XCTAssertNotNil(self.controller.view)
-        self.controller.outlets.viewCollection = self.viewCollection
-        
-        self.waitExpectations()
-    }
-    
-    func testCollectionReloadDataAfterUpdateViewModel() {
-        self.startExpectation()
-        XCTAssertNotNil(self.controller.view)
-        self.controller.outlets.viewCollection = self.viewCollection
-        self.viewCollection.onReloadDataCalled = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.controller.updateViewModel()
         
         self.waitExpectations()
     }
