@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingViewModelCollectionSection: XCTestCase {
+class TestLandingViewModelCollectionSection:XCTestCase {
     private var section:LandingViewModelCollectionSection!
     
     override func setUp() {
