@@ -3,11 +3,13 @@ import UIKit
 class LandingController:UIViewController {
     var outlets:LandingControllerOutlets
     var projectLoader:ProjectLoaderProtocol
+    var viewModelLoader:LandingViewModelLoaderProtocol
     private(set) var project:Project?
     
     init() {
         self.outlets = LandingControllerOutlets()
         self.projectLoader = ProjectLoader()
+        self.viewModelLoader = LandingViewModelLoader()
         super.init(nibName:nil, bundle:nil)
     }
     
