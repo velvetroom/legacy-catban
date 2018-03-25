@@ -11,5 +11,6 @@ class TestLandingViewModelCollectionSection:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.section, "Failed to load section")
+        XCTAssertNotNil(self.section.items, "Failed to load items")
     }
 }
