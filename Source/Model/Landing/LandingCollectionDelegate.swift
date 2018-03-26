@@ -21,7 +21,20 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
         return self.viewModel.sections[section].items.count
     }
     
+    func collectionView(_ collection:UICollectionView, viewForSupplementaryElementOfKind kind:String,
+                        at index:IndexPath) -> UICollectionReusableView {
+        return self.dequeueHeaderFrom(collection:collection, at:index)
+    }
+    
     func collectionView(_:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
+    }
+    
+    private func dequeueHeaderFrom(collection:UICollectionView, at index:IndexPath) -> UICollectionReusableView {
+        let header:LandingViewCollectionHeader = collection.dequeueReusableSupplementaryView(
+            ofKind:UICollectionElementKindSectionHeader,
+            withReuseIdentifier:LandingViewCollectionHeader.reusableIdentifier,
+            for:index) as! LandingViewCollectionHeader
+        return header
     }
 }
