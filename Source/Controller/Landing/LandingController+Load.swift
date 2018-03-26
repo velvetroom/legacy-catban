@@ -44,7 +44,8 @@ extension LandingController {
     }
     
     private func updateOutlets(viewModel:LandingViewModel) {
-        self.outlets.imageLogo.isHidden = viewModel.logoHidden
+        self.title = viewModel.outlets.title
+        self.outlets.imageLogo.isHidden = viewModel.outlets.logoHidden
     }
     
     private func updateCollectionViewModel(viewModel:LandingViewModel) {

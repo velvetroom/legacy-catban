@@ -7,6 +7,7 @@ class TestLandingController_ViewModel:XCTestCase {
     private var layout:MockLandingViewCollectionLayout!
     private var expect:XCTestExpectation?
     private struct Constants {
+        static let testTitle:String = "test"
         static let wait:TimeInterval = 0.3
     }
     
@@ -56,7 +57,7 @@ class TestLandingController_ViewModel:XCTestCase {
     
     func testDisplayLogo() {
         var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.logoHidden = false
+        viewModel.outlets.logoHidden = false
         XCTAssertNotNil(self.controller.view)
         
         self.controller.updateViewModel(viewModel:viewModel)
@@ -66,12 +67,22 @@ class TestLandingController_ViewModel:XCTestCase {
     
     func testHideLogo() {
         var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.logoHidden = true
+        viewModel.outlets.logoHidden = true
         XCTAssertNotNil(self.controller.view)
         
         self.controller.updateViewModel(viewModel:viewModel)
         
         XCTAssertTrue(self.controller.outlets.imageLogo.isHidden)
+    }
+    
+    func testUpdateTitle() {
+        var viewModel:LandingViewModel = LandingViewModel()
+        viewModel.outlets.title = Constants.testTitle
+        XCTAssertNotNil(self.controller.view)
+        
+        self.controller.updateViewModel(viewModel:viewModel)
+        
+        XCTAssertEqual(self.controller.title, Constants.testTitle, "Failed to update controller title")
     }
     
     private func startExpectation() {

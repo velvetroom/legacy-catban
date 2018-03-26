@@ -20,6 +20,7 @@ class TestLandingViewModelLoader:XCTestCase {
         XCTAssertNotNil(self.loader, "Failed to load loader")
         XCTAssertNotNil(self.loader.collection, "Failed to load collection loader")
         XCTAssertNotNil(self.loader.collectionLayout, "Failed to load collection layout")
+        XCTAssertNotNil(self.loader.outlets, "Failed to load outlets")
     }
     
     func testLoadViewModel() {
@@ -42,7 +43,8 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     private func validateOutlets(viewModel:LandingViewModel) {
-        XCTAssertTrue(viewModel.logoHidden, "Logo should be hidden after view model update")
+        XCTAssertEqual(viewModel.outlets.title, self.project.name, "Title should be equal to project name")
+        XCTAssertTrue(viewModel.outlets.logoHidden, "Logo should be hidden after view model update")
     }
     
     private func validate(collection:LandingViewModelCollection) {

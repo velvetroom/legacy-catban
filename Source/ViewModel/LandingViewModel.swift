@@ -1,15 +1,13 @@
 import Foundation
 
 struct LandingViewModel {
+    var outlets:LandingViewModelOutlets
     var collection:LandingViewModelCollection
     var collectionLayout:LandingViewModelCollectionLayout
-    var title:String
-    var logoHidden:Bool
     
     init() {
+        self.outlets = LandingViewModelOutlets()
         self.collection = LandingViewModelCollection()
         self.collectionLayout = LandingViewModelCollectionLayout()
-        self.title = String()
-        self.logoHidden = false
     }
 }
