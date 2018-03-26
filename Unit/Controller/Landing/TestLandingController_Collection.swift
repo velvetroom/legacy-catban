@@ -42,6 +42,7 @@ class TestLandingController_Collection:XCTestCase {
         self.controller.outlets.viewCollection = self.viewCollection
         self.viewCollection.onReloadDataCalled = { [weak self] in
             self?.expect?.fulfill()
+            self?.expect = nil
         }
         
         self.controller.reloadViewModel()
