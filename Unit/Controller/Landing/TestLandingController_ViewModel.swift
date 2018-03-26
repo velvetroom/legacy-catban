@@ -3,7 +3,7 @@ import XCTest
 
 class TestLandingController_ViewModel:XCTestCase {
     private var controller:LandingController!
-    private var collectionDelegete:MockLandingCollectionDelegate!
+    private var collectionDelegate:MockLandingCollectionDelegate!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -14,24 +14,33 @@ class TestLandingController_ViewModel:XCTestCase {
         self.controller = LandingController()
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
-        self.collectionDelegete = MockLandingCollectionDelegate()
-        self.controller.collectionDelegate = self.collectionDelegete
+        self.collectionDelegate = MockLandingCollectionDelegate()
+        self.controller.collectionDelegate = self.collectionDelegate
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.controller.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Failed to load view model loader")
-        XCTAssertNotNil(self.collectionDelegete, "Failed to load delegate")
+        XCTAssertNotNil(self.collectionDelegate, "Failed to load delegate")
     }
     
     func testDelegateReceivesViewModelAfterViewDidLoad() {
         self.startExpectation()
-        self.collectionDelegete.onViewModelSet = { [weak self] in
+        self.collectionDelegate.onViewModelSet = { [weak self] in
             self?.expect?.fulfill()
         }
         
         XCTAssertNotNil(self.controller.view)
+        
+        self.waitExpectations()
+    }
+    
+    func testLayoutReceivesViewModelAfterViewDidLoad() {
+        self.startExpectation()
+        
+        
+        
         
         self.waitExpectations()
     }
