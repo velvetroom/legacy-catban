@@ -8,6 +8,7 @@ class LandingViewModelLoaderCollectionLayout {
             let header:LandingViewModelCollectionLayoutHeader = self.factoryHeaderWith(column:column, at:index)
             layout.headers.append(header)
         }
+        layout.contentSize = self.factoryContentSizeWith(layout:layout)
         return layout
     }
     
@@ -33,5 +34,23 @@ class LandingViewModelLoaderCollectionLayout {
         let separation:CGFloat = (index * Constants.interItemSeparation) + Constants.interItemSeparation
         let headers:CGFloat = index * Constants.headerWidth
         return separation + headers
+    }
+    
+    private func factoryContentSizeWith(layout:LandingViewModelCollectionLayout) -> CGSize {
+        var maxX:CGFloat = 0
+        var maxY:CGFloat = 0
+        for header:LandingViewModelCollectionLayoutHeader in layout.headers {
+            let headerMaxX:CGFloat = header.frame.maxX
+            let headerMaxY:CGFloat = header.frame.maxY
+            if headerMaxX > maxX {
+                maxX = headerMaxX
+            }
+            if headerMaxY > maxY {
+                maxY = headerMaxY
+            }
+        }
+        maxX += Constants.interItemSeparation
+        maxY += Constants.interItemSeparation
+        return CGSize(width:maxX, height:maxY)
     }
 }

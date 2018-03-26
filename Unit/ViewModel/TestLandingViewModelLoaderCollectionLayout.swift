@@ -20,6 +20,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         XCTAssertNotNil(viewModel, "Failed to factory view model")
         self.validateHeaderFrames(viewModel:viewModel)
         self.validateHeaderIndexes(viewModel:viewModel)
+        self.validateContentSize(viewModel:viewModel)
     }
     
     private func validateHeaderFrames(viewModel:LandingViewModelCollectionLayout) {
@@ -45,6 +46,17 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
                 let headerInside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexInside]
                 XCTAssertNotEqual(headerOutside.index, headerInside.index, "Header indexes are repeating")
             }
+        }
+    }
+    
+    private func validateContentSize(viewModel:LandingViewModelCollectionLayout) {
+        let contentMaxX:CGFloat = viewModel.contentSize.width
+        let contentMaxY:CGFloat = viewModel.contentSize.height
+        for header:LandingViewModelCollectionLayoutHeader in viewModel.headers {
+            let headerMaxX:CGFloat = header.frame.maxX
+            let headerMaxY:CGFloat = header.frame.maxY
+            XCTAssertTrue(headerMaxX < contentMaxX, "Header is greater than content")
+            XCTAssertTrue(headerMaxY < contentMaxY, "Header is greater than content")
         }
     }
 }

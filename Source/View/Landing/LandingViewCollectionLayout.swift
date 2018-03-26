@@ -25,16 +25,30 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         var attributesList:[UICollectionViewLayoutAttributes] = []
         
         for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
-//            let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
-//                forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
-//                with:)
+            let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
+                forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
+                with:header.index)
+            attributes.frame = header.frame
+            attributesList.append(attributes)
         }
         
         self.attributesList = attributesList
     }
     
     override func layoutAttributesForElements(in rect:CGRect) -> [UICollectionViewLayoutAttributes]? {
-        return nil
+        var attributesList:[UICollectionViewLayoutAttributes]?
+        for attributes:UICollectionViewLayoutAttributes in self.attributesList {
+            guard
+                rect.intersects(attributes.frame)
+            else {
+                continue
+            }
+            if attributesList == nil {
+                attributesList = []
+            }
+            attributesList?.append(attributes)
+        }
+        return attributesList
     }
     
     override func layoutAttributesForItem(at indexPath:IndexPath) -> UICollectionViewLayoutAttributes? {
