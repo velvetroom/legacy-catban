@@ -18,5 +18,20 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     func testFactory() {
         let viewModel:LandingViewModelCollectionLayout = self.loader.factoryWith(project:self.project)
         XCTAssertNotNil(viewModel, "Failed to factory view model")
+        self.validateHeaderFrames(viewModel:viewModel)
+    }
+    
+    private func validateHeaderFrames(viewModel:LandingViewModelCollectionLayout) {
+        let count:Int = viewModel.headers.count
+        for indexOutside:Int in 0 ..< count - 1 {
+            
+            let headerOutside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexOutside]
+            XCTAssertNotEqual(headerOutside.frame, CGRect.zero, "Error: using zero frame")
+            for indexInside:Int in indexOutside + 1 ..< count {
+                let headerInside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexInside]
+                let intersects:Bool = headerOutside.frame.intersects(headerInside.frame)
+                XCTAssertFalse(intersects, "Header frames are intersecting")
+            }
+        }
     }
 }
