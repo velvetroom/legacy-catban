@@ -13,7 +13,7 @@ class TestStringExtension:XCTestCase {
     }
     
     func testLocalizableStringsFromProject() {
-        let string:String = String.localizaedProject(key:"Project_defaultName")
+        let string:String = String.localizedProject(key:"Project_defaultName")
         XCTAssertEqual(string, Constants.expectedProject, "Unable to find localized string")
     }
 }

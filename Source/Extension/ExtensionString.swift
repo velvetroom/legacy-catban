@@ -10,7 +10,7 @@ extension String {
         return NSLocalizedString(key, tableName:Constants.tableLanding, comment:String())
     }
     
-    static func localizaedProject(key:String) -> String {
+    static func localizedProject(key:String) -> String {
         return NSLocalizedString(key, tableName:Constants.tableProject, comment:String())
     }
 }
