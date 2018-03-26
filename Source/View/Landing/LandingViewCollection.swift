@@ -26,5 +26,7 @@ class LandingViewCollection:UICollectionView {
         self.register(LandingViewCollectionHeader.self,
                       forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
                       withReuseIdentifier:LandingViewCollectionHeader.reusableIdentifier)
+        self.register(LandingViewCollectionCell.self,
+                      forCellWithReuseIdentifier:LandingViewCollectionCell.reusableIdentifier)
     }
 }

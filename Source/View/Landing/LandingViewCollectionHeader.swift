@@ -5,14 +5,23 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     override init(frame:CGRect) {
         super.init(frame:frame)
-        self.backgroundColor = UIColor(white:0.95, alpha:1)
-        self.layer.cornerRadius = Constants.cornerRadius
-        self.addTitle()
-        self.addBorder()
+        self.configureView()
+        self.addOutlets()
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    private func configureView() {
+        self.clipsToBounds = true
+        self.backgroundColor = UIColor(white:0.95, alpha:1)
+        self.layer.cornerRadius = Constants.cornerRadius
+    }
+    
+    private func addOutlets() {
+        self.addTitle()
+        self.addBorder()
     }
     
     private func addTitle() {
