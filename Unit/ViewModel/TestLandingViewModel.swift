@@ -13,5 +13,6 @@ class TestLandingViewModel:XCTestCase {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.viewModel.logoHidden, "Failed to load logo hidden property")
         XCTAssertNotNil(self.viewModel.collection, "Failed to load view model for collection")
+        XCTAssertNotNil(self.viewModel.layout, "Failed to load view model layout")
     }
 }
