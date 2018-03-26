@@ -37,10 +37,19 @@ class TestLandingCollectionDelegate:XCTestCase {
     
     private func addSectionToViewModel(items:Int) {
         var section:LandingViewModelCollectionSection = LandingViewModelCollectionSection()
+        section.title = "section\(self.viewModel.sections.count)"
         for _:Int in 0 ..< items {
             let item:LandingViewModelCollectionItem = LandingViewModelCollectionItem()
             section.items.append(item)
         }
         self.viewModel.sections.append(section)
+    }
+    
+    func testConfigureHeader() {
+        let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
+        self.delegate.configure(header:header, for:0)
+        let title:String? = header.labelTitle.text
+        XCTAssertNotNil(title, "There is no title in header")
+        XCTAssertEqual(title, self.viewModel.sections.first?.title, "Failed to assign title")
     }
 }

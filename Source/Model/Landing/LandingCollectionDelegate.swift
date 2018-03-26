@@ -8,6 +8,15 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
         super.init()
     }
     
+    func configure(header:LandingViewCollectionHeader, for section:Int) {
+        let viewModel:LandingViewModelCollectionSection = self.viewModelFor(section:section)
+        header.labelTitle.text = viewModel.title
+    }
+    
+    private func viewModelFor(section:Int) -> LandingViewModelCollectionSection {
+        return self.viewModel.sections[section]
+    }
+    
     func numberOfSections(in:UICollectionView) -> Int {
         return self.viewModel.sections.count
     }
@@ -35,6 +44,7 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
             ofKind:UICollectionElementKindSectionHeader,
             withReuseIdentifier:LandingViewCollectionHeader.reusableIdentifier,
             for:index) as! LandingViewCollectionHeader
+        self.configure(header:header, for:index.section)
         return header
     }
 }
