@@ -32,6 +32,8 @@
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
 		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
 		DA462D4E2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4D2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift */; };
+		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
+		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -107,6 +109,8 @@
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
 		DA462D4D2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionHeader+Constants.swift"; sourceTree = "<group>"; };
+		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
+		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				DA8AB2622064F303005A393E /* TestLandingViewCollection.swift */,
 				DAE698D020656C430046721C /* TestLandingViewCollection_Factory.swift */,
 				DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */,
+				DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */,
 				DA2538EF20681F1700EEB231 /* MockLandingViewCollection.swift */,
 			);
 			path = Landing;
@@ -358,6 +363,7 @@
 				DAE698D220656C970046721C /* LandingViewCollection+Factory.swift */,
 				DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */,
 				DA462D4D2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift */,
+				DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
+				DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
 				DA462D4E2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift in Sources */,
 				DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */,
@@ -608,6 +615,7 @@
 				DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
+				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DAE698D120656C430046721C /* TestLandingViewCollection_Factory.swift in Sources */,
