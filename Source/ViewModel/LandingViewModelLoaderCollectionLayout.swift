@@ -14,18 +14,19 @@ class LandingViewModelLoaderCollectionLayout {
     
     private func factoryHeaderWith(column:ProjectColumn, at index:Int) -> LandingViewModelCollectionLayoutHeader {
         var header:LandingViewModelCollectionLayoutHeader = LandingViewModelCollectionLayoutHeader()
-        header.frame = self.factoryFrameForHeaderAt(index:index)
+        header.frame = self.factoryFrameForHeaderWith(column:column, at:index)
         header.index = IndexPath(item:0, section:index)
         return header
     }
     
-    private func factoryFrameForHeaderAt(index:Int) -> CGRect {
+    private func factoryFrameForHeaderWith(column:ProjectColumn, at index:Int) -> CGRect {
         let x:CGFloat = self.factoryXForHeaderAt(index:index)
+        let height:CGFloat = self.factoryHeaderHeightWith(column:column)
         let frame:CGRect = CGRect(
             x:x,
             y:Constants.interItemSeparation,
             width:Constants.headerWidth,
-            height:400)
+            height:height)
         return frame
     }
     
@@ -52,5 +53,13 @@ class LandingViewModelLoaderCollectionLayout {
         maxX += Constants.interItemSeparation
         maxY += Constants.interItemSeparation
         return CGSize(width:maxX, height:maxY)
+    }
+    
+    private func factoryHeaderHeightWith(column:ProjectColumn) -> CGFloat {
+        var height:CGFloat = Constants.headerInsetTop + Constants.headerInsetBottom
+        for _:ProjectCard in column.cards {
+            height += Constants.cellHeight + Constants.interCellSeparation
+        }
+        return height
     }
 }
