@@ -25,7 +25,7 @@ class LandingViewModelLoaderCollectionLayout {
             x:x,
             y:Constants.interItemSeparation,
             width:Constants.headerWidth,
-            height:800)
+            height:400)
         return frame
     }
     

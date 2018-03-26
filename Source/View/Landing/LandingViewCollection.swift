@@ -17,8 +17,9 @@ class LandingViewCollection:UICollectionView {
         self.clipsToBounds = true
         self.alwaysBounceVertical = true
         self.alwaysBounceHorizontal = true
-        self.showsVerticalScrollIndicator = false
+        self.showsVerticalScrollIndicator = true
         self.showsHorizontalScrollIndicator = false
+        self.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
     private func registerViews() {

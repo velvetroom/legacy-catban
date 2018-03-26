@@ -5,7 +5,8 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     override init(frame:CGRect) {
         super.init(frame:frame)
-        self.backgroundColor = UIColor(white:0.9, alpha:1)
+        self.backgroundColor = UIColor(white:0.95, alpha:1)
+        self.layer.cornerRadius = Constants.cornerRadius
         self.addTitle()
     }
     
@@ -19,8 +20,8 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.isUserInteractionEnabled = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.textColor = UIColor(white:0.2, alpha:1)
-        labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.light)
+        labelTitle.textColor = UIColor(white:0.7, alpha:1)
+        labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.bold)
         self.labelTitle = labelTitle
         
         self.addSubview(labelTitle)
