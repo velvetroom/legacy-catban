@@ -8,6 +8,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         self.backgroundColor = UIColor(white:0.95, alpha:1)
         self.layer.cornerRadius = Constants.cornerRadius
         self.addTitle()
+        self.addBorder()
     }
     
     required init?(coder:NSCoder) {
@@ -30,5 +31,18 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         labelTitle.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         labelTitle.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    }
+    
+    private func addBorder() {
+        let border:UIView = UIView()
+        border.translatesAutoresizingMaskIntoConstraints = false
+        border.isUserInteractionEnabled = false
+        border.backgroundColor = UIColor(white:0.85, alpha:1)
+        self.addSubview(border)
+        
+        border.topAnchor.constraint(equalTo:self.topAnchor, constant:Constants.borderTop).isActive = true
+        border.heightAnchor.constraint(equalToConstant:Constants.borderHeight).isActive = true
+        border.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        border.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }
