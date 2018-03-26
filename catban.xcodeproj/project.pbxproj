@@ -36,6 +36,7 @@
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelLayout.swift */; };
 		DA519A5D2068E6DE00514098 /* LandingViewModelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5C2068E6DE00514098 /* LandingViewModelLayout.swift */; };
+		DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5E2068EA2000514098 /* MockLandingViewCollectionLayout.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -113,6 +114,7 @@
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelLayout.swift; sourceTree = "<group>"; };
 		DA519A5C2068E6DE00514098 /* LandingViewModelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLayout.swift; sourceTree = "<group>"; };
+		DA519A5E2068EA2000514098 /* MockLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */,
 				DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */,
 				DA2538EF20681F1700EEB231 /* MockLandingViewCollection.swift */,
+				DA519A5E2068EA2000514098 /* MockLandingViewCollectionLayout.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
 				DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */,
 				DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */,
+				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
