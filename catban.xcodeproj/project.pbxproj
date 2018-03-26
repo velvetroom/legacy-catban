@@ -43,6 +43,7 @@
 		DA519A6D2069162600514098 /* LandingViewModelLoaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A6C2069162600514098 /* LandingViewModelLoaderCollection.swift */; };
 		DA519A6F2069180A00514098 /* TestLandingViewModelLoaderCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A6E2069180A00514098 /* TestLandingViewModelLoaderCollectionLayout.swift */; };
 		DA519A712069186000514098 /* LandingViewModelLoaderCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A702069186000514098 /* LandingViewModelLoaderCollectionLayout.swift */; };
+		DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7220691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -127,6 +128,7 @@
 		DA519A6C2069162600514098 /* LandingViewModelLoaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoaderCollection.swift; sourceTree = "<group>"; };
 		DA519A6E2069180A00514098 /* TestLandingViewModelLoaderCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelLoaderCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A702069186000514098 /* LandingViewModelLoaderCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoaderCollectionLayout.swift; sourceTree = "<group>"; };
+		DA519A7220691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewModelLoaderCollectionLayout+Constants.swift"; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				DA2538E12067C60D00EEB231 /* LandingViewModelLoader.swift */,
 				DA519A6C2069162600514098 /* LandingViewModelLoaderCollection.swift */,
 				DA519A702069186000514098 /* LandingViewModelLoaderCollectionLayout.swift */,
+				DA519A7220691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
 				DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */,
+				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
 				DA462D4E2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift in Sources */,
 				DA2538E62067CF1300EEB231 /* LandingCollectionDelegate.swift in Sources */,

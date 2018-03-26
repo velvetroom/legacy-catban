@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class LandingViewModelLoaderCollectionLayout {
     func factoryWith(project:Project) -> LandingViewModelCollectionLayout {
