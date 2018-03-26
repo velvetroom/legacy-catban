@@ -12,5 +12,6 @@ class TestLandingViewModelCollectionLayout:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.viewModel.contentSize, "Failed to load content size")
+        XCTAssertNotNil(self.viewModel.headers, "Failed to load headers")
     }
 }

@@ -34,7 +34,13 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     private func validate(viewModel:LandingViewModel) {
+        self.validateOutlets(viewModel:viewModel)
         self.validate(collection:viewModel.collection)
+        self.validate(layout:viewModel.collectionLayout)
+    }
+    
+    private func validateOutlets(viewModel:LandingViewModel) {
+        XCTAssertTrue(viewModel.logoHidden, "Logo should be hidden after view model update")
     }
     
     private func validate(collection:LandingViewModelCollection) {
@@ -60,5 +66,14 @@ class TestLandingViewModelLoader:XCTestCase {
     
     private func validate(item:LandingViewModelCollectionItem, with card:ProjectCard) {
         XCTAssertEqual(item.title, card.title, "Failed to assign item title")
+    }
+    
+    private func validate(layout:LandingViewModelCollectionLayout) {
+        self.validateColumns(layout:layout)
+    }
+    
+    private func validateColumns(layout:LandingViewModelCollectionLayout) {
+        let columns:Int = self.project.columns.count
+        XCTAssertEqual(columns, layout.headers.count, "Incorrect amount of columns created")
     }
 }
