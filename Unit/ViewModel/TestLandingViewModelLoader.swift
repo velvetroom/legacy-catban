@@ -18,6 +18,8 @@ class TestLandingViewModelLoader:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.loader, "Failed to load loader")
+        XCTAssertNotNil(self.loader.collection, "Failed to load collection loader")
+        XCTAssertNotNil(self.loader.collectionLayout, "Failed to load collection layout")
     }
     
     func testLoadViewModel() {

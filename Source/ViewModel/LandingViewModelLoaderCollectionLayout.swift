@@ -1,7 +1,7 @@
 import Foundation
 
-extension LandingViewModelLoader {
-    func factoryCollectionLayoutWith(project:Project) -> LandingViewModelCollectionLayout {
+class LandingViewModelLoaderCollectionLayout {
+    func factoryWith(project:Project) -> LandingViewModelCollectionLayout {
         var layout:LandingViewModelCollectionLayout = LandingViewModelCollectionLayout()
         for column:ProjectColumn in project.columns {
             let header:LandingViewModelCollectionLayoutHeader = self.factoryHeaderWith(column:column)
@@ -11,6 +11,6 @@ extension LandingViewModelLoader {
     }
     
     private func factoryHeaderWith(column:ProjectColumn) -> LandingViewModelCollectionLayoutHeader {
-        
+        return LandingViewModelCollectionLayoutHeader()
     }
 }
