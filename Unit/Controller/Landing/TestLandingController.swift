@@ -25,5 +25,6 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets.viewCollection, "View collection not loaded")
         XCTAssertNotNil(self.controller.outlets.viewCollection.delegate, "Collection has no delegate")
         XCTAssertNotNil(self.controller.outlets.viewCollection.dataSource, "Collection has no data source")
+        XCTAssertNotNil(self.controller.outlets.layoutCollection, "Layout wasn't loaded")
     }
 }

@@ -1,8 +1,7 @@
 import UIKit
 
 class LandingViewCollection:UICollectionView {
-    init() {
-        let layout:UICollectionViewFlowLayout = LandingViewCollection.factoryLayout()
+    init(layout:UICollectionViewLayout = UICollectionViewLayout()) {
         super.init(frame:CGRect.zero, collectionViewLayout:layout)
         self.configureView()
         self.registerViews()

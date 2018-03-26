@@ -7,12 +7,15 @@ extension LandingController {
     }
     
     private func factoryViewCollection() {
-        let viewCollection:LandingViewCollection = LandingViewCollection()
+        let layout:LandingViewCollectionLayout = LandingViewCollectionLayout()
+        
+        let viewCollection:LandingViewCollection = LandingViewCollection(layout:layout)
         viewCollection.delegate = self.collectionDelegate
         viewCollection.dataSource = self.collectionDelegate
         
         self.view.addSubview(viewCollection)
         self.outlets.viewCollection = viewCollection
+        self.outlets.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
     }
     
