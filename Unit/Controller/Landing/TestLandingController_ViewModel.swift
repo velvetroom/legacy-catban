@@ -4,6 +4,7 @@ import XCTest
 class TestLandingController_ViewModel:XCTestCase {
     private var controller:LandingController!
     private var collectionDelegate:MockLandingCollectionDelegate!
+    private var layout:MockLandingViewCollectionLayout!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,6 +13,7 @@ class TestLandingController_ViewModel:XCTestCase {
     override func setUp() {
         super.setUp()
         self.controller = LandingController()
+        self.layout = MockLandingViewCollectionLayout()
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
         self.collectionDelegate = MockLandingCollectionDelegate()
@@ -39,8 +41,15 @@ class TestLandingController_ViewModel:XCTestCase {
     func testLayoutReceivesViewModelAfterViewDidLoad() {
         self.startExpectation()
         
+        self.layout.onViewModelSet = { [weak self] in
+            self?.expect?.fulfill()
+            self?.expect = nil
+        }
         
-        
+        XCTAssertNotNil(self.controller.view)
+        self.controller.outlets.layoutCollection = self.layout
+        self.controller.outlets.viewCollection.collectionViewLayout = self.layout
+        self.controller.reloadViewModel()
         
         self.waitExpectations()
     }
