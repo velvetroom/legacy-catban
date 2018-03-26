@@ -20,8 +20,10 @@ extension Project {
     }
     
     private class func factoryColumnBacklog() -> ProjectColumn {
+        let firstCard:ProjectCard = factoryCardFirstProject()
         let column:ProjectColumn = ProjectColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnBacklog")
+        column.cards.append(firstCard)
         return column
     }
     
@@ -35,5 +37,11 @@ extension Project {
         let column:ProjectColumn = ProjectColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnDone")
         return column
+    }
+    
+    private class func factoryCardFirstProject() -> ProjectCard {
+        let card:ProjectCard = ProjectCard()
+        card.title = String.localizedProject(key:"Project_defaultCardFirstProject")
+        return card
     }
 }

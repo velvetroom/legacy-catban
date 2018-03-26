@@ -18,5 +18,16 @@ class TestProject_Factory:XCTestCase {
     func testFactoryColumns() {
         let columns:[ProjectColumn] = Project.factoryDefaultColumns()
         XCTAssertNotNil(columns, "Failed to factory columns")
+        self.validateColumns(columns:columns)
+        self.validateFirstCard(columns:columns)
+    }
+    
+    private func validateColumns(columns:[ProjectColumn]) {
+        XCTAssertFalse(columns.isEmpty, "Columns factorised are empty")
+    }
+    
+    private func validateFirstCard(columns:[ProjectColumn]) {
+        let card:ProjectCard? = columns.first?.cards.first
+        XCTAssertNotNil(card, "Failed to create first card")
     }
 }
