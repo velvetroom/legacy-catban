@@ -30,6 +30,7 @@
 		DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
+		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -103,6 +104,7 @@
 		DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionItem.swift; sourceTree = "<group>"; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
+		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB27520650388005A393E /* ExtensionString.swift */,
+				DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				DA8AB2692064F465005A393E /* LandingOutlets.swift in Sources */,
 				DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */,
 				DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */,
+				DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
