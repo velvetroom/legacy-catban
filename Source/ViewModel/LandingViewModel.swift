@@ -2,12 +2,12 @@ import Foundation
 
 struct LandingViewModel {
     var collection:LandingViewModelCollection
-    var layout:LandingViewModelLayout
+    var collectionLayout:LandingViewModelCollectionLayout
     var logoHidden:Bool
     
     init() {
         self.collection = LandingViewModelCollection()
-        self.layout = LandingViewModelLayout()
+        self.collectionLayout = LandingViewModelCollectionLayout()
         self.logoHidden = false
     }
 }

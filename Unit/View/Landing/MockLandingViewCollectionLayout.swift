@@ -1,6 +1,6 @@
 import Foundation
 @testable import catban
 
-class MockLandingViewCollectionLayout {
+class MockLandingViewCollectionLayout:LandingViewCollectionLayout {
     
 }

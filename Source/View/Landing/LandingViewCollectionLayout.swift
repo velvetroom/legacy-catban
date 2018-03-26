@@ -1,10 +1,10 @@
 import UIKit
 
 class LandingViewCollectionLayout:UICollectionViewLayout {
-    var viewModel:LandingViewModelLayout
+    var viewModel:LandingViewModelCollectionLayout
     
     override init() {
-        self.viewModel = LandingViewModelLayout()
+        self.viewModel = LandingViewModelCollectionLayout()
         super.init()
     }
     

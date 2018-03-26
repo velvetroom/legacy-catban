@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingViewModelLayout:XCTestCase {
-    private var viewModel:LandingViewModelLayout!
+class TestLandingViewModelCollectionLayout:XCTestCase {
+    private var viewModel:LandingViewModelCollectionLayout!
     
     override func setUp() {
         super.setUp()
-        self.viewModel = LandingViewModelLayout()
+        self.viewModel = LandingViewModelCollectionLayout()
     }
     
     func testLoad() {
