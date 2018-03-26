@@ -6,10 +6,11 @@ class TestLandingViewCollectionHeader:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.header = LandingViewCollectionHeader()
+        self.header = LandingViewCollectionHeader(frame:CGRect.zero)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.header, "Failed to load header")
+        XCTAssertNotNil(self.header.labelTitle, "Failed to load header title")
     }
 }
