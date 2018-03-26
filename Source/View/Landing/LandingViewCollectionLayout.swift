@@ -2,9 +2,11 @@ import UIKit
 
 class LandingViewCollectionLayout:UICollectionViewLayout {
     var viewModel:LandingViewModelCollectionLayout
+    var attributesList:[UICollectionViewLayoutAttributes]
     
     override init() {
         self.viewModel = LandingViewModelCollectionLayout()
+        self.attributesList = []
         super.init()
     }
     
@@ -20,6 +22,15 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override func prepare() {
         super.prepare()
+        var attributesList:[UICollectionViewLayoutAttributes] = []
+        
+        for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
+//            let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
+//                forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
+//                with:)
+        }
+        
+        self.attributesList = attributesList
     }
     
     override func layoutAttributesForElements(in rect:CGRect) -> [UICollectionViewLayoutAttributes]? {

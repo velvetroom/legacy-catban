@@ -19,6 +19,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         let viewModel:LandingViewModelCollectionLayout = self.loader.factoryWith(project:self.project)
         XCTAssertNotNil(viewModel, "Failed to factory view model")
         self.validateHeaderFrames(viewModel:viewModel)
+        self.validateHeaderIndexes(viewModel:viewModel)
     }
     
     private func validateHeaderFrames(viewModel:LandingViewModelCollectionLayout) {
@@ -31,6 +32,18 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
                 let headerInside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexInside]
                 let intersects:Bool = headerOutside.frame.intersects(headerInside.frame)
                 XCTAssertFalse(intersects, "Header frames are intersecting")
+            }
+        }
+    }
+    
+    private func validateHeaderIndexes(viewModel:LandingViewModelCollectionLayout) {
+        let count:Int = viewModel.headers.count
+        for indexOutside:Int in 0 ..< count - 1 {
+            
+            let headerOutside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexOutside]
+            for indexInside:Int in indexOutside + 1 ..< count {
+                let headerInside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexInside]
+                XCTAssertNotEqual(headerOutside.index, headerInside.index, "Header indexes are repeating")
             }
         }
     }
