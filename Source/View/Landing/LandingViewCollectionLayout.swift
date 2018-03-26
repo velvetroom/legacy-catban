@@ -11,4 +11,8 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
+        return false
+    }
 }
