@@ -9,7 +9,13 @@ class LandingViewModelLoader:LandingViewModelLoaderProtocol {
         var viewModel:LandingViewModel = LandingViewModel()
         viewModel.logoHidden = Constants.logoHidden
         viewModel.collection = self.factoryCollectionWith(project:project)
+        viewModel.collectionLayout = self.factoryCollectionLayoutWith(project:project)
         return viewModel
+    }
+    
+    private func factoryCollectionLayoutWith(project:Project) -> LandingViewModelCollectionLayout {
+        var layout:LandingViewModelCollectionLayout = LandingViewModelCollectionLayout()
+        return layout
     }
     
     private func factoryCollectionWith(project:Project) -> LandingViewModelCollection {
