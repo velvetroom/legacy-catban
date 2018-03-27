@@ -2,14 +2,14 @@ import XCTest
 @testable import catban
 
 class TestLandingViewModelCollectionLayoutCell:XCTestCase {
-    private var cell:LandingViewModelCollectionLayoutCell!
+    private var viewModel:LandingViewModelCollectionLayoutCell!
     
     override func setUp() {
         super.setUp()
-        self.cell = LandingViewModelCollectionLayoutCell()
+        self.viewModel = LandingViewModelCollectionLayoutCell()
     }
     
     func testLoad() {
-        XCTAssertNotNil(self.cell, "Failed to load cell")
+        XCTAssertNotNil(self.viewModel, "Failed to load cell")
     }
 }
