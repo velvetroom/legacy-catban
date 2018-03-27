@@ -23,13 +23,15 @@ class TestLandingViewCollectionLayout:XCTestCase {
         XCTAssertNotNil(self.layout, "Failed to load layout")
         XCTAssertNotNil(self.layout.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.layout.cellAttributes, "Failed to load cell attributes")
-        XCTAssertNotNil(self.layout.headersAttributes, "Failed to load header attributes")
+        XCTAssertNotNil(self.layout.headerAttributes, "Failed to load header attributes")
     }
     
     func testPrepareCreatesAttributes() {
-        XCTAssertTrue(self.layout.attributesList.isEmpty, "Attributes list should be empty")
+        XCTAssertTrue(self.layout.cellAttributes.isEmpty, "Attributes cell list should be empty")
+        XCTAssertTrue(self.layout.headerAttributes.isEmpty, "Attributes header list should be empty")
         self.layout.prepare()
-        XCTAssertTrue(self.layout.attributesList.count == 1, "Failed to prepare attributes")
+        XCTAssertTrue(self.layout.headerAttributes.count == 1, "Failed to prepare header attributes")
+        XCTAssertTrue(self.layout.cellAttributes.count == 1, "Failed to prepare cell attributes")
     }
     
     func testAttributesForElementsInRectFails() {
@@ -45,12 +47,22 @@ class TestLandingViewCollectionLayout:XCTestCase {
             in:self.headerRect)
         XCTAssertNotNil(attributesList, "Failing finding attributes")
         XCTAssertFalse(attributesList!.isEmpty, "No attributes found")
-        guard
-            let attributes:UICollectionViewLayoutAttributes = attributesList?.first
-        else {
-            return
-        }
-        XCTAssertTrue(attributes.frame == self.headerRect, "Invalid header rect")
+        XCTAssertNotNil(attributesList?.first, "Failed to load attributes")
+    }
+    
+    func testAttributesForHeader() {
+        self.layout.prepare()
+        let index:IndexPath = IndexPath(item:0, section:0)
+        let attributes:UICollectionViewLayoutAttributes? =
+            self.layout.layoutAttributesForSupplementaryView(ofKind:UICollectionElementKindSectionHeader, at:index)
+        XCTAssertNotNil(attributes, "Failed to load attributes for header")
+    }
+    
+    func testAttributesForCell() {
+        self.layout.prepare()
+        let index:IndexPath = IndexPath(item:0, section:0)
+        let attributes:UICollectionViewLayoutAttributes? = self.layout.layoutAttributesForItem(at:index)
+        XCTAssertNotNil(attributes, "Failed to load attributes for cell")
     }
     
     private func createRects() {
@@ -64,7 +76,9 @@ class TestLandingViewCollectionLayout:XCTestCase {
     private func factoryViewModel() -> LandingViewModelCollectionLayout {
         var viewModel:LandingViewModelCollectionLayout = LandingViewModelCollectionLayout()
         var header:LandingViewModelCollectionLayoutHeader = LandingViewModelCollectionLayoutHeader()
+        let cell:LandingViewModelCollectionLayoutCell = LandingViewModelCollectionLayoutCell()
         header.frame = self.headerRect
+        header.cells.append(cell)
         viewModel.headers.append(header)
         return viewModel
     }
