@@ -28,6 +28,8 @@
 		DA2538FC2068326800EEB231 /* LandingViewModelCollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538FB2068326800EEB231 /* LandingViewModelCollectionSection.swift */; };
 		DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538FD206832E400EEB231 /* TestLandingViewModelCollectionItem.swift */; };
 		DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */; };
+		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
+		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
 		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
@@ -120,6 +122,8 @@
 		DA2538FB2068326800EEB231 /* LandingViewModelCollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionSection.swift; sourceTree = "<group>"; };
 		DA2538FD206832E400EEB231 /* TestLandingViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionItem.swift; sourceTree = "<group>"; };
 		DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionItem.swift; sourceTree = "<group>"; };
+		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
+		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
@@ -475,6 +479,7 @@
 				DA2538FD206832E400EEB231 /* TestLandingViewModelCollectionItem.swift */,
 				DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */,
 				DA519A6020690CA800514098 /* TestLandingViewModelCollectionLayoutHeader.swift */,
+				DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */,
 				DA2538DD2067C5AE00EEB231 /* TestLandingViewModelLoader.swift */,
 				DA519A7420693DA800514098 /* TestLandingViewModelLoaderOutlets.swift */,
 				DA519A6A2069156F00514098 /* TestLandingViewModelLoaderCollection.swift */,
@@ -491,6 +496,7 @@
 				DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */,
 				DA519A5C2068E6DE00514098 /* LandingViewModelCollectionLayout.swift */,
 				DA519A6220690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift */,
+				DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */,
 				DA2538ED2067D74B00EEB231 /* LandingViewModelCollection.swift */,
 				DA2538FB2068326800EEB231 /* LandingViewModelCollectionSection.swift */,
 				DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */,
@@ -640,6 +646,7 @@
 				DA519A5D2068E6DE00514098 /* LandingViewModelCollectionLayout.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
+				DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */,
 				DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */,
 				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
@@ -671,6 +678,7 @@
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
+				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */,
