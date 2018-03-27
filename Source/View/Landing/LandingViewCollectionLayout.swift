@@ -23,15 +23,10 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     override func prepare() {
         super.prepare()
         var attributesList:[UICollectionViewLayoutAttributes] = []
-        
         for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
-            let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
-                forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
-                with:header.index)
-            attributes.frame = header.frame
-            attributesList.append(attributes)
+            let attributesSublist:[UICollectionViewLayoutAttributes] = self.prepareFor(header:header)
+            attributesList.append(contentsOf:attributesSublist)
         }
-        
         self.attributesList = attributesList
     }
     
@@ -62,5 +57,40 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
         return false
+    }
+    
+    private func prepareFor(header:LandingViewModelCollectionLayoutHeader) -> [UICollectionViewLayoutAttributes] {
+        let headerAttributes:UICollectionViewLayoutAttributes = self.prepareAttributesFor(header:header)
+        let cellAttributes:[UICollectionViewLayoutAttributes] = self.prepareCellsFor(header:header)
+        var attributesList:[UICollectionViewLayoutAttributes] = []
+        attributesList.append(headerAttributes)
+        attributesList.append(contentsOf:cellAttributes)
+        return attributesList
+    }
+    
+    private func prepareAttributesFor(
+        header:LandingViewModelCollectionLayoutHeader) -> UICollectionViewLayoutAttributes {
+        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
+            with:header.index)
+        attributes.frame = header.frame
+        return attributes
+    }
+    
+    private func prepareCellsFor(
+        header:LandingViewModelCollectionLayoutHeader) -> [UICollectionViewLayoutAttributes] {
+        var attributesList:[UICollectionViewLayoutAttributes] = []
+        for cell:LandingViewModelCollectionLayoutCell in header.cells {
+            let attributes:UICollectionViewLayoutAttributes = self.prepareAttributesFor(cell:cell)
+            attributesList.append(attributes)
+        }
+        return attributesList
+    }
+    
+    private func prepareAttributesFor(
+        cell:LandingViewModelCollectionLayoutCell) -> UICollectionViewLayoutAttributes {
+        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith:IndexPath())
+        attributes.frame = cell.frame
+        return attributes
     }
 }

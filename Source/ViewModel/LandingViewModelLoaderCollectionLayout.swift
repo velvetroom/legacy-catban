@@ -1,6 +1,12 @@
 import UIKit
 
 class LandingViewModelLoaderCollectionLayout {
+    private var cellWidth:CGFloat {
+        get {
+            return Constants.headerWidth - (Constants.interItemSeparation * 2)
+        }
+    }
+    
     func factoryWith(project:Project) -> LandingViewModelCollectionLayout {
         var layout:LandingViewModelCollectionLayout = LandingViewModelCollectionLayout()
         for column:ProjectColumn in project.columns {
@@ -15,6 +21,7 @@ class LandingViewModelLoaderCollectionLayout {
     private func factoryHeaderWith(column:ProjectColumn, at index:Int) -> LandingViewModelCollectionLayoutHeader {
         var header:LandingViewModelCollectionLayoutHeader = LandingViewModelCollectionLayoutHeader()
         header.frame = self.factoryFrameForHeaderWith(column:column, at:index)
+        header.cells = self.factoryCellsWith(column:column, in:header)
         header.index = IndexPath(item:0, section:index)
         return header
     }
@@ -37,6 +44,54 @@ class LandingViewModelLoaderCollectionLayout {
         return separation + headers
     }
     
+    private func factoryHeaderHeightWith(column:ProjectColumn) -> CGFloat {
+        var height:CGFloat = Constants.headerInsetTop + Constants.headerInsetBottom
+        for _:ProjectCard in column.cards {
+            height += Constants.cellHeight + Constants.interCellSeparation
+        }
+        return height
+    }
+    
+    private func factoryCellsWith(
+        column:ProjectColumn,
+        in header:LandingViewModelCollectionLayoutHeader) -> [LandingViewModelCollectionLayoutCell] {
+        let count:Int = column.cards.count
+        var cells:[LandingViewModelCollectionLayoutCell] = []
+        for index:Int in 0 ..< count {
+            let cell:LandingViewModelCollectionLayoutCell = self.factoryCellIn(header:header, at:index)
+            cells.append(cell)
+        }
+        return cells
+    }
+    
+    private func factoryCellIn(header:LandingViewModelCollectionLayoutHeader,
+                               at index:Int) -> LandingViewModelCollectionLayoutCell {
+        var cell:LandingViewModelCollectionLayoutCell = LandingViewModelCollectionLayoutCell()
+        cell.frame = self.factoryFrameForCellIn(header:header, at:index)
+        return cell
+    }
+    
+    private func factoryFrameForCellIn(header:LandingViewModelCollectionLayoutHeader,
+                                       at index:Int) -> CGRect {
+        
+        let frame:CGRect = CGRect(
+            x:header.frame.minX + Constants.interCellSeparation,
+            y:self.factoryYForCellIn(header:header, at:index),
+            width:self.cellWidth,
+            height:Constants.cellHeight)
+        return frame
+    }
+    
+    private func factoryYForCellIn(header:LandingViewModelCollectionLayoutHeader,
+                                   at index:Int) -> CGFloat {
+        let index:CGFloat = CGFloat(index)
+        var y:CGFloat = header.frame.minY
+        y += Constants.headerInsetTop
+        y += index * (Constants.cellHeight + Constants.interCellSeparation)
+        y += Constants.interCellSeparation
+        return y
+    }
+    
     private func factoryContentSizeWith(layout:LandingViewModelCollectionLayout) -> CGSize {
         var maxX:CGFloat = 0
         var maxY:CGFloat = 0
@@ -53,13 +108,5 @@ class LandingViewModelLoaderCollectionLayout {
         maxX += Constants.interItemSeparation
         maxY += Constants.interItemSeparation
         return CGSize(width:maxX, height:maxY)
-    }
-    
-    private func factoryHeaderHeightWith(column:ProjectColumn) -> CGFloat {
-        var height:CGFloat = Constants.headerInsetTop + Constants.headerInsetBottom
-        for _:ProjectCard in column.cards {
-            height += Constants.cellHeight + Constants.interCellSeparation
-        }
-        return height
     }
 }
