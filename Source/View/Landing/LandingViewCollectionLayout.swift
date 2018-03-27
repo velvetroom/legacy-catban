@@ -99,4 +99,14 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             self.cellAttributes.append(attributes)
         }
     }
+    
+    private func sectionFor(position:CGPoint) -> Int? {
+        let positionX:CGFloat = position.x
+        for header:UICollectionViewLayoutAttributes in self.headerAttributes {
+            if header.frame.minX <= positionX && header.frame.maxX >= positionX {
+                return header.indexPath.section
+            }
+        }
+        return nil
+    }
 }

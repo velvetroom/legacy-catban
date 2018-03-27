@@ -66,7 +66,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
     }
     
     func collectionView(_:UICollectionView, moveItemAt source:IndexPath, to destination:IndexPath) {
-        
+        print(destination)
     }
     
     func collectionView(_:UICollectionView, canMoveItemAt index:IndexPath) -> Bool {
