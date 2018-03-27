@@ -1,6 +1,13 @@
 import UIKit
 
-extension LandingPresenterCollection {
+class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource {
+    var viewModel:LandingViewModelCollection
+    
+    override init() {
+        self.viewModel = LandingViewModelCollection()
+        super.init()
+    }
+    
     func configure(header:LandingViewCollectionHeader, for section:Int) {
         let viewModel:LandingViewModelCollectionSection = self.viewModelFor(section:section)
         header.labelTitle.text = viewModel.title

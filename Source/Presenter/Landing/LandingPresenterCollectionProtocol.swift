@@ -1,6 +1,7 @@
-import UIKit
+import Foundation
 
-protocol LandingPresenterCollectionProtocol:
-UICollectionViewDelegate, UICollectionViewDataSource, UIGestureRecognizerDelegate {
-    var viewModel:LandingViewModelCollection { get set }
+protocol LandingPresenterCollectionProtocol {
+    var delegate:LandingPresenterCollectionDelegate { get }
+    var dataSource:LandingPresenterCollectionDataSource { get }
+    var gesture:LandingPresenterCollectionGesture { get }
 }

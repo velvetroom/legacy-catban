@@ -11,8 +11,8 @@ extension LandingController {
         let layout:LandingViewCollectionLayout = LandingViewCollectionLayout()
         
         let viewCollection:LandingViewCollection = LandingViewCollection(layout:layout)
-        viewCollection.delegate = self.presenterCollection
-        viewCollection.dataSource = self.presenterCollection
+        viewCollection.delegate = self.presenterCollection.delegate
+        viewCollection.dataSource = self.presenterCollection.dataSource
         
         self.view.addSubview(viewCollection)
         self.outlets.viewCollection = viewCollection
@@ -22,10 +22,10 @@ extension LandingController {
     
     private func factoryGesture() {
         let gestureCollection:UILongPressGestureRecognizer = UILongPressGestureRecognizer()
-        gestureCollection.delegate = self.presenterCollection
+        gestureCollection.delegate = self.presenterCollection.gesture
         gestureCollection.addTarget(
             self.presenterCollection,
-            action:#selector(LandingPresenterCollection.selectorGestureReceived(sender:)))
+            action:#selector(LandingPresenterCollectionGesture.selectorGestureReceived(sender:)))
         
         self.outlets.viewCollection.addGestureRecognizer(gestureCollection)
         self.outlets.gestureCollection = gestureCollection

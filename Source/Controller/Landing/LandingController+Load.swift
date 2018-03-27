@@ -49,7 +49,7 @@ extension LandingController {
     }
     
     private func updateCollectionViewModel(viewModel:LandingViewModel) {
-        self.presenterCollection.viewModel = viewModel.collection
+        self.presenterCollection.dataSource.viewModel = viewModel.collection
         self.outlets.layoutCollection.viewModel = viewModel.collectionLayout
         self.outlets.viewCollection.reloadData()
     }

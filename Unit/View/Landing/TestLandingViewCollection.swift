@@ -3,12 +3,12 @@ import XCTest
 
 class TestLandingViewCollection:XCTestCase {
     private var view:LandingViewCollection!
-    private var delegate:MockLandingPresenterCollection!
+    private var delegate:MockLandingPresenterCollectionDataSource!
     
     override func setUp() {
         super.setUp()
         self.view = LandingViewCollection()
-        self.delegate = MockLandingPresenterCollection()
+        self.delegate = MockLandingPresenterCollectionDataSource()
         self.view.dataSource = self.delegate
     }
     

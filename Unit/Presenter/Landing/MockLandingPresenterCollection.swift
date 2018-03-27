@@ -1,16 +1,14 @@
-import UIKit
+import Foundation
 @testable import catban
 
-class MockLandingPresenterCollection:LandingPresenterCollection {
-    var onViewModelSet:(() -> Void)?
+struct MockLandingPresenterCollection:LandingPresenterCollectionProtocol {
+    let dataSource:LandingPresenterCollectionDataSource
+    let delegate:LandingPresenterCollectionDelegate
+    let gesture:LandingPresenterCollectionGesture
     
-    override init() {
-        super.init()
-    }
-    
-    override var viewModel:LandingViewModelCollection {
-        didSet {
-            self.onViewModelSet?()
-        }
+    init() {
+        self.dataSource = MockLandingPresenterCollectionDataSource()
+        self.delegate = LandingPresenterCollectionDelegate()
+        self.gesture = LandingPresenterCollectionGesture()
     }
 }

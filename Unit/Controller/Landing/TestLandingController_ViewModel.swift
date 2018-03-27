@@ -3,7 +3,8 @@ import XCTest
 
 class TestLandingController_ViewModel:XCTestCase {
     private var controller:LandingController!
-    private var collectionDelegate:MockLandingPresenterCollection!
+    private var presenter:MockLandingPresenterCollection!
+    private var dataSource:MockLandingPresenterCollectionDataSource!
     private var layout:MockLandingViewCollectionLayout!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,20 +18,22 @@ class TestLandingController_ViewModel:XCTestCase {
         self.layout = MockLandingViewCollectionLayout()
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
-        self.collectionDelegate = MockLandingPresenterCollection()
-        self.controller.presenterCollection = self.collectionDelegate
+        self.presenter = MockLandingPresenterCollection()
+        self.dataSource = self.presenter.dataSource as? MockLandingPresenterCollectionDataSource
+        self.controller.presenterCollection = self.presenter
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.controller.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Failed to load view model loader")
-        XCTAssertNotNil(self.collectionDelegate, "Failed to load delegate")
+        XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.dataSource, "Failed to load data source")
     }
     
     func testDelegateReceivesViewModelAfterViewDidLoad() {
         self.startExpectation()
-        self.collectionDelegate.onViewModelSet = { [weak self] in
+        self.dataSource.onViewModelSet = { [weak self] in
             self?.expect?.fulfill()
         }
         

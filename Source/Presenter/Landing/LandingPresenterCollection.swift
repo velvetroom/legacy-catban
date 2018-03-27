@@ -1,10 +1,13 @@
-import UIKit
+import Foundation
 
-class LandingPresenterCollection:NSObject, LandingPresenterCollectionProtocol {
-    var viewModel:LandingViewModelCollection
+struct LandingPresenterCollection:LandingPresenterCollectionProtocol {
+    let delegate:LandingPresenterCollectionDelegate
+    let dataSource:LandingPresenterCollectionDataSource
+    let gesture:LandingPresenterCollectionGesture
     
-    override init() {
-        self.viewModel = LandingViewModelCollection()
-        super.init()
+    init() {
+        self.delegate = LandingPresenterCollectionDelegate()
+        self.dataSource = LandingPresenterCollectionDataSource()
+        self.gesture = LandingPresenterCollectionGesture()
     }
 }
