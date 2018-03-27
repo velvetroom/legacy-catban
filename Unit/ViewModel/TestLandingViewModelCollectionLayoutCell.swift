@@ -12,5 +12,6 @@ class TestLandingViewModelCollectionLayoutCell:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load cell")
         XCTAssertNotNil(self.viewModel.frame, "Failed to load frame")
+        XCTAssertNotNil(self.viewModel.index, "Failed to load index")
     }
 }

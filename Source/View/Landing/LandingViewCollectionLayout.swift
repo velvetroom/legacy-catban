@@ -89,7 +89,7 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     private func prepareAttributesFor(
         cell:LandingViewModelCollectionLayoutCell) -> UICollectionViewLayoutAttributes {
-        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith:IndexPath())
+        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith:cell.index)
         attributes.frame = cell.frame
         return attributes
     }

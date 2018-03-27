@@ -68,12 +68,12 @@ class LandingViewModelLoaderCollectionLayout {
                                at index:Int) -> LandingViewModelCollectionLayoutCell {
         var cell:LandingViewModelCollectionLayoutCell = LandingViewModelCollectionLayoutCell()
         cell.frame = self.factoryFrameForCellIn(header:header, at:index)
+        cell.index = IndexPath(item:index, section:header.index.section)
         return cell
     }
     
     private func factoryFrameForCellIn(header:LandingViewModelCollectionLayoutHeader,
                                        at index:Int) -> CGRect {
-        
         let frame:CGRect = CGRect(
             x:header.frame.minX + Constants.interCellSeparation,
             y:self.factoryYForCellIn(header:header, at:index),

@@ -36,6 +36,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         self.validateHeaderFrames(viewModel:viewModel)
         self.validateHeaderIndexes(viewModel:viewModel)
         self.validateCellFrames(viewModel:viewModel)
+        self.validateCellIndexes(viewModel:viewModel)
         self.validateContentSize(viewModel:viewModel)
     }
     
@@ -87,12 +88,40 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     
     private func validateHeaderIndexes(viewModel:LandingViewModelCollectionLayout) {
         let count:Int = viewModel.headers.count
+        guard
+            count > 0
+        else {
+            return
+        }
         for indexOutside:Int in 0 ..< count - 1 {
             
             let headerOutside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexOutside]
             for indexInside:Int in indexOutside + 1 ..< count {
                 let headerInside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexInside]
                 XCTAssertNotEqual(headerOutside.index, headerInside.index, "Header indexes are repeating")
+            }
+        }
+    }
+    
+    private func validateCellIndexes(viewModel:LandingViewModelCollectionLayout) {
+        for header:LandingViewModelCollectionLayoutHeader in viewModel.headers {
+            self.validateCellIndexesIn(header:header)
+        }
+    }
+    
+    private func validateCellIndexesIn(header:LandingViewModelCollectionLayoutHeader) {
+        let count:Int = header.cells.count
+        guard
+            count > 0
+        else {
+            return
+        }
+        for indexOutside:Int in 0 ..< count - 1 {
+            
+            let cellOutside:LandingViewModelCollectionLayoutCell = header.cells[indexOutside]
+            for indexInside:Int in indexOutside + 1 ..< count {
+                let cellInside:LandingViewModelCollectionLayoutCell = header.cells[indexInside]
+                XCTAssertNotEqual(cellOutside.index, cellInside.index, "Cell indexes are repeating")
             }
         }
     }

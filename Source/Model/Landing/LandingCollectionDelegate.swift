@@ -35,8 +35,8 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
         return self.dequeueHeaderFrom(collection:collection, at:index)
     }
     
-    func collectionView(_:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    func collectionView(_ collection:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
+        return self.dequeueCellFrom(collection:collection, at:index)
     }
     
     private func dequeueHeaderFrom(collection:UICollectionView, at index:IndexPath) -> UICollectionReusableView {
@@ -46,5 +46,12 @@ class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
             for:index) as! LandingViewCollectionHeader
         self.configure(header:header, for:index.section)
         return header
+    }
+    
+    private func dequeueCellFrom(collection:UICollectionView, at index:IndexPath) -> UICollectionViewCell {
+        let cell:LandingViewCollectionCell  = collection.dequeueReusableCell(
+            withReuseIdentifier:LandingViewCollectionCell.reusableIdentifier,
+            for:index) as! LandingViewCollectionCell
+        return cell
     }
 }
