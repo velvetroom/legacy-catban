@@ -91,6 +91,7 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         cell:LandingViewModelCollectionLayoutCell) -> UICollectionViewLayoutAttributes {
         let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith:cell.index)
         attributes.frame = cell.frame
+        attributes.zIndex = Constants.cellZIndex
         return attributes
     }
 }

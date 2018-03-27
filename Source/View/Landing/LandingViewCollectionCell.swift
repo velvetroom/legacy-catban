@@ -14,6 +14,9 @@ class LandingViewCollectionCell:UICollectionViewCell {
     private func configureView() {
         self.backgroundColor = UIColor.white
         self.clipsToBounds = true
+        self.layer.cornerRadius = Constants.cornerRadius
+        self.layer.borderWidth = Constants.borderWidth
+        self.layer.borderColor = UIColor(white:0, alpha:0.3).cgColor
     }
     
     private func addOutlets() {

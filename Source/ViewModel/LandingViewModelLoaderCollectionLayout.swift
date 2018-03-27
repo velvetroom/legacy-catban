@@ -3,7 +3,7 @@ import UIKit
 class LandingViewModelLoaderCollectionLayout {
     private var cellWidth:CGFloat {
         get {
-            return Constants.headerWidth - (Constants.interItemSeparation * 2)
+            return Constants.headerWidth - (Constants.interCellSeparation * 2)
         }
     }
     

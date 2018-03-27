@@ -30,7 +30,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.isUserInteractionEnabled = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.textColor = UIColor(white:0.7, alpha:1)
+        labelTitle.textColor = UIColor(white:0.65, alpha:1)
         labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.bold)
         self.labelTitle = labelTitle
         

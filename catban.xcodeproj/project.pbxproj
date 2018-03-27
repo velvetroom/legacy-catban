@@ -53,6 +53,8 @@
 		DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */; };
 		DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */; };
 		DA519A812069460500514098 /* LandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A802069460500514098 /* LandingViewCollectionCell.swift */; };
+		DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */; };
+		DA79AF84206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
@@ -147,6 +149,8 @@
 		DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelOutlets.swift; sourceTree = "<group>"; };
 		DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionCell.swift; sourceTree = "<group>"; };
 		DA519A802069460500514098 /* LandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionCell.swift; sourceTree = "<group>"; };
+		DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionLayout+Constants.swift"; sourceTree = "<group>"; };
+		DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionCell+Constants.swift"; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -432,7 +436,9 @@
 				DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */,
 				DA462D4D2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift */,
 				DA519A802069460500514098 /* LandingViewCollectionCell.swift */,
+				DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */,
 				DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */,
+				DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -684,11 +690,13 @@
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
 				DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */,
 				DA462D4E2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift in Sources */,
+				DA79AF84206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift in Sources */,
 				DA2538E62067CF1300EEB231 /* LandingPresenterCollection.swift in Sources */,
 				DA519A812069460500514098 /* LandingViewCollectionCell.swift in Sources */,
 				DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
+				DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
