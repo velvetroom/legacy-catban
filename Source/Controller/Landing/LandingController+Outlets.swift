@@ -24,7 +24,7 @@ extension LandingController {
         let gestureCollection:UILongPressGestureRecognizer = UILongPressGestureRecognizer()
         gestureCollection.delegate = self.presenterCollection.gesture
         gestureCollection.addTarget(
-            self.presenterCollection,
+            self.presenterCollection.gesture,
             action:#selector(LandingPresenterCollectionGesture.selectorGestureReceived(sender:)))
         
         self.outlets.viewCollection.addGestureRecognizer(gestureCollection)

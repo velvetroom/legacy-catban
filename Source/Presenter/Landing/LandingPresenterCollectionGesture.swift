@@ -40,7 +40,6 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
     private func gestureStateChanged(gesture:UILongPressGestureRecognizer) {
         let location:CGPoint = gesture.location(in:gesture.view)
         guard
-            self.shouldDrag(gesture:gesture) == true,
             let collection:UICollectionView = gesture.view as? UICollectionView,
             let updatedLocation:CGPoint = self.updatedMovingCellLocation(gestureLocation:location)
         else {

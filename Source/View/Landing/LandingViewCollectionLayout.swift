@@ -2,11 +2,13 @@ import UIKit
 
 class LandingViewCollectionLayout:UICollectionViewLayout {
     var viewModel:LandingViewModelCollectionLayout
-    var attributesList:[UICollectionViewLayoutAttributes]
+    var cellAttributes:[UICollectionViewLayoutAttributes]
+    var headerAttributes:[UICollectionViewLayoutAttributes]
     
     override init() {
         self.viewModel = LandingViewModelCollectionLayout()
-        self.attributesList = []
+        self.cellAttributes = []
+        self.headerAttributes = []
         super.init()
     }
     
@@ -22,76 +24,79 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override func prepare() {
         super.prepare()
-        var attributesList:[UICollectionViewLayoutAttributes] = []
+        self.cellAttributes = []
+        self.headerAttributes = []
         for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
-            let attributesSublist:[UICollectionViewLayoutAttributes] = self.prepareFor(header:header)
-            attributesList.append(contentsOf:attributesSublist)
+            self.prepareHeadersFor(header:header)
+            self.prepareCellsFor(header:header)
         }
-        self.attributesList = attributesList
     }
     
     override func layoutAttributesForElements(in rect:CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var attributesList:[UICollectionViewLayoutAttributes]?
-        for attributes:UICollectionViewLayoutAttributes in self.attributesList {
-            guard
-                rect.intersects(attributes.frame)
-            else {
-                continue
-            }
+        var attributesList:[UICollectionViewLayoutAttributes]? = self.findAttributesFor(
+            rect:rect, in:self.cellAttributes)
+        if let headerAttributes:[UICollectionViewLayoutAttributes] = self.findAttributesFor(
+            rect:rect, in:self.headerAttributes) {
             if attributesList == nil {
                 attributesList = []
             }
-            attributesList?.append(attributes)
+            attributesList?.append(contentsOf:headerAttributes)
         }
         return attributesList
     }
     
-    override func layoutAttributesForItem(at indexPath:IndexPath) -> UICollectionViewLayoutAttributes? {
+    override func layoutAttributesForItem(at index:IndexPath) -> UICollectionViewLayoutAttributes? {
+        for attributes:UICollectionViewLayoutAttributes in self.cellAttributes {
+            if attributes.indexPath == index {
+                return attributes
+            }
+        }
         return nil
     }
     
     override func layoutAttributesForSupplementaryView(
-        ofKind elementKind:String, at indexPath:IndexPath) -> UICollectionViewLayoutAttributes? {
+        ofKind:String, at index:IndexPath) -> UICollectionViewLayoutAttributes? {
+        for attributes:UICollectionViewLayoutAttributes in self.headerAttributes {
+            if attributes.indexPath == index {
+                return attributes
+            }
+        }
         return nil
     }
-    
+        
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
         return false
     }
     
-    private func prepareFor(header:LandingViewModelCollectionLayoutHeader) -> [UICollectionViewLayoutAttributes] {
-        let headerAttributes:UICollectionViewLayoutAttributes = self.prepareAttributesFor(header:header)
-        let cellAttributes:[UICollectionViewLayoutAttributes] = self.prepareCellsFor(header:header)
-        var attributesList:[UICollectionViewLayoutAttributes] = []
-        attributesList.append(headerAttributes)
-        attributesList.append(contentsOf:cellAttributes)
-        return attributesList
-    }
-    
-    private func prepareAttributesFor(
-        header:LandingViewModelCollectionLayoutHeader) -> UICollectionViewLayoutAttributes {
-        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
-            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
-            with:header.index)
-        attributes.frame = header.frame
-        return attributes
-    }
-    
-    private func prepareCellsFor(
-        header:LandingViewModelCollectionLayoutHeader) -> [UICollectionViewLayoutAttributes] {
-        var attributesList:[UICollectionViewLayoutAttributes] = []
-        for cell:LandingViewModelCollectionLayoutCell in header.cells {
-            let attributes:UICollectionViewLayoutAttributes = self.prepareAttributesFor(cell:cell)
-            attributesList.append(attributes)
+    private func findAttributesFor(
+        rect:CGRect, in list:[UICollectionViewLayoutAttributes]) -> [UICollectionViewLayoutAttributes]? {
+        var attributesList:[UICollectionViewLayoutAttributes]?
+        for attributes:UICollectionViewLayoutAttributes in list {
+            if rect.intersects(attributes.frame) {
+                if attributesList == nil {
+                    attributesList = []
+                }
+                attributesList?.append(attributes)
+            }
         }
         return attributesList
     }
     
-    private func prepareAttributesFor(
-        cell:LandingViewModelCollectionLayoutCell) -> UICollectionViewLayoutAttributes {
-        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith:cell.index)
-        attributes.frame = cell.frame
-        attributes.zIndex = Constants.cellZIndex
-        return attributes
+    private func prepareHeadersFor(header:LandingViewModelCollectionLayoutHeader) {
+        let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
+            with:header.index)
+        attributes.frame = header.frame
+        self.headerAttributes.append(attributes)
+    }
+    
+    private func prepareCellsFor(header:LandingViewModelCollectionLayoutHeader) {
+        for cell:LandingViewModelCollectionLayoutCell in header.cells {
+            let attributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(
+                forCellWith:cell.index)
+            attributes.frame = cell.frame
+            attributes.zIndex = Constants.cellZIndex
+            self.cellAttributes.append(attributes)
+        }
     }
 }

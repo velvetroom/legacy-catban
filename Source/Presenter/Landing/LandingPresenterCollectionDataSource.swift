@@ -64,4 +64,12 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
         self.configure(cell:cell, for:index)
         return cell
     }
+    
+    func collectionView(_:UICollectionView, moveItemAt source:IndexPath, to destination:IndexPath) {
+        
+    }
+    
+    func collectionView(_:UICollectionView, canMoveItemAt index:IndexPath) -> Bool {
+        return true
+    }
 }
