@@ -2,6 +2,7 @@ import UIKit
 
 class MockLandingPresenterCollectionView:UICollectionView {
     var returnIndexPath:IndexPath?
+    var returnCell:UICollectionViewCell?
     var onBeginMovement:(() -> Void)?
     var onCancelMovement:(() -> Void)?
     var onEndMovement:(() -> Void)?
@@ -17,6 +18,10 @@ class MockLandingPresenterCollectionView:UICollectionView {
     
     override func indexPathForItem(at point:CGPoint) -> IndexPath? {
         return self.returnIndexPath
+    }
+    
+    override func cellForItem(at indexPath:IndexPath) -> UICollectionViewCell? {
+        return self.returnCell
     }
     
     override func beginInteractiveMovementForItem(at indexPath:IndexPath) -> Bool {

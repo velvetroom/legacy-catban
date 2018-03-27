@@ -1,6 +1,6 @@
 import UIKit
 
-class MockLandingPresentercollectionGesture:UILongPressGestureRecognizer {
+class MockLandingPresenterCollectionGesture:UILongPressGestureRecognizer {
     var fakeState:UIGestureRecognizerState
     
     init() {
