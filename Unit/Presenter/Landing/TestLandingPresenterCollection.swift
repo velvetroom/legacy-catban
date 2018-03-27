@@ -2,31 +2,31 @@ import XCTest
 @testable import catban
 
 class TestLandingPresenterCollection:XCTestCase {
-    private var delegate:LandingPresenterCollection!
+    private var presenter:LandingPresenterCollection!
     private var viewModel:LandingViewModelCollection!
     private var viewCollection:MockLandingViewCollection!
     
     override func setUp() {
         super.setUp()
-        self.delegate = LandingPresenterCollection()
+        self.presenter = LandingPresenterCollection()
         self.viewModel = LandingViewModelCollection()
         self.viewCollection = MockLandingViewCollection()
         self.configureViewModel()
-        self.delegate.viewModel = self.viewModel
+        self.presenter.viewModel = self.viewModel
     }
     
     func testLoad() {
-        XCTAssertNotNil(self.delegate, "Failed to load delegate")
-        XCTAssertNotNil(self.delegate.viewModel, "Failed to load view model")
+        XCTAssertNotNil(self.presenter, "Failed to load delegate")
+        XCTAssertNotNil(self.presenter.viewModel, "Failed to load view model")
     }
     
     func testUsingViewModelForSections() {
-        let sections:Int = self.delegate.numberOfSections(in:self.viewCollection)
+        let sections:Int = self.presenter.numberOfSections(in:self.viewCollection)
         XCTAssertEqual(sections, self.viewModel.sections.count, "Invalid number of sections")
     }
     
     func testUsingViewModelForItems() {
-        let items:Int = self.delegate.collectionView(self.viewCollection, numberOfItemsInSection:0)
+        let items:Int = self.presenter.collectionView(self.viewCollection, numberOfItemsInSection:0)
         XCTAssertEqual(items, self.viewModel.sections[0].items.count, "Invalid number of items")
     }
     
@@ -47,7 +47,7 @@ class TestLandingPresenterCollection:XCTestCase {
     
     func testConfigureHeader() {
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
-        self.delegate.configure(header:header, for:0)
+        self.presenter.configure(header:header, for:0)
         let title:String? = header.labelTitle.text
         XCTAssertNotNil(title, "There is no title in header")
         XCTAssertEqual(title, self.viewModel.sections.first?.title, "Failed to assign title")
@@ -56,7 +56,7 @@ class TestLandingPresenterCollection:XCTestCase {
     func testConfigureCell() {
         let index:IndexPath = IndexPath(item:0, section:0)
         let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
-        self.delegate.configure(cell:cell, for:index)
+        self.presenter.configure(cell:cell, for:index)
         let title:String? = cell.labelTitle.text
         XCTAssertNotNil(title, "There is no title in cell")
         XCTAssertEqual(title, self.viewModel.sections.first?.items.first?.title, "Failed to assign cell title")

@@ -21,8 +21,11 @@ extension LandingController {
     }
     
     private func factoryGesture() {
-        let gestureCollection:UIPanGestureRecognizer = UIPanGestureRecognizer()
+        let gestureCollection:UILongPressGestureRecognizer = UILongPressGestureRecognizer()
         gestureCollection.delegate = self.presenterCollection
+        gestureCollection.addTarget(
+            self.presenterCollection,
+            action:#selector(LandingPresenterCollection.selectorGestureReceived(sender:)))
         
         self.outlets.viewCollection.addGestureRecognizer(gestureCollection)
         self.outlets.gestureCollection = gestureCollection

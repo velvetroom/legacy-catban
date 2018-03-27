@@ -2,7 +2,7 @@ import Foundation
 @testable import catban
 
 class MockLandingViewCollectionLayout:LandingViewCollectionLayout {
-    var onViewModelSet:(() -> ())?
+    var onViewModelSet:(() -> Void)?
     
     override var viewModel:LandingViewModelCollectionLayout {
         didSet {
