@@ -13,8 +13,17 @@ class LandingPresenterCollection:NSObject, LandingPresenterCollectionProtocol {
         header.labelTitle.text = viewModel.title
     }
     
+    func configure(cell:LandingViewCollectionCell, for index:IndexPath) {
+        let viewModel:LandingViewModelCollectionItem = self.viewModelFor(index:index)
+        cell.labelTitle.text = viewModel.title
+    }
+    
     private func viewModelFor(section:Int) -> LandingViewModelCollectionSection {
         return self.viewModel.sections[section]
+    }
+    
+    private func viewModelFor(index:IndexPath) -> LandingViewModelCollectionItem {
+        return self.viewModel.sections[index.section].items[index.item]
     }
     
     func numberOfSections(in:UICollectionView) -> Int {
@@ -52,6 +61,7 @@ class LandingPresenterCollection:NSObject, LandingPresenterCollectionProtocol {
         let cell:LandingViewCollectionCell  = collection.dequeueReusableCell(
             withReuseIdentifier:LandingViewCollectionCell.reusableIdentifier,
             for:index) as! LandingViewCollectionCell
+        self.configure(cell:cell, for:index)
         return cell
     }
 }

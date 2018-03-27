@@ -52,4 +52,13 @@ class TestLandingPresenterCollection:XCTestCase {
         XCTAssertNotNil(title, "There is no title in header")
         XCTAssertEqual(title, self.viewModel.sections.first?.title, "Failed to assign title")
     }
+    
+    func testConfigureCell() {
+        let index:IndexPath = IndexPath(item:0, section:0)
+        let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
+        self.delegate.configure(cell:cell, for:index)
+        let title:String? = cell.labelTitle.text
+        XCTAssertNotNil(title, "There is no title in cell")
+        XCTAssertEqual(title, self.viewModel.sections.first?.items.first?.title, "Failed to assign cell title")
+    }
 }
