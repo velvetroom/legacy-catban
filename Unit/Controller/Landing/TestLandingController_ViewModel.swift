@@ -3,7 +3,7 @@ import XCTest
 
 class TestLandingController_ViewModel:XCTestCase {
     private var controller:LandingController!
-    private var collectionDelegate:MockLandingCollectionDelegate!
+    private var collectionDelegate:MockLandingPresenterCollection!
     private var layout:MockLandingViewCollectionLayout!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,8 +17,8 @@ class TestLandingController_ViewModel:XCTestCase {
         self.layout = MockLandingViewCollectionLayout()
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
-        self.collectionDelegate = MockLandingCollectionDelegate()
-        self.controller.collectionDelegate = self.collectionDelegate
+        self.collectionDelegate = MockLandingPresenterCollection()
+        self.controller.presenterCollection = self.collectionDelegate
     }
     
     func testLoad() {

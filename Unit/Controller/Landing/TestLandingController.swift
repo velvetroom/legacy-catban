@@ -14,7 +14,7 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets, "Controller doesn't have outlets")
         XCTAssertNotNil(self.controller.projectLoader, "Controller doesn't have project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Controller doesn't have view model loader")
-        XCTAssertNotNil(self.controller.collectionDelegate, "Controller doesn't have a collection delegate")
+        XCTAssertNotNil(self.controller.presenterCollection, "Controller doesn't have a collection delegate")
     }
     
     func testOutletsAreLoaded() {

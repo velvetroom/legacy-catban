@@ -10,8 +10,8 @@ extension LandingController {
         let layout:LandingViewCollectionLayout = LandingViewCollectionLayout()
         
         let viewCollection:LandingViewCollection = LandingViewCollection(layout:layout)
-        viewCollection.delegate = self.collectionDelegate
-        viewCollection.dataSource = self.collectionDelegate
+        viewCollection.delegate = self.presenterCollection
+        viewCollection.dataSource = self.presenterCollection
         
         self.view.addSubview(viewCollection)
         self.outlets.viewCollection = viewCollection

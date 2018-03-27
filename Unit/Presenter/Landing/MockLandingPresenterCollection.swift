@@ -1,7 +1,7 @@
 import UIKit
 @testable import catban
 
-class MockLandingCollectionDelegate:LandingCollectionDelegate {
+class MockLandingPresenterCollection:LandingPresenterCollection {
     var onViewModelSet:(() -> Void)?
     
     override init() {

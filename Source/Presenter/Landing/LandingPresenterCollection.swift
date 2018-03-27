@@ -1,6 +1,6 @@
 import UIKit
 
-class LandingCollectionDelegate:NSObject, LandingCollectionDelegateProtocol {
+class LandingPresenterCollection:NSObject, LandingPresenterCollectionProtocol {
     var viewModel:LandingViewModelCollection
     
     override init() {
