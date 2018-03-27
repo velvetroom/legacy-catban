@@ -11,5 +11,9 @@ class TestLandingOutlets:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.outlets, "Failed to load outlets")
+        XCTAssertNil(self.outlets.viewCollection, "Collection should not exist")
+        XCTAssertNil(self.outlets.layoutCollection, "Layout collection should not exist")
+        XCTAssertNil(self.outlets.gestureCollection, "Gesture collection should not exist")
+        XCTAssertNil(self.outlets.imageLogo, "Image logo should not exist")
     }
 }

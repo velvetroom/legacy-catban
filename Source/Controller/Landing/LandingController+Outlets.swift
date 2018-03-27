@@ -3,6 +3,7 @@ import UIKit
 extension LandingController {
     func factoryOutlets() {
         self.factoryViewCollection()
+        self.factoryGesture()
         self.factoryImageLogo()
     }
     
@@ -17,6 +18,14 @@ extension LandingController {
         self.outlets.viewCollection = viewCollection
         self.outlets.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
+    }
+    
+    private func factoryGesture() {
+        let gestureCollection:UIPanGestureRecognizer = UIPanGestureRecognizer()
+        gestureCollection.delegate = self.presenterCollection
+        
+        self.outlets.viewCollection.addGestureRecognizer(gestureCollection)
+        self.outlets.gestureCollection = gestureCollection
     }
     
     private func factoryImageLogo() {

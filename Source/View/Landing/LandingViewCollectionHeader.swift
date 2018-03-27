@@ -1,7 +1,7 @@
 import UIKit
 
 class LandingViewCollectionHeader:UICollectionReusableView {
-    private(set) var labelTitle:UILabel!
+    private(set) weak var labelTitle:UILabel!
     
     override init(frame:CGRect) {
         super.init(frame:frame)
