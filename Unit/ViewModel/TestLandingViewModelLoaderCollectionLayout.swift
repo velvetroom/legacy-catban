@@ -18,6 +18,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         super.setUp()
         self.loader = LandingViewModelLoaderCollectionLayout()
         self.project = Project.factoryNewProject()
+        self.addColumnToProject()
     }
     
     func testLoad() {
@@ -111,6 +112,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     
     private func validateCellIndexesIn(header:LandingViewModelCollectionLayoutHeader) {
         let count:Int = header.cells.count
+        let section:Int = header.index.section
         guard
             count > 0
         else {
@@ -119,6 +121,8 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         for indexOutside:Int in 0 ..< count - 1 {
             
             let cellOutside:LandingViewModelCollectionLayoutCell = header.cells[indexOutside]
+            let cellSection:Int = cellOutside.index.section
+            XCTAssertEqual(section, cellSection, "Cell has not the right section on the index")
             for indexInside:Int in indexOutside + 1 ..< count {
                 let cellInside:LandingViewModelCollectionLayoutCell = header.cells[indexInside]
                 XCTAssertNotEqual(cellOutside.index, cellInside.index, "Cell indexes are repeating")
@@ -135,5 +139,14 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
             XCTAssertTrue(headerMaxX < contentMaxX, "Header is greater than content")
             XCTAssertTrue(headerMaxY < contentMaxY, "Header is greater than content")
         }
+    }
+    
+    private func addColumnToProject() {
+        let newCardA:ProjectCard = ProjectCard()
+        let newCardB:ProjectCard = ProjectCard()
+        var newColumn:ProjectColumn = ProjectColumn()
+        newColumn.cards.append(newCardA)
+        newColumn.cards.append(newCardB)
+        self.project.columns.append(newColumn)
     }
 }

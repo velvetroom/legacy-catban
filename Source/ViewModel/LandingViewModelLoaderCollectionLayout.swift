@@ -20,9 +20,9 @@ class LandingViewModelLoaderCollectionLayout {
     
     private func factoryHeaderWith(column:ProjectColumn, at index:Int) -> LandingViewModelCollectionLayoutHeader {
         var header:LandingViewModelCollectionLayoutHeader = LandingViewModelCollectionLayoutHeader()
+        header.index = IndexPath(item:0, section:index)
         header.frame = self.factoryFrameForHeaderWith(column:column, at:index)
         header.cells = self.factoryCellsWith(column:column, in:header)
-        header.index = IndexPath(item:0, section:index)
         return header
     }
     
