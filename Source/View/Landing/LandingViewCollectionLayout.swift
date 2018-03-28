@@ -46,6 +46,7 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     }
     
     override func layoutAttributesForItem(at index:IndexPath) -> UICollectionViewLayoutAttributes? {
+        print("looking for: section \(index.section) item \(index.item)")
         for attributes:UICollectionViewLayoutAttributes in self.cellAttributes {
             if attributes.indexPath == index {
                 return attributes

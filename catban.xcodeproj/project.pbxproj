@@ -54,6 +54,7 @@
 		DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */; };
 		DA519A812069460500514098 /* LandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A802069460500514098 /* LandingViewCollectionCell.swift */; };
 		DA5B6D13206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */; };
+		DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */; };
 		DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */; };
 		DA79AF84206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */; };
 		DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */; };
@@ -159,6 +160,7 @@
 		DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionCell.swift; sourceTree = "<group>"; };
 		DA519A802069460500514098 /* LandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionCell.swift; sourceTree = "<group>"; };
 		DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDataSource_Moving.swift; sourceTree = "<group>"; };
+		DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDelegate.swift; sourceTree = "<group>"; };
 		DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionLayout+Constants.swift"; sourceTree = "<group>"; };
 		DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionCell+Constants.swift"; sourceTree = "<group>"; };
 		DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				DAABC2AB206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift */,
 				DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */,
 				DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */,
+				DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */,
 				DAABC2AD206A7C48003B4BE4 /* MockLandingPresenterCollection.swift */,
 				DA2538F520682A4200EEB231 /* MockLandingPresenterCollectionDataSource.swift */,
 				DA79AF8D206A5FEA00DE73FA /* MockLandingPresenterCollectionView.swift */,
@@ -748,6 +751,7 @@
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
+				DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */,
 				DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */,
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
