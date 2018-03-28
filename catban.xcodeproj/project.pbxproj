@@ -53,6 +53,7 @@
 		DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */; };
 		DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */; };
 		DA519A812069460500514098 /* LandingViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A802069460500514098 /* LandingViewCollectionCell.swift */; };
+		DA5B6D13206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */; };
 		DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */; };
 		DA79AF84206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */; };
 		DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */; };
@@ -157,6 +158,7 @@
 		DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelOutlets.swift; sourceTree = "<group>"; };
 		DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionCell.swift; sourceTree = "<group>"; };
 		DA519A802069460500514098 /* LandingViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionCell.swift; sourceTree = "<group>"; };
+		DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDataSource_Moving.swift; sourceTree = "<group>"; };
 		DA79AF81206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionLayout+Constants.swift"; sourceTree = "<group>"; };
 		DA79AF83206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionCell+Constants.swift"; sourceTree = "<group>"; };
 		DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				DA2538E32067CED700EEB231 /* TestLandingPresenterCollection.swift */,
 				DAABC2AB206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift */,
+				DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */,
 				DA79AF8B206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift */,
 				DAABC2AD206A7C48003B4BE4 /* MockLandingPresenterCollection.swift */,
 				DA2538F520682A4200EEB231 /* MockLandingPresenterCollectionDataSource.swift */,
@@ -771,6 +774,7 @@
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
 				DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */,
 				DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */,
+				DA5B6D13206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift in Sources */,
 				DA2538F820682A9B00EEB231 /* TestLandingController_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
