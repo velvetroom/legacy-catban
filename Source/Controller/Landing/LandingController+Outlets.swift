@@ -3,6 +3,7 @@ import UIKit
 extension LandingController {
     func factoryOutlets() {
         self.factoryViewCollection()
+        self.factoryPresenterDelegates()
         self.factoryGesture()
         self.factoryImageLogo()
     }
@@ -18,6 +19,10 @@ extension LandingController {
         self.outlets.viewCollection = viewCollection
         self.outlets.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
+    }
+    
+    private func factoryPresenterDelegates() {
+        self.presenterCollection.dataSource.delegate = self
     }
     
     private func factoryGesture() {
