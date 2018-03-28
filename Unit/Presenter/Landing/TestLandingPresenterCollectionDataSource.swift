@@ -3,17 +3,21 @@ import XCTest
 
 class TestLandingPresenterCollectionDataSource:XCTestCase {
     private var dataSource:LandingPresenterCollectionDataSource!
+    private var controller:LandingController!
     private var viewCollection:MockLandingViewCollection!
     
     override func setUp() {
         super.setUp()
         self.dataSource = LandingPresenterCollectionDataSource()
+        self.controller = LandingController()
         self.viewCollection = MockLandingViewCollection()
+        self.dataSource.delegate = self.controller
         self.configureViewModel()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.dataSource, "Failed to load data source")
+        XCTAssertNotNil(self.dataSource.delegate, "Failed to load delegate")
         XCTAssertNotNil(self.viewCollection, "Failed to load collection")
         XCTAssertFalse(self.dataSource.viewModel.sections.isEmpty, "Failed to configure view model")
     }

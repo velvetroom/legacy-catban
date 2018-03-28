@@ -2,6 +2,7 @@ import UIKit
 
 class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource {
     var viewModel:LandingViewModelCollection
+    weak var delegate:LandingPresenterCollectionDataSourceProtocol?
     
     override init() {
         self.viewModel = LandingViewModelCollection()
