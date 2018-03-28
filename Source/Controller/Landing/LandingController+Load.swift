@@ -5,6 +5,7 @@ extension LandingController {
         self.loadProject { [weak self] (project:Project) in
             self?.project = project
             self?.reloadViewModel()
+            self?.reloadCollectionView()
         }
     }
     
@@ -19,23 +20,17 @@ extension LandingController {
     }
     
     func reloadViewModel() {
-        self.loadViewModel { [weak self] (viewModel:LandingViewModel) in
-            self?.updateViewModel(viewModel:viewModel)
+        guard
+            let project:Project = self.project
+        else {
+            return
         }
+        let viewModel:LandingViewModel = self.viewModelLoader.factoryViewModelWith(project:project)
+        self.updateViewModel(viewModel:viewModel)
     }
     
-    func loadViewModel(completion:@escaping((LandingViewModel) -> Void)) {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
-            guard
-                let project:Project = self?.project,
-                let viewModel:LandingViewModel = self?.viewModelLoader.factoryViewModelWith(project:project)
-            else {
-                return
-            }
-            DispatchQueue.main.async {
-                completion(viewModel)
-            }
-        }
+    func reloadCollectionView() {
+        self.outlets.viewCollection.reloadData()
     }
     
     func updateViewModel(viewModel:LandingViewModel) {
@@ -51,6 +46,5 @@ extension LandingController {
     private func updateCollectionViewModel(viewModel:LandingViewModel) {
         self.presenterCollection.dataSource.viewModel = viewModel.collection
         self.outlets.layoutCollection.viewModel = viewModel.collectionLayout
-        self.outlets.viewCollection.reloadData()
     }
 }

@@ -63,15 +63,16 @@ class TestLandingController_Load:XCTestCase {
     }
     
     func testLoadViewModel() {
-        self.startExpectation()
+        XCTAssertTrue(self.controller.presenterCollection.dataSource.viewModel.sections.isEmpty,
+                      "View model not empty at initiation")
+        self.controller.viewModelLoader = LandingViewModelLoader()
         self.controller.project = Project.factoryNewProject()
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.loadViewModel { [weak self] (viewModel:LandingViewModel) in
-            XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
-            self?.expect?.fulfill()
-        }
+        self.controller.reloadViewModel()
         
-        self.waitExpectations()
+        XCTAssertFalse(self.controller.presenterCollection.dataSource.viewModel.sections.isEmpty,
+                      "View model not reloading")
     }
     
     private func startExpectation() {
