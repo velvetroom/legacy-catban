@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingViewCollectionCellMenu:XCTestCase {
-    private var menu:LandingViewCollectionCellMenu!
+class TestLandingViewCollectionMenu:XCTestCase {
+    private var menu:LandingViewCollectionMenu!
     
     override func setUp() {
         super.setUp()
-        self.menu = LandingViewCollectionCellMenu()
+        self.menu = LandingViewCollectionMenu()
     }
     
     func testLoad() {

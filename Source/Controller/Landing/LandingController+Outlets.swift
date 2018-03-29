@@ -3,6 +3,7 @@ import UIKit
 extension LandingController {
     func factoryOutlets() {
         self.factoryViewCollection()
+        self.factoryViewCollectionMenu()
         self.factoryPresenterDelegates()
         self.factoryGesture()
         self.factoryImageLogo()
@@ -19,6 +20,18 @@ extension LandingController {
         self.outlets.viewCollection = viewCollection
         self.outlets.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
+    }
+    
+    private func factoryViewCollectionMenu() {
+        let viewCollectionMenu:LandingViewCollectionMenu = LandingViewCollectionMenu()
+        
+        self.view.addSubview(viewCollectionMenu)
+        self.outlets.viewCollectionMenu = viewCollectionMenu
+        
+        viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
+        viewCollectionMenu.bottomAnchor.constraint(equalTo:self.view.bottomAnchor).isActive = true
+        viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
+        viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
     }
     
     private func factoryPresenterDelegates() {

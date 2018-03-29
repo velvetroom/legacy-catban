@@ -7,6 +7,7 @@ extension LandingViewModelLoaderCollectionLayout {
         static let headerWidth:CGFloat = 220
         static let headerInsetTop:CGFloat = 35
         static let headerInsetBottom:CGFloat = 20
+        static let headerOutsetBottom:CGFloat = 60
         static let cellHeight:CGFloat = 100
     }
 }

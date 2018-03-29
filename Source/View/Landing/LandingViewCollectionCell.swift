@@ -2,7 +2,6 @@ import UIKit
 
 class LandingViewCollectionCell:UICollectionViewCell {
     weak var labelTitle:UILabel!
-    weak var viewMenu:LandingViewCollectionCellMenu!
     
     override init(frame:CGRect) {
         super.init(frame:frame)
