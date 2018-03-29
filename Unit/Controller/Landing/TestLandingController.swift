@@ -14,7 +14,7 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets, "Controller doesn't have outlets")
         XCTAssertNotNil(self.controller.projectLoader, "Controller doesn't have project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Controller doesn't have view model loader")
-        XCTAssertNotNil(self.controller.presenterCollection, "Controller doesn't have a collection delegate")
+        XCTAssertNotNil(self.controller.presenter, "Controller doesn't have a collection delegate")
     }
     
     func testOutletsAreLoaded() {
@@ -30,8 +30,8 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets.gestureCollection, "Gesture not loaded")
         XCTAssertNotNil(self.controller.outlets.gestureCollection.delegate, "Gesture has no delegate")
         XCTAssertNotNil(self.controller.outlets.layoutCollection, "Layout wasn't loaded")
-        XCTAssertNotNil(self.controller.presenterCollection.dataSource.delegate, "Delegate not assigned")
-        XCTAssertNotNil(self.controller.presenterCollection.delegate.delegate, "Delegate not assigned")
+        XCTAssertNotNil(self.controller.presenter.collection.dataSource.delegate, "Delegate not assigned")
+        XCTAssertNotNil(self.controller.presenter.collection.delegate.delegate, "Delegate not assigned")
         XCTAssertFalse(self.controller.outlets.viewCollection.gestureRecognizers!.isEmpty, "No gestures found")
     }
 }

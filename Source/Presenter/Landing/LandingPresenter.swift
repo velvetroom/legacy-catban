@@ -1,8 +1,8 @@
 import Foundation
 
 struct LandingPresenter:LandingPresenterProtocol {
-    let collection:LandingPresenterCollectionProtocol
-    let collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol
+    var collection:LandingPresenterCollectionProtocol
+    var collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol
     
     init() {
         self.collection = LandingPresenterCollection()

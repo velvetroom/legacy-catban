@@ -1,6 +1,6 @@
 import Foundation
 
 protocol LandingPresenterProtocol {
-    var collection:LandingPresenterCollectionProtocol { get }
-    var collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol { get }
+    var collection:LandingPresenterCollectionProtocol { get set }
+    var collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol { get set }
 }

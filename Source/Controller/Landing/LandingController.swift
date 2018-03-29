@@ -4,14 +4,14 @@ class LandingController:UIViewController {
     var outlets:LandingOutlets
     var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
-    var presenterCollection:LandingPresenterCollectionProtocol
+    var presenter:LandingPresenterProtocol
     var project:Project?
     
     init() {
         self.outlets = LandingOutlets()
         self.projectLoader = ProjectLoader()
         self.viewModelLoader = LandingViewModelLoader()
-        self.presenterCollection = LandingPresenterCollection()
+        self.presenter = LandingPresenter()
         super.init(nibName:nil, bundle:nil)
     }
     

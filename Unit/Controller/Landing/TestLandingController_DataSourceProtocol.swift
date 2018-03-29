@@ -19,7 +19,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.project = Project.factoryNewProject()
         self.collection = MockLandingViewCollection()
         self.controller.project = self.project
-        self.controller.presenterCollection.dataSource.delegate = self.controller
+        self.controller.presenter.collection.dataSource.delegate = self.controller
     }
     
     func testLoad() {
@@ -41,7 +41,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     func testUpdateViewModelOnMoveItemInSameColumn() {
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)
         XCTAssertNotNil(self.controller.view, "Failed to load view")
-        XCTAssertTrue(self.controller.presenterCollection.dataSource.viewModel.sections.isEmpty)
+        XCTAssertTrue(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty)
         self.moveItemInSameColumn()
         
         let updatedTitle:String = self.viewModelTitleAt(item:Constants.destinationIndex, in:Constants.columnIndex)
@@ -57,7 +57,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     private func moveItemInSameColumn() {
         let originIndex:IndexPath = IndexPath(item:Constants.originIndex, section:Constants.columnIndex)
         let destinationIndex:IndexPath = IndexPath(item:Constants.destinationIndex, section:Constants.columnIndex)
-        self.controller.presenterCollection.dataSource.collectionView(
+        self.controller.presenter.collection.dataSource.collectionView(
             self.collection, moveItemAt:originIndex, to:destinationIndex)
     }
     
@@ -66,12 +66,12 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     }
     
     private func viewModelTitleAt(item:Int, in section:Int) -> String {
-        let countSections:Int = self.controller.presenterCollection.dataSource.viewModel.sections.count
+        let countSections:Int = self.controller.presenter.collection.dataSource.viewModel.sections.count
         XCTAssertGreaterThan(countSections, section, "View model not being updated")
         if countSections <= section {
             return String()
         }
-        return self.controller.presenterCollection.dataSource.viewModel.sections[section].items[item].title
+        return self.controller.presenter.collection.dataSource.viewModel.sections[section].items[item].title
     }
     
     private func startExpectation() {

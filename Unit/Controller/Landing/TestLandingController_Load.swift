@@ -24,7 +24,6 @@ class TestLandingController_Load:XCTestCase {
         XCTAssertNotNil(self.controller.outlets, "Controller doesn't have outlets")
         XCTAssertNotNil(self.controller.projectLoader, "Controller doesn't have project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Controller doesn't have view model loader")
-        XCTAssertNotNil(self.controller.presenterCollection, "Controller doesn't have a collection delegate")
     }
     
     func testProjectIsLoadedOnViewDidLoad() {
@@ -63,7 +62,7 @@ class TestLandingController_Load:XCTestCase {
     }
     
     func testLoadViewModel() {
-        XCTAssertTrue(self.controller.presenterCollection.dataSource.viewModel.sections.isEmpty,
+        XCTAssertTrue(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not empty at initiation")
         self.controller.viewModelLoader = LandingViewModelLoader()
         self.controller.project = Project.factoryNewProject()
@@ -71,7 +70,7 @@ class TestLandingController_Load:XCTestCase {
         
         self.controller.reloadViewModel()
         
-        XCTAssertFalse(self.controller.presenterCollection.dataSource.viewModel.sections.isEmpty,
+        XCTAssertFalse(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not reloading")
     }
     

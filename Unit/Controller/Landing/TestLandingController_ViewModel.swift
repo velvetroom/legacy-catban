@@ -20,7 +20,7 @@ class TestLandingController_ViewModel:XCTestCase {
         self.controller.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterCollection()
         self.dataSource = self.presenter.dataSource as? MockLandingPresenterCollectionDataSource
-        self.controller.presenterCollection = self.presenter
+        self.controller.presenter.collection = self.presenter
     }
     
     func testLoad() {
