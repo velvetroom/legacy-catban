@@ -16,5 +16,6 @@ class TestLandingOutlets:XCTestCase {
         XCTAssertNil(self.outlets.gestureCollection, "Gesture collection should not exist")
         XCTAssertNil(self.outlets.imageLogo, "Image logo should not exist")
         XCTAssertNil(self.outlets.viewCollectionMenu, "Collection menu should not exist")
+        XCTAssertNil(self.outlets.layoutCollectionMenuBottom, "Layout should not exist")
     }
 }

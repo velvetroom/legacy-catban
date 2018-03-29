@@ -6,4 +6,5 @@ struct LandingOutlets {
     weak var layoutCollection:LandingViewCollectionLayout!
     weak var gestureCollection:UILongPressGestureRecognizer!
     weak var imageLogo:UIImageView!
+    weak var layoutCollectionMenuBottom:NSLayoutConstraint!
 }

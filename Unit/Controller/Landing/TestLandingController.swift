@@ -26,10 +26,12 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.outlets.viewCollection.delegate, "Collection has no delegate")
         XCTAssertNotNil(self.controller.outlets.viewCollection.dataSource, "Collection has no data source")
         XCTAssertNotNil(self.controller.outlets.viewCollectionMenu, "Collection menu not loaded")
+        XCTAssertNotNil(self.controller.outlets.layoutCollectionMenuBottom, "Layout not loaded")
         XCTAssertNotNil(self.controller.outlets.gestureCollection, "Gesture not loaded")
         XCTAssertNotNil(self.controller.outlets.gestureCollection.delegate, "Gesture has no delegate")
         XCTAssertNotNil(self.controller.outlets.layoutCollection, "Layout wasn't loaded")
         XCTAssertNotNil(self.controller.presenterCollection.dataSource.delegate, "Delegate not assigned")
+        XCTAssertNotNil(self.controller.presenterCollection.delegate.delegate, "Delegate not assigned")
         XCTAssertFalse(self.controller.outlets.viewCollection.gestureRecognizers!.isEmpty, "No gestures found")
     }
 }

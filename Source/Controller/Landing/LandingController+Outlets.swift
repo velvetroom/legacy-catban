@@ -28,14 +28,17 @@ extension LandingController {
         self.view.addSubview(viewCollectionMenu)
         self.outlets.viewCollectionMenu = viewCollectionMenu
         
+        self.outlets.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
+            equalTo:self.view.bottomAnchor, constant:Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
-        viewCollectionMenu.bottomAnchor.constraint(equalTo:self.view.bottomAnchor).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
+        self.outlets.layoutCollectionMenuBottom.isActive = true
     }
     
     private func factoryPresenterDelegates() {
         self.presenterCollection.dataSource.delegate = self
+        self.presenterCollection.delegate.delegate = self
     }
     
     private func factoryGesture() {
