@@ -17,6 +17,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
     func configure(cell:LandingViewCollectionCell, for index:IndexPath) {
         let viewModel:LandingViewModelCollectionItem = self.viewModelFor(index:index)
         cell.labelTitle.text = viewModel.title
+        cell.configureState()
     }
     
     private func viewModelFor(section:Int) -> LandingViewModelCollectionSection {

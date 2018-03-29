@@ -4,15 +4,23 @@ import XCTest
 class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
     private var presenter:LandingPresenterCollectionDataSource!
     private var viewModel:LandingViewModelCollection!
+    private var delegate:MockLandingPresenterCollectionDataSourceProtocol!
     private var collection:MockLandingViewCollection!
+    private struct Constants {
+        static let wait:TimeInterval = 0.3
+        static let startingIndex:Int = 45
+        static let endingIndex:Int = 33
+        static let sectionIndex:Int = 98
+    }
     
     override func setUp() {
         super.setUp()
         self.presenter = LandingPresenterCollectionDataSource()
         self.viewModel = LandingViewModelCollection()
         self.collection = MockLandingViewCollection()
-        self.configureViewModel()
+        self.delegate = MockLandingPresenterCollectionDataSourceProtocol()
         self.presenter.viewModel = self.viewModel
+        self.presenter.delegate = self.delegate
     }
     
     func testLoad() {
@@ -20,12 +28,18 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
     }
     
     func testMoveItem() {
-        let startingIndex:IndexPath = IndexPath(item:1, section:0)
-        let endingIndex:IndexPath = IndexPath(item:0, section:0)
-        self.presenter.collectionView(self.collection, moveItemAt:startingIndex, to:endingIndex)
-    }
-    
-    private func configureViewModel() {
+        let expect:XCTestExpectation = expectation(description:"Wait for expectation")
+        self.delegate.onReorderItem = { (index:Int, destination:Int, section:Int) in
+            XCTAssertEqual(index, Constants.startingIndex, "Incorrect starting index")
+            XCTAssertEqual(destination, Constants.endingIndex, "Incorrect ending index")
+            XCTAssertEqual(section, Constants.sectionIndex, "Incorrect section index")
+            expect.fulfill()
+        }
         
+        let startingIndex:IndexPath = IndexPath(item:Constants.startingIndex, section:Constants.sectionIndex)
+        let endingIndex:IndexPath = IndexPath(item:Constants.endingIndex, section:Constants.sectionIndex)
+        self.presenter.collectionView(self.collection, moveItemAt:startingIndex, to:endingIndex)
+        
+        waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
     }
 }

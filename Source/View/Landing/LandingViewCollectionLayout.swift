@@ -63,6 +63,14 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         }
         return nil
     }
+    
+    override func layoutAttributesForInteractivelyMovingItem(
+        at index:IndexPath, withTargetPosition position:CGPoint) -> UICollectionViewLayoutAttributes {
+        let attributes:UICollectionViewLayoutAttributes = super.layoutAttributesForInteractivelyMovingItem(
+            at:index, withTargetPosition:position)
+        attributes.alpha = Constants.alphaWhenMoving
+        return attributes
+    }
         
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
         return false
