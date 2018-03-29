@@ -1,14 +1,14 @@
 import UIKit
 
 class LandingController:UIViewController {
-    var outlets:LandingOutlets
+    var outlets:LandingPresenterOutletsList
     var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
     var project:Project?
     
     init() {
-        self.outlets = LandingOutlets()
+        self.outlets = LandingPresenterOutletsList()
         self.projectLoader = ProjectLoader()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()

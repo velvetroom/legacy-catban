@@ -1,6 +1,6 @@
 import UIKit
 
-struct LandingOutlets {
+struct LandingPresenterOutletsList {
     weak var viewCollection:LandingViewCollection!
     weak var viewCollectionMenu:LandingViewCollectionMenu!
     weak var layoutCollection:LandingViewCollectionLayout!
