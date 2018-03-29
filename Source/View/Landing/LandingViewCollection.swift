@@ -29,4 +29,9 @@ class LandingViewCollection:UICollectionView {
         self.register(LandingViewCollectionCell.self,
                       forCellWithReuseIdentifier:LandingViewCollectionCell.reusableIdentifier)
     }
+    
+    override func beginInteractiveMovementForItem(at indexPath:IndexPath) -> Bool {
+        self.selectItem(at:nil, animated:true, scrollPosition:UICollectionViewScrollPosition())
+        return super.beginInteractiveMovementForItem(at:indexPath)
+    }
 }
