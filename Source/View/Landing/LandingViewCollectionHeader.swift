@@ -15,7 +15,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     private func configureView() {
         self.clipsToBounds = true
-        self.backgroundColor = UIColor(white:0.95, alpha:1)
+        self.backgroundColor = UIColor.Shared.gray
         self.layer.cornerRadius = Constants.cornerRadius
     }
     
@@ -30,7 +30,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.isUserInteractionEnabled = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.textColor = UIColor(white:0.65, alpha:1)
+        labelTitle.textColor = UIColor(red:0.6, green:0.65, blue:0.7, alpha:1)
         labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.bold)
         self.labelTitle = labelTitle
         
@@ -46,7 +46,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         let border:UIView = UIView()
         border.translatesAutoresizingMaskIntoConstraints = false
         border.isUserInteractionEnabled = false
-        border.backgroundColor = UIColor(white:0.85, alpha:1)
+        border.backgroundColor = UIColor(red:0.8, green:0.85, blue:0.9, alpha:1)
         self.addSubview(border)
         
         border.topAnchor.constraint(equalTo:self.topAnchor, constant:Constants.borderTop).isActive = true

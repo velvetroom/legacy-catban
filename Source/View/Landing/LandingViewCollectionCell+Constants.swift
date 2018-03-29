@@ -6,5 +6,6 @@ extension LandingViewCollectionCell {
         static let cornerRadius:CGFloat = 5
         static let titleFontSize:CGFloat = 16
         static let titleMargin:CGFloat = 10
+        static let menuHeight:CGFloat = 60
     }
 }

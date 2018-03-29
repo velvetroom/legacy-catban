@@ -12,5 +12,6 @@ class TestLandingViewCollectionCell:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.cell, "Failed to load cell")
         XCTAssertNotNil(self.cell.labelTitle, "Failed to load title")
+        XCTAssertNotNil(self.cell.viewMenu, "Failed to load view menu")
     }
 }

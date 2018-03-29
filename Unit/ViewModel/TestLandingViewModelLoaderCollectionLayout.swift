@@ -144,7 +144,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     private func addColumnToProject() {
         let newCardA:ProjectCard = ProjectCard()
         let newCardB:ProjectCard = ProjectCard()
-        var newColumn:ProjectColumn = ProjectColumn()
+        let newColumn:ProjectColumn = ProjectColumn()
         newColumn.cards.append(newCardA)
         newColumn.cards.append(newCardB)
         self.project.columns.append(newColumn)
