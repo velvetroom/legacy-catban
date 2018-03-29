@@ -30,6 +30,7 @@
 		DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */; };
 		DA2A0774206CB7A400D02D1C /* TestLandingViewCollectionCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0773206CB7A400D02D1C /* TestLandingViewCollectionCellMenu.swift */; };
 		DA2A0776206CB7DE00D02D1C /* LandingViewCollectionCellMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0775206CB7DE00D02D1C /* LandingViewCollectionCellMenu.swift */; };
+		DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0779206CCA8300D02D1C /* ExtensionUIColor.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
@@ -145,6 +146,7 @@
 		DA2538FF2068347B00EEB231 /* LandingViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionItem.swift; sourceTree = "<group>"; };
 		DA2A0773206CB7A400D02D1C /* TestLandingViewCollectionCellMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionCellMenu.swift; sourceTree = "<group>"; };
 		DA2A0775206CB7DE00D02D1C /* LandingViewCollectionCellMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionCellMenu.swift; sourceTree = "<group>"; };
+		DA2A0779206CCA8300D02D1C /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 			children = (
 				DA8AB27520650388005A393E /* ExtensionString.swift */,
 				DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */,
+				DA2A0779206CCA8300D02D1C /* ExtensionUIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
+				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
 				DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */,
 				DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
