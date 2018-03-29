@@ -19,7 +19,7 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
         self.viewModel = LandingViewModelCollection()
         self.collection = MockLandingViewCollection()
         self.delegate = MockLandingPresenterCollectionDataSourceProtocol()
-        self.presenter.viewModel = self.viewModel
+        self.presenter.update(viewModel:self.viewModel, reloadCollection:false)
         self.presenter.delegate = self.delegate
     }
     
@@ -34,6 +34,9 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
             XCTAssertEqual(destination, Constants.endingIndex, "Incorrect ending index")
             XCTAssertEqual(section, Constants.sectionIndex, "Incorrect section index")
             expect.fulfill()
+        }
+        self.collection.onReloadDataCalled = {
+            XCTAssertTrue(false, "Collection should not be reloaded")
         }
         
         let startingIndex:IndexPath = IndexPath(item:Constants.startingIndex, section:Constants.sectionIndex)

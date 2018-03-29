@@ -33,18 +33,24 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
     }
     
     private func configureViewModel() {
-        self.addSectionToViewModel(items:2)
-        self.addSectionToViewModel(items:0)
+        let sectionA:LandingViewModelCollectionSection = self.sectionWith(items:2)
+        let sectionB:LandingViewModelCollectionSection = self.sectionWith(items:0)
+        var viewModel:LandingViewModelCollection = LandingViewModelCollection()
+        viewModel.sections = [
+            sectionA,
+            sectionB]
+        
+        self.dataSource.update(viewModel:viewModel, reloadCollection:false)
     }
     
-    private func addSectionToViewModel(items:Int) {
+    private func sectionWith(items:Int) -> LandingViewModelCollectionSection {
         var section:LandingViewModelCollectionSection = LandingViewModelCollectionSection()
         section.title = "section\(self.dataSource.viewModel.sections.count)"
         for _:Int in 0 ..< items {
             let item:LandingViewModelCollectionItem = LandingViewModelCollectionItem()
             section.items.append(item)
         }
-        self.dataSource.viewModel.sections.append(section)
+        return section
     }
     
     func testConfigureHeader() {

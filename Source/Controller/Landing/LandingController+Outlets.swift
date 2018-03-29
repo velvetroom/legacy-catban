@@ -17,8 +17,8 @@ extension LandingController {
         viewCollection.dataSource = self.presenter.collection.dataSource
         
         self.view.addSubview(viewCollection)
-        self.outlets.viewCollection = viewCollection
-        self.outlets.layoutCollection = layout
+        self.presenter.outlets.list.viewCollection = viewCollection
+        self.presenter.outlets.list.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
     }
     
@@ -26,14 +26,14 @@ extension LandingController {
         let viewCollectionMenu:LandingViewCollectionMenu = LandingViewCollectionMenu()
         
         self.view.addSubview(viewCollectionMenu)
-        self.outlets.viewCollectionMenu = viewCollectionMenu
+        self.presenter.outlets.list.viewCollectionMenu = viewCollectionMenu
         
-        self.outlets.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
+        self.presenter.outlets.list.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
             equalTo:self.view.bottomAnchor, constant:Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
-        self.outlets.layoutCollectionMenuBottom.isActive = true
+        self.presenter.outlets.list.layoutCollectionMenuBottom.isActive = true
     }
     
     private func factoryPresenterDelegates() {
@@ -48,8 +48,8 @@ extension LandingController {
             self.presenter.collection.gesture,
             action:#selector(LandingPresenterCollectionGesture.selectorGestureReceived(sender:)))
         
-        self.outlets.viewCollection.addGestureRecognizer(gestureCollection)
-        self.outlets.gestureCollection = gestureCollection
+        self.presenter.outlets.list.viewCollection.addGestureRecognizer(gestureCollection)
+        self.presenter.outlets.list.gestureCollection = gestureCollection
     }
     
     private func factoryImageLogo() {
@@ -61,7 +61,7 @@ extension LandingController {
         imageLogo.image = #imageLiteral(resourceName: "assetLogo")
         
         self.view.addSubview(imageLogo)
-        self.outlets.imageLogo = imageLogo
+        self.presenter.outlets.list.imageLogo = imageLogo
         self.constraintToSafeArea(view:imageLogo)
     }
     

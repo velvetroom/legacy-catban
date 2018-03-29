@@ -13,5 +13,6 @@ class TestLandingPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.presenter.collection, "Failed to load collection")
         XCTAssertNotNil(self.presenter.collectionMenuAnimation, "Failed to load collection menu animation")
+        XCTAssertNotNil(self.presenter.outlets, "Failed to load presenter")
     }
 }

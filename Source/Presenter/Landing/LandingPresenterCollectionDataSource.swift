@@ -1,12 +1,20 @@
 import UIKit
 
 class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource {
-    var viewModel:LandingViewModelCollection
+    private(set) var viewModel:LandingViewModelCollection
     weak var delegate:LandingPresenterCollectionDataSourceProtocol?
     
     override init() {
         self.viewModel = LandingViewModelCollection()
         super.init()
+    }
+    
+    func update(viewModel:LandingViewModelCollection, reloadCollection:Bool) {
+        self.viewModel = viewModel
+        
+        if reloadCollection {
+            self.delegate?.reloadCollection()
+        }
     }
     
     func configure(header:LandingViewCollectionHeader, for section:Int) {

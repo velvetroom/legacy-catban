@@ -31,7 +31,7 @@ class TestLandingController_Collection:XCTestCase {
         }
         
         XCTAssertNotNil(self.controller.view)
-        self.controller.outlets.viewCollection = self.viewCollection
+        self.controller.presenter.outlets.list.viewCollection = self.viewCollection
         
         self.waitExpectations()
     }
@@ -39,13 +39,13 @@ class TestLandingController_Collection:XCTestCase {
     func testCollectionReloadDataAfterUpdateViewModel() {
         self.startExpectation()
         XCTAssertNotNil(self.controller.view)
-        self.controller.outlets.viewCollection = self.viewCollection
+        self.controller.presenter.outlets.list.viewCollection = self.viewCollection
         self.viewCollection.onReloadDataCalled = { [weak self] in
             self?.expect?.fulfill()
             self?.expect = nil
         }
         
-        self.controller.reloadViewModel()
+        self.controller.reloadViewModel(reloadCollection:true)
         
         self.waitExpectations()
     }

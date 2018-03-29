@@ -4,8 +4,7 @@ extension LandingController {
     func loadDependencies() {
         self.loadProject { [weak self] (project:Project) in
             self?.project = project
-            self?.reloadViewModel()
-            self?.reloadCollectionView()
+            self?.reloadViewModel(reloadCollection:true)
         }
     }
     
@@ -19,32 +18,29 @@ extension LandingController {
         }
     }
     
-    func reloadViewModel() {
+    func reloadViewModel(reloadCollection:Bool) {
         guard
             let project:Project = self.project
         else {
             return
         }
         let viewModel:LandingViewModel = self.viewModelLoader.factoryViewModelWith(project:project)
-        self.updateViewModel(viewModel:viewModel)
+        self.updateViewModel(viewModel:viewModel, reloadCollection:reloadCollection)
     }
     
-    func reloadCollectionView() {
-        self.outlets.viewCollection.reloadData()
-    }
-    
-    func updateViewModel(viewModel:LandingViewModel) {
+    func updateViewModel(viewModel:LandingViewModel, reloadCollection:Bool) {
         self.updateOutlets(viewModel:viewModel)
-        self.updateCollectionViewModel(viewModel:viewModel)
+        self.updateCollectionViewModel(viewModel:viewModel, reloadCollection:reloadCollection)
     }
     
     private func updateOutlets(viewModel:LandingViewModel) {
         self.title = viewModel.outlets.title
-        self.outlets.imageLogo.isHidden = viewModel.outlets.logoHidden
+        self.presenter.outlets.list.imageLogo.isHidden = viewModel.outlets.logoHidden
     }
     
-    private func updateCollectionViewModel(viewModel:LandingViewModel) {
-        self.presenter.collection.dataSource.viewModel = viewModel.collection
-        self.outlets.layoutCollection.viewModel = viewModel.collectionLayout
+    private func updateCollectionViewModel(viewModel:LandingViewModel, reloadCollection:Bool) {
+        self.presenter.outlets.list.layoutCollection.viewModel = viewModel.collectionLayout
+        self.presenter.collection.dataSource.update(
+            viewModel:viewModel.collection, reloadCollection:reloadCollection)
     }
 }

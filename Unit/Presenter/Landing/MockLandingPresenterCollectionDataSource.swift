@@ -8,9 +8,8 @@ class MockLandingPresenterCollectionDataSource:LandingPresenterCollectionDataSou
         super.init()
     }
     
-    override var viewModel:LandingViewModelCollection {
-        didSet {
-            self.onViewModelSet?()
-        }
+    override func update(viewModel:LandingViewModelCollection, reloadCollection:Bool) {
+        self.onViewModelSet?()
+        super.update(viewModel:viewModel, reloadCollection:reloadCollection)
     }
 }

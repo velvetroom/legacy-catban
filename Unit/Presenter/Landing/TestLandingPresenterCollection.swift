@@ -11,7 +11,7 @@ class TestLandingPresenterCollection:XCTestCase {
         self.presenter = LandingPresenterCollection()
         self.viewModel = LandingViewModelCollection()
         self.viewCollection = MockLandingViewCollection()
-        self.presenter.dataSource.viewModel = self.viewModel
+        self.presenter.dataSource.update(viewModel:self.viewModel, reloadCollection:false)
     }
     
     func testLoad() {

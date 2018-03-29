@@ -21,7 +21,6 @@ class TestLandingController_Load:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.outlets, "Controller doesn't have outlets")
         XCTAssertNotNil(self.controller.projectLoader, "Controller doesn't have project loader")
         XCTAssertNotNil(self.controller.viewModelLoader, "Controller doesn't have view model loader")
     }
@@ -68,7 +67,7 @@ class TestLandingController_Load:XCTestCase {
         self.controller.project = Project.factoryNewProject()
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.reloadViewModel()
+        self.controller.reloadViewModel(reloadCollection:true)
         
         XCTAssertFalse(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not reloading")

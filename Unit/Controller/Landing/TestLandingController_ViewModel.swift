@@ -51,9 +51,9 @@ class TestLandingController_ViewModel:XCTestCase {
         }
         
         XCTAssertNotNil(self.controller.view)
-        self.controller.outlets.layoutCollection = self.layout
-        self.controller.outlets.viewCollection.collectionViewLayout = self.layout
-        self.controller.reloadViewModel()
+        self.controller.presenter.outlets.list.layoutCollection = self.layout
+        self.controller.presenter.outlets.list.viewCollection.collectionViewLayout = self.layout
+        self.controller.reloadViewModel(reloadCollection:false)
         
         self.waitExpectations()
     }
@@ -63,9 +63,9 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.logoHidden = false
         XCTAssertNotNil(self.controller.view)
         
-        self.controller.updateViewModel(viewModel:viewModel)
+        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
         
-        XCTAssertFalse(self.controller.outlets.imageLogo.isHidden)
+        XCTAssertFalse(self.controller.presenter.outlets.list.imageLogo.isHidden)
     }
     
     func testHideLogo() {
@@ -73,9 +73,9 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.logoHidden = true
         XCTAssertNotNil(self.controller.view)
         
-        self.controller.updateViewModel(viewModel:viewModel)
+        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
         
-        XCTAssertTrue(self.controller.outlets.imageLogo.isHidden)
+        XCTAssertTrue(self.controller.presenter.outlets.list.imageLogo.isHidden)
     }
     
     func testUpdateTitle() {
@@ -83,7 +83,7 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.title = Constants.testTitle
         XCTAssertNotNil(self.controller.view)
         
-        self.controller.updateViewModel(viewModel:viewModel)
+        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
         
         XCTAssertEqual(self.controller.title, Constants.testTitle, "Failed to update controller title")
     }
