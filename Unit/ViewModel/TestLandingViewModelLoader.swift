@@ -23,8 +23,14 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     func testLoadViewModel() {
-        let viewModel:LandingViewModel = self.loader.factoryViewModelWith(project:project)
+        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project)
         self.validate(viewModel:viewModel)
+    }
+    
+    func testFactoryWithSelectedCell() {
+        let index:IndexPath = IndexPath(item:0, section:0)
+        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project, and:index)
+        self.validateSelectedCell(viewModel:viewModel)
     }
     
     private func appendTestCard() {
@@ -78,5 +84,9 @@ class TestLandingViewModelLoader:XCTestCase {
     private func validateColumns(layout:LandingViewModelCollectionLayout) {
         let columns:Int = self.project.columns.count
         XCTAssertEqual(columns, layout.headers.count, "Incorrect amount of columns created")
+    }
+    
+    private func validateSelectedCell(viewModel:LandingViewModel) {
+        XCTAssertEqual(viewModel.outlets.collectionMenuBottom, 0, "Failed to update menu")
     }
 }

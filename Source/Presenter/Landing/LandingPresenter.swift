@@ -10,7 +10,7 @@ class LandingPresenter:LandingPresenterProtocol {
     }
     
     func update(viewModel:LandingViewModel) {
-        self.outlets.update(viewModel:viewModel.outlets)
         self.collection.update(viewModel:viewModel.collection)
+        self.outlets.update(viewModel:viewModel.outlets)
     }
 }

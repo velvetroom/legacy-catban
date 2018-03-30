@@ -4,9 +4,14 @@ import Foundation
 class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
     var onLoadCalled:(() -> Void)?
     
-    func factoryViewModelWith(project:Project) -> LandingViewModel {
+    func factoryWith(project:Project) -> LandingViewModel {
         self.onLoadCalled?()
         
+        let viewModel:LandingViewModel = LandingViewModel()
+        return viewModel
+    }
+    
+    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModel {
         let viewModel:LandingViewModel = LandingViewModel()
         return viewModel
     }

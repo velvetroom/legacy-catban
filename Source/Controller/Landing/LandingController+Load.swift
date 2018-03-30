@@ -24,7 +24,7 @@ extension LandingController {
         else {
             return
         }
-        let viewModel:LandingViewModel = self.viewModelLoader.factoryViewModelWith(project:project)
+        let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(project:project)
         self.presenter.update(viewModel:viewModel)
     }
 }

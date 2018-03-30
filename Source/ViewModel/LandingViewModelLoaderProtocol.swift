@@ -1,5 +1,6 @@
 import Foundation
 
 protocol LandingViewModelLoaderProtocol {
-    func factoryViewModelWith(project:Project) -> LandingViewModel
+    func factoryWith(project:Project) -> LandingViewModel
+    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModel
 }

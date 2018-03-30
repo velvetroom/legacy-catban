@@ -15,5 +15,6 @@ class TestLandingViewModelOutlets:XCTestCase {
         XCTAssertNotNil(self.outlets.logoHidden, "Failed to load logo hidden")
         XCTAssertNotNil(self.outlets.reloadCollection, "Failed to load reload collection property")
         XCTAssertNotNil(self.outlets.collectionLayout, "Failed to load collection layout")
+        XCTAssertNotNil(self.outlets.collectionMenuBottom, "Failed to load collection menu bottom")
     }
 }
