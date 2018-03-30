@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingPresenterCollectionMenuAnimation:XCTestCase {
-    private var presenter:LandingPresenterCollectionMenuAnimation!
+class TestLandingPresenterCollectionMenu:XCTestCase {
+    private var presenter:LandingPresenterCollectionMenu!
     
     override func setUp() {
         super.setUp()
-        self.presenter = LandingPresenterCollectionMenuAnimation()
+        self.presenter = LandingPresenterCollectionMenu()
     }
     
     func testLoad() {

@@ -5,12 +5,12 @@ class MockLandingPresenter:LandingPresenterProtocol {
     var onUpdateViewModel:(() -> Void)?
     var outlets:LandingPresenterOutletsProtocol
     var collection:LandingPresenterCollectionProtocol
-    var collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol
+    var collectionMenu:LandingPresenterCollectionMenuProtocol
     
     init() {
         self.outlets = LandingPresenterOutlets()
         self.collection = LandingPresenterCollection()
-        self.collectionMenuAnimation = LandingPresenterCollectionMenuAnimation()
+        self.collectionMenu = LandingPresenterCollectionMenu()
     }
     
     func update(viewModel:LandingViewModel) {
