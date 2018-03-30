@@ -30,7 +30,6 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     
     func testMoveItemInSameColumn() {
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)
-        XCTAssertNotNil(self.controller.view, "Failed to load view")
         self.validateOriginalStateBeforeItemInSameColumn()
         self.moveItemInSameColumn()
         
@@ -40,7 +39,6 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     
     func testUpdateViewModelOnMoveItemInSameColumn() {
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)
-        XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertTrue(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty)
         self.moveItemInSameColumn()
         

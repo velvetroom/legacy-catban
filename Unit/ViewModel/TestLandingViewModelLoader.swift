@@ -19,7 +19,6 @@ class TestLandingViewModelLoader:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.loader, "Failed to load loader")
         XCTAssertNotNil(self.loader.collection, "Failed to load collection loader")
-        XCTAssertNotNil(self.loader.collectionLayout, "Failed to load collection layout")
         XCTAssertNotNil(self.loader.outlets, "Failed to load outlets")
     }
     
@@ -39,7 +38,7 @@ class TestLandingViewModelLoader:XCTestCase {
     private func validate(viewModel:LandingViewModel) {
         self.validateOutlets(viewModel:viewModel)
         self.validate(collection:viewModel.collection)
-        self.validate(layout:viewModel.collectionLayout)
+        self.validate(layout:viewModel.outlets.collectionLayout)
     }
     
     private func validateOutlets(viewModel:LandingViewModel) {

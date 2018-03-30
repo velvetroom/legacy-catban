@@ -40,34 +40,6 @@ class TestLandingPresenterCollectionDataSource_Delegate:XCTestCase {
         self.waitExpectation()
     }
     
-    func testReloadCollection() {
-        self.startExpectation()
-        let viewModel:LandingViewModelCollection = LandingViewModelCollection()
-        self.delegate.onReloadCollection = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.presenter.update(viewModel:viewModel, reloadCollection:true)
-        
-        self.waitExpectation()
-    }
-    
-    func testNotReloadCollection() {
-        self.startExpectation()
-        let viewModel:LandingViewModelCollection = LandingViewModelCollection()
-        self.delegate.onReloadCollection = {
-            XCTAssertTrue(false, "Collection should not be reloaded")
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.2) { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.presenter.update(viewModel:viewModel, reloadCollection:false)
-        
-        self.waitExpectation()
-    }
-    
     private func moveItem() {
         let originalIndex:IndexPath = IndexPath(item:Constants.originalIndex, section:Constants.movingSection)
         let destinationIndex:IndexPath = IndexPath(item:Constants.destinationIndex, section:Constants.movingSection)

@@ -3,10 +3,6 @@ import Foundation
 extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     func reorderItemFrom(index:Int, to destination:Int, in section:Int) {
         self.project?.move(cardIndex:index, to:destination, in:section)
-        self.reloadViewModel(reloadCollection:false)
-    }
-    
-    func reloadCollection() {
-        self.presenter.outlets.list.viewCollection.reloadData()
+        self.reloadViewModel()
     }
 }

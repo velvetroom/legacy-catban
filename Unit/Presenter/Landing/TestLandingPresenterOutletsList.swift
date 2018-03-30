@@ -11,6 +11,7 @@ class TestLandingPresenterOutletsList:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.outlets, "Failed to load outlets")
+        XCTAssertNil(self.outlets.controller, "Controller doesn't exist")
         XCTAssertNil(self.outlets.viewCollection, "Collection should not exist")
         XCTAssertNil(self.outlets.layoutCollection, "Layout collection should not exist")
         XCTAssertNil(self.outlets.gestureCollection, "Gesture collection should not exist")

@@ -19,7 +19,7 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
         self.viewModel = LandingViewModelCollection()
         self.collection = MockLandingViewCollection()
         self.delegate = MockLandingPresenterCollectionDataSourceProtocol()
-        self.presenter.update(viewModel:self.viewModel, reloadCollection:false)
+        self.presenter.viewModel = self.viewModel
         self.presenter.delegate = self.delegate
     }
     

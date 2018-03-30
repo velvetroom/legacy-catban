@@ -40,7 +40,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
             sectionA,
             sectionB]
         
-        self.dataSource.update(viewModel:viewModel, reloadCollection:false)
+        self.dataSource.viewModel = viewModel
     }
     
     private func sectionWith(items:Int) -> LandingViewModelCollectionSection {

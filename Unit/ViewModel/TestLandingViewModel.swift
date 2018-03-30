@@ -13,6 +13,5 @@ class TestLandingViewModel:XCTestCase {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.viewModel.outlets, "Failed to load outlets")
         XCTAssertNotNil(self.viewModel.collection, "Failed to load view model for collection")
-        XCTAssertNotNil(self.viewModel.collectionLayout, "Failed to load view model layout")
     }
 }

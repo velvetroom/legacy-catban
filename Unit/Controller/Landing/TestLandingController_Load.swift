@@ -3,6 +3,7 @@ import XCTest
 
 class TestLandingController_Load:XCTestCase {
     private var controller:LandingController!
+    private var mockPresenter:MockLandingPresenter!
     private var projectLoader:MockProjectLoader!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
@@ -15,6 +16,7 @@ class TestLandingController_Load:XCTestCase {
         self.projectLoader = MockProjectLoader()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.controller = LandingController()
+        self.mockPresenter = MockLandingPresenter()
         self.controller.projectLoader = self.projectLoader
         self.controller.viewModelLoader = self.viewModelLoader
     }
@@ -65,12 +67,24 @@ class TestLandingController_Load:XCTestCase {
                       "View model not empty at initiation")
         self.controller.viewModelLoader = LandingViewModelLoader()
         self.controller.project = Project.factoryNewProject()
-        XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.reloadViewModel(reloadCollection:true)
+        self.controller.reloadViewModel()
         
         XCTAssertFalse(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not reloading")
+    }
+    
+    func testPresenterReceivesUpdatedViewModel() {
+        self.startExpectation()
+        self.controller.presenter = self.mockPresenter
+        self.controller.project = Project.factoryNewProject()
+        self.mockPresenter.onUpdateViewModel = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.reloadViewModel()
+        
+        self.waitExpectations()
     }
     
     private func startExpectation() {

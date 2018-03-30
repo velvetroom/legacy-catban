@@ -30,22 +30,9 @@ class TestLandingController_Collection:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        XCTAssertNotNil(self.controller.view)
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        self.controller.viewModelLoader = LandingViewModelLoader()
         self.controller.presenter.outlets.list.viewCollection = self.viewCollection
-        
-        self.waitExpectations()
-    }
-    
-    func testCollectionReloadDataAfterUpdateViewModel() {
-        self.startExpectation()
-        XCTAssertNotNil(self.controller.view)
-        self.controller.presenter.outlets.list.viewCollection = self.viewCollection
-        self.viewCollection.onReloadDataCalled = { [weak self] in
-            self?.expect?.fulfill()
-            self?.expect = nil
-        }
-        
-        self.controller.reloadViewModel(reloadCollection:true)
         
         self.waitExpectations()
     }

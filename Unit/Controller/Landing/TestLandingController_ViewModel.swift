@@ -6,6 +6,7 @@ class TestLandingController_ViewModel:XCTestCase {
     private var presenter:MockLandingPresenterCollection!
     private var dataSource:MockLandingPresenterCollectionDataSource!
     private var layout:MockLandingViewCollectionLayout!
+    private var project:Project!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let testTitle:String = "test"
@@ -19,8 +20,11 @@ class TestLandingController_ViewModel:XCTestCase {
         self.controller.projectLoader = MockProjectLoader()
         self.controller.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterCollection()
-        self.dataSource = self.presenter.dataSource as? MockLandingPresenterCollectionDataSource
+        self.dataSource = MockLandingPresenterCollectionDataSource()
+        self.presenter.dataSource = self.dataSource
         self.controller.presenter.collection = self.presenter
+        self.project = Project.factoryNewProject()
+        self.controller.project = self.project
     }
     
     func testLoad() {
@@ -29,31 +33,30 @@ class TestLandingController_ViewModel:XCTestCase {
         XCTAssertNotNil(self.controller.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.dataSource, "Failed to load data source")
+        XCTAssertNotNil(self.layout, "Failed to load layout")
+        XCTAssertNotNil(self.project, "Failed to load project")
     }
     
     func testDelegateReceivesViewModelAfterViewDidLoad() {
         self.startExpectation()
-        self.dataSource.onViewModelSet = { [weak self] in
+        self.dataSource.onDidSetViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        XCTAssertNotNil(self.controller.view)
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
         
         self.waitExpectations()
     }
     
-    func testLayoutReceivesViewModelAfterViewDidLoad() {
+    func testLayoutReceivesViewModelAfterReloadViewModel() {
         self.startExpectation()
         
         self.layout.onViewModelSet = { [weak self] in
             self?.expect?.fulfill()
-            self?.expect = nil
         }
         
-        XCTAssertNotNil(self.controller.view)
         self.controller.presenter.outlets.list.layoutCollection = self.layout
-        self.controller.presenter.outlets.list.viewCollection.collectionViewLayout = self.layout
-        self.controller.reloadViewModel(reloadCollection:false)
+        self.controller.reloadViewModel()
         
         self.waitExpectations()
     }
@@ -61,21 +64,21 @@ class TestLandingController_ViewModel:XCTestCase {
     func testDisplayLogo() {
         var viewModel:LandingViewModel = LandingViewModel()
         viewModel.outlets.logoHidden = false
-        XCTAssertNotNil(self.controller.view)
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
+        self.controller.presenter.update(viewModel:viewModel)
         
-        XCTAssertFalse(self.controller.presenter.outlets.list.imageLogo.isHidden)
+        XCTAssertFalse(self.controller.presenter.outlets.list.imageLogo!.isHidden)
     }
     
     func testHideLogo() {
         var viewModel:LandingViewModel = LandingViewModel()
         viewModel.outlets.logoHidden = true
-        XCTAssertNotNil(self.controller.view)
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
+        self.controller.presenter.update(viewModel:viewModel)
         
-        XCTAssertTrue(self.controller.presenter.outlets.list.imageLogo.isHidden)
+        XCTAssertTrue(self.controller.presenter.outlets.list.imageLogo!.isHidden)
     }
     
     func testUpdateTitle() {
@@ -83,7 +86,7 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.title = Constants.testTitle
         XCTAssertNotNil(self.controller.view)
         
-        self.controller.updateViewModel(viewModel:viewModel, reloadCollection:false)
+        self.controller.presenter.update(viewModel:viewModel)
         
         XCTAssertEqual(self.controller.title, Constants.testTitle, "Failed to update controller title")
     }

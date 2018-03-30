@@ -2,11 +2,16 @@ import UIKit
 
 extension LandingController {
     func factoryOutlets() {
+        self.addReferenceToController()
         self.factoryViewCollection()
         self.factoryViewCollectionMenu()
         self.factoryPresenterDelegates()
         self.factoryGesture()
         self.factoryImageLogo()
+    }
+    
+    private func addReferenceToController() {
+        self.presenter.outlets.list.controller = self
     }
     
     private func factoryViewCollection() {
@@ -33,7 +38,7 @@ extension LandingController {
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
-        self.presenter.outlets.list.layoutCollectionMenuBottom.isActive = true
+        self.presenter.outlets.list.layoutCollectionMenuBottom?.isActive = true
     }
     
     private func factoryPresenterDelegates() {
@@ -48,7 +53,7 @@ extension LandingController {
             self.presenter.collection.gesture,
             action:#selector(LandingPresenterCollectionGesture.selectorGestureReceived(sender:)))
         
-        self.presenter.outlets.list.viewCollection.addGestureRecognizer(gestureCollection)
+        self.presenter.outlets.list.viewCollection?.addGestureRecognizer(gestureCollection)
         self.presenter.outlets.list.gestureCollection = gestureCollection
     }
     

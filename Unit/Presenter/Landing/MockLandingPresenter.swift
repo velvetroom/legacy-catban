@@ -1,6 +1,8 @@
 import Foundation
+@testable import catban
 
-class LandingPresenter:LandingPresenterProtocol {
+class MockLandingPresenter:LandingPresenterProtocol {
+    var onUpdateViewModel:(() -> Void)?
     var outlets:LandingPresenterOutletsProtocol
     var collection:LandingPresenterCollectionProtocol
     var collectionMenuAnimation:LandingPresenterCollectionMenuAnimationProtocol
@@ -12,7 +14,6 @@ class LandingPresenter:LandingPresenterProtocol {
     }
     
     func update(viewModel:LandingViewModel) {
-        self.outlets.update(viewModel:viewModel.outlets)
-        self.collection.update(viewModel:viewModel.collection)
+        self.onUpdateViewModel?()
     }
 }
