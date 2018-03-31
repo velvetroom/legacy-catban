@@ -5,5 +5,6 @@ extension LandingViewCollectionMenu {
         static let borderHeight:CGFloat = 1
         static let buttonsMoveWidth:CGFloat = 50
         static let buttonsMoveRight:CGFloat = -10
+        static let buttonCloseWidth:CGFloat = 50
     }
 }

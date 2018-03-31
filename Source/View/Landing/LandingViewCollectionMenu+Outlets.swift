@@ -5,6 +5,7 @@ extension LandingViewCollectionMenu {
         self.addBorder()
         self.addMoveRight()
         self.addMoveLeft()
+        self.addClose()
     }
     
     private func addBorder() {
@@ -63,5 +64,24 @@ extension LandingViewCollectionMenu {
         buttonMoveLeft.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
         buttonMoveLeft.rightAnchor.constraint(equalTo:self.buttonMoveRight.leftAnchor).isActive = true
         buttonMoveLeft.widthAnchor.constraint(equalToConstant:Constants.buttonsMoveWidth).isActive = true
+    }
+    
+    private func addClose() {
+        let buttonClose:UIButton = UIButton()
+        buttonClose.translatesAutoresizingMaskIntoConstraints = false
+        buttonClose.setImage(#imageLiteral(resourceName: "assetClose"), for:UIControlState.normal)
+        buttonClose.setImage(#imageLiteral(resourceName: "assetClose").withRenderingMode(UIImageRenderingMode.alwaysTemplate),
+                                for:UIControlState.highlighted)
+        buttonClose.imageView!.clipsToBounds = true
+        buttonClose.imageView!.contentMode = UIViewContentMode.center
+        buttonClose.imageView!.tintColor = UIColor(white:1, alpha:0.2)
+        self.buttonClose = buttonClose
+        
+        self.addSubview(buttonClose)
+        
+        buttonClose.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        buttonClose.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonClose.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        buttonClose.widthAnchor.constraint(equalToConstant:Constants.buttonCloseWidth).isActive = true
     }
 }

@@ -3,6 +3,7 @@ import UIKit
 class LandingViewCollectionMenu:UIView {
     weak var buttonMoveRight:UIButton!
     weak var buttonMoveLeft:UIButton!
+    weak var buttonClose:UIButton!
     
     init() {
         super.init(frame:CGRect.zero)
