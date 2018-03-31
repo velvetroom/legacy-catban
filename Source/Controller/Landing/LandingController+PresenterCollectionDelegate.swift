@@ -6,7 +6,7 @@ extension LandingController:LandingPresenterCollectionDelegateProtocol {
         self.reloadViewModel()
     }
     
-    func delegateDeselectCell() {
+    func delegateClearSelection() {
         self.viewModelLoader.editingCard = nil
         self.reloadViewModel()
     }

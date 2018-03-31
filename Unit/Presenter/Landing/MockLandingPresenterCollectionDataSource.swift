@@ -3,6 +3,7 @@ import UIKit
 
 class MockLandingPresenterCollectionDataSource:LandingPresenterCollectionDataSource {
     var onDidSetViewModel:(() -> Void)?
+    
     override var viewModel:LandingViewModelCollection {
         didSet {
             self.onDidSetViewModel?()

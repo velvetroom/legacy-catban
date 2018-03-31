@@ -31,7 +31,9 @@ class LandingViewCollection:UICollectionView {
     }
     
     override func beginInteractiveMovementForItem(at indexPath:IndexPath) -> Bool {
+        self.delegate?.collectionView?(self, didDeselectItemAt:IndexPath(item:0, section:0))
         self.selectItem(at:nil, animated:true, scrollPosition:UICollectionViewScrollPosition())
+        
         return super.beginInteractiveMovementForItem(at:indexPath)
     }
 }

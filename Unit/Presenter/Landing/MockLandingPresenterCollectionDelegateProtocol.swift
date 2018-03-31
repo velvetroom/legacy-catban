@@ -9,7 +9,7 @@ class MockLandingPresenterCollectionDelegateProtocol:LandingPresenterCollectionD
         self.onSelectCell?()
     }
     
-    func delegateDeselectCell() {
+    func delegateClearSelection() {
         self.onDeselectCell?()
     }
 }

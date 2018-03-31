@@ -45,7 +45,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         let index:IndexPath = IndexPath(item:0, section:0)
         self.controller.delegateSelectCellAt(index:index)
         
-        self.controller.delegateDeselectCell()
+        self.controller.delegateClearSelection()
         
         XCTAssertNil(self.controller.viewModelLoader.editingCard, "Failed to remove editing card")
     }
@@ -54,7 +54,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         let index:IndexPath = IndexPath(item:0, section:0)
         self.controller.delegateSelectCellAt(index:index)
         
-        self.controller.delegateDeselectCell()
+        self.controller.delegateClearSelection()
         
         XCTAssertEqual(self.layoutMenuBottom.constant, LandingController.Constants.collectionMenuHeight,
                        "Failed to update view model")

@@ -19,7 +19,7 @@ class LandingPresenterCollectionDelegate:NSObject, UICollectionViewDelegate {
         self.delegate?.delegateSelectCellAt(index:index)
     }
     
-    func collectionView(_:UICollectionView, didDeselectItemAt _:IndexPath) {
-        self.delegate?.delegateDeselectCell()
+    func collectionView(_ collection:UICollectionView, didDeselectItemAt _:IndexPath) {
+        self.delegate?.delegateClearSelection()
     }
 }
