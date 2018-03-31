@@ -17,19 +17,19 @@ class TestLandingController_Load:XCTestCase {
         self.viewModelLoader = MockLandingViewModelLoader()
         self.controller = LandingController()
         self.mockPresenter = MockLandingPresenter()
-        self.controller.projectLoader = self.projectLoader
-        self.controller.viewModelLoader = self.viewModelLoader
+        self.controller.model.projectLoader = self.projectLoader
+        self.controller.model.viewModelLoader = self.viewModelLoader
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.projectLoader, "Controller doesn't have project loader")
-        XCTAssertNotNil(self.controller.viewModelLoader, "Controller doesn't have view model loader")
+        XCTAssertNotNil(self.controller.model.projectLoader, "Controller doesn't have project loader")
+        XCTAssertNotNil(self.controller.model.viewModelLoader, "Controller doesn't have view model loader")
     }
     
     func testProjectIsLoadedOnViewDidLoad() {
         self.startExpectation()
-        XCTAssertNil(self.controller.project, "Project should be nil before loading")
+        XCTAssertNil(self.controller.model.project, "Project should be nil before loading")
         self.projectLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
@@ -41,7 +41,7 @@ class TestLandingController_Load:XCTestCase {
     
     func testViewModelIsLoadedOnViewDidLoad() {
         self.startExpectation()
-        XCTAssertNil(self.controller.project, "Project should be nil before loading")
+        XCTAssertNil(self.controller.model.project, "Project should be nil before loading")
         self.viewModelLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
@@ -54,7 +54,7 @@ class TestLandingController_Load:XCTestCase {
     func testLoadProject() {
         self.startExpectation()
         
-        self.controller.loadProject { [weak self] (project:Project) in
+        self.controller.model.loadProject { [weak self] (project:Project) in
             XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
             self?.expect?.fulfill()
         }
@@ -63,26 +63,26 @@ class TestLandingController_Load:XCTestCase {
     }
     
     func testLoadViewModel() {
-        XCTAssertTrue(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
+        XCTAssertTrue(self.controller.model.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not empty at initiation")
-        self.controller.viewModelLoader = LandingViewModelLoader()
-        self.controller.project = Project.factoryNewProject()
+        self.controller.model.viewModelLoader = LandingViewModelLoader()
+        self.controller.model.project = Project.factoryNewProject()
         
-        self.controller.reloadViewModel()
+        self.controller.model.reloadViewModel()
         
-        XCTAssertFalse(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty,
+        XCTAssertFalse(self.controller.model.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not reloading")
     }
     
     func testPresenterReceivesUpdatedViewModel() {
         self.startExpectation()
-        self.controller.presenter = self.mockPresenter
-        self.controller.project = Project.factoryNewProject()
+        self.controller.model.presenter = self.mockPresenter
+        self.controller.model.project = Project.factoryNewProject()
         self.mockPresenter.onUpdateViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        self.controller.reloadViewModel()
+        self.controller.model.reloadViewModel()
         
         self.waitExpectations()
     }

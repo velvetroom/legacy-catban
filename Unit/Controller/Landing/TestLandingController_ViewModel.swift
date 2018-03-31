@@ -17,20 +17,20 @@ class TestLandingController_ViewModel:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.layout = MockLandingViewCollectionLayout()
-        self.controller.projectLoader = MockProjectLoader()
-        self.controller.viewModelLoader = MockLandingViewModelLoader()
+        self.controller.model.projectLoader = MockProjectLoader()
+        self.controller.model.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterCollection()
         self.dataSource = MockLandingPresenterCollectionDataSource()
         self.presenter.dataSource = self.dataSource
-        self.controller.presenter.collection = self.presenter
+        self.controller.model.presenter.collection = self.presenter
         self.project = Project.factoryNewProject()
-        self.controller.project = self.project
+        self.controller.model.project = self.project
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.projectLoader, "Failed to load project loader")
-        XCTAssertNotNil(self.controller.viewModelLoader, "Failed to load view model loader")
+        XCTAssertNotNil(self.controller.model.projectLoader, "Failed to load project loader")
+        XCTAssertNotNil(self.controller.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.dataSource, "Failed to load data source")
         XCTAssertNotNil(self.layout, "Failed to load layout")
@@ -55,8 +55,8 @@ class TestLandingController_ViewModel:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.presenter.outlets.list.layoutCollection = self.layout
-        self.controller.reloadViewModel()
+        self.controller.model.presenter.outlets.list.layoutCollection = self.layout
+        self.controller.model.reloadViewModel()
         
         self.waitExpectations()
     }
@@ -66,9 +66,9 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.logoHidden = false
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.presenter.update(viewModel:viewModel)
+        self.controller.model.presenter.update(viewModel:viewModel)
         
-        XCTAssertFalse(self.controller.presenter.outlets.list.imageLogo!.isHidden)
+        XCTAssertFalse(self.controller.model.presenter.outlets.list.imageLogo!.isHidden)
     }
     
     func testHideLogo() {
@@ -76,9 +76,9 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.logoHidden = true
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         
-        self.controller.presenter.update(viewModel:viewModel)
+        self.controller.model.presenter.update(viewModel:viewModel)
         
-        XCTAssertTrue(self.controller.presenter.outlets.list.imageLogo!.isHidden)
+        XCTAssertTrue(self.controller.model.presenter.outlets.list.imageLogo!.isHidden)
     }
     
     func testUpdateTitle() {
@@ -86,7 +86,7 @@ class TestLandingController_ViewModel:XCTestCase {
         viewModel.outlets.title = Constants.testTitle
         XCTAssertNotNil(self.controller.view)
         
-        self.controller.presenter.update(viewModel:viewModel)
+        self.controller.model.presenter.update(viewModel:viewModel)
         
         XCTAssertEqual(self.controller.title, Constants.testTitle, "Failed to update controller title")
     }

@@ -1,7 +1,7 @@
 import Foundation
 
-extension LandingController {
-    func loadDependencies() {
+extension Landing {
+    func load() {
         self.loadProject { [weak self] (project:Project) in
             self?.project = project
             self?.reloadViewModel()
@@ -19,12 +19,7 @@ extension LandingController {
     }
     
     func reloadViewModel() {
-        guard
-            let project:Project = self.project
-        else {
-            return
-        }
-        let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(project:project)
+        let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(model:self)
         self.presenter.update(viewModel:viewModel)
     }
 }

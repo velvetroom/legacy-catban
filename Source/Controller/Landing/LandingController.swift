@@ -1,15 +1,10 @@
 import UIKit
 
 class LandingController:UIViewController {
-    var projectLoader:ProjectLoaderProtocol
-    var viewModelLoader:LandingViewModelLoaderProtocol
-    var presenter:LandingPresenterProtocol
-    var project:Project?
+    let model:Landing
     
     init() {
-        self.projectLoader = ProjectLoader()
-        self.viewModelLoader = LandingViewModelLoader()
-        self.presenter = LandingPresenter()
+        self.model = Landing()
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -22,6 +17,6 @@ class LandingController:UIViewController {
         self.view.backgroundColor = UIColor.white
         self.adjustNavigationItem()
         self.factoryOutlets()
-        self.loadDependencies()
+        self.model.load()
     }
 }

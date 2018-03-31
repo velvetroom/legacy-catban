@@ -2,10 +2,10 @@ import Foundation
 
 extension LandingController:LandingPresenterCollectionDelegateProtocol {
     func delegateSelectCellAt(index:IndexPath) {
-        self.reloadViewModelWith(editingCard:index)
+        self.model.update(editingCard:index)
     }
     
     func delegateClearSelection() {
-        self.reloadViewModelWith(editingCard:nil)
+        self.model.update(editingCard:nil)
     }
 }

@@ -17,15 +17,15 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.project = Project.factoryNewProject()
+        self.controller.model.project = project
         self.collection = MockLandingViewCollection()
-        self.controller.project = self.project
-        self.controller.presenter.collection.dataSource.delegate = self.controller
+        self.controller.model.presenter.collection.dataSource.delegate = self.controller
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.project, "Failed to load project")
-        XCTAssertNotNil(self.controller.project, "Controller has no project assigned")
+        XCTAssertNotNil(self.controller.model.project, "Controller has no project assigned")
     }
     
     func testMoveItemInSameColumn() {
@@ -39,7 +39,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     
     func testUpdateViewModelOnMoveItemInSameColumn() {
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)
-        XCTAssertTrue(self.controller.presenter.collection.dataSource.viewModel.sections.isEmpty)
+        XCTAssertTrue(self.controller.model.presenter.collection.dataSource.viewModel.sections.isEmpty)
         self.moveItemInSameColumn()
         
         let updatedTitle:String = self.viewModelTitleAt(item:Constants.destinationIndex, in:Constants.columnIndex)
@@ -55,7 +55,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     private func moveItemInSameColumn() {
         let originIndex:IndexPath = IndexPath(item:Constants.originIndex, section:Constants.columnIndex)
         let destinationIndex:IndexPath = IndexPath(item:Constants.destinationIndex, section:Constants.columnIndex)
-        self.controller.presenter.collection.dataSource.collectionView(
+        self.controller.model.presenter.collection.dataSource.collectionView(
             self.collection, moveItemAt:originIndex, to:destinationIndex)
     }
     
@@ -64,12 +64,12 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     }
     
     private func viewModelTitleAt(item:Int, in section:Int) -> String {
-        let countSections:Int = self.controller.presenter.collection.dataSource.viewModel.sections.count
+        let countSections:Int = self.controller.model.presenter.collection.dataSource.viewModel.sections.count
         XCTAssertGreaterThan(countSections, section, "View model not being updated")
         if countSections <= section {
             return String()
         }
-        return self.controller.presenter.collection.dataSource.viewModel.sections[section].items[item].title
+        return self.controller.model.presenter.collection.dataSource.viewModel.sections[section].items[item].title
     }
     
     private func startExpectation() {

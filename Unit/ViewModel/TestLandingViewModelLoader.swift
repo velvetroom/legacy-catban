@@ -2,8 +2,9 @@ import XCTest
 @testable import catban
 
 class TestLandingViewModelLoader:XCTestCase {
-    private var project:Project!
+    private var model:Landing!
     private var loader:LandingViewModelLoader!
+    private var project:Project!
     private struct Constants {
         static let columnTitle:String = "test column"
         static let cardTitle:String = "test card"
@@ -11,8 +12,10 @@ class TestLandingViewModelLoader:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.project = Project.factoryNewProject()
+        self.model = Landing()
         self.loader = LandingViewModelLoader()
+        self.project = Project.factoryNewProject()
+        self.model.project = project
         self.appendTestCard()
     }
     
@@ -20,24 +23,24 @@ class TestLandingViewModelLoader:XCTestCase {
         XCTAssertNotNil(self.loader, "Failed to load loader")
         XCTAssertNotNil(self.loader.collection, "Failed to load collection loader")
         XCTAssertNotNil(self.loader.outlets, "Failed to load outlets")
-        XCTAssertNil(self.loader.editingCard, "Editing card should be nil")
+        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testLoadViewModel() {
-        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project)
+        let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         self.validate(viewModel:viewModel)
     }
     
     func testMoveMenuUpWithEditingCard() {
-        self.loader.editingCard = IndexPath(item:0, section:0)
+        self.model.editingCard = IndexPath(item:0, section:0)
         
-        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project)
+        let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         
         XCTAssertEqual(viewModel.outlets.collectionMenuBottom, 0, "Not showing menu after editing card selected")
     }
     
     func testMoveMenuDownWithNoEditingCard() {
-        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project)
+        let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         
         XCTAssertEqual(viewModel.outlets.collectionMenuBottom, LandingController.Constants.collectionMenuHeight,
                        "Not hiding menu when there is no editing card")
@@ -58,13 +61,13 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     private func validateOutlets(viewModel:LandingViewModel) {
-        XCTAssertEqual(viewModel.outlets.title, self.project.name, "Title should be equal to project name")
+        XCTAssertEqual(viewModel.outlets.title, self.model.project!.name, "Title should be equal to project name")
         XCTAssertTrue(viewModel.outlets.logoHidden, "Logo should be hidden after view model update")
     }
     
     private func validate(collection:LandingViewModelCollection) {
         let sections:Int = collection.sections.count
-        XCTAssertEqual(self.project.columns.count, sections, "Invalid number of sections")
+        XCTAssertEqual(self.model.project!.columns.count, sections, "Invalid number of sections")
         for index:Int in 0 ..< sections {
             let section:LandingViewModelCollectionSection = collection.sections[index]
             let column:ProjectColumn = self.project.columns[index]

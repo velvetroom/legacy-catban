@@ -10,7 +10,7 @@ extension LandingController {
     }
     
     @objc func selectorCloseEditingCard(sender button:UIButton) {
-        self.presenter.outlets.list.viewCollection?.clearSelection()
-        self.reloadViewModelWith(editingCard:nil)
+        self.model.presenter.outlets.list.viewCollection?.clearSelection()
+        self.model.update(editingCard:nil)
     }
 }

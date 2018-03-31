@@ -17,9 +17,9 @@ class TestLandingController_Selectors:XCTestCase {
         self.collection = MockLandingViewCollection()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.project = Project.factoryNewProject()
-        self.controller.viewModelLoader = self.viewModelLoader
-        self.controller.presenter.outlets.list.viewCollection = self.collection
-        self.controller.project = self.project
+        self.controller.model.viewModelLoader = self.viewModelLoader
+        self.controller.model.presenter.outlets.list.viewCollection = self.collection
+        self.controller.model.project = self.project
     }
     
     func testLoad() {

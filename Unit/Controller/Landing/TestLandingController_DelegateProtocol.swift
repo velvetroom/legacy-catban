@@ -14,8 +14,8 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         self.controller = LandingController()
         self.layoutMenuBottom = NSLayoutConstraint()
         self.project = Project.factoryNewProject()
-        self.controller.presenter.outlets.list.layoutCollectionMenuBottom = self.layoutMenuBottom
-        self.controller.project = self.project
+        self.controller.model.presenter.outlets.list.layoutCollectionMenuBottom = self.layoutMenuBottom
+        self.controller.model.project = self.project
     }
     
     func testLoad() {
@@ -29,7 +29,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         
         self.controller.delegateSelectCellAt(index:index)
         
-        XCTAssertNotNil(self.controller.viewModelLoader.editingCard, "Failed to update editing card")
+        XCTAssertNotNil(self.controller.model.editingCard, "Failed to update editing card")
     }
     
     func testUpdateViewModelAfterCellSelect() {
@@ -47,7 +47,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         
         self.controller.delegateClearSelection()
         
-        XCTAssertNil(self.controller.viewModelLoader.editingCard, "Failed to remove editing card")
+        XCTAssertNil(self.controller.model.editingCard, "Failed to remove editing card")
     }
     
     func testUpdateViewModelAfterCellDeselect() {

@@ -1,6 +1,16 @@
 import UIKit
 
 extension LandingController {
+    private var outletsList:LandingPresenterOutletsList {
+        get {
+            return self.model.presenter.outlets.list
+        }
+        
+        set(newValue) {
+            self.model.presenter.outlets.list = newValue
+        }
+    }
+    
     func factoryOutlets() {
         self.addReferenceToController()
         self.factoryViewCollection()
@@ -11,19 +21,19 @@ extension LandingController {
     }
     
     private func addReferenceToController() {
-        self.presenter.outlets.list.controller = self
+        self.outletsList.controller = self
     }
     
     private func factoryViewCollection() {
         let layout:LandingViewCollectionLayout = LandingViewCollectionLayout()
         
         let viewCollection:LandingViewCollection = LandingViewCollection(layout:layout)
-        viewCollection.delegate = self.presenter.collection.delegate
-        viewCollection.dataSource = self.presenter.collection.dataSource
+        viewCollection.delegate = self.model.presenter.collection.delegate
+        viewCollection.dataSource = self.model.presenter.collection.dataSource
         
         self.view.addSubview(viewCollection)
-        self.presenter.outlets.list.viewCollection = viewCollection
-        self.presenter.outlets.list.layoutCollection = layout
+        self.outletsList.viewCollection = viewCollection
+        self.outletsList.layoutCollection = layout
         self.constraintToSafeArea(view:viewCollection)
     }
     
@@ -33,30 +43,30 @@ extension LandingController {
                                                  for:UIControlEvents.touchUpInside)
         
         self.view.addSubview(viewCollectionMenu)
-        self.presenter.outlets.list.viewCollectionMenu = viewCollectionMenu
+        self.outletsList.viewCollectionMenu = viewCollectionMenu
         
-        self.presenter.outlets.list.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
+        self.outletsList.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
             equalTo:self.view.bottomAnchor, constant:Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
-        self.presenter.outlets.list.layoutCollectionMenuBottom?.isActive = true
+        self.outletsList.layoutCollectionMenuBottom?.isActive = true
     }
     
     private func factoryPresenterDelegates() {
-        self.presenter.collection.dataSource.delegate = self
-        self.presenter.collection.delegate.delegate = self
+        self.model.presenter.collection.dataSource.delegate = self
+        self.model.presenter.collection.delegate.delegate = self
     }
     
     private func factoryGesture() {
         let gestureCollection:UILongPressGestureRecognizer = UILongPressGestureRecognizer()
-        gestureCollection.delegate = self.presenter.collection.gesture
+        gestureCollection.delegate = self.model.presenter.collection.gesture
         gestureCollection.addTarget(
-            self.presenter.collection.gesture,
+            self.model.presenter.collection.gesture,
             action:#selector(LandingPresenterCollectionGesture.selectorGestureReceived(sender:)))
         
-        self.presenter.outlets.list.viewCollection?.addGestureRecognizer(gestureCollection)
-        self.presenter.outlets.list.gestureCollection = gestureCollection
+        self.outletsList.viewCollection?.addGestureRecognizer(gestureCollection)
+        self.outletsList.gestureCollection = gestureCollection
     }
     
     private func factoryImageLogo() {
@@ -68,7 +78,7 @@ extension LandingController {
         imageLogo.image = #imageLiteral(resourceName: "assetLogo")
         
         self.view.addSubview(imageLogo)
-        self.presenter.outlets.list.imageLogo = imageLogo
+        self.outletsList.imageLogo = imageLogo
         self.constraintToSafeArea(view:imageLogo)
     }
     

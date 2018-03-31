@@ -2,13 +2,13 @@ import XCTest
 @testable import catban
 
 class TestLandingViewModelLoaderCollection:XCTestCase {
-    private var project:Project!
+    private var model:Landing!
     private var loader:LandingViewModelLoaderCollection!
     
     override func setUp() {
         super.setUp()
         self.loader = LandingViewModelLoaderCollection()
-        self.project = Project.factoryNewProject()
+        self.model = Landing()
     }
     
     func testLoad() {
@@ -16,7 +16,7 @@ class TestLandingViewModelLoaderCollection:XCTestCase {
     }
     
     func testFactory() {
-        let viewModel:LandingViewModelCollection = self.loader.factoryWith(project:project)
+        let viewModel:LandingViewModelCollection = self.loader.factoryWith(model:self.model)
         XCTAssertNotNil(viewModel, "Failed to factory view model")
     }
 }

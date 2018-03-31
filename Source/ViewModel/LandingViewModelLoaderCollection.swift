@@ -1,9 +1,11 @@
 import Foundation
 
 class LandingViewModelLoaderCollection {
-    func factoryWith(project:Project) -> LandingViewModelCollection {
+    func factoryWith(model:Landing) -> LandingViewModelCollection {
         var collection:LandingViewModelCollection = LandingViewModelCollection()
-        collection.sections = self.factorySectionsWith(project:project)
+        if let project:Project = model.project {
+            collection.sections = self.factorySectionsWith(project:project)
+        }
         return collection
     }
     

@@ -2,10 +2,9 @@ import Foundation
 @testable import catban
 
 class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
-    var editingCard:IndexPath?
     var onLoadCalled:(() -> Void)?
     
-    func factoryWith(project:Project) -> LandingViewModel {
+    func factoryWith(model:Landing) -> LandingViewModel {
         self.onLoadCalled?()
         
         let viewModel:LandingViewModel = LandingViewModel()
