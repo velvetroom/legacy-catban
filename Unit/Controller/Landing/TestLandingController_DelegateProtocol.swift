@@ -24,12 +24,20 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
+    func testUpdateEditingCardAfterCellSelect() {
+        let index:IndexPath = IndexPath(item:0, section:0)
+        
+        self.controller.delegateSelectCellAt(index:index)
+        
+        XCTAssertNotNil(self.controller.viewModelLoader.editingCard, "Failed to update editing card")
+    }
+    
     func testUpdateViewModelAfterCellSelect() {
         self.layoutMenuBottom.constant = Constants.menuInitialBottom
         let index:IndexPath = IndexPath(item:0, section:0)
         
         self.controller.delegateSelectCellAt(index:index)
         
-        XCTAssertNotEqual(self.layoutMenuBottom.constant, Constants.menuInitialBottom, "Failed to update view model")
+        XCTAssertEqual(self.layoutMenuBottom.constant, 0, "Failed to update view model")
     }
 }

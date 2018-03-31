@@ -20,6 +20,7 @@ class TestLandingViewModelLoader:XCTestCase {
         XCTAssertNotNil(self.loader, "Failed to load loader")
         XCTAssertNotNil(self.loader.collection, "Failed to load collection loader")
         XCTAssertNotNil(self.loader.outlets, "Failed to load outlets")
+        XCTAssertNil(self.loader.editingCard, "Editing card should be nil")
     }
     
     func testLoadViewModel() {
@@ -27,10 +28,12 @@ class TestLandingViewModelLoader:XCTestCase {
         self.validate(viewModel:viewModel)
     }
     
-    func testFactoryWithSelectedCell() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project, and:index)
-        self.validateSelectedCell(viewModel:viewModel)
+    func testMoveMenuWithEditingCard() {
+        self.loader.editingCard = IndexPath(item:0, section:0)
+        
+        let viewModel:LandingViewModel = self.loader.factoryWith(project:self.project)
+        
+        XCTAssertEqual(viewModel.outlets.collectionMenuBottom, 0, "Not showing menu after editing card selected")
     }
     
     private func appendTestCard() {
@@ -84,9 +87,5 @@ class TestLandingViewModelLoader:XCTestCase {
     private func validateColumns(layout:LandingViewModelCollectionLayout) {
         let columns:Int = self.project.columns.count
         XCTAssertEqual(columns, layout.headers.count, "Incorrect amount of columns created")
-    }
-    
-    private func validateSelectedCell(viewModel:LandingViewModel) {
-        XCTAssertEqual(viewModel.outlets.collectionMenuBottom, 0, "Failed to update menu")
     }
 }

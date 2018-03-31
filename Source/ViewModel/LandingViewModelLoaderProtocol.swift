@@ -1,6 +1,7 @@
 import Foundation
 
 protocol LandingViewModelLoaderProtocol {
+    var editingCard:IndexPath? { get set }
+    
     func factoryWith(project:Project) -> LandingViewModel
-    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModel
 }

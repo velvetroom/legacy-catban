@@ -32,11 +32,4 @@ class TestLandingViewModelLoaderOutlets:XCTestCase {
         viewModel = self.loader.factoryWith(project:self.project)
         XCTAssertFalse(viewModel.reloadCollection, "Collection should not reload after first time")
     }
-    
-    func testUpdateViewModelForSelectedCell() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        let viewModel:LandingViewModelOutlets = self.loader.factoryWith(project:self.project, and:index)
-        XCTAssertLessThan(viewModel.collectionMenuBottom, LandingController.Constants.collectionMenuHeight,
-                          "Menu bottom not updating to display")
-    }
 }

@@ -20,10 +20,4 @@ class LandingViewModelLoaderOutlets {
         }
         return viewModel
     }
-    
-    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModelOutlets {
-        var viewModel:LandingViewModelOutlets = self.factoryWith(project:project)
-        viewModel.collectionMenuBottom = 0
-        return viewModel
-    }
 }

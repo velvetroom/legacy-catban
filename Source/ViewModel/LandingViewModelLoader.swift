@@ -1,6 +1,7 @@
 import Foundation
 
 class LandingViewModelLoader:LandingViewModelLoaderProtocol {
+    var editingCard:IndexPath?
     let outlets:LandingViewModelLoaderOutlets
     let collection:LandingViewModelLoaderCollection
     
@@ -11,15 +12,16 @@ class LandingViewModelLoader:LandingViewModelLoaderProtocol {
     
     func factoryWith(project:Project) -> LandingViewModel {
         var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.outlets = self.outlets.factoryWith(project:project)
+        viewModel.outlets = self.factoryOutletsWith(project:project)
         viewModel.collection = self.collection.factoryWith(project:project)
         return viewModel
     }
     
-    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModel {
-        var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.outlets = self.outlets.factoryWith(project:project, and:selectedCell)
-        viewModel.collection = self.collection.factoryWith(project:project)
-        return viewModel
+    private func factoryOutletsWith(project:Project) -> LandingViewModelOutlets {
+        var outlets:LandingViewModelOutlets = self.outlets.factoryWith(project:project)
+        if let _:IndexPath = self.editingCard {
+            outlets.collectionMenuBottom = 0
+        }
+        return outlets
     }
 }
