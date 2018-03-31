@@ -12,7 +12,7 @@ extension LandingController {
     }
     
     func factoryOutlets() {
-        self.addReferenceToController()
+        self.configureController()
         self.factoryViewCollection()
         self.factoryViewCollectionMenu()
         self.factoryPresenterDelegates()
@@ -20,7 +20,8 @@ extension LandingController {
         self.factoryImageLogo()
     }
     
-    private func addReferenceToController() {
+    private func configureController() {
+        self.view.backgroundColor = UIColor.white
         self.outletsList.controller = self
     }
     
