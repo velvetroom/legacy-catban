@@ -11,9 +11,4 @@ class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
         let viewModel:LandingViewModel = LandingViewModel()
         return viewModel
     }
-    
-    func factoryWith(project:Project, and selectedCell:IndexPath) -> LandingViewModel {
-        let viewModel:LandingViewModel = LandingViewModel()
-        return viewModel
-    }
 }

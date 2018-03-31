@@ -29,6 +29,8 @@ extension LandingController {
     
     private func factoryViewCollectionMenu() {
         let viewCollectionMenu:LandingViewCollectionMenu = LandingViewCollectionMenu()
+        viewCollectionMenu.buttonClose.addTarget(self, action:#selector(self.selectorCloseEditingCard(sender:)),
+                                                 for:UIControlEvents.touchUpInside)
         
         self.view.addSubview(viewCollectionMenu)
         self.presenter.outlets.list.viewCollectionMenu = viewCollectionMenu
