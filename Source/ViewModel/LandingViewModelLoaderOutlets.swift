@@ -1,11 +1,13 @@
 import Foundation
 
 class LandingViewModelLoaderOutlets {
-    let collectionLayout:LandingViewModelLoaderCollectionLayout
+    var collectionLayout:LandingViewModelLoaderCollectionLayout
+    var collectionMenu:LandingViewModelLoaderCollectionMenu
     private var firstTime:Bool
     
     init() {
         self.collectionLayout = LandingViewModelLoaderCollectionLayout()
+        self.collectionMenu = LandingViewModelLoaderCollectionMenu()
         self.firstTime = true
     }
     

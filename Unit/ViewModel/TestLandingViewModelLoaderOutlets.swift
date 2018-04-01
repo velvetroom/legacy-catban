@@ -15,6 +15,7 @@ class TestLandingViewModelLoaderOutlets:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.loader, "Failed to load loader")
         XCTAssertNotNil(self.loader.collectionLayout, "Failed to load collection layout")
+        XCTAssertNotNil(self.loader.collectionMenu, "Failed to load collection menu")
     }
     
     func testFactory() {

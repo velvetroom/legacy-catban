@@ -72,6 +72,7 @@
 		DA63F799206DD7830018F416 /* TestLandingController_DelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63F798206DD7830018F416 /* TestLandingController_DelegateProtocol.swift */; };
 		DA647A3B20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647A3A20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift */; };
 		DA647A3D20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647A3C20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift */; };
+		DA647A3F20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647A3E20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -225,6 +226,7 @@
 		DA63F798206DD7830018F416 /* TestLandingController_DelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DelegateProtocol.swift; sourceTree = "<group>"; };
 		DA647A3A20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelLoaderCollectionMenu.swift; sourceTree = "<group>"; };
 		DA647A3C20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelLoaderCollectionMenu.swift; sourceTree = "<group>"; };
+		DA647A3E20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingViewModelLoaderCollectionMenu.swift; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 				DA519A6E2069180A00514098 /* TestLandingViewModelLoaderCollectionLayout.swift */,
 				DA647A3A20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift */,
 				DA2538E92067D52E00EEB231 /* MockLandingViewModelLoader.swift */,
+				DA647A3E20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */,
 				DADE83CB20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift in Sources */,
 				DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */,
+				DA647A3F20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DA79602E206BCF6E00548952 /* TestLandingPresenterCollectionDataSource_Delegate.swift in Sources */,
 				DA63F793206DB2C30018F416 /* MockLandingPresenter.swift in Sources */,
 				DAEB8182206D1A7200E55424 /* MockLandingPresenterCollectionDelegateProtocol.swift in Sources */,

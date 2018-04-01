@@ -33,7 +33,7 @@ extension LandingViewCollectionMenu {
                                  for:UIControlState.disabled)
         buttonMoveRight.imageView!.clipsToBounds = true
         buttonMoveRight.imageView!.contentMode = UIViewContentMode.center
-        buttonMoveRight.imageView!.tintColor = UIColor(white:1, alpha:0.2)
+        buttonMoveRight.imageView!.tintColor = UIColor(white:1, alpha:0.3)
         self.buttonMoveRight = buttonMoveRight
         
         self.addSubview(buttonMoveRight)
@@ -55,7 +55,7 @@ extension LandingViewCollectionMenu {
                                  for:UIControlState.disabled)
         buttonMoveLeft.imageView!.clipsToBounds = true
         buttonMoveLeft.imageView!.contentMode = UIViewContentMode.center
-        buttonMoveLeft.imageView!.tintColor = UIColor(white:1, alpha:0.2)
+        buttonMoveLeft.imageView!.tintColor = UIColor(white:1, alpha:0.3)
         self.buttonMoveLeft = buttonMoveLeft
         
         self.addSubview(buttonMoveLeft)
@@ -74,7 +74,7 @@ extension LandingViewCollectionMenu {
                                 for:UIControlState.highlighted)
         buttonClose.imageView!.clipsToBounds = true
         buttonClose.imageView!.contentMode = UIViewContentMode.center
-        buttonClose.imageView!.tintColor = UIColor(white:1, alpha:0.2)
+        buttonClose.imageView!.tintColor = UIColor(white:1, alpha:0.3)
         self.buttonClose = buttonClose
         
         self.addSubview(buttonClose)
