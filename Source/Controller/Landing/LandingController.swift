@@ -1,7 +1,7 @@
 import UIKit
 
 class LandingController:UIViewController {
-    let model:Landing
+    var model:LandingProtocol
     
     init() {
         self.model = Landing()

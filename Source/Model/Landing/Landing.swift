@@ -1,6 +1,6 @@
 import Foundation
 
-class Landing {
+class Landing:LandingProtocol {
     var project:Project?
     var editingCard:IndexPath?
     var projectLoader:ProjectLoaderProtocol
