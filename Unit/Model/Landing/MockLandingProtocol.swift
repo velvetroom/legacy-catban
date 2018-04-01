@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockLandingProtocol:LandingProtocol {
+    var onReloadViewModel:(() -> Void)?
     var onReorderItem:((Int, Int, Int) -> Void)?
     var project:ProjectProtocol?
     var editingCard:IndexPath?
@@ -20,7 +21,7 @@ class MockLandingProtocol:LandingProtocol {
     }
     
     func reloadViewModel() {
-        
+        self.onReloadViewModel?()
     }
     
     func update(editingCard:IndexPath?) {
