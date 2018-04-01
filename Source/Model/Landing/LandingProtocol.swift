@@ -8,9 +8,8 @@ protocol LandingProtocol {
     var presenter:LandingPresenterProtocol { get set }
     
     func load()
-    func loadProject(completion:@escaping((Project) -> Void))
     func reloadViewModel()
     func update(editingCard:IndexPath?)
     func reorderItemFrom(index:Int, to destination:Int, in section:Int)
-    func moveCardRight()
+    func moveEditinCardRight()
 }

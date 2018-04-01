@@ -51,17 +51,6 @@ class TestLandingController_Load:XCTestCase {
         self.waitExpectations()
     }
     
-    func testLoadProject() {
-        self.startExpectation()
-        
-        self.controller.model.loadProject { [weak self] (project:Project) in
-            XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
-            self?.expect?.fulfill()
-        }
-        
-        self.waitExpectations()
-    }
-    
     func testLoadViewModel() {
         XCTAssertTrue(self.controller.model.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not empty at initiation")

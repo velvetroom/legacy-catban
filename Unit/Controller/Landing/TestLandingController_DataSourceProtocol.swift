@@ -6,11 +6,15 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     private var project:Project!
     private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
+    private var mockModel:MockLandingProtocol!
     private struct Constants {
         static let wait:TimeInterval = 0.3
         static let originIndex:Int = 1
         static let destinationIndex:Int = 0
         static let columnIndex:Int = 0
+        static let mockIndex:Int = 99
+        static let mockDestination:Int = 199
+        static let mockSection:Int = 299
     }
     
     override func setUp() {
@@ -19,6 +23,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.project = Project.factoryNewProject()
         self.controller.model.project = project
         self.collection = MockLandingViewCollection()
+        self.mockModel = MockLandingProtocol()
         self.controller.model.presenter.collection.dataSource.delegate = self.controller
     }
     
@@ -26,6 +31,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.controller.model.project, "Controller has no project assigned")
+        XCTAssertNotNil(self.mockModel, "Failed to load mock model")
     }
     
     func testMoveItemInSameColumn() {
@@ -44,6 +50,22 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         
         let updatedTitle:String = self.viewModelTitleAt(item:Constants.destinationIndex, in:Constants.columnIndex)
         XCTAssertEqual(expectedTitle, updatedTitle, "Failed to update view model on move items")
+    }
+    
+    func testModelReceivedReorder() {
+        self.startExpectation()
+        self.controller.model = self.mockModel
+        self.mockModel.onReorderItem = { [weak self] (index:Int, destination:Int, section:Int) in
+            XCTAssertEqual(index, Constants.mockIndex, "Incorrect index")
+            XCTAssertEqual(destination, Constants.mockDestination, "Incorrect destination")
+            XCTAssertEqual(section, Constants.mockSection, "Incorrect section")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.reorderItemFrom(index:Constants.mockIndex, to:Constants.mockDestination,
+                                        in:Constants.mockSection)
+        
+        self.waitExpectation()
     }
     
     private func validateOriginalStateBeforeItemInSameColumn() {

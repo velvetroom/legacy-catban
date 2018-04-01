@@ -17,7 +17,7 @@ extension Landing {
         self.reloadViewModel()
     }
     
-    func moveCardRight() {
+    func moveEditinCardRight() {
         guard
             let editingCard:IndexPath = self.editingCard
         else {

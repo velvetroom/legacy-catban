@@ -114,6 +114,8 @@
 		DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */; };
 		DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */; };
 		DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */; };
+		DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */; };
+		DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BE2070E40E0053E7A0 /* MockLandingProtocol.swift */; };
 		DAE698CF20656A350046721C /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698CE20656A350046721C /* brand.xcassets */; };
 		DAE698D520656F940046721C /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698D420656F940046721C /* assets.xcassets */; };
 		DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D6206576770046721C /* LandingController+Navigation.swift */; };
@@ -261,6 +263,8 @@
 		DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Factory.swift; sourceTree = "<group>"; };
 		DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Cards.swift; sourceTree = "<group>"; };
 		DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingProtocol.swift; sourceTree = "<group>"; };
+		DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Load.swift; sourceTree = "<group>"; };
+		DADE83BE2070E40E0053E7A0 /* MockLandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingProtocol.swift; sourceTree = "<group>"; };
 		DAE698CE20656A350046721C /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAE698D420656F940046721C /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAE698D6206576770046721C /* LandingController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Navigation.swift"; sourceTree = "<group>"; };
@@ -333,7 +337,9 @@
 			isa = PBXGroup;
 			children = (
 				DA5B59FF207047AB00122EEF /* TestLanding.swift */,
+				DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */,
 				DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */,
+				DADE83BE2070E40E0053E7A0 /* MockLandingProtocol.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -904,6 +910,8 @@
 				DA79AF8E206A5FEA00DE73FA /* MockLandingPresenterCollectionView.swift in Sources */,
 				DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */,
 				DAABC2AE206A7C48003B4BE4 /* MockLandingPresenterCollection.swift in Sources */,
+				DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */,
+				DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */,
 				DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */,
 				DA79602E206BCF6E00548952 /* TestLandingPresenterCollectionDataSource_Delegate.swift in Sources */,
 				DA63F793206DB2C30018F416 /* MockLandingPresenter.swift in Sources */,
