@@ -32,6 +32,8 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.outlets.viewCollection?.dataSource, "Collection has no data source")
         XCTAssertNotNil(self.outlets.viewCollectionMenu, "Collection menu not loaded")
         XCTAssertNotNil(self.outlets.layoutCollectionMenuBottom, "Layout not loaded")
+        XCTAssertNotNil(self.outlets.buttonCollectionMenuMoveRight, "Button not loaded")
+        XCTAssertNotNil(self.outlets.buttonCollectionMenuMoveRight, "Button not loaded")
         XCTAssertNotNil(self.outlets.gestureCollection, "Gesture not loaded")
         XCTAssertNotNil(self.outlets.gestureCollection?.delegate, "Gesture has no delegate")
         XCTAssertNotNil(self.outlets.layoutCollection, "Layout wasn't loaded")

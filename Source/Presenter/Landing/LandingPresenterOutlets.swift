@@ -23,6 +23,8 @@ class LandingPresenterOutlets:LandingPresenterOutletsProtocol {
     
     private func configureCollectionMenu(viewModel:LandingViewModelCollectionMenu) {
         self.updateMenuLayout(bottom:viewModel.layoutBottom)
+        self.list.buttonCollectionMenuMoveRight?.isEnabled = viewModel.moveRightEnabled
+        self.list.buttonCollectionMenuMoveLeft?.isEnabled = viewModel.moveLeftEnabled
     }
     
     private func updateMenuLayout(bottom:CGFloat) {

@@ -56,6 +56,8 @@ extension LandingController {
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
         self.outletsList.layoutCollectionMenuBottom?.isActive = true
+        self.outletsList.buttonCollectionMenuMoveRight = viewCollectionMenu.buttonMoveRight
+        self.outletsList.buttonCollectionMenuMoveLeft = viewCollectionMenu.buttonMoveLeft
     }
     
     private func factoryPresenterDelegates() {

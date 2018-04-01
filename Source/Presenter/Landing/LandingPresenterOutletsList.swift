@@ -8,4 +8,6 @@ struct LandingPresenterOutletsList {
     weak var gestureCollection:UILongPressGestureRecognizer?
     weak var imageLogo:UIImageView?
     weak var layoutCollectionMenuBottom:NSLayoutConstraint?
+    weak var buttonCollectionMenuMoveRight:UIButton?
+    weak var buttonCollectionMenuMoveLeft:UIButton?
 }

@@ -18,5 +18,7 @@ class TestLandingPresenterOutletsList:XCTestCase {
         XCTAssertNil(self.outlets.imageLogo, "Image logo should not exist")
         XCTAssertNil(self.outlets.viewCollectionMenu, "Collection menu should not exist")
         XCTAssertNil(self.outlets.layoutCollectionMenuBottom, "Layout should not exist")
+        XCTAssertNil(self.outlets.buttonCollectionMenuMoveRight, "Button should not exist")
+        XCTAssertNil(self.outlets.buttonCollectionMenuMoveLeft, "Button should not exist")
     }
 }
