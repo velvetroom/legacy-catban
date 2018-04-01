@@ -54,7 +54,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     func testModelReceivedReorder() {
         self.startExpectation()
         self.controller.model = self.mockModel
-        self.mockModel.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in
+        self.mockModel.onMoveCardFrom = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.origin, "Incorrect origin")
             XCTAssertEqual(destination, Constants.destination, "Incorrect destination")
             self?.expect?.fulfill()

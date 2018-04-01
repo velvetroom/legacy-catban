@@ -44,6 +44,8 @@ extension LandingController {
                                                  for:UIControlEvents.touchUpInside)
         viewCollectionMenu.buttonMoveRight.addTarget(self, action:#selector(self.moveEditingCardRight(sender:)),
                                                  for:UIControlEvents.touchUpInside)
+        viewCollectionMenu.buttonMoveLeft.addTarget(self, action:#selector(self.moveEditingCardLeft(sender:)),
+                                                     for:UIControlEvents.touchUpInside)
         
         self.view.addSubview(viewCollectionMenu)
         self.outletsList.viewCollectionMenu = viewCollectionMenu

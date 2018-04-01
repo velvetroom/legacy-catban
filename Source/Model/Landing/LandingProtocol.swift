@@ -12,4 +12,5 @@ protocol LandingProtocol {
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func moveEditingCardRight()
+    func moveEditingCardLeft()
 }

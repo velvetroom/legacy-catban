@@ -25,8 +25,19 @@ extension Landing {
             return
         }
         let newIndex:IndexPath = project.indexOnRightForCardAt(index:editingCard)
-        project.moveCardFrom(origin:editingCard, to:newIndex)
-        self.reloadViewModel()
+        self.moveCardFrom(origin:editingCard, to:newIndex)
+        self.collection?.moveItem(at:editingCard, to:newIndex)
+    }
+    
+    func moveEditingCardLeft() {
+        guard
+            let project:ProjectProtocol = self.project,
+            let editingCard:IndexPath = self.editingCard
+        else {
+            return
+        }
+        let newIndex:IndexPath = project.indexOnLeftForCardAt(index:editingCard)
+        self.moveCardFrom(origin:editingCard, to:newIndex)
         self.collection?.moveItem(at:editingCard, to:newIndex)
     }
 }

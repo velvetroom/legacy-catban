@@ -10,8 +10,17 @@ extension Project {
     
     func indexOnRightForCardAt(index:IndexPath) -> IndexPath {
         let rightColumn:Int = index.section + 1
-        let destination:ProjectColumn = self.columnAt(index:rightColumn)
+        return newCardIndexFor(column:rightColumn)
+    }
+    
+    func indexOnLeftForCardAt(index:IndexPath) -> IndexPath {
+        let rightColumn:Int = index.section - 1
+        return newCardIndexFor(column:rightColumn)
+    }
+    
+    func newCardIndexFor(column:Int) -> IndexPath {
+        let destination:ProjectColumn = self.columnAt(index:column)
         let cardsSize:Int = destination.cards.count
-        return IndexPath(item:cardsSize, section:rightColumn)
+        return IndexPath(item:cardsSize, section:column)
     }
 }

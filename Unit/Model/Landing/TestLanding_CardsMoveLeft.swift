@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLanding_CardsMoveRight:XCTestCase {
+class TestLanding_CardsMoveLeft:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenter!
@@ -34,18 +34,18 @@ class TestLanding_CardsMoveRight:XCTestCase {
         XCTAssertNotNil(self.collection, "Failed to load collection")
     }
     
-    func testMoveEditingCardRightAskForIndex() {
+    func testMoveEditingCardLefgtAskForIndex() {
         self.startExpectation()
         self.project.onIndexForCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveEditingCardLeft()
         
         self.waitExpectation()
     }
     
-    func testMoveEditingCardRightMoveCard() {
+    func testMoveEditingCardLeftMoveCard() {
         self.startExpectation()
         self.project.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.editingCard, "Invalid origin")
@@ -53,23 +53,23 @@ class TestLanding_CardsMoveRight:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveEditingCardLeft()
         
         self.waitExpectation()
     }
     
-    func testMoveEditingCardRightUpdateViewModel() {
+    func testMoveEditingCardLeftUpdateViewModel() {
         self.startExpectation()
         self.presenter.onUpdateViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveEditingCardLeft()
         
         self.waitExpectation()
     }
     
-    func testMoveEditingCardRightUpdateCollection() {
+    func testMoveEditingCardLeftUpdateCollection() {
         self.startExpectation()
         self.collection.onMoveItem = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.editingCard, "Invalid origin")
@@ -77,7 +77,7 @@ class TestLanding_CardsMoveRight:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveEditingCardLeft()
         
         self.waitExpectation()
     }

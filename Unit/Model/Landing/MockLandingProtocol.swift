@@ -3,7 +3,9 @@ import Foundation
 
 class MockLandingProtocol:LandingProtocol {
     var onReloadViewModel:(() -> Void)?
-    var onMoveCard:((IndexPath, IndexPath) -> Void)?
+    var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
+    var onMoveCardLeft:(() -> Void)?
+    var onMoveCardRight:(() -> Void)?
     var project:ProjectProtocol?
     var editingCard:IndexPath?
     var projectLoader:ProjectLoaderProtocol
@@ -29,10 +31,14 @@ class MockLandingProtocol:LandingProtocol {
     }
     
     func moveEditingCardRight() {
-        
+        self.onMoveCardRight?()
+    }
+    
+    func moveEditingCardLeft() {
+        self.onMoveCardLeft?()
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
-        self.onMoveCard?(origin, destination)
+        self.onMoveCardFrom?(origin, destination)
     }
 }

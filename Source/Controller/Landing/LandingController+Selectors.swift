@@ -17,4 +17,8 @@ extension LandingController {
     @objc func moveEditingCardRight(sender button:UIButton) {
         self.model.moveEditingCardRight()
     }
+    
+    @objc func moveEditingCardLeft(sender button:UIButton) {
+        self.model.moveEditingCardLeft()
+    }
 }
