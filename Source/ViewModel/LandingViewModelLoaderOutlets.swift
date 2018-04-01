@@ -18,9 +18,9 @@ class LandingViewModelLoaderOutlets {
         return viewModel
     }
     
-    private func configure(viewModel:LandingViewModelOutlets, project:Project?) -> LandingViewModelOutlets {
+    private func configure(viewModel:LandingViewModelOutlets, project:ProjectProtocol?) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = viewModel
-        if let project:Project = project {
+        if let project:ProjectProtocol = project {
             viewModel.collectionLayout = self.collectionLayout.factoryWith(project:project)
             viewModel.title = project.name
         }

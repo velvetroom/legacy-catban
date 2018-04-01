@@ -3,13 +3,13 @@ import Foundation
 class LandingViewModelLoaderCollection {
     func factoryWith(model:Landing) -> LandingViewModelCollection {
         var collection:LandingViewModelCollection = LandingViewModelCollection()
-        if let project:Project = model.project {
+        if let project:ProjectProtocol = model.project {
             collection.sections = self.factorySectionsWith(project:project)
         }
         return collection
     }
     
-    private func factorySectionsWith(project:Project) -> [LandingViewModelCollectionSection] {
+    private func factorySectionsWith(project:ProjectProtocol) -> [LandingViewModelCollectionSection] {
         var sections:[LandingViewModelCollectionSection] = []
         for column:ProjectColumn in project.columns {
             var section:LandingViewModelCollectionSection = LandingViewModelCollectionSection()

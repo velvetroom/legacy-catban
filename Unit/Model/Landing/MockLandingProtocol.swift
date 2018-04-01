@@ -3,7 +3,7 @@ import Foundation
 
 class MockLandingProtocol:LandingProtocol {
     var onReorderItem:((Int, Int, Int) -> Void)?
-    var project:Project?
+    var project:ProjectProtocol?
     var editingCard:IndexPath?
     var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol

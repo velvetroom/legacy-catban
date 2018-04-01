@@ -20,7 +20,7 @@ class TestLanding_Load:XCTestCase {
     func testLoadProject() {
         self.startExpectation()
         
-        self.model.loadProject { [weak self] (project:Project) in
+        self.model.loadProject { [weak self] (project:ProjectProtocol) in
             XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
             self?.expect?.fulfill()
         }

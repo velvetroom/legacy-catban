@@ -1,6 +1,6 @@
 import Foundation
 
-class Project {
+class Project:ProjectProtocol {
     var columns:[ProjectColumn]
     var name:String
     

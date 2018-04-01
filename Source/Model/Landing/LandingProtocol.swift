@@ -1,7 +1,7 @@
 import Foundation
 
 protocol LandingProtocol {
-    var project:Project? { get set }
+    var project:ProjectProtocol? { get set }
     var editingCard:IndexPath? { get set }
     var projectLoader:ProjectLoaderProtocol { get set }
     var viewModelLoader:LandingViewModelLoaderProtocol { get set }
