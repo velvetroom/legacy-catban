@@ -8,4 +8,12 @@ class Project:ProjectProtocol {
         self.columns = []
         self.name = String()
     }
+    
+    func columnAt(index:Int) -> ProjectColumn {
+        return self.columns[index]
+    }
+    
+    func columnAt(indexPath:IndexPath) -> ProjectColumn {
+        return self.columnAt(index:indexPath.section)
+    }
 }

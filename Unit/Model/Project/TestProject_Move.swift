@@ -7,6 +7,7 @@ class TestProject_Move:XCTestCase {
         static let origin:IndexPath = IndexPath(item:2, section:0)
         static let destinationSame:IndexPath = IndexPath(item:0, section:0)
         static let destinationDifferent:IndexPath = IndexPath(item:0, section:1)
+        static let columnOnRight:Int = 1
     }
     
     override func setUp() {
@@ -50,6 +51,26 @@ class TestProject_Move:XCTestCase {
         
         XCTAssertEqual(expectedOriginSize, updatedOriginSize, "Failed to move card")
         XCTAssertEqual(expectedDestinationSize, updatedDestinationSize, "Failed to move card")
+    }
+    
+    func testIndexOnRightForCardWithEmptyColumn() {
+        XCTAssertTrue(self.project.columns[Constants.columnOnRight].cards.isEmpty, "Column should be empty")
+        let expectedIndex:IndexPath = IndexPath(item:0, section:Constants.columnOnRight)
+        
+        let index:IndexPath = self.project.indexOnRightForCardAt(index:Constants.origin)
+        
+        XCTAssertEqual(expectedIndex, index, "Failed to return expected index")
+    }
+    
+    func testIndexOnRightForCardWithNonEmptyColumn() {
+        self.project.columns[Constants.columnOnRight].cards.append(ProjectCard())
+        let countCards:Int = self.project.columns[Constants.columnOnRight].cards.count
+        XCTAssertFalse(self.project.columns[Constants.columnOnRight].cards.isEmpty, "Column should not be empty")
+        let expectedIndex:IndexPath = IndexPath(item:countCards, section:Constants.columnOnRight)
+        
+        let index:IndexPath = self.project.indexOnRightForCardAt(index:Constants.origin)
+        
+        XCTAssertEqual(expectedIndex, index, "Failed to return expected index")
     }
     
     private func titleAt(index:IndexPath) -> String {

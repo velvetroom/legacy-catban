@@ -3,6 +3,7 @@ import Foundation
 
 class MockLandingViewCollection:LandingViewCollection {
     var onReloadDataCalled:(() -> Void)?
+    var onMoveItem:((IndexPath, IndexPath) -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -17,5 +18,9 @@ class MockLandingViewCollection:LandingViewCollection {
             return super.numberOfItems(inSection:section)
         }
         return items
+    }
+    
+    override func moveItem(at indexPath:IndexPath, to newIndexPath:IndexPath) {
+        self.onMoveItem?(indexPath, newIndexPath)
     }
 }

@@ -5,4 +5,5 @@ protocol ProjectProtocol {
     var name:String { get set }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
+    func indexOnRightForCardAt(index:IndexPath) -> IndexPath
 }

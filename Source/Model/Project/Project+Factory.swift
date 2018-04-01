@@ -36,11 +36,7 @@ extension Project {
     }
     
     private class func factoryColumnProgress() -> ProjectColumn {
-        let firstCard:ProjectCard = factoryCardFirst()
-        let secondCard:ProjectCard = factoryCardSecond()
         let column:ProjectColumn = ProjectColumn()
-        column.cards.append(firstCard)
-        column.cards.append(secondCard)
         column.name = String.localizedProject(key:"Project_defaultColumnProgress")
         return column
     }
