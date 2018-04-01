@@ -12,7 +12,7 @@ class LandingPresenterOutlets:LandingPresenterOutletsProtocol {
         self.list.imageLogo?.isHidden = viewModel.logoHidden
         self.list.layoutCollection?.viewModel = viewModel.collectionLayout
         self.collectionShould(reload:viewModel.reloadCollection)
-        self.animateMenu(bottom:viewModel.collectionMenuBottom)
+        self.configureCollectionMenu(viewModel:viewModel.collectionMenu)
     }
     
     private func collectionShould(reload:Bool) {
@@ -21,7 +21,11 @@ class LandingPresenterOutlets:LandingPresenterOutletsProtocol {
         }
     }
     
-    private func animateMenu(bottom:CGFloat) {
+    private func configureCollectionMenu(viewModel:LandingViewModelCollectionMenu) {
+        self.updateMenuLayout(bottom:viewModel.layoutBottom)
+    }
+    
+    private func updateMenuLayout(bottom:CGFloat) {
         self.list.layoutCollectionMenuBottom?.constant = bottom
         UIView.animate(withDuration:LandingController.Constants.collectionMenuAnimationDuration) { [weak self] in
             self?.list.controller?.view.layoutIfNeeded()

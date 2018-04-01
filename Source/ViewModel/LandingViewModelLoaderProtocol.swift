@@ -1,5 +1,5 @@
 import Foundation
 
 protocol LandingViewModelLoaderProtocol {
-    func factoryWith(model:Landing) -> LandingViewModel
+    func factoryWith(model:LandingProtocol) -> LandingViewModel
 }

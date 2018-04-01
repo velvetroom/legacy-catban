@@ -121,6 +121,8 @@
 		DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83C6207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift */; };
 		DADE83C920710B250053E7A0 /* TestLandingController_SelectorsMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83C820710B250053E7A0 /* TestLandingController_SelectorsMove.swift */; };
 		DADE83CB20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83CA20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift */; };
+		DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF4D4520714B750037DCDD /* TestLandingViewModelCollectionMenu.swift */; };
+		DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF4D4720714BC10037DCDD /* LandingViewModelCollectionMenu.swift */; };
 		DAE698CF20656A350046721C /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698CE20656A350046721C /* brand.xcassets */; };
 		DAE698D520656F940046721C /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698D420656F940046721C /* assets.xcassets */; };
 		DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D6206576770046721C /* LandingController+Navigation.swift */; };
@@ -275,6 +277,8 @@
 		DADE83C6207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CardsMoveRight.swift; sourceTree = "<group>"; };
 		DADE83C820710B250053E7A0 /* TestLandingController_SelectorsMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_SelectorsMove.swift; sourceTree = "<group>"; };
 		DADE83CA20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CardsMoveLeft.swift; sourceTree = "<group>"; };
+		DADF4D4520714B750037DCDD /* TestLandingViewModelCollectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionMenu.swift; sourceTree = "<group>"; };
+		DADF4D4720714BC10037DCDD /* LandingViewModelCollectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionMenu.swift; sourceTree = "<group>"; };
 		DAE698CE20656A350046721C /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAE698D420656F940046721C /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAE698D6206576770046721C /* LandingController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Navigation.swift"; sourceTree = "<group>"; };
@@ -666,6 +670,7 @@
 				DAE698E32065812C0046721C /* TestLandingViewModel.swift */,
 				DA519A7A2069408900514098 /* TestLandingViewModelOutlets.swift */,
 				DA2538EB2067D6F900EEB231 /* TestLandingViewModelCollection.swift */,
+				DADF4D4520714B750037DCDD /* TestLandingViewModelCollectionMenu.swift */,
 				DA2538F92068320700EEB231 /* TestLandingViewModelCollectionSection.swift */,
 				DA2538FD206832E400EEB231 /* TestLandingViewModelCollectionItem.swift */,
 				DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */,
@@ -685,6 +690,7 @@
 			children = (
 				DAE698E6206581840046721C /* LandingViewModel.swift */,
 				DA519A7C206940D300514098 /* LandingViewModelOutlets.swift */,
+				DADF4D4720714BC10037DCDD /* LandingViewModelCollectionMenu.swift */,
 				DA519A5C2068E6DE00514098 /* LandingViewModelCollectionLayout.swift */,
 				DA519A6220690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift */,
 				DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */,
@@ -868,6 +874,7 @@
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
+				DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */,
 				DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */,
 				DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */,
 				DA5B5A0520704BCD00122EEF /* Landing+Load.swift in Sources */,
@@ -894,6 +901,7 @@
 				DA519A6120690CA800514098 /* TestLandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DADE83C32070EB100053E7A0 /* MockProjectProtocol.swift in Sources */,
 				DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */,
+				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
 				DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,

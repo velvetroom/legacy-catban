@@ -9,7 +9,7 @@ class LandingViewModelLoaderOutlets {
         self.firstTime = true
     }
     
-    func factoryWith(model:Landing) -> LandingViewModelOutlets {
+    func factoryWith(model:LandingProtocol) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
         viewModel = self.configure(viewModel:viewModel, project:model.project)
         viewModel = self.configureEditing(viewModel:viewModel, with:model)
@@ -27,10 +27,11 @@ class LandingViewModelLoaderOutlets {
         return viewModel
     }
     
-    private func configureEditing(viewModel:LandingViewModelOutlets, with model:Landing) -> LandingViewModelOutlets {
+    private func configureEditing(viewModel:LandingViewModelOutlets,
+                                  with model:LandingProtocol) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = viewModel
-        if let _:IndexPath = model.editingCard {
-            viewModel.collectionMenuBottom = 0
+        if let index:IndexPath = model.editingCard {
+            viewModel.collectionMenu = self.configureMenuEditing(index:index, with:model)
         }
         return viewModel
     }
@@ -47,6 +48,13 @@ class LandingViewModelLoaderOutlets {
     private func configureDefaults(viewModel:LandingViewModelOutlets) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = viewModel
         viewModel.logoHidden = Constants.logoHidden
+        return viewModel
+    }
+    
+    private func configureMenuEditing(index:IndexPath,
+                                      with model:LandingProtocol) -> LandingViewModelCollectionMenu {
+        var viewModel:LandingViewModelCollectionMenu = LandingViewModelCollectionMenu()
+        viewModel.layoutBottom = 0
         return viewModel
     }
 }

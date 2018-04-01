@@ -4,7 +4,7 @@ import Foundation
 class MockLandingViewModelLoader:LandingViewModelLoaderProtocol {
     var onLoadCalled:(() -> Void)?
     
-    func factoryWith(model:Landing) -> LandingViewModel {
+    func factoryWith(model:LandingProtocol) -> LandingViewModel {
         self.onLoadCalled?()
         
         let viewModel:LandingViewModel = LandingViewModel()

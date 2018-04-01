@@ -58,7 +58,7 @@ class TestLandingPresenterOutlets:XCTestCase {
     
     func testUpdateMenuBottom() {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
-        viewModel.collectionMenuBottom = Constants.updateMenuBottom
+        viewModel.collectionMenu.layoutBottom = Constants.updateMenuBottom
         
         self.presenter.update(viewModel:viewModel)
         

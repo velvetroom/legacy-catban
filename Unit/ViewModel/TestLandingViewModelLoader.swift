@@ -36,13 +36,15 @@ class TestLandingViewModelLoader:XCTestCase {
         
         let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         
-        XCTAssertEqual(viewModel.outlets.collectionMenuBottom, 0, "Not showing menu after editing card selected")
+        XCTAssertEqual(viewModel.outlets.collectionMenu.layoutBottom, 0,
+                       "Not showing menu after editing card selected")
     }
     
     func testMoveMenuDownWithNoEditingCard() {
         let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         
-        XCTAssertEqual(viewModel.outlets.collectionMenuBottom, LandingController.Constants.collectionMenuHeight,
+        XCTAssertEqual(viewModel.outlets.collectionMenu.layoutBottom,
+                       LandingController.Constants.collectionMenuHeight,
                        "Not hiding menu when there is no editing card")
     }
     

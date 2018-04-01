@@ -9,7 +9,7 @@ class LandingViewModelLoader:LandingViewModelLoaderProtocol {
         self.collection = LandingViewModelLoaderCollection()
     }
     
-    func factoryWith(model:Landing) -> LandingViewModel {
+    func factoryWith(model:LandingProtocol) -> LandingViewModel {
         var viewModel:LandingViewModel = LandingViewModel()
         viewModel.outlets = self.outlets.factoryWith(model:model)
         viewModel.collection = self.collection.factoryWith(model:model)
