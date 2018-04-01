@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingViewModelLoaderOutlets_CollectionMenu:XCTestCase {
-    private var loader:LandingViewModelLoaderOutlets!
+class TestLandingViewModelLoaderCollectionMenu:XCTestCase {
+    private var loader:LandingViewModelLoaderCollectionMenu!
     
     override func setUp() {
         super.setUp()
-        self.loader = LandingViewModelLoaderOutlets()
+        self.loader = LandingViewModelLoaderCollectionMenu()
     }
     
     func testLoad() {
