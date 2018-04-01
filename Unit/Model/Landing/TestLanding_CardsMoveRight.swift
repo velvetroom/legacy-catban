@@ -82,6 +82,18 @@ class TestLanding_CardsMoveRight:XCTestCase {
         self.waitExpectation()
     }
     
+    func testMoveEditingCardRightScrollsCollection() {
+        self.startExpectation()
+        self.collection.onScrollToItem = { [weak self] (scrollItem:IndexPath) in
+            XCTAssertEqual(scrollItem, Constants.returnIndex, "Invalid scroll item")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.moveEditingCardRight()
+        
+        self.waitExpectation()
+    }
+    
     func testMoveEditingCardRightUpdatesEditingCard() {
         self.model.moveEditingCardRight()
         XCTAssertEqual(self.model.editingCard, Constants.returnIndex, "Failed to update editing card")

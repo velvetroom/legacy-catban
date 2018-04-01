@@ -1,8 +1,9 @@
-import Foundation
+import UIKit
 @testable import catban
 
 class MockLandingViewCollection:LandingViewCollection {
     var onReloadDataCalled:(() -> Void)?
+    var onScrollToItem:((IndexPath) -> Void)?
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
     var returnNumberOfItemsInSection:Int?
     
@@ -22,5 +23,12 @@ class MockLandingViewCollection:LandingViewCollection {
     
     override func moveItem(at indexPath:IndexPath, to newIndexPath:IndexPath) {
         self.onMoveItem?(indexPath, newIndexPath)
+    }
+    
+    override func scrollToItem(
+        at indexPath:IndexPath,
+        at scrollPosition:UICollectionViewScrollPosition,
+        animated:Bool) {
+        self.onScrollToItem?(indexPath)
     }
 }
