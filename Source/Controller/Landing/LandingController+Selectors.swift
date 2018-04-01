@@ -13,4 +13,8 @@ extension LandingController {
         self.model.presenter.outlets.list.viewCollection?.clearSelection()
         self.model.update(editingCard:nil)
     }
+    
+    @objc func moveEditingCardRight(sender button:UIButton) {
+        self.model.moveCardRight()
+    }
 }
