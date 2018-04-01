@@ -3,7 +3,7 @@ import Foundation
 
 class MockLandingProtocol:LandingProtocol {
     var onReloadViewModel:(() -> Void)?
-    var onReorderItem:((Int, Int, Int) -> Void)?
+    var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var project:ProjectProtocol?
     var editingCard:IndexPath?
     var projectLoader:ProjectLoaderProtocol
@@ -28,11 +28,11 @@ class MockLandingProtocol:LandingProtocol {
         
     }
     
-    func moveEditinCardRight() {
+    func moveEditingCardRight() {
         
     }
     
-    func reorderItemFrom(index:Int, to destination:Int, in section:Int) {
-        self.onReorderItem?(index, destination, section)
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
+        self.onMoveCard?(origin, destination)
     }
 }

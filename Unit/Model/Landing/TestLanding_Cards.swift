@@ -8,9 +8,8 @@ class TestLanding_Cards:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let reorderIndex:Int = 4
-        static let reorderDestination:Int = 5
-        static let reorderSection:Int = 6
+        static let origin:IndexPath = IndexPath(item:4, section:6)
+        static let destination:IndexPath = IndexPath(item:7, section:8)
     }
     
     override func setUp() {
@@ -30,15 +29,13 @@ class TestLanding_Cards:XCTestCase {
     
     func testReorderItemCallsMoveOnProject() {
         self.startExpectation()
-        self.project.onMove = { [weak self] (index:Int, destination:Int, section:Int) in
-            XCTAssertEqual(index, Constants.reorderIndex, "Invalid index")
-            XCTAssertEqual(destination, Constants.reorderDestination, "Invalid destination")
-            XCTAssertEqual(section, Constants.reorderSection, "Invalid section")
+        self.project.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Invalid origin")
+            XCTAssertEqual(destination, Constants.destination, "Invalid destination")
             self?.expect?.fulfill()
         }
         
-        self.model.reorderItemFrom(index:Constants.reorderIndex, to:Constants.reorderDestination,
-                                   in:Constants.reorderSection)
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
     }
@@ -49,8 +46,7 @@ class TestLanding_Cards:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.reorderItemFrom(index:Constants.reorderIndex, to:Constants.reorderDestination,
-                                   in:Constants.reorderSection)
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
     }

@@ -4,9 +4,9 @@ import XCTest
 class TestProject_Move:XCTestCase {
     private var project:Project!
     private struct Constants {
-        static let cardIndex:Int = 2
-        static let destinationIndex:Int = 0
-        static let columnIndex:Int = 0
+        static let origin:IndexPath = IndexPath(item:2, section:0)
+        static let destinationSame:IndexPath = IndexPath(item:0, section:0)
+        static let destinationDifferent:IndexPath = IndexPath(item:0, section:1)
     }
     
     override func setUp() {
@@ -19,17 +19,44 @@ class TestProject_Move:XCTestCase {
     }
     
     func testMoveCardInSameSection() {
-        let expectedTitle:String = self.titleAt(card:Constants.cardIndex, column:Constants.columnIndex)
-        let initialTitle:String = self.titleAt(card:Constants.destinationIndex, column:Constants.columnIndex)
+        let expectedTitle:String = self.titleAt(index:Constants.origin)
+        let initialTitle:String = self.titleAt(index:Constants.destinationSame)
         XCTAssertNotEqual(expectedTitle, initialTitle, "Expected and initial titles can't be the same")
         
-        self.project.move(cardIndex:Constants.cardIndex, to:Constants.destinationIndex, in:Constants.columnIndex)
+        self.project.moveCardFrom(origin:Constants.origin, to:Constants.destinationSame)
         
-        let updatedTitle:String = self.titleAt(card:Constants.destinationIndex, column:Constants.columnIndex)
+        let updatedTitle:String = self.titleAt(index:Constants.destinationSame)
         XCTAssertEqual(expectedTitle, updatedTitle, "Failed to move card to expected index")
     }
     
-    private func titleAt(card:Int, column:Int) -> String {
-        return self.project.columns[column].cards[card].title
+    func testMoveCardInDifferentSection() {
+        let expectedTitle:String = self.titleAt(index:Constants.origin)
+        
+        self.project.moveCardFrom(origin:Constants.origin, to:Constants.destinationDifferent)
+        
+        let updatedTitle:String = self.titleAt(index:Constants.destinationDifferent)
+        XCTAssertEqual(expectedTitle, updatedTitle, "Failed to move card to expected index")
+    }
+    
+    func testMoveCardsChangesSize() {
+        let originSize:Int = self.sizeOfColumn(index:Constants.origin)
+        let destinationSize:Int = self.sizeOfColumn(index:Constants.destinationDifferent)
+        
+        self.project.moveCardFrom(origin:Constants.origin, to:Constants.destinationDifferent)
+        let expectedOriginSize:Int = originSize - 1
+        let expectedDestinationSize:Int = destinationSize + 1
+        let updatedOriginSize:Int = self.sizeOfColumn(index:Constants.origin)
+        let updatedDestinationSize:Int = self.sizeOfColumn(index:Constants.destinationDifferent)
+        
+        XCTAssertEqual(expectedOriginSize, updatedOriginSize, "Failed to move card")
+        XCTAssertEqual(expectedDestinationSize, updatedDestinationSize, "Failed to move card")
+    }
+    
+    private func titleAt(index:IndexPath) -> String {
+        return self.project.columns[index.section].cards[index.item].title
+    }
+    
+    private func sizeOfColumn(index:IndexPath) -> Int {
+        return self.project.columns[index.section].cards.count
     }
 }

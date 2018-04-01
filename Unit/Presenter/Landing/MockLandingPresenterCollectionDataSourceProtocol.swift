@@ -2,11 +2,11 @@ import Foundation
 @testable import catban
 
 class MockLandingPresenterCollectionDataSourceProtocol:LandingPresenterCollectionDataSourceProtocol {
-    var onReorderItem:((Int, Int, Int) -> Void)?
+    var onMoveItem:((IndexPath, IndexPath) -> Void)?
     var onReloadCollection:(() -> Void)?
     
-    func reorderItemFrom(index:Int, to destination:Int, in section:Int) {
-        self.onReorderItem?(index, destination, section)
+    func moveItemFrom(origin:IndexPath, to destination:IndexPath) {
+        self.onMoveItem?(origin, destination)
     }
     
     func reloadCollection() {

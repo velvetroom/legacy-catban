@@ -9,9 +9,8 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let startingIndex:Int = 45
-        static let endingIndex:Int = 33
-        static let sectionIndex:Int = 98
+        static let origin:IndexPath = IndexPath(item:445, section:66454)
+        static let destination:IndexPath = IndexPath(item:7231, section:8345)
     }
     
     override func setUp() {
@@ -33,19 +32,16 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
     
     func testMoveItem() {
         self.startExpectation()
-        self.delegate.onReorderItem = { [weak self] (index:Int, destination:Int, section:Int) in
-            XCTAssertEqual(index, Constants.startingIndex, "Incorrect starting index")
-            XCTAssertEqual(destination, Constants.endingIndex, "Incorrect ending index")
-            XCTAssertEqual(section, Constants.sectionIndex, "Incorrect section index")
+        self.delegate.onMoveItem = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Incorrect origin")
+            XCTAssertEqual(destination, Constants.destination, "Incorrect destination")
             self?.expect?.fulfill()
         }
         self.collection.onReloadDataCalled = {
             XCTAssertTrue(false, "Collection should not be reloaded")
         }
         
-        let startingIndex:IndexPath = IndexPath(item:Constants.startingIndex, section:Constants.sectionIndex)
-        let endingIndex:IndexPath = IndexPath(item:Constants.endingIndex, section:Constants.sectionIndex)
-        self.presenter.collectionView(self.collection, moveItemAt:startingIndex, to:endingIndex)
+        self.presenter.collectionView(self.collection, moveItemAt:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
     }

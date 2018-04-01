@@ -68,7 +68,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
     }
     
     func collectionView(_:UICollectionView, moveItemAt source:IndexPath, to destination:IndexPath) {
-        self.delegate?.reorderItemFrom(index:source.item, to:destination.item, in:source.section)
+        self.delegate?.moveItemFrom(origin:source, to:destination)
     }
     
     func collectionView(_:UICollectionView, canMoveItemAt index:IndexPath) -> Bool {

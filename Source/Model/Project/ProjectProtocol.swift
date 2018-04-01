@@ -4,5 +4,5 @@ protocol ProjectProtocol {
     var columns:[ProjectColumn] { get set }
     var name:String { get set }
     
-    func move(cardIndex:Int, to destination:Int, in columnIndex:Int)
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath)
 }

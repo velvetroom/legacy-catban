@@ -12,12 +12,12 @@ extension Landing {
         self.reloadViewModel()
     }
     
-    func reorderItemFrom(index:Int, to destination:Int, in section:Int) {
-        self.project?.move(cardIndex:index, to:destination, in:section)
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
+        self.project?.moveCardFrom(origin:origin, to:destination)
         self.reloadViewModel()
     }
     
-    func moveEditinCardRight() {
+    func moveEditingCardRight() {
         guard
             let editingCard:IndexPath = self.editingCard
         else {

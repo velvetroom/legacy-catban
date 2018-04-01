@@ -12,9 +12,8 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         static let originIndex:Int = 1
         static let destinationIndex:Int = 0
         static let columnIndex:Int = 0
-        static let mockIndex:Int = 99
-        static let mockDestination:Int = 199
-        static let mockSection:Int = 299
+        static let origin:IndexPath = IndexPath(item:445, section:66454)
+        static let destination:IndexPath = IndexPath(item:7231, section:8345)
     }
     
     override func setUp() {
@@ -55,15 +54,13 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     func testModelReceivedReorder() {
         self.startExpectation()
         self.controller.model = self.mockModel
-        self.mockModel.onReorderItem = { [weak self] (index:Int, destination:Int, section:Int) in
-            XCTAssertEqual(index, Constants.mockIndex, "Incorrect index")
-            XCTAssertEqual(destination, Constants.mockDestination, "Incorrect destination")
-            XCTAssertEqual(section, Constants.mockSection, "Incorrect section")
+        self.mockModel.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Incorrect origin")
+            XCTAssertEqual(destination, Constants.destination, "Incorrect destination")
             self?.expect?.fulfill()
         }
         
-        self.controller.reorderItemFrom(index:Constants.mockIndex, to:Constants.mockDestination,
-                                        in:Constants.mockSection)
+        self.controller.moveItemFrom(origin:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
     }

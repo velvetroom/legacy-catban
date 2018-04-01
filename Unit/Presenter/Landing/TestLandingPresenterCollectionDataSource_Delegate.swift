@@ -8,9 +8,8 @@ class TestLandingPresenterCollectionDataSource_Delegate:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let movingSection:Int = 123
-        static let originalIndex:Int = 24432
-        static let destinationIndex:Int = 667
+        static let origin:IndexPath = IndexPath(item:445, section:66454)
+        static let destination:IndexPath = IndexPath(item:7231, section:8345)
     }
     
     override func setUp() {
@@ -28,22 +27,15 @@ class TestLandingPresenterCollectionDataSource_Delegate:XCTestCase {
     
     func testMoveItem() {
         self.startExpectation()
-        self.delegate.onReorderItem = { [weak self] (index:Int, destination:Int, section:Int) in
-            XCTAssertEqual(index, Constants.originalIndex, "Invalid original index")
-            XCTAssertEqual(destination, Constants.destinationIndex, "Invalid destination index")
-            XCTAssertEqual(section, Constants.movingSection, "Invalid section")
+        self.delegate.onMoveItem = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Invalid original")
+            XCTAssertEqual(destination, Constants.destination, "Invalid destination")
             self?.expect?.fulfill()
         }
         
-        self.moveItem()
+        self.presenter.collectionView(self.collectionView, moveItemAt:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
-    }
-    
-    private func moveItem() {
-        let originalIndex:IndexPath = IndexPath(item:Constants.originalIndex, section:Constants.movingSection)
-        let destinationIndex:IndexPath = IndexPath(item:Constants.destinationIndex, section:Constants.movingSection)
-        self.presenter.collectionView(self.collectionView, moveItemAt:originalIndex, to:destinationIndex)
     }
     
     private func startExpectation() {

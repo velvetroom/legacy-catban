@@ -10,6 +10,6 @@ protocol LandingProtocol {
     func load()
     func reloadViewModel()
     func update(editingCard:IndexPath?)
-    func reorderItemFrom(index:Int, to destination:Int, in section:Int)
-    func moveEditinCardRight()
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath)
+    func moveEditingCardRight()
 }

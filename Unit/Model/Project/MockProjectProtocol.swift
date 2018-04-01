@@ -2,7 +2,7 @@ import Foundation
 @testable import catban
 
 class MockProjectProtocol:ProjectProtocol {
-    var onMove:((Int, Int, Int) -> Void)?
+    var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var columns:[ProjectColumn]
     var name:String
     
@@ -11,7 +11,7 @@ class MockProjectProtocol:ProjectProtocol {
         self.name = String()
     }
     
-    func move(cardIndex:Int, to destination:Int, in columnIndex:Int) {
-        self.onMove?(cardIndex, destination, columnIndex)
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
+        self.onMoveCard?(origin, destination)
     }
 }
