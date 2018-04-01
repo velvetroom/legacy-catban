@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension Landing {
     private var collection:LandingViewCollection? {
@@ -25,8 +25,8 @@ extension Landing {
             return
         }
         let newIndex:IndexPath = project.indexOnRightForCardAt(index:editingCard)
-        self.moveCardFrom(origin:editingCard, to:newIndex)
-        self.collection?.moveItem(at:editingCard, to:newIndex)
+        self.editingCard = newIndex
+        self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
     }
     
     func moveEditingCardLeft() {
@@ -37,7 +37,17 @@ extension Landing {
             return
         }
         let newIndex:IndexPath = project.indexOnLeftForCardAt(index:editingCard)
-        self.moveCardFrom(origin:editingCard, to:newIndex)
-        self.collection?.moveItem(at:editingCard, to:newIndex)
+        self.editingCard = newIndex
+        self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
+    }
+    
+    private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {
+        self.moveCardFrom(origin:index, to:destination)
+        self.collection?.moveItem(at:index, to:destination)
+        self.collection?.scrollToItem(at:destination,
+                                      at:UICollectionViewScrollPosition([
+                                        UICollectionViewScrollPosition.centeredVertically,
+                                        UICollectionViewScrollPosition.centeredHorizontally]),
+                                      animated:true)
     }
 }

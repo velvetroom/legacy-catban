@@ -82,6 +82,11 @@ class TestLanding_CardsMoveLeft:XCTestCase {
         self.waitExpectation()
     }
     
+    func testMoveEditingCardLeftUpdatesEditingCard() {
+        self.model.moveEditingCardLeft()
+        XCTAssertEqual(self.model.editingCard, Constants.returnIndex, "Failed to update editing card")
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
