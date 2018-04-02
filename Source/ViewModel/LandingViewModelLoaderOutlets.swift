@@ -14,26 +14,17 @@ class LandingViewModelLoaderOutlets {
     func factoryWith(model:LandingProtocol) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
         viewModel = self.configure(viewModel:viewModel, project:model.project)
-        viewModel = self.configureEditing(viewModel:viewModel, with:model)
         viewModel = self.configureForFirstTime(viewModel:viewModel)
         viewModel = self.configureDefaults(viewModel:viewModel)
+        viewModel.collectionLayout = self.collectionLayout.factoryWith(model:model)
+        viewModel.collectionMenu = self.collectionMenu.factoryWith(model:model)
         return viewModel
     }
     
     private func configure(viewModel:LandingViewModelOutlets, project:ProjectProtocol?) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = viewModel
         if let project:ProjectProtocol = project {
-            viewModel.collectionLayout = self.collectionLayout.factoryWith(project:project)
             viewModel.title = project.name
-        }
-        return viewModel
-    }
-    
-    private func configureEditing(viewModel:LandingViewModelOutlets,
-                                  with model:LandingProtocol) -> LandingViewModelOutlets {
-        var viewModel:LandingViewModelOutlets = viewModel
-        if let index:IndexPath = model.editingCard {
-            viewModel.collectionMenu = self.configureMenuEditing(index:index, with:model)
         }
         return viewModel
     }
@@ -50,13 +41,6 @@ class LandingViewModelLoaderOutlets {
     private func configureDefaults(viewModel:LandingViewModelOutlets) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = viewModel
         viewModel.logoHidden = Constants.logoHidden
-        return viewModel
-    }
-    
-    private func configureMenuEditing(index:IndexPath,
-                                      with model:LandingProtocol) -> LandingViewModelCollectionMenu {
-        var viewModel:LandingViewModelCollectionMenu = LandingViewModelCollectionMenu()
-        viewModel.layoutBottom = 0
         return viewModel
     }
 }

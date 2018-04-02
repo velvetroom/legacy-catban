@@ -1,8 +1,21 @@
 import Foundation
 
 class LandingViewModelLoaderCollectionMenu {
-    func factoryWith(project:ProjectProtocol, editing:IndexPath) -> LandingViewModelCollectionMenu {
-        var viewModel:LandingViewModelCollectionMenu = LandingViewModelCollectionMenu()
+    func factoryWith(model:LandingProtocol) -> LandingViewModelCollectionMenu {
+        guard
+            let project:ProjectProtocol = model.project,
+            let editingCard:IndexPath = model.editingCard
+        else {
+            return LandingViewModelCollectionMenu()
+        }
+        let viewModel:LandingViewModelCollectionMenu
+        if let editingCard:IndexPath = model.editingCard {
+            
+        } else {
+            
+        }
         return viewModel
     }
+    
+    private func factory
 }

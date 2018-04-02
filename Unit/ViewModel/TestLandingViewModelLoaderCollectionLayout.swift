@@ -3,7 +3,8 @@ import XCTest
 
 class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     private var loader:LandingViewModelLoaderCollectionLayout!
-    private var project:Project!
+    private var model:LandingProtocol!
+    private var project:ProjectProtocol!
     private var totalCards:Int {
         get {
             var total:Int = 0
@@ -18,15 +19,19 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         super.setUp()
         self.loader = LandingViewModelLoaderCollectionLayout()
         self.project = Project.factoryNewProject()
+        self.model = Landing()
+        self.model.project = self.project
         self.addColumnToProject()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.loader, "Failed to load loader")
+        XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.project, "Failed to load project")
     }
     
     func testFactory() {
-        let viewModel:LandingViewModelCollectionLayout = self.loader.factoryWith(project:self.project)
+        let viewModel:LandingViewModelCollectionLayout = self.loader.factoryWith(model:self.model)
         XCTAssertNotNil(viewModel, "Failed to factory view model")
         self.validate(viewModel:viewModel)
     }

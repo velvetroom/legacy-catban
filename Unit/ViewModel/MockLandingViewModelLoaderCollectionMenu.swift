@@ -3,8 +3,8 @@ import Foundation
 
 class MockLandingViewModelLoaderCollectionMenu:LandingViewModelLoaderCollectionMenu {
     var onFactory:(() -> Void)?
-    override func factoryWith(project:ProjectProtocol, editing:IndexPath) -> LandingViewModelCollectionMenu {
+    override func factoryWith(model:LandingProtocol) -> LandingViewModelCollectionMenu {
         self.onFactory?()
-        return super.factoryWith(project:project, editing:editing)
+        return super.factoryWith(model:model)
     }
 }
