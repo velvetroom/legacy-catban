@@ -41,4 +41,8 @@ class MockLandingProtocol:LandingProtocol {
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
         self.onMoveCardFrom?(origin, destination)
     }
+    
+    func scrollToEditingCard() {
+        
+    }
 }

@@ -7,9 +7,18 @@ extension Landing {
         }
     }
     
+    private var scrollPosition:UICollectionViewScrollPosition {
+        get {
+            return UICollectionViewScrollPosition([
+                UICollectionViewScrollPosition.centeredVertically,
+                UICollectionViewScrollPosition.centeredHorizontally])
+        }
+    }
+    
     func update(editingCard:IndexPath?) {
         self.editingCard = editingCard
         self.reloadViewModel()
+        self.scrollToEditingCard()
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
@@ -41,13 +50,18 @@ extension Landing {
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
     }
     
+    func scrollToEditingCard() {
+        guard
+            let editingCard:IndexPath = self.editingCard
+        else {
+            return
+        }
+        self.collection?.scrollToItem(at:editingCard, at:self.scrollPosition, animated:true)
+    }
+    
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {
         self.moveCardFrom(origin:index, to:destination)
         self.collection?.moveItem(at:index, to:destination)
-        self.collection?.scrollToItem(at:destination,
-                                      at:UICollectionViewScrollPosition([
-                                        UICollectionViewScrollPosition.centeredVertically,
-                                        UICollectionViewScrollPosition.centeredHorizontally]),
-                                      animated:true)
+        self.scrollToEditingCard()
     }
 }

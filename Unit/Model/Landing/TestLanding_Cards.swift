@@ -5,6 +5,7 @@ class TestLanding_Cards:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenter!
+    private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -17,14 +18,17 @@ class TestLanding_Cards:XCTestCase {
         self.model = Landing()
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenter()
+        self.collection = MockLandingViewCollection()
         self.model.project = self.project
         self.model.presenter = self.presenter
+        self.presenter.outlets.list.viewCollection = self.collection
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.collection, "Failed to load collection")
     }
     
     func testReorderItemCallsMoveOnProject() {
@@ -47,6 +51,31 @@ class TestLanding_Cards:XCTestCase {
         }
         
         self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
+        
+        self.waitExpectation()
+    }
+    
+    func testUpdateEditingCard() {
+        self.startExpectation()
+        self.collection.onScrollToItem = { [weak self] (editingCard:IndexPath) in
+            XCTAssertEqual(editingCard, Constants.destination, "Scrolling to invalid index path")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.update(editingCard:Constants.destination)
+        
+        self.waitExpectation()
+    }
+    
+    func testScrollToEditingCard() {
+        self.startExpectation()
+        self.model.editingCard = Constants.destination
+        self.collection.onScrollToItem = { [weak self] (editingCard:IndexPath) in
+            XCTAssertEqual(editingCard, Constants.destination, "Scrolling to invalid index path")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.scrollToEditingCard()
         
         self.waitExpectation()
     }
