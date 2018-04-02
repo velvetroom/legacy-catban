@@ -36,14 +36,14 @@ class TestLandingViewModelLoaderCollectionMenu:XCTestCase {
         self.model.editingCard = IndexPath(item:0, section:0)
         self.configureProjectWithOneCard()
         let viewModel:LandingViewModelCollectionMenu = self.loader.factoryWith(model:self.model)
-        XCTAssertFalse(viewModel.moveLeftEnabled, "Move left should be disbaled")
-        XCTAssertFalse(viewModel.moveRightEnabled, "Move right should be disbaled")
+        XCTAssertFalse(viewModel.moveLeftEnabled, "Move left should be disabled")
+        XCTAssertFalse(viewModel.moveRightEnabled, "Move right should be disabled")
     }
     
     func testMovingRightAllowed() {
         self.model.editingCard = IndexPath(item:0, section:0)
         let viewModel:LandingViewModelCollectionMenu = self.loader.factoryWith(model:self.model)
-        XCTAssertFalse(viewModel.moveLeftEnabled, "Move left should be disbaled")
+        XCTAssertFalse(viewModel.moveLeftEnabled, "Move left should be disabled")
         XCTAssertTrue(viewModel.moveRightEnabled, "Move right should be enabled")
     }
     
@@ -65,7 +65,7 @@ class TestLandingViewModelLoaderCollectionMenu:XCTestCase {
         let card:ProjectCard = ProjectCard()
         let column:ProjectColumn = ProjectColumn()
         column.cards.append(card)
-        self.project = Project()
-        self.project.columns.append(column)
+        self.model.project = Project()
+        self.model.project?.columns.append(column)
     }
 }
