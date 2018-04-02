@@ -10,4 +10,5 @@ struct LandingPresenterOutletsList {
     weak var layoutCollectionMenuBottom:NSLayoutConstraint?
     weak var buttonCollectionMenuMoveRight:UIButton?
     weak var buttonCollectionMenuMoveLeft:UIButton?
+    weak var buttonCollectionMenuEdit:UIButton?
 }

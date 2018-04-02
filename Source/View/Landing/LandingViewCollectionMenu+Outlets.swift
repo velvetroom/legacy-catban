@@ -1,11 +1,18 @@
 import UIKit
 
 extension LandingViewCollectionMenu {
+    private var highlightedColour:UIColor {
+        get {
+            return UIColor(white:1, alpha:0.3)
+        }
+    }
+    
     func addOutlets() {
         self.addBorder()
         self.addMoveRight()
         self.addMoveLeft()
         self.addClose()
+        self.addEdit()
     }
     
     private func addBorder() {
@@ -33,7 +40,7 @@ extension LandingViewCollectionMenu {
                                  for:UIControlState.disabled)
         buttonMoveRight.imageView!.clipsToBounds = true
         buttonMoveRight.imageView!.contentMode = UIViewContentMode.center
-        buttonMoveRight.imageView!.tintColor = UIColor(white:1, alpha:0.3)
+        buttonMoveRight.imageView!.tintColor = self.highlightedColour
         self.buttonMoveRight = buttonMoveRight
         
         self.addSubview(buttonMoveRight)
@@ -55,7 +62,7 @@ extension LandingViewCollectionMenu {
                                  for:UIControlState.disabled)
         buttonMoveLeft.imageView!.clipsToBounds = true
         buttonMoveLeft.imageView!.contentMode = UIViewContentMode.center
-        buttonMoveLeft.imageView!.tintColor = UIColor(white:1, alpha:0.3)
+        buttonMoveLeft.imageView!.tintColor = self.highlightedColour
         self.buttonMoveLeft = buttonMoveLeft
         
         self.addSubview(buttonMoveLeft)
@@ -74,7 +81,7 @@ extension LandingViewCollectionMenu {
                                 for:UIControlState.highlighted)
         buttonClose.imageView!.clipsToBounds = true
         buttonClose.imageView!.contentMode = UIViewContentMode.center
-        buttonClose.imageView!.tintColor = UIColor(white:1, alpha:0.3)
+        buttonClose.imageView!.tintColor = self.highlightedColour
         self.buttonClose = buttonClose
         
         self.addSubview(buttonClose)
@@ -83,5 +90,25 @@ extension LandingViewCollectionMenu {
         buttonClose.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
         buttonClose.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         buttonClose.widthAnchor.constraint(equalToConstant:Constants.buttonCloseWidth).isActive = true
+    }
+    
+    private func addEdit() {
+        let buttonEdit:UIButton = UIButton()
+        buttonEdit.translatesAutoresizingMaskIntoConstraints = false
+        buttonEdit.setTitleColor(UIColor.white, for:UIControlState.normal)
+        buttonEdit.setTitleColor(self.highlightedColour, for:UIControlState.highlighted)
+        buttonEdit.setTitle(String.localizedLanding(key:"LandingViewCollectionMenu_buttonEdit"),
+                            for:UIControlState())
+        buttonEdit.titleLabel!.font = UIFont.systemFont(ofSize:Constants.buttonEditFontSize,
+                                                        weight:UIFont.Weight.medium)
+        self.buttonEdit = buttonEdit
+        
+        self.addSubview(buttonEdit)
+        
+        buttonEdit.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        buttonEdit.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonEdit.widthAnchor.constraint(equalToConstant:Constants.buttonEditWidth).isActive = true
+        self.layoutButtonEditLeft = buttonEdit.leftAnchor.constraint(equalTo:self.leftAnchor)
+        self.layoutButtonEditLeft.isActive = true
     }
 }

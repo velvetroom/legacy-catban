@@ -4,6 +4,8 @@ class LandingViewCollectionMenu:UIView {
     weak var buttonMoveRight:UIButton!
     weak var buttonMoveLeft:UIButton!
     weak var buttonClose:UIButton!
+    weak var buttonEdit:UIButton!
+    weak var layoutButtonEditLeft:NSLayoutConstraint!
     
     init() {
         super.init(frame:CGRect.zero)

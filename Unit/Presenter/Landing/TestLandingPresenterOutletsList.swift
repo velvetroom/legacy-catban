@@ -20,5 +20,6 @@ class TestLandingPresenterOutletsList:XCTestCase {
         XCTAssertNil(self.outlets.layoutCollectionMenuBottom, "Layout should not exist")
         XCTAssertNil(self.outlets.buttonCollectionMenuMoveRight, "Button should not exist")
         XCTAssertNil(self.outlets.buttonCollectionMenuMoveLeft, "Button should not exist")
+        XCTAssertNil(self.outlets.buttonCollectionMenuEdit, "Button should not exist")
     }
 }
