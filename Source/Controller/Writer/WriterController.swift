@@ -11,4 +11,9 @@ class WriterController:UIViewController {
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.factoryOutlets()
+    }
 }
