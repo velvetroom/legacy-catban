@@ -27,7 +27,7 @@ class TestLandingController_SelectorsMove:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.moveEditingCardRight(sender:UIButton())
+        self.controller.selectorMoveEditingCardRight(sender:UIButton())
         
         self.waitExpectations()
     }
@@ -38,7 +38,7 @@ class TestLandingController_SelectorsMove:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.moveEditingCardLeft(sender:UIButton())
+        self.controller.selectorMoveEditingCardLeft(sender:UIButton())
         
         self.waitExpectations()
     }

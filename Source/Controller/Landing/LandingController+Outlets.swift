@@ -42,9 +42,9 @@ extension LandingController {
         let viewCollectionMenu:LandingViewCollectionMenu = LandingViewCollectionMenu()
         viewCollectionMenu.buttonClose.addTarget(self, action:#selector(self.selectorCloseEditingCard(sender:)),
                                                  for:UIControlEvents.touchUpInside)
-        viewCollectionMenu.buttonMoveRight.addTarget(self, action:#selector(self.moveEditingCardRight(sender:)),
+        viewCollectionMenu.buttonMoveRight.addTarget(self, action:#selector(self.selectorMoveEditingCardRight(sender:)),
                                                  for:UIControlEvents.touchUpInside)
-        viewCollectionMenu.buttonMoveLeft.addTarget(self, action:#selector(self.moveEditingCardLeft(sender:)),
+        viewCollectionMenu.buttonMoveLeft.addTarget(self, action:#selector(self.selectorMoveEditingCardLeft(sender:)),
                                                      for:UIControlEvents.touchUpInside)
         
         self.view.addSubview(viewCollectionMenu)
