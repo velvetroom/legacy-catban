@@ -11,5 +11,6 @@ class TestWriter:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.text, "Failed to load text")
     }
 }
