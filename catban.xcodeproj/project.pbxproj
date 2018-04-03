@@ -79,6 +79,10 @@
 		DA6F1B6E207353B7001248E4 /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6D207353B7001248E4 /* Writer.swift */; };
 		DA6F1B70207357EF001248E4 /* TestWriterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6F207357EF001248E4 /* TestWriterViewText.swift */; };
 		DA6F1B722073583C001248E4 /* WriterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B712073583C001248E4 /* WriterViewText.swift */; };
+		DA6F1B74207359AA001248E4 /* WriterController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B73207359AA001248E4 /* WriterController+Constants.swift */; };
+		DA6F1B76207359D4001248E4 /* WriterController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B75207359D4001248E4 /* WriterController+Outlets.swift */; };
+		DA6F1B7820735A9D001248E4 /* TestWriterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B7720735A9D001248E4 /* TestWriterPresenter.swift */; };
+		DA6F1B7A20735B07001248E4 /* WriterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B7920735B07001248E4 /* WriterPresenter.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -239,6 +243,10 @@
 		DA6F1B6D207353B7001248E4 /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
 		DA6F1B6F207357EF001248E4 /* TestWriterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterViewText.swift; sourceTree = "<group>"; };
 		DA6F1B712073583C001248E4 /* WriterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterViewText.swift; sourceTree = "<group>"; };
+		DA6F1B73207359AA001248E4 /* WriterController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterController+Constants.swift"; sourceTree = "<group>"; };
+		DA6F1B75207359D4001248E4 /* WriterController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterController+Outlets.swift"; sourceTree = "<group>"; };
+		DA6F1B7720735A9D001248E4 /* TestWriterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterPresenter.swift; sourceTree = "<group>"; };
+		DA6F1B7920735B07001248E4 /* WriterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterPresenter.swift; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -423,6 +431,8 @@
 			isa = PBXGroup;
 			children = (
 				DA6F1B6920727B09001248E4 /* WriterController.swift */,
+				DA6F1B73207359AA001248E4 /* WriterController+Constants.swift */,
+				DA6F1B75207359D4001248E4 /* WriterController+Outlets.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -430,6 +440,7 @@
 		DA4F8FED207279140063D384 /* Writer */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F1B7920735B07001248E4 /* WriterPresenter.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -468,6 +479,7 @@
 		DA4F8FF3207279760063D384 /* Writer */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F1B7720735A9D001248E4 /* TestWriterPresenter.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -959,8 +971,10 @@
 				DA519A7920693F1300514098 /* LandingViewModelLoaderOutlets+Constants.swift in Sources */,
 				DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */,
 				DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */,
+				DA6F1B74207359AA001248E4 /* WriterController+Constants.swift in Sources */,
 				DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */,
 				DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */,
+				DA6F1B7A20735B07001248E4 /* WriterPresenter.swift in Sources */,
 				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA796032206BD88D00548952 /* Project+Move.swift in Sources */,
 				DA519A7720693E1000514098 /* LandingViewModelLoaderOutlets.swift in Sources */,
@@ -996,6 +1010,7 @@
 				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
 				DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */,
+				DA6F1B76207359D4001248E4 /* WriterController+Outlets.swift in Sources */,
 				DA5B59F720702DBF00122EEF /* LandingViewCollectionMenu+Outlets.swift in Sources */,
 				DA462D4E2068DFD20062E680 /* LandingViewCollectionHeader+Constants.swift in Sources */,
 				DA6F1B722073583C001248E4 /* WriterViewText.swift in Sources */,
@@ -1046,6 +1061,7 @@
 				DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */,
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
 				DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */,
+				DA6F1B7820735A9D001248E4 /* TestWriterPresenter.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
 				DADF4D4C207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,

@@ -14,6 +14,8 @@ class TestWriterController:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertNotNil(self.controller.model, "Failed to load model")
+        XCTAssertNotNil(self.controller.viewText, "Failed to load view")
     }
 }
