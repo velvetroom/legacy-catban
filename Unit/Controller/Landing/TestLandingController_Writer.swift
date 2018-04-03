@@ -35,7 +35,7 @@ class TestLandingController_Writer:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.writerFor(card:card)
+        self.controller.openWriterFor(card:card)
         
         self.waitExpectations()
     }

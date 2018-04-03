@@ -9,6 +9,10 @@ class ProjectColumn {
         self.name = String()
     }
     
+    func cardAt(index:Int) -> ProjectCard {
+        return self.cards[index]
+    }
+    
     func remove(card:Int) -> ProjectCard {
         return self.cards.remove(at:card)
     }

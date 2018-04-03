@@ -20,6 +20,12 @@ class TestProjectColumn:XCTestCase {
         XCTAssertFalse(self.column.cards.isEmpty, "No cards found in column")
     }
     
+    func testCardAtIndex() {
+        let card:ProjectCard = self.column.cardAt(index:Constants.insertingIndex)
+        let compareCard:ProjectCard = self.column.cards[Constants.insertingIndex]
+        XCTAssertTrue(card === compareCard, "Incorrect card returned")
+    }
+    
     func testRemove() {
         let countCards:Int = self.column.cards.count
         for index:Int in 0 ..< countCards {

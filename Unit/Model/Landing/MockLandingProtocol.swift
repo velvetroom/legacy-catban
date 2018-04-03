@@ -11,6 +11,7 @@ class MockLandingProtocol:LandingProtocol {
     var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
+    var editingCardReference:ProjectCard?
     
     init() {
         self.projectLoader = ProjectLoader()

@@ -6,6 +6,7 @@ protocol LandingProtocol {
     var projectLoader:ProjectLoaderProtocol { get set }
     var viewModelLoader:LandingViewModelLoaderProtocol { get set }
     var presenter:LandingPresenterProtocol { get set }
+    var editingCardReference:ProjectCard? { get }
     
     func load()
     func reloadViewModel()
