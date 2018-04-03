@@ -83,6 +83,7 @@
 		DA6F1B76207359D4001248E4 /* WriterController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B75207359D4001248E4 /* WriterController+Outlets.swift */; };
 		DA6F1B7820735A9D001248E4 /* TestWriterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B7720735A9D001248E4 /* TestWriterPresenter.swift */; };
 		DA6F1B7A20735B07001248E4 /* WriterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B7920735B07001248E4 /* WriterPresenter.swift */; };
+		DA6F1B7C20735B3A001248E4 /* WriterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B7B20735B3A001248E4 /* WriterProtocol.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -247,6 +248,7 @@
 		DA6F1B75207359D4001248E4 /* WriterController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterController+Outlets.swift"; sourceTree = "<group>"; };
 		DA6F1B7720735A9D001248E4 /* TestWriterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterPresenter.swift; sourceTree = "<group>"; };
 		DA6F1B7920735B07001248E4 /* WriterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterPresenter.swift; sourceTree = "<group>"; };
+		DA6F1B7B20735B3A001248E4 /* WriterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterProtocol.swift; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 		DA4F8FEE2072791E0063D384 /* Writer */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F1B7B20735B3A001248E4 /* WriterProtocol.swift */,
 				DA6F1B6D207353B7001248E4 /* Writer.swift */,
 			);
 			path = Writer;
@@ -988,6 +991,7 @@
 				DAEB8180206D159A00E55424 /* LandingViewCollectionMenu+Constants.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
 				DAE698DB20657A0E0046721C /* ProjectLoaderProtocol.swift in Sources */,
+				DA6F1B7C20735B3A001248E4 /* WriterProtocol.swift in Sources */,
 				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
 				DA2A0776206CB7DE00D02D1C /* LandingViewCollectionMenu.swift in Sources */,

@@ -1,7 +1,7 @@
 import UIKit
 
 class WriterController:UIViewController {
-    var model:Writer
+    var model:WriterProtocol
     
     init() {
         self.model = Writer()

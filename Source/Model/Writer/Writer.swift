@@ -1,6 +1,6 @@
 import Foundation
 
-class Writer {
+class Writer:WriterProtocol {
     var text:String
     
     init() {
