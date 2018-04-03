@@ -1,5 +1,9 @@
 import Foundation
 
-class WriterPresenter {
+class WriterPresenter:WriterPresenterProtocol {
+    var outlets:WriterPresenterOutletsProtocol
     
+    init() {
+        self.outlets = WriterPresenterOutlets()
+    }
 }
