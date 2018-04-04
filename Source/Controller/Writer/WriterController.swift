@@ -39,7 +39,6 @@ class WriterController:UIViewController, UITextViewDelegate {
     
     func finishWriting() {
         self.model.finishedWriting()
-        print("presenting \(self.presentingViewController)")
         self.presentingViewController?.dismiss(animated:true, completion:nil)
     }
 }

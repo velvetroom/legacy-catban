@@ -9,6 +9,12 @@ extension LandingController {
     }
     
     func writerForCardFinished(title:String) {
-        
+        guard
+            let editingCard:ProjectCard = self.model.editingCardReference
+        else {
+            return
+        }
+        editingCard.title = title
+        self.model.reloadViewModel()
     }
 }
