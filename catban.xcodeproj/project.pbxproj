@@ -77,6 +77,7 @@
 		DA657E9D2074FA7D003C1645 /* TestWriterController_Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */; };
 		DA657E9F2075129B003C1645 /* TestWriterController_TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */; };
 		DA657EA1207513D7003C1645 /* MockWriterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657EA0207513D7003C1645 /* MockWriterViewText.swift */; };
+		DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657EA2207528B6003C1645 /* MockWriterController.swift */; };
 		DA6F1B6820727ABE001248E4 /* TestWriterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6720727ABE001248E4 /* TestWriterController.swift */; };
 		DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6920727B09001248E4 /* WriterController.swift */; };
 		DA6F1B6C2073536E001248E4 /* TestWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6B2073536E001248E4 /* TestWriter.swift */; };
@@ -255,6 +256,7 @@
 		DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController_Notifications.swift; sourceTree = "<group>"; };
 		DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController_TextDelegate.swift; sourceTree = "<group>"; };
 		DA657EA0207513D7003C1645 /* MockWriterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriterViewText.swift; sourceTree = "<group>"; };
+		DA657EA2207528B6003C1645 /* MockWriterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriterController.swift; sourceTree = "<group>"; };
 		DA6F1B6720727ABE001248E4 /* TestWriterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController.swift; sourceTree = "<group>"; };
 		DA6F1B6920727B09001248E4 /* WriterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterController.swift; sourceTree = "<group>"; };
 		DA6F1B6B2073536E001248E4 /* TestWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriter.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				DA6F1B6720727ABE001248E4 /* TestWriterController.swift */,
 				DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */,
 				DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */,
+				DA657EA2207528B6003C1645 /* MockWriterController.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -1136,6 +1139,7 @@
 				DA519A7B2069408900514098 /* TestLandingViewModelOutlets.swift in Sources */,
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
+				DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */,
 				DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */,

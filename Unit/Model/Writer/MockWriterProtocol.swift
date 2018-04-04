@@ -10,4 +10,8 @@ class MockWriterProtocol:WriterProtocol {
         self.presenter = WriterPresenter()
         self.text = String()
     }
+    
+    func finishedWriting() {
+        self.onFinish?(self.text)
+    }
 }

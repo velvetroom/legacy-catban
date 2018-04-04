@@ -34,5 +34,12 @@ class WriterController:UIViewController, UITextViewDelegate {
     
     @objc func selectorDone(sender button:UIButton) {
         self.model.presenter.outlets.list.viewText?.resignFirstResponder()
+        self.finishWriting()
+    }
+    
+    func finishWriting() {
+        self.model.finishedWriting()
+        print("presenting \(self.presentingViewController)")
+        self.presentingViewController?.dismiss(animated:true, completion:nil)
     }
 }
