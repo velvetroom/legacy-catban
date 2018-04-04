@@ -18,6 +18,8 @@ extension WriterController {
     
     private func factoryText() {
         let viewText:WriterViewText = WriterViewText()
+        viewText.text = self.model.text
+        viewText.delegate = self
         self.outletsList.viewText = viewText
 
         self.view.addSubview(viewText)

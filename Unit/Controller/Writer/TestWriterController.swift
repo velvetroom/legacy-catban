@@ -4,6 +4,9 @@ import XCTest
 class TestWriterController:XCTestCase {
     private var controller:WriterController!
     private var model:Writer!
+    private struct Constants {
+        static let text:String = "lorem ipsum"
+    }
     
     private var outletsList:WriterPresenterOutletsList {
         get {
@@ -16,6 +19,7 @@ class TestWriterController:XCTestCase {
         self.controller = WriterController()
         self.model = Writer()
         self.controller.model = self.model
+        self.model.text = Constants.text
     }
     
     func testLoad() {
@@ -23,6 +27,8 @@ class TestWriterController:XCTestCase {
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertNotNil(self.controller.model, "Failed to load model")
         XCTAssertNotNil(self.outletsList.viewText, "Failed to load view text")
-        XCTAssertNotNil(self.outletsList.layoutTextBottom, "Failed to load constraints")
+        XCTAssertNotNil(self.outletsList.viewText?.delegate, "Failed to assign delegate")
+        XCTAssertNotNil(self.outletsList.layoutBarBottom, "Failed to load constraints")
+        XCTAssertEqual(self.outletsList.viewText?.text, Constants.text, "Failed to update view text")
     }
 }

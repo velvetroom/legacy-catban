@@ -28,7 +28,7 @@ class WriterViewBar:UIView {
         buttonDone.translatesAutoresizingMaskIntoConstraints = false
         buttonDone.setTitle(String.localizedWriter(key:"WriterViewBar_buttonDone"), for:UIControlState.normal)
         buttonDone.setTitleColor(UIColor.Shared.blue, for:UIControlState.normal)
-        buttonDone.setTitleColor(UIColor.white, for:UIControlState.highlighted)
+        buttonDone.setTitleColor(UIColor.Shared.blue, for:UIControlState.highlighted)
         buttonDone.titleLabel!.font = UIFont.systemFont(ofSize:Constants.doneFontSize, weight:UIFont.Weight.medium)
         self.buttonDone = buttonDone
         
