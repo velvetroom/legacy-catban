@@ -11,12 +11,11 @@ class LandingViewModelLoaderCollectionMenu {
     
     func factoryWith(model:LandingProtocol) -> LandingViewModelCollectionMenu {
         guard
-            let project:ProjectProtocol = model.project,
             let editingCard:IndexPath = model.editingCard
         else {
             return LandingViewModelCollectionMenu()
         }
-        return self.factoryWith(project:project, editingCard:editingCard)
+        return self.factoryWith(project:model.project, editingCard:editingCard)
     }
     
     private func factoryWith(project:ProjectProtocol, editingCard:IndexPath) -> LandingViewModelCollectionMenu {

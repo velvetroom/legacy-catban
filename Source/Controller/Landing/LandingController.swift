@@ -16,6 +16,6 @@ class LandingController:UIViewController {
         super.viewDidLoad()
         self.adjustNavigationItem()
         self.factoryOutlets()
-        self.model.load()
+        self.model.reloadViewModel()
     }
 }

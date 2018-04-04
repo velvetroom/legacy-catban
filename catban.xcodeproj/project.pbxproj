@@ -63,7 +63,6 @@
 		DA5B59FB20703D8B00122EEF /* TestLandingController_Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B59FA20703D8B00122EEF /* TestLandingController_Selectors.swift */; };
 		DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B59FF207047AB00122EEF /* TestLanding.swift */; };
 		DA5B5A03207047F000122EEF /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B5A02207047F000122EEF /* Landing.swift */; };
-		DA5B5A0520704BCD00122EEF /* Landing+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B5A0420704BCD00122EEF /* Landing+Load.swift */; };
 		DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B5A0620704D6E00122EEF /* Landing+Cards.swift */; };
 		DA5B6D13206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */; };
 		DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */; };
@@ -241,7 +240,6 @@
 		DA5B59FA20703D8B00122EEF /* TestLandingController_Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_Selectors.swift; sourceTree = "<group>"; };
 		DA5B59FF207047AB00122EEF /* TestLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding.swift; sourceTree = "<group>"; };
 		DA5B5A02207047F000122EEF /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
-		DA5B5A0420704BCD00122EEF /* Landing+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Load.swift"; sourceTree = "<group>"; };
 		DA5B5A0620704D6E00122EEF /* Landing+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Cards.swift"; sourceTree = "<group>"; };
 		DA5B6D12206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDataSource_Moving.swift; sourceTree = "<group>"; };
 		DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDelegate.swift; sourceTree = "<group>"; };
@@ -561,7 +559,6 @@
 			children = (
 				DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */,
 				DA5B5A02207047F000122EEF /* Landing.swift */,
-				DA5B5A0420704BCD00122EEF /* Landing+Load.swift */,
 				DA5B5A0620704D6E00122EEF /* Landing+Cards.swift */,
 			);
 			path = Landing;
@@ -1082,7 +1079,6 @@
 				DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */,
 				DAE2DA782073D39F009140FB /* LandingController+WriterDelegate.swift in Sources */,
 				DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */,
-				DA5B5A0520704BCD00122EEF /* Landing+Load.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,

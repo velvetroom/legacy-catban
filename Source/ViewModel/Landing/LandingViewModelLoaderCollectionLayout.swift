@@ -8,18 +8,8 @@ class LandingViewModelLoaderCollectionLayout {
     }
     
     func factoryWith(model:LandingProtocol) -> LandingViewModelCollectionLayout {
-        let layout:LandingViewModelCollectionLayout
-        if let project:ProjectProtocol = model.project {
-            layout = self.factoryWith(project:project)
-        } else {
-            layout = LandingViewModelCollectionLayout()
-        }
-        return layout
-    }
-    
-    private func factoryWith(project:ProjectProtocol) -> LandingViewModelCollectionLayout {
         var layout:LandingViewModelCollectionLayout = LandingViewModelCollectionLayout()
-        for column:ProjectColumn in project.columns {
+        for column:ProjectColumn in model.project.columns {
             let index:Int = layout.headers.count
             let header:LandingViewModelCollectionLayoutHeader = self.factoryHeaderWith(column:column, at:index)
             layout.headers.append(header)

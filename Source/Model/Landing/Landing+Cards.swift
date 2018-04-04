@@ -22,13 +22,12 @@ extension Landing {
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
-        self.project?.moveCardFrom(origin:origin, to:destination)
+        self.project.moveCardFrom(origin:origin, to:destination)
         self.reloadViewModel()
     }
     
     func moveEditingCardRight() {
         guard
-            let project:ProjectProtocol = self.project,
             let editingCard:IndexPath = self.editingCard
         else {
             return
@@ -40,7 +39,6 @@ extension Landing {
     
     func moveEditingCardLeft() {
         guard
-            let project:ProjectProtocol = self.project,
             let editingCard:IndexPath = self.editingCard
         else {
             return

@@ -21,4 +21,9 @@ class Landing:LandingProtocol {
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
     }
+    
+    func reloadViewModel() {
+        let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(model:self)
+        self.presenter.update(viewModel:viewModel)
+    }
 }
