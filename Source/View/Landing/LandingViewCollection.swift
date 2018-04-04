@@ -40,4 +40,9 @@ class LandingViewCollection:UICollectionView {
         
         return super.beginInteractiveMovementForItem(at:indexPath)
     }
+    
+    override func reloadItems(at indexPaths:[IndexPath]) {
+        super.reloadItems(at:indexPaths)
+        self.selectItem(at:indexPaths.first, animated:false, scrollPosition:UICollectionViewScrollPosition())
+    }
 }

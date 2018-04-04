@@ -5,6 +5,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onReloadDataCalled:(() -> Void)?
     var onScrollToItem:((IndexPath) -> Void)?
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
+    var onReloadItemAtIndex:(([IndexPath]) -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -23,6 +24,10 @@ class MockLandingViewCollection:LandingViewCollection {
     
     override func moveItem(at indexPath:IndexPath, to newIndexPath:IndexPath) {
         self.onMoveItem?(indexPath, newIndexPath)
+    }
+    
+    override func reloadItems(at indexPaths:[IndexPath]) {
+        self.onReloadItemAtIndex?(indexPaths)
     }
     
     override func scrollToItem(

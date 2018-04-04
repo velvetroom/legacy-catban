@@ -13,4 +13,8 @@ class LandingPresenter:LandingPresenterProtocol {
         self.collection.update(viewModel:viewModel.collection)
         self.outlets.update(viewModel:viewModel.outlets)
     }
+    
+    func updateCardAt(index:IndexPath) {
+        self.outlets.list.viewCollection?.reloadItems(at:[index])
+    }
 }

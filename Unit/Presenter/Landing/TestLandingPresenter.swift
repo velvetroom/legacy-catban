@@ -5,6 +5,7 @@ class TestLandingPresenter:XCTestCase {
     private var presenter:LandingPresenter!
     private var outlets:MockLandingPresenterOutlets!
     private var collection:MockLandingPresenterCollection!
+    private var collectionView:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -15,14 +16,17 @@ class TestLandingPresenter:XCTestCase {
         self.presenter = LandingPresenter()
         self.outlets = MockLandingPresenterOutlets()
         self.collection = MockLandingPresenterCollection()
+        self.collectionView = MockLandingViewCollection()
         self.presenter.outlets = self.outlets
         self.presenter.collection = self.collection
+        self.outlets.list.viewCollection = self.collectionView
     }
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.presenter.collection, "Failed to load collection")
         XCTAssertNotNil(self.presenter.outlets, "Failed to load presenter")
+        XCTAssertNotNil(self.collectionView, "Failed to load collection view")
     }
     
     func testUpdateViewModelOnOutlets() {
@@ -44,6 +48,18 @@ class TestLandingPresenter:XCTestCase {
         
         self.presenter.update(viewModel:LandingViewModel())
         
+        self.waitExpectations()
+    }
+    
+    func testUpdateItemAtIndex() {
+        self.startExpectation()
+        let indexPath:IndexPath = IndexPath(item:0, section:0)
+        self.collectionView.onReloadItemAtIndex = { [weak self] (indexes:[IndexPath]) in
+            XCTAssertEqual(indexes.first, indexPath, "Invalid index path received")
+            self?.expect?.fulfill()
+        }
+        
+        self.presenter.updateCardAt(index:indexPath)
         self.waitExpectations()
     }
     

@@ -6,6 +6,7 @@ class MockLandingProtocol:LandingProtocol {
     var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
+    var onEditingCard:((String) -> Void)?
     var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
@@ -28,6 +29,10 @@ class MockLandingProtocol:LandingProtocol {
     
     func update(editingCard:IndexPath?) {
         
+    }
+    
+    func updateEditingCard(title:String) {
+        self.onEditingCard?(title)
     }
     
     func moveEditingCardRight() {
