@@ -75,6 +75,8 @@
 		DA657E992074F491003C1645 /* WriterViewText+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E982074F491003C1645 /* WriterViewText+Constants.swift */; };
 		DA657E9B2074F683003C1645 /* WriterController+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E9A2074F683003C1645 /* WriterController+Notifications.swift */; };
 		DA657E9D2074FA7D003C1645 /* TestWriterController_Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */; };
+		DA657E9F2075129B003C1645 /* TestWriterController_TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */; };
+		DA657EA1207513D7003C1645 /* MockWriterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA657EA0207513D7003C1645 /* MockWriterViewText.swift */; };
 		DA6F1B6820727ABE001248E4 /* TestWriterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6720727ABE001248E4 /* TestWriterController.swift */; };
 		DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6920727B09001248E4 /* WriterController.swift */; };
 		DA6F1B6C2073536E001248E4 /* TestWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B6B2073536E001248E4 /* TestWriter.swift */; };
@@ -251,6 +253,8 @@
 		DA657E982074F491003C1645 /* WriterViewText+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewText+Constants.swift"; sourceTree = "<group>"; };
 		DA657E9A2074F683003C1645 /* WriterController+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterController+Notifications.swift"; sourceTree = "<group>"; };
 		DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController_Notifications.swift; sourceTree = "<group>"; };
+		DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController_TextDelegate.swift; sourceTree = "<group>"; };
+		DA657EA0207513D7003C1645 /* MockWriterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriterViewText.swift; sourceTree = "<group>"; };
 		DA6F1B6720727ABE001248E4 /* TestWriterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterController.swift; sourceTree = "<group>"; };
 		DA6F1B6920727B09001248E4 /* WriterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterController.swift; sourceTree = "<group>"; };
 		DA6F1B6B2073536E001248E4 /* TestWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriter.swift; sourceTree = "<group>"; };
@@ -504,6 +508,7 @@
 			children = (
 				DA6F1B6720727ABE001248E4 /* TestWriterController.swift */,
 				DA657E9C2074FA7D003C1645 /* TestWriterController_Notifications.swift */,
+				DA657E9E2075129B003C1645 /* TestWriterController_TextDelegate.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 			children = (
 				DA6F1B6F207357EF001248E4 /* TestWriterViewText.swift */,
 				DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */,
+				DA657EA0207513D7003C1645 /* MockWriterViewText.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -1116,7 +1122,9 @@
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
 				DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */,
 				DA6F1B7820735A9D001248E4 /* TestWriterPresenter.swift in Sources */,
+				DA657EA1207513D7003C1645 /* MockWriterViewText.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
+				DA657E9F2075129B003C1645 /* TestWriterController_TextDelegate.swift in Sources */,
 				DADF4D4C207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DAEB8194206D28EE00E55424 /* TestLandingPresenterOutlets.swift in Sources */,

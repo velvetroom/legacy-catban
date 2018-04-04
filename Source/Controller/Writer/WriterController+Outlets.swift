@@ -32,6 +32,8 @@ extension WriterController {
     
     private func factoryBar() {
         let viewBar:WriterViewBar = WriterViewBar()
+        viewBar.buttonDone.addTarget(self, action:#selector(self.selectorDone(sender:)),
+                                     for:UIControlEvents.touchUpInside)
         self.outletsList.viewBar = viewBar
         
         self.view.addSubview(viewBar)

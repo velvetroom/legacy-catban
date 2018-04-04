@@ -28,7 +28,11 @@ class WriterController:UIViewController, UITextViewDelegate {
         self.model.presenter.outlets.list.viewText?.becomeFirstResponder()
     }
     
-    func textViewDidEndEditing(_ textView:UITextView) {
+    func textViewDidChange(_ textView:UITextView) {
         self.model.text = textView.text
+    }
+    
+    @objc func selectorDone(sender button:UIButton) {
+        self.model.presenter.outlets.list.viewText?.resignFirstResponder()
     }
 }
