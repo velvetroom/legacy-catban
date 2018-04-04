@@ -2,5 +2,6 @@ import UIKit
 
 struct WriterPresenterOutletsList {
     var viewText:WriterViewText?
-    var layoutTextBottom:NSLayoutConstraint?
+    var viewBar:WriterViewBar?
+    var layoutBarBottom:NSLayoutConstraint?
 }

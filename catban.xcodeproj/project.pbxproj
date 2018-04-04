@@ -124,6 +124,8 @@
 		DA9A98842074AC1400D82514 /* MockWriterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98832074AC1400D82514 /* MockWriterProtocol.swift */; };
 		DA9A98862074B40B00D82514 /* TestWriterViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */; };
 		DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */; };
+		DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */; };
+		DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */; };
 		DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */; };
 		DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */; };
 		DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */; };
@@ -304,6 +306,8 @@
 		DA9A98832074AC1400D82514 /* MockWriterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriterProtocol.swift; sourceTree = "<group>"; };
 		DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterViewBar.swift; sourceTree = "<group>"; };
 		DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar.swift .swift"; sourceTree = "<group>"; };
+		DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar+Constants.swift"; sourceTree = "<group>"; };
+		DA9A988C2074BB0C00D82514 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableWriter.strings; sourceTree = "<group>"; };
 		DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
 		DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSource.swift; sourceTree = "<group>"; };
 		DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDelegate.swift; sourceTree = "<group>"; };
@@ -475,6 +479,7 @@
 			children = (
 				DA6F1B712073583C001248E4 /* WriterViewText.swift */,
 				DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */,
+				DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -686,6 +691,7 @@
 				DA8AB2222064E476005A393E /* InfoPlist.strings */,
 				DAD433F2206540AC002C0DEE /* LocalizableProject.strings */,
 				DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */,
+				DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -967,6 +973,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE698CF20656A350046721C /* brand.xcassets in Resources */,
+				DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
@@ -1030,6 +1037,7 @@
 				DA6F1B8820736109001248E4 /* WriterPresenterOutletsList.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
+				DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */,
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
 				DAEB8190206D250000E55424 /* LandingPresenter.swift in Sources */,
 				DA2A0782206CD25B00D02D1C /* LandingViewCollectionCell+Outlets.swift in Sources */,
@@ -1176,6 +1184,14 @@
 				DA8AB26D2064FE0E005A393E /* en */,
 			);
 			name = LocalizableLanding.strings;
+			sourceTree = "<group>";
+		};
+		DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9A988C2074BB0C00D82514 /* en */,
+			);
+			name = LocalizableWriter.strings;
 			sourceTree = "<group>";
 		};
 		DAD433F2206540AC002C0DEE /* LocalizableProject.strings */ = {

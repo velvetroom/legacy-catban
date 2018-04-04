@@ -12,6 +12,7 @@ extension WriterController {
     }
     
     func factoryOutlets() {
+        self.factoryBar()
         self.factoryText()
     }
     
@@ -22,9 +23,21 @@ extension WriterController {
         self.view.addSubview(viewText)
         
         viewText.topAnchor.constraint(equalTo:self.view.topAnchor).isActive = true
-        self.outletsList.layoutTextBottom = viewText.bottomAnchor.constraint(equalTo:self.view.bottomAnchor)
+        viewText.bottomAnchor.constraint(equalTo:self.outletsList.viewBar!.topAnchor).isActive = true
         viewText.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
         viewText.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
-        self.outletsList.layoutTextBottom?.isActive = true
+    }
+    
+    private func factoryBar() {
+        let viewBar:WriterViewBar = WriterViewBar()
+        self.outletsList.viewBar = viewBar
+        
+        self.view.addSubview(viewBar)
+        
+        viewBar.heightAnchor.constraint(equalToConstant:Constants.barHeight).isActive = true
+        self.outletsList.layoutBarBottom = viewBar.bottomAnchor.constraint(equalTo:self.view.bottomAnchor)
+        viewBar.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
+        viewBar.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
+        self.outletsList.layoutBarBottom?.isActive = true
     }
 }

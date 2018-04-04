@@ -11,5 +11,7 @@ class TestWriterViewBar:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
+        XCTAssertNotNil(self.view.buttonDone, "Failed to load button done")
+        XCTAssertNotNil(self.view.layoutDoneLeft, "Failed to load layout left")
     }
 }
