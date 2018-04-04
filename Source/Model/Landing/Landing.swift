@@ -1,11 +1,10 @@
 import Foundation
 
 class Landing:LandingProtocol {
-    var project:ProjectProtocol?
-    var editingCard:IndexPath?
-    var projectLoader:ProjectLoaderProtocol
+    var project:ProjectProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
+    var editingCard:IndexPath?
     var editingCardReference:ProjectCard? {
         get {
             guard
@@ -13,12 +12,12 @@ class Landing:LandingProtocol {
             else {
                 return nil
             }
-            return self.project?.cardAt(indexPath:editingCard)
+            return self.project.cardAt(indexPath:editingCard)
         }
     }
     
     init() {
-        self.projectLoader = ProjectLoader()
+        self.project = Project.factoryNewProject()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
     }
