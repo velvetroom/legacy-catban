@@ -31,7 +31,8 @@ class TestLandingController_Writer:XCTestCase {
             else {
                 return
             }
-            XCTAssertEqual(controller.model.text, card.title, "Failed to assign text model")
+            XCTAssertEqual(controller.model.text, card.title, "Failed to assign text to model")
+            XCTAssertNotNil(controller.model.onFinish, "Failed to assign on finish function")
             self?.expect?.fulfill()
         }
         

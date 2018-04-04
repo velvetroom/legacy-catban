@@ -1,6 +1,7 @@
 import Foundation
+@testable import catban
 
-class Writer:WriterProtocol {
+class MockWriterProtocol:WriterProtocol {
     var presenter:WriterPresenterProtocol
     var text:String
     var onFinish:((String) -> Void)?
