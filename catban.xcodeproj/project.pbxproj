@@ -122,6 +122,8 @@
 		DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2722064FEC3005A393E /* TestStringExtension.swift */; };
 		DA8AB27620650388005A393E /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB27520650388005A393E /* ExtensionString.swift */; };
 		DA9A98842074AC1400D82514 /* MockWriterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98832074AC1400D82514 /* MockWriterProtocol.swift */; };
+		DA9A98862074B40B00D82514 /* TestWriterViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */; };
+		DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */; };
 		DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */; };
 		DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */; };
 		DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */; };
@@ -300,6 +302,8 @@
 		DA8AB2722064FEC3005A393E /* TestStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExtension.swift; sourceTree = "<group>"; };
 		DA8AB27520650388005A393E /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		DA9A98832074AC1400D82514 /* MockWriterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWriterProtocol.swift; sourceTree = "<group>"; };
+		DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWriterViewBar.swift; sourceTree = "<group>"; };
+		DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar.swift .swift"; sourceTree = "<group>"; };
 		DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
 		DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSource.swift; sourceTree = "<group>"; };
 		DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDelegate.swift; sourceTree = "<group>"; };
@@ -470,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6F1B712073583C001248E4 /* WriterViewText.swift */,
+				DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6F1B6F207357EF001248E4 /* TestWriterViewText.swift */,
+				DA9A98852074B40B00D82514 /* TestWriterViewBar.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -1056,6 +1062,7 @@
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,
+				DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */,
 				DADE83C12070E7E80053E7A0 /* ProjectProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1084,6 +1091,7 @@
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
+				DA9A98862074B40B00D82514 /* TestWriterViewBar.swift in Sources */,
 				DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */,
 				DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */,
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,

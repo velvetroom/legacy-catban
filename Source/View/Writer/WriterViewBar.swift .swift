@@ -1,10 +1,10 @@
 import UIKit
 
-class WriterViewText:UIView {
+class WriterViewBar:UIView {
     init() {
         super.init(frame:CGRect.zero)
+        self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = UIColor.white
     }
     
     required init?(coder:NSCoder) {
