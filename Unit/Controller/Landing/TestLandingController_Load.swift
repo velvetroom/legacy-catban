@@ -25,7 +25,6 @@ class TestLandingController_Load:XCTestCase {
     
     func testViewModelIsLoadedOnViewDidLoad() {
         self.startExpectation()
-        XCTAssertNil(self.controller.model.project, "Project should be nil before loading")
         self.viewModelLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
