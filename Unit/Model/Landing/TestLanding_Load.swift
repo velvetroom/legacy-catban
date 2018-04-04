@@ -3,6 +3,7 @@ import XCTest
 
 class TestLanding_Load:XCTestCase {
     private var model:Landing!
+    private var presenter:MockLandingPresenter!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -11,19 +12,22 @@ class TestLanding_Load:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Landing()
+        self.presenter = MockLandingPresenter()
+        self.model.presenter = self.presenter
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.presenter, "Failed to load presenter")
     }
     
     func testLoadProject() {
         self.startExpectation()
-        
-        self.model.loadProject { [weak self] (project:ProjectProtocol) in
-            XCTAssertTrue(Thread.isMainThread, "Response should be on main thread")
+        self.presenter.onUpdateViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
+        
+        self.model.reloadViewModel()
         
         self.waitExpectations()
     }

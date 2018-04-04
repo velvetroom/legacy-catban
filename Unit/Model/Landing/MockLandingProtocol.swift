@@ -6,15 +6,14 @@ class MockLandingProtocol:LandingProtocol {
     var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
-    var project:ProjectProtocol?
+    var project:ProjectProtocol
     var editingCard:IndexPath?
-    var projectLoader:ProjectLoaderProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
     
     init() {
-        self.projectLoader = ProjectLoader()
+        self.project = Project()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
     }

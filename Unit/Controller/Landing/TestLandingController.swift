@@ -16,7 +16,6 @@ class TestLandingController:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.model.projectLoader, "Controller doesn't have project loader")
         XCTAssertNotNil(self.controller.model.viewModelLoader, "Controller doesn't have view model loader")
         XCTAssertNotNil(self.controller.model.presenter, "Controller doesn't have a collection delegate")
     }

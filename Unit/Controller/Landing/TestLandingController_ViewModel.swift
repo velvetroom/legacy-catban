@@ -17,7 +17,6 @@ class TestLandingController_ViewModel:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.layout = MockLandingViewCollectionLayout()
-        self.controller.model.projectLoader = MockProjectLoader()
         self.controller.model.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterCollection()
         self.dataSource = MockLandingPresenterCollectionDataSource()
@@ -29,7 +28,6 @@ class TestLandingController_ViewModel:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.model.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.controller.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.dataSource, "Failed to load data source")

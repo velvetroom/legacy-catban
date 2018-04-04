@@ -107,8 +107,6 @@
 		DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF8F206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
-		DA8AB2302064E484005A393E /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22E2064E484005A393E /* Design */; };
-		DA8AB2312064E484005A393E /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB22F2064E484005A393E /* Scripts */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
 		DA8AB2592064EB00005A393E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2582064EB00005A393E /* Application.swift */; };
 		DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB25A2064ED96005A393E /* TestApplicationNavigationController.swift */; };
@@ -154,10 +152,6 @@
 		DAE698CF20656A350046721C /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698CE20656A350046721C /* brand.xcassets */; };
 		DAE698D520656F940046721C /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE698D420656F940046721C /* assets.xcassets */; };
 		DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D6206576770046721C /* LandingController+Navigation.swift */; };
-		DAE698DB20657A0E0046721C /* ProjectLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698DA20657A0E0046721C /* ProjectLoaderProtocol.swift */; };
-		DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698DC20657A560046721C /* ProjectLoader.swift */; };
-		DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698DE20657A850046721C /* MockProjectLoader.swift */; };
-		DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E020657AB40046721C /* TestProjectLoader.swift */; };
 		DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E32065812C0046721C /* TestLandingViewModel.swift */; };
 		DAE698E7206581840046721C /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E6206581840046721C /* LandingViewModel.swift */; };
 		DAEB817E206D112E00E55424 /* LandingController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB817D206D112E00E55424 /* LandingController+Constants.swift */; };
@@ -338,10 +332,6 @@
 		DAE698CE20656A350046721C /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DAE698D420656F940046721C /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAE698D6206576770046721C /* LandingController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Navigation.swift"; sourceTree = "<group>"; };
-		DAE698DA20657A0E0046721C /* ProjectLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLoaderProtocol.swift; sourceTree = "<group>"; };
-		DAE698DC20657A560046721C /* ProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLoader.swift; sourceTree = "<group>"; };
-		DAE698DE20657A850046721C /* MockProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectLoader.swift; sourceTree = "<group>"; };
-		DAE698E020657AB40046721C /* TestProjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectLoader.swift; sourceTree = "<group>"; };
 		DAE698E32065812C0046721C /* TestLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModel.swift; sourceTree = "<group>"; };
 		DAE698E6206581840046721C /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		DAEB817D206D112E00E55424 /* LandingController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Constants.swift"; sourceTree = "<group>"; };
@@ -383,8 +373,6 @@
 				DA79602F206BD67F00548952 /* TestProject_Move.swift */,
 				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 				DAD433F920654A21002C0DEE /* TestProjectCard.swift */,
-				DAE698E020657AB40046721C /* TestProjectLoader.swift */,
-				DAE698DE20657A850046721C /* MockProjectLoader.swift */,
 				DADE83C22070EB100053E7A0 /* MockProjectProtocol.swift */,
 			);
 			path = Project;
@@ -399,8 +387,6 @@
 				DA796031206BD88D00548952 /* Project+Move.swift */,
 				DAD433F720654667002C0DEE /* ProjectColumn.swift */,
 				DAD433FB20654AF3002C0DEE /* ProjectCard.swift */,
-				DAE698DA20657A0E0046721C /* ProjectLoaderProtocol.swift */,
-				DAE698DC20657A560046721C /* ProjectLoader.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -981,13 +967,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE698CF20656A350046721C /* brand.xcassets in Resources */,
-				DA8AB2302064E484005A393E /* Design in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
 				DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */,
 				DAE698D520656F940046721C /* assets.xcassets in Resources */,
-				DA8AB2312064E484005A393E /* Scripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,7 +994,6 @@
 				DA2538E82067D18A00EEB231 /* LandingPresenterCollectionProtocol.swift in Sources */,
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
 				DA8AB2692064F465005A393E /* LandingPresenterOutletsList.swift in Sources */,
-				DAE698DD20657A560046721C /* ProjectLoader.swift in Sources */,
 				DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */,
 				DA519A6D2069162600514098 /* LandingViewModelLoaderCollection.swift in Sources */,
 				DA2A0780206CD20600D02D1C /* LandingViewCollectionCell+Selection.swift in Sources */,
@@ -1038,7 +1021,6 @@
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DAEB8180206D159A00E55424 /* LandingViewCollectionMenu+Constants.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
-				DAE698DB20657A0E0046721C /* ProjectLoaderProtocol.swift in Sources */,
 				DA6F1B7C20735B3A001248E4 /* WriterProtocol.swift in Sources */,
 				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
@@ -1101,13 +1083,11 @@
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA2A0774206CB7A400D02D1C /* TestLandingViewCollectionMenu.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
-				DAE698E120657AB40046721C /* TestProjectLoader.swift in Sources */,
 				DA519A6120690CA800514098 /* TestLandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DADE83C32070EB100053E7A0 /* MockProjectProtocol.swift in Sources */,
 				DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
-				DAE698DF20657A850046721C /* MockProjectLoader.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,

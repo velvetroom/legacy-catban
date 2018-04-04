@@ -66,6 +66,6 @@ class TestLandingViewModelLoaderCollectionMenu:XCTestCase {
         let column:ProjectColumn = ProjectColumn()
         column.cards.append(card)
         self.model.project = Project()
-        self.model.project?.columns.append(column)
+        self.model.project.columns.append(column)
     }
 }

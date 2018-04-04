@@ -23,7 +23,6 @@ class TestLanding:XCTestCase {
         XCTAssertNotNil(self.model.editingCard, "Editing cell property not found")
         XCTAssertNotNil(self.model.editingCardReference, "Card reference property not found")
         XCTAssertNotNil(self.model.project, "Failed to load project")
-        XCTAssertNotNil(self.model.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
     }

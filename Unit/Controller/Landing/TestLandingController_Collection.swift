@@ -12,14 +12,12 @@ class TestLandingController_Collection:XCTestCase {
     override func setUp() {
         super.setUp()
         self.controller = LandingController()
-        self.controller.model.projectLoader = MockProjectLoader()
         self.controller.model.viewModelLoader = MockLandingViewModelLoader()
         self.viewCollection = MockLandingViewCollection()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.model.projectLoader, "Failed to load project loader")
         XCTAssertNotNil(self.controller.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.viewCollection, "Failed to load view collection")
     }

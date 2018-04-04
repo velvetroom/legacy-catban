@@ -63,13 +63,13 @@ class TestLandingViewModelLoader:XCTestCase {
     }
     
     private func validateOutlets(viewModel:LandingViewModel) {
-        XCTAssertEqual(viewModel.outlets.title, self.model.project!.name, "Title should be equal to project name")
+        XCTAssertEqual(viewModel.outlets.title, self.model.project.name, "Title should be equal to project name")
         XCTAssertTrue(viewModel.outlets.logoHidden, "Logo should be hidden after view model update")
     }
     
     private func validate(collection:LandingViewModelCollection) {
         let sections:Int = collection.sections.count
-        XCTAssertEqual(self.model.project!.columns.count, sections, "Invalid number of sections")
+        XCTAssertEqual(self.model.project.columns.count, sections, "Invalid number of sections")
         for index:Int in 0 ..< sections {
             let section:LandingViewModelCollectionSection = collection.sections[index]
             let column:ProjectColumn = self.project.columns[index]
