@@ -49,8 +49,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
     
     func testSelectorAddDeselectsCurrentCard() {
         self.startExpectation()
-        self.collection.onSelectItemAtIndex = { [weak self] (index:IndexPath?) in
-            XCTAssertNil(index, "Index should be nil for deselect any current selection")
+        self.model.onClearCardSelection = { [weak self] in
             self?.expect?.fulfill()
         }
         

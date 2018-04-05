@@ -7,6 +7,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
     var onReloadItemAtIndex:(([IndexPath]) -> Void)?
     var onSelectItemAtIndex:((IndexPath?) -> Void)?
+    var onClearSelection:(() -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -41,5 +42,9 @@ class MockLandingViewCollection:LandingViewCollection {
     override func selectItem(at index:IndexPath?, animated:Bool, scrollPosition:UICollectionViewScrollPosition) {
         self.onSelectItemAtIndex?(index)
         super.selectItem(at:index, animated:animated, scrollPosition:scrollPosition)
+    }
+    
+    override func clearSelection() {
+        self.onClearSelection?()
     }
 }

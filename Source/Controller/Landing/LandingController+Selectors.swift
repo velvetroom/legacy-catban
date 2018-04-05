@@ -4,6 +4,7 @@ extension LandingController {
     @objc func selectorAdd(sender button:UIButton) {
         let controller:LandingControllerAdd = LandingControllerAdd()
         controller.model = self.model
+        self.model.clearCardSelection()
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
     

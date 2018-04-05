@@ -38,8 +38,8 @@ class TestLandingViewCollection:XCTestCase {
     }
     
     func testClearSelectionOnBeginInteraction() {
-        self.view.selectItem(at:IndexPath(item:0, section:0), animated:false,
-                             scrollPosition:UICollectionViewScrollPosition())
+        let index:IndexPath = IndexPath(item:0, section:0)
+        self.view.selectItem(at:index, animated:false, scrollPosition:UICollectionViewScrollPosition())
         let initialSelectedItems:[IndexPath]? = self.view.indexPathsForSelectedItems
         XCTAssertNotNil(initialSelectedItems, "Failed to select initial item")
         XCTAssertFalse(initialSelectedItems!.isEmpty, "Failed to select item")
@@ -53,6 +53,13 @@ class TestLandingViewCollection:XCTestCase {
         }
         
         XCTAssertTrue(selectedItems.isEmpty, "Failed to clear selection")
+    }
+    
+    func testClearSelection() {
+        let index:IndexPath = IndexPath(item:0, section:0)
+        self.view.selectItem(at:index, animated:false, scrollPosition:UICollectionViewScrollPosition())
+        self.view.clearSelection()
+        XCTAssertTrue(self.view.indexPathsForSelectedItems!.isEmpty, "Failed to clear selection")
     }
     
     private func startExpectation() {
