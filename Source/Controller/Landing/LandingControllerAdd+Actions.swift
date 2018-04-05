@@ -9,15 +9,30 @@ extension LandingControllerAdd {
     }
     
     private func factoryProjectAction() {
-        
+        let action:UIAlertAction = UIAlertAction(
+            title:String.localizedLanding(key:"LandingControllerAdd_actionProjectTitle"),
+            style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
+                
+        }
+        self.addAction(action)
     }
     
     private func factoryColumnAction() {
-        
+        let action:UIAlertAction = UIAlertAction(
+            title:String.localizedLanding(key:"LandingControllerAdd_actionColumnTitle"),
+            style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
+                
+        }
+        self.addAction(action)
     }
     
     private func factoryCardAction() {
-        
+        let action:UIAlertAction = UIAlertAction(
+            title:String.localizedLanding(key:"LandingControllerAdd_actionCardTitle"),
+            style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
+                
+        }
+        self.addAction(action)
     }
     
     private func factoryCancelAction() {
