@@ -23,11 +23,22 @@ class TestLanding_Create:XCTestCase {
     
     func testCreateCard() {
         self.startExpectation()
-        self.project.onCreateCard = { [weak self] in
+        self.project.onIndexForNewCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        let card:ProjectCard = self.model.createCard()
+        self.model.createCard()
+        
+        self.waitExpectations()
+    }
+    
+    func testInsertCard() {
+        self.startExpectation()
+        self.project.onInsertCardAt = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.model.createCard()
         
         self.waitExpectations()
     }

@@ -1,7 +1,12 @@
 import Foundation
 
 extension LandingController {
-    func openWriterFor(card:ProjectCard) {
+    func openWriterForEditingCard() {
+        guard
+            let card:ProjectCard = self.model.editingCardReference
+        else {
+            return
+        }
         let controller:WriterController = WriterController()
         controller.model.text = card.title
         controller.model.onFinish = self.writerForCardFinished

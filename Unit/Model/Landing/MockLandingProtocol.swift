@@ -57,8 +57,7 @@ class MockLandingProtocol:LandingProtocol {
         
     }
     
-    func createCard() -> ProjectCard {
+    func createCard() {
         self.onCreateCard?()
-        return ProjectCard()
     }
 }

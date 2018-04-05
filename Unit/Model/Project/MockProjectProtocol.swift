@@ -5,7 +5,8 @@ class MockProjectProtocol:ProjectProtocol {
     var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var onCardAtIndex:((IndexPath) -> Void)?
     var onIndexForCard:(() -> Void)?
-    var onCreateCard:(() -> Void)?
+    var onIndexForNewCard:(() -> Void)?
+    var onInsertCardAt:(() -> Void)?
     var returnCard:ProjectCard
     var returnColumn:ProjectColumn
     var indexForCard:IndexPath
@@ -47,8 +48,12 @@ class MockProjectProtocol:ProjectProtocol {
         return self.returnColumn
     }
     
-    func createCard() -> ProjectCard {
-        self.onCreateCard?()
-        return ProjectCard()
+    func indexForNewCard() -> IndexPath {
+        self.onIndexForNewCard?()
+        return IndexPath(item:0, section:0)
+    }
+    
+    func insert(card:ProjectCard, at indexPath:IndexPath) {
+        self.onInsertCardAt?()
     }
 }

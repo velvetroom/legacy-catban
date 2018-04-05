@@ -15,5 +15,5 @@ protocol LandingProtocol {
     func moveEditingCardLeft()
     func scrollToEditingCard()
     func updateEditingCard(title:String)
-    func createCard() -> ProjectCard
+    func createCard()
 }

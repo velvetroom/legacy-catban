@@ -73,8 +73,10 @@ extension Landing {
         self.presenter.updateCardAt(index:editingCard)
     }
     
-    func createCard() -> ProjectCard {
-        return ProjectCard()
+    func createCard() {
+        let card:ProjectCard = ProjectCard()
+        let index:IndexPath = self.project.indexForNewCard()
+        self.project.insert(card:card, at:index)
     }
     
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {

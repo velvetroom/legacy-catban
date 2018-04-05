@@ -10,5 +10,6 @@ protocol ProjectProtocol {
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func indexOnRightForCardAt(index:IndexPath) -> IndexPath
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath
-    func createCard() -> ProjectCard
+    func indexForNewCard() -> IndexPath
+    func insert(card:ProjectCard, at indexPath:IndexPath)
 }

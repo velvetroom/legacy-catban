@@ -4,6 +4,7 @@ import XCTest
 class TestLandingController_Writer:XCTestCase {
     private var controller:LandingController!
     private var navigation:MockNavigationController!
+    private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let cardText:String = "lorem ipsum"
@@ -14,17 +15,21 @@ class TestLandingController_Writer:XCTestCase {
         super.setUp()
         self.navigation = MockNavigationController()
         self.controller = LandingController()
+        self.model = MockLandingProtocol()
+        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation controller")
+        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testWriterForCard() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
+        self.model.editingCardReference = card
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
@@ -36,7 +41,7 @@ class TestLandingController_Writer:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.openWriterFor(card:card)
+        self.controller.openWriterForEditingCard()
         
         self.waitExpectations()
     }

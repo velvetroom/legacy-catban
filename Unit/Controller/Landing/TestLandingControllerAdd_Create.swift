@@ -26,7 +26,9 @@ class TestLandingControllerAdd_Create:XCTestCase {
         self.model.onCreateCard = { [weak self] in
             self?.expect?.fulfill()
         }
+        
         self.controller.createCard()
+        
         self.waitExpectations()
     }
     

@@ -12,6 +12,7 @@
 		DA16043C207695F60096EFE1 /* TestLanding_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_Create.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
 		DA1604402076996E0096EFE1 /* Project+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043F2076996E0096EFE1 /* Project+Cards.swift */; };
+		DA1604422076A89F0096EFE1 /* TestProject_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1604412076A89F0096EFE1 /* TestProject_Create.swift */; };
 		DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */; };
 		DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD549206531A1002A7493 /* TestProject.swift */; };
 		DA1AD54D2065328D002A7493 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54C2065328D002A7493 /* Project.swift */; };
@@ -202,6 +203,7 @@
 		DA16043B207695F60096EFE1 /* TestLanding_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Create.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
 		DA16043F2076996E0096EFE1 /* Project+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Cards.swift"; sourceTree = "<group>"; };
+		DA1604412076A89F0096EFE1 /* TestProject_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Create.swift; sourceTree = "<group>"; };
 		DA1AD54620652E4D002A7493 /* LandingController+Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Selectors.swift"; sourceTree = "<group>"; };
 		DA1AD549206531A1002A7493 /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA1AD54C2065328D002A7493 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				DA1AD549206531A1002A7493 /* TestProject.swift */,
 				DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */,
 				DA79602F206BD67F00548952 /* TestProject_Move.swift */,
+				DA1604412076A89F0096EFE1 /* TestProject_Create.swift */,
 				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 				DAD433F920654A21002C0DEE /* TestProjectCard.swift */,
 				DADE83C22070EB100053E7A0 /* MockProjectProtocol.swift */,
@@ -1150,6 +1153,7 @@
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA2A0774206CB7A400D02D1C /* TestLandingViewCollectionMenu.swift in Sources */,
 				DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */,
+				DA1604422076A89F0096EFE1 /* TestProject_Create.swift in Sources */,
 				DA519A6120690CA800514098 /* TestLandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DADE83C32070EB100053E7A0 /* MockProjectProtocol.swift in Sources */,
 				DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */,
