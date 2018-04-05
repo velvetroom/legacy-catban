@@ -15,6 +15,11 @@ extension Landing {
         }
     }
     
+    func clearCardSelection() {
+        self.presenter.outlets.list.viewCollection?.clearSelection()
+        self.update(editingCard:nil)
+    }
+    
     func update(editingCard:IndexPath?) {
         self.editingCard = editingCard
         self.reloadViewModel()

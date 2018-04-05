@@ -5,6 +5,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
     private var controller:LandingController!
     private var navigation:MockNavigationController!
     private var model:MockLandingProtocol!
+    private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -15,7 +16,9 @@ class TestLandingController_SelectorsAdd:XCTestCase {
         self.controller = LandingController()
         self.navigation = MockNavigationController()
         self.model = MockLandingProtocol()
+        self.collection = MockLandingViewCollection()
         self.controller.model = self.model
+        self.model.presenter.outlets.list.viewCollection = self.collection
         self.navigation.addChildViewController(self.controller)
     }
     
@@ -23,9 +26,10 @@ class TestLandingController_SelectorsAdd:XCTestCase {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.collection, "Failed to load collection")
     }
     
-    func testSelectorAdd() {
+    func testSelectorAddShowsController() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
@@ -35,6 +39,18 @@ class TestLandingController_SelectorsAdd:XCTestCase {
             }
             let model:MockLandingProtocol? = controller.model as? MockLandingProtocol
             XCTAssertNotNil(model, "Failed to assign model to controller")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.selectorAdd(sender:UIButton())
+        
+        self.waitExpectations()
+    }
+    
+    func testSelectorAddDeselectsCurrentCard() {
+        self.startExpectation()
+        self.collection.onSelectItemAtIndex = { [weak self] (index:IndexPath?) in
+            XCTAssertNil(index, "Index should be nil for deselect any current selection")
             self?.expect?.fulfill()
         }
         

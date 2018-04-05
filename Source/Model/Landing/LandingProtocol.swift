@@ -8,6 +8,7 @@ protocol LandingProtocol {
     var editingCardReference:ProjectCard? { get }
     
     func reloadViewModel()
+    func clearCardSelection()
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func moveEditingCardRight()

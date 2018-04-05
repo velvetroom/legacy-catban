@@ -6,6 +6,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onScrollToItem:((IndexPath) -> Void)?
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
     var onReloadItemAtIndex:(([IndexPath]) -> Void)?
+    var onSelectItemAtIndex:((IndexPath?) -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -35,5 +36,10 @@ class MockLandingViewCollection:LandingViewCollection {
         at scrollPosition:UICollectionViewScrollPosition,
         animated:Bool) {
         self.onScrollToItem?(indexPath)
+    }
+    
+    override func selectItem(at index:IndexPath?, animated:Bool, scrollPosition:UICollectionViewScrollPosition) {
+        self.onSelectItemAtIndex?(index)
+        super.selectItem(at:index, animated:animated, scrollPosition:scrollPosition)
     }
 }
