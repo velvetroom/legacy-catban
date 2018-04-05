@@ -8,6 +8,7 @@ class MockLandingProtocol:LandingProtocol {
     var onMoveCardRight:(() -> Void)?
     var onEditingCard:((String) -> Void)?
     var onClearCardSelection:(() -> Void)?
+    var onCreateCard:(() -> Void)?
     var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
@@ -54,5 +55,10 @@ class MockLandingProtocol:LandingProtocol {
     
     func scrollToEditingCard() {
         
+    }
+    
+    func createCard() -> ProjectCard {
+        self.onCreateCard?()
+        return ProjectCard()
     }
 }

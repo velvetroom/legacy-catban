@@ -73,6 +73,10 @@ extension Landing {
         self.presenter.updateCardAt(index:editingCard)
     }
     
+    func createCard() -> ProjectCard {
+        return ProjectCard()
+    }
+    
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {
         self.moveCardFrom(origin:index, to:destination)
         self.collection?.moveItem(at:index, to:destination)

@@ -4,9 +4,10 @@ import Foundation
 class MockProjectProtocol:ProjectProtocol {
     var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var onCardAtIndex:((IndexPath) -> Void)?
+    var onIndexForCard:(() -> Void)?
+    var onCreateCard:(() -> Void)?
     var returnCard:ProjectCard
     var returnColumn:ProjectColumn
-    var onIndexForCard:(() -> Void)?
     var indexForCard:IndexPath
     var columns:[ProjectColumn]
     var name:String
@@ -44,5 +45,10 @@ class MockProjectProtocol:ProjectProtocol {
     
     func columnAt(indexPath:IndexPath) -> ProjectColumn {
         return self.returnColumn
+    }
+    
+    func createCard() -> ProjectCard {
+        self.onCreateCard?()
+        return ProjectCard()
     }
 }
