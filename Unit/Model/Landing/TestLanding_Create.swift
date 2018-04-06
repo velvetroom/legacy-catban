@@ -23,7 +23,7 @@ class TestLanding_Create:XCTestCase {
     
     func testCreateCard() {
         self.startExpectation()
-        self.project.onIndexForNewCard = { [weak self] in
+        self.project.onIndexForNewCard = { [weak self] (index:IndexPath) in
             self?.expect?.fulfill()
         }
         
@@ -35,6 +35,29 @@ class TestLanding_Create:XCTestCase {
     func testInsertCard() {
         self.startExpectation()
         self.project.onInsertCardAt = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.model.createCard()
+        
+        self.waitExpectations()
+    }
+    
+    func testUpdateEditingIndexAtCreate() {
+        self.startExpectation()
+        var createdCard:IndexPath?
+        self.project.onIndexForNewCard = { (index:IndexPath) in
+            createdCard = index
+        }
+        
+        self.project.onInsertCardAt = { [weak self] in
+            guard
+                let editingCard:IndexPath = self?.model.editingCard,
+                let createdCard:IndexPath = createdCard
+            else {
+                return
+            }
+            XCTAssertEqual(editingCard, createdCard, "Failed to assign editing card")
             self?.expect?.fulfill()
         }
         
