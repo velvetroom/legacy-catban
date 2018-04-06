@@ -21,7 +21,6 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     private func addOutlets() {
         self.addTitle()
-        self.addBorder()
     }
     
     private func addTitle() {
@@ -40,18 +39,5 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         labelTitle.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         labelTitle.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
-    }
-    
-    private func addBorder() {
-        let border:UIView = UIView()
-        border.translatesAutoresizingMaskIntoConstraints = false
-        border.isUserInteractionEnabled = false
-        border.backgroundColor = UIColor(red:0.8, green:0.85, blue:0.9, alpha:1)
-        self.addSubview(border)
-        
-        border.topAnchor.constraint(equalTo:self.topAnchor, constant:Constants.borderTop).isActive = true
-        border.heightAnchor.constraint(equalToConstant:Constants.borderHeight).isActive = true
-        border.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        border.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

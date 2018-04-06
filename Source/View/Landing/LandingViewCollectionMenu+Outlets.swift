@@ -8,26 +8,10 @@ extension LandingViewCollectionMenu {
     }
     
     func addOutlets() {
-        self.addBorder()
         self.addMoveRight()
         self.addMoveLeft()
         self.addClose()
         self.addEdit()
-    }
-    
-    private func addBorder() {
-        let border:UIView = UIView()
-        border.translatesAutoresizingMaskIntoConstraints = false
-        border.clipsToBounds = true
-        border.isUserInteractionEnabled = false
-        border.backgroundColor = UIColor(white:0, alpha:0.2)
-        
-        self.addSubview(border)
-        
-        border.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        border.heightAnchor.constraint(equalToConstant:Constants.borderHeight).isActive = true
-        border.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        border.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func addMoveRight() {

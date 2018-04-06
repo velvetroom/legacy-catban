@@ -16,6 +16,7 @@ class LandingViewCollectionCell:UICollectionViewCell {
     
     private func configureView() {
         self.clipsToBounds = false
+        self.contentView.clipsToBounds = true
         self.layer.cornerRadius = Constants.cornerRadius
     }
 }

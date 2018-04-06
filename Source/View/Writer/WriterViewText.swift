@@ -21,7 +21,7 @@ class WriterViewText:UITextView {
         self.keyboardType = UIKeyboardType.alphabet
         self.contentInset = UIEdgeInsets.zero
         self.textAlignment = NSTextAlignment.left
-        self.font = UIFont.systemFont(ofSize:Constants.fontSize, weight:UIFont.Weight.light)
+        self.font = UIFont.systemFont(ofSize:Constants.fontSize, weight:UIFont.Weight.regular)
         self.textContainerInset = UIEdgeInsets(
             top:Constants.insetsTop,
             left:Constants.insetsHorizontal,

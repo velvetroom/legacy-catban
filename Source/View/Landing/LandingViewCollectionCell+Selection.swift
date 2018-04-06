@@ -24,10 +24,12 @@ extension LandingViewCollectionCell {
     private func configureSelected() {
         self.labelTitle.textColor = UIColor.white
         self.backgroundColor = UIColor.Shared.blue
+        self.buttonDelete.isHidden = false
     }
     
     private func configureNotSelected() {
         self.labelTitle.textColor = UIColor.black
         self.backgroundColor = UIColor.white
+        self.buttonDelete.isHidden = true
     }
 }

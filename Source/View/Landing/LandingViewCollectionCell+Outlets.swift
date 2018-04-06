@@ -12,17 +12,18 @@ extension LandingViewCollectionCell {
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.isUserInteractionEnabled = false
         labelTitle.numberOfLines = 0
-        labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.light)
+        labelTitle.font = UIFont.systemFont(ofSize:Constants.titleFontSize, weight:UIFont.Weight.regular)
         self.labelTitle = labelTitle
         
-        self.addSubview(labelTitle)
+        self.contentView.addSubview(labelTitle)
         
-        labelTitle.topAnchor.constraint(equalTo:self.topAnchor, constant:Constants.titleMargin).isActive = true
+        labelTitle.topAnchor.constraint(equalTo:self.contentView.topAnchor,
+                                        constant:Constants.titleMarginTop).isActive = true
         labelTitle.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
-        labelTitle.leftAnchor.constraint(equalTo:self.leftAnchor,
-                                         constant:Constants.titleMarginLeft).isActive = true
-        labelTitle.rightAnchor.constraint(equalTo:self.rightAnchor,
-                                          constant:-Constants.titleMarginLeft).isActive = true
+        labelTitle.leftAnchor.constraint(equalTo:self.contentView.leftAnchor,
+                                         constant:Constants.titleMarginHorizontal).isActive = true
+        labelTitle.rightAnchor.constraint(equalTo:self.contentView.rightAnchor,
+                                          constant:-Constants.titleMarginHorizontal).isActive = true
     }
     
     private func addDelete() {
