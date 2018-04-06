@@ -2,7 +2,7 @@ import UIKit
 
 extension LandingController {
     @objc func selectorAdd(sender button:UIButton) {
-        let controller:LandingControllerAdd = LandingControllerAdd()
+        let controller:LandingAddController = LandingAddController()
         controller.model = self.model
         self.model.clearCardSelection()
         self.navigationController?.present(controller, animated:true, completion:nil)

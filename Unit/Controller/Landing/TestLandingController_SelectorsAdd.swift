@@ -33,7 +33,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:LandingControllerAdd = controller as? LandingControllerAdd
+                let controller:LandingAddController = controller as? LandingAddController
             else {
                  return
             }

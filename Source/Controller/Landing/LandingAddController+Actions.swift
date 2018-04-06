@@ -1,6 +1,6 @@
 import UIKit
 
-extension LandingControllerAdd {
+extension LandingAddController {
     func factoryActions() {
         self.factoryProjectAction()
         self.factoryColumnAction()
