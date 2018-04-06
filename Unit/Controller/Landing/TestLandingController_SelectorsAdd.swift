@@ -37,8 +37,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
             else {
                  return
             }
-            let model:MockLandingProtocol? = controller.model as? MockLandingProtocol
-            XCTAssertNotNil(model, "Failed to assign model to controller")
+            XCTAssertNotNil(controller.model.delegate, "Failed to assign delegate to model")
             self?.expect?.fulfill()
         }
         

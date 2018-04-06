@@ -14,6 +14,7 @@ extension LandingAddController {
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 
         }
+        self.model.presenter.actionProject = action
         self.addAction(action)
     }
     
@@ -23,6 +24,7 @@ extension LandingAddController {
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 
         }
+        self.model.presenter.actionColumn = action
         self.addAction(action)
     }
     
@@ -30,8 +32,9 @@ extension LandingAddController {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingControllerAdd_actionCardTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
-                self?.delegate?.createCard()
+//                self?.delegate?.createCard()
         }
+        self.model.presenter.actionCard = action
         self.addAction(action)
     }
     
@@ -39,6 +42,7 @@ extension LandingAddController {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingControllerAdd_actionCancelTitle"),
             style:UIAlertActionStyle.cancel, handler:nil)
+        self.model.presenter.actionCancel = action
         self.addAction(action)
     }
 }

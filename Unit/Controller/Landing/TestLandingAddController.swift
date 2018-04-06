@@ -3,7 +3,6 @@ import XCTest
 
 class TestLandingAddController:XCTestCase {
     private var controller:LandingAddController!
-    private var model:LandingProtocol!
     private struct Constants {
         static let expectedActions:Int = 4
     }
@@ -11,19 +10,19 @@ class TestLandingAddController:XCTestCase {
     override func setUp() {
         super.setUp()
         self.controller = LandingAddController()
-        self.model = MockLandingProtocol()
-        self.controller.model = self.model
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNil(self.controller.delegate, "Delegate should not be set")
     }
     
     func testViewDidLoad() {
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertGreaterThan(self.controller.actions.count, 0, "Not loading actions on view did load")
+        XCTAssertNotNil(self.controller.model.presenter.actionCancel, "Failed to load cancel")
+        XCTAssertNotNil(self.controller.model.presenter.actionCard, "Failed to load card")
+        XCTAssertNotNil(self.controller.model.presenter.actionColumn, "Failed to load column")
+        XCTAssertNotNil(self.controller.model.presenter.actionProject, "Failed to load project")
     }
     
     func testPreferredStyle() {
