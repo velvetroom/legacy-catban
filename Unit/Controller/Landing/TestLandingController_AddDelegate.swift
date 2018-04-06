@@ -3,6 +3,7 @@ import XCTest
 
 class TestLandingController_AddDelegate:XCTestCase {
     private var controller:LandingController!
+    private var navigation:MockNavigationController!
     private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -13,7 +14,9 @@ class TestLandingController_AddDelegate:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.model = MockLandingProtocol()
+        self.navigation = MockNavigationController()
         self.controller.model = self.model
+        self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
@@ -24,6 +27,20 @@ class TestLandingController_AddDelegate:XCTestCase {
     func testCreateCard() {
         self.startExpectation()
         self.model.onCreateCard = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.createCard()
+        
+        self.waitExpectations()
+    }
+    
+    func testCreateCardShowsWriter() {
+        self.startExpectation()
+        self.controller.model = Landing()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            let writer:WriterController? = controller as? WriterController
+            XCTAssertNotNil(writer, "Invalid controller presenter")
             self?.expect?.fulfill()
         }
         
