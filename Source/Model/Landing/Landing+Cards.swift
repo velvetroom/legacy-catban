@@ -79,6 +79,7 @@ extension Landing {
         self.editingCard = index
         self.project.insert(card:card, at:index)
         self.reloadViewModel()
+        self.presenter.insertCardAt(index:index)
     }
     
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {

@@ -17,4 +17,8 @@ class LandingPresenter:LandingPresenterProtocol {
     func updateCardAt(index:IndexPath) {
         self.outlets.list.viewCollection?.reloadItems(at:[index])
     }
+    
+    func insertCardAt(index:IndexPath) {
+        self.outlets.list.viewCollection?.insertItems(at:[index])
+    }
 }

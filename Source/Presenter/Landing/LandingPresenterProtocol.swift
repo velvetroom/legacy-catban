@@ -6,4 +6,5 @@ protocol LandingPresenterProtocol {
     
     func update(viewModel:LandingViewModel)
     func updateCardAt(index:IndexPath)
+    func insertCardAt(index:IndexPath)
 }
