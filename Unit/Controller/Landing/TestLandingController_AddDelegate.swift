@@ -1,8 +1,8 @@
 import XCTest
 @testable import catban
 
-class TestLandingControllerAdd_Create:XCTestCase {
-    private var controller:LandingControllerAdd!
+class TestLandingController_AddDelegate:XCTestCase {
+    private var controller:LandingController!
     private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -11,7 +11,7 @@ class TestLandingControllerAdd_Create:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingControllerAdd()
+        self.controller = LandingController()
         self.model = MockLandingProtocol()
         self.controller.model = self.model
     }

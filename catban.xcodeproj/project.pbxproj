@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA16043A207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift */; };
+		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_Create.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
 		DA1604402076996E0096EFE1 /* Project+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043F2076996E0096EFE1 /* Project+Cards.swift */; };
@@ -199,7 +199,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA160439207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerAdd_Create.swift; sourceTree = "<group>"; };
+		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Create.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
 		DA16043F2076996E0096EFE1 /* Project+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Cards.swift"; sourceTree = "<group>"; };
@@ -819,7 +819,7 @@
 				DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */,
 				DA6F1B8920736A7C001248E4 /* TestLandingController_WriterEditCard.swift */,
 				DA5EAFC32075EF41002BDAD8 /* TestLandingControllerAdd.swift */,
-				DA160439207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift */,
+				DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -1185,7 +1185,7 @@
 				DA6F1B8A20736A7C001248E4 /* TestLandingController_WriterEditCard.swift in Sources */,
 				DA9A98842074AC1400D82514 /* MockWriterProtocol.swift in Sources */,
 				DA6F1B70207357EF001248E4 /* TestWriterViewText.swift in Sources */,
-				DA16043A207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift in Sources */,
+				DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */,
 				DA519A7B2069408900514098 /* TestLandingViewModelOutlets.swift in Sources */,
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
