@@ -18,6 +18,7 @@ class TestLandingControllerAdd:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNil(self.controller.delegate, "Delegate should not be set")
     }
     
     func testViewDidLoad() {

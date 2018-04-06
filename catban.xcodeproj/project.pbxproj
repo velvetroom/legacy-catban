@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA160438207693A20096EFE1 /* LandingControllerAdd+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160437207693A20096EFE1 /* LandingControllerAdd+Create.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_Create.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -39,6 +38,8 @@
 		DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0779206CCA8300D02D1C /* ExtensionUIColor.swift */; };
 		DA2A0780206CD20600D02D1C /* LandingViewCollectionCell+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A077F206CD20600D02D1C /* LandingViewCollectionCell+Selection.swift */; };
 		DA2A0782206CD25B00D02D1C /* LandingViewCollectionCell+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0781206CD25B00D02D1C /* LandingViewCollectionCell+Outlets.swift */; };
+		DA391AD820774A6900484273 /* LandingControllerAddDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AD720774A6900484273 /* LandingControllerAddDelegateProtocol.swift */; };
+		DA391ADA20774B2500484273 /* LandingController+AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
@@ -198,7 +199,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA160437207693A20096EFE1 /* LandingControllerAdd+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingControllerAdd+Create.swift"; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingControllerAdd_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingControllerAdd_Create.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Create.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -230,6 +230,8 @@
 		DA2A0779206CCA8300D02D1C /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		DA2A077F206CD20600D02D1C /* LandingViewCollectionCell+Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionCell+Selection.swift"; sourceTree = "<group>"; };
 		DA2A0781206CD25B00D02D1C /* LandingViewCollectionCell+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionCell+Outlets.swift"; sourceTree = "<group>"; };
+		DA391AD720774A6900484273 /* LandingControllerAddDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingControllerAddDelegateProtocol.swift; sourceTree = "<group>"; };
+		DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+AddDelegate.swift"; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
@@ -880,9 +882,10 @@
 				DA6F1B8D20736D53001248E4 /* LandingController+Writer.swift */,
 				DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */,
 				DAEB8185206D1FF000E55424 /* LandingController+PresenterCollectionDelegate.swift */,
+				DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */,
 				DA5EAFC52075EF9D002BDAD8 /* LandingControllerAdd.swift */,
 				DA5EAFC72075F13C002BDAD8 /* LandingControllerAdd+Actions.swift */,
-				DA160437207693A20096EFE1 /* LandingControllerAdd+Create.swift */,
+				DA391AD720774A6900484273 /* LandingControllerAddDelegateProtocol.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -1055,7 +1058,6 @@
 				DA2538E82067D18A00EEB231 /* LandingPresenterCollectionProtocol.swift in Sources */,
 				DA5EAFC62075EF9D002BDAD8 /* LandingControllerAdd.swift in Sources */,
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
-				DA160438207693A20096EFE1 /* LandingControllerAdd+Create.swift in Sources */,
 				DA8AB2692064F465005A393E /* LandingPresenterOutletsList.swift in Sources */,
 				DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */,
 				DA519A6D2069162600514098 /* LandingViewModelLoaderCollection.swift in Sources */,
@@ -1090,6 +1092,7 @@
 				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
 				DA2A0776206CB7DE00D02D1C /* LandingViewCollectionMenu.swift in Sources */,
+				DA391AD820774A6900484273 /* LandingControllerAddDelegateProtocol.swift in Sources */,
 				DA2538FC2068326800EEB231 /* LandingViewModelCollectionSection.swift in Sources */,
 				DA6F1B6E207353B7001248E4 /* Writer.swift in Sources */,
 				DA8AB27620650388005A393E /* ExtensionString.swift in Sources */,
@@ -1128,6 +1131,7 @@
 				DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */,
 				DA79AF82206A331800DE73FA /* LandingViewCollectionLayout+Constants.swift in Sources */,
 				DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */,
+				DA391ADA20774B2500484273 /* LandingController+AddDelegate.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,

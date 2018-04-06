@@ -1,6 +1,6 @@
 import Foundation
 
-extension LandingControllerAdd {
+extension LandingController:LandingControllerAddDelegateProtocol {
     func createCard() {
         self.model.createCard()
     }

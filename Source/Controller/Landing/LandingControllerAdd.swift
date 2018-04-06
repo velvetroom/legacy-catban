@@ -1,6 +1,7 @@
 import UIKit
 
 class LandingControllerAdd:UIAlertController {
+    weak var delegate:LandingControllerAddDelegateProtocol?
     var model:LandingProtocol
     
     init() {

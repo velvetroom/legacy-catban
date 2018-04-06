@@ -30,7 +30,7 @@ extension LandingControllerAdd {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingControllerAdd_actionCardTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
-                
+                self?.delegate?.createCard()
         }
         self.addAction(action)
     }
