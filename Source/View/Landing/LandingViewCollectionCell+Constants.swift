@@ -7,5 +7,7 @@ extension LandingViewCollectionCell {
         static let titleMarginLeft:CGFloat = 15
         static let titleMargin:CGFloat = 8
         static let menuHeight:CGFloat = 60
+        static let deleteSize:CGFloat = 80
+        static let deleteMargin:CGFloat = -35
     }
 }

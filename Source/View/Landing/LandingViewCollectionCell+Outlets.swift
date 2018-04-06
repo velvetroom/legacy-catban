@@ -30,13 +30,15 @@ extension LandingViewCollectionCell {
         buttonDelete.translatesAutoresizingMaskIntoConstraints = false
         buttonDelete.setImage(#imageLiteral(resourceName: "assetDelete"), for:UIControlState.normal)
         buttonDelete.setImage(#imageLiteral(resourceName: "assetDelete"), for:UIControlState.highlighted)
+        buttonDelete.imageView!.clipsToBounds = true
+        buttonDelete.imageView!.contentMode = UIViewContentMode.center
         self.buttonDelete = buttonDelete
         
         self.addSubview(buttonDelete)
         
-        buttonDelete.topAnchor.constraint(equalTo:self.topAnchor, constant:-35).isActive = true
-        buttonDelete.heightAnchor.constraint(equalToConstant:80).isActive = true
-        buttonDelete.leftAnchor.constraint(equalTo:self.leftAnchor, constant:-35).isActive = true
-        buttonDelete.widthAnchor.constraint(equalToConstant:80).isActive = true
+        buttonDelete.topAnchor.constraint(equalTo:self.topAnchor, constant:Constants.deleteMargin).isActive = true
+        buttonDelete.heightAnchor.constraint(equalToConstant:Constants.deleteSize).isActive = true
+        buttonDelete.leftAnchor.constraint(equalTo:self.leftAnchor, constant:Constants.deleteMargin).isActive = true
+        buttonDelete.widthAnchor.constraint(equalToConstant:Constants.deleteSize).isActive = true
     }
 }
