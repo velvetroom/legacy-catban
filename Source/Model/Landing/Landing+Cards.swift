@@ -80,6 +80,7 @@ extension Landing {
         self.project.insert(card:card, at:index)
         self.reloadViewModel()
         self.presenter.insertCardAt(index:index)
+        self.scrollToEditingCard()
     }
     
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {

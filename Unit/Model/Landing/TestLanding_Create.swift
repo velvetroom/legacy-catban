@@ -5,6 +5,7 @@ class TestLanding_Create:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenter!
+    private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -15,6 +16,8 @@ class TestLanding_Create:XCTestCase {
         self.model = Landing()
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenter()
+        self.collection = MockLandingViewCollection()
+        self.presenter.outlets.list.viewCollection = self.collection
         self.model.presenter = self.presenter
         self.model.project = project
     }
@@ -22,6 +25,8 @@ class TestLanding_Create:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.presenter, "Failed to load project")
+        XCTAssertNotNil(self.collection, "Failed to load project")
     }
     
     func testCreateCard() {
@@ -86,6 +91,22 @@ class TestLanding_Create:XCTestCase {
             createdCard = index
         }
         self.presenter.onInsertCardAtIndex = { [weak self] (index:IndexPath) in
+            XCTAssertEqual(index, createdCard, "Failed to assign editing card")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.createCard()
+        
+        self.waitExpectations()
+    }
+    
+    func testCreateCardScrollsToEditingCard() {
+        self.startExpectation()
+        var createdCard:IndexPath?
+        self.project.onIndexForNewCard = { (index:IndexPath) in
+            createdCard = index
+        }
+        self.collection.onScrollToItem = { [weak self] (index:IndexPath) in
             XCTAssertEqual(index, createdCard, "Failed to assign editing card")
             self?.expect?.fulfill()
         }
