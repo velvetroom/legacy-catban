@@ -4,6 +4,7 @@ import XCTest
 class TestLanding_Create:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
+    private var presenter:MockLandingPresenter!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -13,6 +14,8 @@ class TestLanding_Create:XCTestCase {
         super.setUp()
         self.model = Landing()
         self.project = MockProjectProtocol()
+        self.presenter = MockLandingPresenter()
+        self.model.presenter = self.presenter
         self.model.project = project
     }
     
@@ -58,6 +61,17 @@ class TestLanding_Create:XCTestCase {
                 return
             }
             XCTAssertEqual(editingCard, createdCard, "Failed to assign editing card")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.createCard()
+        
+        self.waitExpectations()
+    }
+    
+    func testCreateCardUpdatesViewModel() {
+        self.startExpectation()
+        self.presenter.onUpdateViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
         
