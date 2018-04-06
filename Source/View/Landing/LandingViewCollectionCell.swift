@@ -2,6 +2,7 @@ import UIKit
 
 class LandingViewCollectionCell:UICollectionViewCell {
     weak var labelTitle:UILabel!
+    weak var buttonDelete:UIButton!
     
     override init(frame:CGRect) {
         super.init(frame:frame)
@@ -14,8 +15,7 @@ class LandingViewCollectionCell:UICollectionViewCell {
     }
     
     private func configureView() {
-        self.clipsToBounds = true
+        self.clipsToBounds = false
         self.layer.cornerRadius = Constants.cornerRadius
-        self.layer.borderWidth = Constants.borderWidth
     }
 }
