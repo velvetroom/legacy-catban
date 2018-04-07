@@ -106,7 +106,7 @@ class LandingViewModelLoaderCollectionLayout {
             }
         }
         maxX += Constants.interItemSeparation
-        maxY += Constants.interItemSeparation + Constants.headerOutsetBottom
+        maxY += Constants.interItemSeparation + Constants.interItemSeparation
         return CGSize(width:maxX, height:maxY)
     }
 }
