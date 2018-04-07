@@ -13,8 +13,8 @@ extension LandingController {
     
     func factoryOutlets() {
         self.configureController()
-        self.factoryViewCollection()
         self.factoryViewCollectionMenu()
+        self.factoryViewCollection()
         self.factoryPresenterDelegates()
         self.factoryGesture()
         self.factoryImageLogo()
@@ -35,7 +35,12 @@ extension LandingController {
         self.view.addSubview(viewCollection)
         self.outletsList.viewCollection = viewCollection
         self.outletsList.layoutCollection = layout
-        self.constraintToSafeArea(view:viewCollection)
+        
+        viewCollection.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        viewCollection.bottomAnchor.constraint(
+            equalTo:self.outletsList.viewCollectionMenu!.topAnchor).isActive = true
+        viewCollection.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        viewCollection.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
     
     private func factoryViewCollectionMenu() {
@@ -53,10 +58,12 @@ extension LandingController {
         self.outletsList.viewCollectionMenu = viewCollectionMenu
         
         self.outletsList.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
-            equalTo:self.view.bottomAnchor, constant:Constants.collectionMenuHeight)
+            equalTo:self.view.safeAreaLayoutGuide.bottomAnchor, constant:Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
-        viewCollectionMenu.leftAnchor.constraint(equalTo:self.view.leftAnchor).isActive = true
-        viewCollectionMenu.rightAnchor.constraint(equalTo:self.view.rightAnchor).isActive = true
+        viewCollectionMenu.leftAnchor.constraint(
+            equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        viewCollectionMenu.rightAnchor.constraint(
+            equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
         self.outletsList.layoutCollectionMenuBottom?.isActive = true
         self.outletsList.buttonCollectionMenuMoveRight = viewCollectionMenu.buttonMoveRight
         self.outletsList.buttonCollectionMenuMoveLeft = viewCollectionMenu.buttonMoveLeft
@@ -88,13 +95,10 @@ extension LandingController {
         
         self.view.addSubview(imageLogo)
         self.outletsList.imageLogo = imageLogo
-        self.constraintToSafeArea(view:imageLogo)
-    }
-    
-    private func constraintToSafeArea(view:UIView) {
-        view.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        view.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        
+        imageLogo.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        imageLogo.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        imageLogo.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        imageLogo.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
 }
