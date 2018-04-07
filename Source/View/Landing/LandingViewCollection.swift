@@ -12,11 +12,6 @@ class LandingViewCollection:UICollectionView {
         return nil
     }
     
-    override func layoutSubviews() {
-        print("layoutsubview super view: \(self.bounds.height)")
-        super.layoutSubviews()
-    }
-    
     func clearSelection() {
         self.selectItem(at:nil, animated:true, scrollPosition:UICollectionViewScrollPosition())
     }
@@ -33,10 +28,6 @@ class LandingViewCollection:UICollectionView {
         self.decelerationRate = UIScrollViewDecelerationRateFast
         self.insetsLayoutMarginsFromSafeArea = true
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.always
-    }
-    
-    override func safeAreaInsetsDidChange() {
-        print("insets change")
     }
     
     private func registerViews() {

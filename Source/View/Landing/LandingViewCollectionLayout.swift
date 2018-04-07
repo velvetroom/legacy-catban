@@ -1,11 +1,7 @@
 import UIKit
 
 class LandingViewCollectionLayout:UICollectionViewLayout {
-    var viewModel:LandingViewModelCollectionLayout {
-        didSet {
-            print("update view model")
-        }
-    }
+    var viewModel:LandingViewModelCollectionLayout
     var cellAttributes:[UICollectionViewLayoutAttributes]
     var headerAttributes:[UICollectionViewLayoutAttributes]
     
@@ -36,7 +32,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override func prepare() {
         super.prepare()
-        print("return prepare")
         self.cellAttributes = []
         self.headerAttributes = []
         for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
@@ -77,11 +72,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         return nil
     }
     
-    override func invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths indexPaths: [IndexPath], previousIndexPaths: [IndexPath], movementCancelled: Bool) -> UICollectionViewLayoutInvalidationContext {
-        print("asd")
-        return super.invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths:indexPaths, previousIndexPaths:previousIndexPaths, movementCancelled:movementCancelled)
-    }
-    
     override func layoutAttributesForInteractivelyMovingItem(
         at index:IndexPath, withTargetPosition position:CGPoint) -> UICollectionViewLayoutAttributes {
         let attributes:UICollectionViewLayoutAttributes = super.layoutAttributesForInteractivelyMovingItem(
@@ -91,7 +81,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     }
         
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
-        print("return true")
         return false
     }
     
@@ -135,10 +124,5 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             }
         }
         return nil
-    }
-    
-    override func shouldInvalidateLayout(forPreferredLayoutAttributes preferredAttributes: UICollectionViewLayoutAttributes, withOriginalAttributes originalAttributes: UICollectionViewLayoutAttributes) -> Bool {
-        print("preferred")
-        return false
     }
 }
