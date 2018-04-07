@@ -22,8 +22,15 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override var collectionViewContentSize:CGSize {
         get {
-            print("get size")
-            return self.viewModel.contentSize
+            let contentSize:CGSize = self.viewModel.contentSize
+            guard
+                let viewHeight:CGFloat = self.collectionView?.bounds.height,
+                viewHeight > contentSize.height
+            else {
+                return contentSize
+            }
+            
+            return CGSize(width:contentSize.width, height:viewHeight)
         }
     }
     
@@ -36,10 +43,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             self.prepareHeadersFor(header:header)
             self.prepareCellsFor(header:header)
         }
-    }
-    
-    override func finalizeCollectionViewUpdates() {
-        print("finalize")
     }
     
     override func layoutAttributesForElements(in rect:CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -92,11 +95,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         return false
     }
     
-    override func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {
-        print("context")
-        return UICollectionViewLayoutInvalidationContext()
-    }
-    
     private func findAttributesFor(
         rect:CGRect, in list:[UICollectionViewLayoutAttributes]) -> [UICollectionViewLayoutAttributes]? {
         var attributesList:[UICollectionViewLayoutAttributes]?
@@ -137,5 +135,10 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             }
         }
         return nil
+    }
+    
+    override func shouldInvalidateLayout(forPreferredLayoutAttributes preferredAttributes: UICollectionViewLayoutAttributes, withOriginalAttributes originalAttributes: UICollectionViewLayoutAttributes) -> Bool {
+        print("preferred")
+        return false
     }
 }

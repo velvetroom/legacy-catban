@@ -1,6 +1,7 @@
 import UIKit
 
 class LandingViewCollection:UICollectionView {
+    var draw:Bool = true
     init(layout:UICollectionViewLayout = UICollectionViewLayout()) {
         super.init(frame:CGRect.zero, collectionViewLayout:layout)
         self.configureView()
@@ -12,7 +13,7 @@ class LandingViewCollection:UICollectionView {
     }
     
     override func layoutSubviews() {
-        print("layout")
+        print("layoutsubview super view: \(self.bounds.height)")
         super.layoutSubviews()
     }
     
@@ -28,7 +29,14 @@ class LandingViewCollection:UICollectionView {
         self.alwaysBounceHorizontal = true
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
+        self.bouncesZoom = false
         self.decelerationRate = UIScrollViewDecelerationRateFast
+        self.insetsLayoutMarginsFromSafeArea = true
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.always
+    }
+    
+    override func safeAreaInsetsDidChange() {
+        print("insets change")
     }
     
     private func registerViews() {
