@@ -13,6 +13,7 @@ class TestLandingViewCollectionCell:XCTestCase {
         XCTAssertNotNil(self.cell, "Failed to load cell")
         XCTAssertNotNil(self.cell.labelTitle, "Failed to load title")
         XCTAssertNotNil(self.cell.buttonDelete, "Failed to load button")
+        XCTAssertNil(self.cell.delegate, "Delegate should not be set")
     }
     
     func testHideDeleteOnUnselect() {

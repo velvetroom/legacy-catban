@@ -72,4 +72,12 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
             self.dataSource.viewModel.sections.first?.items.first?.title,
             "Failed to assign cell title")
     }
+    
+    func testSetDelegateToCellInConfigure() {
+        let index:IndexPath = IndexPath(item:0, section:0)
+        let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
+        self.dataSource.configure(cell:cell, for:index)
+        
+        XCTAssertNotNil(cell.delegate, "Failed to assign delegate to cell")
+    }
 }

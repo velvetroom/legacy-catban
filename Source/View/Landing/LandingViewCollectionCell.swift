@@ -3,6 +3,7 @@ import UIKit
 class LandingViewCollectionCell:UICollectionViewCell {
     weak var labelTitle:UILabel!
     weak var buttonDelete:UIButton!
+    weak var delegate:LandingPresenterCollectionDataSourceProtocol?
     
     override init(frame:CGRect) {
         super.init(frame:frame)
