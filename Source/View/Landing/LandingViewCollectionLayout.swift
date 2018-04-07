@@ -1,7 +1,11 @@
 import UIKit
 
 class LandingViewCollectionLayout:UICollectionViewLayout {
-    var viewModel:LandingViewModelCollectionLayout
+    var viewModel:LandingViewModelCollectionLayout {
+        didSet {
+            print("update view model")
+        }
+    }
     var cellAttributes:[UICollectionViewLayoutAttributes]
     var headerAttributes:[UICollectionViewLayoutAttributes]
     
@@ -18,18 +22,24 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     
     override var collectionViewContentSize:CGSize {
         get {
+            print("get size")
             return self.viewModel.contentSize
         }
     }
     
     override func prepare() {
         super.prepare()
+        print("return prepare")
         self.cellAttributes = []
         self.headerAttributes = []
         for header:LandingViewModelCollectionLayoutHeader in self.viewModel.headers {
             self.prepareHeadersFor(header:header)
             self.prepareCellsFor(header:header)
         }
+    }
+    
+    override func finalizeCollectionViewUpdates() {
+        print("finalize")
     }
     
     override func layoutAttributesForElements(in rect:CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -64,6 +74,11 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
         return nil
     }
     
+    override func invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths indexPaths: [IndexPath], previousIndexPaths: [IndexPath], movementCancelled: Bool) -> UICollectionViewLayoutInvalidationContext {
+        print("asd")
+        return super.invalidationContextForEndingInteractiveMovementOfItems(toFinalIndexPaths:indexPaths, previousIndexPaths:previousIndexPaths, movementCancelled:movementCancelled)
+    }
+    
     override func layoutAttributesForInteractivelyMovingItem(
         at index:IndexPath, withTargetPosition position:CGPoint) -> UICollectionViewLayoutAttributes {
         let attributes:UICollectionViewLayoutAttributes = super.layoutAttributesForInteractivelyMovingItem(
@@ -73,7 +88,13 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
     }
         
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
+        print("return true")
         return false
+    }
+    
+    override func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {
+        print("context")
+        return UICollectionViewLayoutInvalidationContext()
     }
     
     private func findAttributesFor(

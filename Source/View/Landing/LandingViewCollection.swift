@@ -11,6 +11,11 @@ class LandingViewCollection:UICollectionView {
         return nil
     }
     
+    override func layoutSubviews() {
+        print("layout")
+        super.layoutSubviews()
+    }
+    
     func clearSelection() {
         self.selectItem(at:nil, animated:true, scrollPosition:UICollectionViewScrollPosition())
     }
