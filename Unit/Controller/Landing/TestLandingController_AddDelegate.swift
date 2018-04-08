@@ -51,8 +51,8 @@ class TestLandingController_AddDelegate:XCTestCase {
     
     func testCreateColumn() {
         self.startExpectation()
-        self.model.onCreateCard = { [weak self] in
-            
+        self.model.onCreateColumn = { [weak self] in
+            self?.expect?.fulfill()
         }
         
         self.controller.createColumn()

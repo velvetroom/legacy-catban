@@ -25,6 +25,11 @@ extension LandingController {
     }
     
     @objc func selectorEditCard(sender button:UIButton) {
-        self.openWriterForEditingCard()
+        guard
+            let card:ProjectCard = self.model.editingCardReference
+        else {
+            return
+        }
+        self.openWriterForCard(card:card)
     }
 }

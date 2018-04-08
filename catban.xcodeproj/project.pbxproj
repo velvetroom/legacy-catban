@@ -205,6 +205,7 @@
 		DAEB8194206D28EE00E55424 /* TestLandingPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB8193206D28EE00E55424 /* TestLandingPresenterOutlets.swift */; };
 		DAEB8196206D296300E55424 /* LandingPresenterOutletsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB8195206D296300E55424 /* LandingPresenterOutletsProtocol.swift */; };
 		DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB8197206D29A200E55424 /* LandingPresenterOutlets.swift */; };
+		DAF8891C207A9E5F00BB75CD /* Landing+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,6 +426,7 @@
 		DAEB8193206D28EE00E55424 /* TestLandingPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterOutlets.swift; sourceTree = "<group>"; };
 		DAEB8195206D296300E55424 /* LandingPresenterOutletsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterOutletsProtocol.swift; sourceTree = "<group>"; };
 		DAEB8197206D29A200E55424 /* LandingPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterOutlets.swift; sourceTree = "<group>"; };
+		DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Columns.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -646,6 +648,7 @@
 				DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */,
 				DA5B5A02207047F000122EEF /* Landing.swift */,
 				DA5B5A0620704D6E00122EEF /* Landing+Cards.swift */,
+				DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */,
 				DA391AE3207751D400484273 /* LandingAddProtocol.swift */,
 				DA391AE5207751EA00484273 /* LandingAdd.swift */,
 				DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */,
@@ -1146,6 +1149,7 @@
 				DAEB8186206D1FF000E55424 /* LandingController+PresenterCollectionDelegate.swift in Sources */,
 				DAEB817E206D112E00E55424 /* LandingController+Constants.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
+				DAF8891C207A9E5F00BB75CD /* Landing+Columns.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DAEB8180206D159A00E55424 /* LandingViewCollectionMenu+Constants.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
