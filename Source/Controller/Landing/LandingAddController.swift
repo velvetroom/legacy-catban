@@ -27,7 +27,7 @@ class LandingAddController:UIAlertController {
     private func prepareForIpad() {
         if let popover:UIPopoverPresentationController = self.popoverPresentationController {
             popover.sourceView = self.view
-            popover.permittedArrowDirections = UIPopoverArrowDirection.right
+            popover.permittedArrowDirections = UIPopoverArrowDirection.up
             popover.sourceRect = CGRect(
                 x:self.view.bounds.maxX - Constants.ipadMarginLeft,
                 y:Constants.ipadMarginTop,
