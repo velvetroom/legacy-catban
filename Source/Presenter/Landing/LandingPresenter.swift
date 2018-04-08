@@ -3,6 +3,11 @@ import Foundation
 class LandingPresenter:LandingPresenterProtocol {
     var outlets:LandingPresenterOutletsProtocol
     var collection:LandingPresenterCollectionProtocol
+    private var viewCollection:LandingViewCollection? {
+        get {
+            return self.outlets.list.viewCollection
+        }
+    }
     
     init() {
         self.outlets = LandingPresenterOutlets()
@@ -15,10 +20,14 @@ class LandingPresenter:LandingPresenterProtocol {
     }
     
     func updateCardAt(index:IndexPath) {
-        self.outlets.list.viewCollection?.reloadItems(at:[index])
+        self.viewCollection?.reloadItems(at:[index])
     }
     
     func insertCardAt(index:IndexPath) {
-        self.outlets.list.viewCollection?.insertItems(at:[index])
+        self.viewCollection?.insertItems(at:[index])
+    }
+    
+    func deleteCardAt(index:IndexPath) {
+        self.viewCollection?.deleteItems(at:[index])
     }
 }

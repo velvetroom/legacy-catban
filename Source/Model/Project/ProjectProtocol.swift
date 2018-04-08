@@ -12,4 +12,5 @@ protocol ProjectProtocol {
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath
     func indexForNewCard() -> IndexPath
     func insert(card:ProjectCard, at indexPath:IndexPath)
+    func deleteCardAt(indexPath:IndexPath)
 }

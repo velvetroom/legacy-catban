@@ -3,7 +3,7 @@ import XCTest
 
 class TestLanding_Load:XCTestCase {
     private var model:Landing!
-    private var presenter:MockLandingPresenter!
+    private var presenter:MockLandingPresenterProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,7 +12,7 @@ class TestLanding_Load:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Landing()
-        self.presenter = MockLandingPresenter()
+        self.presenter = MockLandingPresenterProtocol()
         self.model.presenter = self.presenter
     }
     

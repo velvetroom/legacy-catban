@@ -32,7 +32,9 @@ extension Landing {
     }
     
     func deleteCardAt(indexPath:IndexPath) {
-        
+        self.project.deleteCardAt(indexPath:indexPath)
+        self.clearCardSelection()
+        self.presenter.deleteCardAt(index:indexPath)
     }
     
     func moveEditingCardRight() {

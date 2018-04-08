@@ -8,6 +8,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onReloadItemAtIndex:(([IndexPath]) -> Void)?
     var onSelectItemAtIndex:((IndexPath?) -> Void)?
     var onInsertItemAtIndex:(([IndexPath]) -> Void)?
+    var onDeleteItemAtIndex:(([IndexPath]) -> Void)?
     var onClearSelection:(() -> Void)?
     var returnNumberOfItemsInSection:Int?
     
@@ -35,6 +36,10 @@ class MockLandingViewCollection:LandingViewCollection {
     
     override func insertItems(at indexPaths:[IndexPath]) {
         self.onInsertItemAtIndex?(indexPaths)
+    }
+    
+    override func deleteItems(at indexPaths:[IndexPath]) {
+        self.onDeleteItemAtIndex?(indexPaths)
     }
     
     override func scrollToItem(

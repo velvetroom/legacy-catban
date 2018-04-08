@@ -3,7 +3,7 @@ import XCTest
 
 class TestLanding_UpdateCard:XCTestCase {
     private var model:Landing!
-    private var presenter:MockLandingPresenter!
+    private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -14,7 +14,7 @@ class TestLanding_UpdateCard:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Landing()
-        self.presenter = MockLandingPresenter()
+        self.presenter = MockLandingPresenterProtocol()
         self.model.presenter = self.presenter
         self.viewModelLoader = MockLandingViewModelLoader()
         self.model.viewModelLoader = self.viewModelLoader

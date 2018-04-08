@@ -75,6 +75,18 @@ class TestLandingPresenter:XCTestCase {
         self.waitExpectations()
     }
     
+    func testDeleteItemAtIndex() {
+        self.startExpectation()
+        let indexPath:IndexPath = IndexPath(item:34234, section:123)
+        self.collectionView.onDeleteItemAtIndex = { [weak self] (indexes:[IndexPath]) in
+            XCTAssertEqual(indexes.first, indexPath, "Invalid index path received")
+            self?.expect?.fulfill()
+        }
+        
+        self.presenter.deleteCardAt(index:indexPath)
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }

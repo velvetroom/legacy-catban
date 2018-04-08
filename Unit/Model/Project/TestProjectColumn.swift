@@ -50,6 +50,16 @@ class TestProjectColumn:XCTestCase {
         XCTAssertGreaterThan(self.column.cards.count, initialSize, "Cards size not increasing")
     }
     
+    func testDeleteCard() {
+        let index:Int = 1
+        weak var card:ProjectCard? = self.column.cardAt(index:index)
+        XCTAssertNotNil(card, "Couldn't load card")
+        
+        self.column.deleteCardAt(index:index)
+        
+        XCTAssertNil(card, "Failed to delete card")
+    }
+    
     private func titleAt(index:Int) -> String {
         return self.column.cards[index].title
     }

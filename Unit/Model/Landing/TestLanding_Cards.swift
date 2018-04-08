@@ -4,7 +4,7 @@ import XCTest
 class TestLanding_Cards:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
-    private var presenter:MockLandingPresenter!
+    private var presenter:MockLandingPresenterProtocol!
     private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,7 +17,7 @@ class TestLanding_Cards:XCTestCase {
         super.setUp()
         self.model = Landing()
         self.project = MockProjectProtocol()
-        self.presenter = MockLandingPresenter()
+        self.presenter = MockLandingPresenterProtocol()
         self.collection = MockLandingViewCollection()
         self.model.project = self.project
         self.model.presenter = self.presenter

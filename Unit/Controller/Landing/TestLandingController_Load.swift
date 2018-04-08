@@ -3,7 +3,7 @@ import XCTest
 
 class TestLandingController_Load:XCTestCase {
     private var controller:LandingController!
-    private var mockPresenter:MockLandingPresenter!
+    private var mockPresenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -14,7 +14,7 @@ class TestLandingController_Load:XCTestCase {
         super.setUp()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.controller = LandingController()
-        self.mockPresenter = MockLandingPresenter()
+        self.mockPresenter = MockLandingPresenterProtocol()
         self.controller.model.viewModelLoader = self.viewModelLoader
     }
     

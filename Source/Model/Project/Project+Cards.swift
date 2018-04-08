@@ -13,4 +13,9 @@ extension Project {
         let column:ProjectColumn = self.columnAt(indexPath:indexPath)
         column.insert(card:card, at:indexPath.item)
     }
+    
+    func deleteCardAt(indexPath:IndexPath) {
+        let column:ProjectColumn = self.columnAt(indexPath:indexPath)
+        column.deleteCardAt(index:indexPath.item)
+    }
 }

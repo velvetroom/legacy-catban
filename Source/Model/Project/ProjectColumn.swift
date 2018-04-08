@@ -20,4 +20,8 @@ class ProjectColumn {
     func insert(card:ProjectCard, at index:Int) {
         self.cards.insert(card, at:index)
     }
+    
+    func deleteCardAt(index:Int) {
+        self.cards.remove(at:index)
+    }
 }

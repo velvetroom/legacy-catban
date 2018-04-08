@@ -1,10 +1,11 @@
 import Foundation
 @testable import catban
 
-class MockLandingPresenter:LandingPresenterProtocol {
+class MockLandingPresenterProtocol:LandingPresenterProtocol {
     var onUpdateViewModel:(() -> Void)?
     var onUpdateCardAtIndex:((IndexPath) -> Void)?
     var onInsertCardAtIndex:((IndexPath) -> Void)?
+    var onDeleteCardAtIndex:((IndexPath) -> Void)?
     var outlets:LandingPresenterOutletsProtocol
     var collection:LandingPresenterCollectionProtocol
     
@@ -23,5 +24,9 @@ class MockLandingPresenter:LandingPresenterProtocol {
     
     func insertCardAt(index:IndexPath) {
         self.onInsertCardAtIndex?(index)
+    }
+    
+    func deleteCardAt(index:IndexPath) {
+        self.onDeleteCardAtIndex?(index)
     }
 }
