@@ -65,6 +65,19 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.waitExpectation()
     }
     
+    func testDeleteItem() {
+        self.startExpectation()
+        self.controller.model = self.mockModel
+        self.mockModel.onDeleteCardAt = { [weak self] (index:IndexPath) in
+            XCTAssertEqual(index, Constants.origin, "Invalid index for deletion")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.deleteItemAt(indexPath:Constants.origin)
+        
+        self.waitExpectation()
+    }
+    
     private func validateOriginalStateBeforeItemInSameColumn() {
         let initialTitle:String = self.titleAt(card:Constants.destinationIndex, in:Constants.columnIndex)
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)

@@ -11,6 +11,7 @@ protocol LandingProtocol {
     func clearCardSelection()
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
+    func deleteCardAt(indexPath:IndexPath)
     func moveEditingCardRight()
     func moveEditingCardLeft()
     func scrollToEditingCard()

@@ -6,6 +6,6 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     }
     
     func deleteItemAt(indexPath:IndexPath) {
-        
+        self.model.deleteCardAt(indexPath:indexPath)
     }
 }
