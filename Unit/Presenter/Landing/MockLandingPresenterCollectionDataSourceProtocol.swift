@@ -3,13 +3,13 @@ import Foundation
 
 class MockLandingPresenterCollectionDataSourceProtocol:LandingPresenterCollectionDataSourceProtocol {
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
-    var onReloadCollection:(() -> Void)?
+    var onDeleteItem:((IndexPath) -> Void)?
     
     func moveItemFrom(origin:IndexPath, to destination:IndexPath) {
         self.onMoveItem?(origin, destination)
     }
     
-    func reloadCollection() {
-        self.onReloadCollection?()
+    func deleteItemAt(indexPath:IndexPath) {
+        self.onDeleteItem?(indexPath)
     }
 }

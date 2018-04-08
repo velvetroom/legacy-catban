@@ -35,7 +35,15 @@ class TestLandingViewCollectionCell:XCTestCase {
     }
     
     func testDeleteItem() {
+        let indexPath:IndexPath = IndexPath(item:2923, section:3242)
         self.startExpectation()
+        self.delegate.onDeleteItem = { [weak self] (index:IndexPath) in
+            XCTAssertEqual(index, indexPath, "Invalid index for deletion")
+            self?.expect?.fulfill()
+        }
+        
+        self.cell.indexPath = indexPath
+        self.cell.selectorDelete(sender:UIButton())
         
         self.waitExpectation()
     }

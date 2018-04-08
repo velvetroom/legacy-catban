@@ -17,6 +17,10 @@ class LandingViewCollectionCell:UICollectionViewCell {
         return nil
     }
     
+    @objc func selectorDelete(sender button:UIButton) {
+        self.delegate?.deleteItemAt(indexPath:self.indexPath)
+    }
+    
     private func configureView() {
         self.clipsToBounds = false
         self.contentView.clipsToBounds = true

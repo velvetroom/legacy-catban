@@ -33,6 +33,8 @@ extension LandingViewCollectionCell {
         buttonDelete.setImage(#imageLiteral(resourceName: "assetDelete"), for:UIControlState.highlighted)
         buttonDelete.imageView!.clipsToBounds = true
         buttonDelete.imageView!.contentMode = UIViewContentMode.center
+        buttonDelete.addTarget(self, action:#selector(self.selectorDelete(sender:)),
+                               for:UIControlEvents.touchUpInside)
         self.buttonDelete = buttonDelete
         
         self.addSubview(buttonDelete)
