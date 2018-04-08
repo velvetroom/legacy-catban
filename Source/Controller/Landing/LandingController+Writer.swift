@@ -11,4 +11,8 @@ extension LandingController {
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
+    
+    func openWriterForColumnAt(index:Int) {
+        
+    }
 }

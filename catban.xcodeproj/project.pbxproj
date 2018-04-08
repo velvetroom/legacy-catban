@@ -206,6 +206,7 @@
 		DAEB8196206D296300E55424 /* LandingPresenterOutletsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB8195206D296300E55424 /* LandingPresenterOutletsProtocol.swift */; };
 		DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB8197206D29A200E55424 /* LandingPresenterOutlets.swift */; };
 		DAF8891C207A9E5F00BB75CD /* Landing+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */; };
+		DAF8891E207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8891D207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -427,6 +428,7 @@
 		DAEB8195206D296300E55424 /* LandingPresenterOutletsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterOutletsProtocol.swift; sourceTree = "<group>"; };
 		DAEB8197206D29A200E55424 /* LandingPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterOutlets.swift; sourceTree = "<group>"; };
 		DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Columns.swift"; sourceTree = "<group>"; };
+		DAF8891D207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_WriterEditColumn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -873,6 +875,7 @@
 				DADE83C820710B250053E7A0 /* TestLandingController_SelectorsMove.swift */,
 				DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */,
 				DA6F1B8920736A7C001248E4 /* TestLandingController_WriterEditCard.swift */,
+				DAF8891D207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift */,
 				DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */,
 				DA5EAFC32075EF41002BDAD8 /* TestLandingAddController.swift */,
 				DA547847207A333B00F9301E /* TestLandingDeleteController.swift */,
@@ -1297,6 +1300,7 @@
 				DADE83CB20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift in Sources */,
 				DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */,
 				DA657E9D2074FA7D003C1645 /* TestWriterController_Notifications.swift in Sources */,
+				DAF8891E207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift in Sources */,
 				DA647A3F20716BDB00F79DF1 /* MockLandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DA79602E206BCF6E00548952 /* TestLandingPresenterCollectionDataSource_Delegate.swift in Sources */,
 				DA63F793206DB2C30018F416 /* MockLandingPresenterProtocol.swift in Sources */,
