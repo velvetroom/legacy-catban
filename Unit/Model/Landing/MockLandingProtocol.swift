@@ -16,11 +16,13 @@ class MockLandingProtocol:LandingProtocol {
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
+    var returnCardAtIndex:ProjectCard
     
     init() {
         self.project = Project()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
+        self.returnCardAtIndex = ProjectCard()
     }
     
     func load() {
@@ -33,6 +35,10 @@ class MockLandingProtocol:LandingProtocol {
     
     func clearCardSelection() {
         self.onClearCardSelection?()
+    }
+    
+    func cardAt(indexPath:IndexPath) -> ProjectCard {
+        return self.returnCardAtIndex
     }
     
     func update(editingCard:IndexPath?) {
@@ -63,9 +69,9 @@ class MockLandingProtocol:LandingProtocol {
         
     }
     
-    func createCard() -> ProjectCard {
+    func createCard() -> IndexPath {
         self.onCreateCard?()
-        return ProjectCard()
+        return IndexPath(item:0, section:0)
     }
     
     func createColumn() {

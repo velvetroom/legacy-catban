@@ -31,6 +31,16 @@ class TestLanding_Cards:XCTestCase {
         XCTAssertNotNil(self.collection, "Failed to load collection")
     }
     
+    func testCardAtIndex() {
+        self.model.project = Project.factoryNewProject()
+        let indexPath:IndexPath = IndexPath(item:1, section:0)
+        let card:ProjectCard = self.model.project.columns[indexPath.section].cards[indexPath.item]
+        
+        let cardAtIndex:ProjectCard = self.model.cardAt(indexPath:indexPath)
+        
+        XCTAssertTrue(card === cardAtIndex, "Invalid card received")
+    }
+    
     func testReorderItemCallsMoveOnProject() {
         self.startExpectation()
         self.project.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in

@@ -29,7 +29,7 @@ class TestLandingController_Writer:XCTestCase {
     func testWriterForCard() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
-        self.model.editingCardReference = card
+        self.model.returnCardAtIndex = card
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
@@ -41,7 +41,7 @@ class TestLandingController_Writer:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.openWriterForCard(card:card)
+        self.controller.openWriterForCardAt(indexPath:IndexPath(item:2312, section:9342))
         
         self.waitExpectations()
     }

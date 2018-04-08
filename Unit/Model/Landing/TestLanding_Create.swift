@@ -35,7 +35,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
@@ -46,7 +46,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
@@ -68,7 +68,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
@@ -79,7 +79,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
@@ -95,7 +95,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
@@ -111,7 +111,7 @@ class TestLanding_Create:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:ProjectCard = self.model.createCard()
+        let _:IndexPath = self.model.createCard()
         
         self.waitExpectations()
     }
