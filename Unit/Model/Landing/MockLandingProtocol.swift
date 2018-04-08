@@ -74,7 +74,8 @@ class MockLandingProtocol:LandingProtocol {
         return IndexPath(item:0, section:0)
     }
     
-    func createColumn() {
+    func createColumn() -> Int {
         self.onCreateColumn?()
+        return 0
     }
 }

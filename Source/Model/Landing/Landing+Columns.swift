@@ -1,7 +1,8 @@
 import Foundation
 
 extension Landing {
-    func createColumn() {
+    func createColumn() -> Int {
+        return 0
         /*
         let card:ProjectCard = ProjectCard()
         let index:IndexPath = self.project.indexForNewCard()

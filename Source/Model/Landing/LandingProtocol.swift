@@ -18,5 +18,5 @@ protocol LandingProtocol {
     func scrollToEditingCard()
     func updateCardAt(indexPath:IndexPath)
     func createCard() -> IndexPath
-    func createColumn()
+    func createColumn() -> Int
 }
