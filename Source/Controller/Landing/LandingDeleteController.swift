@@ -27,7 +27,7 @@ class LandingDeleteController:UIAlertController {
     private func prepareForIpad() {
         if let popover:UIPopoverPresentationController = self.popoverPresentationController {
             popover.sourceView = self.view
-            popover.permittedArrowDirections = UIPopoverArrowDirection.down
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
             popover.sourceRect = CGRect(
                 x:self.view.center.x,
                 y:self.view.bounds.maxY - Constants.marginBottom,

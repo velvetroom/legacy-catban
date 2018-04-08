@@ -5,8 +5,9 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     private var controller:LandingController!
     private var project:Project!
     private var collection:MockLandingViewCollection!
-    private var expect:XCTestExpectation?
     private var mockModel:MockLandingProtocol!
+    private var navigation:MockNavigationController!
+    private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
         static let originIndex:Int = 1
@@ -23,7 +24,9 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.controller.model.project = project
         self.collection = MockLandingViewCollection()
         self.mockModel = MockLandingProtocol()
+        self.navigation = MockNavigationController()
         self.controller.model.presenter.collection.dataSource.delegate = self.controller
+        self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
@@ -68,8 +71,34 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     func testDeleteItem() {
         self.startExpectation()
         self.controller.model = self.mockModel
+        self.navigation.onPresent = { (controller:UIViewController) in
+            guard
+                let controller:LandingDeleteController = controller as? LandingDeleteController
+            else {
+                return
+            }
+            controller.model.onConfirm?()
+        }
         self.mockModel.onDeleteCardAt = { [weak self] (index:IndexPath) in
             XCTAssertEqual(index, Constants.origin, "Invalid index for deletion")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.deleteItemAt(indexPath:Constants.origin)
+        
+        self.waitExpectation()
+    }
+    
+    func testDeleteItemPresentsDeleteController() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            guard
+                let controller:LandingDeleteController = controller as? LandingDeleteController
+            else {
+                return
+            }
+            XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to assign item name")
+            XCTAssertNotNil(controller.model.onConfirm, "Failed to assign call back")
             self?.expect?.fulfill()
         }
         

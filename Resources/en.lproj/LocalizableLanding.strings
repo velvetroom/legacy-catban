@@ -1,4 +1,5 @@
 LandingController_title="catban";
+LandingController_deleteItemAtName="card?";
 LandingAddController_actionProjectTitle="New project";
 LandingAddController_actionColumnTitle="New column";
 LandingAddController_actionCardTitle="New card";

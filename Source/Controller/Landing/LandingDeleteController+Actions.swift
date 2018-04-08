@@ -7,8 +7,11 @@ extension LandingDeleteController {
     }
     
     private func factoryDeleteAction() {
+        var title:String = String()
+        title.append(String.localizedLanding(key:"LandingDeleteController_actionDeleteTitle"))
+        title.append(self.model.itemName)
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingDeleteController_actionDeleteTitle"),
+            title:title,
             style:UIAlertActionStyle.destructive) { [weak self] (action:UIAlertAction) in
                 self?.model.onConfirm?()
         }

@@ -11,5 +11,8 @@ class TestLandingDelete:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.model.itemName, "Failed to load item name")
+        XCTAssertNil(self.model.onConfirm, "On confirm should not be set")
     }
 }
