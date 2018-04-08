@@ -26,13 +26,6 @@ class TestLanding_UpdateCard:XCTestCase {
         XCTAssertNotNil(self.viewModelLoader, "Failed to load view model loader")
     }
     
-    func testUpdateEditingCard() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        self.model.editingCard = index
-        self.model.updateEditingCard(title:Constants.text)
-        XCTAssertEqual(self.model.project.cardAt(indexPath:index).title, Constants.text, "Failed to update card")
-    }
-    
     func testUpdateEditingCardCallsPresenter() {
         let index:IndexPath = IndexPath(item:0, section:0)
         self.startExpectation()
@@ -42,7 +35,7 @@ class TestLanding_UpdateCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.updateEditingCard(title:Constants.text)
+        self.model.updateCardAt(indexPath:index)
         
         self.waitExpectation()
     }
@@ -55,7 +48,7 @@ class TestLanding_UpdateCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.updateEditingCard(title:Constants.text)
+        self.model.updateCardAt(indexPath:index)
         
         self.waitExpectation()
     }

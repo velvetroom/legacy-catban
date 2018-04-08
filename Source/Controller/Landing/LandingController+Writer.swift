@@ -7,12 +7,8 @@ extension LandingController {
         controller.model.text = card.title
         controller.model.onFinish = { [weak self] (title:String) in
             card.title = title
-            
+            self?.model.updateCardAt(indexPath:indexPath)
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
-    }
-    
-    func writerForCardFinished(title:String) {
-        self.model.updateEditingCard(title:title)
     }
 }

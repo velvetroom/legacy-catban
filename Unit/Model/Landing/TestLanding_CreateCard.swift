@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLanding_Create:XCTestCase {
+class TestLanding_CreateCard:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!

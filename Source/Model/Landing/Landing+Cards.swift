@@ -72,15 +72,9 @@ extension Landing {
         self.collection?.scrollToItem(at:editingCard, at:self.scrollPosition, animated:true)
     }
     
-    func updateEditingCard(title:String) {
-        guard
-            let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
-        self.editingCardReference?.title = title
+    func updateCardAt(indexPath:IndexPath) {
         self.reloadViewModel()
-        self.presenter.updateCardAt(index:editingCard)
+        self.presenter.updateCardAt(index:indexPath)
     }
     
     func createCard() -> IndexPath {

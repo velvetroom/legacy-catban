@@ -7,7 +7,7 @@ class MockLandingProtocol:LandingProtocol {
     var onDeleteCardAt:((IndexPath) -> Void)?
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
-    var onEditingCard:((String) -> Void)?
+    var onUpdateCardAt:((IndexPath) -> Void)?
     var onClearCardSelection:(() -> Void)?
     var onCreateCard:(() -> Void)?
     var onCreateColumn:(() -> Void)?
@@ -45,8 +45,8 @@ class MockLandingProtocol:LandingProtocol {
         
     }
     
-    func updateEditingCard(title:String) {
-        self.onEditingCard?(title)
+    func updateCardAt(indexPath:IndexPath) {
+        self.onUpdateCardAt?(indexPath)
     }
     
     func moveEditingCardRight() {

@@ -8,6 +8,7 @@ class TestLandingController_Writer:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let cardText:String = "lorem ipsum"
+        static let cardUpdatedText:String = "hello world"
         static let wait:TimeInterval = 0.3
     }
     
@@ -42,6 +43,47 @@ class TestLandingController_Writer:XCTestCase {
         }
         
         self.controller.openWriterForCardAt(indexPath:IndexPath(item:2312, section:9342))
+        
+        self.waitExpectations()
+    }
+    
+    func testWriterForCardCallbackTitleUpdated() {
+        self.startExpectation()
+        let card:ProjectCard = self.factoryCard()
+        self.model.returnCardAtIndex = card
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            guard
+                let controller:WriterController = controller as? WriterController
+            else {
+                return
+            }
+            controller.model.onFinish?(Constants.cardUpdatedText)
+            XCTAssertEqual(card.title, Constants.cardUpdatedText, "Failed to update card")
+            self?.expect?.fulfill()
+        }
+        self.controller.openWriterForCardAt(indexPath:IndexPath(item:2312, section:9342))
+        
+        self.waitExpectations()
+    }
+    
+    func testWriterForCardCallbackUpdatesCard() {
+        self.startExpectation()
+        let card:ProjectCard = self.factoryCard()
+        let indexPath:IndexPath = IndexPath(item:2312, section:9342)
+        self.model.returnCardAtIndex = card
+        self.navigation.onPresent = { (controller:UIViewController) in
+            guard
+                let controller:WriterController = controller as? WriterController
+            else {
+                return
+            }
+            controller.model.onFinish?(Constants.cardUpdatedText)
+        }
+        self.model.onUpdateCardAt = { [weak self] (index:IndexPath) in
+            XCTAssertEqual(indexPath, index, "Invalid index to update")
+            self?.expect?.fulfill()
+        }
+        self.controller.openWriterForCardAt(indexPath:indexPath)
         
         self.waitExpectations()
     }
