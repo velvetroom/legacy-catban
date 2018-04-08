@@ -10,7 +10,7 @@ extension LandingAddController {
     
     private func factoryProjectAction() {
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingControllerAdd_actionProjectTitle"),
+            title:String.localizedLanding(key:"LandingAddController_actionProjectTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 
         }
@@ -20,7 +20,7 @@ extension LandingAddController {
     
     private func factoryColumnAction() {
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingControllerAdd_actionColumnTitle"),
+            title:String.localizedLanding(key:"LandingAddController_actionColumnTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 
         }
@@ -30,7 +30,7 @@ extension LandingAddController {
     
     private func factoryCardAction() {
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingControllerAdd_actionCardTitle"),
+            title:String.localizedLanding(key:"LandingAddController_actionCardTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 self?.model.delegate?.createCard()
         }
@@ -40,7 +40,7 @@ extension LandingAddController {
     
     private func factoryCancelAction() {
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingControllerAdd_actionCancelTitle"),
+            title:String.localizedLanding(key:"LandingAddController_actionCancelTitle"),
             style:UIAlertActionStyle.cancel, handler:nil)
         self.model.presenter.actionCancel = action
         self.addAction(action)
