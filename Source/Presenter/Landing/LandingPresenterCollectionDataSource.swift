@@ -18,6 +18,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
         let viewModel:LandingViewModelCollectionItem = self.viewModelFor(index:index)
         cell.labelTitle.text = viewModel.title
         cell.delegate = self.delegate
+        cell.indexPath = index
         cell.configureState()
     }
     

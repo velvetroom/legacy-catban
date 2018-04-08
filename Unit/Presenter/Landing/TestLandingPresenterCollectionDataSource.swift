@@ -32,27 +32,6 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         XCTAssertEqual(items, self.dataSource.viewModel.sections[0].items.count, "Invalid number of items")
     }
     
-    private func configureViewModel() {
-        let sectionA:LandingViewModelCollectionSection = self.sectionWith(items:2)
-        let sectionB:LandingViewModelCollectionSection = self.sectionWith(items:0)
-        var viewModel:LandingViewModelCollection = LandingViewModelCollection()
-        viewModel.sections = [
-            sectionA,
-            sectionB]
-        
-        self.dataSource.viewModel = viewModel
-    }
-    
-    private func sectionWith(items:Int) -> LandingViewModelCollectionSection {
-        var section:LandingViewModelCollectionSection = LandingViewModelCollectionSection()
-        section.title = "section\(self.dataSource.viewModel.sections.count)"
-        for _:Int in 0 ..< items {
-            let item:LandingViewModelCollectionItem = LandingViewModelCollectionItem()
-            section.items.append(item)
-        }
-        return section
-    }
-    
     func testConfigureHeader() {
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
         self.dataSource.configure(header:header, for:0)
@@ -73,11 +52,42 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
             "Failed to assign cell title")
     }
     
-    func testSetDelegateToCellInConfigure() {
+    func testSetDelegateInConfigure() {
         let index:IndexPath = IndexPath(item:0, section:0)
         let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
+        
         self.dataSource.configure(cell:cell, for:index)
         
         XCTAssertNotNil(cell.delegate, "Failed to assign delegate to cell")
+    }
+    
+    func testSetIndexPathInCellConfigure() {
+        let index:IndexPath = IndexPath(item:4, section:0)
+        let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
+        
+        self.dataSource.configure(cell:cell, for:index)
+        
+        XCTAssertEqual(index, cell.indexPath, "Failed to assign indexPath")
+    }
+    
+    private func configureViewModel() {
+        let sectionA:LandingViewModelCollectionSection = self.sectionWith(items:5)
+        let sectionB:LandingViewModelCollectionSection = self.sectionWith(items:0)
+        var viewModel:LandingViewModelCollection = LandingViewModelCollection()
+        viewModel.sections = [
+            sectionA,
+            sectionB]
+        
+        self.dataSource.viewModel = viewModel
+    }
+    
+    private func sectionWith(items:Int) -> LandingViewModelCollectionSection {
+        var section:LandingViewModelCollectionSection = LandingViewModelCollectionSection()
+        section.title = "section\(self.dataSource.viewModel.sections.count)"
+        for _:Int in 0 ..< items {
+            let item:LandingViewModelCollectionItem = LandingViewModelCollectionItem()
+            section.items.append(item)
+        }
+        return section
     }
 }

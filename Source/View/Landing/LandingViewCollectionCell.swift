@@ -4,8 +4,10 @@ class LandingViewCollectionCell:UICollectionViewCell {
     weak var labelTitle:UILabel!
     weak var buttonDelete:UIButton!
     weak var delegate:LandingPresenterCollectionDataSourceProtocol?
+    var indexPath:IndexPath
     
     override init(frame:CGRect) {
+        self.indexPath = IndexPath(item:0, section:0)
         super.init(frame:frame)
         self.configureView()
         self.addOutlets()
