@@ -22,7 +22,7 @@ extension LandingAddController {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingAddController_actionColumnTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
-                
+                self?.model.delegate?.createColumn()
         }
         self.model.presenter.actionColumn = action
         self.addAction(action)

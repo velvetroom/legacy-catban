@@ -5,4 +5,8 @@ extension LandingController:LandingAddControllerDelegateProtocol {
         self.model.createCard()
         self.openWriterForEditingCard()
     }
+    
+    func createColumn() {
+        
+    }
 }

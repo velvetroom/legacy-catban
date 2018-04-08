@@ -49,6 +49,17 @@ class TestLandingController_AddDelegate:XCTestCase {
         self.waitExpectations()
     }
     
+    func testCreateColumn() {
+        self.startExpectation()
+        self.model.onCreateCard = { [weak self] in
+            
+        }
+        
+        self.controller.createColumn()
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
