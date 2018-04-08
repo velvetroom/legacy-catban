@@ -25,7 +25,6 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             else {
                 return contentSize
             }
-            
             return CGSize(width:contentSize.width, height:viewHeight)
         }
     }

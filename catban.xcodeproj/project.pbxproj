@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_Create.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -205,6 +206,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout_Height.swift; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Create.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 				DA519A7E206945AB00514098 /* TestLandingViewCollectionCell.swift */,
 				DA2A0773206CB7A400D02D1C /* TestLandingViewCollectionMenu.swift */,
 				DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */,
+				DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */,
 				DA2538EF20681F1700EEB231 /* MockLandingViewCollection.swift */,
 				DA519A5E2068EA2000514098 /* MockLandingViewCollectionLayout.swift */,
 				DA5B59F42070245300122EEF /* MockCollectionViewDelegate.swift */,
@@ -1176,6 +1179,7 @@
 				DA647A3B20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DAEB818C206D246200E55424 /* TestLandingPresenter.swift in Sources */,
 				DA2538F4206820F100EEB231 /* TestLandingController_Collection.swift in Sources */,
+				DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */,
 				DA2538F22068203C00EEB231 /* TestLandingController_Load.swift in Sources */,
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
 				DA2A0774206CB7A400D02D1C /* TestLandingViewCollectionMenu.swift in Sources */,
