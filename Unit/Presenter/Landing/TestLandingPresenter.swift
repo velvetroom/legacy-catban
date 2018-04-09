@@ -9,6 +9,7 @@ class TestLandingPresenter:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
+        static let columnIndex:Int = 453
     }
     
     override func setUp() {
@@ -84,6 +85,17 @@ class TestLandingPresenter:XCTestCase {
         }
         
         self.presenter.deleteCardAt(index:indexPath)
+        self.waitExpectations()
+    }
+    
+    func testUpdateColumnAtIndex() {
+        self.startExpectation()
+        self.collectionView.onReloadSectionsAt = { [weak self] (sections:IndexSet) in
+            XCTAssertEqual(sections.first, Constants.columnIndex, "Invalid index received")
+            self?.expect?.fulfill()
+        }
+        
+        self.presenter.updateColumnAt(index:Constants.columnIndex)
         self.waitExpectations()
     }
     

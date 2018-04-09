@@ -15,6 +15,11 @@ extension LandingController {
     func openWriterForColumnAt(index:Int) {
         let column:ProjectColumn = self.model.columnAt(index:index)
         let controller:WriterController = WriterController()
+        controller.model.text = column.name
+        controller.model.onFinish = { [weak self] (name:String) in
+            column.name = name
+            self?.model.updateColumnAt(index:index)
+        }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
 }

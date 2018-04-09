@@ -5,6 +5,11 @@ extension Landing {
         return self.project.columnAt(index:index)
     }
     
+    func updateColumnAt(index:Int) {
+        self.reloadViewModel()
+        self.presenter.updateColumnAt(index:index)
+    }
+    
     func createColumn() -> Int {
         return 0
         /*
