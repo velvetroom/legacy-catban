@@ -15,6 +15,7 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     }
     
     func editHeaderAt(index:Int) {
+        self.model.clearCardSelection()
         let controller:LandingColumnEditController = LandingColumnEditController()
         controller.model.onRename = { [weak self] in
             self?.openWriterForColumnAt(index:index)

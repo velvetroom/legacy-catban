@@ -107,6 +107,18 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.waitExpectation()
     }
     
+    func testEditHeaderAtClearsCardSelectiopn() {
+        self.startExpectation()
+        self.controller.model = self.mockModel
+        self.mockModel.onClearCardSelection = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.editHeaderAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
     func testEditHeaderAtPresentsEditController() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
