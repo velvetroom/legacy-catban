@@ -174,6 +174,11 @@
 		DAD3C479207BADF100F84829 /* LandingColumnEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C478207BADF100F84829 /* LandingColumnEditController.swift */; };
 		DAD3C47B207BAE9600F84829 /* LandingColumnEditController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C47A207BAE9600F84829 /* LandingColumnEditController+Constants.swift */; };
 		DAD3C47D207BAEB400F84829 /* LandingColumnEditController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C47C207BAEB400F84829 /* LandingColumnEditController+Actions.swift */; };
+		DAD3C47F207BAF9800F84829 /* TestLandingColumnEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C47E207BAF9800F84829 /* TestLandingColumnEdit.swift */; };
+		DAD3C481207BB01700F84829 /* LandingColumnEditProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C480207BB01700F84829 /* LandingColumnEditProtocol.swift */; };
+		DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C482207BB01F00F84829 /* LandingColumnEdit.swift */; };
+		DAD3C485207BB15200F84829 /* LandingColumnEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C484207BB15200F84829 /* LandingColumnEditPresenter.swift */; };
+		DAD3C487207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3C486207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift */; };
 		DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD433F2206540AC002C0DEE /* LocalizableProject.strings */; };
 		DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */; };
 		DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433F720654667002C0DEE /* ProjectColumn.swift */; };
@@ -401,6 +406,11 @@
 		DAD3C478207BADF100F84829 /* LandingColumnEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingColumnEditController.swift; sourceTree = "<group>"; };
 		DAD3C47A207BAE9600F84829 /* LandingColumnEditController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingColumnEditController+Constants.swift"; sourceTree = "<group>"; };
 		DAD3C47C207BAEB400F84829 /* LandingColumnEditController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingColumnEditController+Actions.swift"; sourceTree = "<group>"; };
+		DAD3C47E207BAF9800F84829 /* TestLandingColumnEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingColumnEdit.swift; sourceTree = "<group>"; };
+		DAD3C480207BB01700F84829 /* LandingColumnEditProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingColumnEditProtocol.swift; sourceTree = "<group>"; };
+		DAD3C482207BB01F00F84829 /* LandingColumnEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingColumnEdit.swift; sourceTree = "<group>"; };
+		DAD3C484207BB15200F84829 /* LandingColumnEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingColumnEditPresenter.swift; sourceTree = "<group>"; };
+		DAD3C486207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingColumnEditPresenter.swift; sourceTree = "<group>"; };
 		DAD433F3206540AC002C0DEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableProject.strings; sourceTree = "<group>"; };
 		DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectColumn.swift; sourceTree = "<group>"; };
 		DAD433F720654667002C0DEE /* ProjectColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumn.swift; sourceTree = "<group>"; };
@@ -650,6 +660,7 @@
 				DA54783F207A1D7300F9301E /* TestLanding_DeleteCard.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
 				DA547845207A32B200F9301E /* TestLandingDelete.swift */,
+				DAD3C47E207BAF9800F84829 /* TestLandingColumnEdit.swift */,
 				DADE83BE2070E40E0053E7A0 /* MockLandingProtocol.swift */,
 			);
 			path = Landing;
@@ -666,6 +677,8 @@
 				DA391AE5207751EA00484273 /* LandingAdd.swift */,
 				DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */,
 				DA54784F207A3B2B00F9301E /* LandingDelete.swift */,
+				DAD3C480207BB01700F84829 /* LandingColumnEditProtocol.swift */,
+				DAD3C482207BB01F00F84829 /* LandingColumnEdit.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -713,6 +726,7 @@
 				DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */,
 				DA391ADF2077507E00484273 /* LandingAddPresenter.swift */,
 				DA547853207A3C0400F9301E /* LandingDeletePresenter.swift */,
+				DAD3C484207BB15200F84829 /* LandingColumnEditPresenter.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -732,6 +746,7 @@
 				DA5B6D14206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift */,
 				DA391ADB2077500B00484273 /* TestLandingAddPresenter.swift */,
 				DA547855207A3D4600F9301E /* TestLandingDeletePresenter.swift */,
+				DAD3C486207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift */,
 				DA63F792206DB2C30018F416 /* MockLandingPresenterProtocol.swift */,
 				DA63F790206DB0BA0018F416 /* MockLandingPresenterOutlets.swift */,
 				DAABC2AD206A7C48003B4BE4 /* MockLandingPresenterCollection.swift */,
@@ -1145,6 +1160,7 @@
 				DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA519A7920693F1300514098 /* LandingViewModelLoaderOutlets+Constants.swift in Sources */,
 				DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */,
+				DAD3C485207BB15200F84829 /* LandingColumnEditPresenter.swift in Sources */,
 				DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */,
 				DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */,
 				DA6F1B74207359AA001248E4 /* WriterController+Constants.swift in Sources */,
@@ -1182,6 +1198,7 @@
 				DA6F1B6E207353B7001248E4 /* Writer.swift in Sources */,
 				DA54784A207A364500F9301E /* LandingDeleteController.swift in Sources */,
 				DA8AB27620650388005A393E /* ExtensionString.swift in Sources */,
+				DAD3C481207BB01700F84829 /* LandingColumnEditProtocol.swift in Sources */,
 				DA6F1B8820736109001248E4 /* WriterPresenterOutletsList.swift in Sources */,
 				DAD3C479207BADF100F84829 /* LandingColumnEditController.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
@@ -1225,6 +1242,7 @@
 				DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */,
 				DA391ADA20774B2500484273 /* LandingController+AddDelegate.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
+				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,
 				DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */,
@@ -1288,9 +1306,11 @@
 				DA519A7B2069408900514098 /* TestLandingViewModelOutlets.swift in Sources */,
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
+				DAD3C47F207BAF9800F84829 /* TestLandingColumnEdit.swift in Sources */,
 				DA657EA520752F2D003C1645 /* TestLanding_UpdateCard.swift in Sources */,
 				DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */,
 				DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */,
+				DAD3C487207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */,
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,

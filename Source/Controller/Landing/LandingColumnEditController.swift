@@ -1,10 +1,10 @@
 import UIKit
 
 class LandingColumnEditController:UIAlertController {
-    var model:LandingDeleteProtocol
+    var model:LandingColumnEditProtocol
     
     init() {
-        self.model = LandingDelete()
+        self.model = LandingColumnEdit()
         super.init(nibName:nil, bundle:nil)
     }
     
