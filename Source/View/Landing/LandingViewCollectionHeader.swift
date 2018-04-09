@@ -1,9 +1,13 @@
 import UIKit
 
 class LandingViewCollectionHeader:UICollectionReusableView {
+    weak var delegate:LandingPresenterCollectionDataSourceProtocol?
+    var section:Int
     private(set) weak var labelTitle:UILabel!
+    private(set) weak var button:UIButton!
     
     override init(frame:CGRect) {
+        self.section = 0
         super.init(frame:frame)
         self.configureView()
         self.addOutlets()
@@ -11,6 +15,10 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    @objc func selectorEdit(sender button:UIButton) {
+        
     }
     
     private func configureView() {
@@ -21,6 +29,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     
     private func addOutlets() {
         self.addTitle()
+        self.addButton()
     }
     
     private func addTitle() {
@@ -39,5 +48,19 @@ class LandingViewCollectionHeader:UICollectionReusableView {
         labelTitle.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         labelTitle.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         labelTitle.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    }
+    
+    private func addButton() {
+        let button:UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action:#selector(self.selectorEdit(sender:)), for:UIControlEvents.touchUpInside)
+        self.button = button
+        
+        self.addSubview(button)
+        
+        button.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        button.heightAnchor.constraint(equalToConstant:Constants.buttonHeight).isActive = true
+        button.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        button.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

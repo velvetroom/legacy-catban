@@ -13,4 +13,8 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
+    
+    func editHeaderAt(index:Int) {
+        
+    }
 }

@@ -52,7 +52,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
             "Failed to assign cell title")
     }
     
-    func testSetDelegateInConfigure() {
+    func testSetDelegateForCellInConfigure() {
         let index:IndexPath = IndexPath(item:0, section:0)
         let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
         
@@ -68,6 +68,25 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         self.dataSource.configure(cell:cell, for:index)
         
         XCTAssertEqual(index, cell.indexPath, "Failed to assign indexPath")
+    }
+    
+    func testSetDelegateForHeaderInConfigure() {
+        let index:Int = 0
+        let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
+        
+        self.dataSource.configure(header:header, for:index)
+        
+        XCTAssertNotNil(header.delegate, "Failed to assign delegate to header")
+    }
+    
+    func testSetSectionForHeaderInConfigure() {
+        let index:Int = 0
+        let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
+        header.section = 999324
+        
+        self.dataSource.configure(header:header, for:index)
+        
+        XCTAssertEqual(header.section, index, "Failed to update section on header")
     }
     
     private func configureViewModel() {
