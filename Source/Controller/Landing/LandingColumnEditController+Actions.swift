@@ -10,7 +10,7 @@ extension LandingColumnEditController {
     private func factoryRenameAction() {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingColumnEditController_actionRenameTitle"),
-            style:UIAlertActionStyle.destructive) { [weak self] (action:UIAlertAction) in
+            style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
                 self?.model.onRename?()
         }
         self.model.presenter.actionRename = action

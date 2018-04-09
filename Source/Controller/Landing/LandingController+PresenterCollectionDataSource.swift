@@ -15,6 +15,10 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     }
     
     func editHeaderAt(index:Int) {
-        
+        let controller:LandingColumnEditController = LandingColumnEditController()
+        controller.model.onRename = { [weak self] in
+            self?.openWriterForColumnAt(index:index)
+        }
+        self.navigationController?.present(controller, animated:true, completion:nil)
     }
 }

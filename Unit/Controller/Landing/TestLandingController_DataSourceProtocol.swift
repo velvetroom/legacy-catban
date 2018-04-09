@@ -107,6 +107,54 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.waitExpectation()
     }
     
+    func testEditHeaderAtPresentsEditController() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            guard
+                let controller:LandingColumnEditController = controller as? LandingColumnEditController
+            else {
+                return
+            }
+            XCTAssertNotNil(controller.model.onRename, "Failed to assign call back")
+            XCTAssertNotNil(controller.model.onDelete, "Failed to assign call back")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.editHeaderAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
+    func testEditHeaderAtOnRenameCallBack() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+                controller.model.onRename?()
+            } else if let _:WriterController = controller as? WriterController {
+                self?.expect?.fulfill()
+            }
+        }
+        
+        self.controller.editHeaderAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
+    func testEditHeaderAtOnDeleteCallBack() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+                controller.model.onDelete?()
+            } else if let _:LandingDeleteController = controller as? LandingDeleteController {
+                self?.expect?.fulfill()
+            }
+        }
+        
+        self.controller.editHeaderAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
     private func validateOriginalStateBeforeItemInSameColumn() {
         let initialTitle:String = self.titleAt(card:Constants.destinationIndex, in:Constants.columnIndex)
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)
