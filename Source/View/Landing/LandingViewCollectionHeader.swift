@@ -18,7 +18,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     }
     
     @objc func selectorEdit(sender button:UIButton) {
-        
+        self.delegate?.editHeaderAt(index:self.section)
     }
     
     private func configureView() {

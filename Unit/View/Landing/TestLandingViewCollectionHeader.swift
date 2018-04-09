@@ -7,6 +7,7 @@ class TestLandingViewCollectionHeader:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
+        static let section:Int = 99893
     }
     
     override func setUp() {
@@ -14,6 +15,7 @@ class TestLandingViewCollectionHeader:XCTestCase {
         self.header = LandingViewCollectionHeader(frame:CGRect.zero)
         self.delegate = MockLandingPresenterCollectionDataSourceProtocol()
         self.header.delegate = self.delegate
+        self.header.section = Constants.section
     }
     
     func testLoad() {
@@ -27,6 +29,12 @@ class TestLandingViewCollectionHeader:XCTestCase {
     
     func testSelectorEdit() {
         self.startExpectation()
+        self.delegate.onEditHeader = { [weak self] (section:Int) in
+            XCTAssertEqual(section, Constants.section, "Invalid section received")
+            self?.expect?.fulfill()
+        }
+        
+        self.header.selectorEdit(sender:UIButton())
         
         self.waitExpectation()
     }
