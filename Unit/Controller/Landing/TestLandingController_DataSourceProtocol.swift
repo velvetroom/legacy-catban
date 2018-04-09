@@ -155,6 +155,14 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.waitExpectation()
     }
     
+    func testDeleteSectionAt() {
+        self.startExpectation()
+        
+        self.controller.deleteSectionAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
     private func validateOriginalStateBeforeItemInSameColumn() {
         let initialTitle:String = self.titleAt(card:Constants.destinationIndex, in:Constants.columnIndex)
         let expectedTitle:String = self.titleAt(card:Constants.originIndex, in:Constants.columnIndex)

@@ -19,6 +19,18 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         controller.model.onRename = { [weak self] in
             self?.openWriterForColumnAt(index:index)
         }
+        controller.model.onDelete = { [weak self] in
+            self?.deleteSectionAt(index:index)
+        }
+        self.navigationController?.present(controller, animated:true, completion:nil)
+    }
+    
+    func deleteSectionAt(index:Int) {
+        let controller:LandingDeleteController = LandingDeleteController()
+        controller.model.itemName = String.localizedLanding(key:"LandingController_deleteSectionAtName")
+        controller.model.onConfirm = { [weak self] in
+            
+        }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
 }
