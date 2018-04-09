@@ -8,6 +8,7 @@ class MockProjectProtocol:ProjectProtocol {
     var onIndexForNewCard:((IndexPath) -> Void)?
     var onInsertCardAt:(() -> Void)?
     var onDeleteCardAt:((IndexPath) -> Void)?
+    var onColumnAtIndex:((Int) -> Void)?
     var returnCard:ProjectCard
     var returnColumn:ProjectColumn
     var indexForCard:IndexPath
@@ -42,6 +43,7 @@ class MockProjectProtocol:ProjectProtocol {
     }
     
     func columnAt(index:Int) -> ProjectColumn {
+        self.onColumnAtIndex?(index)
         return self.returnColumn
     }
     

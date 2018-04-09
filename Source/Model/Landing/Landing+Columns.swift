@@ -1,6 +1,10 @@
 import Foundation
 
 extension Landing {
+    func columnAt(index:Int) -> ProjectColumn {
+        return self.project.columnAt(index:index)
+    }
+    
     func createColumn() -> Int {
         return 0
         /*

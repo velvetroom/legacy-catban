@@ -10,6 +10,7 @@ protocol LandingProtocol {
     func reloadViewModel()
     func clearCardSelection()
     func cardAt(indexPath:IndexPath) -> ProjectCard
+    func columnAt(index:Int) -> ProjectColumn
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func deleteCardAt(indexPath:IndexPath)

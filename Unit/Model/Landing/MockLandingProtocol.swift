@@ -11,18 +11,21 @@ class MockLandingProtocol:LandingProtocol {
     var onClearCardSelection:(() -> Void)?
     var onCreateCard:(() -> Void)?
     var onCreateColumn:(() -> Void)?
+    var onColumnAtIndex:((Int) -> Void)?
     var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
     var returnCardAtIndex:ProjectCard
+    var returnColumnAtIndex:ProjectColumn
     
     init() {
         self.project = Project()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.returnCardAtIndex = ProjectCard()
+        self.returnColumnAtIndex = ProjectColumn()
     }
     
     func load() {
@@ -77,5 +80,10 @@ class MockLandingProtocol:LandingProtocol {
     func createColumn() -> Int {
         self.onCreateColumn?()
         return 0
+    }
+    
+    func columnAt(index:Int) -> ProjectColumn {
+        self.onColumnAtIndex?(index)
+        return self.returnColumnAtIndex
     }
 }

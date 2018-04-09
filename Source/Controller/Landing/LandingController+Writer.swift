@@ -13,6 +13,8 @@ extension LandingController {
     }
     
     func openWriterForColumnAt(index:Int) {
-        
+        let column:ProjectColumn = self.model.columnAt(index:index)
+        let controller:WriterController = WriterController()
+        self.navigationController?.present(controller, animated:true, completion:nil)
     }
 }
