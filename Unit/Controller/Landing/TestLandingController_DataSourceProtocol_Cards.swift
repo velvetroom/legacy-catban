@@ -36,12 +36,11 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
             }
             controller.model.onConfirm?()
         }
-        self.model.onDeleteCardAt = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, Constants.index, "Invalid index for deletion")
+        self.model.onDeleteEditingCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        self.controller.deleteItemAt(indexPath:Constants.index)
+        self.controller.deleteSelectedItem()
         
         self.waitExpectation()
     }
@@ -59,7 +58,7 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.deleteItemAt(indexPath:Constants.index)
+        self.controller.deleteSelectedItem()
         
         self.waitExpectation()
     }

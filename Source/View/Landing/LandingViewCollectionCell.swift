@@ -4,10 +4,8 @@ class LandingViewCollectionCell:UICollectionViewCell {
     weak var labelTitle:UILabel!
     weak var buttonDelete:UIButton!
     weak var delegate:LandingPresenterCollectionDataSourceProtocol?
-    var indexPath:IndexPath
     
     override init(frame:CGRect) {
-        self.indexPath = IndexPath(item:0, section:0)
         super.init(frame:frame)
         self.configureView()
         self.addOutlets()
@@ -18,7 +16,7 @@ class LandingViewCollectionCell:UICollectionViewCell {
     }
     
     @objc func selectorDelete(sender button:UIButton) {
-        self.delegate?.deleteItemAt(indexPath:self.indexPath)
+        self.delegate?.deleteSelectedItem()
     }
     
     private func configureView() {

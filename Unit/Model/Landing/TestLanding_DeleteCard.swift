@@ -10,6 +10,7 @@ class TestLanding_DeleteCard:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
+        static let indexPath:IndexPath = IndexPath(item:324312, section:43212)
     }
     
     override func setUp() {
@@ -23,6 +24,7 @@ class TestLanding_DeleteCard:XCTestCase {
         self.model.presenter = self.presenter
         self.model.presenter.outlets.list.viewCollection = self.collection
         self.model.viewModelLoader = self.viewModelLoader
+        self.model.editingCard = Constants.indexPath
     }
     
     func testLoad() {
@@ -35,7 +37,7 @@ class TestLanding_DeleteCard:XCTestCase {
     
     func testDeleteClearsCurrentSelection() {
         self.model.editingCard = IndexPath(item:1320, section:230)
-        self.model.deleteCardAt(indexPath:IndexPath(item:0, section:0))
+        self.model.deleteEditingCard()
         
         XCTAssertNil(self.model.editingCard, "Failed to clear editing card")
     }
@@ -46,7 +48,7 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCardAt(indexPath:IndexPath(item:0, section:0))
+        self.model.deleteEditingCard()
         
         self.waitExpectation()
     }
@@ -57,33 +59,31 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCardAt(indexPath:IndexPath(item:0, section:0))
+        self.model.deleteEditingCard()
         
         self.waitExpectation()
     }
     
     func testDeleteCallsDeleteOnProject() {
         self.startExpectation()
-        let indexPath:IndexPath = IndexPath(item:12310, section:4320)
         self.project.onDeleteCardAt = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, indexPath, "Invalid index path received")
+            XCTAssertEqual(index, Constants.indexPath, "Invalid index path received")
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCardAt(indexPath:indexPath)
+        self.model.deleteEditingCard()
         
         self.waitExpectation()
     }
     
     func testDeleteCallsDeleteOnPresenter() {
         self.startExpectation()
-        let indexPath:IndexPath = IndexPath(item:12310, section:4320)
         self.presenter.onDeleteCardAtIndex = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, indexPath, "Invalid index path received")
+            XCTAssertEqual(index, Constants.indexPath, "Invalid index path received")
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCardAt(indexPath:indexPath)
+        self.model.deleteEditingCard()
         
         self.waitExpectation()
     }

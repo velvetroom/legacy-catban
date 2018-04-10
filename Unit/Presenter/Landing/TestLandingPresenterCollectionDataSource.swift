@@ -64,15 +64,6 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         XCTAssertNotNil(cell.delegate, "Failed to assign delegate to cell")
     }
     
-    func testSetIndexPathInCellConfigure() {
-        let index:IndexPath = IndexPath(item:4, section:0)
-        let cell:LandingViewCollectionCell = LandingViewCollectionCell(frame:CGRect.zero)
-        
-        self.dataSource.configure(cell:cell, for:index)
-        
-        XCTAssertEqual(index, cell.indexPath, "Failed to assign indexPath")
-    }
-    
     func testSetDelegateForHeaderInConfigure() {
         let index:Int = 0
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)

@@ -14,7 +14,7 @@ protocol LandingProtocol {
     func indexFor(column:ProjectColumn) -> Int
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
-    func deleteCardAt(indexPath:IndexPath)
+    func deleteEditingCard()
     func deleteColumnAt(index:Int)
     func moveEditingCardRight()
     func moveEditingCardLeft()

@@ -20,7 +20,6 @@ class TestLandingViewCollectionCell:XCTestCase {
         XCTAssertNotNil(self.cell, "Failed to load cell")
         XCTAssertNotNil(self.cell.labelTitle, "Failed to load title")
         XCTAssertNotNil(self.cell.buttonDelete, "Failed to load button")
-        XCTAssertNotNil(self.cell.indexPath, "Failed to load index path")
         XCTAssertNotNil(self.cell.delegate, "Failed to load delegate")
     }
     
@@ -35,14 +34,11 @@ class TestLandingViewCollectionCell:XCTestCase {
     }
     
     func testDeleteItem() {
-        let indexPath:IndexPath = IndexPath(item:2923, section:3242)
         self.startExpectation()
-        self.delegate.onDeleteItem = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, indexPath, "Invalid index for deletion")
+        self.delegate.onDeleteItem = { [weak self] in
             self?.expect?.fulfill()
         }
         
-        self.cell.indexPath = indexPath
         self.cell.selectorDelete(sender:UIButton())
         
         self.waitExpectation()

@@ -9,11 +9,11 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         self.model.moveCardFrom(origin:origin, to:destination)
     }
     
-    func deleteItemAt(indexPath:IndexPath) {
+    func deleteSelectedItem() {
         let controller:LandingDeleteController = LandingDeleteController()
         controller.model.itemName = String.localizedLanding(key:"LandingController_deleteItemAtName")
         controller.model.onConfirm = { [weak self] in
-            self?.model.deleteCardAt(indexPath:indexPath)
+            self?.model.deleteEditingCard()
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }

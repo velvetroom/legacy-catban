@@ -3,7 +3,7 @@ import Foundation
 
 class MockLandingPresenterCollectionDataSourceProtocol:LandingPresenterCollectionDataSourceProtocol {
     var onMoveItem:((IndexPath, IndexPath) -> Void)?
-    var onDeleteItem:((IndexPath) -> Void)?
+    var onDeleteItem:(() -> Void)?
     var onColumnAt:((Int) -> Void)?
     var onEditColumn:((ProjectColumn) -> Void)?
     var returnColumn:ProjectColumn
@@ -16,8 +16,8 @@ class MockLandingPresenterCollectionDataSourceProtocol:LandingPresenterCollectio
         self.onMoveItem?(origin, destination)
     }
     
-    func deleteItemAt(indexPath:IndexPath) {
-        self.onDeleteItem?(indexPath)
+    func deleteSelectedItem() {
+        self.onDeleteItem?()
     }
     
     func columnAt(index:Int) -> ProjectColumn {

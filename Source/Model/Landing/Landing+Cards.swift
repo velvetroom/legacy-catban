@@ -35,10 +35,15 @@ extension Landing {
         self.reloadViewModel()
     }
     
-    func deleteCardAt(indexPath:IndexPath) {
-        self.project.deleteCardAt(indexPath:indexPath)
+    func deleteEditingCard() {
+        guard
+            let editingCard:IndexPath = self.editingCard
+        else {
+            return
+        }
+        self.project.deleteCardAt(indexPath:editingCard)
         self.clearCardSelection()
-        self.presenter.deleteCardAt(index:indexPath)
+        self.presenter.deleteCardAt(index:editingCard)
     }
     
     func moveEditingCardRight() {
