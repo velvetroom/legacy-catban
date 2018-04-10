@@ -30,7 +30,7 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         let controller:LandingDeleteController = LandingDeleteController()
         controller.model.itemName = String.localizedLanding(key:"LandingController_deleteSectionAtName")
         controller.model.onConfirm = { [weak self] in
-            
+            self?.model.deleteColumnAt(index:index)
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }

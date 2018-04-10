@@ -5,6 +5,7 @@ class MockLandingProtocol:LandingProtocol {
     var onReloadViewModel:(() -> Void)?
     var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
     var onDeleteCardAt:((IndexPath) -> Void)?
+    var onDeleteColumnAt:((Int) -> Void)?
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
     var onUpdateCardAt:((IndexPath) -> Void)?
@@ -71,6 +72,10 @@ class MockLandingProtocol:LandingProtocol {
     
     func deleteCardAt(indexPath:IndexPath) {
         self.onDeleteCardAt?(indexPath)
+    }
+    
+    func deleteColumnAt(index:Int) {
+        self.onDeleteColumnAt?(index)
     }
     
     func scrollToEditingCard() {

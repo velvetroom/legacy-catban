@@ -21,4 +21,8 @@ extension Landing {
         self.presenter.insertCardAt(index:index)
         self.scrollToEditingCard()*/
     }
+    
+    func deleteColumnAt(index:Int) {
+        
+    }
 }

@@ -167,8 +167,40 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.waitExpectation()
     }
     
-    func testDeleteSectionAt() {
+    func testDeleteSectionAtPresentsDeleteController() {
         self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            guard
+                let controller:LandingDeleteController = controller as? LandingDeleteController
+            else {
+                return
+            }
+            XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to assign item name")
+            XCTAssertNotNil(controller.model.onConfirm, "Failed to assign call back")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.deleteSectionAt(index:Constants.originIndex)
+        
+        self.waitExpectation()
+    }
+    
+    func testDeleteSectionAtOnConfirmCallsModel() {
+        self.startExpectation()
+        self.controller.model = self.mockModel
+        self.navigation.onPresent = { (controller:UIViewController) in
+            guard
+                let controller:LandingDeleteController = controller as? LandingDeleteController
+            else {
+                return
+            }
+            controller.model.onConfirm?()
+        }
+        
+        self.mockModel.onDeleteColumnAt = { [weak self] (index:Int) in
+            XCTAssertEqual(index, Constants.originIndex, "Invalid index for deletion")
+            self?.expect?.fulfill()
+        }
         
         self.controller.deleteSectionAt(index:Constants.originIndex)
         
