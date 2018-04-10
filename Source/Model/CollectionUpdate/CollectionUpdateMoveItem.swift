@@ -10,6 +10,6 @@ class CollectionUpdateMoveItem:CollectionUpdateProtocol {
     }
     
     func strategy(collectionView:UICollectionView) {
-        
+        collectionView.moveItem(at:self.origin, to:self.destination)
     }
 }
