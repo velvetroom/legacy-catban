@@ -2,7 +2,7 @@ import Foundation
 
 extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     func columnAt(index:Int) -> ProjectColumn {
-        return ProjectColumn()
+        return self.model.columnAt(index:index)
     }
     
     func moveItemFrom(origin:IndexPath, to destination:IndexPath) {
