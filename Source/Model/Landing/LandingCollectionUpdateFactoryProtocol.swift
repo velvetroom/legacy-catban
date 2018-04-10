@@ -1,5 +1,5 @@
 import Foundation
 
 protocol LandingCollectionUpdateFactoryProtocol {
-    func updatesForMovingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol]
+    func movingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol]
 }

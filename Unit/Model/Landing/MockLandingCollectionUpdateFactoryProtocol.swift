@@ -2,10 +2,10 @@ import Foundation
 @testable import catban
 
 class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryProtocol {
-    var onUpdatesForMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
+    var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
     
-    func updatesForMovingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
-        self.onUpdatesForMovingItemsFromColumn?(index, project)
+    func movingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+        self.onMovingItemsFromColumn?(index, project)
         return []
     }
 }

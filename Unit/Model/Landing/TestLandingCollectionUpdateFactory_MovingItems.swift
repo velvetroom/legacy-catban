@@ -19,8 +19,7 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
     func testUpdatesForMovingItemsFromColumnWithEmptyColumnAndOnlyOneColumn() {
         self.addColumnWith(cards:0)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.updatesForMovingItemsFromColumn(
-            index:0, in:self.project)
+        let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:0, in:self.project)
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
     }
@@ -29,8 +28,7 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:0)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.updatesForMovingItemsFromColumn(
-            index:1, in:self.project)
+        let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:1, in:self.project)
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
     }
@@ -41,10 +39,9 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         self.addColumnWith(cards:cards)
         self.addColumnWith(cards:0)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.updatesForMovingItemsFromColumn(
-            index:column, in:self.project)
+        let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:column, in:self.project)
         
-        XCTAssertEqual(updates.count, cards, "Updates should be equal to the amount of cards")
+        XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
         self.validate(updates:updates, with:column)
     }
     
@@ -54,10 +51,9 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:cards)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.updatesForMovingItemsFromColumn(
-            index:column, in:self.project)
+        let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:column, in:self.project)
         
-        XCTAssertEqual(updates.count, cards, "Updates should be equal to the amount of cards")
+        XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
         self.validate(updates:updates, with:column)
     }
     
@@ -70,8 +66,18 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
     }
     
     private func validate(updates:[CollectionUpdateProtocol], with column:Int) {
-        for update:CollectionUpdateProtocol in updates {
-            
+        let count:Int = updates.count
+        for index:Int in 0 ..< count {
+            guard
+                let update:CollectionUpdateMoveItem = updates[index] as? CollectionUpdateMoveItem
+            else {
+                XCTAssertTrue(false, "Update is not moving item type")
+                return
+            }
+            XCTAssertEqual(update.origin.item, index, "Invalid origin item")
+            XCTAssertEqual(update.origin.section, column, "Invalid origin column")
+            XCTAssertGreaterThanOrEqual(update.destination.item, index, "Invalid destination item")
+            XCTAssertNotEqual(update.destination.section, column, "Invalid destination column")
         }
     }
 }

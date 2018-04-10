@@ -2,11 +2,11 @@ import XCTest
 @testable import catban
 
 class TestCollectionUpdateInsertItems:XCTestCase {
-    private var update:CollectionUpdateInsertItems!
+    private var update:CollectionUpdateMoveItem!
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateInsertItems()
+        self.update = CollectionUpdateMoveItem()
     }
     
     func testLoad() {
