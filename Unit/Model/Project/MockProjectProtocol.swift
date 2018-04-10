@@ -4,6 +4,7 @@ import Foundation
 class MockProjectProtocol:ProjectProtocol {
     var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var onCardAtIndex:((IndexPath) -> Void)?
+    var onIndexForColumn:((ProjectColumn) -> Void)?
     var onIndexForCard:(() -> Void)?
     var onIndexForNewCard:((IndexPath) -> Void)?
     var onInsertCardAt:(() -> Void)?
@@ -12,6 +13,7 @@ class MockProjectProtocol:ProjectProtocol {
     var onColumnAtIndex:((Int) -> Void)?
     var returnCard:ProjectCard
     var returnColumn:ProjectColumn
+    var returnIndexForColumn:Int
     var indexForCard:IndexPath
     var columns:[ProjectColumn]
     var name:String
@@ -22,6 +24,7 @@ class MockProjectProtocol:ProjectProtocol {
         self.indexForCard = IndexPath(item:0, section:0)
         self.returnCard = ProjectCard()
         self.returnColumn = ProjectColumn()
+        self.returnIndexForColumn = 0
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
@@ -31,6 +34,11 @@ class MockProjectProtocol:ProjectProtocol {
     func indexOnRightForCardAt(index:IndexPath) -> IndexPath {
         self.onIndexForCard?()
         return self.indexForCard
+    }
+    
+    func indexFor(column:ProjectColumn) -> Int {
+        self.onIndexForColumn?(column)
+        return self.returnIndexForColumn
     }
     
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath {

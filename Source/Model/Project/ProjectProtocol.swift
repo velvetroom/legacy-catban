@@ -8,6 +8,7 @@ protocol ProjectProtocol {
     func columnAt(index:Int) -> ProjectColumn
     func columnAt(indexPath:IndexPath) -> ProjectColumn
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
+    func indexFor(column:ProjectColumn) -> Int
     func indexOnRightForCardAt(index:IndexPath) -> IndexPath
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath
     func indexForNewCard() -> IndexPath

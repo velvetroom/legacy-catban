@@ -65,6 +65,19 @@ class TestLanding_Columns:XCTestCase {
         self.waitExpectations()
     }
     
+    func testIndexForColumn() {
+        self.startExpectation()
+        let column:ProjectColumn = ProjectColumn()
+        self.project.onIndexForColumn = { [weak self] (receivedColumn:ProjectColumn) in
+            XCTAssertTrue(column === receivedColumn, "Invalid column received")
+            self?.expect?.fulfill()
+        }
+        
+        let _:Int = self.model.indexFor(column:column)
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

@@ -5,6 +5,7 @@ class TestProject:XCTestCase {
     private var project:Project!
     private struct Constants {
         static let indexPath:IndexPath = IndexPath(item:1, section:0)
+        static let columnIndex:Int = 1
     }
     
     override func setUp() {
@@ -24,5 +25,18 @@ class TestProject:XCTestCase {
             Constants.indexPath.item]
         
         XCTAssertTrue(card === compareCard, "Incorrect card returned")
+    }
+    
+    func testColumnAtIndex() {
+        let expectedColumn:ProjectColumn = self.project.columns[Constants.columnIndex]
+        let column:ProjectColumn = self.project.columnAt(index:Constants.columnIndex)
+        
+        XCTAssertTrue(expectedColumn === column, "Invalid column returned")
+    }
+    
+    func testIndexForColumn() {
+        let column:ProjectColumn = self.project.columns[Constants.columnIndex]
+        let index:Int = self.project.indexFor(column:column)
+        XCTAssertEqual(index, Constants.columnIndex, "Invalid index returned")
     }
 }

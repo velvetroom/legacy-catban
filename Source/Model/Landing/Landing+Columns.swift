@@ -6,7 +6,7 @@ extension Landing {
     }
     
     func indexFor(column:ProjectColumn) -> Int {
-        return 0
+        return self.project.indexFor(column:column)
     }
     
     func updateColumnAt(index:Int) {

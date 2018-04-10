@@ -8,6 +8,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     private var column:ProjectColumn!
     private var expect:XCTestExpectation?
     private struct Constants {
+        static let name:String = "lorem ipsum"
         static let wait:TimeInterval = 0.3
     }
     
@@ -18,6 +19,8 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.navigation = MockNavigationController()
         self.column = ProjectColumn()
         self.controller.model = self.model
+        self.model.returnColumnAtIndex = self.column
+        self.column.name = Constants.name
         self.navigation.addChildViewController(self.controller)
     }
     
@@ -78,6 +81,38 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
             if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
                 controller.model.onDelete?()
             } else if let _:LandingDeleteController = controller as? LandingDeleteController {
+                self?.expect?.fulfill()
+            }
+        }
+        
+        self.controller.edit(column:self.column)
+        
+        self.waitExpectation()
+    }
+    
+    func testEditHeaderUsesColumnForRenameCallback() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+                controller.model.onRename?()
+            } else if let controller:WriterController = controller as? WriterController {
+                XCTAssertEqual(controller.model.text, self?.column.name, "Invalid text on callback")
+                self?.expect?.fulfill()
+            }
+        }
+        
+        self.controller.edit(column:self.column)
+        
+        self.waitExpectation()
+    }
+    
+    func testEditHeaderUsesColumnForDeleteCallback() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+                controller.model.onDelete?()
+            } else if let controller:LandingDeleteController = controller as? LandingDeleteController {
+                XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to assign item name")
                 self?.expect?.fulfill()
             }
         }
