@@ -11,6 +11,7 @@ protocol LandingProtocol {
     func clearCardSelection()
     func cardAt(indexPath:IndexPath) -> ProjectCard
     func columnAt(index:Int) -> ProjectColumn
+    func indexFor(column:ProjectColumn) -> Int
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func deleteCardAt(indexPath:IndexPath)

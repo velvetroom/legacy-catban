@@ -4,6 +4,7 @@ import XCTest
 class TestLandingPresenterCollectionDataSource:XCTestCase {
     private var dataSource:LandingPresenterCollectionDataSource!
     private var controller:LandingController!
+    private var mockDelegate:MockLandingPresenterCollectionDataSourceProtocol!
     private var viewCollection:MockLandingViewCollection!
     
     override func setUp() {
@@ -11,6 +12,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         self.dataSource = LandingPresenterCollectionDataSource()
         self.controller = LandingController()
         self.viewCollection = MockLandingViewCollection()
+        self.mockDelegate = MockLandingPresenterCollectionDataSourceProtocol()
         self.dataSource.delegate = self.controller
         self.configureViewModel()
     }
@@ -19,6 +21,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         XCTAssertNotNil(self.dataSource, "Failed to load data source")
         XCTAssertNotNil(self.dataSource.delegate, "Failed to load delegate")
         XCTAssertNotNil(self.viewCollection, "Failed to load collection")
+        XCTAssertNotNil(self.mockDelegate, "Failed to load mock delegate")
         XCTAssertFalse(self.dataSource.viewModel.sections.isEmpty, "Failed to configure view model")
     }
     
@@ -79,14 +82,13 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
         XCTAssertNotNil(header.delegate, "Failed to assign delegate to header")
     }
     
-    func testSetSectionForHeaderInConfigure() {
-        let index:Int = 0
+    func testSetColumnForHeaderInConfigure() {
+        self.dataSource.delegate = self.mockDelegate
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
-        header.section = 999324
         
-        self.dataSource.configure(header:header, for:index)
+        self.dataSource.configure(header:header, for:0)
         
-        XCTAssertEqual(header.section, index, "Failed to update section on header")
+        XCTAssertNotNil(header.column, "Failed to assign column in header")
     }
     
     private func configureViewModel() {

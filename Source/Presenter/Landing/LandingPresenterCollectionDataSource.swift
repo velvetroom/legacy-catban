@@ -13,7 +13,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
         let viewModel:LandingViewModelCollectionSection = self.viewModelFor(section:section)
         header.labelTitle.text = viewModel.title
         header.delegate = self.delegate
-        header.section = section
+        header.column = self.delegate?.columnAt(index:section)
     }
     
     func configure(cell:LandingViewCollectionCell, for index:IndexPath) {

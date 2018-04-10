@@ -2,12 +2,11 @@ import UIKit
 
 class LandingViewCollectionHeader:UICollectionReusableView {
     weak var delegate:LandingPresenterCollectionDataSourceProtocol?
-    var section:Int
+    weak var column:ProjectColumn?
     private(set) weak var labelTitle:UILabel!
     private(set) weak var button:UIButton!
     
     override init(frame:CGRect) {
-        self.section = 0
         super.init(frame:frame)
         self.configureView()
         self.addOutlets()
@@ -18,7 +17,12 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     }
     
     @objc func selectorEdit(sender button:UIButton) {
-        self.delegate?.editHeaderAt(index:self.section)
+        guard
+            let column:ProjectColumn = self.column
+        else {
+            return
+        }
+        self.delegate?.edit(column:column)
     }
     
     private func configureView() {

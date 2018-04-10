@@ -7,6 +7,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     private var collection:MockLandingViewCollection!
     private var mockModel:MockLandingProtocol!
     private var navigation:MockNavigationController!
+    private var column:ProjectColumn!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -25,6 +26,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         self.collection = MockLandingViewCollection()
         self.mockModel = MockLandingProtocol()
         self.navigation = MockNavigationController()
+        self.column = ProjectColumn()
         self.controller.model.presenter.collection.dataSource.delegate = self.controller
         self.navigation.addChildViewController(self.controller)
     }
@@ -34,6 +36,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.controller.model.project, "Controller has no project assigned")
         XCTAssertNotNil(self.mockModel, "Failed to load mock model")
+        XCTAssertNotNil(self.column, "Failed to load column")
     }
     
     func testMoveItemInSameColumn() {
@@ -114,7 +117,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.editHeaderAt(index:Constants.originIndex)
+        self.controller.edit(column:self.column)
         
         self.waitExpectation()
     }
@@ -132,7 +135,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.editHeaderAt(index:Constants.originIndex)
+        self.controller.edit(column:self.column)
         
         self.waitExpectation()
     }
@@ -147,7 +150,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
             }
         }
         
-        self.controller.editHeaderAt(index:Constants.originIndex)
+        self.controller.edit(column:self.column)
         
         self.waitExpectation()
     }
@@ -162,7 +165,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
             }
         }
         
-        self.controller.editHeaderAt(index:Constants.originIndex)
+        self.controller.edit(column:self.column)
         
         self.waitExpectation()
     }

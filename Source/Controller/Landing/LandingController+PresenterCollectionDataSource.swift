@@ -1,6 +1,10 @@
 import Foundation
 
 extension LandingController:LandingPresenterCollectionDataSourceProtocol {
+    func columnAt(index:Int) -> ProjectColumn {
+        return ProjectColumn()
+    }
+    
     func moveItemFrom(origin:IndexPath, to destination:IndexPath) {
         self.model.moveCardFrom(origin:origin, to:destination)
     }
@@ -14,8 +18,9 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
     
-    func editHeaderAt(index:Int) {
+    func edit(column:ProjectColumn) {
         self.model.clearCardSelection()
+        let index:Int = self.model.indexFor(column:column)
         let controller:LandingColumnEditController = LandingColumnEditController()
         controller.model.onRename = { [weak self] in
             self?.openWriterForColumnAt(index:index)
