@@ -8,4 +8,8 @@ extension Project {
     func columnAt(indexPath:IndexPath) -> ProjectColumn {
         return self.columnAt(index:indexPath.section)
     }
+    
+    func deleteColumnAt(index:Int) {
+        
+    }
 }

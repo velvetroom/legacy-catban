@@ -35,4 +35,8 @@ class LandingPresenter:LandingPresenterProtocol {
     func deleteCardAt(index:IndexPath) {
         self.viewCollection?.deleteItems(at:[index])
     }
+    
+    func deleteColumnAt(index:Int) {
+        
+    }
 }

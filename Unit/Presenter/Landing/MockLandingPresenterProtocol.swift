@@ -7,6 +7,7 @@ class MockLandingPresenterProtocol:LandingPresenterProtocol {
     var onUpdateCardAtIndex:((IndexPath) -> Void)?
     var onInsertCardAtIndex:((IndexPath) -> Void)?
     var onDeleteCardAtIndex:((IndexPath) -> Void)?
+    var onDeleteColumnAtIndex:((Int) -> Void)?
     var outlets:LandingPresenterOutletsProtocol
     var collection:LandingPresenterCollectionProtocol
     
@@ -33,5 +34,9 @@ class MockLandingPresenterProtocol:LandingPresenterProtocol {
     
     func deleteCardAt(index:IndexPath) {
         self.onDeleteCardAtIndex?(index)
+    }
+    
+    func deleteColumnAt(index:Int) {
+        self.onDeleteColumnAtIndex?(index)
     }
 }

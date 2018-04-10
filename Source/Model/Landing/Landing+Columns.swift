@@ -23,6 +23,7 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
-        
+        self.project.deleteColumnAt(index:index)
+        self.presenter.deleteColumnAt(index:index)
     }
 }

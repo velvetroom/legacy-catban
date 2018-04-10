@@ -45,6 +45,7 @@ class TestLanding_DeleteCard:XCTestCase {
         self.collection.onClearSelection = { [weak self] in
             self?.expect?.fulfill()
         }
+        
         self.model.deleteCardAt(indexPath:IndexPath(item:0, section:0))
         
         self.waitExpectation()
@@ -55,6 +56,7 @@ class TestLanding_DeleteCard:XCTestCase {
         self.viewModelLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
+        
         self.model.deleteCardAt(indexPath:IndexPath(item:0, section:0))
         
         self.waitExpectation()

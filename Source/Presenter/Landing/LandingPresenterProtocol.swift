@@ -9,4 +9,5 @@ protocol LandingPresenterProtocol {
     func updateCardAt(index:IndexPath)
     func insertCardAt(index:IndexPath)
     func deleteCardAt(index:IndexPath)
+    func deleteColumnAt(index:Int)
 }
