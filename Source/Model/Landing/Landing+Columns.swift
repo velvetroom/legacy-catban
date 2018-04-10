@@ -27,14 +27,10 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
-        let updates:[CollectionUpdateProtocol] = self.updatesForMovingItemsFromColumn(origin:index, to:0)
-        self.reorderCardsFromColumn(index:index)
+        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.updatesForMovingItemsFromColumn(
+            index:index, in:self.project)
         self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
         self.presenter.deleteColumnAt(index:index)
-    }
-    
-    func reorderCardsFromColumn(index:Int) {
-        self.project.reorderingIndexesForCardsInColumn(index:index)
     }
 }

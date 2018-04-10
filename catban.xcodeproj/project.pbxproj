@@ -210,11 +210,9 @@
 		DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698D6206576770046721C /* LandingController+Navigation.swift */; };
 		DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E32065812C0046721C /* TestLandingViewModel.swift */; };
 		DAE698E7206581840046721C /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE698E6206581840046721C /* LandingViewModel.swift */; };
-		DAEA2CAA207CE9D100C15653 /* TestLanding_ColumnReorderCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CA9207CE9D100C15653 /* TestLanding_ColumnReorderCards.swift */; };
 		DAEA2CAE207CF19A00C15653 /* CollectionUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CAD207CF19A00C15653 /* CollectionUpdateProtocol.swift */; };
 		DAEA2CB0207CF21700C15653 /* MockCollectionUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CAF207CF21700C15653 /* MockCollectionUpdateProtocol.swift */; };
 		DAEA2CB2207CF2F000C15653 /* TestCollectionUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CB1207CF2F000C15653 /* TestCollectionUpdateProtocol.swift */; };
-		DAEA2CB4207CF7F100C15653 /* Landing+CollectionUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CB3207CF7F100C15653 /* Landing+CollectionUpdates.swift */; };
 		DAEA2CB6207CF98800C15653 /* MockLandingCollectionUpdateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CB5207CF98700C15653 /* MockLandingCollectionUpdateFactoryProtocol.swift */; };
 		DAEA2CB8207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CB7207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift */; };
 		DAEA2CBA207CFA1400C15653 /* LandingCollectionUpdateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA2CB9207CFA1400C15653 /* LandingCollectionUpdateFactoryProtocol.swift */; };
@@ -457,11 +455,9 @@
 		DAE698D6206576770046721C /* LandingController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Navigation.swift"; sourceTree = "<group>"; };
 		DAE698E32065812C0046721C /* TestLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModel.swift; sourceTree = "<group>"; };
 		DAE698E6206581840046721C /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
-		DAEA2CA9207CE9D100C15653 /* TestLanding_ColumnReorderCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_ColumnReorderCards.swift; sourceTree = "<group>"; };
 		DAEA2CAD207CF19A00C15653 /* CollectionUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateProtocol.swift; sourceTree = "<group>"; };
 		DAEA2CAF207CF21700C15653 /* MockCollectionUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionUpdateProtocol.swift; sourceTree = "<group>"; };
 		DAEA2CB1207CF2F000C15653 /* TestCollectionUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateProtocol.swift; sourceTree = "<group>"; };
-		DAEA2CB3207CF7F100C15653 /* Landing+CollectionUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+CollectionUpdates.swift"; sourceTree = "<group>"; };
 		DAEA2CB5207CF98700C15653 /* MockLandingCollectionUpdateFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingCollectionUpdateFactoryProtocol.swift; sourceTree = "<group>"; };
 		DAEA2CB7207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory.swift; sourceTree = "<group>"; };
 		DAEA2CB9207CFA1400C15653 /* LandingCollectionUpdateFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingCollectionUpdateFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -690,7 +686,6 @@
 				DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */,
 				DA54783F207A1D7300F9301E /* TestLanding_DeleteCard.swift */,
 				DA46AD60207C8A4B0083B310 /* TestLanding_DeleteColumn.swift */,
-				DAEA2CA9207CE9D100C15653 /* TestLanding_ColumnReorderCards.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
 				DA547845207A32B200F9301E /* TestLandingDelete.swift */,
 				DAD3C47E207BAF9800F84829 /* TestLandingColumnEdit.swift */,
@@ -708,7 +703,6 @@
 				DA5B5A02207047F000122EEF /* Landing.swift */,
 				DA5B5A0620704D6E00122EEF /* Landing+Cards.swift */,
 				DAF8891B207A9E5F00BB75CD /* Landing+Columns.swift */,
-				DAEA2CB3207CF7F100C15653 /* Landing+CollectionUpdates.swift */,
 				DA391AE3207751D400484273 /* LandingAddProtocol.swift */,
 				DA391AE5207751EA00484273 /* LandingAdd.swift */,
 				DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */,
@@ -1246,7 +1240,6 @@
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
 				DAF8891C207A9E5F00BB75CD /* Landing+Columns.swift in Sources */,
 				DAD3C47D207BAEB400F84829 /* LandingColumnEditController+Actions.swift in Sources */,
-				DAEA2CB4207CF7F100C15653 /* Landing+CollectionUpdates.swift in Sources */,
 				DA8AB25D2064EDEE005A393E /* ApplicationNavigationController.swift in Sources */,
 				DAEB8180206D159A00E55424 /* LandingViewCollectionMenu+Constants.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
@@ -1328,7 +1321,6 @@
 				DADF4D4E207157A30037DCDD /* TestLandingViewModelLoaderOutlets_CollectionMenu.swift in Sources */,
 				DA647A3B20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DAEB818C206D246200E55424 /* TestLandingPresenter.swift in Sources */,
-				DAEA2CAA207CE9D100C15653 /* TestLanding_ColumnReorderCards.swift in Sources */,
 				DA2538F4206820F100EEB231 /* TestLandingController_Collection.swift in Sources */,
 				DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */,
 				DA2538F22068203C00EEB231 /* TestLandingController_Load.swift in Sources */,

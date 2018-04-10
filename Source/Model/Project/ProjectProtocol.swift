@@ -11,7 +11,6 @@ protocol ProjectProtocol {
     func indexFor(column:ProjectColumn) -> Int
     func indexOnRightForCardAt(index:IndexPath) -> IndexPath
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath
-    func reorderingIndexesForCardsInColumn(index:Int) -> [IndexPath]
     func indexForNewCard() -> IndexPath
     func insert(card:ProjectCard, at indexPath:IndexPath)
     func deleteCardAt(indexPath:IndexPath)

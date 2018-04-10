@@ -24,8 +24,4 @@ extension Project {
     func deleteColumnAt(index:Int) {
         self.columns.remove(at:index)
     }
-    
-    func reorderingIndexesForCardsInColumn(index:Int) -> [IndexPath] {
-        return []
-    }
 }

@@ -6,6 +6,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
+    private var collectionUpdateFactory:MockLandingCollectionUpdateFactoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -18,9 +19,11 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenterProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
+        self.collectionUpdateFactory = MockLandingCollectionUpdateFactoryProtocol()
         self.model.project = self.project
         self.model.presenter = self.presenter
         self.model.viewModelLoader = self.viewModelLoader
+        self.model.collectionUpdateFactory = self.collectionUpdateFactory
     }
     
     func testLoad() {
@@ -67,8 +70,11 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testReorderColumns() {
         self.startExpectation()
-        self.project.onReorderIndexesForCardsInColumn = { [weak self] (index:Int) in
+        self.collectionUpdateFactory.onUpdatesForMovingItemsFromColumn = {
+            [weak self] (index:Int, project:ProjectProtocol) in
+            let project:MockProjectProtocol? = project as? MockProjectProtocol
             XCTAssertEqual(index, Constants.column, "Invalid index received")
+            XCTAssertNotNil(project, "Invalid project received")
             self?.expect?.fulfill()
         }
         

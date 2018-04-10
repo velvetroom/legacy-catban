@@ -18,6 +18,7 @@ class MockLandingProtocol:LandingProtocol {
     var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
+    var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
     var returnCardAtIndex:ProjectCard
@@ -28,6 +29,7 @@ class MockLandingProtocol:LandingProtocol {
         self.project = Project()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
+        self.collectionUpdateFactory = LandingCollectionUpdateFactory()
         self.returnCardAtIndex = ProjectCard()
         self.returnColumnAtIndex = ProjectColumn()
         self.returnIndexForColumn = 0

@@ -4,6 +4,7 @@ protocol LandingProtocol {
     var project:ProjectProtocol { get set }
     var viewModelLoader:LandingViewModelLoaderProtocol { get set }
     var presenter:LandingPresenterProtocol { get set }
+    var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol { get set }
     var editingCard:IndexPath? { get set }
     var editingCardReference:ProjectCard? { get }
     
