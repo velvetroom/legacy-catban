@@ -19,11 +19,12 @@ extension LandingCollectionUpdateFactory {
     
     private func updatesMovingFrom(origin:Int, to destination:Int,
                                    in project:ProjectProtocol) -> [CollectionUpdateMoveItem] {
+        let hostSize:Int = project.columns[destination].cards.count
         var updates:[CollectionUpdateMoveItem] = []
         for index:Int in 0 ..< project.columns[origin].cards.count {
             let update:CollectionUpdateMoveItem = CollectionUpdateMoveItem()
             update.origin = IndexPath(item:index, section:origin)
-            update.destination = IndexPath(item:index, section:destination)
+            update.destination = IndexPath(item:index + hostSize, section:destination)
             updates.append(update)
         }
         return updates

@@ -37,12 +37,13 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         let cards:Int = 10
         let column:Int = 0
         self.addColumnWith(cards:cards)
-        self.addColumnWith(cards:0)
+        self.addColumnWith(cards:3)
+        let previous:Int = self.project.columns[1].cards.count
         
         let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:column, in:self.project)
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
-        self.validate(updates:updates, with:column)
+        self.validate(updates:updates, with:column, previous:previous)
     }
     
     func testUpdatesForMovingItemsFromNotFirstColumn() {
@@ -50,11 +51,12 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         let cards:Int = 5
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:cards)
+        let previous:Int = self.project.columns[0].cards.count
         
         let updates:[CollectionUpdateProtocol] = self.factory.movingItemsFromColumn(index:column, in:self.project)
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
-        self.validate(updates:updates, with:column)
+        self.validate(updates:updates, with:column, previous:previous)
     }
     
     private func addColumnWith(cards:Int) {
@@ -65,7 +67,7 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
         self.project.columns.append(column)
     }
     
-    private func validate(updates:[CollectionUpdateProtocol], with column:Int) {
+    private func validate(updates:[CollectionUpdateProtocol], with column:Int, previous size:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
             guard
@@ -76,7 +78,7 @@ class TestLandingCollectionUpdateFactory_MovingItems:XCTestCase {
             }
             XCTAssertEqual(update.origin.item, index, "Invalid origin item")
             XCTAssertEqual(update.origin.section, column, "Invalid origin column")
-            XCTAssertGreaterThanOrEqual(update.destination.item, index, "Invalid destination item")
+            XCTAssertEqual(update.destination.item, index + size, "Invalid destination item")
             XCTAssertNotEqual(update.destination.section, column, "Invalid destination column")
         }
     }
