@@ -27,6 +27,7 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
+        let updates:[CollectionUpdateProtocol] = self.updatesForMovingItemsFromColumn(origin:index, to:0)
         self.reorderCardsFromColumn(index:index)
         self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
