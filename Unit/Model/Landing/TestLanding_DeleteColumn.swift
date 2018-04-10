@@ -65,6 +65,18 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.waitExpectation()
     }
     
+    func testReorderColumns() {
+        self.startExpectation()
+        self.project.onReorderIndexesForCardsInColumn = { [weak self] (index:Int) in
+            XCTAssertEqual(index, Constants.column, "Invalid index received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.deleteColumnAt(index:Constants.column)
+        
+        self.waitExpectation()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

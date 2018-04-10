@@ -11,9 +11,11 @@ class MockProjectProtocol:ProjectProtocol {
     var onDeleteCardAt:((IndexPath) -> Void)?
     var onDeleteColumnAt:((Int) -> Void)?
     var onColumnAtIndex:((Int) -> Void)?
+    var onReorderIndexesForCardsInColumn:((Int) -> Void)?
     var returnCard:ProjectCard
     var returnColumn:ProjectColumn
     var returnIndexForColumn:Int
+    var returnReorderingIndexes:[IndexPath]
     var indexForCard:IndexPath
     var columns:[ProjectColumn]
     var name:String
@@ -25,6 +27,7 @@ class MockProjectProtocol:ProjectProtocol {
         self.returnCard = ProjectCard()
         self.returnColumn = ProjectColumn()
         self.returnIndexForColumn = 0
+        self.returnReorderingIndexes = []
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
@@ -76,5 +79,10 @@ class MockProjectProtocol:ProjectProtocol {
     
     func deleteColumnAt(index:Int) {
         self.onDeleteColumnAt?(index)
+    }
+    
+    func reorderingIndexesForCardsInColumn(index:Int) -> [IndexPath] {
+        self.onReorderIndexesForCardsInColumn?(index)
+        return self.returnReorderingIndexes
     }
 }

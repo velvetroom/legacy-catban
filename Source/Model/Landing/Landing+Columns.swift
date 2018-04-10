@@ -27,8 +27,13 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
+        self.reorderCardsFromColumn(index:index)
         self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
         self.presenter.deleteColumnAt(index:index)
+    }
+    
+    func reorderCardsFromColumn(index:Int) {
+        self.project.reorderingIndexesForCardsInColumn(index:index)
     }
 }
