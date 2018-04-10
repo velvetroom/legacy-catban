@@ -37,6 +37,7 @@ class LandingPresenter:LandingPresenterProtocol {
     }
     
     func deleteColumnAt(index:Int) {
-        
+        let indexSet:IndexSet = IndexSet(integer:index)
+        self.viewCollection?.deleteSections(indexSet)
     }
 }

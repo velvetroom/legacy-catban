@@ -61,6 +61,7 @@ class TestLandingPresenter:XCTestCase {
         }
         
         self.presenter.updateCardAt(index:indexPath)
+        
         self.waitExpectations()
     }
     
@@ -73,6 +74,7 @@ class TestLandingPresenter:XCTestCase {
         }
         
         self.presenter.insertCardAt(index:indexPath)
+        
         self.waitExpectations()
     }
     
@@ -85,17 +87,34 @@ class TestLandingPresenter:XCTestCase {
         }
         
         self.presenter.deleteCardAt(index:indexPath)
+        
         self.waitExpectations()
     }
     
     func testUpdateColumnAtIndex() {
         self.startExpectation()
         self.collectionView.onReloadSectionsAt = { [weak self] (sections:IndexSet) in
+            XCTAssertEqual(sections.count, 1, "Received reload for more than 1 section")
             XCTAssertEqual(sections.first, Constants.columnIndex, "Invalid index received")
             self?.expect?.fulfill()
         }
         
         self.presenter.updateColumnAt(index:Constants.columnIndex)
+        
+        self.waitExpectations()
+    }
+    
+    func testDeleteColumnAt() {
+        self.startExpectation()
+        self.collectionView.onDeleteSections = { [weak self] (sections:IndexSet) in
+            let section:Int = sections.first!
+            XCTAssertEqual(sections.count, 1, "Received delete for more than 1 section")
+            XCTAssertEqual(section, Constants.columnIndex, "Invalid section received")
+            self?.expect?.fulfill()
+        }
+        
+        self.presenter.deleteColumnAt(index:Constants.columnIndex)
+        
         self.waitExpectations()
     }
     

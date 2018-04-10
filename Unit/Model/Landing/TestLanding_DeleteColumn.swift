@@ -5,6 +5,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     private var model:Landing!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
+    private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -16,14 +17,17 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.model = Landing()
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenterProtocol()
+        self.viewModelLoader = MockLandingViewModelLoader()
         self.model.project = self.project
         self.model.presenter = self.presenter
+        self.model.viewModelLoader = self.viewModelLoader
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.viewModelLoader, "Failed to load view model loader")
     }
     
     func testDeleteCallsModel() {
@@ -42,6 +46,17 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.startExpectation()
         self.presenter.onDeleteColumnAtIndex = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.column, "Invalid index received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.deleteColumnAt(index:Constants.column)
+        
+        self.waitExpectation()
+    }
+    
+    func testDeleteReloadsViewModel() {
+        self.startExpectation()
+        self.viewModelLoader.onLoadCalled = { [weak self] in
             self?.expect?.fulfill()
         }
         
