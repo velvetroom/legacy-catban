@@ -10,6 +10,6 @@ extension Project {
     }
     
     func deleteColumnAt(index:Int) {
-        
+        self.columns.remove(at:index)
     }
 }
