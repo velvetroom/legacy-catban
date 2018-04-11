@@ -27,6 +27,13 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
+        let updates:[CollectionUpdateProtocol] = self.updatesForDeleteColumnAt(index:index)
+        self.project.deleteColumnAt(index:index)
+        self.reloadViewModel()
+        self.presenter.deleteColumnAt(index:index)
+    }
+    
+    private func updatesForDeleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {
         var updates:[CollectionUpdateProtocol] = []
         let moveUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.movingItemsFromColumn(
             index:index, in:self.project)
@@ -34,8 +41,6 @@ extension Landing {
             index:index, in:self.project)
         updates.append(contentsOf:moveUpdates)
         updates.append(contentsOf:deleteUpdates)
-        self.project.deleteColumnAt(index:index)
-        self.reloadViewModel()
-        self.presenter.deleteColumnAt(index:index)
+        return updates
     }
 }
