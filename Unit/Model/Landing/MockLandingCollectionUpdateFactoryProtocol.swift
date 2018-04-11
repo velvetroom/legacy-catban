@@ -2,11 +2,11 @@ import Foundation
 @testable import catban
 
 class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryProtocol {
-    var onDeleteColumnAtIndex:((Int) -> Void)?
+    var onDeleteColumnAtIndex:((Int, ProjectProtocol) -> Void)?
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
     
-    func deleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {
-        self.onDeleteColumnAtIndex?(index)
+    func deleteColumnAt(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+        self.onDeleteColumnAtIndex?(index, project)
         return []
     }
     

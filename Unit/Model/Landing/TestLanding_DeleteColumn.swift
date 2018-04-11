@@ -68,9 +68,23 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.waitExpectation()
     }
     
-    func testReorderColumns() {
+    func testFactoryUpdateForMovingItems() {
         self.startExpectation()
         self.collectionUpdateFactory.onMovingItemsFromColumn = { [weak self] (index:Int, project:ProjectProtocol) in
+            let project:MockProjectProtocol? = project as? MockProjectProtocol
+            XCTAssertEqual(index, Constants.column, "Invalid index received")
+            XCTAssertNotNil(project, "Invalid project received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.deleteColumnAt(index:Constants.column)
+        
+        self.waitExpectation()
+    }
+    
+    func testFactoryUpdateForDeleteColumn() {
+        self.startExpectation()
+        self.collectionUpdateFactory.onDeleteColumnAtIndex = { [weak self] (index:Int, project:ProjectProtocol) in
             let project:MockProjectProtocol? = project as? MockProjectProtocol
             XCTAssertEqual(index, Constants.column, "Invalid index received")
             XCTAssertNotNil(project, "Invalid project received")

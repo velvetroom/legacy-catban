@@ -27,8 +27,13 @@ extension Landing {
     }
     
     func deleteColumnAt(index:Int) {
-        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.movingItemsFromColumn(
+        var updates:[CollectionUpdateProtocol] = []
+        let moveUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.movingItemsFromColumn(
             index:index, in:self.project)
+        let deleteUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.deleteColumnAt(
+            index:index, in:self.project)
+        updates.append(contentsOf:moveUpdates)
+        updates.append(contentsOf:deleteUpdates)
         self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
         self.presenter.deleteColumnAt(index:index)

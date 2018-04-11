@@ -11,5 +11,6 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
+        XCTAssertNotNil(self.update.indexes, "Failed to load indexes")
     }
 }
