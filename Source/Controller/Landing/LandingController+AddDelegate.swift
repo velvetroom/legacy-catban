@@ -8,5 +8,6 @@ extension LandingController:LandingAddControllerDelegateProtocol {
     
     func createColumn() {
         let index:Int = self.model.createColumn()
+        self.openWriterForColumnAt(index:index)
     }
 }

@@ -60,6 +60,20 @@ class TestLandingController_AddDelegate:XCTestCase {
         self.waitExpectations()
     }
     
+    func testCreateColumnShowsWriter() {
+        self.startExpectation()
+        self.controller.model = Landing()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            let writer:WriterController? = controller as? WriterController
+            XCTAssertNotNil(writer, "Invalid controller presenter")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.createColumn()
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
