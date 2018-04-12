@@ -2,10 +2,10 @@ import UIKit
 @testable import catban
 
 class MockCollectionUpdateProtocol:CollectionUpdateProtocol {
-    var onStrategyProject:((Project) -> Void)?
+    var onStrategyProject:((ProjectProtocol) -> Void)?
     var onStrategyCollection:((UICollectionView) -> Void)?
     
-    func strategy(project:Project) {
+    func strategy(project:ProjectProtocol) {
         self.onStrategyProject?(project)
     }
     

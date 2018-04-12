@@ -1,6 +1,6 @@
 import UIKit
 
 protocol CollectionUpdateProtocol {
-    func strategy(project:Project)
+    func strategy(project:ProjectProtocol)
     func strategy(collectionView:UICollectionView)
 }

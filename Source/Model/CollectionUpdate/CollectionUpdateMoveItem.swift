@@ -9,8 +9,8 @@ class CollectionUpdateMoveItem:CollectionUpdateProtocol {
         self.destination = IndexPath(item:0, section:0)
     }
     
-    func strategy(project:Project) {
-        
+    func strategy(project:ProjectProtocol) {
+        project.moveCardFrom(origin:self.origin, to:self.destination)
     }
     
     func strategy(collectionView:UICollectionView) {

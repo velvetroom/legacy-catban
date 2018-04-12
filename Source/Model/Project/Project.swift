@@ -10,6 +10,8 @@ class Project:ProjectProtocol {
     }
     
     func apply(updates:[CollectionUpdateProtocol]) {
-        
+        for update:CollectionUpdateProtocol in updates {
+            update.strategy(project:self)
+        }
     }
 }
