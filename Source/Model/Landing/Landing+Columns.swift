@@ -26,21 +26,15 @@ extension Landing {
         self.scrollToEditingCard()*/
     }
     
-    func deleteColumnAt(index:Int) {
-        let updates:[CollectionUpdateProtocol] = self.updatesForDeleteColumnAt(index:index)
-        self.project.deleteColumnAt(index:index)
-        self.reloadViewModel()
-        self.presenter.deleteColumnAt(index:index)
-    }
-    
     func deleteColumnAndMoveCardsAt(index:Int) {
         let updates:[CollectionUpdateProtocol] = self.updatesForDeleteColumnAt(index:index)
+        self.project.apply(updates:updates)
         self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
         self.presenter.deleteColumnAt(index:index)
     }
     
-    private func updatesForDeleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {
+    func updatesForDeleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {
         var updates:[CollectionUpdateProtocol] = []
         let moveUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.movingItemsFromColumn(
             index:index, in:self.project)

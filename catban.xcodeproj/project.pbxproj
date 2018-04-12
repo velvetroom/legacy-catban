@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */; };
+		DA07B747207F30EE0067FD0C /* TestProject_Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07B746207F30EE0067FD0C /* TestProject_Updates.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -252,6 +253,7 @@
 
 /* Begin PBXFileReference section */
 		DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout_Height.swift; sourceTree = "<group>"; };
+		DA07B746207F30EE0067FD0C /* TestProject_Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Updates.swift; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CreateCard.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				DA1604412076A89F0096EFE1 /* TestProject_Create.swift */,
 				DA547841207A27AE00F9301E /* TestProject_DeleteCard.swift */,
 				DA46AD62207C8D790083B310 /* TestProject_DeleteColumn.swift */,
+				DA07B746207F30EE0067FD0C /* TestProject_Updates.swift */,
 				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 				DAD433F920654A21002C0DEE /* TestProjectCard.swift */,
 				DADE83C22070EB100053E7A0 /* MockProjectProtocol.swift */,
@@ -1402,6 +1405,7 @@
 				DAD3C487207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */,
+				DA07B747207F30EE0067FD0C /* TestProject_Updates.swift in Sources */,
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,

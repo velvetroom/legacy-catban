@@ -7,6 +7,10 @@ class CollectionUpdateDeleteSections:CollectionUpdateProtocol {
         self.indexes = IndexSet()
     }
     
+    func strategy(project:Project) {
+        
+    }
+    
     func strategy(collectionView:UICollectionView) {
         
     }

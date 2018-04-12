@@ -35,8 +35,8 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testDeleteCallsModel() {
         self.startExpectation()
-        self.project.onDeleteColumnAt = { [weak self] (index:Int) in
-            XCTAssertEqual(index, Constants.column, "Invalid index received")
+        self.project.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+            self?.validate(updates:updates)
             self?.expect?.fulfill()
         }
         
@@ -94,6 +94,17 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
+    }
+    
+    private func validate(updates:[CollectionUpdateProtocol]) {
+        let expected:[CollectionUpdateProtocol] = self.model.updatesForDeleteColumnAt(index:Constants.column)
+        let countExpected:Int = expected.count
+        XCTAssertEqual(updates.count, countExpected, "Invalid amount of updates")
+        for index:Int in 0 ..< countExpected {
+            let expectedType:CollectionUpdateProtocol.Type = type(of:expected[index])
+            let updateType:CollectionUpdateProtocol.Type = type(of:updates[index])
+            XCTAssertTrue(expectedType == updateType, "Invalid update")
+        }
     }
     
     private func startExpectation() {
