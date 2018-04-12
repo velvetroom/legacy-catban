@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockProjectProtocol:ProjectProtocol {
+    var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
     var onMoveCard:((IndexPath, IndexPath) -> Void)?
     var onCardAtIndex:((IndexPath) -> Void)?
     var onIndexForColumn:((ProjectColumn) -> Void)?
@@ -27,6 +28,10 @@ class MockProjectProtocol:ProjectProtocol {
         self.returnColumn = ProjectColumn()
         self.returnIndexForColumn = 0
         self.returnReorderingIndexes = []
+    }
+    
+    func apply(updates:[CollectionUpdateProtocol]) {
+        self.onApplyUpdates?(updates)
     }
     
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {

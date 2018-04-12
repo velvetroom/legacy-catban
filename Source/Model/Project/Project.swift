@@ -8,4 +8,8 @@ class Project:ProjectProtocol {
         self.columns = []
         self.name = String()
     }
+    
+    func apply(updates:[CollectionUpdateProtocol]) {
+        
+    }
 }

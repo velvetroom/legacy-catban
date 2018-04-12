@@ -15,4 +15,5 @@ protocol ProjectProtocol {
     func insert(card:ProjectCard, at indexPath:IndexPath)
     func deleteCardAt(indexPath:IndexPath)
     func deleteColumnAt(index:Int)
+    func apply(updates:[CollectionUpdateProtocol])
 }
