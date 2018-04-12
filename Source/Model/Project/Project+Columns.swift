@@ -24,4 +24,8 @@ extension Project {
     func deleteColumnAt(index:Int) {
         self.columns.remove(at:index)
     }
+    
+    func insert(column:ProjectColumn, at index:Int) {
+        
+    }
 }

@@ -13,6 +13,7 @@ protocol ProjectProtocol {
     func indexOnLeftForCardAt(index:IndexPath) -> IndexPath
     func indexForNewCard() -> IndexPath
     func insert(card:ProjectCard, at indexPath:IndexPath)
+    func insert(column:ProjectColumn, at index:Int)
     func deleteCardAt(indexPath:IndexPath)
     func deleteColumnAt(index:Int)
     func apply(updates:[CollectionUpdateProtocol])

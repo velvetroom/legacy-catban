@@ -9,6 +9,7 @@ class MockProjectProtocol:ProjectProtocol {
     var onIndexForCard:(() -> Void)?
     var onIndexForNewCard:((IndexPath) -> Void)?
     var onInsertCardAt:(() -> Void)?
+    var onInsertColumnAt:((ProjectColumn, Int) -> Void)?
     var onDeleteCardAt:((IndexPath) -> Void)?
     var onDeleteColumnAt:((Int) -> Void)?
     var onColumnAtIndex:((Int) -> Void)?
@@ -75,6 +76,10 @@ class MockProjectProtocol:ProjectProtocol {
     
     func insert(card:ProjectCard, at indexPath:IndexPath) {
         self.onInsertCardAt?()
+    }
+    
+    func insert(column:ProjectColumn, at index:Int) {
+        self.onInsertColumnAt?(column, index)
     }
     
     func deleteCardAt(indexPath:IndexPath) {

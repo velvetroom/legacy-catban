@@ -11,6 +11,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onInsertItemAtIndex:(([IndexPath]) -> Void)?
     var onDeleteItemAtIndex:(([IndexPath]) -> Void)?
     var onDeleteSections:((IndexSet) -> Void)?
+    var onInsertSections:((IndexSet) -> Void)?
     var onClearSelection:(() -> Void)?
     var onPerformBatchUpdates:(() -> Void)?
     var returnNumberOfItemsInSection:Int?
@@ -56,6 +57,10 @@ class MockLandingViewCollection:LandingViewCollection {
     
     override func deleteSections(_ sections:IndexSet) {
         self.onDeleteSections?(sections)
+    }
+    
+    override func insertSections(_ sections:IndexSet) {
+        self.onInsertSections?(sections)
     }
     
     override func scrollToItem(
