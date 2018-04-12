@@ -40,7 +40,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAt(index:Constants.column)
+        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
     }
@@ -52,7 +52,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAt(index:Constants.column)
+        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
     }
@@ -63,7 +63,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAt(index:Constants.column)
+        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
     }
@@ -77,7 +77,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAt(index:Constants.column)
+        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
     }
@@ -91,7 +91,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAt(index:Constants.column)
+        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
         
         self.waitExpectation()
     }
