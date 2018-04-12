@@ -1,8 +1,8 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateMoveItem:XCTestCase {
-    private var update:CollectionUpdateMoveItem!
+class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
+    private var update:CollectionUpdateSalvageItemFromDeletion!
     private var view:MockLandingViewCollection!
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
@@ -14,7 +14,7 @@ class TestCollectionUpdateMoveItem:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateMoveItem()
+        self.update = CollectionUpdateSalvageItemFromDeletion()
         self.view = MockLandingViewCollection()
         self.project = MockProjectProtocol()
         self.update.origin = Constants.origin

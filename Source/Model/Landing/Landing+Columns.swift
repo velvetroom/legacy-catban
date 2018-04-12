@@ -35,7 +35,7 @@ extension Landing {
     
     func updatesForDeleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {
         var updates:[CollectionUpdateProtocol] = []
-        let moveUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.movingItemsFromColumn(
+        let moveUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.salvageItemsFromColumn(
             index:index, in:self.project)
         let deleteUpdates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.deleteColumnAt(
             index:index, in:self.project)

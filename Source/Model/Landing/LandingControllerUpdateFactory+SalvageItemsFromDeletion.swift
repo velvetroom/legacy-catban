@@ -1,7 +1,7 @@
 import Foundation
 
 extension LandingCollectionUpdateFactory {
-    func movingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
         if project.columns.count > 1 {
             let host:Int = self.hostColumnForMovingCardsFrom(index:index, in:project)
             return self.updatesMovingFrom(origin:index, to:host, in:project)
@@ -18,12 +18,14 @@ extension LandingCollectionUpdateFactory {
     }
     
     private func updatesMovingFrom(origin:Int, to destination:Int,
-                                   in project:ProjectProtocol) -> [CollectionUpdateMoveItem] {
+                                   in project:ProjectProtocol) -> [CollectionUpdateSalvageItemFromDeletion] {
         let hostSize:Int = project.columns[destination].cards.count
-        var updates:[CollectionUpdateMoveItem] = []
-        for index:Int in 0 ..< project.columns[origin].cards.count {
-            let update:CollectionUpdateMoveItem = CollectionUpdateMoveItem()
-            update.origin = IndexPath(item:index, section:origin)
+        let countItems:Int = project.columns[origin].cards.count
+        var updates:[CollectionUpdateSalvageItemFromDeletion] = []
+        for index:Int in 0 ..< countItems {
+            let removeIndex:Int = countItems - (index + 1)
+            let update:CollectionUpdateSalvageItemFromDeletion = CollectionUpdateSalvageItemFromDeletion()
+            update.origin = IndexPath(item:removeIndex, section:origin)
             update.destination = IndexPath(item:index + hostSize, section:destination)
             updates.append(update)
         }

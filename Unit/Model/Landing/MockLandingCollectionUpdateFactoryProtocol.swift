@@ -10,7 +10,7 @@ class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryP
         return []
     }
     
-    func movingItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
         self.onMovingItemsFromColumn?(index, project)
         return []
     }

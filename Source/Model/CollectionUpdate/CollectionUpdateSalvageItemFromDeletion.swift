@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionUpdateMoveItem:CollectionUpdateProtocol {
+class CollectionUpdateSalvageItemFromDeletion:CollectionUpdateProtocol {
     var origin:IndexPath
     var destination:IndexPath
     
