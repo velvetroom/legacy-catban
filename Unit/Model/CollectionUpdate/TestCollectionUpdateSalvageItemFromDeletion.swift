@@ -8,7 +8,8 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let origin:IndexPath = IndexPath(item:2313, section:85413)
-        static let destination:IndexPath = IndexPath(item:645, section:2423)
+        static let destinationBeforeUpdate:IndexPath = IndexPath(item:645, section:2423)
+        static let destinationAfterUpdate:IndexPath = IndexPath(item:245, section:4568)
         static let wait:TimeInterval = 0.3
     }
     
@@ -18,13 +19,15 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
         self.view = MockLandingViewCollection()
         self.project = MockProjectProtocol()
         self.update.origin = Constants.origin
-        self.update.destination = Constants.destination
+        self.update.destinationBeforeUpdate = Constants.destinationBeforeUpdate
+        self.update.destinationAfterUpdate = Constants.destinationAfterUpdate
     }
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
         XCTAssertNotNil(self.update.origin, "Failed to load origin")
-        XCTAssertNotNil(self.update.destination, "Failed to load destination")
+        XCTAssertNotNil(self.update.destinationBeforeUpdate, "Failed to load destination before update")
+        XCTAssertNotNil(self.update.destinationAfterUpdate, "Failed to load destination after update")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
     }
@@ -33,7 +36,7 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
         self.startExpectation()
         self.view.onMoveItem = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.origin, "Invalid origin")
-            XCTAssertEqual(destination, Constants.destination, "Invalid destination")
+            XCTAssertEqual(destination, Constants.destinationAfterUpdate, "Invalid destination")
             self?.expect?.fulfill()
         }
         
@@ -46,7 +49,7 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
         self.startExpectation()
         self.project.onMoveCard = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.origin, "Invalid origin")
-            XCTAssertEqual(destination, Constants.destination, "Invalid destination")
+            XCTAssertEqual(destination, Constants.destinationBeforeUpdate, "Invalid destination")
             self?.expect?.fulfill()
         }
         

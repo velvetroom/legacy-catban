@@ -3,8 +3,7 @@ import Foundation
 extension LandingCollectionUpdateFactory {
     func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
         if project.columns.count > 1 {
-            let host:Int = self.hostColumnForMovingCardsFrom(index:index, in:project)
-            return self.updatesMovingFrom(origin:index, to:host, in:project)
+            return self.updatesMovingFrom(origin:index, in:project)
         }
         return []
     }
@@ -17,8 +16,18 @@ extension LandingCollectionUpdateFactory {
         }
     }
     
-    private func updatesMovingFrom(origin:Int, to destination:Int,
+    private func columnDestinationAfterUpdateFrom(index:Int) -> Int {
+        if index > 0 {
+            return index - 1
+        } else {
+            return 0
+        }
+    }
+    
+    private func updatesMovingFrom(origin:Int,
                                    in project:ProjectProtocol) -> [CollectionUpdateSalvageItemFromDeletion] {
+        let destination:Int = self.hostColumnForMovingCardsFrom(index:origin, in:project)
+        let destinationAfterUpdate:Int = self.columnDestinationAfterUpdateFrom(index:origin)
         let hostSize:Int = project.columns[destination].cards.count
         let countItems:Int = project.columns[origin].cards.count
         var updates:[CollectionUpdateSalvageItemFromDeletion] = []
@@ -26,7 +35,8 @@ extension LandingCollectionUpdateFactory {
             let removeIndex:Int = countItems - (index + 1)
             let update:CollectionUpdateSalvageItemFromDeletion = CollectionUpdateSalvageItemFromDeletion()
             update.origin = IndexPath(item:removeIndex, section:origin)
-            update.destination = IndexPath(item:index + hostSize, section:destination)
+            update.destinationBeforeUpdate = IndexPath(item:index + hostSize, section:destination)
+            update.destinationAfterUpdate = IndexPath(item:index + hostSize, section:destinationAfterUpdate)
             updates.append(update)
         }
         return updates
