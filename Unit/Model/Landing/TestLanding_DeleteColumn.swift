@@ -47,8 +47,8 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testDeleteCallsPresenter() {
         self.startExpectation()
-        self.presenter.onDeleteColumnAtIndex = { [weak self] (index:Int) in
-            XCTAssertEqual(index, Constants.column, "Invalid index received")
+        self.presenter.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+            self?.validate(updates:updates)
             self?.expect?.fulfill()
         }
         

@@ -3,6 +3,7 @@ import Foundation
 
 class MockLandingPresenterProtocol:LandingPresenterProtocol {
     var onUpdateViewModel:(() -> Void)?
+    var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
     var onUpdateColumnAtIndex:((Int) -> Void)?
     var onUpdateCardAtIndex:((IndexPath) -> Void)?
     var onInsertCardAtIndex:((IndexPath) -> Void)?
@@ -18,6 +19,10 @@ class MockLandingPresenterProtocol:LandingPresenterProtocol {
     
     func update(viewModel:LandingViewModel) {
         self.onUpdateViewModel?()
+    }
+    
+    func apply(updates:[CollectionUpdateProtocol]) {
+        self.onApplyUpdates?(updates)
     }
     
     func updateColumnAt(index:Int) {

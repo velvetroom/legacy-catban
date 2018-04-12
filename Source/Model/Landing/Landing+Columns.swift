@@ -29,11 +29,8 @@ extension Landing {
     func deleteColumnAndMoveCardsAt(index:Int) {
         let updates:[CollectionUpdateProtocol] = self.updatesForDeleteColumnAt(index:index)
         self.project.apply(updates:updates)
-        
-        
-        self.project.deleteColumnAt(index:index)
         self.reloadViewModel()
-        self.presenter.deleteColumnAt(index:index)
+        self.presenter.apply(updates:updates)
     }
     
     func updatesForDeleteColumnAt(index:Int) -> [CollectionUpdateProtocol] {

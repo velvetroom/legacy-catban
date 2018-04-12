@@ -19,6 +19,10 @@ class LandingPresenter:LandingPresenterProtocol {
         self.outlets.update(viewModel:viewModel.outlets)
     }
     
+    func apply(updates:[CollectionUpdateProtocol]) {
+        
+    }
+    
     func updateColumnAt(index:Int) {
         let indexSet:IndexSet = IndexSet(integer:index)
         self.viewCollection?.reloadSections(indexSet)
