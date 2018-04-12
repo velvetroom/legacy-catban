@@ -29,18 +29,11 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
         XCTAssertNotNil(first, "Returned update is not a type delete sections")
     }
     
-    func testDeleteColumnReturnsOneIndex() {
-        self.addColumn()
-        let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:0, in:self.project)
-        let update:CollectionUpdateDeleteSections = updates.first as! CollectionUpdateDeleteSections
-        XCTAssertEqual(update.indexes.count, 1, "There should be exaxctly 1 index in the set")
-    }
-    
     func testDeleteColumnForFirstColumnReturnsFirstColumn() {
         self.addColumn()
         let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:0, in:self.project)
         let update:CollectionUpdateDeleteSections = updates.first as! CollectionUpdateDeleteSections
-        XCTAssertEqual(update.indexes.first!, 0, "Invalid column returned")
+        XCTAssertEqual(update.index, 0, "Invalid column returned")
     }
     
     func testDeleteColumnForThirdColumnReturnsThirdColumn() {
@@ -49,7 +42,7 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
         self.addColumn()
         let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:3, in:self.project)
         let update:CollectionUpdateDeleteSections = updates.first as! CollectionUpdateDeleteSections
-        XCTAssertEqual(update.indexes.first!, 3, "Invalid column returned")
+        XCTAssertEqual(update.index, 3, "Invalid column returned")
     }
     
     private func addColumn() {

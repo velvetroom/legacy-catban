@@ -30,7 +30,7 @@ class TestLandingCollectionUpdateFactory_Insert:XCTestCase {
     func testInsertColumnsOnEmptyProject() {
         let updates:[CollectionUpdateProtocol] = self.factory.insertColumnIn(project:self.project)
         let first:CollectionUpdateInsertSections = updates.first as! CollectionUpdateInsertSections
-        XCTAssertEqual(first.sections.first!, 0, "Invalid index for new section")
+        XCTAssertEqual(first.section, 0, "Invalid index for new section")
     }
     
     func testInsertColumnsOnNonEmptyProject() {
@@ -38,6 +38,6 @@ class TestLandingCollectionUpdateFactory_Insert:XCTestCase {
         self.project.columns.append(ProjectColumn())
         let updates:[CollectionUpdateProtocol] = self.factory.insertColumnIn(project:self.project)
         let first:CollectionUpdateInsertSections = updates.first as! CollectionUpdateInsertSections
-        XCTAssertEqual(first.sections.first!, 2, "Invalid index for new section")
+        XCTAssertEqual(first.section, 2, "Invalid index for new section")
     }
 }

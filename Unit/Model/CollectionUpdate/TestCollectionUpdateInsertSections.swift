@@ -9,7 +9,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let sections:IndexSet = IndexSet(integer:456765)
+        static let section:Int = 456765
     }
     
     override func setUp() {
@@ -18,13 +18,13 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         self.view = MockLandingViewCollection()
         self.project = MockProjectProtocol()
         self.column = ProjectColumn()
-        self.update.sections = Constants.sections
+        self.update.section = Constants.section
         self.update.column = self.column
     }
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
-        XCTAssertNotNil(self.update.sections, "Failed top load sections")
+        XCTAssertNotNil(self.update.section, "Failed top load section")
         XCTAssertNotNil(self.update.column, "Failed to load column")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
@@ -33,7 +33,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
     func testStrategyCollection() {
         self.startExpectation()
         self.view.onInsertSections = { [weak self] (sections:IndexSet) in
-            XCTAssertEqual(sections, Constants.sections, "Invalid sections")
+            XCTAssertEqual(sections.first, Constants.section, "Invalid section")
             self?.expect?.fulfill()
         }
         
@@ -46,7 +46,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         self.startExpectation()
         self.project.onInsertColumnAt = { [weak self] (column:ProjectColumn, index:Int) in
             XCTAssertTrue(column === self?.column, "Invalid column")
-            XCTAssertEqual(index, Constants.sections.first, "Invalid index")
+            XCTAssertEqual(index, Constants.section, "Invalid index")
             self?.expect?.fulfill()
         }
         

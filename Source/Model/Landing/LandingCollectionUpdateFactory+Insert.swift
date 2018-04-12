@@ -2,6 +2,8 @@ import Foundation
 
 extension LandingCollectionUpdateFactory {
     func insertColumnIn(project:ProjectProtocol) -> [CollectionUpdateProtocol] {
-        return []
+        let update:CollectionUpdateInsertSections = CollectionUpdateInsertSections()
+        update.section = project.columns.count
+        return [update]
     }
 }

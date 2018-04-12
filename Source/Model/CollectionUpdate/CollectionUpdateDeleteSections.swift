@@ -1,22 +1,17 @@
 import UIKit
 
 class CollectionUpdateDeleteSections:CollectionUpdateProtocol {
-    var indexes:IndexSet
+    var index:Int
     
     init() {
-        self.indexes = IndexSet()
+        self.index = 0
     }
     
     func strategy(project:ProjectProtocol) {
-        guard
-            let index:Int = self.indexes.first
-        else {
-            return
-        }
-        project.deleteColumnAt(index:index)
+        project.deleteColumnAt(index:self.index)
     }
     
     func strategy(collectionView:UICollectionView) {
-        collectionView.deleteSections(self.indexes)
+        collectionView.deleteSections(IndexSet(integer:self.index))
     }
 }

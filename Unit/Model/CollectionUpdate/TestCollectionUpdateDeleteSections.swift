@@ -8,7 +8,7 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let indexes:IndexSet = IndexSet(integer:2355)
+        static let index:Int = 2355
     }
     
     override func setUp() {
@@ -16,12 +16,12 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
         self.update = CollectionUpdateDeleteSections()
         self.view = MockLandingViewCollection()
         self.project = MockProjectProtocol()
-        self.update.indexes = Constants.indexes
+        self.update.index = Constants.index
     }
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
-        XCTAssertNotNil(self.update.indexes, "Failed to load indexes")
+        XCTAssertNotNil(self.update.index, "Failed to load index")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
     }
@@ -29,7 +29,7 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
     func testStrategyCollection() {
         self.startExpectation()
         self.view.onDeleteSections = { [weak self] (indexes:IndexSet) in
-            XCTAssertEqual(indexes, Constants.indexes, "Invalid index set")
+            XCTAssertEqual(indexes.first, Constants.index, "Invalid index set")
             self?.expect?.fulfill()
         }
         
@@ -41,7 +41,7 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
     func testStrategyProject() {
         self.startExpectation()
         self.project.onDeleteColumnAt = { [weak self] (index:Int) in
-            XCTAssertEqual(index, Constants.indexes.first!, "Invalid index")
+            XCTAssertEqual(index, Constants.index, "Invalid index")
             self?.expect?.fulfill()
         }
         
