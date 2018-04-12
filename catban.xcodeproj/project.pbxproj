@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */; };
 		DA07B747207F30EE0067FD0C /* TestProject_Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07B746207F30EE0067FD0C /* TestProject_Updates.swift */; };
+		DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07B748207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -254,6 +255,7 @@
 /* Begin PBXFileReference section */
 		DA040FE4207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout_Height.swift; sourceTree = "<group>"; };
 		DA07B746207F30EE0067FD0C /* TestProject_Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Updates.swift; sourceTree = "<group>"; };
+		DA07B748207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenter_ApplyUpdates.swift; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CreateCard.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -790,6 +792,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEB818B206D246200E55424 /* TestLandingPresenter.swift */,
+				DA07B748207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift */,
 				DAEB8193206D28EE00E55424 /* TestLandingPresenterOutlets.swift */,
 				DADF4D4B207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift */,
 				DA8AB2662064F41E005A393E /* TestLandingPresenterOutletsList.swift */,
@@ -1365,6 +1368,7 @@
 				DA46AD61207C8A4B0083B310 /* TestLanding_DeleteColumn.swift in Sources */,
 				DADE83C32070EB100053E7A0 /* MockProjectProtocol.swift in Sources */,
 				DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */,
+				DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,

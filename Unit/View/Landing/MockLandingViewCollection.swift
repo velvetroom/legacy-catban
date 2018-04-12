@@ -12,6 +12,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onDeleteItemAtIndex:(([IndexPath]) -> Void)?
     var onDeleteSections:((IndexSet) -> Void)?
     var onClearSelection:(() -> Void)?
+    var onPerformBatchUpdates:(() -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -26,6 +27,11 @@ class MockLandingViewCollection:LandingViewCollection {
             return super.numberOfItems(inSection:section)
         }
         return items
+    }
+    
+    override func performBatchUpdates(_ updates:(() -> Void)?, completion:((Bool) -> Void)? = nil) {
+        self.onPerformBatchUpdates?()
+        super.performBatchUpdates(updates, completion:completion)
     }
     
     override func moveItem(at indexPath:IndexPath, to newIndexPath:IndexPath) {
