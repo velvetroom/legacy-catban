@@ -140,6 +140,9 @@
 		DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B8D20736D53001248E4 /* LandingController+Writer.swift */; };
 		DA6F1B9320736E5E001248E4 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */; };
 		DA6F1B952073716E001248E4 /* TestLandingController_SelectorsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */; };
+		DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */; };
+		DA73A1DA2080EACA00ADC499 /* ErrorCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D92080EACA00ADC499 /* ErrorCat.swift */; };
+		DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -393,6 +396,9 @@
 		DA6F1B8D20736D53001248E4 /* LandingController+Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Writer.swift"; sourceTree = "<group>"; };
 		DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_SelectorsEdit.swift; sourceTree = "<group>"; };
+		DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift; sourceTree = "<group>"; };
+		DA73A1D92080EACA00ADC499 /* ErrorCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCat.swift; sourceTree = "<group>"; };
+		DA73A1DC2080EBD500ADC499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -729,6 +735,7 @@
 				DAEA2CB7207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift */,
 				DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */,
 				DA94B5D2207D077E00EB4324 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion.swift */,
+				DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */,
 				DAE8C7E8207FB27600395318 /* TestLandingCollectionUpdateFactory_Insert.swift */,
 				DADE83BE2070E40E0053E7A0 /* MockLandingProtocol.swift */,
 				DAEA2CB5207CF98700C15653 /* MockLandingCollectionUpdateFactoryProtocol.swift */,
@@ -765,6 +772,14 @@
 				DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		DA73A1D82080EABF00ADC499 /* ErrorCat */ = {
+			isa = PBXGroup;
+			children = (
+				DA73A1D92080EACA00ADC499 /* ErrorCat.swift */,
+			);
+			path = ErrorCat;
 			sourceTree = "<group>";
 		};
 		DA79AF7D206A2F0700DE73FA /* Presenter */ = {
@@ -901,6 +916,7 @@
 				DAD433F2206540AC002C0DEE /* LocalizableProject.strings */,
 				DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */,
 				DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */,
+				DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1077,6 +1093,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA73A1D82080EABF00ADC499 /* ErrorCat */,
 				DAEA2CAB207CF16600C15653 /* CollectionUpdate */,
 				DA4F8FEE2072791E0063D384 /* Writer */,
 				DA5B5A01207047E600122EEF /* Landing */,
@@ -1232,6 +1249,7 @@
 				DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
+				DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */,
 				DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */,
 				DA8AB26E2064FE0E005A393E /* LocalizableLanding.strings in Resources */,
 				DAE698D520656F940046721C /* assets.xcassets in Resources */,
@@ -1311,6 +1329,7 @@
 				DA6F1B8820736109001248E4 /* WriterPresenterOutletsList.swift in Sources */,
 				DAD3C479207BADF100F84829 /* LandingColumnEditController.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
+				DA73A1DA2080EACA00ADC499 /* ErrorCat.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
 				DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */,
 				DAD3C47B207BAE9600F84829 /* LandingColumnEditController+Constants.swift in Sources */,
@@ -1397,6 +1416,7 @@
 				DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
+				DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
@@ -1506,6 +1526,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA73A1DC2080EBD500ADC499 /* en */,
+			);
+			name = LocalizableError.strings;
+			sourceTree = "<group>";
+		};
 		DA8AB2222064E476005A393E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
