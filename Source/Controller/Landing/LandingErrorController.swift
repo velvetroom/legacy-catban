@@ -1,7 +1,7 @@
 import UIKit
 
 class LandingErrorController:UIAlertController {
-    var model:LandingError
+    var model:LandingErrorProtocol
     
     init() {
         self.model = LandingError()
@@ -20,5 +20,10 @@ class LandingErrorController:UIAlertController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let action:UIAlertAction = UIAlertAction(
+            title:String.localizedLanding(key:"LandingAddController_actionCancelTitle"),
+            style:UIAlertActionStyle.cancel, handler:nil)
+        self.model.presenter.actionCancel = action
+        self.addAction(action)
     }
 }

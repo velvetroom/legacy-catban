@@ -1,6 +1,6 @@
 import Foundation
 
-class LandingError {
+class LandingError:LandingErrorProtocol {
     var message:String
     
     init() {
