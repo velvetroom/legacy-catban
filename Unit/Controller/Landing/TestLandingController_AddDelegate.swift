@@ -60,6 +60,17 @@ class TestLandingController_AddDelegate:XCTestCase {
         self.waitExpectations()
     }
     
+    func testCreateColumnScrollsToTopRight() {
+        self.startExpectation()
+        self.model.onScrollToTopRightCorner = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.createColumn()
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

@@ -8,5 +8,12 @@ extension LandingController:LandingAddControllerDelegateProtocol {
     
     func createColumn() {
         self.model.createColumn()
+        self.scheduleScrollToTopRightCorner()
+    }
+    
+    private func scheduleScrollToTopRightCorner() {
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + Constants.waitBeforeScrolling) { [weak self] in
+            self?.model.scrollToTopRightCorner()
+        }
     }
 }

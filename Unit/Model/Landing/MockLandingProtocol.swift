@@ -15,6 +15,8 @@ class MockLandingProtocol:LandingProtocol {
     var onCreateColumn:(() -> Void)?
     var onColumnAtIndex:((Int) -> Void)?
     var onIndexForColumn:((ProjectColumn) -> Void)?
+    var onScrollToEditingCard:(() -> Void)?
+    var onScrollToTopRightCorner:(() -> Void)?
     var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
@@ -84,7 +86,11 @@ class MockLandingProtocol:LandingProtocol {
     }
     
     func scrollToEditingCard() {
-        
+        self.onScrollToEditingCard?()
+    }
+    
+    func scrollToTopRightCorner() {
+        self.onScrollToTopRightCorner?()
     }
     
     func createCard() -> IndexPath {

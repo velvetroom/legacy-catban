@@ -7,16 +7,8 @@ extension Landing {
         }
     }
     
-    private var scrollPosition:UICollectionViewScrollPosition {
-        get {
-            return UICollectionViewScrollPosition([
-                UICollectionViewScrollPosition.centeredVertically,
-                UICollectionViewScrollPosition.centeredHorizontally])
-        }
-    }
-    
     func clearCardSelection() {
-        self.presenter.outlets.list.viewCollection?.clearSelection()
+        self.collection?.clearSelection()
         self.update(editingCard:nil)
     }
     
@@ -66,15 +58,6 @@ extension Landing {
         let newIndex:IndexPath = project.indexOnLeftForCardAt(index:editingCard)
         self.editingCard = newIndex
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
-    }
-    
-    func scrollToEditingCard() {
-        guard
-            let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
-        self.collection?.scrollToItem(at:editingCard, at:self.scrollPosition, animated:true)
     }
     
     func updateCardAt(indexPath:IndexPath) {

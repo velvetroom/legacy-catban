@@ -14,6 +14,7 @@ class MockLandingViewCollection:LandingViewCollection {
     var onInsertSections:((IndexSet) -> Void)?
     var onClearSelection:(() -> Void)?
     var onPerformBatchUpdates:(() -> Void)?
+    var onScrollToRect:((CGRect, Bool) -> Void)?
     var returnNumberOfItemsInSection:Int?
     
     override func reloadData() {
@@ -68,6 +69,10 @@ class MockLandingViewCollection:LandingViewCollection {
         at scrollPosition:UICollectionViewScrollPosition,
         animated:Bool) {
         self.onScrollToItem?(indexPath)
+    }
+    
+    override func scrollRectToVisible(_ rect:CGRect, animated:Bool) {
+        self.onScrollToRect?(rect, animated)
     }
     
     override func selectItem(at index:IndexPath?, animated:Bool, scrollPosition:UICollectionViewScrollPosition) {
