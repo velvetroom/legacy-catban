@@ -6,12 +6,12 @@ class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryP
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
     var onInsertColumnIn:((ProjectProtocol) -> Void)?
     
-    func deleteColumnAt(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
         self.onDeleteColumnAtIndex?(index, project)
         return []
     }
     
-    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
         self.onMovingItemsFromColumn?(index, project)
         return []
     }

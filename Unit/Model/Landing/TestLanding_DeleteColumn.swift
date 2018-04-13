@@ -40,7 +40,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
+        XCTAssertNoThrow(try self.model.deleteColumnAndMoveCardsAt(index:Constants.column))
         
         self.waitExpectation()
     }
@@ -52,7 +52,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
+        XCTAssertNoThrow(try self.model.deleteColumnAndMoveCardsAt(index:Constants.column))
         
         self.waitExpectation()
     }
@@ -63,7 +63,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
+        XCTAssertNoThrow(try self.model.deleteColumnAndMoveCardsAt(index:Constants.column))
         
         self.waitExpectation()
     }
@@ -77,7 +77,7 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
+        XCTAssertNoThrow(try self.model.deleteColumnAndMoveCardsAt(index:Constants.column))
         
         self.waitExpectation()
     }
@@ -91,13 +91,14 @@ class TestLanding_DeleteColumn:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteColumnAndMoveCardsAt(index:Constants.column)
+        XCTAssertNoThrow(try self.model.deleteColumnAndMoveCardsAt(index:Constants.column))
         
         self.waitExpectation()
     }
     
     private func validate(updates:[CollectionUpdateProtocol]) {
-        let expected:[CollectionUpdateProtocol] = self.model.updatesForDeleteColumnAt(index:Constants.column)
+        var expected:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try expected = self.model.updatesForDeleteColumnAt(index:Constants.column))
         let countExpected:Int = expected.count
         XCTAssertEqual(updates.count, countExpected, "Invalid amount of updates")
         for index:Int in 0 ..< countExpected {

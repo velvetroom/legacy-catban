@@ -81,7 +81,7 @@ class MockLandingProtocol:LandingProtocol {
         self.onDeleteEditingCard?()
     }
     
-    func deleteColumnAndMoveCardsAt(index:Int) {
+    func deleteColumnAndMoveCardsAt(index:Int) throws {
         self.onDeleteColumnAt?(index)
     }
     

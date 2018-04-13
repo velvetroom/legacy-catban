@@ -1,7 +1,7 @@
 import Foundation
 
 extension LandingCollectionUpdateFactory {
-    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
         if project.columns.count > 1 {
             return self.updatesMovingFrom(origin:index, in:project)
         }

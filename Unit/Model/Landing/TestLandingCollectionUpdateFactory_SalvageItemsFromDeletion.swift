@@ -19,7 +19,8 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
     func testUpdatesForMovingItemsFromColumnWithEmptyColumnAndOnlyOneColumn() {
         self.addColumnWith(cards:0)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.salvageItemsFromColumn(index:0, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:0, in:self.project))
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
     }
@@ -28,7 +29,8 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:0)
         
-        let updates:[CollectionUpdateProtocol] = self.factory.salvageItemsFromColumn(index:1, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:1, in:self.project))
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
     }
@@ -40,7 +42,8 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:3)
         let previous:Int = self.project.columns[1].cards.count
         
-        let updates:[CollectionUpdateProtocol] = self.factory.salvageItemsFromColumn(index:column, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:column, in:self.project))
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
         self.validate(updates:updates, with:column, previous:previous)
@@ -53,7 +56,8 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:cards)
         let previous:Int = self.project.columns[0].cards.count
         
-        let updates:[CollectionUpdateProtocol] = self.factory.salvageItemsFromColumn(index:column, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:column, in:self.project))
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
         self.validate(updates:updates, with:column, previous:previous)

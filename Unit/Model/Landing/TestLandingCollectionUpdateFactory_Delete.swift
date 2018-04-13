@@ -18,20 +18,23 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
     
     func testDeleteColumnReturnsOneUpdate() {
         self.addColumn()
-        let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:0, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
         XCTAssertEqual(updates.count, 1, "There should be exactly 1 update")
     }
     
     func testDeleteColumnReturnsDeleteColumnUpdate() {
         self.addColumn()
-        let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:0, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
         let first:CollectionUpdateDeleteSections? = updates.first as? CollectionUpdateDeleteSections
         XCTAssertNotNil(first, "Returned update is not a type delete sections")
     }
     
     func testDeleteColumnForFirstColumnReturnsFirstColumn() {
         self.addColumn()
-        let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:0, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
         let update:CollectionUpdateDeleteSections = updates.first as! CollectionUpdateDeleteSections
         XCTAssertEqual(update.index, 0, "Invalid column returned")
     }
@@ -40,7 +43,8 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
         self.addColumn()
         self.addColumn()
         self.addColumn()
-        let updates:[CollectionUpdateProtocol] = self.factory.deleteColumnAt(index:3, in:self.project)
+        var updates:[CollectionUpdateProtocol] = []
+        XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:3, in:self.project))
         let update:CollectionUpdateDeleteSections = updates.first as! CollectionUpdateDeleteSections
         XCTAssertEqual(update.index, 3, "Invalid column returned")
     }
