@@ -23,5 +23,5 @@ protocol LandingProtocol {
     func updateCardAt(indexPath:IndexPath)
     func updateColumnAt(index:Int)
     func createCard() -> IndexPath
-    func createColumn() -> Int
+    func createColumn()
 }

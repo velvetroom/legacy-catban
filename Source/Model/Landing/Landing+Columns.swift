@@ -14,15 +14,9 @@ extension Landing {
         self.presenter.updateColumnAt(index:index)
     }
     
-    func createColumn() -> Int {
+    func createColumn() {
         let updates:[CollectionUpdateProtocol] = self.self.collectionUpdateFactory.insertColumnIn(
             project:self.project)
-        guard
-            let update:CollectionUpdateInsertSections = updates.first as? CollectionUpdateInsertSections
-        else {
-            return 0
-        }
-        return update.section
         /*
         let card:ProjectCard = ProjectCard()
         let index:IndexPath = self.project.indexForNewCard()
