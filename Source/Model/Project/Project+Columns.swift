@@ -26,6 +26,6 @@ extension Project {
     }
     
     func insert(column:ProjectColumn, at index:Int) {
-        
+        self.columns.insert(column, at:index)
     }
 }

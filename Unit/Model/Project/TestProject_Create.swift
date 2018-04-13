@@ -35,4 +35,17 @@ class TestProject_Create:XCTestCase {
         self.project.insert(card:card, at:index)
         XCTAssertTrue(self.project.cardAt(indexPath:index) === card, "Failed to insert card")
     }
+    
+    func testInsertColumn() {
+        let column:ProjectColumn = ProjectColumn()
+        self.project.insert(column:column, at:0)
+        XCTAssertTrue(project.columns[0] === column, "Failed to insert column")
+    }
+    
+    func testInsertColumnBeforePreviousIndexes() {
+        self.project.columns.append(ProjectColumn())
+        let column:ProjectColumn = ProjectColumn()
+        self.project.insert(column:column, at:0)
+        XCTAssertTrue(project.columns[0] === column, "Failed to insert column")
+    }
 }
