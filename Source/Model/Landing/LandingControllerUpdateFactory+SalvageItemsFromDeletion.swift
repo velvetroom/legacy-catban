@@ -5,7 +5,7 @@ extension LandingCollectionUpdateFactory {
         if project.columns.count > 1 {
             return self.updatesMovingFrom(origin:index, in:project)
         }
-        return []
+        throw ErrorProject.oneColumnMinimum
     }
     
     private func hostColumnForMovingCardsFrom(index:Int, in project:ProjectProtocol) -> Int {

@@ -141,7 +141,7 @@
 		DA6F1B9320736E5E001248E4 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */; };
 		DA6F1B952073716E001248E4 /* TestLandingController_SelectorsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */; };
 		DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */; };
-		DA73A1DA2080EACA00ADC499 /* ErrorCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D92080EACA00ADC499 /* ErrorCat.swift */; };
+		DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D92080EACA00ADC499 /* ErrorProject.swift */; };
 		DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
@@ -397,7 +397,7 @@
 		DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		DA6F1B942073716E001248E4 /* TestLandingController_SelectorsEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_SelectorsEdit.swift; sourceTree = "<group>"; };
 		DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift; sourceTree = "<group>"; };
-		DA73A1D92080EACA00ADC499 /* ErrorCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCat.swift; sourceTree = "<group>"; };
+		DA73A1D92080EACA00ADC499 /* ErrorProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProject.swift; sourceTree = "<group>"; };
 		DA73A1DC2080EBD500ADC499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
@@ -774,12 +774,12 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		DA73A1D82080EABF00ADC499 /* ErrorCat */ = {
+		DA73A1D82080EABF00ADC499 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				DA73A1D92080EACA00ADC499 /* ErrorCat.swift */,
+				DA73A1D92080EACA00ADC499 /* ErrorProject.swift */,
 			);
-			path = ErrorCat;
+			path = Error;
 			sourceTree = "<group>";
 		};
 		DA79AF7D206A2F0700DE73FA /* Presenter */ = {
@@ -1093,7 +1093,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA73A1D82080EABF00ADC499 /* ErrorCat */,
+				DA73A1D82080EABF00ADC499 /* Error */,
 				DAEA2CAB207CF16600C15653 /* CollectionUpdate */,
 				DA4F8FEE2072791E0063D384 /* Writer */,
 				DA5B5A01207047E600122EEF /* Landing */,
@@ -1329,7 +1329,7 @@
 				DA6F1B8820736109001248E4 /* WriterPresenterOutletsList.swift in Sources */,
 				DAD3C479207BADF100F84829 /* LandingColumnEditController.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
-				DA73A1DA2080EACA00ADC499 /* ErrorCat.swift in Sources */,
+				DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */,
 				DA8AB2592064EB00005A393E /* Application.swift in Sources */,
 				DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */,
 				DAD3C47B207BAE9600F84829 /* LandingColumnEditController+Constants.swift in Sources */,

@@ -25,7 +25,7 @@ class TestStringExtension:XCTestCase {
     }
     
     func testLocalizableStringsFromError() {
-        let string:String = String.localizedError(key:"ErrorCat_oneColumnMinimum")
+        let string:String = String.localizedError(key:"ErrorProject_oneColumnMinimum")
         XCTAssertEqual(string, Constants.expectedError, "Unable to find localized string")
     }
 }

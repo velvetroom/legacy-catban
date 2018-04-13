@@ -18,6 +18,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
     
     func testUpdatesForMovingItemsFromColumnWithEmptyColumnAndOnlyOneColumn() {
         self.addColumnWith(cards:0)
+        self.addColumnWith(cards:0)
         
         var updates:[CollectionUpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:0, in:self.project))
