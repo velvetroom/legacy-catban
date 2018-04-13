@@ -17,14 +17,9 @@ extension Landing {
     func createColumn() {
         let updates:[CollectionUpdateProtocol] = self.self.collectionUpdateFactory.insertColumnIn(
             project:self.project)
-        /*
-        let card:ProjectCard = ProjectCard()
-        let index:IndexPath = self.project.indexForNewCard()
-        self.editingCard = index
-        self.project.insert(card:card, at:index)
+        self.project.apply(updates:updates)
         self.reloadViewModel()
-        self.presenter.insertCardAt(index:index)
-        self.scrollToEditingCard()*/
+        self.presenter.apply(updates:updates)
     }
     
     func deleteColumnAndMoveCardsAt(index:Int) {
