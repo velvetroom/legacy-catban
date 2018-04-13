@@ -143,6 +143,7 @@
 		DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */; };
 		DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D92080EACA00ADC499 /* ErrorProject.swift */; };
 		DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */; };
+		DA73A1DF2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -399,6 +400,7 @@
 		DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift; sourceTree = "<group>"; };
 		DA73A1D92080EACA00ADC499 /* ErrorProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProject.swift; sourceTree = "<group>"; };
 		DA73A1DC2080EBD500ADC499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
+		DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete_Exceptions.swift; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -734,6 +736,7 @@
 				DAD3C47E207BAF9800F84829 /* TestLandingColumnEdit.swift */,
 				DAEA2CB7207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift */,
 				DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */,
+				DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */,
 				DA94B5D2207D077E00EB4324 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion.swift */,
 				DA73A1D62080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift */,
 				DAE8C7E8207FB27600395318 /* TestLandingCollectionUpdateFactory_Insert.swift */,
@@ -1511,6 +1514,7 @@
 				DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */,
 				DA1DF9AC207CAB8100B03C6E /* TestLandingController_DataSourceProtocol_Columns_Delete.swift in Sources */,
 				DA5B6D13206B664100C7EF72 /* TestLandingPresenterCollectionDataSource_Moving.swift in Sources */,
+				DA73A1DF2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift in Sources */,
 				DA2538F820682A9B00EEB231 /* TestLandingController_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

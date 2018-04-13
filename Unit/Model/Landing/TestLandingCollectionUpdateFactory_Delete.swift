@@ -18,12 +18,14 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
     
     func testDeleteColumnReturnsOneUpdate() {
         self.addColumn()
+        self.addColumn()
         var updates:[CollectionUpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
         XCTAssertEqual(updates.count, 1, "There should be exactly 1 update")
     }
     
     func testDeleteColumnReturnsDeleteColumnUpdate() {
+        self.addColumn()
         self.addColumn()
         var updates:[CollectionUpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
@@ -32,6 +34,7 @@ class TestLandingCollectionUpdateFactory_Delete:XCTestCase {
     }
     
     func testDeleteColumnForFirstColumnReturnsFirstColumn() {
+        self.addColumn()
         self.addColumn()
         var updates:[CollectionUpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))

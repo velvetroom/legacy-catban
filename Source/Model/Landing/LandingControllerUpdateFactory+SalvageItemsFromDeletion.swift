@@ -2,10 +2,12 @@ import Foundation
 
 extension LandingCollectionUpdateFactory {
     func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
-        if project.columns.count > 1 {
-            return self.updatesMovingFrom(origin:index, in:project)
+        guard
+            project.columns.count > 1
+        else {
+            throw ErrorProject.oneColumnMinimum
         }
-        throw ErrorProject.oneColumnMinimum
+        return self.updatesMovingFrom(origin:index, in:project)
     }
     
     private func hostColumnForMovingCardsFrom(index:Int, in project:ProjectProtocol) -> Int {
