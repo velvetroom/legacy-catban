@@ -25,8 +25,24 @@ class TestLandingController_Error:XCTestCase {
         self.startExpectation()
         self.controller.model = Landing()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            let writer:WriterController? = controller as? WriterController
-            XCTAssertNotNil(writer, "Invalid controller presenter")
+            let controllerError:ErrorController? = controller as? ErrorController
+            XCTAssertNotNil(controllerError, "Invalid controller presented")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.alertError(error:ErrorProject.oneColumnMinimum)
+        
+        self.waitExpectations()
+    }
+    
+    func testUpdateErrorMessage() {
+        self.startExpectation()
+        self.controller.model = Landing()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            let controller:ErrorController = controller as! ErrorController
+            XCTAssertEqual(controller.model.message,
+                           ErrorProject.oneColumnMinimum.localizedDescription,
+                           "Message not updated")
             self?.expect?.fulfill()
         }
         

@@ -41,7 +41,7 @@ class TestLandingController_AddDelegate:XCTestCase {
         self.controller.model = Landing()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             let writer:WriterController? = controller as? WriterController
-            XCTAssertNotNil(writer, "Invalid controller presenter")
+            XCTAssertNotNil(writer, "Invalid controller presented")
             self?.expect?.fulfill()
         }
         
