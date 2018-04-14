@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingErrorPresenter:XCTestCase {
-    private var presenter:LandingErrorPresenter!
+class TestErrorPresenter:XCTestCase {
+    private var presenter:ErrorPresenter!
     
     override func setUp() {
         super.setUp()
-        self.presenter = LandingErrorPresenter()
+        self.presenter = ErrorPresenter()
     }
     
     func testLoad() {

@@ -1,10 +1,10 @@
 import UIKit
 
-class LandingErrorController:UIAlertController {
+class ErrorController:UIAlertController {
     var model:LandingErrorProtocol
     
     init() {
-        self.model = LandingError()
+        self.model = ErrorModel()
         super.init(nibName:nil, bundle:nil)
     }
     

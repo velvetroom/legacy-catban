@@ -1,5 +1,5 @@
 import UIKit
 
-struct LandingErrorPresenter {
+struct ErrorPresenter {
     weak var actionCancel:UIAlertAction?
 }

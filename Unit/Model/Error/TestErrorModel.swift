@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingError:XCTestCase {
-    private var model:LandingError!
+class TestErrorModel:XCTestCase {
+    private var model:ErrorModel!
     
     override func setUp() {
         super.setUp()
-        self.model = LandingError()
+        self.model = ErrorModel()
     }
     
     func testLoad() {
