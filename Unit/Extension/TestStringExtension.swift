@@ -6,7 +6,7 @@ class TestStringExtension:XCTestCase {
         static let expectedLanding:String = "catban"
         static let expectedProject:String = "My first project"
         static let expectedWriter:String = "Done"
-        static let expectedError:String = "Project needs to have at least one Column"
+        static let expectedError:String = "Projects need to have at least one Column"
     }
     
     func testLocalizableStringsFromLanding() {
