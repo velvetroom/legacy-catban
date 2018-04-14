@@ -32,7 +32,7 @@ extension LandingController {
         viewCollection.delegate = self.model.presenter.collection.delegate
         viewCollection.dataSource = self.model.presenter.collection.dataSource
         
-        self.view.addSubview(viewCollection)
+        self.view.insertSubview(viewCollection, belowSubview:self.outletsList.viewCollectionMenu!)
         self.outletsList.viewCollection = viewCollection
         self.outletsList.layoutCollection = layout
         
@@ -47,10 +47,10 @@ extension LandingController {
         let viewCollectionMenu:LandingViewCollectionMenu = LandingViewCollectionMenu()
         viewCollectionMenu.buttonClose.addTarget(self, action:#selector(self.selectorCloseEditingCard(sender:)),
                                                  for:UIControlEvents.touchUpInside)
-        viewCollectionMenu.buttonMoveRight.addTarget(self, action:#selector(self.selectorMoveEditingCardRight(sender:)),
-                                                 for:UIControlEvents.touchUpInside)
-        viewCollectionMenu.buttonMoveLeft.addTarget(self, action:#selector(self.selectorMoveEditingCardLeft(sender:)),
-                                                     for:UIControlEvents.touchUpInside)
+        viewCollectionMenu.buttonMoveRight.addTarget(self, action:#selector(
+            self.selectorMoveEditingCardRight(sender:)), for:UIControlEvents.touchUpInside)
+        viewCollectionMenu.buttonMoveLeft.addTarget(self, action:#selector(
+            self.selectorMoveEditingCardLeft(sender:)), for:UIControlEvents.touchUpInside)
         viewCollectionMenu.buttonEdit.addTarget(self, action:#selector(self.selectorEditCard(sender:)),
                                                 for:UIControlEvents.touchUpInside)
         
