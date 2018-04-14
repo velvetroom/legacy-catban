@@ -11,5 +11,6 @@ class TestLandingErrorPresenter:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNil(self.presenter.actionCancel, "Action should not be set by defaul")
     }
 }

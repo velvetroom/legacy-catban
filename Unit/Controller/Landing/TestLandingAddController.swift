@@ -14,6 +14,7 @@ class TestLandingAddController:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
+        XCTAssertNotNil(self.controller.model, "Failed to load model")
     }
     
     func testViewDidLoad() {
@@ -26,7 +27,8 @@ class TestLandingAddController:XCTestCase {
     }
     
     func testPreferredStyle() {
-        XCTAssertEqual(self.controller.preferredStyle, UIAlertControllerStyle.actionSheet, "Invalid style")
+        XCTAssertEqual(self.controller.preferredStyle, UIAlertControllerStyle.actionSheet,
+                       "Invalid style")
     }
     
     func testAddActions() {
