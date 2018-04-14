@@ -3,10 +3,16 @@ import XCTest
 
 class TestStringExtension:XCTestCase {
     private struct Constants {
+        static let expectedLoad:String = "catban"
         static let expectedLanding:String = "catban"
         static let expectedProject:String = "My first project"
         static let expectedWriter:String = "Done"
         static let expectedError:String = "Projects need to have at least one Column"
+    }
+    
+    func testLocalizableStringsFromLoad() {
+        let string:String = String.localizedLoad(key:"LoadController_title")
+        XCTAssertEqual(string, Constants.expectedLoad, "Unable to find localized string")
     }
     
     func testLocalizableStringsFromLanding() {

@@ -53,6 +53,9 @@
 		DA30604720826C2200E55ECB /* TestLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30604620826C2200E55ECB /* TestLoad.swift */; };
 		DA30604920826C7800E55ECB /* LoadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30604820826C7800E55ECB /* LoadProtocol.swift */; };
 		DA30604B20826C7E00E55ECB /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30604A20826C7E00E55ECB /* Load.swift */; };
+		DA30604D20826F8F00E55ECB /* TestLoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30604C20826F8F00E55ECB /* TestLoadController.swift */; };
+		DA30604F2082700300E55ECB /* LoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30604E2082700300E55ECB /* LoadController.swift */; };
+		DA30605220827A2A00E55ECB /* LocalizableLoad.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA30605020827A2A00E55ECB /* LocalizableLoad.strings */; };
 		DA391AD820774A6900484273 /* LandingAddControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AD720774A6900484273 /* LandingAddControllerDelegateProtocol.swift */; };
 		DA391ADA20774B2500484273 /* LandingController+AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */; };
 		DA391ADC2077500B00484273 /* TestLandingAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391ADB2077500B00484273 /* TestLandingAddPresenter.swift */; };
@@ -331,6 +334,9 @@
 		DA30604620826C2200E55ECB /* TestLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLoad.swift; sourceTree = "<group>"; };
 		DA30604820826C7800E55ECB /* LoadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadProtocol.swift; sourceTree = "<group>"; };
 		DA30604A20826C7E00E55ECB /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
+		DA30604C20826F8F00E55ECB /* TestLoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLoadController.swift; sourceTree = "<group>"; };
+		DA30604E2082700300E55ECB /* LoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadController.swift; sourceTree = "<group>"; };
+		DA30605120827A2A00E55ECB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableLoad.strings; sourceTree = "<group>"; };
 		DA391AD720774A6900484273 /* LandingAddControllerDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAddControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+AddDelegate.swift"; sourceTree = "<group>"; };
 		DA391ADB2077500B00484273 /* TestLandingAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingAddPresenter.swift; sourceTree = "<group>"; };
@@ -873,6 +879,7 @@
 		DA6EBE7620824415004B639E /* Load */ = {
 			isa = PBXGroup;
 			children = (
+				DA30604E2082700300E55ECB /* LoadController.swift */,
 			);
 			path = Load;
 			sourceTree = "<group>";
@@ -905,6 +912,7 @@
 		DA6EBE7B2082444F004B639E /* Load */ = {
 			isa = PBXGroup;
 			children = (
+				DA30604C20826F8F00E55ECB /* TestLoadController.swift */,
 			);
 			path = Load;
 			sourceTree = "<group>";
@@ -1090,6 +1098,7 @@
 				DA8AB26C2064FE0E005A393E /* LocalizableLanding.strings */,
 				DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */,
 				DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */,
+				DA30605020827A2A00E55ECB /* LocalizableLoad.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1432,6 +1441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE698CF20656A350046721C /* brand.xcassets in Resources */,
+				DA30605220827A2A00E55ECB /* LocalizableLoad.strings in Resources */,
 				DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
@@ -1459,6 +1469,7 @@
 				DAEB818E206D24F300E55424 /* LandingPresenterProtocol.swift in Sources */,
 				DA6F1B8420735D0D001248E4 /* WriterPresenterOutletsProtocol.swift in Sources */,
 				DA2538E82067D18A00EEB231 /* LandingPresenterCollectionProtocol.swift in Sources */,
+				DA30604F2082700300E55ECB /* LoadController.swift in Sources */,
 				DA5EAFC62075EF9D002BDAD8 /* LandingAddController.swift in Sources */,
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
 				DA54784C207A387400F9301E /* LandingDeleteController+Constants.swift in Sources */,
@@ -1611,6 +1622,7 @@
 				DA48BC0620808BC60057F424 /* TestLanding_Scroll.swift in Sources */,
 				DADE83C7207105ED0053E7A0 /* TestLanding_CardsMoveRight.swift in Sources */,
 				DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */,
+				DA30604D20826F8F00E55ECB /* TestLoadController.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
 				DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
@@ -1734,6 +1746,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DA30605020827A2A00E55ECB /* LocalizableLoad.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA30605120827A2A00E55ECB /* en */,
+			);
+			name = LocalizableLoad.strings;
+			sourceTree = "<group>";
+		};
 		DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
