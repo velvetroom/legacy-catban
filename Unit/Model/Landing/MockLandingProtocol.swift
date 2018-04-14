@@ -26,6 +26,7 @@ class MockLandingProtocol:LandingProtocol {
     var returnCardAtIndex:ProjectCard
     var returnColumnAtIndex:ProjectColumn
     var returnIndexForColumn:Int
+    var throwingError:Error?
     
     init() {
         self.project = Project()
@@ -82,6 +83,9 @@ class MockLandingProtocol:LandingProtocol {
     }
     
     func deleteColumnAndMoveCardsAt(index:Int) throws {
+        if let throwingError:Error = self.throwingError {
+            throw throwingError
+        }
         self.onDeleteColumnAt?(index)
     }
     

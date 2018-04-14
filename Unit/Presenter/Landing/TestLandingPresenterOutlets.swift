@@ -45,7 +45,7 @@ class TestLandingPresenterOutlets:XCTestCase {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
         viewModel.reloadCollection = false
         self.collection.onReloadDataCalled = {
-            XCTAssertTrue(false, "Should not have called reload data")
+            XCTFail("Should not have called reload data")
         }
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.2) { [weak self] in
             self?.expect?.fulfill()

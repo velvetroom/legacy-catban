@@ -65,6 +65,20 @@ class TestLandingController_DataSourceProtocol_Columns_Delete:XCTestCase {
         self.waitExpectation()
     }
     
+    func testConfirmedDeleteSectionAtThrows() {
+        self.startExpectation()
+        self.model.throwingError = ErrorProject.oneColumnMinimum
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            let controller:ErrorController? = controller as? ErrorController
+            XCTAssertNotNil(controller, "Failed to present error controller")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.confirmedDeleteSectionAt(index:Constants.index)
+        
+        self.waitExpectation()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }

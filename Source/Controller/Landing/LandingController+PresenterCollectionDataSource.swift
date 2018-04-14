@@ -40,11 +40,11 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
     
-    private func confirmedDeleteSectionAt(index:Int) {
+    func confirmedDeleteSectionAt(index:Int) {
         do {
             try self.model.deleteColumnAndMoveCardsAt(index:index)
         } catch let error {
-            
+            self.alertError(error:error)
         }
     }
 }

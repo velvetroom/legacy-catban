@@ -18,10 +18,17 @@ class ErrorController:UIAlertController {
         }
     }
     
+    override var message:String? {
+        get {
+            return self.model.message
+        }
+        set { }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let action:UIAlertAction = UIAlertAction(
-            title:String.localizedLanding(key:"LandingAddController_actionCancelTitle"),
+            title:String.localizedError(key:"ErrorController_actionCancelTitle"),
             style:UIAlertActionStyle.cancel, handler:nil)
         self.model.presenter.actionCancel = action
         self.addAction(action)

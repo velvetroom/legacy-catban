@@ -3,10 +3,14 @@ import XCTest
 
 class TestErrorController:XCTestCase {
     private var controller:ErrorController!
+    private struct Constants {
+        static let message:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
         self.controller = ErrorController()
+        self.controller.model.message = Constants.message
     }
     
     func testLoad() {
@@ -23,5 +27,10 @@ class TestErrorController:XCTestCase {
     func testPreferredStyle() {
         XCTAssertEqual(self.controller.preferredStyle, UIAlertControllerStyle.alert,
                        "Invalid style")
+    }
+    
+    func testUpdateAlertMessage() {
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        XCTAssertEqual(self.controller.message, Constants.message, "Failed to update message")
     }
 }

@@ -38,7 +38,7 @@ class TestLandingPresenterCollectionDataSource_Moving:XCTestCase {
             self?.expect?.fulfill()
         }
         self.collection.onReloadDataCalled = {
-            XCTAssertTrue(false, "Collection should not be reloaded")
+            XCTFail("Collection should not be reloaded")
         }
         
         self.presenter.collectionView(self.collection, moveItemAt:Constants.origin, to:Constants.destination)
