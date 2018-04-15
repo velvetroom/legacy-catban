@@ -24,8 +24,6 @@ class TestLandingController:XCTestCase {
         XCTAssertNotNil(self.controller.view, "Unable to load view from controller")
         XCTAssertNotNil(self.controller.title, "Controller title not loaded")
         XCTAssertNotNil(self.outlets.controller, "Controller not loaded")
-        XCTAssertNotNil(self.outlets.imageLogo, "Image logo not loaded")
-        XCTAssertNotNil(self.outlets.imageLogo?.image, "Image logo doesn't have an image")
         XCTAssertNotNil(self.outlets.viewCollection, "View collection not loaded")
         XCTAssertNotNil(self.outlets.viewCollection?.delegate, "Collection has no delegate")
         XCTAssertNotNil(self.outlets.viewCollection?.dataSource, "Collection has no data source")

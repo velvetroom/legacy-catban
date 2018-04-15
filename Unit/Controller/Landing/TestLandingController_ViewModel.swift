@@ -59,26 +59,6 @@ class TestLandingController_ViewModel:XCTestCase {
         self.waitExpectations()
     }
     
-    func testDisplayLogo() {
-        var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.outlets.logoHidden = false
-        XCTAssertNotNil(self.controller.view, "Failed to load view")
-        
-        self.controller.model.presenter.update(viewModel:viewModel)
-        
-        XCTAssertFalse(self.controller.model.presenter.outlets.list.imageLogo!.isHidden)
-    }
-    
-    func testHideLogo() {
-        var viewModel:LandingViewModel = LandingViewModel()
-        viewModel.outlets.logoHidden = true
-        XCTAssertNotNil(self.controller.view, "Failed to load view")
-        
-        self.controller.model.presenter.update(viewModel:viewModel)
-        
-        XCTAssertTrue(self.controller.model.presenter.outlets.list.imageLogo!.isHidden)
-    }
-    
     func testUpdateTitle() {
         var viewModel:LandingViewModel = LandingViewModel()
         viewModel.outlets.title = Constants.testTitle

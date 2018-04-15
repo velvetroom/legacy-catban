@@ -9,7 +9,6 @@ class LandingPresenterOutlets:LandingPresenterOutletsProtocol {
     
     func update(viewModel:LandingViewModelOutlets) {
         self.list.controller?.title = viewModel.title
-        self.list.imageLogo?.isHidden = viewModel.logoHidden
         self.list.layoutCollection?.viewModel = viewModel.collectionLayout
         self.collectionShould(reload:viewModel.reloadCollection)
         self.configureCollectionMenu(viewModel:viewModel.collectionMenu)
