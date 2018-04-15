@@ -192,6 +192,7 @@
 		DA86FBD220836951005D31AF /* MockRepositoryLocalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */; };
 		DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */; };
 		DA86FBD620836C83005D31AF /* RepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD520836C83005D31AF /* RepositoryLocal.swift */; };
+		DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD7208371FD005D31AF /* ErrorRepository.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
@@ -484,6 +485,7 @@
 		DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryLocalProtocol.swift; sourceTree = "<group>"; };
 		DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal.swift; sourceTree = "<group>"; };
 		DA86FBD520836C83005D31AF /* RepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocal.swift; sourceTree = "<group>"; };
+		DA86FBD7208371FD005D31AF /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -978,6 +980,7 @@
 			children = (
 				DA636FF520810B3300C02447 /* ErrorModel.swift */,
 				DA73A1D92080EACA00ADC499 /* ErrorProject.swift */,
+				DA86FBD7208371FD005D31AF /* ErrorRepository.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -1630,6 +1633,7 @@
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
+				DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */,
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
 				DAEA2CBA207CFA1400C15653 /* LandingCollectionUpdateFactoryProtocol.swift in Sources */,
 				DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */,
