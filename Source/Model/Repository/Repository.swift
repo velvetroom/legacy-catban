@@ -1,9 +1,9 @@
 import Foundation
 
 class Repository:RepositoryProtocol {
-    var local:LocalProtocol
+    var local:RepositoryLocalProtocol
     
     init() {
-        self.local = Local()
+        self.local = RepositoryLocal()
     }
 }

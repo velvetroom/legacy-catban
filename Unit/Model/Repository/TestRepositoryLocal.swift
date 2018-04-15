@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLocal:XCTestCase {
-    private var model:Local!
+class TestRepositoryLocal:XCTestCase {
+    private var model:RepositoryLocal!
     
     override func setUp() {
         super.setUp()
-        self.model = Local()
+        self.model = RepositoryLocal()
     }
     
     func testLoad() {

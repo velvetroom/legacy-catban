@@ -3,10 +3,10 @@ import Foundation
 
 class MockRepositoryProtocol:RepositoryProtocol {
     var onLoadBoard:(() -> Void)?
-    var local:LocalProtocol
+    var local:RepositoryLocalProtocol
     
     init() {
-        self.local = Local()
+        self.local = RepositoryLocal()
     }
     
     func loadBoardFromLocal() throws -> BoardProtocol {
