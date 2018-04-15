@@ -182,6 +182,10 @@
 		DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79AF8F206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift */; };
 		DA7A38AE207B37500008638F /* TestLanding_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7A38AD207B37500008638F /* TestLanding_Columns.swift */; };
 		DA86FBBE20835ADA005D31AF /* LoadController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */; };
+		DA86FBC220835D86005D31AF /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC120835D86005D31AF /* TestRepository.swift */; };
+		DA86FBC420835DCA005D31AF /* MockRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */; };
+		DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */; };
+		DA86FBC820835E17005D31AF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC720835E17005D31AF /* Repository.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
@@ -464,6 +468,10 @@
 		DA79AF8F206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
 		DA7A38AD207B37500008638F /* TestLanding_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Columns.swift; sourceTree = "<group>"; };
 		DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadController+Outlets.swift"; sourceTree = "<group>"; };
+		DA86FBC120835D86005D31AF /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
+		DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA86FBC720835E17005D31AF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -1035,6 +1043,24 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
+		DA86FBBF20835D6B005D31AF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */,
+				DA86FBC720835E17005D31AF /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DA86FBC020835D76005D31AF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA86FBC120835D86005D31AF /* TestRepository.swift */,
+				DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		DA8AB1FB2064E349005A393E = {
 			isa = PBXGroup;
 			children = (
@@ -1123,6 +1149,7 @@
 		DA8AB2482064EA53005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA86FBC020835D76005D31AF /* Repository */,
 				DA30603B208263F000E55ECB /* User */,
 				DA6EBE7D20824486004B639E /* Board */,
 				DA6EBE7E20824486004B639E /* Load */,
@@ -1288,6 +1315,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA86FBBF20835D6B005D31AF /* Repository */,
 				DA30603A208263DE00E55ECB /* User */,
 				DA6EBE7820824426004B639E /* Board */,
 				DA6EBE7920824426004B639E /* Load */,
@@ -1493,6 +1521,7 @@
 				DA657E992074F491003C1645 /* WriterViewText+Constants.swift in Sources */,
 				DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */,
 				DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */,
+				DA86FBC820835E17005D31AF /* Repository.swift in Sources */,
 				DA6F1B7A20735B07001248E4 /* WriterPresenter.swift in Sources */,
 				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA6F1B8220735CE9001248E4 /* WriterPresenterOutlets.swift in Sources */,
@@ -1594,6 +1623,7 @@
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,
 				DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */,
 				DADE83C12070E7E80053E7A0 /* ProjectProtocol.swift in Sources */,
+				DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1611,6 +1641,7 @@
 				DA647A3B20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DAEB818C206D246200E55424 /* TestLandingPresenter.swift in Sources */,
 				DA2538F4206820F100EEB231 /* TestLandingController_Collection.swift in Sources */,
+				DA86FBC420835DCA005D31AF /* MockRepositoryProtocol.swift in Sources */,
 				DA040FE5207A0F51008F0BCB /* TestLandingViewCollectionLayout_Height.swift in Sources */,
 				DA2538F22068203C00EEB231 /* TestLandingController_Load.swift in Sources */,
 				DA8AB25B2064ED96005A393E /* TestApplicationNavigationController.swift in Sources */,
@@ -1664,6 +1695,7 @@
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
 				DAEA2CB8207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift in Sources */,
+				DA86FBC220835D86005D31AF /* TestRepository.swift in Sources */,
 				DAD3C47F207BAF9800F84829 /* TestLandingColumnEdit.swift in Sources */,
 				DA657EA520752F2D003C1645 /* TestLanding_UpdateCard.swift in Sources */,
 				DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */,
