@@ -1,5 +1,4 @@
 import XCTest
-@testable import catban
 
 class UnitTest:XCTestCase {
     var expect:XCTestExpectation?
@@ -7,11 +6,11 @@ class UnitTest:XCTestCase {
         static let wait:TimeInterval = 0.3
     }
     
-    private func startExpectation() {
+    func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
     
-    private func waitExpectations() {
+    func waitExpectations() {
         self.waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
     }
 }
