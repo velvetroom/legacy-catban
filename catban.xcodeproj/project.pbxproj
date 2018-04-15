@@ -193,6 +193,7 @@
 		DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */; };
 		DA86FBD620836C83005D31AF /* RepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD520836C83005D31AF /* RepositoryLocal.swift */; };
 		DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD7208371FD005D31AF /* ErrorRepository.swift */; };
+		DA86FBDA20837312005D31AF /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD920837312005D31AF /* UnitTest.swift */; };
 		DA8AB2272064E476005A393E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */; };
 		DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA8AB2222064E476005A393E /* InfoPlist.strings */; };
 		DA8AB2572064EA7F005A393E /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AB2562064EA7F005A393E /* TestApplication.swift */; };
@@ -486,6 +487,7 @@
 		DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal.swift; sourceTree = "<group>"; };
 		DA86FBD520836C83005D31AF /* RepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocal.swift; sourceTree = "<group>"; };
 		DA86FBD7208371FD005D31AF /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
+		DA86FBD920837312005D31AF /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -970,6 +972,7 @@
 		DA6F1B9120736E51001248E4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DA86FBD920837312005D31AF /* UnitTest.swift */,
 				DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */,
 			);
 			path = Shared;
@@ -1788,6 +1791,7 @@
 				DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */,
 				DA5EAFCA2075F647002BDAD8 /* TestLandingController_SelectorsAdd.swift in Sources */,
 				DA79602C206BCE9600548952 /* MockLandingPresenterCollectionDataSourceProtocol.swift in Sources */,
+				DA86FBDA20837312005D31AF /* UnitTest.swift in Sources */,
 				DA636FF42081074C00C02447 /* TestErrorModel.swift in Sources */,
 				DA30604520826BFE00E55ECB /* MockLoadProtocol.swift in Sources */,
 				DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */,
