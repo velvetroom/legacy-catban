@@ -15,6 +15,7 @@ class LoadController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()
+        self.factoryOutlets()
     }
     
     private func adjustNavigationItem() {
