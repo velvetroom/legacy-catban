@@ -1,5 +1,7 @@
 import Foundation
 
 protocol RepositoryProtocol {
-    func loadBoard() throws -> BoardProtocol
+    var local:LocalProtocol { get set }
+    
+    func loadBoardFromLocal() throws -> BoardProtocol
 }

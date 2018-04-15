@@ -1,7 +1,7 @@
 import Foundation
 
 extension Repository {
-    func loadBoard() throws -> BoardProtocol {
-        throw ErrorProject.oneColumnMinimum
+    func loadBoardFromLocal() throws -> BoardProtocol {
+        return Board()
     }
 }
