@@ -1,7 +1,7 @@
 import Foundation
 
 extension Project {
-    class func factoryNewProject() -> Project {
+    class func factoryFirstProject() -> Project {
         let project:Project = Project()
         project.name = String.localizedProject(key:"Project_defaultName")
         project.columns = factoryDefaultColumns()

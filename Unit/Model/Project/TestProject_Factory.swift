@@ -6,7 +6,7 @@ class TestProject_Factory:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
     }
     
     func testFactory() {

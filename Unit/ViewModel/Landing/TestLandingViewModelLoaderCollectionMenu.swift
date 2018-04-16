@@ -9,7 +9,7 @@ class TestLandingViewModelLoaderCollectionMenu:XCTestCase {
     override func setUp() {
         super.setUp()
         self.loader = LandingViewModelLoaderCollectionMenu()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.model = Landing()
         self.model.project = project
     }

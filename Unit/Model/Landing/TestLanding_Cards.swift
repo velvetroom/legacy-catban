@@ -32,7 +32,7 @@ class TestLanding_Cards:XCTestCase {
     }
     
     func testCardAtIndex() {
-        self.model.project = Project.factoryNewProject()
+        self.model.project = Project.factoryFirstProject()
         let indexPath:IndexPath = IndexPath(item:1, section:0)
         let card:ProjectCard = self.model.project.columns[indexPath.section].cards[indexPath.item]
         

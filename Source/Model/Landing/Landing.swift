@@ -18,7 +18,7 @@ class Landing:LandingProtocol {
     }
     
     init() {
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.collectionUpdateFactory = LandingCollectionUpdateFactory()

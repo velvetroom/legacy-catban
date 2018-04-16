@@ -14,7 +14,7 @@ class TestLandingViewModelLoader:XCTestCase {
         super.setUp()
         self.model = Landing()
         self.loader = LandingViewModelLoader()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.model.project = project
         self.appendTestCard()
     }

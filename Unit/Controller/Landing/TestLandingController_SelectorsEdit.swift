@@ -29,7 +29,7 @@ class TestLandingController_SelectorsEdit:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.navigation = MockNavigationController()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.navigation.addChildViewController(self.controller)
         self.controller.model.project = self.project
         self.controller.model.editingCard = self.editingIndex

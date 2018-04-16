@@ -13,7 +13,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         super.setUp()
         self.controller = LandingController()
         self.layoutMenuBottom = NSLayoutConstraint()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.controller.model.presenter.outlets.list.layoutCollectionMenuBottom = self.layoutMenuBottom
         self.controller.model.project = self.project
     }

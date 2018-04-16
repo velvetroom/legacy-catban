@@ -18,7 +18,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
     override func setUp() {
         super.setUp()
         self.loader = LandingViewModelLoaderCollectionLayout()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.model = Landing()
         self.model.project = self.project
         self.addColumnToProject()

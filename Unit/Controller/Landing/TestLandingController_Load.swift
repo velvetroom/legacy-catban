@@ -38,7 +38,7 @@ class TestLandingController_Load:XCTestCase {
         XCTAssertTrue(self.controller.model.presenter.collection.dataSource.viewModel.sections.isEmpty,
                       "View model not empty at initiation")
         self.controller.model.viewModelLoader = LandingViewModelLoader()
-        self.controller.model.project = Project.factoryNewProject()
+        self.controller.model.project = Project.factoryFirstProject()
         
         self.controller.model.reloadViewModel()
         
@@ -49,7 +49,7 @@ class TestLandingController_Load:XCTestCase {
     func testPresenterReceivesUpdatedViewModel() {
         self.startExpectation()
         self.controller.model.presenter = self.mockPresenter
-        self.controller.model.project = Project.factoryNewProject()
+        self.controller.model.project = Project.factoryFirstProject()
         self.mockPresenter.onUpdateViewModel = { [weak self] in
             self?.expect?.fulfill()
         }

@@ -22,7 +22,7 @@ class TestLandingController_ViewModel:XCTestCase {
         self.dataSource = MockLandingPresenterCollectionDataSource()
         self.presenter.dataSource = self.dataSource
         self.controller.model.presenter.collection = self.presenter
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.controller.model.project = self.project
     }
     

@@ -20,7 +20,7 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     override func setUp() {
         super.setUp()
         self.controller = LandingController()
-        self.project = Project.factoryNewProject()
+        self.project = Project.factoryFirstProject()
         self.controller.model.project = project
         self.collection = MockLandingViewCollection()
         self.mockModel = MockLandingProtocol()
