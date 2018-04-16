@@ -19,6 +19,11 @@ class LoadController:UIViewController {
         self.loadBoard()
     }
     
+    func openLanding(board:BoardProtocol) {
+        let controller:LandingController = LandingController()
+        self.navigationController?.setViewControllers([controller], animated:true)
+    }
+    
     private func adjustNavigationItem() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
         self.title = String.localizedLoad(key:"LoadController_title")
@@ -26,7 +31,7 @@ class LoadController:UIViewController {
     
     private func loadBoard() {
         self.model.loadBoard { [weak self] (board:BoardProtocol) in
-            
+            self?.openLanding(board:board)
         }
     }
 }

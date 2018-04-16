@@ -3,6 +3,7 @@ import UIKit
 class MockNavigationController:UINavigationController {
     var onPresent:((UIViewController) -> Void)?
     var onDismiss:(() -> Void)?
+    var onSetControllers:(([UIViewController]) -> Void)?
     
     init() {
         super.init(nibName:nil, bundle:nil)
@@ -19,5 +20,9 @@ class MockNavigationController:UINavigationController {
     
     override func dismiss(animated flag:Bool, completion:(() -> Void)? = nil) {
         self.onDismiss?()
+    }
+    
+    override func setViewControllers(_ viewControllers:[UIViewController], animated:Bool) {
+        self.onSetControllers?(viewControllers)
     }
 }
