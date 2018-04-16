@@ -33,6 +33,7 @@ class Load:LoadProtocol {
     }
     
     func createNewBoard() -> BoardProtocol {
-        return Board()
+        let board:BoardProtocol = Board.factoryNewBoard()
+        return board
     }
 }

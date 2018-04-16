@@ -17,6 +17,7 @@ class TestProject:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.project.columns, "Failed to load columns")
         XCTAssertNotNil(self.project.name, "Project has not name")
+        XCTAssertNotNil(self.project.identifier, "Failed to load identifier")
     }
     
     func testCardAtIndexPath() {

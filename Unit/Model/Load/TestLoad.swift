@@ -48,7 +48,8 @@ class TestLoad:XCTestCase {
     func testCreateNewBoard() {
         self.startExpectation()
         
-        
+        let board:BoardProtocol = self.model.createNewBoard()
+        XCTAssertFalse(board.user.identifier.isEmpty, "Failed to factory new board")
         
         self.waitExpectations()
     }

@@ -3,6 +3,7 @@ import Foundation
 protocol ProjectProtocol {
     var columns:[ProjectColumn] { get set }
     var name:String { get set }
+    var identifier:String { get set }
     
     func cardAt(indexPath:IndexPath) -> ProjectCard
     func columnAt(index:Int) -> ProjectColumn

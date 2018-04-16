@@ -20,10 +20,12 @@ class MockProjectProtocol:ProjectProtocol {
     var indexForCard:IndexPath
     var columns:[ProjectColumn]
     var name:String
+    var identifier:String
     
     init() {
         self.columns = []
         self.name = String()
+        self.identifier = String()
         self.indexForCard = IndexPath(item:0, section:0)
         self.returnCard = ProjectCard()
         self.returnColumn = ProjectColumn()

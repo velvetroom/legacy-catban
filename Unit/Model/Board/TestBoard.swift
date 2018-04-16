@@ -12,5 +12,6 @@ class TestBoard:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.model.projects, "Failed to load projects")
+        XCTAssertNotNil(self.model.user, "Failed to load user")
     }
 }

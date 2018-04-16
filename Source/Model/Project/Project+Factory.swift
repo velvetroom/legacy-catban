@@ -5,6 +5,7 @@ extension Project {
         let project:Project = Project()
         project.name = String.localizedProject(key:"Project_defaultName")
         project.columns = factoryDefaultColumns()
+        project.identifier = UUID().uuidString
         return project
     }
     
