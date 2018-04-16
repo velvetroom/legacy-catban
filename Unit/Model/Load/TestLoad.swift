@@ -15,6 +15,8 @@ class TestLoad:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.dispatchQueue, "Failed to load dispatch queue")
+        XCTAssertEqual(self.model.dispatchQueue.qos, DispatchQoS.background, "Invalid quality of service")
     }
     
     func testLoadBoard() {
