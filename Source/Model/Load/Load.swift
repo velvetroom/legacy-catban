@@ -7,11 +7,20 @@ class Load:LoadProtocol {
         self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:Constants.threadLabel)
     }
     
-    func loadBoard(completion:@escaping((Board) -> Void)) {
-        
+    func loadBoard(completion:@escaping((BoardProtocol) -> Void)) {
+        self.dispatchQueue.async { [weak self] in
+            guard
+                let board:BoardProtocol = self?.backgroundLoadBoard()
+            else {
+                return
+            }
+            DispatchQueue.main.async {
+                completion(board)
+            }
+        }
     }
     
-    func backgroundLoadBoard(completion:@escaping((Board) -> Void)) {
-        
+    func backgroundLoadBoard() -> BoardProtocol {
+        return Board()
     }
 }

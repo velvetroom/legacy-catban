@@ -23,6 +23,7 @@ class TestLoad:XCTestCase {
         self.startExpectation()
         
         self.model.loadBoard { [weak self] (board:BoardProtocol) in
+            XCTAssertTrue(Thread.isMainThread, "Invalid thread on return")
             self?.expect?.fulfill()
         }
         

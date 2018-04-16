@@ -9,7 +9,7 @@ class MockLoadProtocol:LoadProtocol {
         self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:String())
     }
     
-    func loadBoard(completion:@escaping((Board) -> Void)) {
+    func loadBoard(completion:@escaping((BoardProtocol) -> Void)) {
         self.onLoadBoard?()
     }
 }
