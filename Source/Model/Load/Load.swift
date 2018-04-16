@@ -6,7 +6,6 @@ class Load:LoadProtocol {
     }
     
     func backgroundLoadBoard(completion:@escaping((Board) -> Void)) {
-        let a = DispatchQueue.global(qos:DispatchQoS.QoSClass.background)
-        a.
+        
     }
 }
