@@ -3,6 +3,7 @@ import Foundation
 
 class MockRepositoryProtocol:RepositoryProtocol {
     var onLoadBoardFromLocal:(() -> Void)?
+    var onLocalSave:((BoardProtocol) -> Void)?
     var local:RepositoryLocalProtocol
     
     init() {
@@ -12,5 +13,9 @@ class MockRepositoryProtocol:RepositoryProtocol {
     func loadBoardFromLocal() throws -> BoardProtocol {
         self.onLoadBoardFromLocal?()
         return Board()
+    }
+    
+    func localSave(board:BoardProtocol) {
+        self.onLocalSave?(board)
     }
 }

@@ -47,9 +47,14 @@ class TestLoad:XCTestCase {
     
     func testCreateNewBoard() {
         self.startExpectation()
-        
+        var userIdentifier:String?
+        self.repository.onLocalSave = { [weak self] (board:BoardProtocol) in
+            userIdentifier = board.user.identifier
+            self?.expect?.fulfill()
+        }
         let board:BoardProtocol = self.model.createNewBoard()
         XCTAssertFalse(board.user.identifier.isEmpty, "Failed to factory new board")
+        XCTAssertEqual(board.user.identifier, userIdentifier, "Invalid board received")
         
         self.waitExpectations()
     }
