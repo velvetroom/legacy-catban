@@ -2,7 +2,7 @@ import Foundation
 @testable import catban
 
 class MockRepositoryProtocol:RepositoryProtocol {
-    var onLoadBoard:(() -> Void)?
+    var onLoadBoardFromLocal:(() -> Void)?
     var local:RepositoryLocalProtocol
     
     init() {
@@ -10,7 +10,7 @@ class MockRepositoryProtocol:RepositoryProtocol {
     }
     
     func loadBoardFromLocal() throws -> BoardProtocol {
-        self.onLoadBoard?()
+        self.onLoadBoardFromLocal?()
         return Board()
     }
 }

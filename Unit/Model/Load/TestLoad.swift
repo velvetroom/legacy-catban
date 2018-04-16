@@ -3,6 +3,7 @@ import XCTest
 
 class TestLoad:XCTestCase {
     private var model:Load!
+    private var repository:MockRepositoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -11,10 +12,13 @@ class TestLoad:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Load()
+        self.repository = MockRepositoryProtocol()
+        self.model.repository = self.repository
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.repository, "Failed to load repository")
         XCTAssertNotNil(self.model.dispatchQueue, "Failed to load dispatch queue")
         XCTAssertEqual(self.model.dispatchQueue.qos, DispatchQoS.background, "Invalid quality of service")
     }
@@ -26,6 +30,25 @@ class TestLoad:XCTestCase {
             XCTAssertTrue(Thread.isMainThread, "Invalid thread on return")
             self?.expect?.fulfill()
         }
+        
+        self.waitExpectations()
+    }
+    
+    func testBackgroundLoadThread() {
+        self.startExpectation()
+        self.repository.onLoadBoardFromLocal = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        let _:BoardProtocol = self.model.backgroundLoadBoard()
+        
+        self.waitExpectations()
+    }
+    
+    func testCreateNewBoard() {
+        self.startExpectation()
+        
+        
         
         self.waitExpectations()
     }

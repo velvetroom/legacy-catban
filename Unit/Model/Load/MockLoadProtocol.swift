@@ -3,9 +3,11 @@ import Foundation
 
 class MockLoadProtocol:LoadProtocol {
     var onLoadBoard:(() -> Void)?
+    var repository:RepositoryProtocol
     var dispatchQueue:DispatchQueue
     
     init() {
+        self.repository = Repository()
         self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:String())
     }
     
