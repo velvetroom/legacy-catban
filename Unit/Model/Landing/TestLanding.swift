@@ -40,6 +40,33 @@ class TestLanding:XCTestCase {
         self.waitExpectation()
     }
     
+    func testUpdateProject() {
+        let project:Project = Project()
+        
+        self.model.project = project
+        
+        guard
+            let boardProject:Project = self.model.board.project as? Project
+        else {
+            return
+        }
+        
+        XCTAssertTrue(boardProject === project, "Failed to update board project")
+    }
+    
+    func testRetrieveProject() {
+        let project:Project = Project()
+        self.model.board.project = project
+        
+        guard
+            let landingProject:Project = self.model.project as? Project
+        else {
+            return
+        }
+        
+        XCTAssertTrue(landingProject === project, "Failed to retrieve landing project")
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
