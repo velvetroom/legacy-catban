@@ -1,16 +1,15 @@
 import XCTest
 @testable import catban
 
-class TestRepositoryLocal:XCTestCase {
-    private var model:RepositoryLocal!
+class TestFile_LoadProjects:XCTestCase {
+    private var model:File!
     
     override func setUp() {
         super.setUp()
-        self.model = RepositoryLocal()
+        self.model = File()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.file, "Failed to load file")
     }
 }

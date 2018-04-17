@@ -1,3 +1,4 @@
 ErrorController_actionCancelTitle="Continue";
 ErrorProject_oneColumnMinimum="Projects need to have at least one Column";
 ErrorRepository_boardNotFoundLocally="Board not found locally";
+ErrorRepository_fileNotFound="File not found";

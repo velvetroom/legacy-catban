@@ -81,6 +81,11 @@
 		DA4A69BF2085DECF005AE05F /* MockFileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69BE2085DECF005AE05F /* MockFileProtocol.swift */; };
 		DA4A69C22085E0D1005AE05F /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C12085E0D1005AE05F /* FileProtocol.swift */; };
 		DA4A69C42085E0E1005AE05F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C32085E0E1005AE05F /* File.swift */; };
+		DA4A69C62085E3AA005AE05F /* File+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C52085E3AA005AE05F /* File+Constants.swift */; };
+		DA4A69C82085E657005AE05F /* TestFile_LoadProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C72085E657005AE05F /* TestFile_LoadProjects.swift */; };
+		DA4A69CA2085E662005AE05F /* TestFile_LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C92085E662005AE05F /* TestFile_LoadUser.swift */; };
+		DA4A69CC2085E673005AE05F /* File+LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69CB2085E673005AE05F /* File+LoadUser.swift */; };
+		DA4A69CE2085E67C005AE05F /* File+LoadProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69CD2085E67C005AE05F /* File+LoadProjects.swift */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -388,6 +393,11 @@
 		DA4A69BE2085DECF005AE05F /* MockFileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileProtocol.swift; sourceTree = "<group>"; };
 		DA4A69C12085E0D1005AE05F /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
 		DA4A69C32085E0E1005AE05F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		DA4A69C52085E3AA005AE05F /* File+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Constants.swift"; sourceTree = "<group>"; };
+		DA4A69C72085E657005AE05F /* TestFile_LoadProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile_LoadProjects.swift; sourceTree = "<group>"; };
+		DA4A69C92085E662005AE05F /* TestFile_LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile_LoadUser.swift; sourceTree = "<group>"; };
+		DA4A69CB2085E673005AE05F /* File+LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+LoadUser.swift"; sourceTree = "<group>"; };
+		DA4A69CD2085E67C005AE05F /* File+LoadProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+LoadProjects.swift"; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -694,6 +704,8 @@
 			isa = PBXGroup;
 			children = (
 				DA4A69BC2085DE6E005AE05F /* TestFile.swift */,
+				DA4A69C92085E662005AE05F /* TestFile_LoadUser.swift */,
+				DA4A69C72085E657005AE05F /* TestFile_LoadProjects.swift */,
 				DA4A69BE2085DECF005AE05F /* MockFileProtocol.swift */,
 			);
 			path = File;
@@ -704,6 +716,9 @@
 			children = (
 				DA4A69C12085E0D1005AE05F /* FileProtocol.swift */,
 				DA4A69C32085E0E1005AE05F /* File.swift */,
+				DA4A69CB2085E673005AE05F /* File+LoadUser.swift */,
+				DA4A69CD2085E67C005AE05F /* File+LoadProjects.swift */,
+				DA4A69C52085E3AA005AE05F /* File+Constants.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -1628,6 +1643,7 @@
 				DA519A7720693E1000514098 /* LandingViewModelLoaderOutlets.swift in Sources */,
 				DA1604402076996E0096EFE1 /* Project+Cards.swift in Sources */,
 				DA30604B20826C7E00E55ECB /* Load.swift in Sources */,
+				DA4A69CC2085E673005AE05F /* File+LoadUser.swift in Sources */,
 				DAEB8184206D1AD800E55424 /* LandingPresenterCollectionDelegateProtocol.swift in Sources */,
 				DA3060432082644900E55ECB /* User.swift in Sources */,
 				DAEB8196206D296300E55424 /* LandingPresenterOutletsProtocol.swift in Sources */,
@@ -1646,6 +1662,7 @@
 				DAEB8180206D159A00E55424 /* LandingViewCollectionMenu+Constants.swift in Sources */,
 				DA1AD54720652E4D002A7493 /* LandingController+Selectors.swift in Sources */,
 				DACD0A59207D51AF00884E62 /* LandingCollectionUpdateFactory+SalvageItemsFromDeletion.swift in Sources */,
+				DA4A69CE2085E67C005AE05F /* File+LoadProjects.swift in Sources */,
 				DA6F1B7C20735B3A001248E4 /* WriterProtocol.swift in Sources */,
 				DA636FFC20810D6E00C02447 /* LandingErrorProtocol.swift in Sources */,
 				DA391AE6207751EA00484273 /* LandingAdd.swift in Sources */,
@@ -1675,6 +1692,7 @@
 				DA547854207A3C0400F9301E /* LandingDeletePresenter.swift in Sources */,
 				DA4A69C22085E0D1005AE05F /* FileProtocol.swift in Sources */,
 				DA4A69C42085E0E1005AE05F /* File.swift in Sources */,
+				DA4A69C62085E3AA005AE05F /* File+Constants.swift in Sources */,
 				DA54784E207A38FE00F9301E /* LandingDeleteController+Actions.swift in Sources */,
 				DA86FBE020838637005D31AF /* Thread.swift in Sources */,
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
@@ -1789,6 +1807,7 @@
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
 				DA657E9F2075129B003C1645 /* TestWriterController_TextDelegate.swift in Sources */,
 				DADF4D4C207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift in Sources */,
+				DA4A69C82085E657005AE05F /* TestFile_LoadProjects.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DAEB8194206D28EE00E55424 /* TestLandingPresenterOutlets.swift in Sources */,
 				DAD3C477207BAD0400F84829 /* TestLandingColumnEditController.swift in Sources */,
@@ -1873,6 +1892,7 @@
 				DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */,
 				DA636FF02081020600C02447 /* TestErrorController.swift in Sources */,
 				DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */,
+				DA4A69CA2085E662005AE05F /* TestFile_LoadUser.swift in Sources */,
 				DA86FBDE20838486005D31AF /* TestThread.swift in Sources */,
 				DA5EAFCA2075F647002BDAD8 /* TestLandingController_SelectorsAdd.swift in Sources */,
 				DA79602C206BCE9600548952 /* MockLandingPresenterCollectionDataSourceProtocol.swift in Sources */,
