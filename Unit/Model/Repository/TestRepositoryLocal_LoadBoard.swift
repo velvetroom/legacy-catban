@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestRepositoryLocal:XCTestCase {
+class TestRepositoryLocal_LoadBoard:XCTestCase {
     private var model:RepositoryLocal!
     
     override func setUp() {
@@ -11,5 +11,9 @@ class TestRepositoryLocal:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+    }
+    
+    func testLoadBoard() {
+        
     }
 }
