@@ -75,6 +75,7 @@
 		DA46AD63207C8D790083B310 /* TestProject_DeleteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46AD62207C8D790083B310 /* TestProject_DeleteColumn.swift */; };
 		DA48BC0620808BC60057F424 /* TestLanding_Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */; };
 		DA48BC0820808E460057F424 /* Landing+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0720808E460057F424 /* Landing+Scroll.swift */; };
+		DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -191,7 +192,7 @@
 		DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */; };
 		DA86FBC820835E17005D31AF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC720835E17005D31AF /* Repository.swift */; };
 		DA86FBCA20835EF7005D31AF /* Repository+LoadBoardFromLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC920835EF7005D31AF /* Repository+LoadBoardFromLocal.swift */; };
-		DA86FBCC20835F16005D31AF /* TestRepository_LoadBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBCB20835F16005D31AF /* TestRepository_LoadBoard.swift */; };
+		DA86FBCC20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBCB20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift */; };
 		DA86FBCF20836933005D31AF /* RepositoryLocalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBCE20836933005D31AF /* RepositoryLocalProtocol.swift */; };
 		DA86FBD220836951005D31AF /* MockRepositoryLocalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */; };
 		DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */; };
@@ -376,6 +377,7 @@
 		DA46AD62207C8D790083B310 /* TestProject_DeleteColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_DeleteColumn.swift; sourceTree = "<group>"; };
 		DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Scroll.swift; sourceTree = "<group>"; };
 		DA48BC0720808E460057F424 /* Landing+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Scroll.swift"; sourceTree = "<group>"; };
+		DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryLocal+LoadBoard.swift"; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -491,7 +493,7 @@
 		DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA86FBC720835E17005D31AF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DA86FBC920835EF7005D31AF /* Repository+LoadBoardFromLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+LoadBoardFromLocal.swift"; sourceTree = "<group>"; };
-		DA86FBCB20835F16005D31AF /* TestRepository_LoadBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_LoadBoard.swift; sourceTree = "<group>"; };
+		DA86FBCB20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_LoadBoardFromLocal.swift; sourceTree = "<group>"; };
 		DA86FBCE20836933005D31AF /* RepositoryLocalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocalProtocol.swift; sourceTree = "<group>"; };
 		DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryLocalProtocol.swift; sourceTree = "<group>"; };
 		DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal.swift; sourceTree = "<group>"; };
@@ -1088,6 +1090,7 @@
 				DA79ADEC208486DF0074EB15 /* Repository+LocalSaveBoard.swift */,
 				DA86FBCE20836933005D31AF /* RepositoryLocalProtocol.swift */,
 				DA86FBD520836C83005D31AF /* RepositoryLocal.swift */,
+				DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1096,7 +1099,7 @@
 			isa = PBXGroup;
 			children = (
 				DA86FBC120835D86005D31AF /* TestRepository.swift */,
-				DA86FBCB20835F16005D31AF /* TestRepository_LoadBoard.swift */,
+				DA86FBCB20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift */,
 				DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */,
 				DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */,
 				DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */,
@@ -1565,6 +1568,7 @@
 				DA5EAFC62075EF9D002BDAD8 /* LandingAddController.swift in Sources */,
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
 				DA54784C207A387400F9301E /* LandingDeleteController+Constants.swift in Sources */,
+				DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */,
 				DA636FFE20810E5500C02447 /* ErrorPresenter.swift in Sources */,
 				DA86FBCF20836933005D31AF /* RepositoryLocalProtocol.swift in Sources */,
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
@@ -1766,7 +1770,7 @@
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
 				DAEA2CB8207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift in Sources */,
-				DA86FBCC20835F16005D31AF /* TestRepository_LoadBoard.swift in Sources */,
+				DA86FBCC20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift in Sources */,
 				DA86FBC220835D86005D31AF /* TestRepository.swift in Sources */,
 				DAD3C47F207BAF9800F84829 /* TestLandingColumnEdit.swift in Sources */,
 				DA657EA520752F2D003C1645 /* TestLanding_UpdateCard.swift in Sources */,

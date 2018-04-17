@@ -57,6 +57,25 @@ class TestLoadController:XCTestCase {
         self.waitExpectations()
     }
     
+    func testLoadBoardUpdatesLandingBoard() {
+        self.startExpectation()
+        self.navigation.onSetControllers = { [weak self] (controllers:[UIViewController]) in
+            let controller:LandingController = controllers.first as! LandingController
+            guard
+                let landingBoard:Board = controller.model.board as? Board
+            else {
+                XCTFail("Invalid model")
+                return
+            }
+            XCTAssertTrue(landingBoard === self?.board, "Failed to update board")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.openLanding(board:self.board)
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
