@@ -37,6 +37,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
     
     func testConfigureHeader() {
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
+        self.controller.model.project.insert(column:ProjectColumn(), at:0)
         self.dataSource.configure(header:header, for:0)
         let title:String? = header.labelTitle.text
         XCTAssertNotNil(title, "There is no title in header")
@@ -67,7 +68,7 @@ class TestLandingPresenterCollectionDataSource:XCTestCase {
     func testSetDelegateForHeaderInConfigure() {
         let index:Int = 0
         let header:LandingViewCollectionHeader = LandingViewCollectionHeader(frame:CGRect.zero)
-        
+        self.controller.model.project.insert(column:ProjectColumn(), at:0)
         self.dataSource.configure(header:header, for:index)
         
         XCTAssertNotNil(header.delegate, "Failed to assign delegate to header")

@@ -39,6 +39,7 @@ class TestLandingController_AddDelegate:XCTestCase {
     func testCreateCardShowsWriter() {
         self.startExpectation()
         self.controller.model = Landing()
+        self.controller.model.project.insert(column:ProjectColumn(), at:0)
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             let writer:WriterController? = controller as? WriterController
             XCTAssertNotNil(writer, "Invalid controller presented")
