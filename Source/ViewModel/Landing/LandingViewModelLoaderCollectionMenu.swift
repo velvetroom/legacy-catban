@@ -15,7 +15,7 @@ class LandingViewModelLoaderCollectionMenu {
         else {
             return LandingViewModelCollectionMenu()
         }
-        return self.factoryWith(project:model.project, editingCard:editingCard)
+        return self.factoryWith(project:model.board.project, editingCard:editingCard)
     }
     
     private func factoryWith(project:ProjectProtocol, editingCard:IndexPath) -> LandingViewModelCollectionMenu {

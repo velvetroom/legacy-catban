@@ -17,7 +17,6 @@ class MockLandingProtocol:LandingProtocol {
     var onIndexForColumn:((ProjectColumn) -> Void)?
     var onScrollToEditingCard:(() -> Void)?
     var onScrollToTopRightCorner:(() -> Void)?
-    var project:ProjectProtocol
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
     var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
@@ -27,9 +26,18 @@ class MockLandingProtocol:LandingProtocol {
     var returnColumnAtIndex:ProjectColumn
     var returnIndexForColumn:Int
     var throwingError:Error?
+    var board:BoardProtocol
+    var project:ProjectProtocol {
+        get {
+            return self.board.project
+        }
+        set(newValue) {
+            self.board.project = newValue
+        }
+    }
     
     init() {
-        self.project = Project()
+        self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.collectionUpdateFactory = LandingCollectionUpdateFactory()

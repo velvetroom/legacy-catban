@@ -13,7 +13,7 @@ class LandingViewModelLoaderOutlets {
     
     func factoryWith(model:LandingProtocol) -> LandingViewModelOutlets {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
-        viewModel = self.configure(viewModel:viewModel, project:model.project)
+        viewModel = self.configure(viewModel:viewModel, project:model.board.project)
         viewModel = self.configureForFirstTime(viewModel:viewModel)
         viewModel = self.configureDefaults(viewModel:viewModel)
         viewModel.collectionLayout = self.collectionLayout.factoryWith(model:model)

@@ -7,6 +7,9 @@ class Board:BoardProtocol {
         get {
             return self.user.project
         }
+        set(newValue) {
+            self.user.project = newValue
+        }
     }
     
     init() {

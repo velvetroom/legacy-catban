@@ -6,6 +6,15 @@ class Landing:LandingProtocol {
     var presenter:LandingPresenterProtocol
     var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
     var editingCard:IndexPath?
+    var project:ProjectProtocol {
+        get {
+            return self.board.project
+        }
+        set(newValue) {
+            self.board.project = newValue
+        }
+    }
+    
     var editingCardReference:ProjectCard? {
         get {
             guard

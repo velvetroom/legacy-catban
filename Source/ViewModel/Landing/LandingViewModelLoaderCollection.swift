@@ -3,7 +3,7 @@ import Foundation
 class LandingViewModelLoaderCollection {
     func factoryWith(model:LandingProtocol) -> LandingViewModelCollection {
         var collection:LandingViewModelCollection = LandingViewModelCollection()
-        collection.sections = self.factorySectionsWith(project:model.project)
+        collection.sections = self.factorySectionsWith(project:model.board.project)
         return collection
     }
     

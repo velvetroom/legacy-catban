@@ -44,7 +44,7 @@ extension Landing {
         else {
             return
         }
-        let newIndex:IndexPath = project.indexOnRightForCardAt(index:editingCard)
+        let newIndex:IndexPath = self.project.indexOnRightForCardAt(index:editingCard)
         self.editingCard = newIndex
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
     }
@@ -55,7 +55,7 @@ extension Landing {
         else {
             return
         }
-        let newIndex:IndexPath = project.indexOnLeftForCardAt(index:editingCard)
+        let newIndex:IndexPath = self.project.indexOnLeftForCardAt(index:editingCard)
         self.editingCard = newIndex
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
     }
