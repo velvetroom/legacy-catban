@@ -20,9 +20,9 @@ class TestLanding:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.board, "Failed to load board")
         XCTAssertNotNil(self.model.editingCard, "Editing cell property not found")
         XCTAssertNotNil(self.model.editingCardReference, "Card reference property not found")
-        XCTAssertNotNil(self.model.project, "Failed to load project")
         XCTAssertNotNil(self.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.model.collectionUpdateFactory, "Failed to load factory")

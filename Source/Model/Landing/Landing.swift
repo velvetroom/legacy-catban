@@ -1,7 +1,7 @@
 import Foundation
 
 class Landing:LandingProtocol {
-    var project:ProjectProtocol
+    var board:BoardProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
     var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
@@ -18,7 +18,7 @@ class Landing:LandingProtocol {
     }
     
     init() {
-        self.project = Project.factoryFirstProject()
+        self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.collectionUpdateFactory = LandingCollectionUpdateFactory()
