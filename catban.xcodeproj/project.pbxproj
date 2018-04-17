@@ -117,6 +117,10 @@
 		DA547852207A3B4500F9301E /* LandingDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */; };
 		DA547854207A3C0400F9301E /* LandingDeletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA547853207A3C0400F9301E /* LandingDeletePresenter.swift */; };
 		DA547856207A3D4600F9301E /* TestLandingDeletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA547855207A3D4600F9301E /* TestLandingDeletePresenter.swift */; };
+		DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */; };
+		DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */; };
+		DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */; };
+		DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C000208642010016ECC4 /* Deserialiser.swift */; };
 		DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B59F42070245300122EEF /* MockCollectionViewDelegate.swift */; };
 		DA5B59F720702DBF00122EEF /* LandingViewCollectionMenu+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B59F620702DBF00122EEF /* LandingViewCollectionMenu+Outlets.swift */; };
 		DA5B59FB20703D8B00122EEF /* TestLandingController_Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B59FA20703D8B00122EEF /* TestLandingController_Selectors.swift */; };
@@ -429,6 +433,10 @@
 		DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingDeleteProtocol.swift; sourceTree = "<group>"; };
 		DA547853207A3C0400F9301E /* LandingDeletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingDeletePresenter.swift; sourceTree = "<group>"; };
 		DA547855207A3D4600F9301E /* TestLandingDeletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingDeletePresenter.swift; sourceTree = "<group>"; };
+		DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser.swift; sourceTree = "<group>"; };
+		DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeserialiserProtocol.swift; sourceTree = "<group>"; };
+		DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiserProtocol.swift; sourceTree = "<group>"; };
+		DA57C000208642010016ECC4 /* Deserialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialiser.swift; sourceTree = "<group>"; };
 		DA5B59F42070245300122EEF /* MockCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		DA5B59F620702DBF00122EEF /* LandingViewCollectionMenu+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingViewCollectionMenu+Outlets.swift"; sourceTree = "<group>"; };
 		DA5B59FA20703D8B00122EEF /* TestLandingController_Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_Selectors.swift; sourceTree = "<group>"; };
@@ -868,6 +876,24 @@
 			path = Writer;
 			sourceTree = "<group>";
 		};
+		DA57BFF8208641170016ECC4 /* Deserialiser */ = {
+			isa = PBXGroup;
+			children = (
+				DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */,
+				DA57C000208642010016ECC4 /* Deserialiser.swift */,
+			);
+			path = Deserialiser;
+			sourceTree = "<group>";
+		};
+		DA57BFF9208641450016ECC4 /* Deserialiser */ = {
+			isa = PBXGroup;
+			children = (
+				DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */,
+				DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */,
+			);
+			path = Deserialiser;
+			sourceTree = "<group>";
+		};
 		DA5B59FE2070479700122EEF /* Landing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1255,6 +1281,7 @@
 		DA8AB2482064EA53005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA57BFF9208641450016ECC4 /* Deserialiser */,
 				DA4A69BB2085DE40005AE05F /* File */,
 				DA86FBDC20837974005D31AF /* Thread */,
 				DA86FBC020835D76005D31AF /* Repository */,
@@ -1423,6 +1450,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA57BFF8208641170016ECC4 /* Deserialiser */,
 				DA4A69C02085E0C0005AE05F /* File */,
 				DA86FBDB20837949005D31AF /* Thread */,
 				DA86FBBF20835D6B005D31AF /* Repository */,
@@ -1704,6 +1732,7 @@
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA657E9B2074F683003C1645 /* WriterController+Notifications.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
+				DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */,
 				DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */,
 				DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */,
 				DA647A3D20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift in Sources */,
@@ -1743,6 +1772,7 @@
 				DA391ADA20774B2500484273 /* LandingController+AddDelegate.swift in Sources */,
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DAE8C7E7207FB12000395318 /* LandingCollectionUpdateFactory+Insert.swift in Sources */,
+				DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,
@@ -1864,8 +1894,10 @@
 				DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */,
 				DA547846207A32B200F9301E /* TestLandingDelete.swift in Sources */,
 				DAABC2AE206A7C48003B4BE4 /* MockLandingPresenterCollection.swift in Sources */,
+				DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */,
 				DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */,
 				DA547856207A3D4600F9301E /* TestLandingDeletePresenter.swift in Sources */,
+				DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */,
 				DA6F1B8620736054001248E4 /* TestWriterPresenterOutletsList.swift in Sources */,
 				DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */,
 				DADE83CB20710F9F0053E7A0 /* TestLanding_CardsMoveLeft.swift in Sources */,
