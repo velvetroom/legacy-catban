@@ -10,6 +10,6 @@ class TestDeserialiser:XCTestCase {
     }
     
     func testLoad() {
-        XCTAssertNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model, "Failed to load model")
     }
 }

@@ -91,6 +91,7 @@
 		DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */; };
 		DA4F042C20871B8100A28894 /* Deserialiser+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042A20871B7400A28894 /* Deserialiser+User.swift */; };
 		DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */; };
+		DA4F043020871DFE00A28894 /* TestCatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042F20871DFE00A28894 /* TestCatbanFileLoader.swift */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -412,6 +413,7 @@
 		DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatbanFileLoader+Constants.swift"; sourceTree = "<group>"; };
 		DA4F042A20871B7400A28894 /* Deserialiser+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+User.swift"; sourceTree = "<group>"; };
 		DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_User.swift; sourceTree = "<group>"; };
+		DA4F042F20871DFE00A28894 /* TestCatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatbanFileLoader.swift; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -1084,6 +1086,7 @@
 			children = (
 				DA4F0426208718A000A28894 /* CatbanFileLoader.swift */,
 				DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */,
+				DA4F042F20871DFE00A28894 /* TestCatbanFileLoader.swift */,
 				DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */,
 			);
 			path = Shared;
@@ -1872,6 +1875,7 @@
 				DA6EBE70208220B1004B639E /* TestLandingController_Error.swift in Sources */,
 				DA6F1B8A20736A7C001248E4 /* TestLandingController_WriterEditCard.swift in Sources */,
 				DA9A98842074AC1400D82514 /* MockWriterProtocol.swift in Sources */,
+				DA4F043020871DFE00A28894 /* TestCatbanFileLoader.swift in Sources */,
 				DA6F1B70207357EF001248E4 /* TestWriterViewText.swift in Sources */,
 				DA30604720826C2200E55ECB /* TestLoad.swift in Sources */,
 				DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */,
