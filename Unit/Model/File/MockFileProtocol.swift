@@ -5,6 +5,20 @@ class MockFileProtocol:FileProtocol {
     var onLoadUser:(() -> Void)?
     var onLoadProjects:(() -> Void)?
     var throwError:Error?
+    var directory:URL
+    var projects:URL {
+        get {
+            return self.directory
+        }
+    }
+    
+    private struct Constants {
+        static let urlString:String = "www.google.com"
+    }
+    
+    init() {
+        self.directory = URL(string:Constants.urlString)!
+    }
     
     func loadUser() throws -> Data {
         self.onLoadUser?()
