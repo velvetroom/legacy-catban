@@ -94,6 +94,9 @@
 		DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */; };
 		DA4F04382087282D00A28894 /* Deserialiser+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F04372087282D00A28894 /* Deserialiser+Project.swift */; };
 		DA4F043A208747A300A28894 /* File+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0439208747A300A28894 /* File+Factory.swift */; };
+		DA4F043D208793F800A28894 /* Serialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F043C208793F800A28894 /* Serialiser.swift */; };
+		DA4F043F2087940800A28894 /* Serialiser+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F043E2087940800A28894 /* Serialiser+Constants.swift */; };
+		DA4F04412087957200A28894 /* CatbanUserWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -418,6 +421,9 @@
 		DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA4F04372087282D00A28894 /* Deserialiser+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+Project.swift"; sourceTree = "<group>"; };
 		DA4F0439208747A300A28894 /* File+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Factory.swift"; sourceTree = "<group>"; };
+		DA4F043C208793F800A28894 /* Serialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialiser.swift; sourceTree = "<group>"; };
+		DA4F043E2087940800A28894 /* Serialiser+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+Constants.swift"; sourceTree = "<group>"; };
+		DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserWrongIdentifier.catban; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -750,9 +756,19 @@
 			isa = PBXGroup;
 			children = (
 				DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */,
+				DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */,
 				DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */,
 			);
 			path = Catban;
+			sourceTree = "<group>";
+		};
+		DA4F043B208793E800A28894 /* Serialiser */ = {
+			isa = PBXGroup;
+			children = (
+				DA4F043C208793F800A28894 /* Serialiser.swift */,
+				DA4F043E2087940800A28894 /* Serialiser+Constants.swift */,
+			);
+			path = Serialiser;
 			sourceTree = "<group>";
 		};
 		DA4F8FEA207278C00063D384 /* Landing */ = {
@@ -1482,6 +1498,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA4F043B208793E800A28894 /* Serialiser */,
 				DA57BFF8208641170016ECC4 /* Deserialiser */,
 				DA4A69C02085E0C0005AE05F /* File */,
 				DA86FBDB20837949005D31AF /* Thread */,
@@ -1658,6 +1675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
+				DA4F04412087957200A28894 /* CatbanUserWrongIdentifier.catban in Resources */,
 				DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1687,6 +1705,7 @@
 				DA5B5A03207047F000122EEF /* Landing.swift in Sources */,
 				DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA519A7920693F1300514098 /* LandingViewModelLoaderOutlets+Constants.swift in Sources */,
+				DA4F043D208793F800A28894 /* Serialiser.swift in Sources */,
 				DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */,
 				DAD3C485207BB15200F84829 /* LandingColumnEditPresenter.swift in Sources */,
 				DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */,
@@ -1809,6 +1828,7 @@
 				DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA4F043A208747A300A28894 /* File+Factory.swift in Sources */,
+				DA4F043F2087940800A28894 /* Serialiser+Constants.swift in Sources */,
 				DA6F1B8E20736D53001248E4 /* LandingController+Writer.swift in Sources */,
 				DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */,
 				DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */,

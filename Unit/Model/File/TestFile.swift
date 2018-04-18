@@ -42,12 +42,12 @@ class TestFile:XCTestCase {
     }
     
     func testDirectoryURL() {
-        XCTAssertTrue(self.model.directory.absoluteString.contains(File.Constants.rootFolder),
+        XCTAssertTrue(self.model.directory.absoluteString.contains(File.rootFolder),
                       "Invalid directory")
     }
     
     func testProjectsURL() {
-        XCTAssertTrue(self.model.projects.absoluteString.contains(File.Constants.rootFolder),
+        XCTAssertTrue(self.model.projects.absoluteString.contains(File.rootFolder),
                       "Invalid projects folder")
         XCTAssertTrue(self.model.projects.absoluteString.contains(File.Constants.projectsFolder),
                       "Invalid projects folder")

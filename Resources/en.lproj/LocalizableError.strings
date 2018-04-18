@@ -3,4 +3,6 @@ ErrorProject_oneColumnMinimum="Projects need to have at least one Column";
 ErrorRepository_boardNotFoundLocally="Board not found locally";
 ErrorRepository_unableToFindCurrentProject="Unable to find current Project";
 ErrorRepository_noProjectsFound="No projects found";
+ErrorRepository_corruptedData="Corrupted data";
+ErrorRepository_malformedData="Malformed data";
 ErrorRepository_fileNotFound="File not found";
