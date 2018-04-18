@@ -86,6 +86,11 @@
 		DA4A69CA2085E662005AE05F /* TestFile_LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69C92085E662005AE05F /* TestFile_LoadUser.swift */; };
 		DA4A69CC2085E673005AE05F /* File+LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69CB2085E673005AE05F /* File+LoadUser.swift */; };
 		DA4A69CE2085E67C005AE05F /* File+LoadProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69CD2085E67C005AE05F /* File+LoadProjects.swift */; };
+		DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */; };
+		DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0426208718A000A28894 /* CatbanFileLoader.swift */; };
+		DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */; };
+		DA4F042C20871B8100A28894 /* Deserialiser+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042A20871B7400A28894 /* Deserialiser+User.swift */; };
+		DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -402,6 +407,11 @@
 		DA4A69C92085E662005AE05F /* TestFile_LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile_LoadUser.swift; sourceTree = "<group>"; };
 		DA4A69CB2085E673005AE05F /* File+LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+LoadUser.swift"; sourceTree = "<group>"; };
 		DA4A69CD2085E67C005AE05F /* File+LoadProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+LoadProjects.swift"; sourceTree = "<group>"; };
+		DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		DA4F0426208718A000A28894 /* CatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatbanFileLoader.swift; sourceTree = "<group>"; };
+		DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatbanFileLoader+Constants.swift"; sourceTree = "<group>"; };
+		DA4F042A20871B7400A28894 /* Deserialiser+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+User.swift"; sourceTree = "<group>"; };
+		DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_User.swift; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -731,6 +741,14 @@
 			path = File;
 			sourceTree = "<group>";
 		};
+		DA4F04232087177D00A28894 /* Catban */ = {
+			isa = PBXGroup;
+			children = (
+				DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */,
+			);
+			path = Catban;
+			sourceTree = "<group>";
+		};
 		DA4F8FEA207278C00063D384 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +899,7 @@
 			children = (
 				DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */,
 				DA57C000208642010016ECC4 /* Deserialiser.swift */,
+				DA4F042A20871B7400A28894 /* Deserialiser+User.swift */,
 			);
 			path = Deserialiser;
 			sourceTree = "<group>";
@@ -889,6 +908,7 @@
 			isa = PBXGroup;
 			children = (
 				DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */,
+				DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */,
 				DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */,
 			);
 			path = Deserialiser;
@@ -1062,6 +1082,8 @@
 		DA6F1B9120736E51001248E4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DA4F0426208718A000A28894 /* CatbanFileLoader.swift */,
+				DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */,
 				DA6F1B9220736E5E001248E4 /* MockNavigationController.swift */,
 			);
 			path = Shared;
@@ -1267,6 +1289,7 @@
 		DA8AB2262064E476005A393E /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				DA4F04232087177D00A28894 /* Catban */,
 				DA6F1B9120736E51001248E4 /* Shared */,
 				DA8AB26F2064FE99005A393E /* Extension */,
 				DA8AB24C2064EA53005A393E /* Controller */,
@@ -1625,6 +1648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1663,6 +1687,7 @@
 				DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */,
 				DA86FBC820835E17005D31AF /* Repository.swift in Sources */,
 				DA6F1B7A20735B07001248E4 /* WriterPresenter.swift in Sources */,
+				DA4F042C20871B8100A28894 /* Deserialiser+User.swift in Sources */,
 				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA6F1B8220735CE9001248E4 /* WriterPresenterOutlets.swift in Sources */,
 				DA796032206BD88D00548952 /* Project+Move.swift in Sources */,
@@ -1824,6 +1849,7 @@
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
 				DA9A98862074B40B00D82514 /* TestWriterViewBar.swift in Sources */,
+				DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */,
 				DA7A38AE207B37500008638F /* TestLanding_Columns.swift in Sources */,
 				DA4A69BF2085DECF005AE05F /* MockFileProtocol.swift in Sources */,
 				DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */,
@@ -1914,6 +1940,7 @@
 				DA391AE22077516800484273 /* TestLandingAdd.swift in Sources */,
 				DAEB8182206D1A7200E55424 /* MockLandingPresenterCollectionDelegateProtocol.swift in Sources */,
 				DA4A69BD2085DE6E005AE05F /* TestFile.swift in Sources */,
+				DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */,
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
 				DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */,
 				DA6EBE82208244D8004B639E /* MockBoardProtocol.swift in Sources */,
@@ -1929,6 +1956,7 @@
 				DA5EAFCA2075F647002BDAD8 /* TestLandingController_SelectorsAdd.swift in Sources */,
 				DA79602C206BCE9600548952 /* MockLandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA636FF42081074C00C02447 /* TestErrorModel.swift in Sources */,
+				DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */,
 				DA30604520826BFE00E55ECB /* MockLoadProtocol.swift in Sources */,
 				DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */,
 				DA636FF820810D1E00C02447 /* TestErrorPresenter.swift in Sources */,

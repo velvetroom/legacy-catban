@@ -10,10 +10,12 @@ extension RepositoryLocal {
     
     func loadUser() throws -> UserProtocol {
         let rawUser:Data = try self.file.loadUser()
+        throw ErrorRepository.boardNotFoundLocally
     }
     
     func loadProjects() throws -> [ProjectProtocol] {
         let rawProjects:[Data] = try self.file.loadProjects()
+        throw ErrorRepository.boardNotFoundLocally
     }
     
     func buildBoardWith(projects:[ProjectProtocol], for user:UserProtocol) throws -> BoardProtocol {
