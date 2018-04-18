@@ -1,6 +1,8 @@
 import Foundation
 
 extension File {
+    static var rootFolder:String = Constants.rootFolder
+    
     private static var rootDirectory:URL {
         get {
             return FileManager.default.urls(
@@ -10,6 +12,6 @@ extension File {
     }
     
     class func factoryDirectory() -> URL {
-        return rootDirectory.appendingPathComponent(Constants.rootFolder)
+        return rootDirectory.appendingPathComponent(rootFolder)
     }
 }

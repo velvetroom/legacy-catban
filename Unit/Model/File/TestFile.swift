@@ -3,10 +3,21 @@ import XCTest
 
 class TestFile:XCTestCase {
     private var model:File!
+    private struct Constants {
+        static let rootFolder:String = "tests"
+    }
     
     override func setUp() {
         super.setUp()
+        File.rootFolder = Constants.rootFolder
         self.model = File()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        do {
+            try FileManager.default.removeItem(at:self.model.directory)
+        } catch { }
     }
     
     func testLoad() {

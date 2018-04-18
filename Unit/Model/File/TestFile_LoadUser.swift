@@ -3,16 +3,20 @@ import XCTest
 
 class TestFile_LoadUser:XCTestCase {
     private var model:File!
+    private struct Constants {
+        static let rootFolder:String = "tests"
+    }
     
     override func setUp() {
         super.setUp()
+        File.rootFolder = Constants.rootFolder
         self.model = File()
     }
     
     override func tearDown() {
         super.tearDown()
         do {
-            try FileManager.default.removeItem(at:self.model.user)
+            try FileManager.default.removeItem(at:self.model.directory)
         } catch { }
     }
     
@@ -20,12 +24,12 @@ class TestFile_LoadUser:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
     }
     
-    func testLoadUserSuccess() {
+    func testLoadSuccess() {
         self.createFile()
         XCTAssertNoThrow(try self.model.loadUser(), "Failed to load user")
     }
     
-    func testLoadUserError() {
+    func testLoadError() {
         XCTAssertThrowsError(try self.model.loadUser(), "Failed to throw when user not found")
     }
     
