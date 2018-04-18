@@ -12,5 +12,6 @@ class TestRepositoryLocal:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.model.file, "Failed to load file")
+        XCTAssertNotNil(self.model.deserialiser, "Failed to load deserialiser")
     }
 }
