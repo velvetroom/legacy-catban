@@ -92,6 +92,9 @@
 		DA4F042C20871B8100A28894 /* Deserialiser+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042A20871B7400A28894 /* Deserialiser+User.swift */; };
 		DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */; };
 		DA4F043020871DFE00A28894 /* TestCatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F042F20871DFE00A28894 /* TestCatbanFileLoader.swift */; };
+		DA4F04322087271C00A28894 /* TestDeserialiser_Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F04312087271C00A28894 /* TestDeserialiser_Projects.swift */; };
+		DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */; };
+		DA4F04382087282D00A28894 /* Deserialiser+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F04372087282D00A28894 /* Deserialiser+Project.swift */; };
 		DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */; };
 		DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */; };
 		DA519A5B2068E67800514098 /* TestLandingViewModelCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */; };
@@ -414,6 +417,9 @@
 		DA4F042A20871B7400A28894 /* Deserialiser+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+User.swift"; sourceTree = "<group>"; };
 		DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_User.swift; sourceTree = "<group>"; };
 		DA4F042F20871DFE00A28894 /* TestCatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCatbanFileLoader.swift; sourceTree = "<group>"; };
+		DA4F04312087271C00A28894 /* TestDeserialiser_Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_Projects.swift; sourceTree = "<group>"; };
+		DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		DA4F04372087282D00A28894 /* Deserialiser+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+Project.swift"; sourceTree = "<group>"; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -747,6 +753,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */,
+				DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */,
 			);
 			path = Catban;
 			sourceTree = "<group>";
@@ -902,6 +909,7 @@
 				DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */,
 				DA57C000208642010016ECC4 /* Deserialiser.swift */,
 				DA4F042A20871B7400A28894 /* Deserialiser+User.swift */,
+				DA4F04372087282D00A28894 /* Deserialiser+Project.swift */,
 			);
 			path = Deserialiser;
 			sourceTree = "<group>";
@@ -911,6 +919,7 @@
 			children = (
 				DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */,
 				DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */,
+				DA4F04312087271C00A28894 /* TestDeserialiser_Projects.swift */,
 				DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */,
 			);
 			path = Deserialiser;
@@ -1652,6 +1661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
+				DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1769,6 +1779,7 @@
 				DA6B666B20847A4E008A1B48 /* Board+Factory.swift in Sources */,
 				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
+				DA4F04382087282D00A28894 /* Deserialiser+Project.swift in Sources */,
 				DA48BC0820808E460057F424 /* Landing+Scroll.swift in Sources */,
 				DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */,
 				DA6F1B76207359D4001248E4 /* WriterController+Outlets.swift in Sources */,
@@ -1926,6 +1937,7 @@
 				DAABC2AE206A7C48003B4BE4 /* MockLandingPresenterCollection.swift in Sources */,
 				DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */,
 				DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */,
+				DA4F04322087271C00A28894 /* TestDeserialiser_Projects.swift in Sources */,
 				DA547856207A3D4600F9301E /* TestLandingDeletePresenter.swift in Sources */,
 				DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */,
 				DA6F1B8620736054001248E4 /* TestWriterPresenterOutletsList.swift in Sources */,
