@@ -3,9 +3,18 @@ import Foundation
 
 class MockDeserialiserProtocol:DeserialiserProtocol {
     var onDeserialiseUser:((Data) -> Void)?
+    var throwError:Error?
+    var user:UserProtocol
+    
+    init() {
+        self.user = User()
+    }
     
     func deserialise(user:Data) throws -> UserProtocol {
         self.onDeserialiseUser?(user)
-        return User()
+        if let throwError:Error = self.throwError {
+            throw throwError
+        }
+        return self.user
     }
 }

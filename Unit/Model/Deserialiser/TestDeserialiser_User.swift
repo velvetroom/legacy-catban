@@ -20,6 +20,6 @@ class TestDeserialiser_User:XCTestCase {
     }
     
     func testSuccessNoThrows() {
-//        XCTAssertNoThrow(try self.model.deserialise(user:self.dataSuccess), "Failed deserialising user")
+        XCTAssertNoThrow(try self.model.deserialise(user:self.dataSuccess), "Failed deserialising user")
     }
 }
