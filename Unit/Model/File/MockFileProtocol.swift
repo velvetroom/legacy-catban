@@ -19,6 +19,6 @@ class MockFileProtocol:FileProtocol {
         if let throwError:Error = self.throwError {
             throw throwError
         }
-        return []
+        return [Data()]
     }
 }
