@@ -10,6 +10,7 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
     private var data:Data!
     private var expect:XCTestExpectation?
     private struct Constants {
+        static let identifier:String = "loremipsum"
         static let wait:TimeInterval = 0.3
     }
     
@@ -22,6 +23,7 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         self.serialiser = MockSerialiserProtocol()
         self.board.projects = [self.project]
         self.data = Data()
+        self.project.identifier = Constants.identifier
         self.model.file = self.file
         self.model.serialiser = self.serialiser
         self.serialiser.returnSerialisedData = self.data
@@ -79,7 +81,8 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
     
     func testFileIsCalledForProjects() {
         self.startExpectation()
-        self.file.onSaveProject = { [weak self] (project:Data) in
+        self.file.onSaveProject = { [weak self] (project:Data, identifier:String) in
+            XCTAssertEqual(Constants.identifier, identifier, "Invalid identifier")
             self?.expect?.fulfill()
         }
         
@@ -104,7 +107,7 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
     
     func testCompareDataForProject() {
         self.startExpectation()
-        self.file.onSaveProject = { [weak self] (project:Data) in
+        self.file.onSaveProject = { [weak self] (project:Data, identifier:String) in
             XCTAssertTrue(self?.data == project, "Invalid data received")
             self?.expect?.fulfill()
         }

@@ -19,6 +19,6 @@ extension RepositoryLocal {
     
     private func save(project:ProjectProtocol) throws {
         let data:Data = try self.serialiser.serialise(project:project)
-        try self.file.save(project:data)
+        try self.file.save(project:data, with:project.identifier)
     }
 }

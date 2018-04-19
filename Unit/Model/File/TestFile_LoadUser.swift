@@ -15,9 +15,7 @@ class TestFile_LoadUser:XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        do {
-            try FileManager.default.removeItem(at:self.model.directory)
-        } catch { }
+        do { try FileManager.default.removeItem(at:self.model.directory) } catch { }
     }
     
     func testLoad() {
