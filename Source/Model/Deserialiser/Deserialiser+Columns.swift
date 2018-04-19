@@ -39,13 +39,4 @@ extension Deserialiser {
         column.cards = try self.parseCardsWith(dictionary:dictionary)
         return column
     }
-    
-    private func parseCardsWith(dictionary:[String:Any]) throws -> [ProjectCard] {
-        guard
-            let array:[Any] = dictionary[Serialiser.Constants.Column.cards] as? [Any]
-        else {
-            throw ErrorRepository.malformedData
-        }
-        return []
-    }
 }

@@ -1,14 +1,15 @@
 import XCTest
 @testable import catban
 
-class TestDeserialiser_Columns:XCTestCase {
+class TestDeserialiser_Cards:XCTestCase {
     private var model:Deserialiser!
     private var dataSuccess:Data!
     private var dataWrong:Data!
     private struct Constants {
         static let dataSuccess:String = "CatbanProjectSuccess"
-        static let dataWrong:String = "CatbanProjectWrongColumnName"
-        static let expectedColumns:Int = 3
+        static let dataWrong:String = "CatbanProjectWrongCardTitle"
+        static let columnIndex:Int = 1
+        static let expectedCards:Int = 2
     }
     
     override func setUp() {
@@ -24,21 +25,22 @@ class TestDeserialiser_Columns:XCTestCase {
         XCTAssertNotNil(self.dataWrong, "Failed to load data wrong")
     }
     
-    func testNumberOfColumns() {
+    func testNumberOfCards() {
         var project:ProjectProtocol!
         do {
             try project = self.model.deserialise(project:self.dataSuccess)
         } catch { }
-        XCTAssertEqual(project.columns.count, Constants.expectedColumns, "Invalid number of columns deserialised")
+        XCTAssertEqual(project.columns[Constants.columnIndex].cards.count, Constants.expectedCards,
+                       "Invalid number of cards deserialised")
     }
     
-    func testParsedName() {
+    func testParsedTitle() {
         var project:ProjectProtocol!
         do {
             try project = self.model.deserialise(project:self.dataSuccess)
         } catch { }
-        for column:ProjectColumn in project.columns {
-            XCTAssertFalse(column.name.isEmpty, "Failed to parse name")
+        for card:ProjectCard in project.columns[Constants.columnIndex].cards {
+            XCTAssertFalse(card.title.isEmpty, "Failed to parse title")
         }
     }
     

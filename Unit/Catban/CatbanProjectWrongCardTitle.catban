@@ -10,18 +10,19 @@
      {
      "name": "312423234jdas",
      "cards":
-    [
-     {
-        "title": "hello world"
-     },
-     {
-        "title": "lorem ipsum"
-     }
-    ]
+     [
+      {
+      "titleWrong": "hello world"
+      },
+      {
+      "title": "lorem ipsum"
+      }
+      ]
      },
      {
      "name": "09429213jkhgh",
      "cards": []
      }
-    ]
+     ]
 }
+

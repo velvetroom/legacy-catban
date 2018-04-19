@@ -71,6 +71,9 @@
 		DA43877C20886FA0004D8559 /* TestDeserialiser_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43877B20886FA0004D8559 /* TestDeserialiser_Columns.swift */; };
 		DA43877E20887055004D8559 /* Deserialiser+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43877D20887055004D8559 /* Deserialiser+Columns.swift */; };
 		DA4387812088753C004D8559 /* CatbanProjectWrongColumnName.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */; };
+		DA438783208876B4004D8559 /* TestDeserialiser_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA438782208876B4004D8559 /* TestDeserialiser_Cards.swift */; };
+		DA438785208877AB004D8559 /* Deserialiser+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA438784208877AB004D8559 /* Deserialiser+Cards.swift */; };
+		DA43878720887A6A004D8559 /* CatbanProjectWrongCardTitle.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43878620887A6A004D8559 /* CatbanProjectWrongCardTitle.catban */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
 		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
@@ -402,6 +405,9 @@
 		DA43877B20886FA0004D8559 /* TestDeserialiser_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_Columns.swift; sourceTree = "<group>"; };
 		DA43877D20887055004D8559 /* Deserialiser+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+Columns.swift"; sourceTree = "<group>"; };
 		DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongColumnName.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		DA438782208876B4004D8559 /* TestDeserialiser_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_Cards.swift; sourceTree = "<group>"; };
+		DA438784208877AB004D8559 /* Deserialiser+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+Cards.swift"; sourceTree = "<group>"; };
+		DA43878620887A6A004D8559 /* CatbanProjectWrongCardTitle.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongCardTitle.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
@@ -768,6 +774,7 @@
 				DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */,
 				DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */,
 				DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */,
+				DA43878620887A6A004D8559 /* CatbanProjectWrongCardTitle.catban */,
 			);
 			path = Catban;
 			sourceTree = "<group>";
@@ -934,6 +941,7 @@
 				DA4F042A20871B7400A28894 /* Deserialiser+User.swift */,
 				DA4F04372087282D00A28894 /* Deserialiser+Project.swift */,
 				DA43877D20887055004D8559 /* Deserialiser+Columns.swift */,
+				DA438784208877AB004D8559 /* Deserialiser+Cards.swift */,
 			);
 			path = Deserialiser;
 			sourceTree = "<group>";
@@ -945,6 +953,7 @@
 				DA4F042D20871BAE00A28894 /* TestDeserialiser_User.swift */,
 				DA4F04312087271C00A28894 /* TestDeserialiser_Projects.swift */,
 				DA43877B20886FA0004D8559 /* TestDeserialiser_Columns.swift */,
+				DA438782208876B4004D8559 /* TestDeserialiser_Cards.swift */,
 				DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */,
 			);
 			path = Deserialiser;
@@ -1690,6 +1699,7 @@
 				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
 				DA4F04412087957200A28894 /* CatbanUserWrongIdentifier.catban in Resources */,
 				DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */,
+				DA43878720887A6A004D8559 /* CatbanProjectWrongCardTitle.catban in Resources */,
 				DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1707,6 +1717,7 @@
 				DA30604F2082700300E55ECB /* LoadController.swift in Sources */,
 				DA5EAFC62075EF9D002BDAD8 /* LandingAddController.swift in Sources */,
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
+				DA438785208877AB004D8559 /* Deserialiser+Cards.swift in Sources */,
 				DA54784C207A387400F9301E /* LandingDeleteController+Constants.swift in Sources */,
 				DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */,
 				DA636FFE20810E5500C02447 /* ErrorPresenter.swift in Sources */,
@@ -1934,6 +1945,7 @@
 				DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */,
 				DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */,
 				DAD3C487207BB1CD00F84829 /* TestLandingColumnEditPresenter.swift in Sources */,
+				DA438783208876B4004D8559 /* TestDeserialiser_Cards.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
 				DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */,
 				DA07B747207F30EE0067FD0C /* TestProject_Updates.swift in Sources */,
