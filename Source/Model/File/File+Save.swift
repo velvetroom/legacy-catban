@@ -1,11 +1,11 @@
 import Foundation
 
 extension File {
-    func save(user:UserProtocol) throws {
+    func save(user:Data) throws {
         
     }
     
-    func save(projects:[ProjectProtocol]) throws {
+    func save(project:Data) throws {
         
     }
 }

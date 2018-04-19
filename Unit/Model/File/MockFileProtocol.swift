@@ -4,8 +4,8 @@ import Foundation
 class MockFileProtocol:FileProtocol {
     var onLoadUser:(() -> Void)?
     var onLoadProjects:(() -> Void)?
-    var onSaveUser:((UserProtocol) -> Void)?
-    var onSaveProjects:(([ProjectProtocol]) -> Void)?
+    var onSaveUser:((Data) -> Void)?
+    var onSaveProject:((Data) -> Void)?
     var throwError:Error?
     var directory:URL
     var projects:URL {
@@ -38,11 +38,11 @@ class MockFileProtocol:FileProtocol {
         return [Data()]
     }
     
-    func save(user:UserProtocol) throws {
+    func save(user:Data) throws {
         self.onSaveUser?(user)
     }
     
-    func save(projects:[ProjectProtocol]) throws {
-        self.onSaveProjects?(projects)
+    func save(project:Data) throws {
+        self.onSaveProject?(project)
     }
 }

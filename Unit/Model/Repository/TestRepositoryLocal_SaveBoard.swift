@@ -7,6 +7,7 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
     private var file:MockFileProtocol!
     private var board:Board!
     private var project:Project!
+    private var data:Data!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -20,8 +21,10 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         self.project = Project()
         self.serialiser = MockSerialiserProtocol()
         self.board.projects = [self.project]
+        self.data = Data()
         self.model.file = self.file
         self.model.serialiser = self.serialiser
+        self.serialiser.returnSerialisedData = self.data
     }
     
     func testLoad() {
@@ -29,15 +32,27 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         XCTAssertNotNil(self.file, "Failed to load file")
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.data, "Failed to load data")
     }
     
     func testNoThrow() {
         XCTAssertNoThrow(try self.model.save(board:self.board))
     }
     
-    func testSaveUserIsCalled() {
+    func testFileIsCalledForUser() {
         self.startExpectation()
-        self.file.onSaveUser = { [weak self] (user:UserProtocol) in
+        self.file.onSaveUser = { [weak self] (user:Data) in
+            self?.expect?.fulfill()
+        }
+        
+        do { try self.model.save(board:self.board) } catch { }
+        
+        self.waitExpectations()
+    }
+    
+    func testSerialiserIsCalledForUser() {
+        self.startExpectation()
+        self.serialiser.onSerialiserUser = { [weak self] (user:UserProtocol) in
             let user:User? = user as? User
             let boardUser:User? = self?.board.user as? User
             XCTAssertNotNil(user, "Invalid user sent to save")
@@ -50,12 +65,47 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         self.waitExpectations()
     }
     
-    func testSaveProjectsIsCalled() {
+    func testCompareDataForUser() {
         self.startExpectation()
-        self.file.onSaveProjects = { [weak self] (projects:[ProjectProtocol]) in
-            let firstProject:Project? = projects.first as? Project
-            XCTAssertNotNil(firstProject, "Invalid projects sent to save")
-            XCTAssertTrue(firstProject === self?.project, "Trying to save invalid projects")
+        self.file.onSaveUser = { [weak self] (user:Data) in
+            XCTAssertTrue(self?.data == user, "Invalid data received")
+            self?.expect?.fulfill()
+        }
+        
+        do { try self.model.save(board:self.board) } catch { }
+        
+        self.waitExpectations()
+    }
+    
+    func testFileIsCalledForProjects() {
+        self.startExpectation()
+        self.file.onSaveProject = { [weak self] (project:Data) in
+            self?.expect?.fulfill()
+        }
+        
+        do { try self.model.save(board:self.board) } catch { }
+        
+        self.waitExpectations()
+    }
+    
+    func testSerialiserIsCalledForProject() {
+        self.startExpectation()
+        self.serialiser.onSerialiserProject = { [weak self] (project:ProjectProtocol) in
+            let project:Project? = project as? Project
+            XCTAssertNotNil(project, "Invalid project sent to save")
+            XCTAssertTrue(project === self?.project, "Trying to save invalid project")
+            self?.expect?.fulfill()
+        }
+        
+        do { try self.model.save(board:self.board) } catch { }
+        
+        self.waitExpectations()
+    }
+    
+    func testCompareDataForProject() {
+        self.startExpectation()
+        self.file.onSaveProject = { [weak self] (project:Data) in
+            XCTAssertTrue(self?.data == project, "Invalid data received")
             self?.expect?.fulfill()
         }
         

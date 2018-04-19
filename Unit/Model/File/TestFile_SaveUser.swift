@@ -3,12 +3,12 @@ import XCTest
 
 class TestFile_SaveUser:XCTestCase {
     private var model:File!
-    private var user:User!
+    private var user:Data!
     
     override func setUp() {
         super.setUp()
         self.model = File()
-        self.user = User()
+        self.user = Data()
     }
     
     func testLoad() {

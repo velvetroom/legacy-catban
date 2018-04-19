@@ -3,12 +3,12 @@ import XCTest
 
 class TestFile_SaveProjects:XCTestCase {
     private var model:File!
-    private var project:Project!
+    private var project:Data!
     
     override func setUp() {
         super.setUp()
         self.model = File()
-        self.project = Project()
+        self.project = Data()
     }
     
     func testLoad() {
@@ -17,6 +17,6 @@ class TestFile_SaveProjects:XCTestCase {
     }
     
     func testNoThrow() {
-        XCTAssertNoThrow(try self.model.save(projects:[self.project]), "Failed to save project")
+        XCTAssertNoThrow(try self.model.save(project:self.project), "Failed to save project")
     }
 }
