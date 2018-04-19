@@ -6,5 +6,10 @@ extension Serialiser {
             static let identifier:String = "identifier"
             static let projectIdentifier:String = "project"
         }
+        struct Project {
+            static let identifier:String = "identifier"
+            static let name:String = "name"
+            static let columns:String = "columns"
+        }
     }
 }

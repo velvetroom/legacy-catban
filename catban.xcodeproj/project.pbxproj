@@ -67,6 +67,7 @@
 		DA391AE6207751EA00484273 /* LandingAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AE5207751EA00484273 /* LandingAdd.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
+		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
 		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
@@ -394,6 +395,7 @@
 		DA391AE5207751EA00484273 /* LandingAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAdd.swift; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
+		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
@@ -423,7 +425,7 @@
 		DA4F0439208747A300A28894 /* File+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Factory.swift"; sourceTree = "<group>"; };
 		DA4F043C208793F800A28894 /* Serialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialiser.swift; sourceTree = "<group>"; };
 		DA4F043E2087940800A28894 /* Serialiser+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+Constants.swift"; sourceTree = "<group>"; };
-		DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserWrongIdentifier.catban; sourceTree = "<group>"; };
+		DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA519A562068E40400514098 /* TestLandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A582068E46A00514098 /* LandingViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA519A5A2068E67800514098 /* TestLandingViewModelCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayout.swift; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 				DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */,
 				DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */,
 				DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */,
+				DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */,
 			);
 			path = Catban;
 			sourceTree = "<group>";
@@ -1676,6 +1679,7 @@
 			files = (
 				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
 				DA4F04412087957200A28894 /* CatbanUserWrongIdentifier.catban in Resources */,
+				DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */,
 				DA4F04342087278300A28894 /* CatbanProjectSuccess.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
