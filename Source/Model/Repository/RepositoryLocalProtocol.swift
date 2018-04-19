@@ -5,4 +5,5 @@ protocol RepositoryLocalProtocol {
     var deserialiser:DeserialiserProtocol { get set }
     
     func loadBoard() throws -> BoardProtocol
+    func save(board:BoardProtocol) throws
 }

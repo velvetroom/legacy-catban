@@ -6,4 +6,6 @@ protocol FileProtocol {
     
     func loadUser() throws -> Data
     func loadProjects() throws -> [Data]
+    func save(user:UserProtocol) throws
+    func save(projects:[ProjectProtocol]) throws
 }

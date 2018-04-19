@@ -15,7 +15,7 @@ class MockRepositoryProtocol:RepositoryProtocol {
         return Board()
     }
     
-    func localSave(board:BoardProtocol) {
+    func localSave(board:BoardProtocol) throws {
         self.onLocalSave?(board)
     }
 }

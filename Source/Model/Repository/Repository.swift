@@ -11,7 +11,7 @@ class Repository:RepositoryProtocol {
         return try self.local.loadBoard()
     }
     
-    func localSave(board:BoardProtocol) {
-        
+    func localSave(board:BoardProtocol) throws {
+        try self.local.save(board:board)
     }
 }
