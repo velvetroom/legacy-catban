@@ -264,6 +264,9 @@
 		DABC325420889A0F008BA213 /* File+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325320889A0F008BA213 /* File+Load.swift */; };
 		DABC325620889A39008BA213 /* File+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325520889A39008BA213 /* File+Save.swift */; };
 		DABC325820889C37008BA213 /* TestFile_SaveProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325720889C37008BA213 /* TestFile_SaveProjects.swift */; };
+		DABC325B2088A38A008BA213 /* TestSerialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325A2088A38A008BA213 /* TestSerialiser.swift */; };
+		DABC325D2088A3CC008BA213 /* MockSerialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */; };
+		DABC325F2088A407008BA213 /* SerialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC325E2088A407008BA213 /* SerialiserProtocol.swift */; };
 		DAC10C55207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C54207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift */; };
 		DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */; };
 		DAC10C59207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */; };
@@ -611,6 +614,9 @@
 		DABC325320889A0F008BA213 /* File+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Load.swift"; sourceTree = "<group>"; };
 		DABC325520889A39008BA213 /* File+Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File+Save.swift"; sourceTree = "<group>"; };
 		DABC325720889C37008BA213 /* TestFile_SaveProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile_SaveProjects.swift; sourceTree = "<group>"; };
+		DABC325A2088A38A008BA213 /* TestSerialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiser.swift; sourceTree = "<group>"; };
+		DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSerialiserProtocol.swift; sourceTree = "<group>"; };
+		DABC325E2088A407008BA213 /* SerialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialiserProtocol.swift; sourceTree = "<group>"; };
 		DAC10C54207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCollectionUpdateFactory+Delete.swift"; sourceTree = "<group>"; };
 		DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete.swift; sourceTree = "<group>"; };
 		DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateDeleteSections.swift; sourceTree = "<group>"; };
@@ -796,6 +802,7 @@
 		DA4F043B208793E800A28894 /* Serialiser */ = {
 			isa = PBXGroup;
 			children = (
+				DABC325E2088A407008BA213 /* SerialiserProtocol.swift */,
 				DA4F043C208793F800A28894 /* Serialiser.swift */,
 				DA4F043E2087940800A28894 /* Serialiser+Constants.swift */,
 			);
@@ -1365,6 +1372,7 @@
 		DA8AB2482064EA53005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DABC32592088A377008BA213 /* Serialiser */,
 				DA57BFF9208641450016ECC4 /* Deserialiser */,
 				DA4A69BB2085DE40005AE05F /* File */,
 				DA86FBDC20837974005D31AF /* Thread */,
@@ -1569,6 +1577,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DABC32592088A377008BA213 /* Serialiser */ = {
+			isa = PBXGroup;
+			children = (
+				DABC325A2088A38A008BA213 /* TestSerialiser.swift */,
+				DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */,
+			);
+			path = Serialiser;
+			sourceTree = "<group>";
+		};
 		DAE698E22065810E0046721C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1733,6 +1750,7 @@
 				DA5EAFC62075EF9D002BDAD8 /* LandingAddController.swift in Sources */,
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
 				DA438785208877AB004D8559 /* Deserialiser+Cards.swift in Sources */,
+				DABC325F2088A407008BA213 /* SerialiserProtocol.swift in Sources */,
 				DA54784C207A387400F9301E /* LandingDeleteController+Constants.swift in Sources */,
 				DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */,
 				DA636FFE20810E5500C02447 /* ErrorPresenter.swift in Sources */,
@@ -1917,6 +1935,7 @@
 				DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
 				DA30603F2082642600E55ECB /* TestUser.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
+				DABC325B2088A38A008BA213 /* TestSerialiser.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA86FBD220836951005D31AF /* MockRepositoryLocalProtocol.swift in Sources */,
 				DA2538EA2067D52E00EEB231 /* MockLandingViewModelLoader.swift in Sources */,
@@ -2023,6 +2042,7 @@
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
 				DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */,
 				DA6EBE82208244D8004B639E /* MockBoardProtocol.swift in Sources */,
+				DABC325D2088A3CC008BA213 /* MockSerialiserProtocol.swift in Sources */,
 				DA6EBE862082451C004B639E /* TestBoard.swift in Sources */,
 				DACD0A55207D444D00884E62 /* TestCollectionUpdateSalvageItemFromDeletion.swift in Sources */,
 				DA547842207A27AE00F9301E /* TestProject_DeleteCard.swift in Sources */,

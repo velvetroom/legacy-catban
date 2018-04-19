@@ -3,6 +3,7 @@ import XCTest
 
 class TestRepositoryLocal_SaveBoard:XCTestCase {
     private var model:RepositoryLocal!
+    private var serialiser:MockSerialiserProtocol!
     private var file:MockFileProtocol!
     private var board:Board!
     private var project:Project!
@@ -17,8 +18,10 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         self.file = MockFileProtocol()
         self.board = Board()
         self.project = Project()
+        self.serialiser = MockSerialiserProtocol()
         self.board.projects = [self.project]
         self.model.file = self.file
+        self.model.serialiser = self.serialiser
     }
     
     func testLoad() {
