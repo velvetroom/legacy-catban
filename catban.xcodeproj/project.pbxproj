@@ -70,6 +70,7 @@
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
 		DA43877C20886FA0004D8559 /* TestDeserialiser_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43877B20886FA0004D8559 /* TestDeserialiser_Columns.swift */; };
 		DA43877E20887055004D8559 /* Deserialiser+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43877D20887055004D8559 /* Deserialiser+Columns.swift */; };
+		DA4387812088753C004D8559 /* CatbanProjectWrongColumnName.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */; };
 		DA462D482068C4E70062E680 /* TestLandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */; };
 		DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */; };
 		DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */; };
@@ -400,6 +401,7 @@
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA43877B20886FA0004D8559 /* TestDeserialiser_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser_Columns.swift; sourceTree = "<group>"; };
 		DA43877D20887055004D8559 /* Deserialiser+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialiser+Columns.swift"; sourceTree = "<group>"; };
+		DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongColumnName.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA462D472068C4E70062E680 /* TestLandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D492068C52A0062E680 /* LandingViewCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewCollectionHeader.swift; sourceTree = "<group>"; };
 		DA462D4B2068C6310062E680 /* ExtensionUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionReusableView.swift; sourceTree = "<group>"; };
@@ -765,6 +767,7 @@
 				DA4F04402087957200A28894 /* CatbanUserWrongIdentifier.catban */,
 				DA4F04332087278300A28894 /* CatbanProjectSuccess.catban */,
 				DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */,
+				DA43877F20887537004D8559 /* CatbanProjectWrongColumnName.catban */,
 			);
 			path = Catban;
 			sourceTree = "<group>";
@@ -1683,6 +1686,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4387812088753C004D8559 /* CatbanProjectWrongColumnName.catban in Resources */,
 				DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */,
 				DA4F04412087957200A28894 /* CatbanUserWrongIdentifier.catban in Resources */,
 				DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */,

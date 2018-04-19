@@ -28,11 +28,11 @@ class TestDeserialiser_User:XCTestCase {
     }
     
     func testErrorEmpty() {
-        XCTAssertThrowsError(try self.model.deserialise(user:Data()), "Failed throw an error")
+        XCTAssertThrowsError(try self.model.deserialise(user:Data()), "Failed to throw an error")
     }
     
     func testErrorWrongJson() {
-        XCTAssertThrowsError(try self.model.deserialise(user:self.dataWrong), "Failed throw an error")
+        XCTAssertThrowsError(try self.model.deserialise(user:self.dataWrong), "Failed to throw an error")
     }
     
     func testUserIdentifier() {
