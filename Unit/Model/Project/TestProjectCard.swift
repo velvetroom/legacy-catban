@@ -12,5 +12,6 @@ class TestProjectCard:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.card, "Failed to load card")
         XCTAssertNotNil(self.card.title, "Failed to load title")
+        XCTAssertNotNil(self.card.identifier, "Failed to load identifier")
     }
 }
