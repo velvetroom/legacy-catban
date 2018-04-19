@@ -6,13 +6,17 @@ class TestFile_SaveUser:XCTestCase {
     private var user:Data!
     private struct Constants {
         static let rootFolder:String = "tests"
+        static let userData:Any = ["user":"lorem ipsum"]
     }
     
     override func setUp() {
         super.setUp()
         File.rootFolder = Constants.rootFolder
         self.model = File()
-        self.user = Data()
+        do {
+            try self.user = JSONSerialization.data(withJSONObject:Constants.userData,
+                                                   options:JSONSerialization.WritingOptions())
+        } catch { }
     }
     
     override func tearDown() {
@@ -35,6 +39,13 @@ class TestFile_SaveUser:XCTestCase {
         do { try self.model.save(user:self.user) } catch { }
         
         XCTAssertTrue(self.fileExists(), "User should exist after")
+    }
+    
+    func testFileSize() {
+        do { try self.model.save(user:self.user) } catch { }
+        var data:Data! = nil
+        do { try data = Data.init(contentsOf:self.model.user) } catch { }
+        XCTAssertEqual(data.count, self.user.count, "Invalid number of bytes written")
     }
     
     private func fileExists() -> Bool {

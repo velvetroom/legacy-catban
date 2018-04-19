@@ -8,15 +8,19 @@ class TestFile_SaveProject:XCTestCase {
     private struct Constants {
         static let rootFolder:String = "tests"
         static let identifier:String = "loremipsum"
+        static let projectData:Any = ["project":"lorem ipsum"]
     }
     
     override func setUp() {
         super.setUp()
         File.rootFolder = Constants.rootFolder
         self.model = File()
-        self.project = Data()
         self.url = self.model.projects.appendingPathComponent(Constants.identifier).appendingPathExtension(
             File.Constants.fileExtension)
+        do {
+            try self.project = JSONSerialization.data(withJSONObject:Constants.projectData,
+                                                   options:JSONSerialization.WritingOptions())
+        } catch { }
     }
     
     override func tearDown() {
@@ -40,6 +44,13 @@ class TestFile_SaveProject:XCTestCase {
         do { try self.model.save(project:self.project, with:Constants.identifier) } catch { }
         
         XCTAssertTrue(self.fileExists(), "Project should exist after")
+    }
+    
+    func testFileSize() {
+        do { try self.model.save(project:self.project, with:Constants.identifier) } catch { }
+        var data:Data! = nil
+        do { try data = Data.init(contentsOf:self.url) } catch { }
+        XCTAssertEqual(data.count, self.project.count, "Invalid number of bytes written")
     }
     
     private func fileExists() -> Bool {
