@@ -24,14 +24,4 @@ extension Deserialiser {
         project.name = name
         return project
     }
-    
-    private func parseColumnsWith(dictionary:[String:Any]) throws -> [ProjectColumn] {
-        guard
-            let rawColumns:[Any] = dictionary[Serialiser.Constants.Project.columns] as? [Any]
-        else {
-            throw ErrorRepository.malformedData
-        }
-        let columns:[ProjectColumn] = []
-        return columns
-    }
 }
