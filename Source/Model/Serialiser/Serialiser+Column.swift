@@ -14,7 +14,7 @@ extension Serialiser {
         var dictionary:[String:Any] = [:]
         dictionary[Constants.Column.identifier] = column.identifier
         dictionary[Constants.Column.name] = column.name
-        dictionary[Constants.Column.cards] = []
+        dictionary[Constants.Column.cards] = self.cardArrayWith(column:column)
         return dictionary
     }
 }

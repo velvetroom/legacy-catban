@@ -16,6 +16,8 @@ class TestSerialiser_Column:XCTestCase {
         let column:ProjectColumn = ProjectColumn()
         column.identifier = Constants.identifier
         column.name = Constants.name
+        column.cards.append(ProjectCard())
+        column.cards.append(ProjectCard())
         self.project.columns.append(column)
     }
     
@@ -47,5 +49,19 @@ class TestSerialiser_Column:XCTestCase {
         let dictionary:[String:Any]! = array.first as? [String:Any]
         let name:String! = dictionary[Serialiser.Constants.Column.name] as? String
         XCTAssertEqual(name, Constants.name, "Invalid name serialised")
+    }
+    
+    func testDictionaryWithCards() {
+        let array:[Any] = self.model.columnArrayWith(project:self.project)
+        let dictionary:[String:Any]! = array.first as? [String:Any]
+        let cards:[Any]! = dictionary[Serialiser.Constants.Column.cards] as? [Any]
+        XCTAssertNotNil(cards, "Failed to serialise cards")
+    }
+    
+    func testAmountOfCards() {
+        let array:[Any] = self.model.columnArrayWith(project:self.project)
+        let dictionary:[String:Any]! = array.first as? [String:Any]
+        let cards:[Any]! = dictionary[Serialiser.Constants.Column.cards] as? [Any]
+        XCTAssertEqual(cards.count, self.project.columns.first!.cards.count, "Invalid number of cards serialised")
     }
 }
