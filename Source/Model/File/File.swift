@@ -11,7 +11,7 @@ class File:FileProtocol {
     
     var user:URL {
         get {
-            let file:URL = self.projects.appendingPathComponent(Constants.userFile)
+            let file:URL = self.directory.appendingPathComponent(Constants.userFile)
             return file.appendingPathExtension(Constants.fileExtension)
         }
     }

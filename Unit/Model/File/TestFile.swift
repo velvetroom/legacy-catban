@@ -54,6 +54,8 @@ class TestFile:XCTestCase {
     }
     
     func testUserURL() {
+        XCTAssertFalse(self.model.user.absoluteString.contains(File.Constants.projectsFolder),
+                      "Invalid user url")
         XCTAssertTrue(self.model.user.absoluteString.contains(File.Constants.rootFolder),
                       "Invalid user url")
         XCTAssertTrue(self.model.user.absoluteString.contains(File.Constants.userFile),
