@@ -271,6 +271,10 @@
 		DABC32632088AA80008BA213 /* Serialiser+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC32622088AA80008BA213 /* Serialiser+User.swift */; };
 		DABC32652088BA89008BA213 /* Serialiser+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC32642088BA89008BA213 /* Serialiser+Project.swift */; };
 		DABC32672088BAAB008BA213 /* TestSerialiser_Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC32662088BAAB008BA213 /* TestSerialiser_Project.swift */; };
+		DABC32692088DC43008BA213 /* Serialiser+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC32682088DC43008BA213 /* Serialiser+Column.swift */; };
+		DABC326B2088DC57008BA213 /* Serialiser+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC326A2088DC57008BA213 /* Serialiser+Card.swift */; };
+		DABC326D2088DCA9008BA213 /* TestSerialiser_Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC326C2088DCA9008BA213 /* TestSerialiser_Column.swift */; };
+		DABC326F2088DCB2008BA213 /* TestSerialiser_Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC326E2088DCB2008BA213 /* TestSerialiser_Card.swift */; };
 		DAC10C55207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C54207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift */; };
 		DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */; };
 		DAC10C59207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */; };
@@ -625,6 +629,10 @@
 		DABC32622088AA80008BA213 /* Serialiser+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+User.swift"; sourceTree = "<group>"; };
 		DABC32642088BA89008BA213 /* Serialiser+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+Project.swift"; sourceTree = "<group>"; };
 		DABC32662088BAAB008BA213 /* TestSerialiser_Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiser_Project.swift; sourceTree = "<group>"; };
+		DABC32682088DC43008BA213 /* Serialiser+Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+Column.swift"; sourceTree = "<group>"; };
+		DABC326A2088DC57008BA213 /* Serialiser+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialiser+Card.swift"; sourceTree = "<group>"; };
+		DABC326C2088DCA9008BA213 /* TestSerialiser_Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiser_Column.swift; sourceTree = "<group>"; };
+		DABC326E2088DCB2008BA213 /* TestSerialiser_Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiser_Card.swift; sourceTree = "<group>"; };
 		DAC10C54207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCollectionUpdateFactory+Delete.swift"; sourceTree = "<group>"; };
 		DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete.swift; sourceTree = "<group>"; };
 		DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateDeleteSections.swift; sourceTree = "<group>"; };
@@ -815,6 +823,8 @@
 				DA4F043E2087940800A28894 /* Serialiser+Constants.swift */,
 				DABC32622088AA80008BA213 /* Serialiser+User.swift */,
 				DABC32642088BA89008BA213 /* Serialiser+Project.swift */,
+				DABC32682088DC43008BA213 /* Serialiser+Column.swift */,
+				DABC326A2088DC57008BA213 /* Serialiser+Card.swift */,
 			);
 			path = Serialiser;
 			sourceTree = "<group>";
@@ -1593,6 +1603,8 @@
 				DABC325A2088A38A008BA213 /* TestSerialiser.swift */,
 				DABC32602088A661008BA213 /* TestSerialiser_User.swift */,
 				DABC32662088BAAB008BA213 /* TestSerialiser_Project.swift */,
+				DABC326C2088DCA9008BA213 /* TestSerialiser_Column.swift */,
+				DABC326E2088DCB2008BA213 /* TestSerialiser_Card.swift */,
 				DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */,
 			);
 			path = Serialiser;
@@ -1781,8 +1793,10 @@
 				DAD3C485207BB15200F84829 /* LandingColumnEditPresenter.swift in Sources */,
 				DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */,
 				DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */,
+				DABC326B2088DC57008BA213 /* Serialiser+Card.swift in Sources */,
 				DA6F1B74207359AA001248E4 /* WriterController+Constants.swift in Sources */,
 				DA657E992074F491003C1645 /* WriterViewText+Constants.swift in Sources */,
+				DABC32692088DC43008BA213 /* Serialiser+Column.swift in Sources */,
 				DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */,
 				DA6F1B6A20727B09001248E4 /* WriterController.swift in Sources */,
 				DA86FBC820835E17005D31AF /* Repository.swift in Sources */,
@@ -1949,6 +1963,7 @@
 				DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
 				DA30603F2082642600E55ECB /* TestUser.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
+				DABC326F2088DCB2008BA213 /* TestSerialiser_Card.swift in Sources */,
 				DABC325B2088A38A008BA213 /* TestSerialiser.swift in Sources */,
 				DA8AB2632064F303005A393E /* TestLandingViewCollection.swift in Sources */,
 				DA86FBD220836951005D31AF /* MockRepositoryLocalProtocol.swift in Sources */,
@@ -1973,6 +1988,7 @@
 				DADF4D4C207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift in Sources */,
 				DA4A69C82085E657005AE05F /* TestFile_LoadProjects.swift in Sources */,
 				DA43877C20886FA0004D8559 /* TestDeserialiser_Columns.swift in Sources */,
+				DABC326D2088DCA9008BA213 /* TestSerialiser_Column.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DAEB8194206D28EE00E55424 /* TestLandingPresenterOutlets.swift in Sources */,
 				DAD3C477207BAD0400F84829 /* TestLandingColumnEditController.swift in Sources */,

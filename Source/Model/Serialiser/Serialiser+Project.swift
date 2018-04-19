@@ -10,7 +10,7 @@ extension Serialiser {
         var dictionary:[String:Any] = [:]
         dictionary[Constants.Project.identifier] = project.identifier
         dictionary[Constants.Project.name] = project.name
-        dictionary[Constants.Project.columns] = []
+        dictionary[Constants.Project.columns] = self.columnArrayWith(project:project)
         return dictionary
     }
 }

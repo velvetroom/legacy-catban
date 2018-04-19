@@ -3,7 +3,7 @@ import XCTest
 
 class TestSerialiser_Project:XCTestCase {
     private var model:Serialiser!
-    private var project:ProjectProtocol!
+    private var project:Project!
     private struct Constants {
         static let identifier:String = "hello world"
         static let name:String = "lorem ipsum"
@@ -15,6 +15,7 @@ class TestSerialiser_Project:XCTestCase {
         self.project = Project()
         self.project.identifier = Constants.identifier
         self.project.name = Constants.name
+        self.project.columns.append(ProjectColumn())
     }
     
     func testLoad() {
@@ -43,5 +44,17 @@ class TestSerialiser_Project:XCTestCase {
         let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
         let name:String! = dictionary[Serialiser.Constants.Project.name] as? String
         XCTAssertEqual(name, Constants.name, "Invalid name serialised")
+    }
+    
+    func testDictionaryWithColumns() {
+        let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
+        let columns:[Any]! = dictionary[Serialiser.Constants.Project.columns] as? [Any]
+        XCTAssertNotNil(columns, "Failed to serialise columns")
+    }
+    
+    func testAmountOfColumns() {
+        let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
+        let columns:[Any]! = dictionary[Serialiser.Constants.Project.columns] as? [Any]
+        XCTAssertEqual(columns.count, self.project.columns.count, "Invalid number of columns serialised")
     }
 }
