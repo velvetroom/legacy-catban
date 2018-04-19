@@ -5,8 +5,9 @@ class CollectionUpdateInsertSections:CollectionUpdateProtocol {
     var section:Int
     
     init() {
-        self.column = ProjectColumn()
         self.section = 0
+        self.column = ProjectColumn()
+        self.column.identifier = UUID().uuidString
     }
     
     func strategy(project:ProjectProtocol) {

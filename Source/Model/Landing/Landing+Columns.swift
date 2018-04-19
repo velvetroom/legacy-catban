@@ -15,7 +15,7 @@ extension Landing {
     }
     
     func createColumn() {
-        let updates:[CollectionUpdateProtocol] = self.self.collectionUpdateFactory.insertColumnIn(
+        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.insertColumnIn(
             project:self.project)
         self.project.apply(updates:updates)
         self.reloadViewModel()

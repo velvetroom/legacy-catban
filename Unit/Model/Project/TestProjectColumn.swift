@@ -17,6 +17,7 @@ class TestProjectColumn:XCTestCase {
         XCTAssertNotNil(self.column, "Failed to load column")
         XCTAssertNotNil(self.column.name, "Failed to load name")
         XCTAssertNotNil(self.column.cards, "Failed to load cards")
+        XCTAssertNotNil(self.column.identifier, "Failed to load identifier")
         XCTAssertFalse(self.column.cards.isEmpty, "No cards found in column")
     }
     

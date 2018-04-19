@@ -17,9 +17,8 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         self.update = CollectionUpdateInsertSections()
         self.view = MockLandingViewCollection()
         self.project = MockProjectProtocol()
-        self.column = ProjectColumn()
+        self.column = self.update.column
         self.update.section = Constants.section
-        self.update.column = self.column
     }
     
     func testLoad() {
@@ -28,6 +27,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         XCTAssertNotNil(self.update.column, "Failed to load column")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
+        XCTAssertFalse(self.column.identifier.isEmpty, "Failed to create identifier for column")
     }
     
     func testStrategyCollection() {

@@ -3,10 +3,12 @@ import Foundation
 class ProjectColumn {
     var cards:[ProjectCard]
     var name:String
+    var identifier:String
     
     init() {
         self.cards = []
         self.name = String()
+        self.identifier = String()
     }
     
     func cardAt(index:Int) -> ProjectCard {
