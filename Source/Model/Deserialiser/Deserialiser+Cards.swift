@@ -30,11 +30,13 @@ extension Deserialiser {
     
     private func parseCardWith(dictionary:[String:Any]) throws -> ProjectCard {
         guard
+            let identifier:String = dictionary[Serialiser.Constants.Card.identifier] as? String,
             let title:String = dictionary[Serialiser.Constants.Card.title] as? String
         else {
             throw ErrorRepository.malformedData
         }
         let card:ProjectCard = ProjectCard()
+        card.identifier = identifier
         card.title = title
         return card
     }

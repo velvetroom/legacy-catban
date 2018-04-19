@@ -42,6 +42,16 @@ class TestDeserialiser_Columns:XCTestCase {
         }
     }
     
+    func testParsedIdentifier() {
+        var project:ProjectProtocol!
+        do {
+            try project = self.model.deserialise(project:self.dataSuccess)
+        } catch { }
+        for column:ProjectColumn in project.columns {
+            XCTAssertFalse(column.identifier.isEmpty, "Failed to parse identifier")
+        }
+    }
+    
     func testErrorWrongJson() {
         XCTAssertThrowsError(try self.model.deserialise(project:self.dataWrong), "Failed to throw an error")
     }

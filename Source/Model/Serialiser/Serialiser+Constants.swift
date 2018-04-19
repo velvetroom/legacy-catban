@@ -14,11 +14,13 @@ extension Serialiser {
         }
         
         struct Column {
+            static let identifier:String = "identifier"
             static let name:String = "name"
             static let cards:String = "cards"
         }
         
         struct Card {
+            static let identifier:String = "identifier"
             static let title:String = "title"
         }
     }

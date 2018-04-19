@@ -4,22 +4,27 @@
     "columns":
     [
      {
+     "identifier": "fiosfs",
      "name": "dasda32412",
      "cards": []
      },
      {
+     "identifier": "t3tdsfdfcd",
      "name": "312423234jdas",
      "cards":
      [
       {
+      "identifier": "1242rwesf",
       "titleWrong": "hello world"
       },
       {
+      "identifier": "4rfdsfsda",
       "title": "lorem ipsum"
       }
       ]
      },
      {
+     "identifier": "2131312dasd",
      "name": "09429213jkhgh",
      "cards": []
      }
