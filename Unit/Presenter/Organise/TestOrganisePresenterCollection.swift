@@ -12,5 +12,6 @@ class TestOrganisePresenterCollection:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.presenter.delegate, "Failed to load delegate")
+        XCTAssertNotNil(self.presenter.datasource, "Failed to load datasource")
     }
 }
