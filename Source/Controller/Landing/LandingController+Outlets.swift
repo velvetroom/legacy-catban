@@ -35,11 +35,11 @@ extension LandingController {
         self.outletsList.viewCollection = viewCollection
         self.outletsList.layoutCollection = layout
         
-        viewCollection.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        viewCollection.topAnchor.constraint(equalTo:self.safeArea.topAnchor).isActive = true
         viewCollection.bottomAnchor.constraint(
             equalTo:self.outletsList.viewCollectionMenu!.topAnchor).isActive = true
-        viewCollection.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        viewCollection.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        viewCollection.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
+        viewCollection.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
     }
     
     private func factoryViewCollectionMenu() {
@@ -57,12 +57,10 @@ extension LandingController {
         self.outletsList.viewCollectionMenu = viewCollectionMenu
         
         self.outletsList.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
-            equalTo:self.view.safeAreaLayoutGuide.bottomAnchor, constant:Constants.collectionMenuHeight)
+            equalTo:self.safeArea.bottomAnchor, constant:Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
-        viewCollectionMenu.leftAnchor.constraint(
-            equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        viewCollectionMenu.rightAnchor.constraint(
-            equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        viewCollectionMenu.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
+        viewCollectionMenu.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
         self.outletsList.layoutCollectionMenuBottom?.isActive = true
         self.outletsList.buttonCollectionMenuMoveRight = viewCollectionMenu.buttonMoveRight
         self.outletsList.buttonCollectionMenuMoveLeft = viewCollectionMenu.buttonMoveLeft

@@ -1,5 +1,5 @@
-import Foundation
+import UIKit
 
-protocol OrganisePresenterCollectionDelegateProtocol {
+protocol OrganisePresenterCollectionDelegateProtocol:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
 }

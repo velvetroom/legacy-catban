@@ -1,5 +1,5 @@
-import Foundation
+import UIKit
 
-protocol OrganisePresenterCollectionDatasourceProtocol {
+protocol OrganisePresenterCollectionDatasourceProtocol:UICollectionViewDataSource {
     var viewModel:OrganiseViewModelCollection { get set }
 }

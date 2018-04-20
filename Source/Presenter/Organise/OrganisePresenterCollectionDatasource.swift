@@ -1,9 +1,17 @@
-import Foundation
+import UIKit
 
-class OrganisePresenterCollectionDatasource:OrganisePresenterCollectionDatasourceProtocol {
+class OrganisePresenterCollectionDatasource:NSObject, OrganisePresenterCollectionDatasourceProtocol {
     var viewModel:OrganiseViewModelCollection
     
-    init() {
+    override init() {
         self.viewModel = OrganiseViewModelCollection()
+    }
+    
+    func collectionView(_:UICollectionView, numberOfItemsInSection:Int) -> Int {
+        return self.viewModel.items.count
+    }
+    
+    func collectionView(_:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
 }

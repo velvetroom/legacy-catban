@@ -11,6 +11,16 @@ extension OrganiseController {
     }
     
     private func factoryCollection() {
+        let collection:OrganiseViewCollection = OrganiseViewCollection()
+        collection.delegate = self.model.presenter.collection.delegate
+        collection.dataSource = self.model.presenter.collection.datasource
+        self.model.presenter.outlets.collection = collection
         
+        self.view.addSubview(collection)
+        
+        collection.topAnchor.constraint(equalTo:self.safeArea.topAnchor).isActive = true
+        collection.bottomAnchor.constraint(equalTo:self.safeArea.bottomAnchor).isActive = true
+        collection.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
+        collection.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
     }
 }

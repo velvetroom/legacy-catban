@@ -11,5 +11,6 @@ class TestOrganisePresenterOutlets:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.outlets, "Failed to load outlets")
+        XCTAssertNil(self.outlets.collection, "Collection should not be assigned")
     }
 }

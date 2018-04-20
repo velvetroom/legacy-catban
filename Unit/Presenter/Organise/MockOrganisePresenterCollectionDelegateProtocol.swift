@@ -1,6 +1,6 @@
 import Foundation
 @testable import catban
 
-class MockOrganisePresenterCollectionDelegateProtocol:OrganisePresenterCollectionDelegateProtocol {
+class MockOrganisePresenterCollectionDelegateProtocol:NSObject, OrganisePresenterCollectionDelegateProtocol {
     
 }

@@ -7,6 +7,12 @@ class Controller:UIViewController {
         }
     }
     
+    var safeArea:UILayoutGuide {
+        get {
+            return self.view.safeAreaLayoutGuide
+        }
+    }
+    
     init() {
         super.init(nibName:nil, bundle:nil)
     }
