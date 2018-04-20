@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_ViewModel:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var presenter:MockLandingPresenterCollection!
     private var dataSource:MockLandingPresenterCollectionDataSource!
     private var layout:MockLandingViewCollectionLayout!
@@ -15,7 +15,7 @@ class TestLandingController_ViewModel:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.layout = MockLandingViewCollectionLayout()
         self.controller.model.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterCollection()

@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestWriterController:XCTestCase {
-    private var controller:WriterController!
-    private var model:Writer!
+    private var controller:WriterController<MockWriterProtocol>!
     private struct Constants {
         static let text:String = "lorem ipsum"
     }
@@ -16,10 +15,8 @@ class TestWriterController:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = WriterController()
-        self.model = Writer()
-        self.controller.model = self.model
-        self.model.text = Constants.text
+        self.controller = WriterController<MockWriterProtocol>()
+        self.controller.model.text = Constants.text
     }
     
     func testLoad() {

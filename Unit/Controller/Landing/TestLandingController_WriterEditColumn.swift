@@ -2,9 +2,8 @@ import XCTest
 @testable import catban
 
 class TestLandingController_WriterEditColumn:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
-    private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let name:String = "lorem ipsum"
@@ -15,23 +14,20 @@ class TestLandingController_WriterEditColumn:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
-        self.model = MockLandingProtocol()
         self.navigation.addChildViewController(self.controller)
-        self.controller.model = self.model
-        self.model.returnColumnAtIndex.name = Constants.name
+        self.controller.model.returnColumnAtIndex.name = Constants.name
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
-        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testOpenWriterRequestsColumnByIndex() {
         self.startExpectation()
-        self.model.onColumnAtIndex = { [weak self] (index:Int) in
+        self.controller.model.onColumnAtIndex = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.columnIndex, "Invalid index requested")
             self?.expect?.fulfill()
         }
@@ -54,7 +50,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             XCTAssertEqual(controller.model.text, Constants.name, "Text not configured")
             self?.expect?.fulfill()
@@ -68,7 +64,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             XCTAssertNotNil(controller.model.onFinish, "Failed to configure on finish")
             self?.expect?.fulfill()
@@ -80,10 +76,10 @@ class TestLandingController_WriterEditColumn:XCTestCase {
     
     func testOnFinishUpdatesColumnName() {
         self.startExpectation()
-        let column:ProjectColumn = self.model.columnAt(index:Constants.columnIndex)
+        let column:ProjectColumn = self.controller.model.columnAt(index:Constants.columnIndex)
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             controller.model.onFinish?(Constants.updatedName)
             XCTAssertEqual(column.name, Constants.updatedName, "Failed to update name")
@@ -98,11 +94,11 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.startExpectation()
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             controller.model.onFinish?(Constants.updatedName)
         }
-        self.model.onUpdateColumnAt = { [weak self] (index:Int) in
+        self.controller.model.onUpdateColumnAt = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.columnIndex, "Invalid column index")
             self?.expect?.fulfill()
         }

@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_Load:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var mockPresenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var expect:XCTestExpectation?
@@ -13,7 +13,7 @@ class TestLandingController_Load:XCTestCase {
     override func setUp() {
         super.setUp()
         self.viewModelLoader = MockLandingViewModelLoader()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.mockPresenter = MockLandingPresenterProtocol()
         self.controller.model.viewModelLoader = self.viewModelLoader
     }

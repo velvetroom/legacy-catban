@@ -2,9 +2,8 @@ import XCTest
 @testable import catban
 
 class TestLandingController_SelectorsAdd:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
-    private var model:MockLandingProtocol!
     private var collection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -13,19 +12,16 @@ class TestLandingController_SelectorsAdd:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
-        self.model = MockLandingProtocol()
         self.collection = MockLandingViewCollection()
-        self.controller.model = self.model
-        self.model.presenter.outlets.list.viewCollection = self.collection
+        self.controller.model.presenter.outlets.list.viewCollection = self.collection
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
-        XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.collection, "Failed to load collection")
     }
     
@@ -46,7 +42,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
     
     func testSelectorAddDeselectsCurrentCard() {
         self.startExpectation()
-        self.model.onClearCardSelection = { [weak self] in
+        self.controller.model.onClearCardSelection = { [weak self] in
             self?.expect?.fulfill()
         }
         

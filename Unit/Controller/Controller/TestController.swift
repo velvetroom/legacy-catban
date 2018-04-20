@@ -2,11 +2,11 @@ import XCTest
 @testable import catban
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:Controller<MockModelProtocol>!
     
     override func setUp() {
         super.setUp()
-        self.controller = Controller()
+        self.controller = Controller<MockModelProtocol>()
     }
     
     func testLoad() {

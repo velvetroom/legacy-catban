@@ -5,7 +5,7 @@ class MockOrganiseProtocol:OrganiseProtocol {
     var board:BoardProtocol
     var presenter:OrganisePresenterProtocol
     
-    init() {
+    required init() {
         self.board = Board()
         self.presenter = OrganisePresenter()
     }

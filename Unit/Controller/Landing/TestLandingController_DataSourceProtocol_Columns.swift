@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DataSourceProtocol_Columns:XCTestCase {
-    private var controller:LandingController!
-    private var model:MockLandingProtocol!
+    private var controller:LandingController<MockLandingProtocol>!
     private var column:ProjectColumn!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -13,16 +12,14 @@ class TestLandingController_DataSourceProtocol_Columns:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
+        self.controller = LandingController<MockLandingProtocol>()
         self.column = ProjectColumn()
-        self.controller.model = self.model
-        self.model.returnColumnAtIndex = self.column
+        self.controller.model.returnColumnAtIndex = self.column
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.column, "Failed to load column")
     }
     
     func testColumnAtIndex() {
@@ -32,7 +29,7 @@ class TestLandingController_DataSourceProtocol_Columns:XCTestCase {
     
     func testColumnAtIndexReceivesColumnFromProject() {
         self.startExpectation()
-        self.model.onColumnAtIndex = { [weak self] (index:Int) in
+        self.controller.model.onColumnAtIndex = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.index, "Invalid index requested")
             self?.expect?.fulfill()
         }

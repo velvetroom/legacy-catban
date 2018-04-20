@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DataSourceProtocol_Header:XCTestCase {
-    private var controller:LandingController!
-    private var model:MockLandingProtocol!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
     private var column:ProjectColumn!
     private var expect:XCTestExpectation?
@@ -14,26 +13,23 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
         self.column = ProjectColumn()
-        self.controller.model = self.model
-        self.model.returnColumnAtIndex = self.column
+        self.controller.model.returnColumnAtIndex = self.column
         self.column.name = Constants.name
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
         XCTAssertNotNil(self.column, "Failed to load column")
     }
     
     func testEditHeaderAtClearsCardSelectiopn() {
         self.startExpectation()
-        self.model.onClearCardSelection = { [weak self] in
+        self.controller.model.onClearCardSelection = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -63,7 +59,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
                 controller.model.onRename?()
-            } else if let _:WriterController = controller as? WriterController {
+            } else if let _:WriterController<Writer> = controller as? WriterController<Writer> {
                 self?.expect?.fulfill()
             }
         }
@@ -93,7 +89,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
                 controller.model.onRename?()
-            } else if let controller:WriterController = controller as? WriterController {
+            } else if let controller:WriterController<Writer> = controller as? WriterController<Writer> {
                 XCTAssertEqual(controller.model.text, self?.column.name, "Invalid text on callback")
                 self?.expect?.fulfill()
             }

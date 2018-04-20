@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var outlets:LandingPresenterOutletsList {
         get {
             return self.controller.model.presenter.outlets.list
@@ -11,7 +11,7 @@ class TestLandingController:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
     }
     
     func testLoad() {

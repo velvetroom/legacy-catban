@@ -2,9 +2,8 @@ import XCTest
 @testable import catban
 
 class TestLandingController_Writer:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
-    private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let cardText:String = "lorem ipsum"
@@ -15,25 +14,22 @@ class TestLandingController_Writer:XCTestCase {
     override func setUp() {
         super.setUp()
         self.navigation = MockNavigationController()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
-        self.controller.model = self.model
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testWriterForCard() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
-        self.model.returnCardAtIndex = card
+        self.controller.model.returnCardAtIndex = card
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             XCTAssertEqual(controller.model.text, card.title, "Failed to assign text to model")
             XCTAssertNotNil(controller.model.onFinish, "Failed to assign on finish function")
@@ -48,13 +44,11 @@ class TestLandingController_Writer:XCTestCase {
     func testWriterForCardCallbackTitleUpdated() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
-        self.model.returnCardAtIndex = card
+        self.controller.model.returnCardAtIndex = card
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
+            else { return }
             controller.model.onFinish?(Constants.cardUpdatedText)
             XCTAssertEqual(card.title, Constants.cardUpdatedText, "Failed to update card")
             self?.expect?.fulfill()
@@ -68,14 +62,14 @@ class TestLandingController_Writer:XCTestCase {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
         let indexPath:IndexPath = IndexPath(item:2312, section:9342)
-        self.model.returnCardAtIndex = card
+        self.controller.model.returnCardAtIndex = card
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
-                let controller:WriterController = controller as? WriterController
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             controller.model.onFinish?(Constants.cardUpdatedText)
         }
-        self.model.onUpdateCardAt = { [weak self] (index:IndexPath) in
+        self.controller.model.onUpdateCardAt = { [weak self] (index:IndexPath) in
             XCTAssertEqual(indexPath, index, "Invalid index to update")
             self?.expect?.fulfill()
         }

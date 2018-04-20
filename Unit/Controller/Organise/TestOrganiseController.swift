@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestOrganiseController:XCTestCase {
-    private var controller:OrganiseController!
+    private var controller:OrganiseController<MockOrganiseProtocol>!
     private var outlets:OrganisePresenterOutlets {
         get {
             return self.controller.model.presenter.outlets
@@ -11,7 +11,7 @@ class TestOrganiseController:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = OrganiseController()
+        self.controller = OrganiseController<MockOrganiseProtocol>()
     }
     
     func testLoad() {

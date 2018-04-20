@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestWriterController_Notifications:XCTestCase {
-    private var controller:WriterController!
+    private var controller:WriterController<Writer>!
     private var notification:Notification!
     private var layoutBottom:NSLayoutConstraint!
     private struct Constants {
@@ -14,7 +14,7 @@ class TestWriterController_Notifications:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = WriterController()
+        self.controller = WriterController<Writer>()
         self.notification = Notification(name:Notification.Name.init(Constants.name))
         self.notification.userInfo = [
             UIKeyboardFrameEndUserInfoKey : NSValue(cgRect:Constants.frame),

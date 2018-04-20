@@ -6,7 +6,7 @@ class MockLoadProtocol:LoadProtocol {
     var repository:RepositoryProtocol
     var dispatchQueue:DispatchQueue
     
-    init() {
+    required init() {
         self.repository = Repository()
         self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:String())
     }

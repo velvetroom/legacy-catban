@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_Collection:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var viewCollection:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -11,7 +11,7 @@ class TestLandingController_Collection:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.viewCollection = MockLandingViewCollection()
         self.controller.model.presenter.outlets.list.viewCollection = self.viewCollection
     }

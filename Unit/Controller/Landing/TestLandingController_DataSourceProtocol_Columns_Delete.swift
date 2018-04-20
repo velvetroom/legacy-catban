@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DataSourceProtocol_Columns_Delete:XCTestCase {
-    private var controller:LandingController!
-    private var model:MockLandingProtocol!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -13,16 +12,13 @@ class TestLandingController_DataSourceProtocol_Columns_Delete:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
-        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
     }
 
@@ -51,7 +47,7 @@ class TestLandingController_DataSourceProtocol_Columns_Delete:XCTestCase {
             controller.model.onConfirm?()
         }
         
-        self.model.onDeleteColumnAt = { [weak self] (index:Int) in
+        self.controller.model.onDeleteColumnAt = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.index, "Invalid index for deletion")
             self?.expect?.fulfill()
         }
@@ -63,7 +59,7 @@ class TestLandingController_DataSourceProtocol_Columns_Delete:XCTestCase {
     
     func testConfirmedDeleteSectionAtThrows() {
         self.startExpectation()
-        self.model.throwingError = ErrorProject.oneColumnMinimum
+        self.controller.model.throwingError = ErrorProject.oneColumnMinimum
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             let controller:ErrorController? = controller as? ErrorController
             XCTAssertNotNil(controller, "Failed to present error controller")

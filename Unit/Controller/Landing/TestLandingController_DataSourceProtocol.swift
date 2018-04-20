@@ -2,10 +2,9 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DataSourceProtocol:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var project:Project!
     private var collection:MockLandingViewCollection!
-    private var mockModel:MockLandingProtocol!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -19,11 +18,10 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.project = Project.factoryFirstProject()
         self.controller.model.project = project
         self.collection = MockLandingViewCollection()
-        self.mockModel = MockLandingProtocol()
         self.navigation = MockNavigationController()
         self.controller.model.presenter.collection.dataSource.delegate = self.controller
         self.navigation.addChildViewController(self.controller)
@@ -33,7 +31,6 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.controller.model.project, "Controller has no project assigned")
-        XCTAssertNotNil(self.mockModel, "Failed to load mock model")
     }
     
     func testMoveItemInSameColumn() {
@@ -56,14 +53,14 @@ class TestLandingController_DataSourceProtocol:XCTestCase {
     
     func testModelReceivedReorder() {
         self.startExpectation()
-        self.controller.model = self.mockModel
-        self.mockModel.onMoveCardFrom = { [weak self] (origin:IndexPath, destination:IndexPath) in
+        let controller:LandingController<MockLandingProtocol> = LandingController<MockLandingProtocol>()
+        controller.model.onMoveCardFrom = { [weak self] (origin:IndexPath, destination:IndexPath) in
             XCTAssertEqual(origin, Constants.origin, "Incorrect origin")
             XCTAssertEqual(destination, Constants.destination, "Incorrect destination")
             self?.expect?.fulfill()
         }
         
-        self.controller.moveItemFrom(origin:Constants.origin, to:Constants.destination)
+        controller.moveItemFrom(origin:Constants.origin, to:Constants.destination)
         
         self.waitExpectation()
     }

@@ -16,7 +16,8 @@ class TestApplicationNavigationController_Transitions:XCTestCase {
     
     func testLandingControllerType() {
         self.controller.transitionToLandingWith(board:Board())
-        let controller:LandingController? = self.controller.viewControllers.first as? LandingController
+        let controller:LandingController<Landing>? = self.controller.viewControllers.first as?
+            LandingController<Landing>
         XCTAssertNotNil(controller, "Invalid controller type")
     }
 }

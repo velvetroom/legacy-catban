@@ -13,7 +13,7 @@ class TestLandingViewModelCollectionMenu:XCTestCase {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
         XCTAssertFalse(self.viewModel.moveRightEnabled, "By default move right should be disabled")
         XCTAssertFalse(self.viewModel.moveLeftEnabled, "By default move left should be disabled")
-        XCTAssertEqual(self.viewModel.layoutBottom, LandingController.Constants.collectionMenuHeight,
+        XCTAssertEqual(self.viewModel.layoutBottom, LandingViewModel.Constants.collectionMenuHeight,
                         "By default move layout bottom should be equals to menu height")
     }
 }

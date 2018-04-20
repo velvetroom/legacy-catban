@@ -44,7 +44,7 @@ class TestLandingViewModelLoader:XCTestCase {
         let viewModel:LandingViewModel = self.loader.factoryWith(model:self.model)
         
         XCTAssertEqual(viewModel.outlets.collectionMenu.layoutBottom,
-                       LandingController.Constants.collectionMenuHeight,
+                       LandingViewModel.Constants.collectionMenuHeight,
                        "Not hiding menu when there is no editing card")
     }
     

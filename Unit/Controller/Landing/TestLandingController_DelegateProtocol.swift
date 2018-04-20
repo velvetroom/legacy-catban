@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DelegateProtocol:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var layoutMenuBottom:NSLayoutConstraint!
     private var project:Project!
     private struct Constants {
@@ -11,7 +11,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.layoutMenuBottom = NSLayoutConstraint()
         self.project = Project.factoryFirstProject()
         self.controller.model.presenter.outlets.list.layoutCollectionMenuBottom = self.layoutMenuBottom
@@ -56,7 +56,7 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         
         self.controller.delegateClearSelection()
         
-        XCTAssertEqual(self.layoutMenuBottom.constant, LandingController.Constants.collectionMenuHeight,
+        XCTAssertEqual(self.layoutMenuBottom.constant, LandingViewModel.Constants.collectionMenuHeight,
                        "Failed to update view model")
     }
 }

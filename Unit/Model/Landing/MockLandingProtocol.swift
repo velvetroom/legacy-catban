@@ -36,7 +36,7 @@ class MockLandingProtocol:LandingProtocol {
         }
     }
     
-    init() {
+    required init() {
         self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()

@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_Error:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -11,7 +11,7 @@ class TestLandingController_Error:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.navigation = MockNavigationController()
         self.navigation.addChildViewController(self.controller)
     }

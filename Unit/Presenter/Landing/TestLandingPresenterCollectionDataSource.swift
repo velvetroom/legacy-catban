@@ -3,14 +3,14 @@ import XCTest
 
 class TestLandingPresenterCollectionDataSource:XCTestCase {
     private var dataSource:LandingPresenterCollectionDataSource!
-    private var controller:LandingController!
+    private var controller:LandingController<Landing>!
     private var mockDelegate:MockLandingPresenterCollectionDataSourceProtocol!
     private var viewCollection:MockLandingViewCollection!
     
     override func setUp() {
         super.setUp()
         self.dataSource = LandingPresenterCollectionDataSource()
-        self.controller = LandingController()
+        self.controller = LandingController<Landing>()
         self.viewCollection = MockLandingViewCollection()
         self.mockDelegate = MockLandingPresenterCollectionDataSourceProtocol()
         self.dataSource.delegate = self.controller

@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLoadController:XCTestCase {
-    private var controller:LoadController!
-    private var model:MockLoadProtocol!
+    private var controller:LoadController<MockLoadProtocol>!
     private var navigation:MockNavigationController!
     private var board:Board!
     private var expect:XCTestExpectation?
@@ -13,17 +12,14 @@ class TestLoadController:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LoadController()
-        self.model = MockLoadProtocol()
+        self.controller = LoadController<MockLoadProtocol>()
         self.navigation = MockNavigationController()
         self.board = Board()
-        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
         XCTAssertNotNil(self.board, "Failed to load board")
     }
@@ -35,7 +31,7 @@ class TestLoadController:XCTestCase {
     
     func testLoadBoardOnViewDidLoad() {
         self.startExpectation()
-        self.model.onLoadBoard = { [weak self] in
+        self.controller.model.onLoadBoard = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -47,7 +43,8 @@ class TestLoadController:XCTestCase {
     func testLoadBoardPresentsLanding() {
         self.startExpectation()
         self.navigation.onSetControllers = { [weak self] (controllers:[UIViewController]) in
-            let controller:LandingController? = controllers.first as? LandingController
+            let controller:LandingController<Landing>? = controllers.first
+                as? LandingController<Landing>
             XCTAssertNotNil(controller, "Invalid controller type received")
             self?.expect?.fulfill()
         }
@@ -60,7 +57,7 @@ class TestLoadController:XCTestCase {
     func testLoadBoardUpdatesLandingBoard() {
         self.startExpectation()
         self.navigation.onSetControllers = { [weak self] (controllers:[UIViewController]) in
-            let controller:LandingController = controllers.first as! LandingController
+            let controller:LandingController<Landing> = controllers.first as! LandingController<Landing>
             guard
                 let landingBoard:Board = controller.model.board as? Board
             else { return XCTFail("Invalid model") }

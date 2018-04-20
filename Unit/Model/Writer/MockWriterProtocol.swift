@@ -6,7 +6,7 @@ class MockWriterProtocol:WriterProtocol {
     var text:String
     var onFinish:((String) -> Void)?
     
-    init() {
+    required init() {
         self.presenter = WriterPresenter()
         self.text = String()
     }

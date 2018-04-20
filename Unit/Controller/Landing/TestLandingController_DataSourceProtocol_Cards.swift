@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
-    private var controller:LandingController!
-    private var model:MockLandingProtocol!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -13,16 +12,13 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
-        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
     }
     
@@ -36,7 +32,7 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
             }
             controller.model.onConfirm?()
         }
-        self.model.onDeleteEditingCard = { [weak self] in
+        self.controller.model.onDeleteEditingCard = { [weak self] in
             self?.expect?.fulfill()
         }
         

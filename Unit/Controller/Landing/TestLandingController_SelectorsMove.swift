@@ -2,8 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingController_SelectorsMove:XCTestCase {
-    private var controller:LandingController!
-    private var model:MockLandingProtocol!
+    private var controller:LandingController<MockLandingProtocol>!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -11,19 +10,16 @@ class TestLandingController_SelectorsMove:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
-        self.controller.model = self.model
+        self.controller = LandingController<MockLandingProtocol>()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testSelectorMoveRight() {
         self.startExpectation()
-        self.model.onMoveCardRight = { [weak self] in
+        self.controller.model.onMoveCardRight = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -34,7 +30,7 @@ class TestLandingController_SelectorsMove:XCTestCase {
     
     func testSelectorMoveLeft() {
         self.startExpectation()
-        self.model.onMoveCardLeft = { [weak self] in
+        self.controller.model.onMoveCardLeft = { [weak self] in
             self?.expect?.fulfill()
         }
         

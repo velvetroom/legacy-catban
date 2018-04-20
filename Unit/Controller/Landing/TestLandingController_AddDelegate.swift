@@ -2,9 +2,8 @@ import XCTest
 @testable import catban
 
 class TestLandingController_AddDelegate:XCTestCase {
-    private var controller:LandingController!
+    private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
-    private var model:MockLandingProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,22 +11,19 @@ class TestLandingController_AddDelegate:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController()
-        self.model = MockLandingProtocol()
+        self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
-        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
-        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
     func testCreateCard() {
         self.startExpectation()
-        self.model.onCreateCard = { [weak self] in
+        self.controller.model.onCreateCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -38,22 +34,23 @@ class TestLandingController_AddDelegate:XCTestCase {
     
     func testCreateCardShowsWriter() {
         self.startExpectation()
-        self.controller.model = Landing()
-        self.controller.model.project.insert(column:ProjectColumn(), at:0)
+        let controller:LandingController<Landing> = LandingController<Landing>()
+        controller.model.project.insert(column:ProjectColumn(), at:0)
+        self.navigation.addChildViewController(controller)
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            let writer:WriterController? = controller as? WriterController
+            let writer:WriterController<Writer>? = controller as? WriterController<Writer>
             XCTAssertNotNil(writer, "Invalid controller presented")
             self?.expect?.fulfill()
         }
         
-        self.controller.createCard()
+        controller.createCard()
         
         self.waitExpectations()
     }
     
     func testCreateColumn() {
         self.startExpectation()
-        self.model.onCreateColumn = { [weak self] in
+        self.controller.model.onCreateColumn = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -64,7 +61,7 @@ class TestLandingController_AddDelegate:XCTestCase {
     
     func testCreateColumnScrollsToTopRight() {
         self.startExpectation()
-        self.model.onScrollToTopRightCorner = { [weak self] in
+        self.controller.model.onScrollToTopRightCorner = { [weak self] in
             self?.expect?.fulfill()
         }
         
