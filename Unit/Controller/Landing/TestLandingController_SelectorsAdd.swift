@@ -41,7 +41,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.selectorAdd(sender:UIButton())
+        self.controller.selectorAdd(sender:UIBarButtonItem())
         
         self.waitExpectations()
     }
@@ -52,7 +52,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.selectorAdd(sender:UIButton())
+        self.controller.selectorAdd(sender:UIBarButtonItem())
         
         self.waitExpectations()
     }

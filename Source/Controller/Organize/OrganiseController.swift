@@ -19,8 +19,13 @@ class OrganiseController:Controller, ControllerProtocol {
     
     func adjustNavigationItem() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                                 target:nil, action:nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem:UIBarButtonSystemItem.done,
+            target:self, action:#selector(self.selectorDone(sender:)))
         self.title = String.localizedOrganise(key:"OrganiseController_title")
+    }
+    
+    @objc private func selectorDone(sender button:UIBarButtonItem) {
+        self.navigation?.transitionToLandingWith(board:self.model.board)
     }
 }

@@ -52,7 +52,7 @@ class TestLoadController:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.navigation?.transitionToLandingWith(board:self.board, animated:false)
+        self.controller.navigation?.transitionToLandingWith(board:self.board)
         
         self.waitExpectations()
     }
@@ -71,7 +71,7 @@ class TestLoadController:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.navigation?.transitionToLandingWith(board:self.board, animated:false)
+        self.controller.navigation?.transitionToLandingWith(board:self.board)
         
         self.waitExpectations()
     }

@@ -27,7 +27,7 @@ class LandingViewCollection:UICollectionView {
         self.bouncesZoom = false
         self.decelerationRate = UIScrollViewDecelerationRateFast
         self.insetsLayoutMarginsFromSafeArea = true
-        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.always
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
     }
     
     private func registerViews() {

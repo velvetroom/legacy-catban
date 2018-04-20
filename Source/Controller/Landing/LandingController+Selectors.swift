@@ -1,14 +1,14 @@
 import UIKit
 
 extension LandingController {
-    @objc func selectorAdd(sender button:UIButton) {
+    @objc func selectorAdd(sender button:UIBarButtonItem) {
         let controller:LandingAddController = LandingAddController()
         controller.model.delegate = self
         self.model.clearCardSelection()
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
     
-    @objc func selectorOrganise(sender button:UIButton) {
+    @objc func selectorOrganise(sender button:UIBarButtonItem) {
         self.navigation?.transitionToOrganise(board:self.model.board)
     }
     

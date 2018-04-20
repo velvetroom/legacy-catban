@@ -1,10 +1,10 @@
 import Foundation
 
 extension ApplicationNavigationController {
-    func transitionToLandingWith(board:BoardProtocol, animated:Bool = true) {
+    func transitionToLandingWith(board:BoardProtocol) {
         let controller:LandingController = LandingController()
         controller.model.board = board
-        self.setViewControllers([controller], animated:animated)
+        self.setViewControllers([controller], animated:true)
     }
     
     func transitionToOrganise(board:BoardProtocol) {

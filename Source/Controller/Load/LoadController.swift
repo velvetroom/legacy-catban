@@ -26,7 +26,7 @@ class LoadController:Controller, ControllerProtocol {
     
     private func loadBoard() {
         self.model.loadBoard { [weak self] (board:BoardProtocol) in
-            self?.navigation?.transitionToLandingWith(board:board, animated:false)
+            self?.navigation?.transitionToLandingWith(board:board)
         }
     }
 }

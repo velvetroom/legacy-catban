@@ -10,12 +10,12 @@ class TestApplicationNavigationController_Transitions:XCTestCase {
     }
     
     func testLandingHasOneController() {
-        self.controller.transitionToLandingWith(board:Board(), animated:false)
+        self.controller.transitionToLandingWith(board:Board())
         XCTAssertEqual(self.controller.viewControllers.count, 1, "Invalid number of controllers after transiton")
     }
     
     func testLandingControllerType() {
-        self.controller.transitionToLandingWith(board:Board(), animated:false)
+        self.controller.transitionToLandingWith(board:Board())
         let controller:LandingController? = self.controller.viewControllers.first as? LandingController
         XCTAssertNotNil(controller, "Invalid controller type")
     }
