@@ -8,4 +8,8 @@ class TestOrganisePresenterCollectionDatasource:XCTestCase {
         super.setUp()
         self.presenter = OrganisePresenterCollectionDatasource()
     }
+    
+    func testLoad() {
+        XCTAssertNotNil(self.presenter, "Failed to load presenter")
+    }
 }
