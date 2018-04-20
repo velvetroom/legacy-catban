@@ -65,6 +65,7 @@
 		DA391AE22077516800484273 /* TestLandingAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AE12077516800484273 /* TestLandingAdd.swift */; };
 		DA391AE4207751D400484273 /* LandingAddProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AE3207751D400484273 /* LandingAddProtocol.swift */; };
 		DA391AE6207751EA00484273 /* LandingAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA391AE5207751EA00484273 /* LandingAdd.swift */; };
+		DA3A21BD2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21BC2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
@@ -268,6 +269,7 @@
 		DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */; };
 		DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */; };
 		DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */; };
+		DAA804BA2089E9AE00EE14BB /* OrganisePresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA804B92089E9AE00EE14BB /* OrganisePresenterOutlets.swift */; };
 		DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */; };
 		DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */; };
 		DAABC2AA206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */; };
@@ -431,6 +433,7 @@
 		DA391AE12077516800484273 /* TestLandingAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingAdd.swift; sourceTree = "<group>"; };
 		DA391AE3207751D400484273 /* LandingAddProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAddProtocol.swift; sourceTree = "<group>"; };
 		DA391AE5207751EA00484273 /* LandingAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAdd.swift; sourceTree = "<group>"; };
+		DA3A21BC2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganisePresenterOutlets.swift; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -642,6 +645,7 @@
 		DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar.swift .swift"; sourceTree = "<group>"; };
 		DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar+Constants.swift"; sourceTree = "<group>"; };
 		DA9A988C2074BB0C00D82514 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableWriter.strings; sourceTree = "<group>"; };
+		DAA804B92089E9AE00EE14BB /* OrganisePresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterOutlets.swift; sourceTree = "<group>"; };
 		DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
 		DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSource.swift; sourceTree = "<group>"; };
 		DAABC2A9206A7128003B4BE4 /* LandingPresenterCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDelegate.swift; sourceTree = "<group>"; };
@@ -1062,6 +1066,7 @@
 			children = (
 				DA54ED8C2089E4040078AF87 /* OrganisePresenterProtocol.swift */,
 				DA54ED8E2089E4190078AF87 /* OrganisePresenter.swift */,
+				DAA804B92089E9AE00EE14BB /* OrganisePresenterOutlets.swift */,
 			);
 			path = Organise;
 			sourceTree = "<group>";
@@ -1070,6 +1075,7 @@
 			isa = PBXGroup;
 			children = (
 				DA54ED882089DEF90078AF87 /* TestOrganisePresenter.swift */,
+				DA3A21BC2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift */,
 				DA54ED8A2089DF430078AF87 /* MockOrganisePresenterProtocol.swift */,
 			);
 			path = Organise;
@@ -1949,6 +1955,7 @@
 				DA391AE6207751EA00484273 /* LandingAdd.swift in Sources */,
 				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
+				DAA804BA2089E9AE00EE14BB /* OrganisePresenterOutlets.swift in Sources */,
 				DA2A0776206CB7DE00D02D1C /* LandingViewCollectionMenu.swift in Sources */,
 				DA391AD820774A6900484273 /* LandingAddControllerDelegateProtocol.swift in Sources */,
 				DA636FF2208104EA00C02447 /* ErrorController.swift in Sources */,
@@ -2199,6 +2206,7 @@
 				DA4A69BD2085DE6E005AE05F /* TestFile.swift in Sources */,
 				DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */,
 				DAD433F6206545DA002C0DEE /* TestProjectColumn.swift in Sources */,
+				DA3A21BD2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift in Sources */,
 				DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */,
 				DA6EBE82208244D8004B639E /* MockBoardProtocol.swift in Sources */,
 				DABC325D2088A3CC008BA213 /* MockSerialiserProtocol.swift in Sources */,
