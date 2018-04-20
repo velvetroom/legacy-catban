@@ -15,9 +15,10 @@ class OrganiseController:Controller, ControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()
+        self.factoryOutlets()
     }
     
-    func adjustNavigationItem() {
+    private func adjustNavigationItem() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.done,
