@@ -144,6 +144,8 @@
 		DA54ED772089CB9D0078AF87 /* MockOrganiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED762089CB9D0078AF87 /* MockOrganiseProtocol.swift */; };
 		DA54ED7A2089CBCF0078AF87 /* OrganiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED792089CBCF0078AF87 /* OrganiseProtocol.swift */; };
 		DA54ED7C2089CBE20078AF87 /* Organise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED7B2089CBE20078AF87 /* Organise.swift */; };
+		DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */; };
+		DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */; };
 		DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */; };
 		DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */; };
 		DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */; };
@@ -503,6 +505,8 @@
 		DA54ED762089CB9D0078AF87 /* MockOrganiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrganiseProtocol.swift; sourceTree = "<group>"; };
 		DA54ED792089CBCF0078AF87 /* OrganiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseProtocol.swift; sourceTree = "<group>"; };
 		DA54ED7B2089CBE20078AF87 /* Organise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organise.swift; sourceTree = "<group>"; };
+		DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseController.swift; sourceTree = "<group>"; };
+		DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganiseController.swift; sourceTree = "<group>"; };
 		DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser.swift; sourceTree = "<group>"; };
 		DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeserialiserProtocol.swift; sourceTree = "<group>"; };
 		DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiserProtocol.swift; sourceTree = "<group>"; };
@@ -1027,6 +1031,22 @@
 			path = Organize;
 			sourceTree = "<group>";
 		};
+		DA54ED7D2089CF920078AF87 /* Organize */ = {
+			isa = PBXGroup;
+			children = (
+				DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */,
+			);
+			path = Organize;
+			sourceTree = "<group>";
+		};
+		DA54ED802089CFB40078AF87 /* Organise */ = {
+			isa = PBXGroup;
+			children = (
+				DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */,
+			);
+			path = Organise;
+			sourceTree = "<group>";
+		};
 		DA57BFF8208641170016ECC4 /* Deserialiser */ = {
 			isa = PBXGroup;
 			children = (
@@ -1491,6 +1511,7 @@
 		DA8AB24C2064EA53005A393E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA54ED802089CFB40078AF87 /* Organise */,
 				DA54ED662089BED20078AF87 /* Controller */,
 				DA6EBE7B2082444F004B639E /* Load */,
 				DA6EBE73208221F3004B639E /* Error */,
@@ -1570,6 +1591,7 @@
 		DA8AB2512064EA5D005A393E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA54ED7D2089CF920078AF87 /* Organize */,
 				DA54ED652089BEC60078AF87 /* Controller */,
 				DA6EBE7620824415004B639E /* Load */,
 				DA6EBE7120822179004B639E /* Error */,
@@ -1976,6 +1998,7 @@
 				DA519A6320690D0100514098 /* LandingViewModelCollectionLayoutHeader.swift in Sources */,
 				DAE8C7E7207FB12000395318 /* LandingCollectionUpdateFactory+Insert.swift in Sources */,
 				DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */,
+				DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA4F043A208747A300A28894 /* File+Factory.swift in Sources */,
 				DA54ED622089BCC70078AF87 /* ApplicationNavigationController+Transitions.swift in Sources */,
@@ -2084,6 +2107,7 @@
 				DA54ED752089CB5B0078AF87 /* TestOrganise.swift in Sources */,
 				DA5B59F52070245300122EEF /* MockCollectionViewDelegate.swift in Sources */,
 				DA07B747207F30EE0067FD0C /* TestProject_Updates.swift in Sources */,
+				DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */,
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */,
