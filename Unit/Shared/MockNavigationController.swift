@@ -1,17 +1,10 @@
 import UIKit
+@testable import catban
 
-class MockNavigationController:UINavigationController {
+class MockNavigationController:ApplicationNavigationController {
     var onPresent:((UIViewController) -> Void)?
     var onDismiss:(() -> Void)?
     var onSetControllers:(([UIViewController]) -> Void)?
-    
-    init() {
-        super.init(nibName:nil, bundle:nil)
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
     
     override func present(_ viewControllerToPresent:UIViewController,
                           animated flag:Bool, completion:(() -> Void)? = nil) {

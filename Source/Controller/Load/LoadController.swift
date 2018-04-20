@@ -1,11 +1,11 @@
 import UIKit
 
-class LoadController:UIViewController {
+class LoadController:Controller, ControllerProtocol {
     var model:LoadProtocol
     
-    init() {
+    override init() {
         self.model = Load()
-        super.init(nibName:nil, bundle:nil)
+        super.init()
     }
     
     required init?(coder:NSCoder) {
@@ -26,7 +26,7 @@ class LoadController:UIViewController {
     
     private func loadBoard() {
         self.model.loadBoard { [weak self] (board:BoardProtocol) in
-            self?.openLanding(board:board)
+            self?.navigation?.transitionToLandingWith(board:board, animated:false)
         }
     }
 }

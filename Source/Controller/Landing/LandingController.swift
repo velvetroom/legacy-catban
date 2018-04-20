@@ -1,12 +1,11 @@
-import UIKit
+import Foundation
 
-class LandingController:UIViewController {
+class LandingController:Controller, ControllerProtocol {
     var model:LandingProtocol
     
-    init() {
+    override init() {
         self.model = Landing()
-        super.init(nibName:nil, bundle:nil)
-        self.adjustNavigationItem()
+        super.init()
     }
     
     required init?(coder:NSCoder) {
@@ -15,6 +14,7 @@ class LandingController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.adjustNavigationItem()
         self.factoryOutlets()
         self.model.reloadViewModel()
     }
