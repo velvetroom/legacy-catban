@@ -8,8 +8,8 @@ extension LandingController {
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
     
-    @objc func selectorEdit(sender button:UIButton) {
-        
+    @objc func selectorOrganise(sender button:UIButton) {
+        self.navigation?.transitionToOrganise(board:self.model.board)
     }
     
     @objc func selectorCloseEditingCard(sender button:UIButton) {

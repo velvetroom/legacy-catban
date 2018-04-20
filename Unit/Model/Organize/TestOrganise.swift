@@ -11,5 +11,6 @@ class TestOrganise:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.board, "Failed to load board")
     }
 }

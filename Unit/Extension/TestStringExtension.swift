@@ -7,6 +7,7 @@ class TestStringExtension:XCTestCase {
         static let expectedLanding:String = "catban"
         static let expectedProject:String = "My first project"
         static let expectedWriter:String = "Done"
+        static let expectedOrganise:String = "Projects"
         static let expectedError:String = "Projects need to have at least one Column"
     }
     
@@ -28,6 +29,11 @@ class TestStringExtension:XCTestCase {
     func testLocalizableStringsFromWriter() {
         let string:String = String.localizedWriter(key:"WriterViewBar_buttonDone")
         XCTAssertEqual(string, Constants.expectedWriter, "Unable to find localized string")
+    }
+    
+    func testLocalizableStringsFromOrganise() {
+        let string:String = String.localizedOrganise(key:"OrganiseController_title")
+        XCTAssertEqual(string, Constants.expectedOrganise, "Unable to find localized string")
     }
     
     func testLocalizableStringsFromError() {

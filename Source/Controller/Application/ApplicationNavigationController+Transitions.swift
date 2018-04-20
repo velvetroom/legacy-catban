@@ -6,4 +6,10 @@ extension ApplicationNavigationController {
         controller.model.board = board
         self.setViewControllers([controller], animated:animated)
     }
+    
+    func transitionToOrganise(board:BoardProtocol) {
+        let controller:OrganiseController = OrganiseController()
+        controller.model.board = board
+        self.setViewControllers([controller], animated:true)
+    }
 }

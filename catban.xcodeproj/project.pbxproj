@@ -146,6 +146,7 @@
 		DA54ED7C2089CBE20078AF87 /* Organise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED7B2089CBE20078AF87 /* Organise.swift */; };
 		DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */; };
 		DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */; };
+		DA54ED852089D3110078AF87 /* LocalizableOrganise.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA54ED832089D3110078AF87 /* LocalizableOrganise.strings */; };
 		DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */; };
 		DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */; };
 		DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */; };
@@ -507,6 +508,7 @@
 		DA54ED7B2089CBE20078AF87 /* Organise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organise.swift; sourceTree = "<group>"; };
 		DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseController.swift; sourceTree = "<group>"; };
 		DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganiseController.swift; sourceTree = "<group>"; };
+		DA54ED842089D3110078AF87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableOrganise.strings; sourceTree = "<group>"; };
 		DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser.swift; sourceTree = "<group>"; };
 		DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeserialiserProtocol.swift; sourceTree = "<group>"; };
 		DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiserProtocol.swift; sourceTree = "<group>"; };
@@ -1443,6 +1445,7 @@
 				DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */,
 				DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */,
 				DA30605020827A2A00E55ECB /* LocalizableLoad.strings */,
+				DA54ED832089D3110078AF87 /* LocalizableOrganise.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1817,6 +1820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE698CF20656A350046721C /* brand.xcassets in Resources */,
+				DA54ED852089D3110078AF87 /* LocalizableOrganise.strings in Resources */,
 				DA30605220827A2A00E55ECB /* LocalizableLoad.strings in Resources */,
 				DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
@@ -2208,6 +2212,14 @@
 				DA30605120827A2A00E55ECB /* en */,
 			);
 			name = LocalizableLoad.strings;
+			sourceTree = "<group>";
+		};
+		DA54ED832089D3110078AF87 /* LocalizableOrganise.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA54ED842089D3110078AF87 /* en */,
+			);
+			name = LocalizableOrganise.strings;
 			sourceTree = "<group>";
 		};
 		DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */ = {

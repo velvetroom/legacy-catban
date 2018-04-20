@@ -6,6 +6,7 @@ extension String {
         static let tableLanding:String = "LocalizableLanding"
         static let tableProject:String = "LocalizableProject"
         static let tableWriter:String = "LocalizableWriter"
+        static let tableOrganise:String = "LocalizableOrganise"
         static let tableError:String = "LocalizableError"
     }
     
@@ -23,6 +24,10 @@ extension String {
     
     static func localizedWriter(key:String) -> String {
         return NSLocalizedString(key, tableName:Constants.tableWriter, comment:String())
+    }
+    
+    static func localizedOrganise(key:String) -> String {
+        return NSLocalizedString(key, tableName:Constants.tableOrganise, comment:String())
     }
     
     static func localizedError(key:String) -> String {
