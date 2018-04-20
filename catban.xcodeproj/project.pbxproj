@@ -147,6 +147,10 @@
 		DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */; };
 		DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */; };
 		DA54ED852089D3110078AF87 /* LocalizableOrganise.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA54ED832089D3110078AF87 /* LocalizableOrganise.strings */; };
+		DA54ED892089DEF90078AF87 /* TestOrganisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED882089DEF90078AF87 /* TestOrganisePresenter.swift */; };
+		DA54ED8B2089DF430078AF87 /* MockOrganisePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED8A2089DF430078AF87 /* MockOrganisePresenterProtocol.swift */; };
+		DA54ED8D2089E4040078AF87 /* OrganisePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED8C2089E4040078AF87 /* OrganisePresenterProtocol.swift */; };
+		DA54ED8F2089E4190078AF87 /* OrganisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54ED8E2089E4190078AF87 /* OrganisePresenter.swift */; };
 		DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */; };
 		DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */; };
 		DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */; };
@@ -509,6 +513,10 @@
 		DA54ED7E2089CFA40078AF87 /* OrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseController.swift; sourceTree = "<group>"; };
 		DA54ED812089CFC40078AF87 /* TestOrganiseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganiseController.swift; sourceTree = "<group>"; };
 		DA54ED842089D3110078AF87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableOrganise.strings; sourceTree = "<group>"; };
+		DA54ED882089DEF90078AF87 /* TestOrganisePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganisePresenter.swift; sourceTree = "<group>"; };
+		DA54ED8A2089DF430078AF87 /* MockOrganisePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrganisePresenterProtocol.swift; sourceTree = "<group>"; };
+		DA54ED8C2089E4040078AF87 /* OrganisePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterProtocol.swift; sourceTree = "<group>"; };
+		DA54ED8E2089E4190078AF87 /* OrganisePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenter.swift; sourceTree = "<group>"; };
 		DA57BFFA208641600016ECC4 /* TestDeserialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiser.swift; sourceTree = "<group>"; };
 		DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeserialiserProtocol.swift; sourceTree = "<group>"; };
 		DA57BFFE208641E90016ECC4 /* DeserialiserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiserProtocol.swift; sourceTree = "<group>"; };
@@ -1049,6 +1057,24 @@
 			path = Organise;
 			sourceTree = "<group>";
 		};
+		DA54ED862089DEB90078AF87 /* Organise */ = {
+			isa = PBXGroup;
+			children = (
+				DA54ED8C2089E4040078AF87 /* OrganisePresenterProtocol.swift */,
+				DA54ED8E2089E4190078AF87 /* OrganisePresenter.swift */,
+			);
+			path = Organise;
+			sourceTree = "<group>";
+		};
+		DA54ED872089DEC20078AF87 /* Organise */ = {
+			isa = PBXGroup;
+			children = (
+				DA54ED882089DEF90078AF87 /* TestOrganisePresenter.swift */,
+				DA54ED8A2089DF430078AF87 /* MockOrganisePresenterProtocol.swift */,
+			);
+			path = Organise;
+			sourceTree = "<group>";
+		};
 		DA57BFF8208641170016ECC4 /* Deserialiser */ = {
 			isa = PBXGroup;
 			children = (
@@ -1264,6 +1290,7 @@
 		DA79AF7D206A2F0700DE73FA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DA54ED862089DEB90078AF87 /* Organise */,
 				DA6EBE772082441C004B639E /* Load */,
 				DA6EBE722082218D004B639E /* Error */,
 				DA4F8FED207279140063D384 /* Writer */,
@@ -1275,6 +1302,7 @@
 		DA79AF7E206A2F1C00DE73FA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DA54ED872089DEC20078AF87 /* Organise */,
 				DA6EBE7C20824462004B639E /* Load */,
 				DA6EBE7420822202004B639E /* Error */,
 				DA4F8FF3207279760063D384 /* Writer */,
@@ -1926,6 +1954,7 @@
 				DA636FF2208104EA00C02447 /* ErrorController.swift in Sources */,
 				DACD0A57207D453600884E62 /* CollectionUpdateSalvageItemFromDeletion.swift in Sources */,
 				DA2538FC2068326800EEB231 /* LandingViewModelCollectionSection.swift in Sources */,
+				DA54ED8F2089E4190078AF87 /* OrganisePresenter.swift in Sources */,
 				DA6F1B6E207353B7001248E4 /* Writer.swift in Sources */,
 				DA54784A207A364500F9301E /* LandingDeleteController.swift in Sources */,
 				DAC10C5B207DD65400975FDD /* CollectionUpdateDeleteSections.swift in Sources */,
@@ -1990,6 +2019,7 @@
 				DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
+				DA54ED8D2089E4040078AF87 /* OrganisePresenterProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
 				DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */,
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
@@ -2052,6 +2082,7 @@
 				DA30604D20826F8F00E55ECB /* TestLoadController.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
+				DA54ED892089DEF90078AF87 /* TestOrganisePresenter.swift in Sources */,
 				DA73A1D72080E80100ADC499 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
 				DA30603F2082642600E55ECB /* TestUser.swift in Sources */,
 				DA519A5F2068EA2000514098 /* MockLandingViewCollectionLayout.swift in Sources */,
@@ -2119,6 +2150,7 @@
 				DA519A6B2069156F00514098 /* TestLandingViewModelLoaderCollection.swift in Sources */,
 				DA2538FA2068320700EEB231 /* TestLandingViewModelCollectionSection.swift in Sources */,
 				DADE83C920710B250053E7A0 /* TestLandingController_SelectorsMove.swift in Sources */,
+				DA54ED8B2089DF430078AF87 /* MockOrganisePresenterProtocol.swift in Sources */,
 				DA63F799206DD7830018F416 /* TestLandingController_DelegateProtocol.swift in Sources */,
 				DA1DF9A8207CA67300B03C6E /* TestLandingController_DataSourceProtocol_Header.swift in Sources */,
 				DAE698E42065812C0046721C /* TestLandingViewModel.swift in Sources */,
