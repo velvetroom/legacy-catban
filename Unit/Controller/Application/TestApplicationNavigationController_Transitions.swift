@@ -1,0 +1,22 @@
+import XCTest
+@testable import catban
+
+class TestApplicationNavigationController_Transitions:XCTestCase {
+    private var controller:ApplicationNavigationController!
+    
+    override func setUp() {
+        super.setUp()
+        self.controller = ApplicationNavigationController()
+    }
+    
+    func testLandingHasOneController() {
+        self.controller.transitionToLandingWith(board:Board(), animated:false)
+        XCTAssertEqual(self.controller.viewControllers.count, 1, "Invalid number of controllers after transiton")
+    }
+    
+    func testLandingControllerType() {
+        self.controller.transitionToLandingWith(board:Board(), animated:false)
+        let controller:LandingController? = self.controller.viewControllers.first as? LandingController
+        XCTAssertNotNil(controller, "Invalid controller type")
+    }
+}
