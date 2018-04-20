@@ -96,9 +96,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         let count:Int = viewModel.headers.count
         guard
             count > 0
-        else {
-            return
-        }
+        else { return }
         for indexOutside:Int in 0 ..< count - 1 {
             
             let headerOutside:LandingViewModelCollectionLayoutHeader = viewModel.headers[indexOutside]
@@ -120,9 +118,7 @@ class TestLandingViewModelLoaderCollectionLayout:XCTestCase {
         let section:Int = header.index.section
         guard
             count > 0
-        else {
-            return
-        }
+        else { return }
         for indexOutside:Int in 0 ..< count - 1 {
             
             let cellOutside:LandingViewModelCollectionLayoutCell = header.cells[indexOutside]

@@ -34,9 +34,7 @@ class TestLandingController_SelectorsAdd:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:LandingAddController = controller as? LandingAddController
-            else {
-                 return
-            }
+            else { return }
             XCTAssertNotNil(controller.model.delegate, "Failed to assign delegate to model")
             self?.expect?.fulfill()
         }

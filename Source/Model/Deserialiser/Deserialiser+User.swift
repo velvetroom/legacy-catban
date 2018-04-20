@@ -15,9 +15,7 @@ extension Deserialiser {
     private func parseUserWith(dictionary:[String:Any]) throws -> UserProtocol {
         guard
             let identifier:String = dictionary[Serialiser.Constants.User.identifier] as? String
-        else {
-            throw ErrorRepository.malformedData
-        }
+        else { throw ErrorRepository.malformedData }
         let user:User = User()
         user.identifier = identifier
         return user
@@ -26,9 +24,7 @@ extension Deserialiser {
     private func parseProjectWith(dictionary:[String:Any]) throws -> ProjectProtocol {
         guard
             let identifier:String = dictionary[Serialiser.Constants.User.projectIdentifier] as? String
-        else {
-            throw ErrorRepository.malformedData
-        }
+        else { throw ErrorRepository.malformedData }
         let project:Project = Project()
         project.identifier = identifier
         return project

@@ -3,7 +3,7 @@ import Foundation
 extension LandingController {
     func openWriterForCardAt(indexPath:IndexPath) {
         let card:ProjectCard = self.model.cardAt(indexPath:indexPath)
-        let controller:WriterController = WriterController()
+        let controller:WriterController<Writer> = WriterController<Writer>()
         controller.model.text = card.title
         controller.model.onFinish = { [weak self] (title:String) in
             card.title = title
@@ -14,7 +14,7 @@ extension LandingController {
     
     func openWriterForColumnAt(index:Int) {
         let column:ProjectColumn = self.model.columnAt(index:index)
-        let controller:WriterController = WriterController()
+        let controller:WriterController<Writer> = WriterController<Writer>()
         controller.model.text = column.name
         controller.model.onFinish = { [weak self] (name:String) in
             column.name = name

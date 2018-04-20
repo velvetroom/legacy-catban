@@ -6,7 +6,7 @@ struct LandingViewModelCollectionMenu {
     var moveLeftEnabled:Bool
     
     init() {
-        self.layoutBottom = LandingController.Constants.collectionMenuHeight
+        self.layoutBottom = LandingViewModel.Constants.collectionMenuHeight
         self.moveRightEnabled = false
         self.moveLeftEnabled = false
     }

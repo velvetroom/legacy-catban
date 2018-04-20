@@ -25,9 +25,7 @@ class TestProject_Updates:XCTestCase {
         self.update.onStrategyProject = { [weak self] (projectProtocol:ProjectProtocol) in
             guard
                 let project:Project = projectProtocol as? Project
-            else {
-                return
-            }
+            else { return }
             XCTAssertTrue(project === self?.project, "Invalid project received")
             self?.expect?.fulfill()
         }

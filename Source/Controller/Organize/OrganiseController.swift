@@ -1,17 +1,6 @@
 import UIKit
 
-class OrganiseController:Controller, ControllerProtocol {
-    var model:OrganiseProtocol
-    
-    override init() {
-        self.model = Organise()
-        super.init()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
+class OrganiseController<ModelType:OrganiseProtocol>:Controller<ModelType> {    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()

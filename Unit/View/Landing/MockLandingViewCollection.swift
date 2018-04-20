@@ -25,9 +25,7 @@ class MockLandingViewCollection:LandingViewCollection {
     override func numberOfItems(inSection section:Int) -> Int {
         guard
             let items:Int = self.returnNumberOfItemsInSection
-        else {
-            return super.numberOfItems(inSection:section)
-        }
+        else { return super.numberOfItems(inSection:section) }
         return items
     }
     

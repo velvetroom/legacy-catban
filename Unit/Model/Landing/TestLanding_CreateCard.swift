@@ -61,9 +61,7 @@ class TestLanding_CreateCard:XCTestCase {
             guard
                 let editingCard:IndexPath = self?.model.editingCard,
                 let createdCard:IndexPath = createdCard
-            else {
-                return
-            }
+            else { return }
             XCTAssertEqual(editingCard, createdCard, "Failed to assign editing card")
             self?.expect?.fulfill()
         }

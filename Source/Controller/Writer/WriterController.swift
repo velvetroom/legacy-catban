@@ -1,17 +1,6 @@
 import UIKit
 
-class WriterController:Controller, ControllerProtocol, UITextViewDelegate {
-    var model:WriterProtocol
-    
-    override init() {
-        self.model = Writer()
-        super.init()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
+class WriterController<ModelType:WriterProtocol>:Controller<ModelType>, UITextViewDelegate {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -32,13 +21,17 @@ class WriterController:Controller, ControllerProtocol, UITextViewDelegate {
         self.model.text = textView.text
     }
     
+    func finishWriting() {
+        self.model.finishedWriting()
+        self.presentingViewController?.dismiss(animated:true, completion:nil)
+    }
+    
     @objc func selectorDone(sender button:UIButton) {
         self.model.presenter.outlets.list.viewText?.resignFirstResponder()
         self.finishWriting()
     }
     
-    func finishWriting() {
-        self.model.finishedWriting()
-        self.presentingViewController?.dismiss(animated:true, completion:nil)
+    @objc func notifiedKeyboardChanged(sender notification:Notification) {
+        self.keyboardChanged(notification:notification)
     }
 }

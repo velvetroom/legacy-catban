@@ -12,7 +12,8 @@ extension LandingController:LandingAddControllerDelegateProtocol {
     }
     
     private func scheduleScrollToTopRightCorner() {
-        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + Constants.waitBeforeScrolling) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline:
+            DispatchTime.now() + LandingViewModel.Constants.waitBeforeScrolling) { [weak self] in
             self?.model.scrollToTopRightCorner()
         }
     }

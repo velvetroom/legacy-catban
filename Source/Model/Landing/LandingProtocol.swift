@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LandingProtocol {
+protocol LandingProtocol:ModelProtocol {
     var project:ProjectProtocol { get set }
     var board:BoardProtocol { get set }
     var viewModelLoader:LandingViewModelLoaderProtocol { get set }

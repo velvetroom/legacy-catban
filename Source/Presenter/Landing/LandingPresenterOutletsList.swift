@@ -1,7 +1,7 @@
 import UIKit
 
 struct LandingPresenterOutletsList {
-    weak var controller:LandingController?
+    weak var controller:LandingController<Landing>?
     weak var viewCollection:LandingViewCollection?
     weak var viewCollectionMenu:LandingViewCollectionMenu?
     weak var layoutCollection:LandingViewCollectionLayout?

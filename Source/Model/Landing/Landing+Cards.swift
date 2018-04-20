@@ -30,9 +30,7 @@ extension Landing {
     func deleteEditingCard() {
         guard
             let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
+        else { return }
         self.project.deleteCardAt(indexPath:editingCard)
         self.clearCardSelection()
         self.presenter.deleteCardAt(index:editingCard)
@@ -41,9 +39,7 @@ extension Landing {
     func moveEditingCardRight() {
         guard
             let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
+        else { return }
         let newIndex:IndexPath = self.project.indexOnRightForCardAt(index:editingCard)
         self.editingCard = newIndex
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
@@ -52,9 +48,7 @@ extension Landing {
     func moveEditingCardLeft() {
         guard
             let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
+        else { return }
         let newIndex:IndexPath = self.project.indexOnLeftForCardAt(index:editingCard)
         self.editingCard = newIndex
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)

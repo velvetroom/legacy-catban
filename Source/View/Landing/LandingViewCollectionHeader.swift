@@ -19,9 +19,7 @@ class LandingViewCollectionHeader:UICollectionReusableView {
     @objc func selectorEdit(sender button:UIButton) {
         guard
             let column:ProjectColumn = self.column
-        else {
-            return
-        }
+        else { return }
         self.delegate?.edit(column:column)
     }
     

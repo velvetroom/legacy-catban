@@ -1,6 +1,6 @@
 import UIKit
 
-extension WriterController {
+struct WriterViewModel {
     struct Constants {
         static let barHeight:CGFloat = 40
     }

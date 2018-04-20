@@ -10,9 +10,7 @@ class CatbanFileLoader {
     class func loadWith(name:String) -> Data? {
         guard
             let fileURL:URL = bundle.url(forResource:name, withExtension:Constants.fileExtension)
-        else {
-            return nil
-        }
+        else { return nil }
         return self.dataWith(url:fileURL)
     }
     

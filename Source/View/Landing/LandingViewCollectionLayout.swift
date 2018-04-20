@@ -22,9 +22,7 @@ class LandingViewCollectionLayout:UICollectionViewLayout {
             guard
                 let viewHeight:CGFloat = self.collectionView?.bounds.height,
                 viewHeight > contentSize.height
-            else {
-                return contentSize
-            }
+            else { return contentSize }
             return CGSize(width:contentSize.width, height:viewHeight)
         }
     }

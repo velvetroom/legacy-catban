@@ -48,9 +48,7 @@ class TestLandingViewCollection:XCTestCase {
         
         guard
             let selectedItems:[IndexPath] = self.view.indexPathsForSelectedItems
-        else {
-            return
-        }
+        else { return }
         
         XCTAssertTrue(selectedItems.isEmpty, "Failed to clear selection")
     }

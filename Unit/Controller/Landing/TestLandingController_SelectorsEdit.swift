@@ -46,9 +46,7 @@ class TestLandingController_SelectorsEdit:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             XCTAssertEqual(controller.model.text, self?.editingCard.title, "Failed to present editing card")
             self?.expect?.fulfill()
         }

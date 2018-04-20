@@ -4,9 +4,7 @@ extension LandingCollectionUpdateFactory {
     func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
         guard
             project.columns.count > 1
-        else {
-            throw ErrorProject.oneColumnMinimum
-        }
+        else { throw ErrorProject.oneColumnMinimum }
         return self.updatesMovingFrom(origin:index, in:project)
     }
     

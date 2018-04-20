@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LoadProtocol {
+protocol LoadProtocol:ModelProtocol {
     var repository:RepositoryProtocol { get set }
     var dispatchQueue:DispatchQueue { get set }
     

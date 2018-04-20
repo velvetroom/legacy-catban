@@ -34,9 +34,7 @@ class TestLandingController_Writer:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             XCTAssertEqual(controller.model.text, card.title, "Failed to assign text to model")
             XCTAssertNotNil(controller.model.onFinish, "Failed to assign on finish function")
             self?.expect?.fulfill()
@@ -74,9 +72,7 @@ class TestLandingController_Writer:XCTestCase {
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             controller.model.onFinish?(Constants.cardUpdatedText)
         }
         self.model.onUpdateCardAt = { [weak self] (index:IndexPath) in

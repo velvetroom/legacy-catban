@@ -63,10 +63,7 @@ class TestLoadController:XCTestCase {
             let controller:LandingController = controllers.first as! LandingController
             guard
                 let landingBoard:Board = controller.model.board as? Board
-            else {
-                XCTFail("Invalid model")
-                return
-            }
+            else { return XCTFail("Invalid model") }
             XCTAssertTrue(landingBoard === self?.board, "Failed to update board")
             self?.expect?.fulfill()
         }

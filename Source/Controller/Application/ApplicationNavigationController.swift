@@ -3,7 +3,7 @@ import UIKit
 class ApplicationNavigationController:UINavigationController {
     init() {
         super.init(nibName:nil, bundle:nil)
-        let controller:LoadController = LoadController()
+        let controller:LoadController<Load> = LoadController<Load>()
         self.addChildViewController(controller)
     }
     

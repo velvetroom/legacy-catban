@@ -1,21 +1,40 @@
-import Foundation
+import UIKit
 
-class LandingController:Controller, ControllerProtocol {
-    var model:LandingProtocol
-    
-    override init() {
-        self.model = Landing()
-        super.init()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
+class LandingController<ModelType:LandingProtocol>:Controller<ModelType> {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()
         self.factoryOutlets()
         self.model.reloadViewModel()
+    }
+    
+    @objc func selectorAdd(sender button:UIBarButtonItem) {
+        let controller:LandingAddController = LandingAddController()
+        controller.model.delegate = self
+        self.model.clearCardSelection()
+        self.navigationController?.present(controller, animated:true, completion:nil)
+    }
+    
+    @objc func selectorOrganise(sender button:UIBarButtonItem) {
+        self.navigation?.transitionToOrganise(board:self.model.board)
+    }
+    
+    @objc func selectorCloseEditingCard(sender button:UIButton) {
+        self.model.clearCardSelection()
+    }
+    
+    @objc func selectorMoveEditingCardRight(sender button:UIButton) {
+        self.model.moveEditingCardRight()
+    }
+    
+    @objc func selectorMoveEditingCardLeft(sender button:UIButton) {
+        self.model.moveEditingCardLeft()
+    }
+    
+    @objc func selectorEditCard(sender button:UIButton) {
+        guard
+            let indexPath:IndexPath = self.model.editingCard
+        else { return }
+        self.openWriterForCardAt(indexPath:indexPath)
     }
 }

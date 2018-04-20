@@ -29,9 +29,7 @@ class File:FileProtocol {
     private func createDirectory(url:URL) {
         guard
             FileManager.default.fileExists(atPath:url.path) == false
-            else {
-                return
-        }
+        else { return }
         self.excludeFromBackup(url:url)
         do {
             try FileManager.default.createDirectory(at:url, withIntermediateDirectories:true, attributes:nil)

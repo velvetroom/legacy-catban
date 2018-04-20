@@ -19,9 +19,7 @@ extension Landing {
         get {
             guard
                 let view:UICollectionView = self.collection
-            else {
-                return CGRect.zero
-            }
+            else { return CGRect.zero }
             return CGRect(x:view.contentSize.width - 1, y:0, width:1, height:1)
         }
     }
@@ -29,9 +27,7 @@ extension Landing {
     func scrollToEditingCard() {
         guard
             let editingCard:IndexPath = self.editingCard
-        else {
-            return
-        }
+        else { return }
         self.collection?.scrollToItem(at:editingCard, at:self.scrollPosition, animated:true)
     }
     

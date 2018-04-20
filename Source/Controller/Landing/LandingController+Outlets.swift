@@ -21,7 +21,7 @@ extension LandingController {
     
     private func configureController() {
         self.view.backgroundColor = UIColor.white
-        self.outletsList.controller = self
+        self.outletsList.controller = self as? LandingController<Landing>
     }
     
     private func factoryViewCollection() {
@@ -57,8 +57,9 @@ extension LandingController {
         self.outletsList.viewCollectionMenu = viewCollectionMenu
         
         self.outletsList.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
-            equalTo:self.safeArea.bottomAnchor, constant:Constants.collectionMenuHeight)
-        viewCollectionMenu.heightAnchor.constraint(equalToConstant:Constants.collectionMenuHeight).isActive = true
+            equalTo:self.safeArea.bottomAnchor, constant:LandingViewModel.Constants.collectionMenuHeight)
+        viewCollectionMenu.heightAnchor.constraint(
+            equalToConstant:LandingViewModel.Constants.collectionMenuHeight).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
         viewCollectionMenu.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
         self.outletsList.layoutCollectionMenuBottom?.isActive = true

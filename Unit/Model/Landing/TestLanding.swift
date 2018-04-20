@@ -47,9 +47,7 @@ class TestLanding:XCTestCase {
         
         guard
             let boardProject:Project = self.model.board.project as? Project
-        else {
-            return
-        }
+        else { return }
         
         XCTAssertTrue(boardProject === project, "Failed to update board project")
     }
@@ -60,9 +58,7 @@ class TestLanding:XCTestCase {
         
         guard
             let landingProject:Project = self.model.project as? Project
-        else {
-            return
-        }
+        else { return }
         
         XCTAssertTrue(landingProject === project, "Failed to retrieve landing project")
     }

@@ -19,14 +19,12 @@ class Landing:LandingProtocol {
         get {
             guard
                 let editingCard:IndexPath = self.editingCard
-            else {
-                return nil
-            }
+            else { return nil }
             return self.project.cardAt(indexPath:editingCard)
         }
     }
     
-    init() {
+    required init() {
         self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()

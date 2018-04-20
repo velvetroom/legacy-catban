@@ -28,7 +28,7 @@ class LandingPresenterOutlets:LandingPresenterOutletsProtocol {
     
     private func updateMenuLayout(bottom:CGFloat) {
         self.list.layoutCollectionMenuBottom?.constant = bottom
-        UIView.animate(withDuration:LandingController.Constants.collectionMenuAnimationDuration) { [weak self] in
+        UIView.animate(withDuration:LandingViewModel.Constants.collectionMenuAnimationDuration) { [weak self] in
             self?.list.controller?.view.layoutIfNeeded()
         }
     }

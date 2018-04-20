@@ -4,7 +4,7 @@ class Load:LoadProtocol {
     var repository:RepositoryProtocol
     var dispatchQueue:DispatchQueue
     
-    init() {
+    required init() {
         self.repository = Repository()
         self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:Constants.threadLabel)
     }
@@ -13,9 +13,7 @@ class Load:LoadProtocol {
         self.dispatchQueue.async { [weak self] in
             guard
                 let board:BoardProtocol = self?.backgroundLoadBoard()
-            else {
-                return
-            }
+            else { return }
             DispatchQueue.main.async {
                 completion(board)
             }

@@ -1,6 +1,8 @@
 import UIKit
 
-class Controller:UIViewController {
+class Controller<ModelType:ModelProtocol>:UIViewController, ControllerProtocol {
+    var model:ModelType
+
     var navigation:ApplicationNavigationController? {
         get {
             return self.navigationController as? ApplicationNavigationController
@@ -14,6 +16,7 @@ class Controller:UIViewController {
     }
     
     init() {
+        self.model = ModelType()
         super.init(nibName:nil, bundle:nil)
     }
     

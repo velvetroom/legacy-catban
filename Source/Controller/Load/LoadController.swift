@@ -1,17 +1,6 @@
 import UIKit
 
-class LoadController:Controller, ControllerProtocol {
-    var model:LoadProtocol
-    
-    override init() {
-        self.model = Load()
-        super.init()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
+class LoadController<ModelType:LoadProtocol>:Controller<ModelType> {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()

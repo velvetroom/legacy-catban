@@ -22,9 +22,7 @@ class LandingPresenter:LandingPresenterProtocol {
     func apply(updates:[CollectionUpdateProtocol]) {
         guard
             let viewCollection:LandingViewCollection = self.viewCollection
-        else {
-            return
-        }
+        else { return }
         viewCollection.performBatchUpdates({
             for update:CollectionUpdateProtocol in updates {
                 update.strategy(collectionView:viewCollection)

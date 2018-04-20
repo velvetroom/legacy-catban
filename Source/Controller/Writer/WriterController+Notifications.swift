@@ -12,7 +12,7 @@ extension WriterController {
             name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
     }
     
-    @objc func notifiedKeyboardChanged(sender notification:Notification) {
+    func keyboardChanged(notification:Notification) {
         let keyboardHeight:CGFloat = self.keyboardHeightFrom(notification:notification)
         let animationDuration:TimeInterval = self.animationDurationFrom(notification:notification)
         self.layoutBarBottom?.constant = keyboardHeight
@@ -34,9 +34,7 @@ extension WriterController {
         guard
             let userInfo:[AnyHashable:Any] = notification.userInfo,
             let frameValue:NSValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
-        else {
-            return CGRect.zero
-        }
+        else { return CGRect.zero }
         return frameValue.cgRectValue
     }
     
@@ -44,9 +42,7 @@ extension WriterController {
         guard
             let userInfo:[AnyHashable:Any] = notification.userInfo,
             let animationDuration:NSNumber = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
-        else {
-            return 0
-        }
+        else { return 0 }
         return animationDuration.doubleValue
     }
 }

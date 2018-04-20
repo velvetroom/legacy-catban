@@ -47,9 +47,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:LandingColumnEditController = controller as? LandingColumnEditController
-            else {
-                return
-            }
+            else { return }
             XCTAssertNotNil(controller.model.onRename, "Failed to assign call back")
             XCTAssertNotNil(controller.model.onDelete, "Failed to assign call back")
             self?.expect?.fulfill()

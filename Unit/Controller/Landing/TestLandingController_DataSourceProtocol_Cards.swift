@@ -50,9 +50,7 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:LandingDeleteController = controller as? LandingDeleteController
-            else {
-                return
-            }
+            else { return }
             XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to assign item name")
             XCTAssertNotNil(controller.model.onConfirm, "Failed to assign call back")
             self?.expect?.fulfill()

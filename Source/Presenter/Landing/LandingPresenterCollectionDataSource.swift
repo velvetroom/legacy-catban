@@ -38,9 +38,7 @@ class LandingPresenterCollectionDataSource:NSObject, UICollectionViewDataSource 
     func collectionView(_:UICollectionView, numberOfItemsInSection section:Int) -> Int {
         guard
             section < self.viewModel.sections.count
-        else {
-            return 0
-        }
+        else { return 0 }
         return self.viewModel.sections[section].items.count
     }
     

@@ -5,9 +5,7 @@ class Deserialiser:DeserialiserProtocol {
         let object:Any = try JSONSerialization.jsonObject(with:data, options:JSONSerialization.ReadingOptions())
         guard
             let dictionary:[String:Any] = object as? [String:Any]
-        else {
-            throw ErrorRepository.corruptedData
-        }
+        else { throw ErrorRepository.corruptedData }
         return dictionary
     }
 }

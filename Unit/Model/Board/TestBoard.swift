@@ -23,9 +23,7 @@ class TestBoard:XCTestCase {
         
         guard
             let userProject:Project = self.model.user.project as? Project
-        else {
-            return
-        }
+        else { return }
         XCTAssertTrue(userProject === project, "Failed to assign project to user")
     }
     
@@ -36,9 +34,7 @@ class TestBoard:XCTestCase {
         
         guard
             let boardProject:Project = self.model.project as? Project
-        else {
-            return
-        }
+        else { return }
         XCTAssertTrue(boardProject === project, "Failed to retrieve project from user")
     }
 }

@@ -55,9 +55,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             XCTAssertEqual(controller.model.text, Constants.name, "Text not configured")
             self?.expect?.fulfill()
         }
@@ -71,9 +69,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-                else {
-                    return
-            }
+            else { return }
             XCTAssertNotNil(controller.model.onFinish, "Failed to configure on finish")
             self?.expect?.fulfill()
         }
@@ -88,9 +84,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             controller.model.onFinish?(Constants.updatedName)
             XCTAssertEqual(column.name, Constants.updatedName, "Failed to update name")
             self?.expect?.fulfill()
@@ -105,9 +99,7 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
                 let controller:WriterController = controller as? WriterController
-            else {
-                return
-            }
+            else { return }
             controller.model.onFinish?(Constants.updatedName)
         }
         self.model.onUpdateColumnAt = { [weak self] (index:Int) in

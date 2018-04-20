@@ -30,9 +30,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
             let collection:UICollectionView = gesture.view as? UICollectionView,
             let indexPath:IndexPath = collection.indexPathForItem(at:location),
             let cell:UICollectionViewCell = collection.cellForItem(at:indexPath)
-        else {
-            return
-        }
+        else { return }
         self.addMovingCellDelta(gestureLocation:location, cellLocation:cell.center)
         collection.beginInteractiveMovementForItem(at:indexPath)
     }
@@ -42,9 +40,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
         guard
             let collection:UICollectionView = gesture.view as? UICollectionView,
             let updatedLocation:CGPoint = self.updatedMovingCellLocation(gestureLocation:location)
-        else {
-            return
-        }
+        else { return }
         collection.updateInteractiveMovementTargetPosition(updatedLocation)
     }
     
@@ -52,9 +48,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
         self.movingCellDelta = nil
         guard
             let collection:UICollectionView = gesture.view as? UICollectionView
-        else {
-            return
-        }
+        else { return }
         collection.endInteractiveMovement()
     }
     
@@ -62,9 +56,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
         self.movingCellDelta = nil
         guard
             let collection:UICollectionView = gesture.view as? UICollectionView
-        else {
-            return
-        }
+        else { return }
         collection.cancelInteractiveMovement()
     }
     
@@ -73,9 +65,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
         guard
             let collection:UICollectionView = gesture.view as? UICollectionView,
             let _:IndexPath = collection.indexPathForItem(at:location)
-        else {
-            return false
-        }
+        else { return false }
         return true
     }
     
@@ -88,9 +78,7 @@ class LandingPresenterCollectionGesture:NSObject, UIGestureRecognizerDelegate {
     func updatedMovingCellLocation(gestureLocation:CGPoint) -> CGPoint? {
         guard
             let movingCellDelta:CGPoint = self.movingCellDelta
-        else {
-            return nil
-        }
+        else { return nil }
         let locationX:CGFloat = gestureLocation.x + movingCellDelta.x
         let locationY:CGFloat = gestureLocation.y + movingCellDelta.y
         return CGPoint(x:locationX, y:locationY)
