@@ -1,11 +1,11 @@
 import UIKit
 
-class WriterController:UIViewController, UITextViewDelegate {
+class WriterController:Controller, ControllerProtocol, UITextViewDelegate {
     var model:WriterProtocol
     
-    init() {
+    override init() {
         self.model = Writer()
-        super.init(nibName:nil, bundle:nil)
+        super.init()
     }
     
     required init?(coder:NSCoder) {
