@@ -14,4 +14,9 @@ class Controller:UIViewController {
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+    }
 }
