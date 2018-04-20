@@ -81,6 +81,8 @@
 		DA3A21DB208A06CD00E6E583 /* OrganiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21DA208A06CD00E6E583 /* OrganiseViewModel.swift */; };
 		DA3A21DD208A06F700E6E583 /* TestOrganiseViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21DC208A06F700E6E583 /* TestOrganiseViewModelCollection.swift */; };
 		DA3A21DF208A074D00E6E583 /* OrganiseViewModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21DE208A074D00E6E583 /* OrganiseViewModelCollection.swift */; };
+		DA3A21E1208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21E0208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift */; };
+		DA3A21E3208A104900E6E583 /* OrganiseViewModelCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A21E2208A104900E6E583 /* OrganiseViewModelCollectionItem.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
@@ -464,6 +466,8 @@
 		DA3A21DA208A06CD00E6E583 /* OrganiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseViewModel.swift; sourceTree = "<group>"; };
 		DA3A21DC208A06F700E6E583 /* TestOrganiseViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganiseViewModelCollection.swift; sourceTree = "<group>"; };
 		DA3A21DE208A074D00E6E583 /* OrganiseViewModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseViewModelCollection.swift; sourceTree = "<group>"; };
+		DA3A21E0208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOrganiseViewModelCollectionItem.swift; sourceTree = "<group>"; };
+		DA3A21E2208A104900E6E583 /* OrganiseViewModelCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiseViewModelCollectionItem.swift; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -847,6 +851,7 @@
 			children = (
 				DA3A21DA208A06CD00E6E583 /* OrganiseViewModel.swift */,
 				DA3A21DE208A074D00E6E583 /* OrganiseViewModelCollection.swift */,
+				DA3A21E2208A104900E6E583 /* OrganiseViewModelCollectionItem.swift */,
 			);
 			path = Organise;
 			sourceTree = "<group>";
@@ -856,6 +861,7 @@
 			children = (
 				DA3A21D8208A067000E6E583 /* TestOrganiseViewModel.swift */,
 				DA3A21DC208A06F700E6E583 /* TestOrganiseViewModelCollection.swift */,
+				DA3A21E0208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift */,
 			);
 			path = Organise;
 			sourceTree = "<group>";
@@ -2068,6 +2074,7 @@
 				DA647A3D20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DA43877E20887055004D8559 /* Deserialiser+Columns.swift in Sources */,
 				DA30604920826C7800E55ECB /* LoadProtocol.swift in Sources */,
+				DA3A21E3208A104900E6E583 /* OrganiseViewModelCollectionItem.swift in Sources */,
 				DA519A592068E46A00514098 /* LandingViewCollectionLayout.swift in Sources */,
 				DA6B666B20847A4E008A1B48 /* Board+Factory.swift in Sources */,
 				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
@@ -2240,6 +2247,7 @@
 				DA63F791206DB0BA0018F416 /* MockLandingPresenterOutlets.swift in Sources */,
 				DA1DF9AA207CA68500B03C6E /* TestLandingController_DataSourceProtocol_Cards.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
+				DA3A21E1208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift in Sources */,
 				DA1DF9AE207CADD800B03C6E /* TestLandingController_DataSourceProtocol_Columns.swift in Sources */,
 				DAE8C7EB207FB85400395318 /* TestLanding_CreateColumn.swift in Sources */,
 				DAEAA1382084788D003769B7 /* TestBoard+Factory.swift in Sources */,
