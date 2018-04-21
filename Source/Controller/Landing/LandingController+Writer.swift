@@ -24,12 +24,12 @@ extension LandingController {
     }
     
     func openWriterForProject() {
-        let project:ProjectProtocol = self.model.project
+        var project:ProjectProtocol = self.model.project
         let controller:WriterController<Writer> = WriterController<Writer>()
-//        controller.model.text = project.name
+        controller.model.text = project.name
         controller.model.onFinish = { [weak self] (name:String) in
-//            project.name = name
-//            self?.model.reloadViewModel()
+            project.name = name
+            self?.model.reloadViewModel()
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }

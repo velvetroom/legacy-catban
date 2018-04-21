@@ -260,6 +260,7 @@
 		DA78A987208BEE2500E5C473 /* TestLanding_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */; };
 		DA78A989208BF4AF00E5C473 /* Landing+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A988208BF4AF00E5C473 /* Landing+Constants.swift */; };
 		DA78A98B208BF56A00E5C473 /* TestBoard_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A98A208BF56A00E5C473 /* TestBoard_DeleteProject.swift */; };
+		DA78A98D208BFB2500E5C473 /* TestLandingController_WriterEditProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A98C208BFB2500E5C473 /* TestLandingController_WriterEditProject.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -665,6 +666,7 @@
 		DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_DeleteProject.swift; sourceTree = "<group>"; };
 		DA78A988208BF4AF00E5C473 /* Landing+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Constants.swift"; sourceTree = "<group>"; };
 		DA78A98A208BF56A00E5C473 /* TestBoard_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_DeleteProject.swift; sourceTree = "<group>"; };
+		DA78A98C208BFB2500E5C473 /* TestLandingController_WriterEditProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_WriterEditProject.swift; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -1728,6 +1730,7 @@
 				DA72317F208B8FAF008042F4 /* TestLandingController_SelectorsEditProject.swift */,
 				DA6F1B8920736A7C001248E4 /* TestLandingController_WriterEditCard.swift */,
 				DAF8891D207AB29500BB75CD /* TestLandingController_WriterEditColumn.swift */,
+				DA78A98C208BFB2500E5C473 /* TestLandingController_WriterEditProject.swift */,
 				DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */,
 				DA78A984208BEB1A00E5C473 /* TestLandingController_DeleteProject.swift */,
 				DA6EBE6F208220B1004B639E /* TestLandingController_Error.swift */,
@@ -2411,6 +2414,7 @@
 				DA5EAFCA2075F647002BDAD8 /* TestLandingController_SelectorsAdd.swift in Sources */,
 				DA79602C206BCE9600548952 /* MockLandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA3A21E7208A250900E6E583 /* TestOrganiseViewCollection.swift in Sources */,
+				DA78A98D208BFB2500E5C473 /* TestLandingController_WriterEditProject.swift in Sources */,
 				DA636FF42081074C00C02447 /* TestErrorModel.swift in Sources */,
 				DA27D43A208A962A006A9732 /* TestWriterViewModel.swift in Sources */,
 				DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */,
