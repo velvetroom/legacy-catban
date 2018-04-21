@@ -255,6 +255,7 @@
 		DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1D92080EACA00ADC499 /* ErrorProject.swift */; };
 		DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA73A1DB2080EBD500ADC499 /* LocalizableError.strings */; };
 		DA73A1DF2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */; };
+		DA78A983208BE10A00E5C473 /* LandingController+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A982208BE10A00E5C473 /* LandingController+Project.swift */; };
 		DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */; };
 		DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */; };
 		DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */; };
@@ -655,6 +656,7 @@
 		DA73A1D92080EACA00ADC499 /* ErrorProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProject.swift; sourceTree = "<group>"; };
 		DA73A1DC2080EBD500ADC499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableError.strings; sourceTree = "<group>"; };
 		DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete_Exceptions.swift; sourceTree = "<group>"; };
+		DA78A982208BE10A00E5C473 /* LandingController+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Project.swift"; sourceTree = "<group>"; };
 		DA796025206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796027206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol.swift; sourceTree = "<group>"; };
 		DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+PresenterCollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -1788,6 +1790,7 @@
 				DA796029206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift */,
 				DAEB8185206D1FF000E55424 /* LandingController+PresenterCollectionDelegate.swift */,
 				DA391AD920774B2500484273 /* LandingController+AddDelegate.swift */,
+				DA78A982208BE10A00E5C473 /* LandingController+Project.swift */,
 				DA5EAFC52075EF9D002BDAD8 /* LandingAddController.swift */,
 				DACE1D4F2077F7E4004E0CEB /* LandingAddController+Constants.swift */,
 				DA5EAFC72075F13C002BDAD8 /* LandingAddController+Actions.swift */,
@@ -2117,6 +2120,7 @@
 				DAEAA13220847166003769B7 /* Load+Constants.swift in Sources */,
 				DABC32652088BA89008BA213 /* Serialiser+Project.swift in Sources */,
 				DAD3C479207BADF100F84829 /* LandingEditController.swift in Sources */,
+				DA78A983208BE10A00E5C473 /* LandingController+Project.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
 				DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */,
 				DA3A21C32089F31400E6E583 /* OrganisePresenterCollection.swift in Sources */,
