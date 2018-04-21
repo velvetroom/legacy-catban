@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingColumnEdit:XCTestCase {
+class TestLandingEdit:XCTestCase {
     private var model:LandingColumnEdit!
     
     override func setUp() {

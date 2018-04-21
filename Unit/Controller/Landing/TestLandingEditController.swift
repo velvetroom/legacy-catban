@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingColumnEditController:XCTestCase {
+class TestLandingEditController:XCTestCase {
     private var controller:LandingEditController!
     private struct Constants {
         static let expectedActions:Int = 3
