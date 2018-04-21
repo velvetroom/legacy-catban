@@ -8,4 +8,8 @@ class Organise:OrganiseProtocol {
         self.board = Board()
         self.presenter = OrganisePresenter()
     }
+    
+    func reloadViewModel() {
+        self.presenter.updateWith(board:self.board)
+    }
 }

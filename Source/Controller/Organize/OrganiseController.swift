@@ -5,6 +5,7 @@ class OrganiseController<ModelType:OrganiseProtocol>:Controller<ModelType> {
         super.viewDidLoad()
         self.adjustNavigationItem()
         self.factoryOutlets()
+        self.model.reloadViewModel()
     }
     
     private func adjustNavigationItem() {

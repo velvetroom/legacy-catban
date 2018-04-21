@@ -15,6 +15,9 @@ class OrganiseViewCollection:UICollectionView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.backgroundColor = UIColor.clear
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+        self.alwaysBounceVertical = true
         self.register(OrganiseViewCollectionCell.self,
                       forCellWithReuseIdentifier:OrganiseViewCollectionCell.reusableIdentifier)
     }
