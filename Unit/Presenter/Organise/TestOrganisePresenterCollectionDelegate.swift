@@ -29,14 +29,4 @@ class TestOrganisePresenterCollectionDelegate:XCTestCase {
         XCTAssertEqual(size.height, OrganisePresenterCollectionDelegate.Constants.cellHeight,
                        "Invalid height for cell")
     }
-    
-    func testAllowSelection() {
-        XCTAssertTrue(self.presenter.collectionView(self.view, shouldSelectItemAt:self.index),
-                       "Collection should not allow to select items")
-    }
-    
-    func testAllowHighlighting() {
-        XCTAssertTrue(self.presenter.collectionView(self.view, shouldHighlightItemAt:self.index),
-                       "Collection should not allow to highlight items")
-    }
 }
