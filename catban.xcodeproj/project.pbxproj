@@ -1386,13 +1386,6 @@
 			path = Load;
 			sourceTree = "<group>";
 		};
-		DA6EBE7C20824462004B639E /* Load */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Load;
-			sourceTree = "<group>";
-		};
 		DA6EBE7D20824486004B639E /* Board */ = {
 			isa = PBXGroup;
 			children = (
@@ -1449,7 +1442,6 @@
 			isa = PBXGroup;
 			children = (
 				DA54ED872089DEC20078AF87 /* Organise */,
-				DA6EBE7C20824462004B639E /* Load */,
 				DA6EBE7420822202004B639E /* Error */,
 				DA4F8FF3207279760063D384 /* Writer */,
 				DA79AF80206A2F8800DE73FA /* Landing */,

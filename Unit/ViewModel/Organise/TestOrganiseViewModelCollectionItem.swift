@@ -11,5 +11,6 @@ class TestOrganiseViewModelCollectionItem:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
+        XCTAssertNotNil(self.viewModel.name, "Failed to load name")
     }
 }

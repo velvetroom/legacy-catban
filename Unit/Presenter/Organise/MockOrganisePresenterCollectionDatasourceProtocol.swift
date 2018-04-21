@@ -2,9 +2,14 @@ import UIKit
 @testable import catban
 
 class MockOrganisePresenterCollectionDatasourceProtocol:NSObject, OrganisePresenterCollectionDatasourceProtocol {
-    var viewModel:OrganiseViewModelCollection
     var numberOfItems:Int
     var cell:UICollectionViewCell
+    var onViewModelSet:((OrganiseViewModelCollection) -> Void)?
+    var viewModel:OrganiseViewModelCollection {
+        didSet {
+            self.onViewModelSet?(self.viewModel)
+        }
+    }
     
     override init() {
         self.viewModel = OrganiseViewModelCollection()
