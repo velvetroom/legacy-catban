@@ -5,4 +5,6 @@ struct ErrorProject:LocalizedError {
     
     static let oneColumnMinimum:ErrorProject = ErrorProject(errorDescription:String.localizedError(
         key:"ErrorProject_oneColumnMinimum"))
+    static let oneProjectMinimum:ErrorProject = ErrorProject(errorDescription:String.localizedError(
+        key:"ErrorProject_oneProjectMinimum"))
 }

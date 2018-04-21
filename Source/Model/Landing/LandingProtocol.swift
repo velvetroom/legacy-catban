@@ -16,6 +16,7 @@ protocol LandingProtocol:ModelProtocol {
     func indexFor(column:ProjectColumn) -> Int
     func update(editingCard:IndexPath?)
     func moveCardFrom(origin:IndexPath, to destination:IndexPath)
+    func deleteProject() throws
     func deleteEditingCard()
     func deleteColumnAndMoveCardsAt(index:Int) throws
     func moveEditingCardRight()

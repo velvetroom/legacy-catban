@@ -17,6 +17,7 @@ class MockLandingProtocol:LandingProtocol {
     var onIndexForColumn:((ProjectColumn) -> Void)?
     var onScrollToEditingCard:(() -> Void)?
     var onScrollToTopRightCorner:(() -> Void)?
+    var onDeleteProject:(() -> Void)?
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
     var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
@@ -122,5 +123,12 @@ class MockLandingProtocol:LandingProtocol {
     func indexFor(column:ProjectColumn) -> Int {
         self.onIndexForColumn?(column)
         return self.returnIndexForColumn
+    }
+    
+    func deleteProject() throws {
+        self.onDeleteProject?()
+        if let throwingError:Error = self.throwingError {
+            throw throwingError
+        }
     }
 }

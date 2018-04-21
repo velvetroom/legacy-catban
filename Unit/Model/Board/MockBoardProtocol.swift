@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockBoardProtocol:BoardProtocol {
+    var onDeleteProject:(() -> Void)?
     var user:UserProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
@@ -16,5 +17,9 @@ class MockBoardProtocol:BoardProtocol {
     init() {
         self.user = User()
         self.projects = []
+    }
+    
+    func deleteProject() {
+        self.onDeleteProject?()
     }
 }

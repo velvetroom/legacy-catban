@@ -16,9 +16,9 @@ extension LandingController {
     
     func confirmedDeleteProject() {
         do {
-//            try self.model.deleteColumnAndMoveCardsAt(index:index)
+            try self.model.deleteProject()
         } catch let error {
-//            self.alertError(error:error)
+            self.alertError(error:error)
         }
     }
     
