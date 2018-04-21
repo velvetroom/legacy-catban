@@ -17,7 +17,7 @@ class OrganiseViewCollectionCell:UICollectionViewCell {
     
     override init(frame:CGRect) {
         super.init(frame:frame)
-        self.factoryViews()
+        self.factoryOutlets()
     }
     
     required init?(coder:NSCoder) {
@@ -34,7 +34,12 @@ class OrganiseViewCollectionCell:UICollectionViewCell {
         }
     }
     
-    private func factoryViews() {
+    private func factoryOutlets() {
+        self.factoryLabelName()
+        self.factoryImageSelect()
+    }
+    
+    private func factoryLabelName() {
         let labelName:UILabel = UILabel()
         labelName.translatesAutoresizingMaskIntoConstraints = false
         labelName.backgroundColor = UIColor.clear
@@ -49,5 +54,21 @@ class OrganiseViewCollectionCell:UICollectionViewCell {
         labelName.leftAnchor.constraint(equalTo:self.leftAnchor,
                                         constant:Constants.nameMarginLeft).isActive = true
         labelName.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+    }
+    
+    private func factoryImageSelect() {
+        let imageSelect:UIImageView = UIImageView()
+        imageSelect.image = #imageLiteral(resourceName: "assetSelect")
+        imageSelect.translatesAutoresizingMaskIntoConstraints = false
+        imageSelect.isUserInteractionEnabled = false
+        imageSelect.clipsToBounds = false
+        imageSelect.contentMode = UIViewContentMode.center
+        
+        self.addSubview(imageSelect)
+        
+        imageSelect.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        imageSelect.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        imageSelect.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        imageSelect.widthAnchor.constraint(equalToConstant:Constants.selectWidth).isActive = true
     }
 }
