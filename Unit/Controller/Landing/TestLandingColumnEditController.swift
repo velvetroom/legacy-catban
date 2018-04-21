@@ -2,14 +2,14 @@ import XCTest
 @testable import catban
 
 class TestLandingColumnEditController:XCTestCase {
-    private var controller:LandingColumnEditController!
+    private var controller:LandingEditController!
     private struct Constants {
         static let expectedActions:Int = 3
     }
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingColumnEditController()
+        self.controller = LandingEditController()
     }
     
     func testLoad() {

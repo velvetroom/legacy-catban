@@ -1,13 +1,13 @@
 import Foundation
 
-class LandingColumnEdit:LandingColumnEditProtocol {
+class LandingColumnEdit:LandingEditProtocol {
     var onRename:(() -> Void)?
     var onDelete:(() -> Void)?
-    var presenter:LandingColumnEditPresenter
+    var presenter:LandingEditPresenter
     var itemName:String
     
     init() {
-        self.presenter = LandingColumnEditPresenter()
+        self.presenter = LandingEditPresenter()
         self.itemName = String()
     }
 }

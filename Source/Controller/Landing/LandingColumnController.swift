@@ -1,6 +1,6 @@
 import UIKit
 
-class LandingColumnEditController:UIAlertController {
+class LandingColumnController:UIAlertController {
     var model:LandingColumnEditProtocol
     
     init() {

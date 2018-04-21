@@ -42,7 +42,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
             guard
-                let controller:LandingColumnEditController = controller as? LandingColumnEditController
+                let controller:LandingEditController = controller as? LandingEditController
             else { return }
             XCTAssertNotNil(controller.model.onRename, "Failed to assign call back")
             XCTAssertNotNil(controller.model.onDelete, "Failed to assign call back")
@@ -57,7 +57,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     func testEditHeaderAtOnRenameCallBack() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+            if let controller:LandingEditController = controller as? LandingEditController {
                 controller.model.onRename?()
             } else if let _:WriterController<Writer> = controller as? WriterController<Writer> {
                 self?.expect?.fulfill()
@@ -72,7 +72,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     func testEditHeaderAtOnDeleteCallBack() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+            if let controller:LandingEditController = controller as? LandingEditController {
                 controller.model.onDelete?()
             } else if let _:LandingDeleteController = controller as? LandingDeleteController {
                 self?.expect?.fulfill()
@@ -87,7 +87,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     func testEditHeaderUsesColumnForRenameCallback() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+            if let controller:LandingEditController = controller as? LandingEditController {
                 controller.model.onRename?()
             } else if let controller:WriterController<Writer> = controller as? WriterController<Writer> {
                 XCTAssertEqual(controller.model.text, self?.column.name, "Invalid text on callback")
@@ -103,7 +103,7 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
     func testEditHeaderUsesColumnForDeleteCallback() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            if let controller:LandingColumnEditController = controller as? LandingColumnEditController {
+            if let controller:LandingEditController = controller as? LandingEditController {
                 controller.model.onDelete?()
             } else if let controller:LandingDeleteController = controller as? LandingDeleteController {
                 XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to assign item name")

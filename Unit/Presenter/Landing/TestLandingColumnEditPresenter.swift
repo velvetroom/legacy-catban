@@ -2,11 +2,11 @@ import XCTest
 @testable import catban
 
 class TestLandingColumnEditPresenter:XCTestCase {
-    private var presenter:LandingColumnEditPresenter!
+    private var presenter:LandingEditPresenter!
     
     override func setUp() {
         super.setUp()
-        self.presenter = LandingColumnEditPresenter()
+        self.presenter = LandingEditPresenter()
     }
     
     func testLoad() {

@@ -21,7 +21,7 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
     func edit(column:ProjectColumn) {
         self.model.clearCardSelection()
         let index:Int = self.model.indexFor(column:column)
-        let controller:LandingColumnEditController = LandingColumnEditController()
+        let controller:LandingEditController = LandingEditController()
         controller.model.onRename = { [weak self] in
             self?.openWriterForColumnAt(index:index)
         }

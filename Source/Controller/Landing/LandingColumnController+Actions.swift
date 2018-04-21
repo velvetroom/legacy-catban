@@ -1,6 +1,6 @@
 import UIKit
 
-extension LandingColumnEditController {
+extension LandingColumnController {
     func factoryActions() {
         self.factoryRenameAction()
         self.factoryDeleteAction()
