@@ -30,13 +30,13 @@ class TestOrganisePresenterCollectionDelegate:XCTestCase {
                        "Invalid height for cell")
     }
     
-    func testAvoidSelection() {
-        XCTAssertFalse(self.presenter.collectionView(self.view, shouldSelectItemAt:self.index),
+    func testAllowSelection() {
+        XCTAssertTrue(self.presenter.collectionView(self.view, shouldSelectItemAt:self.index),
                        "Collection should not allow to select items")
     }
     
-    func testAvoidHighlighting() {
-        XCTAssertFalse(self.presenter.collectionView(self.view, shouldHighlightItemAt:self.index),
+    func testAllowHighlighting() {
+        XCTAssertTrue(self.presenter.collectionView(self.view, shouldHighlightItemAt:self.index),
                        "Collection should not allow to highlight items")
     }
 }
