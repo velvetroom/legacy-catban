@@ -4,6 +4,7 @@ import XCTest
 class TestLandingEditController:XCTestCase {
     private var controller:LandingEditController!
     private struct Constants {
+        static let itemName:String = "lorem ipsum"
         static let expectedActions:Int = 3
     }
     
@@ -33,5 +34,23 @@ class TestLandingEditController:XCTestCase {
         self.controller.factoryActions()
         let countActions:Int = self.controller.actions.count
         XCTAssertEqual(countActions, Constants.expectedActions, "Failed to factory actions")
+    }
+    
+    func testItemNameOnDeleteAction() {
+        self.controller.model.itemName = Constants.itemName
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        
+        let actionTitle:String = self.controller.model.presenter.actionDelete!.title!
+        
+        XCTAssertTrue(actionTitle.contains(Constants.itemName), "Alert title doesn't not contain item name")
+    }
+    
+    func testItemNameOnRenameAction() {
+        self.controller.model.itemName = Constants.itemName
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        
+        let actionTitle:String = self.controller.model.presenter.actionRename!.title!
+        
+        XCTAssertTrue(actionTitle.contains(Constants.itemName), "Alert title doesn't not contain item name")
     }
 }

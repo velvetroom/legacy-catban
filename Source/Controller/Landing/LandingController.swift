@@ -19,6 +19,19 @@ class LandingController<ModelType:LandingProtocol>:Controller<ModelType> {
         self.navigation?.transitionToOrganise(board:self.model.board)
     }
     
+    @objc func selectorEditProject(sender button:UIBarButtonItem) {
+//        self.model.clearCardSelection()
+//        let index:Int = self.model.indexFor(column:column)
+        let controller:LandingEditController = LandingEditController()
+//        controller.model.onRename = { [weak self] in
+//            self?.openWriterForColumnAt(index:index)
+//        }
+//        controller.model.onDelete = { [weak self] in
+//            self?.deleteSectionAt(index:index)
+//        }
+        self.navigationController?.present(controller, animated:true, completion:nil)
+    }
+    
     @objc func selectorCloseEditingCard(sender button:UIButton) {
         self.model.clearCardSelection()
     }
