@@ -21,6 +21,7 @@
 		DA1A19D1208C7E9A00300FED /* TestBoard_Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A19D0208C7E9A00300FED /* TestBoard_Updates.swift */; };
 		DA1A19D3208C943900300FED /* LandingCollectionUpdateFactory+CreateProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A19D2208C943900300FED /* LandingCollectionUpdateFactory+CreateProject.swift */; };
 		DA1A19D5208CA4B000300FED /* TestLandingCollectionUpdateFactory_CreateProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A19D4208CA4B000300FED /* TestLandingCollectionUpdateFactory_CreateProject.swift */; };
+		DA1A19D7208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A19D6208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift */; };
 		DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD549206531A1002A7493 /* TestProject.swift */; };
 		DA1AD54D2065328D002A7493 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD54C2065328D002A7493 /* Project.swift */; };
 		DA1DF9A8207CA67300B03C6E /* TestLandingController_DataSourceProtocol_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF9A7207CA67300B03C6E /* TestLandingController_DataSourceProtocol_Header.swift */; };
@@ -434,6 +435,7 @@
 		DA1A19D0208C7E9A00300FED /* TestBoard_Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_Updates.swift; sourceTree = "<group>"; };
 		DA1A19D2208C943900300FED /* LandingCollectionUpdateFactory+CreateProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCollectionUpdateFactory+CreateProject.swift"; sourceTree = "<group>"; };
 		DA1A19D4208CA4B000300FED /* TestLandingCollectionUpdateFactory_CreateProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_CreateProject.swift; sourceTree = "<group>"; };
+		DA1A19D6208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionUpdateCreateProject+Factory.swift"; sourceTree = "<group>"; };
 		DA1AD549206531A1002A7493 /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA1AD54C2065328D002A7493 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DA1DF9A7207CA67300B03C6E /* TestLandingController_DataSourceProtocol_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DataSourceProtocol_Header.swift; sourceTree = "<group>"; };
@@ -1927,6 +1929,7 @@
 				DACD0A56207D453600884E62 /* CollectionUpdateSalvageItemFromDeletion.swift */,
 				DAE8C7E4207FA60800395318 /* CollectionUpdateInsertSections.swift */,
 				DA1A19CE208C6AF000300FED /* CollectionUpdateCreateProject.swift */,
+				DA1A19D6208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift */,
 			);
 			path = CollectionUpdate;
 			sourceTree = "<group>";
@@ -2112,6 +2115,7 @@
 				DA1A19C9208C689500300FED /* Landing+Project.swift in Sources */,
 				DA519A7720693E1000514098 /* LandingViewModelLoaderOutlets.swift in Sources */,
 				DA1604402076996E0096EFE1 /* Project+Cards.swift in Sources */,
+				DA1A19D7208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift in Sources */,
 				DA30604B20826C7E00E55ECB /* Load.swift in Sources */,
 				DAEB8184206D1AD800E55424 /* LandingPresenterCollectionDelegateProtocol.swift in Sources */,
 				DA3060432082644900E55ECB /* User.swift in Sources */,

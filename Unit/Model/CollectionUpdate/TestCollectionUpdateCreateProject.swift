@@ -27,18 +27,39 @@ class TestCollectionUpdateCreateProject:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.update.project, "Failed to load project")
         XCTAssertNotNil(self.update.removeIndexSet, "Failed to load remove index set")
-        XCTAssertFalse(self.update.project.identifier.isEmpty, "Failed to assign identifier")
-        XCTAssertFalse(self.update.project.name.isEmpty, "Failed to assign name")
-        XCTAssertTrue(self.update.removeIndexSet.isEmpty, "Indexset should be empty")
+        XCTAssertNotNil(self.update.insertIndexSet, "Failed to load remove index set")
     }
     
-    func testStrategyCollection() {
+    func testConfiguration() {
+        XCTAssertFalse(self.update.project.identifier.isEmpty, "Failed to assign identifier")
+        XCTAssertFalse(self.update.project.name.isEmpty, "Failed to assign name")
+        XCTAssertFalse(self.update.project.columns.isEmpty, "Failed to add at least 1 column")
+        XCTAssertFalse(self.update.project.columns[0].name.isEmpty, "Failed to assign name to first column")
+        XCTAssertTrue(self.update.removeIndexSet.isEmpty, "Indexset should be empty")
+        XCTAssertEqual(self.update.insertIndexSet.count, self.update.project.columns.count,
+                       "Insert indexset doesn't contain all columns")
+    }
+    
+    func testStrategyCollectionDeletesSections() {
         self.project.columns.append(ProjectColumn())
         self.project.columns.append(ProjectColumn())
         self.project.columns.append(ProjectColumn())
         self.startExpectation()
         self.view.onDeleteSections = { [weak self] (indexSet:IndexSet) in
-            XCTAssertEqual(self?.project.columns.count, indexSet.count, "Invalid number of sections")
+            XCTAssertEqual(self?.update.removeIndexSet, indexSet, "Invalid remove indexSet")
+            self?.expect?.fulfill()
+        }
+        
+        self.update.strategy(board:self.board)
+        self.update.strategy(collectionView:self.view)
+        
+        self.waitExpectation()
+    }
+    
+    func testStrategyCollectionInsertsSections() {
+        self.startExpectation()
+        self.view.onInsertSections = { [weak self] (indexSet:IndexSet) in
+            XCTAssertEqual(self?.update.insertIndexSet, indexSet, "Invalid insert indexSet")
             self?.expect?.fulfill()
         }
         
