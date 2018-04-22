@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryProtocol {
+    var onCreateProject:(() -> Void)?
     var onDeleteColumnAtIndex:((Int, ProjectProtocol) -> Void)?
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
     var onInsertColumnIn:((ProjectProtocol) -> Void)?
@@ -18,6 +19,11 @@ class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryP
     
     func insertColumnIn(project:ProjectProtocol) -> [CollectionUpdateProtocol] {
         self.onInsertColumnIn?(project)
+        return []
+    }
+    
+    func createProject() -> [CollectionUpdateProtocol] {
+        self.onCreateProject?()
         return []
     }
 }
