@@ -84,7 +84,7 @@ extension LandingViewCollectionMenu {
         buttonEdit.setTitle(String.localizedLanding(key:"LandingViewCollectionMenu_buttonEdit"),
                             for:UIControlState())
         buttonEdit.titleLabel!.font = UIFont.systemFont(ofSize:Constants.buttonEditFontSize,
-                                                        weight:UIFont.Weight.medium)
+                                                        weight:UIFont.Weight.bold)
         self.buttonEdit = buttonEdit
         
         self.addSubview(buttonEdit)
