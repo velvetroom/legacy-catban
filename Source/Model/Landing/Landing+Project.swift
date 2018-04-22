@@ -10,9 +10,9 @@ extension Landing {
     }
     
     func createProject() {
-//        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.insertColumnIn(project:self.project)
-//        self.project.apply(updates:updates)
-//        self.reloadViewModel()
-//        self.presenter.apply(updates:updates)
+        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.createProject()
+        self.board.apply(updates:updates)
+        self.reloadViewModel()
+        self.presenter.apply(updates:updates)
     }
 }
