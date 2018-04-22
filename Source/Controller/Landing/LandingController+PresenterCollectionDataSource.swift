@@ -22,6 +22,7 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         self.model.clearCardSelection()
         let index:Int = self.model.indexFor(column:column)
         let controller:LandingEditController = LandingEditController()
+        controller.model.itemName = String.localizedLanding(key:"LandingController_editSectionAtName")
         controller.model.onRename = { [weak self] in
             self?.openWriterForColumnAt(index:index)
         }

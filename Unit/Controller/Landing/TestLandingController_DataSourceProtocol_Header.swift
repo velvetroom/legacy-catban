@@ -54,6 +54,19 @@ class TestLandingController_DataSourceProtocol_Header:XCTestCase {
         self.waitExpectation()
     }
     
+    func testEditHeaderSetsItemName() {
+        self.startExpectation()
+        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
+            let controller:LandingEditController = controller as! LandingEditController
+            XCTAssertFalse(controller.model.itemName.isEmpty, "Failed to set item name")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.edit(column:self.column)
+        
+        self.waitExpectation()
+    }
+    
     func testEditHeaderAtOnRenameCallBack() {
         self.startExpectation()
         self.navigation.onPresent = { [weak self] (controller:UIViewController) in
