@@ -5,6 +5,7 @@ protocol BoardProtocol {
     var user:UserProtocol { get set }
     var projects:[ProjectProtocol] { get set }
     
+    func insertProject(project:ProjectProtocol)
     func deleteProject()
     func apply(updates:[CollectionUpdateProtocol])
 }

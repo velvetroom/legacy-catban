@@ -4,7 +4,7 @@ extension Landing {
     func deleteProject() throws {
         guard
             self.board.projects.count > Constants.minProjects
-            else { throw ErrorProject.oneProjectMinimum }
+        else { throw ErrorProject.oneProjectMinimum }
         self.board.deleteProject()
         self.reloadViewModel()
     }

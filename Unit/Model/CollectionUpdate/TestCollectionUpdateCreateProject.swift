@@ -4,7 +4,7 @@ import XCTest
 class TestCollectionUpdateCreateProject:XCTestCase {
     private var update:CollectionUpdateCreateProject!
     private var view:MockLandingViewCollection!
-    private var project:MockProjectProtocol!
+    private var board:MockBoardProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -14,20 +14,19 @@ class TestCollectionUpdateCreateProject:XCTestCase {
         super.setUp()
         self.update = CollectionUpdateCreateProject()
         self.view = MockLandingViewCollection()
-        self.project = MockProjectProtocol()
+        self.board = MockBoardProtocol()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
-        XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.view, "Failed to load view")
         XCTAssertNotNil(self.update.project, "Failed to load project")
-    }/*
+    }
     
     func testStrategyCollection() {
         self.startExpectation()
-        self.view.onDeleteSections = { [weak self] (indexes:IndexSet) in
-            XCTAssertEqual(indexes.first, Constants.index, "Invalid index set")
+        self.view.onReloadDataCalled = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -36,17 +35,24 @@ class TestCollectionUpdateCreateProject:XCTestCase {
         self.waitExpectation()
     }
     
-    func testStrategyProject() {
+    func testStrategyBoardInsertsProject() {
         self.startExpectation()
-        self.project.onDeleteColumnAt = { [weak self] (index:Int) in
-            XCTAssertEqual(index, Constants.index, "Invalid index")
+        self.board.onInserProject = { [weak self] (project:ProjectProtocol) in
+            XCTAssertEqual(project.identifier, self?.update.project.identifier,
+                           "Invalid project received")
             self?.expect?.fulfill()
         }
         
-        self.update.strategy(project:self.project)
+        self.update.strategy(board:self.board)
         
         self.waitExpectation()
-    }*/
+    }
+    
+    func testStrategyBoardUpdatesProject() {
+        self.update.strategy(board:self.board)
+        XCTAssertEqual(self.board.project.identifier, self.update.project.identifier,
+                       "Failed to update current project")
+    }
     
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")

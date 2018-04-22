@@ -30,6 +30,10 @@ class Board:BoardProtocol {
         self.projects = []
     }
     
+    func insertProject(project:ProjectProtocol) {
+        self.projects.append(project)
+    }
+    
     func deleteProject() {
         self.projects.remove(at:self.projectIndex)
         self.project = self.projects[0]

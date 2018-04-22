@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockBoardProtocol:BoardProtocol {
+    var onInserProject:((ProjectProtocol) -> Void)?
     var onDeleteProject:(() -> Void)?
     var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
     var user:UserProtocol
@@ -18,6 +19,10 @@ class MockBoardProtocol:BoardProtocol {
     init() {
         self.user = User()
         self.projects = []
+    }
+    
+    func insertProject(project:ProjectProtocol) {
+        self.onInserProject?(project)
     }
     
     func deleteProject() {

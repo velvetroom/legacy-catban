@@ -9,10 +9,12 @@ class CollectionUpdateCreateProject:CollectionUpdateProtocol {
     }
     
     func strategy(board:BoardProtocol) {
-//        project.deleteColumnAt(index:self.index)
+        var board:BoardProtocol = board
+        board.insertProject(project:self.project)
+        board.project = self.project
     }
     
     func strategy(collectionView:UICollectionView) {
-//        collectionView.deleteSections(IndexSet(integer:self.index))
+        collectionView.reloadData()
     }
 }

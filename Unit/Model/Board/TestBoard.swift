@@ -37,4 +37,17 @@ class TestBoard:XCTestCase {
         else { return }
         XCTAssertTrue(boardProject === project, "Failed to retrieve project from user")
     }
+    
+    func testInserProjectCount() {
+        let project:Project = Project()
+        self.model.insertProject(project:project)
+        XCTAssertEqual(self.model.projects.count, 1, "Invalid amount of projects after insert")
+    }
+    
+    func testInserProjectEquality() {
+        let project:Project = Project()
+        self.model.insertProject(project:project)
+        let lastProject:Project = self.model.projects.last as! Project
+        XCTAssertTrue(lastProject === project, "Last project in list is not the inserted one")
+    }
 }
