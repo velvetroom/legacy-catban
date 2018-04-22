@@ -29,7 +29,7 @@ class WriterViewBar:UIView {
         buttonDone.setTitle(String.localizedWriter(key:"WriterViewBar_buttonDone"), for:UIControlState.normal)
         buttonDone.setTitleColor(UIColor.Shared.blue, for:UIControlState.normal)
         buttonDone.setTitleColor(UIColor.Shared.blue, for:UIControlState.highlighted)
-        buttonDone.titleLabel!.font = UIFont.systemFont(ofSize:Constants.doneFontSize, weight:UIFont.Weight.medium)
+        buttonDone.titleLabel!.font = UIFont.systemFont(ofSize:Constants.doneFontSize, weight:UIFont.Weight.bold)
         self.buttonDone = buttonDone
         
         self.addSubview(buttonDone)
