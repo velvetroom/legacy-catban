@@ -7,8 +7,8 @@ class CollectionUpdateDeleteSections:CollectionUpdateProtocol {
         self.index = 0
     }
     
-    func strategy(project:ProjectProtocol) {
-        project.deleteColumnAt(index:self.index)
+    func strategy(board:BoardProtocol) {
+        board.project.deleteColumnAt(index:self.index)
     }
     
     func strategy(collectionView:UICollectionView) {

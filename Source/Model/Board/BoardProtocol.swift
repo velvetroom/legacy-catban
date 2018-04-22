@@ -6,4 +6,5 @@ protocol BoardProtocol {
     var projects:[ProjectProtocol] { get set }
     
     func deleteProject()
+    func apply(updates:[CollectionUpdateProtocol])
 }

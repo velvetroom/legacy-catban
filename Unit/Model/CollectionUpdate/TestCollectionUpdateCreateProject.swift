@@ -22,7 +22,7 @@ class TestCollectionUpdateCreateProject:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
         XCTAssertNotNil(self.update.project, "Failed to load project")
-    }
+    }/*
     
     func testStrategyCollection() {
         self.startExpectation()
@@ -46,7 +46,7 @@ class TestCollectionUpdateCreateProject:XCTestCase {
         self.update.strategy(project:self.project)
         
         self.waitExpectation()
-    }
+    }*/
     
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")

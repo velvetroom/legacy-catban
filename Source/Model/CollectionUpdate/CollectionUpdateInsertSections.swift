@@ -10,8 +10,8 @@ class CollectionUpdateInsertSections:CollectionUpdateProtocol {
         self.column.identifier = UUID().uuidString
     }
     
-    func strategy(project:ProjectProtocol) {
-        project.insert(column:self.column, at:self.section)
+    func strategy(board:BoardProtocol) {
+        board.project.insert(column:self.column, at:self.section)
     }
     
     func strategy(collectionView:UICollectionView) {

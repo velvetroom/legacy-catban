@@ -8,7 +8,7 @@ class CollectionUpdateCreateProject:CollectionUpdateProtocol {
         self.project.identifier = UUID().uuidString
     }
     
-    func strategy(project:ProjectProtocol) {
+    func strategy(board:BoardProtocol) {
 //        project.deleteColumnAt(index:self.index)
     }
     

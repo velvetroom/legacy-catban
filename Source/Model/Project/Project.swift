@@ -10,10 +10,4 @@ class Project:ProjectProtocol {
         self.name = String()
         self.identifier = String()
     }
-    
-    func apply(updates:[CollectionUpdateProtocol]) {
-        for update:CollectionUpdateProtocol in updates {
-            update.strategy(project:self)
-        }
-    }
 }

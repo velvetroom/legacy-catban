@@ -11,8 +11,8 @@ class CollectionUpdateSalvageItemFromDeletion:CollectionUpdateProtocol {
         self.destinationAfterUpdate = IndexPath(item:0, section:0)
     }
     
-    func strategy(project:ProjectProtocol) {
-        project.moveCardFrom(origin:self.origin, to:self.destinationBeforeUpdate)
+    func strategy(board:BoardProtocol) {
+        board.project.moveCardFrom(origin:self.origin, to:self.destinationBeforeUpdate)
     }
     
     func strategy(collectionView:UICollectionView) {

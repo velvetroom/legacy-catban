@@ -3,6 +3,7 @@ import XCTest
 
 class TestLanding_CreateColumn:XCTestCase {
     private var model:Landing!
+    private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
@@ -15,11 +16,13 @@ class TestLanding_CreateColumn:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Landing()
-        self.project = MockProjectProtocol()
+        self.board = MockBoardProtocol()
         self.presenter = MockLandingPresenterProtocol()
         self.updateFactory = MockLandingCollectionUpdateFactoryProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
-        self.model.project = self.project
+        self.project = MockProjectProtocol()
+        self.board.project = self.project
+        self.model.board = self.board
         self.model.presenter = self.presenter
         self.model.viewModelLoader = self.viewModelLoader
         self.model.collectionUpdateFactory = self.updateFactory
@@ -27,6 +30,7 @@ class TestLanding_CreateColumn:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.updateFactory, "Failed to load update factory")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
@@ -48,7 +52,7 @@ class TestLanding_CreateColumn:XCTestCase {
     
     func testUpdateProject() {
         self.startExpectation()
-        self.project.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.board.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
             self?.expect?.fulfill()
         }
         

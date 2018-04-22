@@ -4,6 +4,7 @@ import XCTest
 class TestCollectionUpdateDeleteSections:XCTestCase {
     private var update:CollectionUpdateDeleteSections!
     private var view:MockLandingViewCollection!
+    private var board:Board!
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -15,13 +16,16 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
         super.setUp()
         self.update = CollectionUpdateDeleteSections()
         self.view = MockLandingViewCollection()
+        self.board = Board()
         self.project = MockProjectProtocol()
+        self.board.project = self.project
         self.update.index = Constants.index
     }
     
     func testLoad() {
         XCTAssertNotNil(self.update, "Failed to load update")
         XCTAssertNotNil(self.update.index, "Failed to load index")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
     }
@@ -45,7 +49,7 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.update.strategy(project:self.project)
+        self.update.strategy(board:self.board)
         
         self.waitExpectation()
     }

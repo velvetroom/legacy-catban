@@ -3,6 +3,7 @@ import XCTest
 
 class TestLanding_DeleteColumn:XCTestCase {
     private var model:Landing!
+    private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
@@ -16,11 +17,13 @@ class TestLanding_DeleteColumn:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Landing()
+        self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenterProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.collectionUpdateFactory = MockLandingCollectionUpdateFactoryProtocol()
-        self.model.project = self.project
+        self.board.project = self.project
+        self.model.board = self.board
         self.model.presenter = self.presenter
         self.model.viewModelLoader = self.viewModelLoader
         self.model.collectionUpdateFactory = self.collectionUpdateFactory
@@ -28,6 +31,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.viewModelLoader, "Failed to load view model loader")
@@ -35,7 +39,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testDeleteCallsModel() {
         self.startExpectation()
-        self.project.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.board.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
             self?.validate(updates:updates)
             self?.expect?.fulfill()
         }
@@ -84,7 +88,8 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testFactoryUpdateForDeleteColumn() {
         self.startExpectation()
-        self.collectionUpdateFactory.onDeleteColumnAtIndex = { [weak self] (index:Int, project:ProjectProtocol) in
+        self.collectionUpdateFactory.onDeleteColumnAtIndex = {
+            [weak self] (index:Int, project:ProjectProtocol) in
             let project:MockProjectProtocol? = project as? MockProjectProtocol
             XCTAssertEqual(index, Constants.column, "Invalid index received")
             XCTAssertNotNil(project, "Invalid project received")

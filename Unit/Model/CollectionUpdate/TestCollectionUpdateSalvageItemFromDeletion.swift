@@ -4,6 +4,7 @@ import XCTest
 class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
     private var update:CollectionUpdateSalvageItemFromDeletion!
     private var view:MockLandingViewCollection!
+    private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,7 +18,9 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
         super.setUp()
         self.update = CollectionUpdateSalvageItemFromDeletion()
         self.view = MockLandingViewCollection()
+        self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
+        self.board.project = self.project
         self.update.origin = Constants.origin
         self.update.destinationBeforeUpdate = Constants.destinationBeforeUpdate
         self.update.destinationAfterUpdate = Constants.destinationAfterUpdate
@@ -28,6 +31,7 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
         XCTAssertNotNil(self.update.origin, "Failed to load origin")
         XCTAssertNotNil(self.update.destinationBeforeUpdate, "Failed to load destination before update")
         XCTAssertNotNil(self.update.destinationAfterUpdate, "Failed to load destination after update")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
     }
@@ -53,7 +57,7 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.update.strategy(project:self.project)
+        self.update.strategy(board:self.board)
         
         self.waitExpectation()
     }

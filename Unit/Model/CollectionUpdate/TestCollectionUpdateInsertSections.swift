@@ -5,6 +5,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
     private var update:CollectionUpdateInsertSections!
     private var view:MockLandingViewCollection!
     private var project:MockProjectProtocol!
+    private var board:Board!
     private var column:ProjectColumn!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -16,7 +17,9 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         super.setUp()
         self.update = CollectionUpdateInsertSections()
         self.view = MockLandingViewCollection()
+        self.board = Board()
         self.project = MockProjectProtocol()
+        self.board.project = self.project
         self.column = self.update.column
         self.update.section = Constants.section
     }
@@ -25,6 +28,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
         XCTAssertNotNil(self.update, "Failed to load update")
         XCTAssertNotNil(self.update.section, "Failed top load section")
         XCTAssertNotNil(self.update.column, "Failed to load column")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
         XCTAssertFalse(self.column.identifier.isEmpty, "Failed to create identifier for column")
@@ -50,7 +54,7 @@ class TestCollectionUpdateInsertSections:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.update.strategy(project:self.project)
+        self.update.strategy(board:self.board)
         
         self.waitExpectation()
     }
