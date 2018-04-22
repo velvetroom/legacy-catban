@@ -13,6 +13,7 @@ class MockLandingProtocol:LandingProtocol {
     var onClearCardSelection:(() -> Void)?
     var onCreateCard:(() -> Void)?
     var onCreateColumn:(() -> Void)?
+    var onCreateProject:(() -> Void)?
     var onColumnAtIndex:((Int) -> Void)?
     var onIndexForColumn:((ProjectColumn) -> Void)?
     var onScrollToEditingCard:(() -> Void)?
@@ -113,6 +114,10 @@ class MockLandingProtocol:LandingProtocol {
     
     func createColumn() {
         self.onCreateColumn?()
+    }
+    
+    func createProject() {
+        self.onCreateProject?()
     }
     
     func columnAt(index:Int) -> ProjectColumn {

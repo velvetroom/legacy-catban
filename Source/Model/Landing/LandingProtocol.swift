@@ -27,4 +27,5 @@ protocol LandingProtocol:ModelProtocol {
     func updateColumnAt(index:Int)
     func createCard() -> IndexPath
     func createColumn()
+    func createProject()
 }

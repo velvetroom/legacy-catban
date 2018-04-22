@@ -12,7 +12,7 @@ extension LandingAddController {
         let action:UIAlertAction = UIAlertAction(
             title:String.localizedLanding(key:"LandingAddController_actionProjectTitle"),
             style:UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
-                
+                self?.model.delegate?.createProject()
         }
         self.model.presenter.actionProject = action
         self.addAction(action)

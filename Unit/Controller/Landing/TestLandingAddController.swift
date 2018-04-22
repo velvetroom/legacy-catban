@@ -27,8 +27,7 @@ class TestLandingAddController:XCTestCase {
     }
     
     func testPreferredStyle() {
-        XCTAssertEqual(self.controller.preferredStyle, UIAlertControllerStyle.actionSheet,
-                       "Invalid style")
+        XCTAssertEqual(self.controller.preferredStyle, UIAlertControllerStyle.actionSheet, "Invalid style")
     }
     
     func testAddActions() {

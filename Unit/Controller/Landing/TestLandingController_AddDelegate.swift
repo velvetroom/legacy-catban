@@ -21,6 +21,17 @@ class TestLandingController_AddDelegate:XCTestCase {
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
     }
     
+    func testCreateProject() {
+        self.startExpectation()
+        self.controller.model.onCreateProject = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.createProject()
+        
+        self.waitExpectations()
+    }
+    
     func testCreateCard() {
         self.startExpectation()
         self.controller.model.onCreateCard = { [weak self] in

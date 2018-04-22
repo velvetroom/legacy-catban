@@ -35,12 +35,4 @@ class Landing:LandingProtocol {
         let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(model:self)
         self.presenter.update(viewModel:viewModel)
     }
-    
-    func deleteProject() throws {
-        guard
-            self.board.projects.count > Constants.minProjects
-        else { throw ErrorProject.oneProjectMinimum }
-        self.board.deleteProject()
-        self.reloadViewModel()
-    }
 }
