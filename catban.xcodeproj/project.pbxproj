@@ -344,6 +344,8 @@
 		DAC10C57207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */; };
 		DAC10C59207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */; };
 		DAC10C5B207DD65400975FDD /* CollectionUpdateDeleteSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C5A207DD65400975FDD /* CollectionUpdateDeleteSections.swift */; };
+		DAC45AAB208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC45AAA208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift */; };
+		DAC45AAD208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC45AAC208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift */; };
 		DACD0A55207D444D00884E62 /* TestCollectionUpdateSalvageItemFromDeletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD0A54207D444D00884E62 /* TestCollectionUpdateSalvageItemFromDeletion.swift */; };
 		DACD0A57207D453600884E62 /* CollectionUpdateSalvageItemFromDeletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD0A56207D453600884E62 /* CollectionUpdateSalvageItemFromDeletion.swift */; };
 		DACD0A59207D51AF00884E62 /* LandingCollectionUpdateFactory+SalvageItemsFromDeletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD0A58207D51AF00884E62 /* LandingCollectionUpdateFactory+SalvageItemsFromDeletion.swift */; };
@@ -766,6 +768,8 @@
 		DAC10C56207DD4FE00975FDD /* TestLandingCollectionUpdateFactory_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete.swift; sourceTree = "<group>"; };
 		DAC10C58207DD60000975FDD /* TestCollectionUpdateDeleteSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateDeleteSections.swift; sourceTree = "<group>"; };
 		DAC10C5A207DD65400975FDD /* CollectionUpdateDeleteSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateDeleteSections.swift; sourceTree = "<group>"; };
+		DAC45AAA208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrganisePresenterCollectionDelegateDelegateProtocol.swift; sourceTree = "<group>"; };
+		DAC45AAC208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterCollectionDelegateDelegateProtocol.swift; sourceTree = "<group>"; };
 		DACD0A54207D444D00884E62 /* TestCollectionUpdateSalvageItemFromDeletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateSalvageItemFromDeletion.swift; sourceTree = "<group>"; };
 		DACD0A56207D453600884E62 /* CollectionUpdateSalvageItemFromDeletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateSalvageItemFromDeletion.swift; sourceTree = "<group>"; };
 		DACD0A58207D51AF00884E62 /* LandingCollectionUpdateFactory+SalvageItemsFromDeletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCollectionUpdateFactory+SalvageItemsFromDeletion.swift"; sourceTree = "<group>"; };
@@ -1223,6 +1227,7 @@
 				DA3A21C82089FB7900E6E583 /* OrganisePresenterCollectionDelegateProtocol.swift */,
 				DA3A21C62089FB3800E6E583 /* OrganisePresenterCollectionDelegate.swift */,
 				DA3A21FE208A578900E6E583 /* OrganisePresenterCollectionDelegate+Constants.swift */,
+				DAC45AAC208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift */,
 				DA3A21D2208A026C00E6E583 /* OrganisePresenterCollectionDatasourceProtocol.swift */,
 				DA3A21D4208A027A00E6E583 /* OrganisePresenterCollectionDatasource.swift */,
 				DA48EADF208B1A2E00434E8B /* OrganisePresenterFactoryProtocol.swift */,
@@ -1244,6 +1249,7 @@
 				DA3A21CA2089FB9300E6E583 /* MockOrganisePresenterCollectionDelegateProtocol.swift */,
 				DA3A21D0208A021C00E6E583 /* MockOrganisePresenterCollectionDatasourceProtocol.swift */,
 				DA48EADD208B19F800434E8B /* MockOrganisePresenterFactoryProtocol.swift */,
+				DAC45AAA208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift */,
 			);
 			path = Organise;
 			sourceTree = "<group>";
@@ -2178,6 +2184,7 @@
 				DA86FBE020838637005D31AF /* Thread.swift in Sources */,
 				DABC324E208893EE008BA213 /* RepositoryLocal+SaveBoard.swift in Sources */,
 				DA48EAD7208A96DB00434E8B /* LandingViewModel+Constants.swift in Sources */,
+				DAC45AAD208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */,
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
 				DAEB8190206D250000E55424 /* LandingPresenter.swift in Sources */,
 				DA2A0782206CD25B00D02D1C /* LandingViewCollectionCell+Outlets.swift in Sources */,
@@ -2392,6 +2399,7 @@
 				DA8AB2672064F41E005A393E /* TestLandingPresenterOutletsList.swift in Sources */,
 				DA3A21ED208A42AE00E6E583 /* TestOrganiseViewCollectionCell.swift in Sources */,
 				DAEA2CB0207CF21700C15653 /* MockCollectionUpdateProtocol.swift in Sources */,
+				DAC45AAB208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */,
 				DA79AF8E206A5FEA00DE73FA /* MockLandingPresenterCollectionView.swift in Sources */,
 				DA2538DE2067C5AE00EEB231 /* TestLandingViewModelLoader.swift in Sources */,
 				DA54ED642089BD8E0078AF87 /* TestApplicationNavigationController_Transitions.swift in Sources */,

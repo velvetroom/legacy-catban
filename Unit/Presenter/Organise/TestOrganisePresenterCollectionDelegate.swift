@@ -7,6 +7,7 @@ class TestOrganisePresenterCollectionDelegate:XCTestCase {
     private var index:IndexPath!
     private struct Constants {
         static let frame:CGRect = CGRect(x:0, y:0, width:100, height:100)
+        static let indexPath:IndexPath = IndexPath(item:131, section:1312)
     }
     
     override func setUp() {
@@ -28,5 +29,9 @@ class TestOrganisePresenterCollectionDelegate:XCTestCase {
         XCTAssertEqual(size.width, Constants.frame.width, "Invalid with for cell")
         XCTAssertEqual(size.height, OrganisePresenterCollectionDelegate.Constants.cellHeight,
                        "Invalid height for cell")
+    }
+    
+    func testDidSelectItem() {
+        self.presenter.collectionView(self.view, didSelectItemAt:Constants.indexPath)
     }
 }
