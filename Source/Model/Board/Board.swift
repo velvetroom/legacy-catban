@@ -30,6 +30,10 @@ class Board:BoardProtocol {
         self.projects = []
     }
     
+    func selectProjectAt(index:Int) {
+        self.project = self.projects[index]
+    }
+    
     func insertProject(project:ProjectProtocol) {
         self.projects.append(project)
     }

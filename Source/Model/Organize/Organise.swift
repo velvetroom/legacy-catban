@@ -12,4 +12,8 @@ class Organise:OrganiseProtocol {
     func reloadViewModel() {
         self.presenter.updateWith(board:self.board)
     }
+    
+    func selectProjectAt(index:Int) {
+        self.board.selectProjectAt(index:index)
+    }
 }

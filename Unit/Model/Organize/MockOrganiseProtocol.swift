@@ -3,8 +3,10 @@ import Foundation
 
 class MockOrganiseProtocol:OrganiseProtocol {
     var onReloadViewModel:(() -> Void)?
+    var onSelectProjectAtIndex:((Int) -> Void)?
     var board:BoardProtocol
     var presenter:OrganisePresenterProtocol
+    
     required init() {
         self.board = Board()
         self.presenter = OrganisePresenter()
@@ -12,5 +14,9 @@ class MockOrganiseProtocol:OrganiseProtocol {
     
     func reloadViewModel() {
         self.onReloadViewModel?()
+    }
+    
+    func selectProjectAt(index:Int) {
+        self.onSelectProjectAtIndex?(index)
     }
 }

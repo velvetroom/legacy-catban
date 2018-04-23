@@ -4,10 +4,15 @@ extension OrganiseController {
     func factoryOutlets() {
         self.configureView()
         self.factoryCollection()
+        self.configurePresenter()
     }
     
     private func configureView() {
         self.view.backgroundColor = UIColor.Shared.gray
+    }
+    
+    private func configurePresenter() {
+        self.model.presenter.collection.delegate.delegate = self
     }
     
     private func factoryCollection() {

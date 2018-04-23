@@ -5,4 +5,5 @@ protocol OrganiseProtocol:ModelProtocol {
     var presenter:OrganisePresenterProtocol { get set }
     
     func reloadViewModel()
+    func selectProjectAt(index:Int)
 }

@@ -5,6 +5,7 @@ class MockBoardProtocol:BoardProtocol {
     var onInserProject:((ProjectProtocol) -> Void)?
     var onDeleteProject:(() -> Void)?
     var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
+    var onSelectProjectAtIndex:((Int) -> Void)?
     var user:UserProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
@@ -19,6 +20,10 @@ class MockBoardProtocol:BoardProtocol {
     init() {
         self.user = User()
         self.projects = []
+    }
+    
+    func selectProjectAt(index:Int) {
+        self.onSelectProjectAtIndex?(index)
     }
     
     func insertProject(project:ProjectProtocol) {

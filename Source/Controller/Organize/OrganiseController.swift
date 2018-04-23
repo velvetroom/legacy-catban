@@ -12,8 +12,4 @@ class OrganiseController<ModelType:OrganiseProtocol>:Controller<ModelType> {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
         self.title = String.localizedOrganise(key:"OrganiseController_title")
     }
-    
-    @objc private func selectorDone(sender button:UIBarButtonItem) {
-        self.navigation?.transitionToLandingWith(board:self.model.board)
-    }
 }

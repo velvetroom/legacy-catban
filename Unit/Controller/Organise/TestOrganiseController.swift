@@ -3,6 +3,7 @@ import XCTest
 
 class TestOrganiseController:XCTestCase {
     private var controller:OrganiseController<MockOrganiseProtocol>!
+    private var navigation:MockNavigationController!
     private var model:MockOrganiseProtocol!
     private var expect:XCTestExpectation?
     private var outlets:OrganisePresenterOutlets {
@@ -13,22 +14,27 @@ class TestOrganiseController:XCTestCase {
     
     private struct Constants {
         static let wait:TimeInterval = 0.3
+        static let indexPath:IndexPath = IndexPath(item:313, section:2452)
     }
     
     override func setUp() {
         super.setUp()
         self.controller = OrganiseController<MockOrganiseProtocol>()
         self.model = MockOrganiseProtocol()
+        self.navigation = MockNavigationController()
         self.controller.model = self.model
+        self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
+        XCTAssertNotNil(self.navigation, "Failed to load navigation")
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertNotNil(self.outlets.collection, "Failed to load collection")
         XCTAssertNotNil(self.outlets.collection?.delegate, "Failed to assign delegate")
         XCTAssertNotNil(self.outlets.collection?.dataSource, "Failed to assign datasource")
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.presenter.collection.delegate.delegate, "Failed to assign delegate")
     }
     
     func testReloadViewModelOnViewDidLoad() {
@@ -38,6 +44,32 @@ class TestOrganiseController:XCTestCase {
         }
         
         XCTAssertNotNil(self.controller.view, "Unable to load view")
+        
+        self.waitExpectations()
+    }
+    
+    func testDelegateSelectCellAt() {
+        self.startExpectation()
+        self.model.onSelectProjectAtIndex = { [weak self] (index:Int) in
+            XCTAssertEqual(index, Constants.indexPath.item, "Invalid index received")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.delegateSelectCellAt(index:Constants.indexPath)
+        
+        self.waitExpectations()
+    }
+    
+    func testDelegateSelectCellAtTransitionsToLanding() {
+        self.startExpectation()
+        self.navigation.onSetControllers = { [weak self] (controllers:[UIViewController]) in
+            let controller:LandingController<Landing> = controllers.first as! LandingController<Landing>
+            XCTAssertNotNil(controller, "Invalid controller for transition")
+            XCTAssertEqual(controllers.count, 1, "Invalid transition")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.delegateSelectCellAt(index:Constants.indexPath)
         
         self.waitExpectations()
     }

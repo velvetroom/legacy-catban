@@ -1,5 +1,5 @@
 import Foundation
 
-protocol OrganisePresenterCollectionDelegateDelegateProtocol {
-    
+protocol OrganisePresenterCollectionDelegateDelegateProtocol:AnyObject {
+    func delegateSelectCellAt(index:IndexPath)
 }
