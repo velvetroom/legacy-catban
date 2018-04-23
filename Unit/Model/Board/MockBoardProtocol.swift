@@ -2,7 +2,7 @@ import Foundation
 @testable import catban
 
 class MockBoardProtocol:BoardProtocol {
-    var onInserProject:((ProjectProtocol) -> Void)?
+    var onInsertProject:((ProjectProtocol) -> Void)?
     var onDeleteProject:(() -> Void)?
     var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
     var onSelectProjectAtIndex:((Int) -> Void)?
@@ -27,7 +27,7 @@ class MockBoardProtocol:BoardProtocol {
     }
     
     func insertProject(project:ProjectProtocol) {
-        self.onInserProject?(project)
+        self.onInsertProject?(project)
     }
     
     func deleteProject() {
