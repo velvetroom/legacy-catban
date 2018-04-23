@@ -16,7 +16,7 @@ class TestLandingCollectionUpdateFactory_CreateProject:XCTestCase {
         XCTAssertNotNil(self.factory, "Failed to load factory")
     }
     
-    func testReturnsOneUpdate() {
+    func testReturnsThreeUpdates() {
         let updates:[CollectionUpdateProtocol] = self.factory.createProject()
         XCTAssertEqual(updates.count, Constants.expectedUpdates, "Invalid number of updates returned")
     }

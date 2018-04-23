@@ -2,11 +2,11 @@ import Foundation
 
 extension Landing {
     func deleteProject() throws {
-        guard
-            self.board.projects.count > Constants.minProjects
-        else { throw ErrorProject.oneProjectMinimum }
-        self.board.deleteProject()
+        let updates:[CollectionUpdateProtocol] = try self.collectionUpdateFactory.deleteProject(
+            board:self.board)
+        self.board.apply(updates:updates)
         self.reloadViewModel()
+        self.presenter.apply(updates:updates)
     }
     
     func createProject() {

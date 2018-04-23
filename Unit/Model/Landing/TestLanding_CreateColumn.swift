@@ -39,7 +39,7 @@ class TestLanding_CreateColumn:XCTestCase {
     
     func testCreateColumnGetUpdatesFromInsertColumn() {
         self.startExpectation()
-        self.updateFactory.onInsertColumnIn = { [weak self] (project:ProjectProtocol) in
+        self.updateFactory.onCreateColumnIn = { [weak self] (project:ProjectProtocol) in
             let project:MockProjectProtocol? = project as? MockProjectProtocol
             XCTAssertNotNil(project, "Invalid project received")
             self?.expect?.fulfill()

@@ -44,7 +44,7 @@ class TestLanding_CreateProject:XCTestCase {
         self.waitExpectations()
     }
     
-    func testApplyUpdatesdOnBoard() {
+    func testApplyUpdatesOnBoard() {
         self.startExpectation()
         self.board.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
             self?.expect?.fulfill()
