@@ -285,6 +285,8 @@
 		DA80303F208DFED000CCDBB1 /* CollectionUpdateOpenProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80303E208DFED000CCDBB1 /* CollectionUpdateOpenProject.swift */; };
 		DA803041208E057C00CCDBB1 /* TestCollectionUpdateCloseProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803040208E057C00CCDBB1 /* TestCollectionUpdateCloseProject.swift */; };
 		DA803043208E09CE00CCDBB1 /* TestCollectionUpdateOpenProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803042208E09CE00CCDBB1 /* TestCollectionUpdateOpenProject.swift */; };
+		DA803045208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803044208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift */; };
+		DA803047208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */; };
 		DA86FBBE20835ADA005D31AF /* LoadController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */; };
 		DA86FBC220835D86005D31AF /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC120835D86005D31AF /* TestRepository.swift */; };
 		DA86FBC420835DCA005D31AF /* MockRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */; };
@@ -706,6 +708,8 @@
 		DA80303E208DFED000CCDBB1 /* CollectionUpdateOpenProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateOpenProject.swift; sourceTree = "<group>"; };
 		DA803040208E057C00CCDBB1 /* TestCollectionUpdateCloseProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateCloseProject.swift; sourceTree = "<group>"; };
 		DA803042208E09CE00CCDBB1 /* TestCollectionUpdateOpenProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateOpenProject.swift; sourceTree = "<group>"; };
+		DA803044208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionUpdateDeleteProject.swift; sourceTree = "<group>"; };
+		DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateDeleteProject.swift; sourceTree = "<group>"; };
 		DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadController+Outlets.swift"; sourceTree = "<group>"; };
 		DA86FBC120835D86005D31AF /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -1952,6 +1956,7 @@
 				DA1A19D6208CC88900300FED /* CollectionUpdateCreateProject+Factory.swift */,
 				DA80303C208DFEC200CCDBB1 /* CollectionUpdateCloseProject.swift */,
 				DA80303E208DFED000CCDBB1 /* CollectionUpdateOpenProject.swift */,
+				DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */,
 			);
 			path = CollectionUpdate;
 			sourceTree = "<group>";
@@ -1966,6 +1971,7 @@
 				DA1A19CC208C6A7C00300FED /* TestCollectionUpdateCreateProject.swift */,
 				DA803040208E057C00CCDBB1 /* TestCollectionUpdateCloseProject.swift */,
 				DA803042208E09CE00CCDBB1 /* TestCollectionUpdateOpenProject.swift */,
+				DA803044208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift */,
 				DAEA2CAF207CF21700C15653 /* MockCollectionUpdateProtocol.swift */,
 			);
 			path = CollectionUpdate;
@@ -2100,6 +2106,7 @@
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
 				DA438785208877AB004D8559 /* Deserialiser+Cards.swift in Sources */,
 				DABC325F2088A407008BA213 /* SerialiserProtocol.swift in Sources */,
+				DA803047208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift in Sources */,
 				DA54784C207A387400F9301E /* LandingDeleteController+Constants.swift in Sources */,
 				DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */,
 				DA636FFE20810E5500C02447 /* ErrorPresenter.swift in Sources */,
@@ -2376,6 +2383,7 @@
 				DA3A21FB208A55FD00E6E583 /* MockOrganiseViewCollection.swift in Sources */,
 				DA519A7B2069408900514098 /* TestLandingViewModelOutlets.swift in Sources */,
 				DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */,
+				DA803045208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift in Sources */,
 				DA5B5A00207047AB00122EEF /* TestLanding.swift in Sources */,
 				DAEA2CB8207CF9B800C15653 /* TestLandingCollectionUpdateFactory.swift in Sources */,
 				DA3A21D1208A021C00E6E583 /* MockOrganisePresenterCollectionDatasourceProtocol.swift in Sources */,
