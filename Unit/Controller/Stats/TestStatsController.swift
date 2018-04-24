@@ -22,4 +22,23 @@ class TestStatsController:XCTestCase {
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertFalse(self.controller.title!.isEmpty, "Failed to assign controller title")
     }
+    
+    func testSelectorStats() {
+        self.startExpectation()
+        self.navigation.onSetControllers = { [weak self] (controllers:[UIViewController]) in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.selectorDone(sender:UIBarButtonItem())
+        
+        self.waitExpectations()
+    }
+    
+    private func startExpectation() {
+        self.expect = expectation(description:"Wait for expectation")
+    }
+    
+    private func waitExpectations() {
+        waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
+    }
 }

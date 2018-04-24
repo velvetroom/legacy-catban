@@ -16,7 +16,11 @@ class LandingController<ModelType:LandingProtocol>:Controller<ModelType> {
     }
     
     @objc func selectorOrganise(sender button:UIBarButtonItem) {
-        self.navigation?.transitionToOrganise(board:self.model.board)
+        self.navigation?.transitionToOrganiseWith(board:self.model.board)
+    }
+    
+    @objc func selectorStats(sender button:UIBarButtonItem) {
+        self.navigation?.transitionToStatsWith(board:self.model.board)
     }
     
     @objc func selectorEditProject(sender button:UIBarButtonItem) {

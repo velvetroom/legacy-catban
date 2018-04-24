@@ -8,7 +8,7 @@ extension LandingController {
                     UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.compose, target:self,
                                     action:#selector(self.selectorEditProject(sender:))),
                     UIBarButtonItem(title:"Stats", style:UIBarButtonItemStyle.plain, target:self,
-                                    action:#selector(self.selectorOrganise(sender:))),
+                                    action:#selector(self.selectorStats(sender:))),
                     UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.add, target:self,
                                     action:#selector(self.selectorAdd(sender:)))]
         }
