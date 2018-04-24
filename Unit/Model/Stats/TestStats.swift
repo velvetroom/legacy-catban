@@ -11,5 +11,6 @@ class TestStats:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load stats")
+        XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
     }
 }

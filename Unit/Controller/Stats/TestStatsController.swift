@@ -5,6 +5,12 @@ class TestStatsController:XCTestCase {
     private var controller:StatsController<MockStatsProtocol>!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
+    private var outlets:StatsPresenterOutlets {
+        get {
+            return self.controller.model.presenter.outlets
+        }
+    }
+    
     private struct Constants {
         static let wait:TimeInterval = 0.3
     }
@@ -20,6 +26,8 @@ class TestStatsController:XCTestCase {
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.controller.view, "Failed to load view")
+        XCTAssertNotNil(self.outlets.collection, "Failed to load collection")
+        XCTAssertNotNil(self.outlets.collection?.dataSource, "Failed to assign data source")
         XCTAssertFalse(self.controller.title!.isEmpty, "Failed to assign controller title")
     }
     
