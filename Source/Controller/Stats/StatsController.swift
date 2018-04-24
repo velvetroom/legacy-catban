@@ -4,6 +4,7 @@ class StatsController<ModelType:StatsProtocol>:Controller<ModelType> {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()
+        self.factoryOutlets()
     }
     
     @objc func selectorDone(sender button:UIBarButtonItem) {

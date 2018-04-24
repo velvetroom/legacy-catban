@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestOrganiseViewCollection:XCTestCase {
-    private var view:OrganiseViewCollection!
+class TestStatsViewCollection:XCTestCase {
+    private var view:StatsViewCollection!
     
     override func setUp() {
         super.setUp()
-        self.view = OrganiseViewCollection()
+        self.view = StatsViewCollection()
     }
     
     func testLoad() {

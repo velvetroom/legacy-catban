@@ -1,8 +1,8 @@
 import UIKit
 
-class OrganiseViewCollection:UICollectionView {
+class StatsViewCollection:UICollectionView {
     init() {
-        let layout:UICollectionViewFlowLayout = OrganiseViewCollection.factoryLayout()
+        let layout:UICollectionViewFlowLayout = StatsViewCollection.factoryLayout()
         super.init(frame:CGRect.zero, collectionViewLayout:layout)
         self.configureView()
     }
@@ -18,6 +18,7 @@ class OrganiseViewCollection:UICollectionView {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
+        self.alwaysBounceHorizontal = true
         self.register(OrganiseViewCollectionCell.self,
                       forCellWithReuseIdentifier:OrganiseViewCollectionCell.reusableIdentifier)
     }
