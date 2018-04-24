@@ -1,0 +1,5 @@
+import Foundation
+
+struct StatsViewModelCollectionItem {
+    
+}

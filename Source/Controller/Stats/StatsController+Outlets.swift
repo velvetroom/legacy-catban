@@ -12,6 +12,7 @@ extension StatsController {
     
     func factoryOutlets() {
         self.factoryCollection()
+        self.factoryPageControl()
     }
     
     private func factoryCollection() {
@@ -26,5 +27,17 @@ extension StatsController {
         viewCollection.bottomAnchor.constraint(equalTo:self.safeArea.bottomAnchor).isActive = true
         viewCollection.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
         viewCollection.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
+    }
+    
+    private func factoryPageControl() {
+        let pageControl:StatsViewPageControl = StatsViewPageControl()
+        self.outlets.pageControl = pageControl
+        
+        self.view.addSubview(pageControl)
+        
+        pageControl.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+        pageControl.bottomAnchor.constraint(equalTo:self.safeArea.bottomAnchor, constant:StatsViewModel.Constants.pageControlBottom).isActive = true
+        pageControl.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
+        pageControl.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
     }
 }

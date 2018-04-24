@@ -11,5 +11,6 @@ class TestStatsPresenterOutlets:XCTestCase {
     
     func testLoad() {
         XCTAssertNil(self.presenter.collection, "Collection should not be set by default")
+        XCTAssertNil(self.presenter.pageControl, "Page control should not be set by default")
     }
 }
