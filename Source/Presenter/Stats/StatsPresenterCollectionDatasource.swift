@@ -1,6 +1,13 @@
 import UIKit
 
 class StatsPresenterCollectionDatasource:NSObject, StatsPresenterCollectionDatasourceProtocol {
+    var viewModel:StatsViewModelCollection
+    
+    override init() {
+        self.viewModel = StatsViewModelCollection()
+        super.init()
+    }
+    
     func collectionView(_:UICollectionView, numberOfItemsInSection:Int) -> Int {
         return 0
     }

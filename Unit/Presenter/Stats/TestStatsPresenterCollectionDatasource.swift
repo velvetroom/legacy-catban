@@ -16,6 +16,7 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.presenter.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.view, "Failed to load view")
     }
     

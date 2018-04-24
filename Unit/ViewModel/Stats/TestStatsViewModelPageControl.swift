@@ -11,7 +11,6 @@ class TestStatsViewModelPageControl:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
-        XCTAssertNotNil(self.viewModel.currentPage, "Failed to load current page")
         XCTAssertNotNil(self.viewModel.numberOFPages, "Failed to load number of pages")
     }
 }
