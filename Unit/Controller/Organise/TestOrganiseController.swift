@@ -4,7 +4,6 @@ import XCTest
 class TestOrganiseController:XCTestCase {
     private var controller:OrganiseController<MockOrganiseProtocol>!
     private var navigation:MockNavigationController!
-    private var model:MockOrganiseProtocol!
     private var expect:XCTestExpectation?
     private var outlets:OrganisePresenterOutlets {
         get {
@@ -20,9 +19,7 @@ class TestOrganiseController:XCTestCase {
     override func setUp() {
         super.setUp()
         self.controller = OrganiseController<MockOrganiseProtocol>()
-        self.model = MockOrganiseProtocol()
         self.navigation = MockNavigationController()
-        self.controller.model = self.model
         self.navigation.addChildViewController(self.controller)
     }
     
@@ -33,13 +30,13 @@ class TestOrganiseController:XCTestCase {
         XCTAssertNotNil(self.outlets.collection, "Failed to load collection")
         XCTAssertNotNil(self.outlets.collection?.delegate, "Failed to assign delegate")
         XCTAssertNotNil(self.outlets.collection?.dataSource, "Failed to assign datasource")
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.presenter.collection.delegate.delegate, "Failed to assign delegate")
+        XCTAssertNotNil(self.controller.model.presenter.collection.delegate.delegate, "Failed to assign delegate")
+        XCTAssertFalse(self.controller.title!.isEmpty, "Failed to assign controller title")
     }
     
     func testReloadViewModelOnViewDidLoad() {
         self.startExpectation()
-        self.model.onReloadViewModel = { [weak self] in
+        self.controller.model.onReloadViewModel = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -50,7 +47,7 @@ class TestOrganiseController:XCTestCase {
     
     func testDelegateSelectCellAt() {
         self.startExpectation()
-        self.model.onSelectProjectAtIndex = { [weak self] (index:Int) in
+        self.controller.model.onSelectProjectAtIndex = { [weak self] (index:Int) in
             XCTAssertEqual(index, Constants.indexPath.item, "Invalid index received")
             self?.expect?.fulfill()
         }
