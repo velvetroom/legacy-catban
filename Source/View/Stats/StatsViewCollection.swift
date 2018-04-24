@@ -19,7 +19,7 @@ class StatsViewCollection:UICollectionView {
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
         self.alwaysBounceHorizontal = true
-        self.register(OrganiseViewCollectionCell.self,
-                      forCellWithReuseIdentifier:OrganiseViewCollectionCell.reusableIdentifier)
+        self.register(StatsViewCollectionCell.self,
+                      forCellWithReuseIdentifier:StatsViewCollectionCell.reusableIdentifier)
     }
 }

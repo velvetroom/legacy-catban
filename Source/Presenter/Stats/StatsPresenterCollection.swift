@@ -6,6 +6,12 @@ class StatsPresenterCollection:NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ view:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        return self.dequeueCellIn(view:view, at:index)
+    }
+    
+    private func dequeueCellIn(view:UICollectionView, at index:IndexPath) -> UICollectionViewCell {
+        let cell:StatsViewCollectionCell = view.dequeueReusableCell(
+            withReuseIdentifier:StatsViewCollectionCell.reusableIdentifier, for:index) as! StatsViewCollectionCell
+        return cell
     }
 }
