@@ -16,7 +16,8 @@ extension StatsController {
     
     private func factoryCollection() {
         let viewCollection:StatsViewCollection = StatsViewCollection()
-        viewCollection.dataSource = self.model.presenter.collection
+        viewCollection.delegate = self.model.presenter.collection.delegate
+        viewCollection.dataSource = self.model.presenter.collection.datasource
         self.outlets.collection = viewCollection
         
         self.view.addSubview(viewCollection)

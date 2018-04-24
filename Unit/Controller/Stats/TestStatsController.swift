@@ -28,6 +28,7 @@ class TestStatsController:XCTestCase {
         XCTAssertNotNil(self.controller.view, "Failed to load view")
         XCTAssertNotNil(self.outlets.collection, "Failed to load collection")
         XCTAssertNotNil(self.outlets.collection?.dataSource, "Failed to assign data source")
+        XCTAssertNotNil(self.outlets.collection?.delegate, "Failed to assign delegate")
         XCTAssertFalse(self.controller.title!.isEmpty, "Failed to assign controller title")
     }
     
