@@ -5,6 +5,7 @@ class TestStats:XCTestCase {
     private var model:Stats!
     private var presenter:MockStatsPresenterProtocol!
     private var board:Board!
+    private var expectedItems:[StatsItemProtocol.Type]!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -17,12 +18,16 @@ class TestStats:XCTestCase {
         self.presenter = MockStatsPresenterProtocol()
         self.model.presenter = self.presenter
         self.model.board = self.board
+        self.expectedItems = [
+            StatsItemCompletion.self,
+            StatsItemSpeed.self]
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load stats")
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.expectedItems, "Failed to load expected items")
     }
     
     func testReloadViewModel() {
@@ -35,6 +40,26 @@ class TestStats:XCTestCase {
         
         self.model.reloadViewModel()
         self.waitExpectations()
+    }
+    
+    func testFactory() {
+        let items:[StatsItemProtocol] = StatsProtocol.factoryItems()
+        self.validateItems(items:items)
+    }
+    
+    private func validateItems(items:[StatsItemProtocol]) {
+        for item:StatsItemProtocol in items {
+            let itemType:StatsItemProtocol.Type = type(of:item)
+            let countItems:Int = self.expectedItems.count
+            XCTAssertGreaterThan(countItems, 0, "Received more items than expected")
+            for index:Int in 0 ..< countItems {
+                if itemType == self.expectedItems[index] {
+                    self.expectedItems.remove(at:index)
+                    break
+                }
+            }
+        }
+        XCTAssertTrue(self.expectedItems.isEmpty, "There are some expected items not found")
     }
     
     private func startExpectation() {
