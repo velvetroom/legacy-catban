@@ -23,45 +23,45 @@ class TestStatsItemCompletion:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testViewModelType() {
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionProtocol
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+    func testViewType() {
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletion
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
-    func testViewModelMinColumns() {
+    func testViewMinColumns() {
         self.configureProjectWith(columns:Constants.minColumns)
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionFirstOrder
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletionFirstOrder
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
-    func testViewModelMaxColumns() {
+    func testViewMaxColumns() {
         self.configureProjectWith(columns:Constants.maxColumns)
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionThirdOrder
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletionThirdOrder
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
-    func testViewModelFirstOrder() {
+    func testViewFirstOrder() {
         self.configureProjectWith(columns:Constants.columnsFirstOrder)
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionFirstOrder
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletionFirstOrder
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
-    func testViewModelSecondOrder() {
+    func testViewSecondOrder() {
         self.configureProjectWith(columns:Constants.columnsSecondOrder)
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionSecondOrder
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletionSecondOrder
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
-    func testViewModelThirdOrder() {
+    func testViewThirdOrder() {
         self.configureProjectWith(columns:Constants.columnsThirdOrder)
-        let viewModel:StatsViewModelCollectionItemProtocol? = self.model.factoryViewModelWith(
-            project:self.project) as? StatsViewModelCollectionItemCompletionThirdOrder
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let view:StatsView? = self.model.factoryViewWith(
+            project:self.project) as? StatsViewCompletionThirdOrder
+        XCTAssertNotNil(view, "Invalid view type")
     }
     
     private func configureProjectWith(columns:Int) {

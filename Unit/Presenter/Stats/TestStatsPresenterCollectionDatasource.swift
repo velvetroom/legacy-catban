@@ -4,7 +4,7 @@ import XCTest
 class TestStatsPresenterCollectionDatasource:XCTestCase {
     private var presenter:StatsPresenterCollectionDatasource!
     private var view:MockStatsViewCollection!
-    private var inView:MockView!
+    private var inView:MockStatsView!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let indexPath:IndexPath = IndexPath(item:1, section:0)
@@ -15,11 +15,11 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
         super.setUp()
         self.presenter = StatsPresenterCollectionDatasource()
         self.view = MockStatsViewCollection()
-        self.inView = MockView()
+        self.inView = MockStatsView()
         self.view.cell.view = self.inView
         self.presenter.viewModel.items = [
-            MockStatsViewModelCollectionItemProtocol(),
-            MockStatsViewModelCollectionItemProtocol()]
+            MockStatsView(),
+            MockStatsView()]
     }
     
     func testLoad() {
@@ -43,8 +43,7 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
     
     func testConfigureCell() {
         self.startExpectation()
-        self.view.cell.onUpdateWithViewModel =
-            { [weak self] (viewModel:StatsViewModelCollectionItemProtocol) in
+        self.view.cell.onUpdateWithView = { [weak self] (viewModel:StatsView) in
             self?.expect?.fulfill()
         }
         

@@ -3,5 +3,5 @@ import Foundation
 
 class MockStatsViewModelCollectionItemCompletionProtocol:
 StatsViewModelCollectionItemCompletionProtocol {
-    
+    var view:StatsView = StatsView()
 }

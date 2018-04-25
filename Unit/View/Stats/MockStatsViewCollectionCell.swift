@@ -2,10 +2,10 @@ import Foundation
 @testable import catban
 
 class MockStatsViewCollectionCell:StatsViewCollectionCell {
-    var onUpdateWithViewModel:((StatsViewModelCollectionItemProtocol) -> Void)?
+    var onUpdateWithView:((StatsView) -> Void)?
     
-    override func updateWith(viewModel:StatsViewModelCollectionItemProtocol) {
-        self.onUpdateWithViewModel?(viewModel)
-        super.updateWith(viewModel:viewModel)
+    override func updateWith(view:StatsView) {
+        self.onUpdateWithView?(view)
+        super.updateWith(view:view)
     }
 }

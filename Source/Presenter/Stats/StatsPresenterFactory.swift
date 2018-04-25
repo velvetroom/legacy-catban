@@ -18,9 +18,8 @@ class StatsPresenterFactory:StatsPresenterFactoryProtocol {
                                        for items:[StatsItemProtocol]) -> StatsViewModelCollection {
         var viewModel:StatsViewModelCollection = StatsViewModelCollection()
         for item:StatsItemProtocol in items {
-            let viewModelItem:StatsViewModelCollectionItemProtocol = item.factoryViewModelWith(
-                project:project)
-            viewModel.items.append(viewModelItem)
+            let view:StatsView = item.factoryViewWith(project:project)
+            viewModel.items.append(view)
         }
         return viewModel
     }

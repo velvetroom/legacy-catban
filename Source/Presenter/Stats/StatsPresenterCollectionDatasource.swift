@@ -20,8 +20,8 @@ class StatsPresenterCollectionDatasource:NSObject, StatsPresenterCollectionDatas
         let cell:StatsViewCollectionCell = view.dequeueReusableCell(
             withReuseIdentifier:StatsViewCollectionCell.reusableIdentifier,
             for:index) as! StatsViewCollectionCell
-        let viewModel:StatsViewModelCollectionItemProtocol = self.viewModel.items[index.item]
-        cell.updateWith(viewModel:viewModel)
+        let view:StatsView = self.viewModel.items[index.item]
+        cell.updateWith(view:view)
         return cell
     }
 }

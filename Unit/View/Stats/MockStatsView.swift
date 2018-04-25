@@ -1,15 +1,8 @@
-import UIKit
+import Foundation
+@testable import catban
 
-class MockView:UIView {
+class MockStatsView:StatsView {
     var onRemoveFromSuperview:(() -> Void)?
-    
-    init() {
-        super.init(frame:CGRect.zero)
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
     
     override func removeFromSuperview() {
         self.onRemoveFromSuperview?()

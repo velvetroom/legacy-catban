@@ -19,10 +19,8 @@ class TestStatsPresenter:XCTestCase {
     }
     
     private struct Constants {
-        static let items:[StatsViewModelCollectionItemProtocol] = [
-            MockStatsViewModelCollectionItemProtocol(),
-            MockStatsViewModelCollectionItemProtocol(),
-            MockStatsViewModelCollectionItemProtocol()]
+        static let items:[StatsView] = [
+            MockStatsView()]
         static let wait:TimeInterval = 0.3
         static let numberOfPages:Int = 1
     }

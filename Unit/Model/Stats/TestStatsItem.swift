@@ -16,8 +16,8 @@ class TestStatsItem:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testFactoryViewModel() {
-        let viewModel:StatsViewModelCollectionItemProtocol =  self.model.factoryViewModelWith(project:self.project)
-        XCTAssertNotNil(viewModel, "Failed to create view model")
+    func testFactoryView() {
+        let view:StatsView =  self.model.factoryViewWith(project:self.project)
+        XCTAssertNotNil(view, "Failed to create view")
     }
 }

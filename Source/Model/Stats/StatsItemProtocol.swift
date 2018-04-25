@@ -1,5 +1,5 @@
 import Foundation
 
 protocol StatsItemProtocol {
-    func factoryViewModelWith(project:ProjectProtocol) -> StatsViewModelCollectionItemProtocol
+    func factoryViewWith(project:ProjectProtocol) -> StatsView
 }

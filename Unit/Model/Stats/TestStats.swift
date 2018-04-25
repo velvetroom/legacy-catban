@@ -46,6 +46,7 @@ class TestStats:XCTestCase {
     
     func testFactoryItems() {
         XCTAssertFalse(self.model.items.isEmpty, "Empty items")
+        XCTAssertEqual(self.model.items.count, self.expectedItems.count, "Failed to get expected items")
         self.validateItems(items:self.model.items)
     }
     

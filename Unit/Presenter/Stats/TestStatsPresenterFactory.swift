@@ -5,7 +5,7 @@ class TestStatsPresenterFactory:XCTestCase {
     private var factory:StatsPresenterFactory!
     private var items:[StatsItemProtocol]!
     private var board:Board!
-    private var expectedItems:[StatsViewModelCollectionItemProtocol.Type]!
+    private var expectedItems:[StatsView.Type]!
     
     override func setUp() {
         super.setUp()
@@ -13,7 +13,8 @@ class TestStatsPresenterFactory:XCTestCase {
         self.board = Board()
         self.items = Stats.factoryItems()
         self.expectedItems = [
-            StatsViewModelCollectionItemCompletionFirstOrder.self]
+            StatsViewCompletionFirstOrder.self,
+            StatsViewSpeed.self]
     }
     
     func testLoad() {
@@ -38,12 +39,14 @@ class TestStatsPresenterFactory:XCTestCase {
     func testCollectionItems() {
         let viewModel:StatsViewModel = self.factory.factoryWith(board:self.board, for:self.items)
         XCTAssertFalse(viewModel.collection.items.isEmpty, "Failed to get items")
+        XCTAssertEqual(viewModel.collection.items.count, self.expectedItems.count,
+                       "Failed to get expected items")
         self.validateItems(items:viewModel.collection.items)
     }
     
-    private func validateItems(items:[StatsViewModelCollectionItemProtocol]) {
-        for item:StatsViewModelCollectionItemProtocol in items {
-            let itemType:StatsViewModelCollectionItemProtocol.Type = type(of:item)
+    private func validateItems(items:[StatsView]) {
+        for item:StatsView in items {
+            let itemType:StatsView.Type = type(of:item)
             let count:Int = self.expectedItems.count
             for index:Int in 0 ..< count {
                 if itemType == self.expectedItems[index] {
