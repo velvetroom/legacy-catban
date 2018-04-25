@@ -6,5 +6,6 @@ class MockStatsViewCollectionCell:StatsViewCollectionCell {
     
     override func updateWith(viewModel:StatsViewModelCollectionItemProtocol) {
         self.onUpdateWithViewModel?(viewModel)
+        super.updateWith(viewModel:viewModel)
     }
 }

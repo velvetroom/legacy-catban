@@ -18,6 +18,6 @@ class StatsViewCollectionCell:UICollectionViewCell {
     
     private func configureView() {
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.blue
     }
 }

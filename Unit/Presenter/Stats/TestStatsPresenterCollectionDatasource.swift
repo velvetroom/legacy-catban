@@ -4,6 +4,7 @@ import XCTest
 class TestStatsPresenterCollectionDatasource:XCTestCase {
     private var presenter:StatsPresenterCollectionDatasource!
     private var view:MockStatsViewCollection!
+    private var inView:MockView!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let indexPath:IndexPath = IndexPath(item:1, section:0)
@@ -14,6 +15,8 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
         super.setUp()
         self.presenter = StatsPresenterCollectionDatasource()
         self.view = MockStatsViewCollection()
+        self.inView = MockView()
+        self.view.cell.view = self.inView
         self.presenter.viewModel.items = [
             MockStatsViewModelCollectionItemProtocol(),
             MockStatsViewModelCollectionItemProtocol()]
@@ -48,6 +51,18 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
         let _:UICollectionViewCell = self.presenter.collectionView(
             self.view, cellForItemAt:Constants.indexPath)
 
+        self.waitExpectations()
+    }
+    
+    func testRemoveOldView() {
+        self.startExpectation()
+        self.inView.onRemoveFromSuperview = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        let _:UICollectionViewCell = self.presenter.collectionView(
+            self.view, cellForItemAt:Constants.indexPath)
+        
         self.waitExpectations()
     }
     

@@ -17,7 +17,7 @@ class StatsViewCollection:UICollectionView {
         self.backgroundColor = UIColor.clear
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
-        self.alwaysBounceVertical = true
+        self.alwaysBounceVertical = false
         self.alwaysBounceHorizontal = true
         self.register(StatsViewCollectionCell.self,
                       forCellWithReuseIdentifier:StatsViewCollectionCell.reusableIdentifier)
