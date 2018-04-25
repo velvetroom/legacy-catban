@@ -49,12 +49,7 @@ class StatsViewCollectionLayout:UICollectionViewLayout {
     }
     
     override func layoutAttributesForItem(at index:IndexPath) -> UICollectionViewLayoutAttributes? {
-        for attributes:UICollectionViewLayoutAttributes in self.attributes {
-            if attributes.indexPath == index {
-                return attributes
-            }
-        }
-        return nil
+        return self.attributes[index.item]
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
