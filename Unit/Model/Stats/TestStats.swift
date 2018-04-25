@@ -25,6 +25,7 @@ class TestStats:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load stats")
+        XCTAssertNotNil(self.model.items, "Failed to load items")
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.expectedItems, "Failed to load expected items")
@@ -43,8 +44,7 @@ class TestStats:XCTestCase {
     }
     
     func testFactory() {
-        let items:[StatsItemProtocol] = StatsProtocol.factoryItems()
-        self.validateItems(items:items)
+        self.validateItems(items:self.model.items)
     }
     
     private func validateItems(items:[StatsItemProtocol]) {
