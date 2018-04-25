@@ -11,6 +11,7 @@
 		DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07B748207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift */; };
 		DA0D94CA2090C21400B48DC8 /* TestStatsViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D94C92090C21400B48DC8 /* TestStatsViewCollectionLayout.swift */; };
 		DA0D94CC2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D94CB2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift */; };
+		DA0D94CE2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -518,6 +519,7 @@
 		DA07B748207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenter_ApplyUpdates.swift; sourceTree = "<group>"; };
 		DA0D94C92090C21400B48DC8 /* TestStatsViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA0D94CB2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCollectionLayout.swift; sourceTree = "<group>"; };
+		DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatsViewCollectionLayoutCollection.swift; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CreateCard.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -1408,6 +1410,7 @@
 				DA4F97DB208F09D6005E4725 /* MockStatsViewCollection.swift */,
 				DA907CCF209074FA00BD4959 /* MockStatsViewCollectionCell.swift */,
 				DAEEC737208F7584001B80A3 /* MockStatsViewPageControl.swift */,
+				DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -2788,6 +2791,7 @@
 				DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */,
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,
 				DA4F97D7208F02C5005E4725 /* TestApplicationNavigationController_ModelUpdate.swift in Sources */,
+				DA0D94CE2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift in Sources */,
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */,
 				DAEEC71D208F54C2001B80A3 /* TestStatsViewModel.swift in Sources */,

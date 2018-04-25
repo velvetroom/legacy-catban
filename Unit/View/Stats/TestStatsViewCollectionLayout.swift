@@ -7,6 +7,7 @@ class TestStatsViewCollectionLayout:XCTestCase {
     override func setUp() {
         super.setUp()
         self.layout = StatsViewCollectionLayout()
+        self.layout.collectionView = nil
     }
     
     func testLoad() {
