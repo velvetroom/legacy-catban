@@ -5,5 +5,5 @@ protocol StatsPresenterProtocol {
     var collection:StatsPresenterCollection { get set }
     var factory:StatsPresenterFactoryProtocol { get set }
     
-    func updateWith(board:BoardProtocol)
+    func updateWith(board:BoardProtocol, for items:[StatsItemProtocol])
 }

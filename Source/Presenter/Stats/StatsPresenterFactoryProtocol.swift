@@ -1,5 +1,5 @@
 import Foundation
 
 protocol StatsPresenterFactoryProtocol {
-    func factoryWith(board:BoardProtocol) -> StatsViewModel
+    func factoryWith(board:BoardProtocol, for items:[StatsItemProtocol]) -> StatsViewModel
 }

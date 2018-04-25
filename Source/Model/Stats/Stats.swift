@@ -12,6 +12,6 @@ class Stats:StatsProtocol {
     }
     
     func reloadViewModel() {
-        self.presenter.updateWith(board:self.board)
+        self.presenter.updateWith(board:self.board, for:self.items)
     }
 }

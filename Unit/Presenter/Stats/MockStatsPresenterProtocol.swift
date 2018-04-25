@@ -2,7 +2,7 @@ import Foundation
 @testable import catban
 
 class MockStatsPresenterProtocol:StatsPresenterProtocol {
-    var onUpdateWidthBoard:((BoardProtocol) -> Void)?
+    var onUpdateWidthBoard:((BoardProtocol, [StatsItemProtocol]) -> Void)?
     var outlets:StatsPresenterOutlets
     var collection:StatsPresenterCollection
     var factory:StatsPresenterFactoryProtocol
@@ -13,7 +13,7 @@ class MockStatsPresenterProtocol:StatsPresenterProtocol {
         self.factory = StatsPresenterFactory()
     }
     
-    func updateWith(board:BoardProtocol) {
-        self.onUpdateWidthBoard?(board)
+    func updateWith(board:BoardProtocol, for items:[StatsItemProtocol]) {
+        self.onUpdateWidthBoard?(board, items)
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 struct StatsViewModelCollection {
-    var items:[StatsViewModelCollectionItem]
+    var items:[StatsViewModelCollectionItemProtocol]
     
     init() {
         self.items = []

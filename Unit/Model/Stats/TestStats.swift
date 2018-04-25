@@ -33,8 +33,9 @@ class TestStats:XCTestCase {
     
     func testReloadViewModel() {
         self.startExpectation()
-        self.presenter.onUpdateWidthBoard = { [weak self] (board:BoardProtocol) in
+        self.presenter.onUpdateWidthBoard = { [weak self] (board:BoardProtocol, items:[StatsItemProtocol]) in
             let board:Board = board as! Board
+            XCTAssertEqual(items.count, self?.model.items.count, "Invalid items received")
             XCTAssertTrue(board === self?.board, "Invalid board received")
             self?.expect?.fulfill()
         }
@@ -43,7 +44,8 @@ class TestStats:XCTestCase {
         self.waitExpectations()
     }
     
-    func testFactory() {
+    func testFactoryItems() {
+        XCTAssertFalse(self.model.items.isEmpty, "Empty items")
         self.validateItems(items:self.model.items)
     }
     

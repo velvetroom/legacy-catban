@@ -11,8 +11,8 @@ class StatsPresenter:StatsPresenterProtocol {
         self.factory = StatsPresenterFactory()
     }
     
-    func updateWith(board:BoardProtocol) {
-        let viewModel:StatsViewModel = self.factory.factoryWith(board:board)
+    func updateWith(board:BoardProtocol, for items:[StatsItemProtocol]) {
+        let viewModel:StatsViewModel = self.factory.factoryWith(board:board, for:items)
         self.updatePageControl(viewModel:viewModel.pageControl)
         self.updateCollection(viewModel:viewModel.collection)
     }

@@ -12,6 +12,9 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
         super.setUp()
         self.presenter = StatsPresenterCollectionDatasource()
         self.view = MockStatsViewCollection()
+        self.presenter.viewModel.items = [
+            MockStatsViewModelCollectionItemProtocol(),
+            MockStatsViewModelCollectionItemProtocol()]
     }
     
     func testLoad() {
@@ -25,5 +28,11 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
             self.view, cellForItemAt:Constants.indexPath)
         let cellStats:StatsViewCollectionCell? = cell as? StatsViewCollectionCell
         XCTAssertNotNil(cellStats, "Invalid cell type returned")
+    }
+    
+    func testNumberOfItems() {
+        let count:Int = self.presenter.collectionView(self.view, numberOfItemsInSection:0)
+        XCTAssertEqual(count, self.presenter.viewModel.items.count,
+                       "Invalid number of items returned")
     }
 }

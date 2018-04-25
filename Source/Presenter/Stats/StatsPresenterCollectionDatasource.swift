@@ -9,7 +9,7 @@ class StatsPresenterCollectionDatasource:NSObject, StatsPresenterCollectionDatas
     }
     
     func collectionView(_:UICollectionView, numberOfItemsInSection:Int) -> Int {
-        return 0
+        return self.viewModel.items.count
     }
     
     func collectionView(_ view:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
