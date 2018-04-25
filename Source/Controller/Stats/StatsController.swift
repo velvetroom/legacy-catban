@@ -1,6 +1,12 @@
 import UIKit
 
 class StatsController<ModelType:StatsProtocol>:Controller<ModelType> {
+    private var collection:StatsViewCollection? {
+        get {
+            return self.model.presenter.outlets.collection
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adjustNavigationItem()
@@ -10,6 +16,12 @@ class StatsController<ModelType:StatsProtocol>:Controller<ModelType> {
     
     @objc func selectorDone(sender button:UIBarButtonItem) {
         self.navigation?.transitionToLandingWith(board:self.model.board)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        DispatchQueue.main.async { [weak self] in
+            self?.collection?.collectionViewLayout.invalidateLayout()
+        }
     }
     
     private func adjustNavigationItem() {
