@@ -17,6 +17,8 @@ class StatsViewCollection:UICollectionView {
         self.backgroundColor = UIColor.clear
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
+        self.isPagingEnabled = true
+        self.decelerationRate = UIScrollViewDecelerationRateFast
         self.alwaysBounceVertical = true
         self.alwaysBounceHorizontal = true
         self.register(StatsViewCollectionCell.self,
