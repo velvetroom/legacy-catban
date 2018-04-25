@@ -5,6 +5,7 @@ class StatsController<ModelType:StatsProtocol>:Controller<ModelType> {
         super.viewDidLoad()
         self.adjustNavigationItem()
         self.factoryOutlets()
+        self.model.reloadViewModel()
     }
     
     @objc func selectorDone(sender button:UIBarButtonItem) {

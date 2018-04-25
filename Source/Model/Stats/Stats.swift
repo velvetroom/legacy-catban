@@ -8,4 +8,8 @@ class Stats:StatsProtocol {
         self.board = Board()
         self.presenter = StatsPresenter()
     }
+    
+    func reloadViewModel() {
+        self.presenter.updateWith(board:self.board)
+    }
 }

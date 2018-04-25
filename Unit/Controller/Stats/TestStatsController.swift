@@ -44,6 +44,17 @@ class TestStatsController:XCTestCase {
         self.waitExpectations()
     }
     
+    func testLoadViewModelOnViewDidLoad() {
+        self.startExpectation()
+        self.controller.model.onReloadViewModel = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        XCTAssertNotNil(self.controller.view, "Failed to load view")
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")
     }
