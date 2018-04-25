@@ -19,6 +19,13 @@ class StatsPresenterCollectionDatasource:NSObject, StatsPresenterCollectionDatas
     private func dequeueCellIn(view:UICollectionView, at index:IndexPath) -> UICollectionViewCell {
         let cell:StatsViewCollectionCell = view.dequeueReusableCell(
             withReuseIdentifier:StatsViewCollectionCell.reusableIdentifier, for:index) as! StatsViewCollectionCell
+        let viewModel:StatsViewModelCollectionItemProtocol = self.viewModel.items[index.item]
+        self.configure(cell:cell, with:viewModel)
         return cell
+    }
+    
+    private func configure(cell:StatsViewCollectionCell,
+                           with viewModel:StatsViewModelCollectionItemProtocol) {
+        
     }
 }

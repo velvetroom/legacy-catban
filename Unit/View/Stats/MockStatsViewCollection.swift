@@ -2,10 +2,10 @@ import UIKit
 @testable import catban
 
 class MockStatsViewCollection:StatsViewCollection {
-    var cell:StatsViewCollectionCell
+    var cell:MockStatsViewCollectionCell
     
     override init() {
-        self.cell = StatsViewCollectionCell(frame:CGRect.zero)
+        self.cell = MockStatsViewCollectionCell(frame:CGRect.zero)
         super.init()
     }
     
