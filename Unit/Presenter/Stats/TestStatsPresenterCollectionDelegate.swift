@@ -30,16 +30,4 @@ class TestStatsPresenterCollectionDelegate:XCTestCase {
         XCTAssertFalse(self.presenter.collectionView(
             self.view, shouldHighlightItemAt:Constants.indexPath), "Presenter should avoid highlight")
     }
-    
-    func testSizeWidthForItem() {
-        let size:CGSize = self.presenter.collectionView(
-            self.view, layout:self.view.collectionViewLayout, sizeForItemAt:Constants.indexPath)
-        XCTAssertEqual(size.width, Constants.frame.width, "Invalid width for item")
-    }
-    
-    func testSizeHeightForItem() {
-        let size:CGSize = self.presenter.collectionView(
-            self.view, layout:self.view.collectionViewLayout, sizeForItemAt:Constants.indexPath)
-        XCTAssertEqual(size.height, Constants.frame.height, "Invalid height for item")
-    }
 }

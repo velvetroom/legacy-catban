@@ -8,9 +8,4 @@ class StatsPresenterCollectionDelegate:NSObject, StatsPresenterCollectionDelegat
     func collectionView(_:UICollectionView, shouldHighlightItemAt:IndexPath) -> Bool {
         return false
     }
-    
-    func collectionView(_ view:UICollectionView, layout:UICollectionViewLayout,
-                        sizeForItemAt:IndexPath) -> CGSize {
-        return CGSize(width:view.frame.width, height:view.frame.height)
-    }
 }

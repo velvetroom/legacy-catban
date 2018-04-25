@@ -1,5 +1,5 @@
 import UIKit
 
-protocol StatsPresenterCollectionDelegateProtocol:UICollectionViewDelegateFlowLayout {
+protocol StatsPresenterCollectionDelegateProtocol:UICollectionViewDelegate {
     
 }

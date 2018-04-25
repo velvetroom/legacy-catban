@@ -2,7 +2,7 @@ import UIKit
 
 class StatsViewCollection:UICollectionView {
     init() {
-        let layout:UICollectionViewFlowLayout = StatsViewCollection.factoryLayout()
+        let layout:StatsViewCollectionLayout = StatsViewCollectionLayout()
         super.init(frame:CGRect.zero, collectionViewLayout:layout)
         self.configureView()
     }
