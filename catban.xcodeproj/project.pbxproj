@@ -110,6 +110,7 @@
 		DA3B7CB12091B175009CCB93 /* StatsViewCompletionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB02091B175009CCB93 /* StatsViewCompletionConstants.swift */; };
 		DA3B7CB32091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB22091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift */; };
 		DA3B7CB52091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB42091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift */; };
+		DA3B7CD52091C81E009CCB93 /* StatsViewCompletionThirdOrder+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CD42091C81E009CCB93 /* StatsViewCompletionThirdOrder+Factory.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
@@ -625,6 +626,7 @@
 		DA3B7CB02091B175009CCB93 /* StatsViewCompletionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCompletionConstants.swift; sourceTree = "<group>"; };
 		DA3B7CB22091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModelCollectionItemCompletionCircle.swift; sourceTree = "<group>"; };
 		DA3B7CB42091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewModelCollectionItemCompletionCircle.swift; sourceTree = "<group>"; };
+		DA3B7CD42091C81E009CCB93 /* StatsViewCompletionThirdOrder+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletionThirdOrder+Factory.swift"; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -1440,6 +1442,7 @@
 				DAFE7D912090B8A500A6DD41 /* StatsViewCompletionFirstOrder.swift */,
 				DAFE7D932090B8B000A6DD41 /* StatsViewCompletionSecondOrder.swift */,
 				DAFE7D952090B8BA00A6DD41 /* StatsViewCompletionThirdOrder.swift */,
+				DA3B7CD42091C81E009CCB93 /* StatsViewCompletionThirdOrder+Factory.swift */,
 				DA3B7CAC2091A701009CCB93 /* StatsViewCompletionGeneral.swift */,
 				DA3B7CAE2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift */,
 				DAFE7D972090B8C600A6DD41 /* StatsViewSpeed.swift */,
@@ -2604,6 +2607,7 @@
 				DA4F9805208F1DAB005E4725 /* StatsPresenterCollectionDelegateProtocol.swift in Sources */,
 				DAC10C55207DD41000975FDD /* LandingCollectionUpdateFactory+Delete.swift in Sources */,
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
+				DA3B7CD52091C81E009CCB93 /* StatsViewCompletionThirdOrder+Factory.swift in Sources */,
 				DA519A5D2068E6DE00514098 /* LandingViewModelCollectionLayout.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
 				DA0D94CC2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift in Sources */,

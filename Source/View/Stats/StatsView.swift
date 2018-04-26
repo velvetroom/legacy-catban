@@ -26,13 +26,21 @@ class StatsView<ViewModel:StatsViewModelCollectionItemProtocol>:UIView {
     
     func render() { }
     
+    func moveToCentre() {
+        self.context.move(to:self.centre)
+    }
+    
+    func drawFill() {
+        self.context.drawPath(using:CGPathDrawingMode.fill)
+    }
+    
     override func draw(_ rect:CGRect) {
         guard
             let context:CGContext = UIGraphicsGetCurrentContext()
         else { return }
         self.context = context
         self.size = rect.size
-        self.centre = CGPoint(x:self.size.width / 2.0, y: self.size.height / 2.0)
+        self.centre = CGPoint(x:self.size.width / 2.0, y:self.size.height / 2.0)
         self.render()
     }
 }

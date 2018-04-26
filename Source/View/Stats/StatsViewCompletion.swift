@@ -19,10 +19,10 @@ class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtoc
     func getMiddleCircleRadius() -> CGFloat { return self.middleCircleRadius }
     func getInnerCircleRadius() -> CGFloat { return self.innerCircleRadius }
     
-    func drawCircle() {
-        self.context.addArc(center:self.centre, radius:self.innerCircleRadius,
-                            startAngle:StatsViewCompletionConstants.startAngle,
-                            endAngle:StatsViewCompletionConstants.endAngle, clockwise:false)
+    func renderCircleWith(viewModel:StatsViewModelCollectionItemCompletionCircle) {
+        self.context.setFillColor(viewModel.fillColour)
+        self.renderArcWith(viewModel:viewModel)
+        self.drawFill()
     }
     
     override func draw(_ rect:CGRect) {
@@ -48,5 +48,13 @@ class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtoc
         viewGeneral.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
         viewGeneral.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         viewGeneral.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    }
+    
+    private func renderArcWith(viewModel:StatsViewModelCollectionItemCompletionCircle) {
+        guard
+            let radius:CGFloat = viewModel.radius?(self)()
+        else { return }
+        self.context.addArc(center:self.centre, radius:radius, startAngle:viewModel.startAngle,
+                            endAngle:viewModel.endAngle, clockwise:false)
     }
 }
