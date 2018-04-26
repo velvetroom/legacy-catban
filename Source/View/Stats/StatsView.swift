@@ -10,6 +10,7 @@ class StatsView:UIView {
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = UIColor.clear
+        self.isUserInteractionEnabled = false
     }
     
     required init?(coder:NSCoder) {

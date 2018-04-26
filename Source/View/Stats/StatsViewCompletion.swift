@@ -15,6 +15,11 @@ class StatsViewCompletion:StatsView {
         return nil
     }
     
+    func drawCircle() {
+        self.context.addArc(center:self.centre, radius:self.innerCircleRadius, startAngle:Constants.startAngle,
+                            endAngle:Constants.startAngle + Constants.circleRadians, clockwise:false)
+    }
+    
     override func draw(_ rect:CGRect) {
         let minSize:CGFloat = min(rect.width, rect.height)
         let halfSize:CGFloat = minSize / 2.0
