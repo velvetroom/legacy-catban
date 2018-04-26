@@ -3,7 +3,7 @@ import UIKit
 
 struct MockStatsViewModelCollectionItemCompletionProtocol:
 StatsViewModelCollectionItemCompletionProtocol {
-    var circles:[StatsViewModelCollectionItemCompletionCircle]
+    var circles:[CircleViewModel]
     
     init() {
         self.circles = []

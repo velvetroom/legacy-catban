@@ -1,7 +1,7 @@
 import Foundation
 
 struct StatsViewModelCollectionItemCompletionSecondOrder:StatsViewModelCollectionItemCompletionProtocol {
-    var circles:[StatsViewModelCollectionItemCompletionCircle]
+    var circles:[CircleViewModel]
     
     init() {
         self.circles = []

@@ -2,13 +2,13 @@ import Foundation
 
 extension StatsViewCompletionThirdOrder {
     class func factoryWith(project:ProjectProtocol) -> StatsViewCompletionThirdOrder {
+        let circles:[CircleViewModel] = factoryCirclesWith(project:project)
         let view:StatsViewCompletionThirdOrder = StatsViewCompletionThirdOrder()
-        view.viewModel.circles = circlesWith(project:project)
+        view.viewModel.circles.append(contentsOf:circles)
         return view
     }
     
-    private class func circlesWith(
-        project:ProjectProtocol) -> [StatsViewModelCollectionItemCompletionCircle] {
+    private class func factoryCirclesWith(project:ProjectProtocol) -> [CircleViewModel] {
 //        let backlogCircle:StatsViewModelCollectionItemCompletionCircle = self.backlogCircleWith(project:project)
 //        let progressCircle:StatsViewModelCollectionItemCompletionCircle = self.backlogCircleWith(project:project)
 //        let doneCircle:StatsViewModelCollectionItemCompletionCircle = self.backlogCircleWith(project:project)
