@@ -2,6 +2,6 @@ import UIKit
 
 extension StatsViewModel {
     struct Constants {
-        static let pageControlBottom:CGFloat = -10
+        static let pageControlBottom:CGFloat = -20
     }
 }

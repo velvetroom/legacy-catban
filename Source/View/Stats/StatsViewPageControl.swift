@@ -4,9 +4,9 @@ class StatsViewPageControl:UIPageControl {
     init() {
         super.init(frame:CGRect.zero)
         self.clipsToBounds = true
+        self.isUserInteractionEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.numberOfPages = 5
-        self.pageIndicatorTintColor = UIColor.Shared.gray
+        self.pageIndicatorTintColor = UIColor(white:0, alpha:0.1)
         self.currentPageIndicatorTintColor = UIColor.Shared.blue
     }
     

@@ -11,5 +11,6 @@ class TestStatsViewCompletion:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
+        XCTAssertNotNil(self.view.viewGeneral, "Failed to load general")
     }
 }
