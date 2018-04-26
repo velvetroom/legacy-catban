@@ -4,6 +4,7 @@ protocol ProjectProtocol {
     var columns:[ProjectColumn] { get set }
     var name:String { get set }
     var identifier:String { get set }
+    var totalCards:Int { get }
     
     func cardAt(indexPath:IndexPath) -> ProjectCard
     func columnAt(index:Int) -> ProjectColumn

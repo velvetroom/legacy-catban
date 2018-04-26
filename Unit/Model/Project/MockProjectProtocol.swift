@@ -20,6 +20,7 @@ class MockProjectProtocol:ProjectProtocol {
     var columns:[ProjectColumn]
     var name:String
     var identifier:String
+    var totalCards:Int
     
     init() {
         self.columns = []
@@ -29,6 +30,7 @@ class MockProjectProtocol:ProjectProtocol {
         self.returnCard = ProjectCard()
         self.returnColumn = ProjectColumn()
         self.returnIndexForColumn = 0
+        self.totalCards = 0
         self.returnReorderingIndexes = []
     }
     

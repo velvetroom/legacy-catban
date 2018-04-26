@@ -3,12 +3,13 @@ import UIKit
 class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtocol>:StatsView<ViewModel> {
     private(set) var radius:CGFloat
     private(set) weak var viewGeneral:StatsViewCompletionGeneral!
+    var totalRadians:CGFloat
     
     override init() {
         self.radius = 0
+        self.totalRadians = CircleViewModel.Constants.circleRadians
         super.init()
         self.factoryOutlets()
-        self.factoryBaseCircles()
     }
     
     required init?(coder:NSCoder) {
@@ -35,10 +36,5 @@ class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtoc
         viewGeneral.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
         viewGeneral.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         viewGeneral.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
-    }
-    
-    private func factoryBaseCircles() {
-        let circles:[CircleViewModel] = StatsViewCompletion.factoryBaseCircles()
-        self.viewModel.circles.append(contentsOf:circles)
     }
 }

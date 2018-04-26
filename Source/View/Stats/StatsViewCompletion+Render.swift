@@ -2,6 +2,7 @@ import UIKit
 
 extension StatsViewCompletion {
     func renderCircleWith(viewModel:CircleViewModel) {
+        self.moveToCentre()
         self.context.setFillColor(viewModel.fillColour)
         self.renderArcWith(viewModel:viewModel)
         self.drawFill()

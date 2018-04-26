@@ -3,6 +3,16 @@ import XCTest
 
 class TestProject:XCTestCase {
     private var project:Project!
+    private var totalCards:Int {
+        get {
+            var counter:Int = 0
+            for column:ProjectColumn in self.project.columns {
+                counter += column.cards.count
+            }
+            return counter
+        }
+    }
+    
     private struct Constants {
         static let indexPath:IndexPath = IndexPath(item:1, section:0)
         static let columnIndex:Int = 1
@@ -39,5 +49,10 @@ class TestProject:XCTestCase {
         let column:ProjectColumn = self.project.columns[Constants.columnIndex]
         let index:Int = self.project.indexFor(column:column)
         XCTAssertEqual(index, Constants.columnIndex, "Invalid index returned")
+    }
+    
+    func testTotalCards() {
+        let totalCards:Int = self.project.totalCards
+        XCTAssertEqual(totalCards, self.totalCards, "Invalid total cards")
     }
 }

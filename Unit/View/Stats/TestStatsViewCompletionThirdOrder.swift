@@ -18,9 +18,4 @@ class TestStatsViewCompletionThirdOrder:XCTestCase {
         XCTAssertNotNil(self.view, "Failed to load view")
         XCTAssertNotNil(self.project, "Failed to load project")
     }
-    
-    func testFactory() {
-        let view:StatsViewCompletionThirdOrder = StatsViewCompletionThirdOrder.factoryWith(project:self.project)
-        XCTAssertEqual(view.viewModel.circles.count, Constants.numberOfCircles, "Invalid number of circles")
-    }
 }

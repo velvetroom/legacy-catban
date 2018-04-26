@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestViewModelCircle:XCTestCase {
+class TestCircleViewModel:XCTestCase {
     private var viewModel:CircleViewModel!
     
     override func setUp() {
@@ -15,5 +15,12 @@ class TestViewModelCircle:XCTestCase {
         XCTAssertNotNil(self.viewModel.startAngle, "Failed to load angle")
         XCTAssertNotNil(self.viewModel.endAngle, "Failed to load angle")
         XCTAssertNotNil(self.viewModel.startAngle, "Failed to load angle")
+    }
+    
+    func testPercentToRadian() {
+        let wholeCircle:CGFloat = CircleViewModel.percentToRadians(percent:1)
+        let halfCircle:CGFloat = CircleViewModel.percentToRadians(percent:0.5)
+        XCTAssertEqual(wholeCircle, CircleViewModel.Constants.circleRadians, "Failed to get radians")
+        XCTAssertEqual(halfCircle, CircleViewModel.Constants.circleRadians / 2.0, "Failed to get radians")
     }
 }
