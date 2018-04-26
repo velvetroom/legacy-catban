@@ -3,6 +3,7 @@ import UIKit
 extension StatsViewCompletionThirdOrder {
     class func factoryWith(project:ProjectCompletionViewModel) -> StatsViewCompletionThirdOrder {
         let view:StatsViewCompletionThirdOrder = StatsViewCompletionThirdOrder()
+        view.viewGeneral.updateWith(viewModel:project)
         view.viewModel.circles = factoryCirclesWith(project:project)
         return view
     }

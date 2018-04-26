@@ -19,7 +19,7 @@ extension CircleViewModel {
     }
     
     private struct PrivateConstants {
-        static let outerMargin:CGFloat = 20
+        static let outerMargin:CGFloat = 40
         static let outerCirclePadding:CGFloat = 50
         static let middleCirclePadding:CGFloat = 4
     }
