@@ -327,6 +327,9 @@
 		DA73B8852092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8842092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift */; };
 		DA73B887209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B886209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift */; };
 		DA73B8892092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8882092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift */; };
+		DA73B88B2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */; };
+		DA73B88D2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */; };
+		DA73B88F2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */; };
 		DA78A983208BE10A00E5C473 /* LandingController+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A982208BE10A00E5C473 /* LandingController+Project.swift */; };
 		DA78A985208BEB1A00E5C473 /* TestLandingController_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A984208BEB1A00E5C473 /* TestLandingController_DeleteProject.swift */; };
 		DA78A987208BEE2500E5C473 /* TestLanding_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */; };
@@ -849,6 +852,9 @@
 		DA73B8842092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectCompletionViewModel+Factory.swift"; sourceTree = "<group>"; };
 		DA73B886209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCompletionViewModelStack.swift; sourceTree = "<group>"; };
 		DA73B8882092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectCompletionViewModelStack.swift; sourceTree = "<group>"; };
+		DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryBacklog.swift"; sourceTree = "<group>"; };
+		DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryProgress.swift"; sourceTree = "<group>"; };
+		DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryDone.swift"; sourceTree = "<group>"; };
 		DA78A982208BE10A00E5C473 /* LandingController+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingController+Project.swift"; sourceTree = "<group>"; };
 		DA78A984208BEB1A00E5C473 /* TestLandingController_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_DeleteProject.swift; sourceTree = "<group>"; };
 		DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_DeleteProject.swift; sourceTree = "<group>"; };
@@ -1453,6 +1459,9 @@
 				DAFE7D8F2090B89B00A6DD41 /* StatsViewCompletion.swift */,
 				DA5C58232091E1AE00A67BB4 /* StatsViewCompletion+Render.swift */,
 				DA3B7CD62091D365009CCB93 /* StatsViewCompletion+Factory.swift */,
+				DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */,
+				DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */,
+				DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */,
 				DAFE7D912090B8A500A6DD41 /* StatsViewCompletionFirstOrder.swift */,
 				DAFE7D932090B8B000A6DD41 /* StatsViewCompletionSecondOrder.swift */,
 				DAFE7D952090B8BA00A6DD41 /* StatsViewCompletionThirdOrder.swift */,
@@ -2534,6 +2543,7 @@
 				DA5B5A03207047F000122EEF /* Landing.swift in Sources */,
 				DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA27D438208A8EB3006A9732 /* ModelProtocol.swift in Sources */,
+				DA73B88F2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift in Sources */,
 				DA519A7920693F1300514098 /* LandingViewModelLoaderOutlets+Constants.swift in Sources */,
 				DA4F043D208793F800A28894 /* Serialiser.swift in Sources */,
 				DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */,
@@ -2729,6 +2739,7 @@
 				DAE8C7E7207FB12000395318 /* LandingCollectionUpdateFactory+Create.swift in Sources */,
 				DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */,
 				DA3A21EF208A42FB00E6E583 /* OrganiseViewCollectionCell.swift in Sources */,
+				DA73B88B2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift in Sources */,
 				DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA4F97F3208F116D005E4725 /* StatsPresenterOutlets.swift in Sources */,
@@ -2743,6 +2754,7 @@
 				DADE83C12070E7E80053E7A0 /* ProjectProtocol.swift in Sources */,
 				DA3A21F9208A52C300E6E583 /* OrganiseViewCollectionCell+Constants.swift in Sources */,
 				DA4F97ED208F1073005E4725 /* StatsPresenterProtocol.swift in Sources */,
+				DA73B88D2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift in Sources */,
 				DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
