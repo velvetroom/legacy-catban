@@ -1,9 +1,9 @@
 import UIKit
 
 class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtocol>:StatsView<ViewModel> {
-    private(set) var outerCircleRadius:CGFloat!
-    private(set) var middleCircleRadius:CGFloat!
-    private(set) var innerCircleRadius:CGFloat!
+    var outerCircleRadius:CGFloat!
+    var middleCircleRadius:CGFloat!
+    var innerCircleRadius:CGFloat!
     private(set) weak var viewGeneral:StatsViewCompletionGeneral!
     
     override init() {
@@ -14,6 +14,10 @@ class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtoc
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    func getOuterCircleRadius() -> CGFloat { return self.outerCircleRadius }
+    func getMiddleCircleRadius() -> CGFloat { return self.middleCircleRadius }
+    func getInnerCircleRadius() -> CGFloat { return self.innerCircleRadius }
     
     func drawCircle() {
         self.context.addArc(center:self.centre, radius:self.innerCircleRadius,
