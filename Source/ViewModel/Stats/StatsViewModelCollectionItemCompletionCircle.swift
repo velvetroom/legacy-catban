@@ -4,11 +4,12 @@ struct StatsViewModelCollectionItemCompletionCircle {
     var fillColour:CGColor
     var startAngle:CGFloat
     var endAngle:CGFloat
-    var radius:((UIView) -> () -> (CGFloat))?
+    var sustract:((StatsViewCompletionProtocol) -> () -> (CGFloat))
     
     init() {
         self.fillColour = UIColor.white.cgColor
-        self.startAngle = 0
-        self.endAngle = 0
+        self.startAngle = StatsViewCompletionConstants.startAngle
+        self.endAngle = StatsViewCompletionConstants.endAngle
+        self.radius = StatsViewCompletionProtocol.getInnerCircleRadius
     }
 }
