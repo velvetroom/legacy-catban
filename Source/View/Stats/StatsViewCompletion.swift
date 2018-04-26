@@ -1,6 +1,6 @@
 import UIKit
 
-class StatsViewCompletion:StatsView {
+class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtocol>:StatsView<ViewModel> {
     private(set) var outerCircleRadius:CGFloat!
     private(set) var middleCircleRadius:CGFloat!
     private(set) var innerCircleRadius:CGFloat!
@@ -16,16 +16,17 @@ class StatsViewCompletion:StatsView {
     }
     
     func drawCircle() {
-        self.context.addArc(center:self.centre, radius:self.innerCircleRadius, startAngle:Constants.startAngle,
-                            endAngle:Constants.startAngle + Constants.circleRadians, clockwise:false)
+        self.context.addArc(center:self.centre, radius:self.innerCircleRadius,
+                            startAngle:StatsViewCompletionConstants.startAngle,
+                            endAngle:StatsViewCompletionConstants.endAngle, clockwise:false)
     }
     
     override func draw(_ rect:CGRect) {
         let minSize:CGFloat = min(rect.width, rect.height)
         let halfSize:CGFloat = minSize / 2.0
-        self.outerCircleRadius = halfSize - Constants.outerMargin
-        self.middleCircleRadius = self.outerCircleRadius - Constants.outerCirclePadding
-        self.innerCircleRadius = self.middleCircleRadius - Constants.middleCirclePadding
+        self.outerCircleRadius = halfSize - StatsViewCompletionConstants.outerMargin
+        self.middleCircleRadius = self.outerCircleRadius - StatsViewCompletionConstants.outerCirclePadding
+        self.innerCircleRadius = self.middleCircleRadius - StatsViewCompletionConstants.middleCirclePadding
         super.draw(rect)
     }
     

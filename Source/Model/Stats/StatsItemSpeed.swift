@@ -1,7 +1,7 @@
-import Foundation
+import UIKit
 
 class StatsItemSpeed:StatsItemProtocol {
-    func factoryViewWith(project:ProjectProtocol) -> StatsView {
+    func factoryViewWith(project:ProjectProtocol) -> UIView {
         return StatsViewSpeed()
     }
 }

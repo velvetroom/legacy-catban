@@ -1,7 +1,7 @@
-import Foundation
+import UIKit
 
 struct StatsViewModelCollection {
-    var items:[StatsView]
+    var items:[UIView]
     
     init() {
         self.items = []

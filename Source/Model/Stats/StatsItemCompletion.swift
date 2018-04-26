@@ -1,7 +1,7 @@
-import Foundation
+import UIKit
 
 class StatsItemCompletion:StatsItemProtocol {
-    func factoryViewWith(project:ProjectProtocol) -> StatsView {
+    func factoryViewWith(project:ProjectProtocol) -> UIView {
         let countColumns:Int = project.columns.count
         if countColumns >= Constants.thirdOrder {
             return self.factoryThirdOrderWith(project:project)
@@ -12,15 +12,15 @@ class StatsItemCompletion:StatsItemProtocol {
         }
     }
     
-    private func factoryFirstOrderWith(project:ProjectProtocol) -> StatsView {
+    private func factoryFirstOrderWith(project:ProjectProtocol) -> UIView {
         return StatsViewCompletionFirstOrder()
     }
     
-    private func factorySecondOrderWith(project:ProjectProtocol) -> StatsView {
+    private func factorySecondOrderWith(project:ProjectProtocol) -> UIView {
         return StatsViewCompletionSecondOrder()
     }
     
-    private func factoryThirdOrderWith(project:ProjectProtocol) -> StatsView {
+    private func factoryThirdOrderWith(project:ProjectProtocol) -> UIView {
         return StatsViewCompletionThirdOrder()
     }
 }

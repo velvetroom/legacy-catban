@@ -1,11 +1,13 @@
 import UIKit
 
-class StatsView:UIView {
+class StatsView<ViewModel:StatsViewModelCollectionItemProtocol>:UIView {
+    var viewModel:ViewModel
     private(set) weak var context:CGContext!
     private(set) var size:CGSize!
     private(set) var centre:CGPoint!
     
     init() {
+        self.viewModel = ViewModel()
         super.init(frame:CGRect.zero)
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false

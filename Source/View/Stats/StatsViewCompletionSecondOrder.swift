@@ -1,5 +1,5 @@
 import Foundation
 
-class StatsViewCompletionSecondOrder:StatsViewCompletion {
+class StatsViewCompletionSecondOrder:StatsViewCompletion<StatsViewModelCollectionItemCompletionSecondOrder> {
     
 }

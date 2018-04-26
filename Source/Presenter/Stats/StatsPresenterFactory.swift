@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class StatsPresenterFactory:StatsPresenterFactoryProtocol {
     func factoryWith(board:BoardProtocol, for items:[StatsItemProtocol]) -> StatsViewModel {
@@ -18,7 +18,7 @@ class StatsPresenterFactory:StatsPresenterFactoryProtocol {
                                        for items:[StatsItemProtocol]) -> StatsViewModelCollection {
         var viewModel:StatsViewModelCollection = StatsViewModelCollection()
         for item:StatsItemProtocol in items {
-            let view:StatsView = item.factoryViewWith(project:project)
+            let view:UIView = item.factoryViewWith(project:project)
             viewModel.items.append(view)
         }
         return viewModel

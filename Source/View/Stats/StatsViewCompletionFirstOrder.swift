@@ -1,7 +1,5 @@
 import UIKit
 
-class StatsViewCompletionFirstOrder:StatsViewCompletion {
-    override func render() {
+class StatsViewCompletionFirstOrder:StatsViewCompletion<StatsViewModelCollectionItemCompletionFirstOrder> {
 
-    }
 }

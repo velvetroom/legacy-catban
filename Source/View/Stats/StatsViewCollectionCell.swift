@@ -1,7 +1,7 @@
 import UIKit
 
 class StatsViewCollectionCell:UICollectionViewCell {
-    weak var view:StatsView?
+    weak var view:UIView?
     
     override init(frame:CGRect) {
         super.init(frame:frame)
@@ -12,7 +12,7 @@ class StatsViewCollectionCell:UICollectionViewCell {
         return nil
     }
     
-    func updateWith(view:StatsView) {
+    func updateWith(view:UIView) {
         self.view?.removeFromSuperview()
         self.view = view
         self.addSubview(view)
