@@ -19,7 +19,7 @@ class TestStatsPresenter:XCTestCase {
     }
     
     private struct Constants {
-        static let items:[StatsView] = [
+        static let items:[UIView] = [
             MockStatsView()]
         static let wait:TimeInterval = 0.3
         static let numberOfPages:Int = 1

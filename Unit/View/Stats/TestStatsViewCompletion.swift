@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestStatsViewCompletion:XCTestCase {
-    private var view:StatsViewCompletion!
+    private var view:StatsViewCompletion<MockStatsViewModelCollectionItemCompletionProtocol>!
     
     override func setUp() {
         super.setUp()

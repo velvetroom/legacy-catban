@@ -17,7 +17,7 @@ class TestStatsItem:XCTestCase {
     }
     
     func testFactoryView() {
-        let view:StatsView =  self.model.factoryViewWith(project:self.project)
+        let view:UIView =  self.model.factoryViewWith(project:self.project)
         XCTAssertNotNil(view, "Failed to create view")
     }
 }

@@ -43,7 +43,7 @@ class TestStatsPresenterCollectionDatasource:XCTestCase {
     
     func testConfigureCell() {
         self.startExpectation()
-        self.view.cell.onUpdateWithView = { [weak self] (viewModel:StatsView) in
+        self.view.cell.onUpdateWithView = { [weak self] (view:UIView) in
             self?.expect?.fulfill()
         }
         

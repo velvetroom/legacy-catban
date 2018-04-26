@@ -3,12 +3,12 @@ import XCTest
 
 class TestStatsViewCollectionCell:XCTestCase {
     private var cell:StatsViewCollectionCell!
-    private var view:StatsView!
+    private var view:MockStatsView!
     
     override func setUp() {
         super.setUp()
         self.cell = StatsViewCollectionCell(frame:CGRect.zero)
-        self.view = StatsView()
+        self.view = MockStatsView()
     }
     
     func testLoad() {

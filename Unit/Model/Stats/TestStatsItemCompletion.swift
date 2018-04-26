@@ -23,12 +23,6 @@ class TestStatsItemCompletion:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testViewType() {
-        let view:StatsView? = self.model.factoryViewWith(
-            project:self.project) as? StatsViewCompletion
-        XCTAssertNotNil(view, "Invalid view type")
-    }
-    
     func testViewMinColumns() {
         self.configureProjectWith(columns:Constants.minColumns)
         let view:StatsView? = self.model.factoryViewWith(

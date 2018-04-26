@@ -1,7 +1,7 @@
-import Foundation
+import UIKit
 @testable import catban
 
-class MockStatsViewModelCollectionItemCompletionProtocol:
+struct MockStatsViewModelCollectionItemCompletionProtocol:
 StatsViewModelCollectionItemCompletionProtocol {
-    var view:StatsView = StatsView()
+
 }

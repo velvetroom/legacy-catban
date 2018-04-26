@@ -5,7 +5,7 @@ class TestStatsPresenterFactory:XCTestCase {
     private var factory:StatsPresenterFactory!
     private var items:[StatsItemProtocol]!
     private var board:Board!
-    private var expectedItems:[StatsView.Type]!
+    private var expectedItems:[UIView.Type]!
     
     override func setUp() {
         super.setUp()
@@ -44,9 +44,9 @@ class TestStatsPresenterFactory:XCTestCase {
         self.validateItems(items:viewModel.collection.items)
     }
     
-    private func validateItems(items:[StatsView]) {
-        for item:StatsView in items {
-            let itemType:StatsView.Type = type(of:item)
+    private func validateItems(items:[UIView]) {
+        for item:UIView in items {
+            let itemType:UIView.Type = type(of:item)
             let count:Int = self.expectedItems.count
             for index:Int in 0 ..< count {
                 if itemType == self.expectedItems[index] {
