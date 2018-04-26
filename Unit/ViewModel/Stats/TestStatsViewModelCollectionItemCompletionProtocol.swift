@@ -11,5 +11,6 @@ class TestStatsViewModelCollectionItemCompletionProtocol:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
+        XCTAssertNotNil(self.viewModel.circles, "Failed to load circles")
     }
 }

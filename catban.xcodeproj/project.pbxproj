@@ -108,6 +108,8 @@
 		DA3B7CAD2091A701009CCB93 /* StatsViewCompletionGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CAC2091A701009CCB93 /* StatsViewCompletionGeneral.swift */; };
 		DA3B7CAF2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CAE2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift */; };
 		DA3B7CB12091B175009CCB93 /* StatsViewCompletionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB02091B175009CCB93 /* StatsViewCompletionConstants.swift */; };
+		DA3B7CB32091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB22091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift */; };
+		DA3B7CB52091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB42091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
@@ -621,6 +623,8 @@
 		DA3B7CAC2091A701009CCB93 /* StatsViewCompletionGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCompletionGeneral.swift; sourceTree = "<group>"; };
 		DA3B7CAE2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletionGeneral+Constants.swift"; sourceTree = "<group>"; };
 		DA3B7CB02091B175009CCB93 /* StatsViewCompletionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCompletionConstants.swift; sourceTree = "<group>"; };
+		DA3B7CB22091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModelCollectionItemCompletionCircle.swift; sourceTree = "<group>"; };
+		DA3B7CB42091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewModelCollectionItemCompletionCircle.swift; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -2299,6 +2303,7 @@
 				DA48DD7920906469007EE369 /* TestStatsViewModelCollectionItemCompletionFirstOrder.swift */,
 				DA48DD7B20906474007EE369 /* TestStatsViewModelCollectionItemCompletionSecondOrder.swift */,
 				DA48DD7D2090647E007EE369 /* TestStatsViewModelCollectionItemCompletionThirdOrder.swift */,
+				DA3B7CB42091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift */,
 				DA907CC92090655F00BD4959 /* TestStatsViewModelCollectionItemSpeed.swift */,
 				DAEEC727208F6C15001B80A3 /* TestStatsViewModelPageControl.swift */,
 				DA48DD6B20905CFD007EE369 /* MockStatsViewModelCollectionItemProtocol.swift */,
@@ -2318,6 +2323,7 @@
 				DAEEC72D208F6F1B001B80A3 /* StatsViewModelCollectionItemCompletionFirstOrder.swift */,
 				DA48DD752090641C007EE369 /* StatsViewModelCollectionItemCompletionSecondOrder.swift */,
 				DA48DD7720906439007EE369 /* StatsViewModelCollectionItemCompletionThirdOrder.swift */,
+				DA3B7CB22091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift */,
 				DA907CCB209065A200BD4959 /* StatsViewModelCollectionItemSpeed.swift */,
 				DAEEC729208F6DED001B80A3 /* StatsViewModelPageControl.swift */,
 			);
@@ -2573,6 +2579,7 @@
 				DA4F97FB208F1928005E4725 /* StatsViewCollectionCell.swift in Sources */,
 				DA78A983208BE10A00E5C473 /* LandingController+Project.swift in Sources */,
 				DAEB8198206D29A200E55424 /* LandingPresenterOutlets.swift in Sources */,
+				DA3B7CB32091B566009CCB93 /* StatsViewModelCollectionItemCompletionCircle.swift in Sources */,
 				DA73A1DA2080EACA00ADC499 /* ErrorProject.swift in Sources */,
 				DA3A21C32089F31400E6E583 /* OrganisePresenterCollection.swift in Sources */,
 				DA3A21EB208A282300E6E583 /* OrganiseViewCollection+Factory.swift in Sources */,
@@ -2909,6 +2916,7 @@
 				DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */,
 				DA636FF02081020600C02447 /* TestErrorController.swift in Sources */,
 				DA48DD7C20906474007EE369 /* TestStatsViewModelCollectionItemCompletionSecondOrder.swift in Sources */,
+				DA3B7CB52091B598009CCB93 /* TestStatsViewModelCollectionItemCompletionCircle.swift in Sources */,
 				DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */,
 				DABC32612088A661008BA213 /* TestSerialiser_User.swift in Sources */,
 				DA4A69CA2085E662005AE05F /* TestFile_LoadUser.swift in Sources */,
