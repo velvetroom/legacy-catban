@@ -16,6 +16,11 @@ class StatsView:UIView {
         return nil
     }
     
+    override func layoutSubviews() {
+        self.setNeedsDisplay()
+        super.layoutSubviews()
+    }
+    
     func render() { }
     
     override func draw(_ rect:CGRect) {
