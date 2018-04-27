@@ -356,6 +356,7 @@
 		DA803047208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */; };
 		DA803049208E15DF00CCDBB1 /* TestLandingCollectionUpdateFactory_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA803048208E15DF00CCDBB1 /* TestLandingCollectionUpdateFactory_DeleteProject.swift */; };
 		DA80304B208E185E00CCDBB1 /* LandingCollectionUpdateFactory+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80304A208E185D00CCDBB1 /* LandingCollectionUpdateFactory+Constants.swift */; };
+		DA83177B2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83177A2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift */; };
 		DA86FBBE20835ADA005D31AF /* LoadController+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */; };
 		DA86FBC220835D86005D31AF /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC120835D86005D31AF /* TestRepository.swift */; };
 		DA86FBC420835DCA005D31AF /* MockRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */; };
@@ -873,6 +874,7 @@
 		DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUpdateDeleteProject.swift; sourceTree = "<group>"; };
 		DA803048208E15DF00CCDBB1 /* TestLandingCollectionUpdateFactory_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_DeleteProject.swift; sourceTree = "<group>"; };
 		DA80304A208E185D00CCDBB1 /* LandingCollectionUpdateFactory+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingCollectionUpdateFactory+Constants.swift"; sourceTree = "<group>"; };
+		DA83177A2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatsViewCompletionGeneral.swift; sourceTree = "<group>"; };
 		DA86FBBD20835ADA005D31AF /* LoadController+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadController+Outlets.swift"; sourceTree = "<group>"; };
 		DA86FBC120835D86005D31AF /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -1429,6 +1431,7 @@
 				DA907CCF209074FA00BD4959 /* MockStatsViewCollectionCell.swift */,
 				DAEEC737208F7584001B80A3 /* MockStatsViewPageControl.swift */,
 				DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */,
+				DA83177A2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -2868,6 +2871,7 @@
 				DA94B5D3207D077E00EB4324 /* TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion.swift in Sources */,
 				DA6F1B6C2073536E001248E4 /* TestWriter.swift in Sources */,
 				DA63F791206DB0BA0018F416 /* MockLandingPresenterOutlets.swift in Sources */,
+				DA83177B2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift in Sources */,
 				DA1DF9AA207CA68500B03C6E /* TestLandingController_DataSourceProtocol_Cards.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DAC45AB1208DB2DB004E1236 /* TestBoard_Select.swift in Sources */,
