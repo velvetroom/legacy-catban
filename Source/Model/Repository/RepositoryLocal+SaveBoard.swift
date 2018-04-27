@@ -2,6 +2,8 @@ import Foundation
 
 extension RepositoryLocal {
     func save(board:BoardProtocol) throws {
+        try self.file.clearProjects()
+        try self.file.createDirectories()
         try self.save(user:board.user)
         try self.save(projects:board.projects)
     }

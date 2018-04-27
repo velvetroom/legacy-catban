@@ -9,4 +9,5 @@ protocol FileProtocol {
     func save(user:Data) throws
     func save(project:Data, with identifier:String) throws
     func clearProjects() throws
+    func createDirectories() throws
 }

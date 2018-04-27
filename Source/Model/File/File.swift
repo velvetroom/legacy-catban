@@ -18,31 +18,26 @@ class File:FileProtocol {
     
     init() {
         self.directory = File.factoryDirectory()
-        self.createDirectories()
+        do { try self.createDirectories() } catch { }
     }
     
-    private func createDirectories() {
-        self.createDirectory(url:self.directory)
-        self.createDirectory(url:self.projects)
+    func createDirectories() throws {
+        try self.createDirectory(url:self.directory)
+        try self.createDirectory(url:self.projects)
     }
     
-    private func createDirectory(url:URL) {
+    private func createDirectory(url:URL) throws {
         guard
             FileManager.default.fileExists(atPath:url.path) == false
         else { return }
-        self.excludeFromBackup(url:url)
-        do {
-            try FileManager.default.createDirectory(at:url, withIntermediateDirectories:true, attributes:nil)
-        } catch { }
+        try FileManager.default.createDirectory(at:url, withIntermediateDirectories:true, attributes:nil)
+        try self.excludeFromBackup(url:url)
     }
     
-    private func excludeFromBackup(url:URL) {
+    private func excludeFromBackup(url:URL) throws {
         var url:URL = url
         var resourceValues:URLResourceValues = URLResourceValues()
         resourceValues.isExcludedFromBackup = true
-        do {
-            try url.setResourceValues(resourceValues)
-        }
-        catch { }
+        try url.setResourceValues(resourceValues)
     }
 }

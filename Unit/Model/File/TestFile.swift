@@ -28,11 +28,13 @@ class TestFile:XCTestCase {
     }
     
     func testCreateDirectory() {
+        XCTAssertNoThrow(try self.model.createDirectories())
         XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.directory.path),
                       "Failed to create directory")
     }
     
     func testCreateProjects() {
+        XCTAssertNoThrow(try self.model.createDirectories())
         XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.projects.path),
                       "Failed to create projects")
     }
