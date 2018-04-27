@@ -74,6 +74,16 @@ class TestCircleViewModelCompletion:XCTestCase {
         XCTAssertEqual(viewModel.done.cards, Constants.doneCards, "Failed to update cards")
     }
     
+    func testFactoryOneColumnShouldHaveNoDoneCards() {
+        let project:Project = Project()
+        let column:ProjectColumn = ProjectColumn()
+        let card:ProjectCard = ProjectCard()
+        column.cards.append(card)
+        project.columns.append(column)
+        let viewModel:CircleViewModelCompletion = CircleViewModelCompletion.factoryWith(project:project)
+        XCTAssertEqual(viewModel.done.cards, 0, "Failed to exclude done for only one column")
+    }
+    
     func testCardsPercent() {
         let expected:CGFloat = CGFloat(Constants.doneCards) / CGFloat(Constants.totalCards)
         let viewModel:CircleViewModelCompletionStack = CircleViewModelCompletion.stackFor(
