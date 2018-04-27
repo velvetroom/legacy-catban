@@ -46,7 +46,7 @@ class TestLanding_CreateProject:XCTestCase {
     
     func testApplyUpdatesOnBoard() {
         self.startExpectation()
-        self.board.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
             self?.expect?.fulfill()
         }
         
@@ -68,7 +68,7 @@ class TestLanding_CreateProject:XCTestCase {
     
     func testApplyUpdatesOnPresenter() {
         self.startExpectation()
-        self.presenter.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.presenter.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
             self?.expect?.fulfill()
         }
         

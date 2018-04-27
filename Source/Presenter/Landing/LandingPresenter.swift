@@ -19,12 +19,12 @@ class LandingPresenter:LandingPresenterProtocol {
         self.outlets.update(viewModel:viewModel.outlets)
     }
     
-    func apply(updates:[CollectionUpdateProtocol]) {
+    func apply(updates:[UpdateProtocol]) {
         guard
             let viewCollection:LandingViewCollection = self.viewCollection
         else { return }
         viewCollection.performBatchUpdates({
-            for update:CollectionUpdateProtocol in updates {
+            for update:UpdateProtocol in updates {
                 update.strategy(collectionView:viewCollection)
             }
         }, completion:nil)

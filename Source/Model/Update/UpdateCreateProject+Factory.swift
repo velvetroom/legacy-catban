@@ -1,6 +1,6 @@
 import Foundation
 
-extension CollectionUpdateCreateProject {
+extension UpdateCreateProject {
     class func factoryNewProject() -> ProjectProtocol {
         var project:ProjectProtocol = factoryProject()
         project.columns = factoryColumns()

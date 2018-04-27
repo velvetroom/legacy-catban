@@ -8,5 +8,5 @@ protocol BoardProtocol {
     func selectProjectAt(index:Int)
     func insertProject(project:ProjectProtocol)
     func deleteProject()
-    func apply(updates:[CollectionUpdateProtocol])
+    func apply(updates:[UpdateProtocol])
 }

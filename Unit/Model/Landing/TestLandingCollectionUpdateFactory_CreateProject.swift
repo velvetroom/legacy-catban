@@ -17,25 +17,25 @@ class TestLandingCollectionUpdateFactory_CreateProject:XCTestCase {
     }
     
     func testReturnsThreeUpdates() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createProject()
+        let updates:[UpdateProtocol] = self.factory.createProject()
         XCTAssertEqual(updates.count, Constants.expectedUpdates, "Invalid number of updates returned")
     }
     
     func testReturnsUpdateCreateProject() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createProject()
-        let update:CollectionUpdateCreateProject = updates[2] as! CollectionUpdateCreateProject
+        let updates:[UpdateProtocol] = self.factory.createProject()
+        let update:UpdateCreateProject = updates[2] as! UpdateCreateProject
         XCTAssertNotNil(update, "Invalid update received")
     }
     
     func testReturnsUpdateClose() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createProject()
-        let update:CollectionUpdateCloseProject = updates[0] as! CollectionUpdateCloseProject
+        let updates:[UpdateProtocol] = self.factory.createProject()
+        let update:UpdateCloseProject = updates[0] as! UpdateCloseProject
         XCTAssertNotNil(update, "Invalid update received")
     }
     
     func testReturnsUpdateOpen() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createProject()
-        let update:CollectionUpdateOpenProject = updates[1] as! CollectionUpdateOpenProject
+        let updates:[UpdateProtocol] = self.factory.createProject()
+        let update:UpdateOpenProject = updates[1] as! UpdateOpenProject
         XCTAssertNotNil(update, "Invalid update received")
         XCTAssertFalse(update.indexSet.isEmpty, "Failed to update indexset")
     }

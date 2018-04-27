@@ -20,7 +20,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:0)
         
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:0, in:self.project))
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
@@ -30,7 +30,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:0)
         self.addColumnWith(cards:0)
         
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:1, in:self.project))
         
         XCTAssertTrue(updates.isEmpty, "Updates should be empty when no card is on column")
@@ -43,7 +43,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:3)
         let previous:Int = self.project.columns[1].cards.count
         
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:column, in:self.project))
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
@@ -57,7 +57,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.addColumnWith(cards:cards)
         let previous:Int = self.project.columns[0].cards.count
         
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.salvageItemsFromColumn(index:column, in:self.project))
         
         XCTAssertEqual(updates.count, cards, "Updates should be equal to cards")
@@ -72,7 +72,7 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.project.columns.append(column)
     }
     
-    private func validate(updates:[CollectionUpdateProtocol], with column:Int, previous size:Int) {
+    private func validate(updates:[UpdateProtocol], with column:Int, previous size:Int) {
         self.validateOriginItem(updates:updates)
         self.validateOriginColumn(updates:updates, with:column)
         self.validateDestinationBeforeUpdateItem(updates:updates, previous:size)
@@ -82,43 +82,43 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
         self.validateOriginItemIsLessThanPreviousItem(updates:updates)
     }
     
-    private func validateOriginItem(updates:[CollectionUpdateProtocol]) {
+    private func validateOriginItem(updates:[UpdateProtocol]) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.origin.item, count - (index + 1), "Invalid origin item")
         }
     }
     
-    private func validateOriginColumn(updates:[CollectionUpdateProtocol], with column:Int) {
+    private func validateOriginColumn(updates:[UpdateProtocol], with column:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.origin.section, column, "Invalid origin column")
         }
     }
     
-    private func validateDestinationBeforeUpdateItem(updates:[CollectionUpdateProtocol], previous size:Int) {
+    private func validateDestinationBeforeUpdateItem(updates:[UpdateProtocol], previous size:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.destinationBeforeUpdate.item, index + size, "Invalid destination item")
         }
     }
     
-    private func validateDestinationAfterUpdateItem(updates:[CollectionUpdateProtocol], previous size:Int) {
+    private func validateDestinationAfterUpdateItem(updates:[UpdateProtocol], previous size:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.destinationAfterUpdate.item, index + size, "Invalid destination item")
         }
     }
     
-    private func validateDestinationBeforeUpdateColumn(updates:[CollectionUpdateProtocol], with column:Int) {
+    private func validateDestinationBeforeUpdateColumn(updates:[UpdateProtocol], with column:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
             let expectedColumn:Int
@@ -127,13 +127,13 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
             } else {
                 expectedColumn = column - 1
             }
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.destinationBeforeUpdate.section, expectedColumn, "Invalid destination column")
         }
     }
     
-    private func validateDestinationAfterUpdateColumn(updates:[CollectionUpdateProtocol], with column:Int) {
+    private func validateDestinationAfterUpdateColumn(updates:[UpdateProtocol], with column:Int) {
         let count:Int = updates.count
         for index:Int in 0 ..< count {
             let expectedColumn:Int
@@ -142,18 +142,18 @@ class TestLandingCollectionUpdateFactory_SalvageItemsFromDeletion:XCTestCase {
             } else {
                 expectedColumn = column - 1
             }
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             XCTAssertEqual(update.destinationAfterUpdate.section, expectedColumn, "Invalid destination column")
         }
     }
     
-    private func validateOriginItemIsLessThanPreviousItem(updates:[CollectionUpdateProtocol]) {
+    private func validateOriginItemIsLessThanPreviousItem(updates:[UpdateProtocol]) {
         let count:Int = updates.count
         var previousOriginItem:Int?
         for index:Int in 0 ..< count {
-            let update:CollectionUpdateSalvageItemFromDeletion = updates[index]
-                as! CollectionUpdateSalvageItemFromDeletion
+            let update:UpdateSalvageItemFromDeletion = updates[index]
+                as! UpdateSalvageItemFromDeletion
             if let previousItem:Int = previousOriginItem {
                 XCTAssertLessThan(update.origin.item, previousItem,
                                   "Moving item should be lower than previous moving item")

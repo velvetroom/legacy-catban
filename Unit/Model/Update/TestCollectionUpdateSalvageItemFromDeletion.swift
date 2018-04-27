@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
-    private var update:CollectionUpdateSalvageItemFromDeletion!
+    private var update:UpdateSalvageItemFromDeletion!
     private var view:MockLandingViewCollection!
     private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
@@ -16,7 +16,7 @@ class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateSalvageItemFromDeletion()
+        self.update = UpdateSalvageItemFromDeletion()
         self.view = MockLandingViewCollection()
         self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()

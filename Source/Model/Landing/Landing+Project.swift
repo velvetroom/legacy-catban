@@ -2,7 +2,7 @@ import Foundation
 
 extension Landing {
     func deleteProject() throws {
-        let updates:[CollectionUpdateProtocol] = try self.collectionUpdateFactory.deleteProject(
+        let updates:[UpdateProtocol] = try self.collectionUpdateFactory.deleteProject(
             board:self.board)
         self.board.apply(updates:updates)
         self.reloadViewModel()
@@ -10,7 +10,7 @@ extension Landing {
     }
     
     func createProject() {
-        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.createProject()
+        let updates:[UpdateProtocol] = self.collectionUpdateFactory.createProject()
         self.board.apply(updates:updates)
         self.reloadViewModel()
         self.presenter.apply(updates:updates)

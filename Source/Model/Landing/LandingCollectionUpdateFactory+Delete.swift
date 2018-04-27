@@ -1,25 +1,25 @@
 import Foundation
 
 extension LandingCollectionUpdateFactory {
-    func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
+    func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         guard
             project.columns.count > Constants.minColumns
         else { throw ErrorProject.oneColumnMinimum }
-        let update:CollectionUpdateDeleteSections = CollectionUpdateDeleteSections()
+        let update:UpdateDeleteSections = UpdateDeleteSections()
         update.index = index
         return [update]
     }
     
-    func deleteProject(board:BoardProtocol) throws -> [CollectionUpdateProtocol] {
+    func deleteProject(board:BoardProtocol) throws -> [UpdateProtocol] {
         guard
             board.projects.count > Constants.minProjects,
             let newCurrent:ProjectProtocol = self.firstProjectDifferentThanCurrent(board:board)
         else { throw ErrorProject.oneProjectMinimum }
-        let delete:CollectionUpdateDeleteProject = CollectionUpdateDeleteProject()
-        let close:CollectionUpdateCloseProject = CollectionUpdateCloseProject()
-        let open:CollectionUpdateOpenProject = CollectionUpdateOpenProject()
+        let delete:UpdateDeleteProject = UpdateDeleteProject()
+        let close:UpdateCloseProject = UpdateCloseProject()
+        let open:UpdateOpenProject = UpdateOpenProject()
         open.updateIndexWith(project:newCurrent)
-        let updates:[CollectionUpdateProtocol] = [
+        let updates:[UpdateProtocol] = [
             close,
             open,
             delete]

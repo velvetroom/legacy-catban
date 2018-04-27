@@ -4,7 +4,7 @@ import Foundation
 class MockBoardProtocol:BoardProtocol {
     var onInsertProject:((ProjectProtocol) -> Void)?
     var onDeleteProject:(() -> Void)?
-    var onApplyUpdates:(([CollectionUpdateProtocol]) -> Void)?
+    var onApplyUpdates:(([UpdateProtocol]) -> Void)?
     var onSelectProjectAtIndex:((Int) -> Void)?
     var user:UserProtocol
     var projects:[ProjectProtocol]
@@ -34,7 +34,7 @@ class MockBoardProtocol:BoardProtocol {
         self.onDeleteProject?()
     }
     
-    func apply(updates:[CollectionUpdateProtocol]) {
+    func apply(updates:[UpdateProtocol]) {
         self.onApplyUpdates?(updates)
     }
 }

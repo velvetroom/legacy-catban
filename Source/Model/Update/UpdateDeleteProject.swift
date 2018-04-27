@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionUpdateDeleteProject:CollectionUpdateProtocol {
+class UpdateDeleteProject:UpdateProtocol {
     func strategy(board:BoardProtocol) {
         board.deleteProject()
     }

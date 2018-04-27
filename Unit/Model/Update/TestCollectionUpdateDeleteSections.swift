@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestCollectionUpdateDeleteSections:XCTestCase {
-    private var update:CollectionUpdateDeleteSections!
+    private var update:UpdateDeleteSections!
     private var view:MockLandingViewCollection!
     private var board:Board!
     private var project:MockProjectProtocol!
@@ -14,7 +14,7 @@ class TestCollectionUpdateDeleteSections:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateDeleteSections()
+        self.update = UpdateDeleteSections()
         self.view = MockLandingViewCollection()
         self.board = Board()
         self.project = MockProjectProtocol()

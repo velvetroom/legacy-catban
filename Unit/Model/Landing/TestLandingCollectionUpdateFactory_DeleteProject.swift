@@ -41,29 +41,29 @@ class TestLandingCollectionUpdateFactory_DeleteProject:XCTestCase {
     }
     
     func testReturnsThreeUpdates() {
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         do { try updates = self.factory.deleteProject(board:self.board) } catch { }
         XCTAssertEqual(updates.count, Constants.expectedUpdates, "Invalid number of updates returned")
     }
     
     func testReturnsUpdateDeleteProject() {
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         do { try updates = self.factory.deleteProject(board:self.board) } catch { }
-        let update:CollectionUpdateDeleteProject = updates[2] as! CollectionUpdateDeleteProject
+        let update:UpdateDeleteProject = updates[2] as! UpdateDeleteProject
         XCTAssertNotNil(update, "Invalid update received")
     }
     
     func testReturnsUpdateClose() {
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         do { try updates = self.factory.deleteProject(board:self.board) } catch { }
-        let update:CollectionUpdateCloseProject = updates[0] as! CollectionUpdateCloseProject
+        let update:UpdateCloseProject = updates[0] as! UpdateCloseProject
         XCTAssertNotNil(update, "Invalid update received")
     }
     
     func testReturnsUpdateOpen() {
-        var updates:[CollectionUpdateProtocol] = []
+        var updates:[UpdateProtocol] = []
         do { try updates = self.factory.deleteProject(board:self.board) } catch { }
-        let update:CollectionUpdateOpenProject = updates[1] as! CollectionUpdateOpenProject
+        let update:UpdateOpenProject = updates[1] as! UpdateOpenProject
         XCTAssertNotNil(update, "Invalid update received")
         XCTAssertFalse(update.indexSet.isEmpty, "Failed to update indexset")
     }

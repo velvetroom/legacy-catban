@@ -43,8 +43,8 @@ class Board:BoardProtocol {
         self.project = self.projects[0]
     }
     
-    func apply(updates:[CollectionUpdateProtocol]) {
-        for update:CollectionUpdateProtocol in updates {
+    func apply(updates:[UpdateProtocol]) {
+        for update:UpdateProtocol in updates {
             update.strategy(board:self)
         }
     }

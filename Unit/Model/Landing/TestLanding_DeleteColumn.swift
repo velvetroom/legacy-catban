@@ -39,7 +39,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testDeleteCallsModel() {
         self.startExpectation()
-        self.board.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
             self?.validate(updates:updates)
             self?.expect?.fulfill()
         }
@@ -51,7 +51,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     
     func testDeleteCallsPresenter() {
         self.startExpectation()
-        self.presenter.onApplyUpdates = { [weak self] (updates:[CollectionUpdateProtocol]) in
+        self.presenter.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
             self?.validate(updates:updates)
             self?.expect?.fulfill()
         }
@@ -101,14 +101,14 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.waitExpectation()
     }
     
-    private func validate(updates:[CollectionUpdateProtocol]) {
-        var expected:[CollectionUpdateProtocol] = []
+    private func validate(updates:[UpdateProtocol]) {
+        var expected:[UpdateProtocol] = []
         XCTAssertNoThrow(try expected = self.model.updatesForDeleteColumnAt(index:Constants.column))
         let countExpected:Int = expected.count
         XCTAssertEqual(updates.count, countExpected, "Invalid amount of updates")
         for index:Int in 0 ..< countExpected {
-            let expectedType:CollectionUpdateProtocol.Type = type(of:expected[index])
-            let updateType:CollectionUpdateProtocol.Type = type(of:updates[index])
+            let expectedType:UpdateProtocol.Type = type(of:expected[index])
+            let updateType:UpdateProtocol.Type = type(of:updates[index])
             XCTAssertTrue(expectedType == updateType, "Invalid update")
         }
     }

@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestCollectionUpdateCreateProject:XCTestCase {
-    private var update:CollectionUpdateCreateProject!
+    private var update:UpdateCreateProject!
     private var view:MockLandingViewCollection!
     private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
@@ -13,7 +13,7 @@ class TestCollectionUpdateCreateProject:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateCreateProject()
+        self.update = UpdateCreateProject()
         self.view = MockLandingViewCollection()
         self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()

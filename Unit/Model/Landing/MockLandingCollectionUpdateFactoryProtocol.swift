@@ -8,27 +8,27 @@ class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryP
     var onCreateColumnIn:((ProjectProtocol) -> Void)?
     var onDeleteProject:((BoardProtocol) -> Void)?
     
-    func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
+    func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         self.onDeleteColumnAtIndex?(index, project)
         return []
     }
     
-    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         self.onMovingItemsFromColumn?(index, project)
         return []
     }
     
-    func createColumnIn(project:ProjectProtocol) -> [CollectionUpdateProtocol] {
+    func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol] {
         self.onCreateColumnIn?(project)
         return []
     }
     
-    func createProject() -> [CollectionUpdateProtocol] {
+    func createProject() -> [UpdateProtocol] {
         self.onCreateProject?()
         return []
     }
     
-    func deleteProject(board:BoardProtocol) throws -> [CollectionUpdateProtocol] {
+    func deleteProject(board:BoardProtocol) throws -> [UpdateProtocol] {
         self.onDeleteProject?(board)
         return []
     }

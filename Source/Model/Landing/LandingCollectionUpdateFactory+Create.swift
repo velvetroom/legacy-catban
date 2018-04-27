@@ -1,18 +1,18 @@
 import Foundation
 
 extension LandingCollectionUpdateFactory {
-    func createColumnIn(project:ProjectProtocol) -> [CollectionUpdateProtocol] {
-        let update:CollectionUpdateCreateSections = CollectionUpdateCreateSections()
+    func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol] {
+        let update:UpdateCreateSections = UpdateCreateSections()
         update.section = project.columns.count
         return [update]
     }
     
-    func createProject() -> [CollectionUpdateProtocol] {
-        let create:CollectionUpdateCreateProject = CollectionUpdateCreateProject()
-        let close:CollectionUpdateCloseProject = CollectionUpdateCloseProject()
-        let open:CollectionUpdateOpenProject = CollectionUpdateOpenProject()
+    func createProject() -> [UpdateProtocol] {
+        let create:UpdateCreateProject = UpdateCreateProject()
+        let close:UpdateCloseProject = UpdateCloseProject()
+        let open:UpdateOpenProject = UpdateOpenProject()
         open.updateIndexWith(project:create.project)
-        let updates:[CollectionUpdateProtocol] = [
+        let updates:[UpdateProtocol] = [
             close,
             open,
             create]

@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionUpdateOpenProject:CollectionUpdateProtocol {
+class UpdateOpenProject:UpdateProtocol {
     var indexSet:IndexSet
     
     init() {

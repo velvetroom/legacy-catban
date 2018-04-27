@@ -1,10 +1,10 @@
 import UIKit
 
-class CollectionUpdateCreateProject:CollectionUpdateProtocol {
+class UpdateCreateProject:UpdateProtocol {
     var project:ProjectProtocol
     
     init() {
-        self.project = CollectionUpdateCreateProject.factoryNewProject()
+        self.project = UpdateCreateProject.factoryNewProject()
     }
     
     func strategy(board:BoardProtocol) {

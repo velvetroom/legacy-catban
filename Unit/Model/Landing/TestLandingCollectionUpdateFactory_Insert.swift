@@ -17,27 +17,27 @@ class TestLandingCollectionUpdateFactory_Insert:XCTestCase {
     }
     
     func testInsertColumnsReturnsOneUpdate() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createColumnIn(project:self.project)
+        let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
         XCTAssertEqual(updates.count, 1, "There should be exactly 1 update")
     }
     
     func testInsertColumnsReturnsInsertSectionsUpdate() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:CollectionUpdateCreateSections? = updates.first as? CollectionUpdateCreateSections
+        let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
+        let first:UpdateCreateSections? = updates.first as? UpdateCreateSections
         XCTAssertNotNil(first, "Returned update is not a type insert sections")
     }
     
     func testInsertColumnsOnEmptyProject() {
-        let updates:[CollectionUpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:CollectionUpdateCreateSections = updates.first as! CollectionUpdateCreateSections
+        let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
+        let first:UpdateCreateSections = updates.first as! UpdateCreateSections
         XCTAssertEqual(first.section, 0, "Invalid index for new section")
     }
     
     func testInsertColumnsOnNonEmptyProject() {
         self.project.columns.append(ProjectColumn())
         self.project.columns.append(ProjectColumn())
-        let updates:[CollectionUpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:CollectionUpdateCreateSections = updates.first as! CollectionUpdateCreateSections
+        let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
+        let first:UpdateCreateSections = updates.first as! UpdateCreateSections
         XCTAssertEqual(first.section, 2, "Invalid index for new section")
     }
 }

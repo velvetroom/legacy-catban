@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionUpdateDeleteSections:CollectionUpdateProtocol {
+class UpdateDeleteSections:UpdateProtocol {
     var index:Int
     
     init() {

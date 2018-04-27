@@ -15,24 +15,24 @@ extension Landing {
     }
     
     func createColumn() {
-        let updates:[CollectionUpdateProtocol] = self.collectionUpdateFactory.createColumnIn(project:self.project)
+        let updates:[UpdateProtocol] = self.collectionUpdateFactory.createColumnIn(project:self.project)
         self.board.apply(updates:updates)
         self.reloadViewModel()
         self.presenter.apply(updates:updates)
     }
     
     func deleteColumnAndMoveCardsAt(index:Int) throws {
-        let updates:[CollectionUpdateProtocol] = try self.updatesForDeleteColumnAt(index:index)
+        let updates:[UpdateProtocol] = try self.updatesForDeleteColumnAt(index:index)
         self.board.apply(updates:updates)
         self.reloadViewModel()
         self.presenter.apply(updates:updates)
     }
     
-    func updatesForDeleteColumnAt(index:Int) throws -> [CollectionUpdateProtocol] {
-        var updates:[CollectionUpdateProtocol] = []
-        let moveUpdates:[CollectionUpdateProtocol] = try self.collectionUpdateFactory.salvageItemsFromColumn(
+    func updatesForDeleteColumnAt(index:Int) throws -> [UpdateProtocol] {
+        var updates:[UpdateProtocol] = []
+        let moveUpdates:[UpdateProtocol] = try self.collectionUpdateFactory.salvageItemsFromColumn(
             index:index, in:self.project)
-        let deleteUpdates:[CollectionUpdateProtocol] = try self.collectionUpdateFactory.deleteColumnAt(
+        let deleteUpdates:[UpdateProtocol] = try self.collectionUpdateFactory.deleteColumnAt(
             index:index, in:self.project)
         updates.append(contentsOf:moveUpdates)
         updates.append(contentsOf:deleteUpdates)

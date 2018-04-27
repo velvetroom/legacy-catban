@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestCollectionUpdateDeleteProject:XCTestCase {
-    private var update:CollectionUpdateDeleteProject!
+    private var update:UpdateDeleteProject!
     private var board:MockBoardProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -11,7 +11,7 @@ class TestCollectionUpdateDeleteProject:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = CollectionUpdateDeleteProject()
+        self.update = UpdateDeleteProject()
         self.board = MockBoardProtocol()
     }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 extension LandingCollectionUpdateFactory {
-    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [CollectionUpdateProtocol] {
+    func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         guard
             project.columns.count > 1
         else { throw ErrorProject.oneColumnMinimum }
@@ -25,15 +25,15 @@ extension LandingCollectionUpdateFactory {
     }
     
     private func updatesMovingFrom(origin:Int,
-                                   in project:ProjectProtocol) -> [CollectionUpdateSalvageItemFromDeletion] {
+                                   in project:ProjectProtocol) -> [UpdateSalvageItemFromDeletion] {
         let destination:Int = self.hostColumnForMovingCardsFrom(index:origin, in:project)
         let destinationAfterUpdate:Int = self.columnDestinationAfterUpdateFrom(index:origin)
         let hostSize:Int = project.columns[destination].cards.count
         let countItems:Int = project.columns[origin].cards.count
-        var updates:[CollectionUpdateSalvageItemFromDeletion] = []
+        var updates:[UpdateSalvageItemFromDeletion] = []
         for index:Int in 0 ..< countItems {
             let removeIndex:Int = countItems - (index + 1)
-            let update:CollectionUpdateSalvageItemFromDeletion = CollectionUpdateSalvageItemFromDeletion()
+            let update:UpdateSalvageItemFromDeletion = UpdateSalvageItemFromDeletion()
             update.origin = IndexPath(item:removeIndex, section:origin)
             update.destinationBeforeUpdate = IndexPath(item:index + hostSize, section:destination)
             update.destinationAfterUpdate = IndexPath(item:index + hostSize, section:destinationAfterUpdate)

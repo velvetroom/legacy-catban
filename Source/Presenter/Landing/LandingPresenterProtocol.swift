@@ -5,7 +5,7 @@ protocol LandingPresenterProtocol {
     var collection:LandingPresenterCollectionProtocol { get set }
     
     func update(viewModel:LandingViewModel)
-    func apply(updates:[CollectionUpdateProtocol])
+    func apply(updates:[UpdateProtocol])
     func updateColumnAt(index:Int)
     func updateCardAt(index:IndexPath)
     func insertCardAt(index:IndexPath)
