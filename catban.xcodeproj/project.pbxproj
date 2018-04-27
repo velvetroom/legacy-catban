@@ -13,6 +13,11 @@
 		DA0D94CC2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D94CB2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift */; };
 		DA0D94CE2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */; };
 		DA0DB1852093538900B2F963 /* TestLanding_History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB1842093538900B2F963 /* TestLanding_History.swift */; };
+		DA0DB18720935A8900B2F963 /* TestBoardRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB18620935A8900B2F963 /* TestBoardRespository.swift */; };
+		DA0DB18920935AB300B2F963 /* MockBoardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB18820935AB300B2F963 /* MockBoardRepositoryProtocol.swift */; };
+		DA0DB18B20935B2200B2F963 /* BoardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB18A20935B2200B2F963 /* BoardRepositoryProtocol.swift */; };
+		DA0DB18D20935B2B00B2F963 /* BoardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB18C20935B2B00B2F963 /* BoardRepository.swift */; };
+		DA0DB18F20935EA900B2F963 /* BoardRepository+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DB18E20935EA900B2F963 /* BoardRepository+Constants.swift */; };
 		DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */; };
 		DA16043C207695F60096EFE1 /* TestLanding_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */; };
 		DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA16043D2076994B0096EFE1 /* Project+Columns.swift */; };
@@ -547,6 +552,11 @@
 		DA0D94CB2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCollectionLayout.swift; sourceTree = "<group>"; };
 		DA0D94CD2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatsViewCollectionLayoutCollection.swift; sourceTree = "<group>"; };
 		DA0DB1842093538900B2F963 /* TestLanding_History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_History.swift; sourceTree = "<group>"; };
+		DA0DB18620935A8900B2F963 /* TestBoardRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoardRespository.swift; sourceTree = "<group>"; };
+		DA0DB18820935AB300B2F963 /* MockBoardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA0DB18A20935B2200B2F963 /* BoardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA0DB18C20935B2B00B2F963 /* BoardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRepository.swift; sourceTree = "<group>"; };
+		DA0DB18E20935EA900B2F963 /* BoardRepository+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Constants.swift"; sourceTree = "<group>"; };
 		DA160439207693CE0096EFE1 /* TestLandingController_AddDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController_AddDelegate.swift; sourceTree = "<group>"; };
 		DA16043B207695F60096EFE1 /* TestLanding_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CreateCard.swift; sourceTree = "<group>"; };
 		DA16043D2076994B0096EFE1 /* Project+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -1748,6 +1758,9 @@
 				DA6EBE7F208244BA004B639E /* BoardProtocol.swift */,
 				DA6EBE83208244FF004B639E /* Board.swift */,
 				DAEAA13520847878003769B7 /* Board+Factory.swift */,
+				DA0DB18A20935B2200B2F963 /* BoardRepositoryProtocol.swift */,
+				DA0DB18C20935B2B00B2F963 /* BoardRepository.swift */,
+				DA0DB18E20935EA900B2F963 /* BoardRepository+Constants.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -1778,7 +1791,9 @@
 				DA78A98A208BF56A00E5C473 /* TestBoard_DeleteProject.swift */,
 				DA1A19D0208C7E9A00300FED /* TestBoard_Updates.swift */,
 				DAC45AB0208DB2DB004E1236 /* TestBoard_Select.swift */,
+				DA0DB18620935A8900B2F963 /* TestBoardRespository.swift */,
 				DA6EBE81208244D8004B639E /* MockBoardProtocol.swift */,
+				DA0DB18820935AB300B2F963 /* MockBoardRepositoryProtocol.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -2603,6 +2618,7 @@
 				DA391AE4207751D400484273 /* LandingAddProtocol.swift in Sources */,
 				DA391AE02077507E00484273 /* LandingAddPresenter.swift in Sources */,
 				DA1A19C9208C689500300FED /* Landing+Project.swift in Sources */,
+				DA0DB18B20935B2200B2F963 /* BoardRepositoryProtocol.swift in Sources */,
 				DA519A7720693E1000514098 /* LandingViewModelLoaderOutlets.swift in Sources */,
 				DA48DD6020904A3C007EE369 /* StatsItemProtocol.swift in Sources */,
 				DA1604402076996E0096EFE1 /* Project+Cards.swift in Sources */,
@@ -2755,6 +2771,8 @@
 				DADC535620933E830048FF1D /* History+Cards.swift in Sources */,
 				DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */,
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
+				DA0DB18D20935B2B00B2F963 /* BoardRepository.swift in Sources */,
+				DA0DB18F20935EA900B2F963 /* BoardRepository+Constants.swift in Sources */,
 				DAEA2CBA207CFA1400C15653 /* UpdateFactoryProtocol.swift in Sources */,
 				DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */,
 				DA6EBE6E20822042004B639E /* LandingController+Error.swift in Sources */,
@@ -2919,6 +2937,7 @@
 				DA54ED822089CFC40078AF87 /* TestOrganiseController.swift in Sources */,
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,
 				DA4F97D7208F02C5005E4725 /* TestApplicationNavigationController_ModelUpdate.swift in Sources */,
+				DA0DB18920935AB300B2F963 /* MockBoardRepositoryProtocol.swift in Sources */,
 				DA0D94CE2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift in Sources */,
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */,
@@ -3025,6 +3044,7 @@
 				DA636FF02081020600C02447 /* TestErrorController.swift in Sources */,
 				DA3B7CB52091B598009CCB93 /* TestCircleViewModel.swift in Sources */,
 				DA79AF90206A653100DE73FA /* MockLandingPresenterCollectionGesture.swift in Sources */,
+				DA0DB18720935A8900B2F963 /* TestBoardRespository.swift in Sources */,
 				DABC32612088A661008BA213 /* TestSerialiser_User.swift in Sources */,
 				DA4A69CA2085E662005AE05F /* TestFile_LoadUser.swift in Sources */,
 				DA86FBDE20838486005D31AF /* TestThread.swift in Sources */,
