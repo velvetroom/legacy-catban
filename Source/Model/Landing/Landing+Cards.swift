@@ -62,6 +62,7 @@ extension Landing {
     func createCard() -> IndexPath {
         let card:ProjectCard = ProjectCard()
         card.identifier = UUID().uuidString
+        self.project.history.created(card:card)
         let index:IndexPath = self.project.indexForNewCard()
         self.editingCard = index
         self.project.insert(card:card, at:index)
