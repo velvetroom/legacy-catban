@@ -38,11 +38,13 @@ class Board:BoardProtocol {
     
     func insertProject(project:ProjectProtocol) {
         self.projects.append(project)
+        self.save()
     }
     
     func deleteProject() {
         self.projects.remove(at:self.projectIndex)
         self.project = self.projects[0]
+        self.save()
     }
     
     func apply(updates:[UpdateProtocol]) {
