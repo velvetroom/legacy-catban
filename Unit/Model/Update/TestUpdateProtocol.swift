@@ -1,14 +1,14 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateProtocol:XCTestCase {
-    private var update:MockCollectionUpdateProtocol!
+class TestUpdateProtocol:XCTestCase {
+    private var update:MockUpdateProtocol!
     private var board:MockBoardProtocol!
     private var view:MockLandingViewCollection!
     
     override func setUp() {
         super.setUp()
-        self.update = MockCollectionUpdateProtocol()
+        self.update = MockUpdateProtocol()
         self.board = MockBoardProtocol()
         self.view = MockLandingViewCollection()
     }

@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateCreateSections:XCTestCase {
+class TestUpdateCreateSections:XCTestCase {
     private var update:UpdateCreateSections!
     private var view:MockLandingViewCollection!
     private var project:MockProjectProtocol!

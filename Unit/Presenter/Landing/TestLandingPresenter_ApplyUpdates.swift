@@ -4,7 +4,7 @@ import XCTest
 class TestLandingPresenter_ApplyUpdates:XCTestCase {
     private var presenter:LandingPresenter!
     private var view:MockLandingViewCollection!
-    private var update:MockCollectionUpdateProtocol!
+    private var update:MockUpdateProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -14,7 +14,7 @@ class TestLandingPresenter_ApplyUpdates:XCTestCase {
         super.setUp()
         self.presenter = LandingPresenter()
         self.view = MockLandingViewCollection()
-        self.update = MockCollectionUpdateProtocol()
+        self.update = MockUpdateProtocol()
         self.presenter.outlets.list.viewCollection = self.view
     }
     

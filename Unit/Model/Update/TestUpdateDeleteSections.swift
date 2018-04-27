@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateDeleteSections:XCTestCase {
+class TestUpdateDeleteSections:XCTestCase {
     private var update:UpdateDeleteSections!
     private var view:MockLandingViewCollection!
     private var board:Board!

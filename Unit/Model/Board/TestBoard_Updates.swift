@@ -3,7 +3,7 @@ import XCTest
 
 class TestBoard_Updates:XCTestCase {
     private var board:Board!
-    private var update:MockCollectionUpdateProtocol!
+    private var update:MockUpdateProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,7 +12,7 @@ class TestBoard_Updates:XCTestCase {
     override func setUp() {
         super.setUp()
         self.board = Board()
-        self.update = MockCollectionUpdateProtocol()
+        self.update = MockUpdateProtocol()
     }
     
     func testLoad() {

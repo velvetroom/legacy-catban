@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateDeleteProject:XCTestCase {
+class TestUpdateDeleteProject:XCTestCase {
     private var update:UpdateDeleteProject!
     private var board:MockBoardProtocol!
     private var expect:XCTestExpectation?

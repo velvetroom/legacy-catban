@@ -1,8 +1,8 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateCloseProject:XCTestCase {
-    private var update:UpdateCloseProject!
+class TestUpdateCreateProject:XCTestCase {
+    private var update:UpdateCreateProject!
     private var view:MockLandingViewCollection!
     private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
@@ -13,7 +13,7 @@ class TestCollectionUpdateCloseProject:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = UpdateCloseProject()
+        self.update = UpdateCreateProject()
         self.view = MockLandingViewCollection()
         self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
@@ -25,32 +25,33 @@ class TestCollectionUpdateCloseProject:XCTestCase {
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.view, "Failed to load view")
         XCTAssertNotNil(self.project, "Failed to load project")
-        XCTAssertNotNil(self.update.indexSet, "Failed to load index set")
-        XCTAssertTrue(self.update.indexSet.isEmpty, "Indexset should be empty")
+        XCTAssertNotNil(self.update.project, "Failed to load project")
     }
     
-    func testStrategyCollectionDeletesSections() {
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
+    func testConfiguration() {
+        XCTAssertFalse(self.update.project.identifier.isEmpty, "Failed to assign identifier")
+        XCTAssertFalse(self.update.project.name.isEmpty, "Failed to assign name")
+        XCTAssertFalse(self.update.project.columns.isEmpty, "Failed to add at least 1 column")
+        XCTAssertFalse(self.update.project.columns[0].name.isEmpty, "Failed to assign name to first column")
+    }
+    
+    func testStrategyBoardInsertsProject() {
         self.startExpectation()
-        self.view.onDeleteSections = { [weak self] (indexSet:IndexSet) in
-            XCTAssertEqual(self?.update.indexSet, indexSet, "Invalid remove indexSet")
+        self.board.onInsertProject = { [weak self] (project:ProjectProtocol) in
+            XCTAssertEqual(project.identifier, self?.update.project.identifier,
+                           "Invalid project received")
             self?.expect?.fulfill()
         }
         
         self.update.strategy(board:self.board)
-        self.update.strategy(collectionView:self.view)
         
         self.waitExpectation()
     }
     
-    func testStrategyBoardUpdatesIndexset() {
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
+    func testStrategyBoardUpdatesProject() {
         self.update.strategy(board:self.board)
-        XCTAssertEqual(self.update.indexSet.count, self.project.columns.count, "Failed to update remove indexset")
+        XCTAssertEqual(self.board.project.identifier, self.update.project.identifier,
+                       "Failed to update current project")
     }
     
     private func startExpectation() {

@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestCollectionUpdateSalvageItemFromDeletion:XCTestCase {
+class TestUpdateSalvageItemFromDeletion:XCTestCase {
     private var update:UpdateSalvageItemFromDeletion!
     private var view:MockLandingViewCollection!
     private var board:MockBoardProtocol!

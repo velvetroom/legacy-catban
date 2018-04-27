@@ -1,7 +1,7 @@
 import UIKit
 @testable import catban
 
-class MockCollectionUpdateProtocol:CollectionUpdateProtocol {
+class MockUpdateProtocol:UpdateProtocol {
     var onStrategyBoard:((BoardProtocol) -> Void)?
     var onStrategyCollection:((UICollectionView) -> Void)?
     
