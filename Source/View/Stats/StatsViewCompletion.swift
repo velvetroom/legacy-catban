@@ -1,8 +1,8 @@
 import UIKit
 
 class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
-    private(set) var radius:CGFloat
-    private(set) weak var viewGeneral:StatsViewCompletionGeneral!
+    var radius:CGFloat
+    weak var viewGeneral:StatsViewCompletionGeneral!
     
     override init() {
         self.radius = 0
@@ -12,6 +12,12 @@ class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    func updateWith(project:ProjectProtocol) {
+        let viewModel:CircleCompletionViewModel = CircleCompletionViewModel.factoryWith(project:project)
+        self.viewModel.circles = CircleViewModel.factoryWith(viewModel:viewModel)
+        self.viewGeneral.updateWith(viewModel:viewModel)
     }
     
     override func render() {
@@ -24,21 +30,5 @@ class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
         let minSize:CGFloat = min(rect.width, rect.height)
         self.radius = minSize / 2.0
         super.draw(rect)
-    }
-    
-    private func factoryOutlets() {
-        self.factoryGeneral()
-    }
-    
-    private func factoryGeneral() {
-        let viewGeneral:StatsViewCompletionGeneral = StatsViewCompletionGeneral()
-        self.viewGeneral = viewGeneral
-        
-        self.addSubview(viewGeneral)
-        
-        viewGeneral.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        viewGeneral.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        viewGeneral.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        viewGeneral.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

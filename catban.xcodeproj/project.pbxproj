@@ -109,6 +109,8 @@
 		DA3B7CB32091B566009CCB93 /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB22091B566009CCB93 /* CircleViewModel.swift */; };
 		DA3B7CB52091B598009CCB93 /* TestCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CB42091B598009CCB93 /* TestCircleViewModel.swift */; };
 		DA3B7CD72091D365009CCB93 /* StatsViewCompletion+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B7CD62091D365009CCB93 /* StatsViewCompletion+Factory.swift */; };
+		DA3E2F392092ED7400E832B4 /* CircleViewModel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E2F382092ED7400E832B4 /* CircleViewModel+Factory.swift */; };
+		DA3E2F3B2092EEE700E832B4 /* StatsViewCompletion+Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E2F3A2092EEE600E832B4 /* StatsViewCompletion+Outlets.swift */; };
 		DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */; };
 		DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */; };
 		DA43877A20886927004D8559 /* CatbanProjectWrongIdentifier.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */; };
@@ -320,9 +322,9 @@
 		DA73B8852092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */; };
 		DA73B887209203F300A6A7D0 /* CircleCompletionStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */; };
 		DA73B8892092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8882092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift */; };
-		DA73B88B2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */; };
-		DA73B88D2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */; };
-		DA73B88F2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */; };
+		DA73B88B2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88A2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift */; };
+		DA73B88D2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88C2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift */; };
+		DA73B88F2092149300A6A7D0 /* CircleViewModel+FactoryDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88E2092149300A6A7D0 /* CircleViewModel+FactoryDone.swift */; };
 		DA73B8912092225400A6A7D0 /* StatsViewCompletionGeneralStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8902092225400A6A7D0 /* StatsViewCompletionGeneralStack.swift */; };
 		DA73B8932092226400A6A7D0 /* TestStatsViewCompletionGeneralStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8922092226400A6A7D0 /* TestStatsViewCompletionGeneralStack.swift */; };
 		DA73B897209226E000A6A7D0 /* StatsViewCompletionGeneralStack+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B896209226E000A6A7D0 /* StatsViewCompletionGeneralStack+Constants.swift */; };
@@ -625,6 +627,8 @@
 		DA3B7CB22091B566009CCB93 /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		DA3B7CB42091B598009CCB93 /* TestCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleViewModel.swift; sourceTree = "<group>"; };
 		DA3B7CD62091D365009CCB93 /* StatsViewCompletion+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+Factory.swift"; sourceTree = "<group>"; };
+		DA3E2F382092ED7400E832B4 /* CircleViewModel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+Factory.swift"; sourceTree = "<group>"; };
+		DA3E2F3A2092EEE600E832B4 /* StatsViewCompletion+Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+Outlets.swift"; sourceTree = "<group>"; };
 		DA42D5D0206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA42D5D2206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelCollectionLayoutCell.swift; sourceTree = "<group>"; };
 		DA43877820886625004D8559 /* CatbanProjectWrongIdentifier.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanProjectWrongIdentifier.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -835,9 +839,9 @@
 		DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleCompletionViewModel+Factory.swift"; sourceTree = "<group>"; };
 		DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCompletionStackViewModel.swift; sourceTree = "<group>"; };
 		DA73B8882092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleCompletionStackViewModel.swift; sourceTree = "<group>"; };
-		DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryBacklog.swift"; sourceTree = "<group>"; };
-		DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryProgress.swift"; sourceTree = "<group>"; };
-		DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryDone.swift"; sourceTree = "<group>"; };
+		DA73B88A2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+FactoryBacklog.swift"; sourceTree = "<group>"; };
+		DA73B88C2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+FactoryProgress.swift"; sourceTree = "<group>"; };
+		DA73B88E2092149300A6A7D0 /* CircleViewModel+FactoryDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+FactoryDone.swift"; sourceTree = "<group>"; };
 		DA73B8902092225400A6A7D0 /* StatsViewCompletionGeneralStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCompletionGeneralStack.swift; sourceTree = "<group>"; };
 		DA73B8922092226400A6A7D0 /* TestStatsViewCompletionGeneralStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewCompletionGeneralStack.swift; sourceTree = "<group>"; };
 		DA73B896209226E000A6A7D0 /* StatsViewCompletionGeneralStack+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletionGeneralStack+Constants.swift"; sourceTree = "<group>"; };
@@ -1434,11 +1438,9 @@
 			children = (
 				DAFE7D7D2090B08C00A6DD41 /* StatsView.swift */,
 				DAFE7D8F2090B89B00A6DD41 /* StatsViewCompletion.swift */,
+				DA3E2F3A2092EEE600E832B4 /* StatsViewCompletion+Outlets.swift */,
 				DA5C58232091E1AE00A67BB4 /* StatsViewCompletion+Render.swift */,
 				DA3B7CD62091D365009CCB93 /* StatsViewCompletion+Factory.swift */,
-				DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */,
-				DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */,
-				DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */,
 				DA3B7CAC2091A701009CCB93 /* StatsViewCompletionGeneral.swift */,
 				DA3B7CAE2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift */,
 				DA73B8982092279600A6A7D0 /* StatsViewCompletionGeneral+Outlets.swift */,
@@ -1798,6 +1800,10 @@
 				DA3B7CB22091B566009CCB93 /* CircleViewModel.swift */,
 				DA73B8782091EE6F00A6A7D0 /* CircleViewModel+Constant.swift */,
 				DA73B87C2091FDF400A6A7D0 /* CircleViewModel+Tools.swift */,
+				DA3E2F382092ED7400E832B4 /* CircleViewModel+Factory.swift */,
+				DA73B88A2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift */,
+				DA73B88C2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift */,
+				DA73B88E2092149300A6A7D0 /* CircleViewModel+FactoryDone.swift */,
 				DA73B882209200E400A6A7D0 /* CircleCompletionViewModel.swift */,
 				DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */,
 				DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */,
@@ -2497,7 +2503,7 @@
 				DA5B5A03207047F000122EEF /* Landing.swift in Sources */,
 				DA462D4C2068C6310062E680 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA27D438208A8EB3006A9732 /* ModelProtocol.swift in Sources */,
-				DA73B88F2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift in Sources */,
+				DA73B88F2092149300A6A7D0 /* CircleViewModel+FactoryDone.swift in Sources */,
 				DA519A7920693F1300514098 /* LandingViewModelLoaderOutlets+Constants.swift in Sources */,
 				DA4F043D208793F800A28894 /* Serialiser.swift in Sources */,
 				DA5B5A0720704D6E00122EEF /* Landing+Cards.swift in Sources */,
@@ -2524,6 +2530,7 @@
 				DA2538EE2067D74B00EEB231 /* LandingViewModelCollection.swift in Sources */,
 				DA6F1B8220735CE9001248E4 /* WriterPresenterOutlets.swift in Sources */,
 				DAEEC726208F6BAB001B80A3 /* StatsViewModelCollection.swift in Sources */,
+				DA3E2F392092ED7400E832B4 /* CircleViewModel+Factory.swift in Sources */,
 				DA48DD6220904A55007EE369 /* StatsItemCompletion.swift in Sources */,
 				DA4F980B208F214D005E4725 /* StatsViewPageControl.swift in Sources */,
 				DABC325620889A39008BA213 /* File+Save.swift in Sources */,
@@ -2551,6 +2558,7 @@
 				DA3B7CD72091D365009CCB93 /* StatsViewCompletion+Factory.swift in Sources */,
 				DAEB8186206D1FF000E55424 /* LandingController+PresenterCollectionDelegate.swift in Sources */,
 				DAEEC736208F70B8001B80A3 /* StatsPresenterFactory.swift in Sources */,
+				DA3E2F3B2092EEE700E832B4 /* StatsViewCompletion+Outlets.swift in Sources */,
 				DA3060412082643900E55ECB /* UserProtocol.swift in Sources */,
 				DA636FF620810B3300C02447 /* ErrorModel.swift in Sources */,
 				DA8AB2612064F0A3005A393E /* LandingController.swift in Sources */,
@@ -2689,7 +2697,7 @@
 				DAE8C7E7207FB12000395318 /* LandingCollectionUpdateFactory+Create.swift in Sources */,
 				DA57C001208642010016ECC4 /* Deserialiser.swift in Sources */,
 				DA3A21EF208A42FB00E6E583 /* OrganiseViewCollectionCell.swift in Sources */,
-				DA73B88B2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift in Sources */,
+				DA73B88B2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift in Sources */,
 				DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
 				DA4F97F3208F116D005E4725 /* StatsPresenterOutlets.swift in Sources */,
@@ -2704,7 +2712,7 @@
 				DADE83C12070E7E80053E7A0 /* ProjectProtocol.swift in Sources */,
 				DA3A21F9208A52C300E6E583 /* OrganiseViewCollectionCell+Constants.swift in Sources */,
 				DA4F97ED208F1073005E4725 /* StatsPresenterProtocol.swift in Sources */,
-				DA73B88D2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift in Sources */,
+				DA73B88D2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift in Sources */,
 				DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
