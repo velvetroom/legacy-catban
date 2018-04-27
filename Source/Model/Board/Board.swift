@@ -52,6 +52,6 @@ class Board:BoardProtocol {
     }
     
     func save() {
-        
+        self.repository.save(board:self)
     }
 }
