@@ -31,10 +31,9 @@ class Load:LoadProtocol {
     }
     
     func createNewBoard() -> BoardProtocol {
-        let board:BoardProtocol = Board.factoryNewBoard()
-        do {
-            try self.repository.localSave(board:board)
-        } catch { }
+        var board:BoardProtocol = Board.factoryNewBoard()
+        board.repository.repository = self.repository
+        board.save()
         return board
     }
 }

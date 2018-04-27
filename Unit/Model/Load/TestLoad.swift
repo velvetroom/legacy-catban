@@ -54,9 +54,9 @@ class TestLoad:XCTestCase {
         }
         let board:BoardProtocol = self.model.createNewBoard()
         XCTAssertFalse(board.user.identifier.isEmpty, "Failed to factory new board")
-        XCTAssertEqual(board.user.identifier, userIdentifier, "Invalid board received")
         
         self.waitExpectations()
+        XCTAssertEqual(board.user.identifier, userIdentifier, "Invalid board received")
     }
     
     private func startExpectation() {
