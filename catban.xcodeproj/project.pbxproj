@@ -448,6 +448,14 @@
 		DAD433FE20654B67002C0DEE /* Project+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FD20654B67002C0DEE /* Project+Factory.swift */; };
 		DAD4340020654B7C002C0DEE /* TestProject_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */; };
 		DADC533820930E460048FF1D /* TestCircleViewModel_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC533720930E460048FF1D /* TestCircleViewModel_Factory.swift */; };
+		DADC533B209316F20048FF1D /* TestHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC533A209316F20048FF1D /* TestHistory.swift */; };
+		DADC533D209317020048FF1D /* MockHistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC533C209317020048FF1D /* MockHistoryProtocol.swift */; };
+		DADC5342209317720048FF1D /* HistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5341209317720048FF1D /* HistoryProtocol.swift */; };
+		DADC5344209317850048FF1D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5343209317850048FF1D /* History.swift */; };
+		DADC5346209317D00048FF1D /* MockHistoryItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5345209317D00048FF1D /* MockHistoryItemProtocol.swift */; };
+		DADC5348209317DE0048FF1D /* TestHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5347209317DE0048FF1D /* TestHistoryItem.swift */; };
+		DADC534A2093183F0048FF1D /* HistoryItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */; };
+		DADC534C209319690048FF1D /* HistoryItemProtocol+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */; };
 		DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */; };
 		DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */; };
 		DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */; };
@@ -976,6 +984,14 @@
 		DAD433FD20654B67002C0DEE /* Project+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Factory.swift"; sourceTree = "<group>"; };
 		DAD433FF20654B7C002C0DEE /* TestProject_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Factory.swift; sourceTree = "<group>"; };
 		DADC533720930E460048FF1D /* TestCircleViewModel_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleViewModel_Factory.swift; sourceTree = "<group>"; };
+		DADC533A209316F20048FF1D /* TestHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistory.swift; sourceTree = "<group>"; };
+		DADC533C209317020048FF1D /* MockHistoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHistoryProtocol.swift; sourceTree = "<group>"; };
+		DADC5341209317720048FF1D /* HistoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProtocol.swift; sourceTree = "<group>"; };
+		DADC5343209317850048FF1D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		DADC5345209317D00048FF1D /* MockHistoryItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHistoryItemProtocol.swift; sourceTree = "<group>"; };
+		DADC5347209317DE0048FF1D /* TestHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItem.swift; sourceTree = "<group>"; };
+		DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemProtocol.swift; sourceTree = "<group>"; };
+		DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItemProtocol+Tools.swift"; sourceTree = "<group>"; };
 		DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Cards.swift; sourceTree = "<group>"; };
 		DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingProtocol.swift; sourceTree = "<group>"; };
 		DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Load.swift; sourceTree = "<group>"; };
@@ -2038,6 +2054,7 @@
 		DA8AB2482064EA53005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DADC5339209316CA0048FF1D /* History */,
 				DA4F97C3208EF857005E4725 /* Stats */,
 				DA48EAD8208A9D8E00434E8B /* Model */,
 				DA54ED732089CB450078AF87 /* Organize */,
@@ -2226,6 +2243,7 @@
 		DA8AB2542064EA5E005A393E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DADC533E209317560048FF1D /* History */,
 				DA4F97C8208EF8E1005E4725 /* Stats */,
 				DA27D436208A8EA6006A9732 /* Model */,
 				DA54ED782089CBBC0078AF87 /* Organize */,
@@ -2275,6 +2293,28 @@
 				DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */,
 			);
 			path = Serialiser;
+			sourceTree = "<group>";
+		};
+		DADC5339209316CA0048FF1D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DADC533A209316F20048FF1D /* TestHistory.swift */,
+				DADC5347209317DE0048FF1D /* TestHistoryItem.swift */,
+				DADC533C209317020048FF1D /* MockHistoryProtocol.swift */,
+				DADC5345209317D00048FF1D /* MockHistoryItemProtocol.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		DADC533E209317560048FF1D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DADC5341209317720048FF1D /* HistoryProtocol.swift */,
+				DADC5343209317850048FF1D /* History.swift */,
+				DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */,
+				DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		DAE698E22065810E0046721C /* ViewModel */ = {
@@ -2586,6 +2626,7 @@
 				DAD433F820654667002C0DEE /* ProjectColumn.swift in Sources */,
 				DA8AB2652064F380005A393E /* LandingViewCollection.swift in Sources */,
 				DA4F9803208F1D2D005E4725 /* StatsPresenterCollectionDelegate.swift in Sources */,
+				DADC534A2093183F0048FF1D /* HistoryItemProtocol.swift in Sources */,
 				DAA804BA2089E9AE00EE14BB /* OrganisePresenterOutlets.swift in Sources */,
 				DA2A0776206CB7DE00D02D1C /* LandingViewCollectionMenu.swift in Sources */,
 				DA391AD820774A6900484273 /* LandingAddControllerDelegateProtocol.swift in Sources */,
@@ -2649,6 +2690,7 @@
 				DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */,
 				DA3A21E9208A269600E6E583 /* OrganiseViewCollection.swift in Sources */,
 				DA48DD6820904AD6007EE369 /* StatsItemSpeed.swift in Sources */,
+				DADC5342209317720048FF1D /* HistoryProtocol.swift in Sources */,
 				DA647A3D20716A6000F79DF1 /* LandingViewModelLoaderCollectionMenu.swift in Sources */,
 				DA43877E20887055004D8559 /* Deserialiser+Columns.swift in Sources */,
 				DA73B8792091EE6F00A6A7D0 /* CircleViewModel+Constant.swift in Sources */,
@@ -2685,6 +2727,7 @@
 				DAEEC734208F7096001B80A3 /* StatsPresenterFactoryProtocol.swift in Sources */,
 				DA86FBBE20835ADA005D31AF /* LoadController+Outlets.swift in Sources */,
 				DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */,
+				DADC5344209317850048FF1D /* History.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA54ED8D2089E4040078AF87 /* OrganisePresenterProtocol.swift in Sources */,
@@ -2718,6 +2761,7 @@
 				DADE83C12070E7E80053E7A0 /* ProjectProtocol.swift in Sources */,
 				DA3A21F9208A52C300E6E583 /* OrganiseViewCollectionCell+Constants.swift in Sources */,
 				DA4F97ED208F1073005E4725 /* StatsPresenterProtocol.swift in Sources */,
+				DADC534C209319690048FF1D /* HistoryItemProtocol+Tools.swift in Sources */,
 				DA73B88D2092148900A6A7D0 /* CircleViewModel+FactoryProgress.swift in Sources */,
 				DA86FBC620835DFE005D31AF /* RepositoryProtocol.swift in Sources */,
 			);
@@ -2765,6 +2809,7 @@
 				DA48EADA208A9D9F00434E8B /* MockModelProtocol.swift in Sources */,
 				DA07B749207F3E900067FD0C /* TestLandingPresenter_ApplyUpdates.swift in Sources */,
 				DA78A98B208BF56A00E5C473 /* TestBoard_DeleteProject.swift in Sources */,
+				DADC533D209317020048FF1D /* MockHistoryProtocol.swift in Sources */,
 				DA30604D20826F8F00E55ECB /* TestLoadController.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DA3A21D9208A067000E6E583 /* TestOrganiseViewModel.swift in Sources */,
@@ -2827,6 +2872,7 @@
 				DA30604720826C2200E55ECB /* TestLoad.swift in Sources */,
 				DA16043A207693CE0096EFE1 /* TestLandingController_AddDelegate.swift in Sources */,
 				DABC325820889C37008BA213 /* TestFile_SaveProject.swift in Sources */,
+				DADC5346209317D00048FF1D /* MockHistoryItemProtocol.swift in Sources */,
 				DA803049208E15DF00CCDBB1 /* TestLandingCollectionUpdateFactory_DeleteProject.swift in Sources */,
 				DA547840207A1D7300F9301E /* TestLanding_DeleteCard.swift in Sources */,
 				DA3A21FB208A55FD00E6E583 /* MockOrganiseViewCollection.swift in Sources */,
@@ -2905,6 +2951,7 @@
 				DA57BFFB208641600016ECC4 /* TestDeserialiser.swift in Sources */,
 				DAEEC724208F5C6D001B80A3 /* TestStatsViewModelCollection.swift in Sources */,
 				DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */,
+				DADC5348209317DE0048FF1D /* TestHistoryItem.swift in Sources */,
 				DA3A21FD208A560A00E6E583 /* MockOrganiseViewCollectionCell.swift in Sources */,
 				DA4F04322087271C00A28894 /* TestDeserialiser_Projects.swift in Sources */,
 				DA48DD6420904A76007EE369 /* TestStatsItemCompletion.swift in Sources */,
@@ -2941,6 +2988,7 @@
 				DA3A21BD2089EE3600E6E583 /* TestOrganisePresenterOutlets.swift in Sources */,
 				DA2538FE206832E400EEB231 /* TestLandingViewModelCollectionItem.swift in Sources */,
 				DA6EBE82208244D8004B639E /* MockBoardProtocol.swift in Sources */,
+				DADC533B209316F20048FF1D /* TestHistory.swift in Sources */,
 				DABC325D2088A3CC008BA213 /* MockSerialiserProtocol.swift in Sources */,
 				DA6EBE862082451C004B639E /* TestBoard.swift in Sources */,
 				DACD0A55207D444D00884E62 /* TestCollectionUpdateSalvageItemFromDeletion.swift in Sources */,
