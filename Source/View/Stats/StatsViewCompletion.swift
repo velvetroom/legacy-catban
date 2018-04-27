@@ -1,8 +1,8 @@
 import UIKit
 
 class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
-    var radius:CGFloat
     weak var viewGeneral:StatsViewCompletionGeneral!
+    var radius:CGFloat
     
     override init() {
         self.radius = 0
