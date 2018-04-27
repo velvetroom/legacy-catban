@@ -14,7 +14,7 @@ class TestCircleViewModel:XCTestCase {
         XCTAssertNotNil(self.viewModel.fillColour, "Failed to load colour")
         XCTAssertNotNil(self.viewModel.startAngle, "Failed to load angle")
         XCTAssertNotNil(self.viewModel.endAngle, "Failed to load angle")
-        XCTAssertNotNil(self.viewModel.startAngle, "Failed to load angle")
+        XCTAssertNotNil(self.viewModel.subtractRadius, "Failed to load substract radius")
     }
     
     func testPercentToRadian() {
