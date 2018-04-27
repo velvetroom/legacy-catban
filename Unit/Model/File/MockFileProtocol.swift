@@ -6,6 +6,7 @@ class MockFileProtocol:FileProtocol {
     var onLoadProjects:(() -> Void)?
     var onSaveUser:((Data) -> Void)?
     var onSaveProject:((Data, String) -> Void)?
+    var onClearProjects:(() -> Void)?
     var throwError:Error?
     var directory:URL
     var projects:URL {
@@ -44,5 +45,9 @@ class MockFileProtocol:FileProtocol {
     
     func save(project:Data, with identifier:String) throws {
         self.onSaveProject?(project, identifier)
+    }
+    
+    func clearProjects() throws {
+        self.onClearProjects?()
     }
 }

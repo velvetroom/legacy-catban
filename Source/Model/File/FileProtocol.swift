@@ -8,4 +8,5 @@ protocol FileProtocol {
     func loadProjects() throws -> [Data]
     func save(user:Data) throws
     func save(project:Data, with identifier:String) throws
+    func clearProjects() throws
 }
