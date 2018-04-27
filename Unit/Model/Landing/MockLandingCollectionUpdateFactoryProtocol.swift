@@ -1,7 +1,7 @@
 import Foundation
 @testable import catban
 
-class MockLandingCollectionUpdateFactoryProtocol:LandingCollectionUpdateFactoryProtocol {
+class MockLandingCollectionUpdateFactoryProtocol:UpdateFactoryProtocol {
     var onCreateProject:(() -> Void)?
     var onDeleteColumnAtIndex:((Int, ProjectProtocol) -> Void)?
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?

@@ -2,7 +2,7 @@ import XCTest
 @testable import catban
 
 class TestLandingCollectionUpdateFactory_DeleteProject:XCTestCase {
-    private var factory:LandingCollectionUpdateFactory!
+    private var factory:UpdateFactory!
     private var board:Board!
     private var project:Project!
     private struct Constants {
@@ -12,7 +12,7 @@ class TestLandingCollectionUpdateFactory_DeleteProject:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.factory = LandingCollectionUpdateFactory()
+        self.factory = UpdateFactory()
         self.board = Board()
         self.project = Project()
         let otherProject:Project = Project()

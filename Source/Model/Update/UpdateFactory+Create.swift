@@ -1,6 +1,6 @@
 import Foundation
 
-extension LandingCollectionUpdateFactory {
+extension UpdateFactory {
     func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol] {
         let update:UpdateCreateSections = UpdateCreateSections()
         update.section = project.columns.count

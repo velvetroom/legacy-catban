@@ -2,14 +2,14 @@ import XCTest
 @testable import catban
 
 class TestLandingCollectionUpdateFactory_CreateProject:XCTestCase {
-    private var factory:LandingCollectionUpdateFactory!
+    private var factory:UpdateFactory!
     private struct Constants {
         static let expectedUpdates:Int = 3
     }
     
     override func setUp() {
         super.setUp()
-        self.factory = LandingCollectionUpdateFactory()
+        self.factory = UpdateFactory()
     }
     
     func testLoad() {

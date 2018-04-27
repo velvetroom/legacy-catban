@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LandingCollectionUpdateFactoryProtocol {
+protocol UpdateFactoryProtocol {
     func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol]
     func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol]
     func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol]

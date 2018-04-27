@@ -4,7 +4,7 @@ class Landing:LandingProtocol {
     var board:BoardProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol
-    var collectionUpdateFactory:LandingCollectionUpdateFactoryProtocol
+    var collectionUpdateFactory:UpdateFactoryProtocol
     var editingCard:IndexPath?
     var project:ProjectProtocol {
         get {
@@ -28,7 +28,7 @@ class Landing:LandingProtocol {
         self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
-        self.collectionUpdateFactory = LandingCollectionUpdateFactory()
+        self.collectionUpdateFactory = UpdateFactory()
     }
     
     func reloadViewModel() {

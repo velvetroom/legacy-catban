@@ -1,6 +1,6 @@
 import Foundation
 
-extension LandingCollectionUpdateFactory {
+extension UpdateFactory {
     func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         guard
             project.columns.count > Constants.minColumns
