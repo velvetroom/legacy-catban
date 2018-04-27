@@ -1,8 +1,8 @@
 import UIKit
 
-extension CircleCompletionViewModel {
-    static func factoryWith(project:ProjectProtocol) -> CircleCompletionViewModel {
-        var viewModel:CircleCompletionViewModel = CircleCompletionViewModel()
+extension CircleViewModelCompletion {
+    static func factoryWith(project:ProjectProtocol) -> CircleViewModelCompletion {
+        var viewModel:CircleViewModelCompletion = CircleViewModelCompletion()
         viewModel.totalCards = project.totalCards
         viewModel.backlog = backglog(project:project)
         viewModel.progress = progress(project:project)
@@ -10,14 +10,14 @@ extension CircleCompletionViewModel {
         return viewModel
     }
     
-    private static func backglog(project:ProjectProtocol) -> CircleCompletionStackViewModel {
+    private static func backglog(project:ProjectProtocol) -> CircleViewModelCompletionStack {
         if let column:ProjectColumn = project.columns.first {
             return stackFor(cards:column.cards.count, with:project.totalCards)
         }
-        return CircleCompletionStackViewModel()
+        return CircleViewModelCompletionStack()
     }
     
-    private static func progress(project:ProjectProtocol) -> CircleCompletionStackViewModel {
+    private static func progress(project:ProjectProtocol) -> CircleViewModelCompletionStack {
         var cards:Int = 0
         let countColumns:Int = project.columns.count
         if countColumns > 2 {
@@ -26,18 +26,18 @@ extension CircleCompletionViewModel {
             }
             return stackFor(cards:cards, with:project.totalCards)
         }
-        return CircleCompletionStackViewModel()
+        return CircleViewModelCompletionStack()
     }
     
-    private static func done(project:ProjectProtocol) -> CircleCompletionStackViewModel {
+    private static func done(project:ProjectProtocol) -> CircleViewModelCompletionStack {
         if let column:ProjectColumn = project.columns.last {
             return stackFor(cards:column.cards.count, with:project.totalCards)
         }
-        return CircleCompletionStackViewModel()
+        return CircleViewModelCompletionStack()
     }
     
-    private static func stackFor(cards:Int, with totalCards:Int) -> CircleCompletionStackViewModel {
-        var viewModel:CircleCompletionStackViewModel = CircleCompletionStackViewModel()
+    private static func stackFor(cards:Int, with totalCards:Int) -> CircleViewModelCompletionStack {
+        var viewModel:CircleViewModelCompletionStack = CircleViewModelCompletionStack()
         viewModel.cards = cards
         viewModel.percent = CGFloat(cards)  / CGFloat(totalCards)
         viewModel.radians = CircleViewModel.percentToRadians(percent:viewModel.percent)

@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestCircleCompletionStackViewModel:XCTestCase {
-    private var viewModel:CircleCompletionStackViewModel!
+class TestCircleViewModelCompletionStack:XCTestCase {
+    private var viewModel:CircleViewModelCompletionStack!
     
     override func setUp() {
         super.setUp()
-        self.viewModel = CircleCompletionStackViewModel()
+        self.viewModel = CircleViewModelCompletionStack()
     }
     
     func testLoad() {

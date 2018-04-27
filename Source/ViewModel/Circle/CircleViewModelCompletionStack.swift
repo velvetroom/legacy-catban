@@ -1,6 +1,6 @@
 import UIKit
 
-struct CircleCompletionStackViewModel {
+struct CircleViewModelCompletionStack {
     var radians:CGFloat
     var percent:CGFloat
     var cards:Int

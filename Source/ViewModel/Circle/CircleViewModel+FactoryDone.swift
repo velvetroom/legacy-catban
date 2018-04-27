@@ -10,7 +10,7 @@ extension CircleViewModel {
         }
     }
     
-    static func factoryDoneCircleWith(viewModel:CircleCompletionViewModel) -> CircleViewModel {
+    static func factoryDoneCircleWith(viewModel:CircleViewModelCompletion) -> CircleViewModel {
         let radians:CGFloat = viewModel.done.radians - Constants.interSpace
         var circle:CircleViewModel = self.circle
         circle.startAngle = Constants.startAngle + viewModel.backlog.radians + viewModel.progress.radians

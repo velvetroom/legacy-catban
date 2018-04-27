@@ -20,18 +20,18 @@ class StatsViewCompletionGeneral:UIView {
         return nil
     }
     
-    func updateWith(viewModel:CircleCompletionViewModel) {
+    func updateWith(viewModel:CircleViewModelCompletion) {
         self.updateOutlets(viewModel:viewModel)
         self.update(stack:self.viewStackBacklog, with:viewModel.backlog)
         self.update(stack:self.viewStackProgress, with:viewModel.progress)
         self.update(stack:self.viewStackDone, with:viewModel.done)
     }
     
-    private func updateOutlets(viewModel:CircleCompletionViewModel) {
+    private func updateOutlets(viewModel:CircleViewModelCompletion) {
         self.labelCardsNumber.text = String(viewModel.totalCards)
     }
     
-    private func update(stack:StatsViewCompletionGeneralStack, with viewModel:CircleCompletionStackViewModel) {
+    private func update(stack:StatsViewCompletionGeneralStack, with viewModel:CircleViewModelCompletionStack) {
         if viewModel.cards > 0 {
             stack.layoutHeight?.constant = Constants.stackHeight
             stack.labelNumber.text = String(viewModel.cards)

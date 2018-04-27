@@ -1,7 +1,7 @@
 import UIKit
 
 extension CircleViewModel {
-    static func factoryWith(viewModel:CircleCompletionViewModel) -> [CircleViewModel] {
+    static func factoryWith(viewModel:CircleViewModelCompletion) -> [CircleViewModel] {
         var circles:[CircleViewModel] = factoryWithBacklogFor(viewModel:viewModel)
         circles = factoryWithProgressFor(viewModel:viewModel, and:circles)
         circles = factoryWithDoneFor(viewModel:viewModel, and:circles)
@@ -9,7 +9,7 @@ extension CircleViewModel {
         return circles
     }
     
-    private static func factoryWithBacklogFor(viewModel:CircleCompletionViewModel) -> [CircleViewModel] {
+    private static func factoryWithBacklogFor(viewModel:CircleViewModelCompletion) -> [CircleViewModel] {
         var circles:[CircleViewModel] = []
         if viewModel.backlog.cards > 0 {
             let circle:CircleViewModel = factoryBacklogCircleWith(viewModel:viewModel)
@@ -18,7 +18,7 @@ extension CircleViewModel {
         return circles
     }
     
-    private static func factoryWithProgressFor(viewModel:CircleCompletionViewModel,
+    private static func factoryWithProgressFor(viewModel:CircleViewModelCompletion,
                                               and circles:[CircleViewModel]) -> [CircleViewModel] {
         var circles:[CircleViewModel] = circles
         if viewModel.progress.cards > 0 {
@@ -28,7 +28,7 @@ extension CircleViewModel {
         return circles
     }
     
-    private static func factoryWithDoneFor(viewModel:CircleCompletionViewModel,
+    private static func factoryWithDoneFor(viewModel:CircleViewModelCompletion,
                                           and circles:[CircleViewModel]) -> [CircleViewModel] {
         var circles:[CircleViewModel] = circles
         if viewModel.done.cards > 0 {

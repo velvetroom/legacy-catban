@@ -15,7 +15,7 @@ class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
     }
     
     func updateWith(project:ProjectProtocol) {
-        let viewModel:CircleCompletionViewModel = CircleCompletionViewModel.factoryWith(project:project)
+        let viewModel:CircleViewModelCompletion = CircleViewModelCompletion.factoryWith(project:project)
         self.viewModel.circles = CircleViewModel.factoryWith(viewModel:viewModel)
         self.viewGeneral.updateWith(viewModel:viewModel)
     }
