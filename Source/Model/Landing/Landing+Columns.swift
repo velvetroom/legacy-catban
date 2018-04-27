@@ -15,7 +15,7 @@ extension Landing {
     }
     
     func createColumn() {
-        let updates:[UpdateProtocol] = self.collectionUpdateFactory.createColumnIn(project:self.project)
+        let updates:[UpdateProtocol] = self.update.createColumnIn(project:self.project)
         self.board.apply(updates:updates)
         self.reloadViewModel()
         self.presenter.apply(updates:updates)
@@ -30,9 +30,9 @@ extension Landing {
     
     func updatesForDeleteColumnAt(index:Int) throws -> [UpdateProtocol] {
         var updates:[UpdateProtocol] = []
-        let moveUpdates:[UpdateProtocol] = try self.collectionUpdateFactory.salvageItemsFromColumn(
+        let moveUpdates:[UpdateProtocol] = try self.update.salvageItemsFromColumn(
             index:index, in:self.project)
-        let deleteUpdates:[UpdateProtocol] = try self.collectionUpdateFactory.deleteColumnAt(
+        let deleteUpdates:[UpdateProtocol] = try self.update.deleteColumnAt(
             index:index, in:self.project)
         updates.append(contentsOf:moveUpdates)
         updates.append(contentsOf:deleteUpdates)

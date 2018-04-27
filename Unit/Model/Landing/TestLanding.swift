@@ -25,7 +25,7 @@ class TestLanding:XCTestCase {
         XCTAssertNotNil(self.model.editingCardReference, "Card reference property not found")
         XCTAssertNotNil(self.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
-        XCTAssertNotNil(self.model.collectionUpdateFactory, "Failed to load factory")
+        XCTAssertNotNil(self.model.update, "Failed to load factory")
     }
     
     func testEditingCardReference() {

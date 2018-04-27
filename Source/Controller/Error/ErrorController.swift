@@ -1,7 +1,7 @@
 import UIKit
 
 class ErrorController:UIAlertController {
-    var model:LandingErrorProtocol
+    var model:ErrorProtocol
     
     init() {
         self.model = ErrorModel()

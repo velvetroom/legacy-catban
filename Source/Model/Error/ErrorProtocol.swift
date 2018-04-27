@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LandingErrorProtocol {
+protocol ErrorProtocol {
     var message:String { get set }
     var presenter:ErrorPresenter { get set }
 }

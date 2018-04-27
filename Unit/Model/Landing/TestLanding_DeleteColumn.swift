@@ -26,7 +26,7 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.model.board = self.board
         self.model.presenter = self.presenter
         self.model.viewModelLoader = self.viewModelLoader
-        self.model.collectionUpdateFactory = self.collectionUpdateFactory
+        self.model.update = self.collectionUpdateFactory
     }
     
     func testLoad() {

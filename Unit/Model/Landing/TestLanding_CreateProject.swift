@@ -20,7 +20,7 @@ class TestLanding_CreateProject:XCTestCase {
         self.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterProtocol()
         self.model.board = self.board
-        self.model.collectionUpdateFactory = self.updateFactory
+        self.model.update = self.updateFactory
         self.model.viewModelLoader = self.viewModelLoader
         self.model.presenter = self.presenter
     }

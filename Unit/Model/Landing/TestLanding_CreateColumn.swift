@@ -25,7 +25,7 @@ class TestLanding_CreateColumn:XCTestCase {
         self.model.board = self.board
         self.model.presenter = self.presenter
         self.model.viewModelLoader = self.viewModelLoader
-        self.model.collectionUpdateFactory = self.updateFactory
+        self.model.update = self.updateFactory
     }
     
     func testLoad() {

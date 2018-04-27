@@ -21,7 +21,7 @@ class MockLandingProtocol:LandingProtocol {
     var onDeleteProject:(() -> Void)?
     var editingCard:IndexPath?
     var viewModelLoader:LandingViewModelLoaderProtocol
-    var collectionUpdateFactory:UpdateFactoryProtocol
+    var update:UpdateFactoryProtocol
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
     var returnCardAtIndex:ProjectCard
@@ -42,7 +42,7 @@ class MockLandingProtocol:LandingProtocol {
         self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
-        self.collectionUpdateFactory = UpdateFactory()
+        self.update = UpdateFactory()
         self.returnCardAtIndex = ProjectCard()
         self.returnColumnAtIndex = ProjectColumn()
         self.returnIndexForColumn = 0

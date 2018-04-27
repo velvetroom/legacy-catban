@@ -31,7 +31,7 @@ class TestLanding_DeleteProject:XCTestCase {
         self.model.board = self.board
         self.model.viewModelLoader = self.viewModelLoader
         self.model.presenter = self.presenter
-        self.model.collectionUpdateFactory = self.updateFactory
+        self.model.update = self.updateFactory
     }
     
     func testLoad() {

@@ -1,6 +1,6 @@
 import Foundation
 
-class ErrorModel:LandingErrorProtocol {
+class ErrorModel:ErrorProtocol {
     var message:String
     var presenter:ErrorPresenter
     
