@@ -2,6 +2,7 @@ import Foundation
 
 protocol ProjectProtocol {
     var columns:[ProjectColumn] { get set }
+    var history:HistoryProtocol { get set }
     var name:String { get set }
     var identifier:String { get set }
     var totalCards:Int { get }

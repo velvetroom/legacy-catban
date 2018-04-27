@@ -38,8 +38,10 @@ extension CircleViewModelCompletion {
     }
     
     private static func done(project:ProjectProtocol) -> CircleViewModelCompletionStack {
-        if let column:ProjectColumn = project.columns.last {
-            return stackFor(cards:column.cards.count, with:project.totalCards)
+        if project.columns.count > 1 {
+            if let column:ProjectColumn = project.columns.last {
+                return stackFor(cards:column.cards.count, with:project.totalCards)
+            }
         }
         return CircleViewModelCompletionStack()
     }

@@ -2,6 +2,7 @@ import Foundation
 
 class Project:ProjectProtocol {
     var columns:[ProjectColumn]
+    var history:HistoryProtocol
     var name:String
     var identifier:String
     var totalCards:Int {
@@ -16,6 +17,7 @@ class Project:ProjectProtocol {
     
     init() {
         self.columns = []
+        self.history = History()
         self.name = String()
         self.identifier = String()
     }

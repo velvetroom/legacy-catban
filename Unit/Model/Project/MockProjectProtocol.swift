@@ -18,12 +18,14 @@ class MockProjectProtocol:ProjectProtocol {
     var returnReorderingIndexes:[IndexPath]
     var indexForCard:IndexPath
     var columns:[ProjectColumn]
+    var history:HistoryProtocol
     var name:String
     var identifier:String
     var totalCards:Int
     
     init() {
         self.columns = []
+        self.history = History()
         self.name = String()
         self.identifier = String()
         self.indexForCard = IndexPath(item:0, section:0)

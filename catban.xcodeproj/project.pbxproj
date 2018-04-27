@@ -458,6 +458,9 @@
 		DADC534C209319690048FF1D /* HistoryItemProtocol+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */; };
 		DADC534E20932CD30048FF1D /* TestHistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */; };
 		DADC535020932D180048FF1D /* HistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */; };
+		DADC5352209334560048FF1D /* TestProject_History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5351209334560048FF1D /* TestProject_History.swift */; };
+		DADC53542093375A0048FF1D /* TestHistory_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC53532093375A0048FF1D /* TestHistory_Cards.swift */; };
+		DADC535620933E830048FF1D /* History+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC535520933E830048FF1D /* History+Cards.swift */; };
 		DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */; };
 		DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */; };
 		DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */; };
@@ -996,6 +999,9 @@
 		DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItemProtocol+Tools.swift"; sourceTree = "<group>"; };
 		DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItemCreateCard.swift; sourceTree = "<group>"; };
 		DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemCreateCard.swift; sourceTree = "<group>"; };
+		DADC5351209334560048FF1D /* TestProject_History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_History.swift; sourceTree = "<group>"; };
+		DADC53532093375A0048FF1D /* TestHistory_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistory_Cards.swift; sourceTree = "<group>"; };
+		DADC535520933E830048FF1D /* History+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+Cards.swift"; sourceTree = "<group>"; };
 		DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Cards.swift; sourceTree = "<group>"; };
 		DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingProtocol.swift; sourceTree = "<group>"; };
 		DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Load.swift; sourceTree = "<group>"; };
@@ -1092,6 +1098,7 @@
 				DA1604412076A89F0096EFE1 /* TestProject_Create.swift */,
 				DA547841207A27AE00F9301E /* TestProject_DeleteCard.swift */,
 				DA46AD62207C8D790083B310 /* TestProject_DeleteColumn.swift */,
+				DADC5351209334560048FF1D /* TestProject_History.swift */,
 				DAD433F5206545DA002C0DEE /* TestProjectColumn.swift */,
 				DAD433F920654A21002C0DEE /* TestProjectCard.swift */,
 				DADE83C22070EB100053E7A0 /* MockProjectProtocol.swift */,
@@ -2303,6 +2310,7 @@
 			isa = PBXGroup;
 			children = (
 				DADC533A209316F20048FF1D /* TestHistory.swift */,
+				DADC53532093375A0048FF1D /* TestHistory_Cards.swift */,
 				DADC5347209317DE0048FF1D /* TestHistoryItem.swift */,
 				DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */,
 				DADC533C209317020048FF1D /* MockHistoryProtocol.swift */,
@@ -2316,6 +2324,7 @@
 			children = (
 				DADC5341209317720048FF1D /* HistoryProtocol.swift */,
 				DADC5343209317850048FF1D /* History.swift */,
+				DADC535520933E830048FF1D /* History+Cards.swift */,
 				DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */,
 				DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */,
 				DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */,
@@ -2740,6 +2749,7 @@
 				DA54ED8D2089E4040078AF87 /* OrganisePresenterProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
 				DA4F97DF208F0A00005E4725 /* StatsViewCollection.swift in Sources */,
+				DADC535620933E830048FF1D /* History+Cards.swift in Sources */,
 				DA86FBD8208371FD005D31AF /* ErrorRepository.swift in Sources */,
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
 				DAEA2CBA207CFA1400C15653 /* LandingCollectionUpdateFactoryProtocol.swift in Sources */,
@@ -2858,6 +2868,7 @@
 				DA4F97FD208F1C85005E4725 /* TestStatsPresenterCollectionDatasource.swift in Sources */,
 				DA2538F020681F1700EEB231 /* MockLandingViewCollection.swift in Sources */,
 				DA657E9F2075129B003C1645 /* TestWriterController_TextDelegate.swift in Sources */,
+				DADC53542093375A0048FF1D /* TestHistory_Cards.swift in Sources */,
 				DADF4D4C207152FD0037DCDD /* TestLandingPresenterOutlets_CollectionMenu.swift in Sources */,
 				DA4A69C82085E657005AE05F /* TestFile_LoadProjects.swift in Sources */,
 				DA803041208E057C00CCDBB1 /* TestCollectionUpdateCloseProject.swift in Sources */,
@@ -2960,6 +2971,7 @@
 				DAEEC724208F5C6D001B80A3 /* TestStatsViewModelCollection.swift in Sources */,
 				DADE83BF2070E40E0053E7A0 /* MockLandingProtocol.swift in Sources */,
 				DADC5348209317DE0048FF1D /* TestHistoryItem.swift in Sources */,
+				DADC5352209334560048FF1D /* TestProject_History.swift in Sources */,
 				DA3A21FD208A560A00E6E583 /* MockOrganiseViewCollectionCell.swift in Sources */,
 				DA4F04322087271C00A28894 /* TestDeserialiser_Projects.swift in Sources */,
 				DA48DD6420904A76007EE369 /* TestStatsItemCompletion.swift in Sources */,
