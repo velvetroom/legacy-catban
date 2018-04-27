@@ -456,6 +456,8 @@
 		DADC5348209317DE0048FF1D /* TestHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC5347209317DE0048FF1D /* TestHistoryItem.swift */; };
 		DADC534A2093183F0048FF1D /* HistoryItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */; };
 		DADC534C209319690048FF1D /* HistoryItemProtocol+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */; };
+		DADC534E20932CD30048FF1D /* TestHistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */; };
+		DADC535020932D180048FF1D /* HistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */; };
 		DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */; };
 		DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */; };
 		DADE83BD2070E35C0053E7A0 /* TestLanding_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */; };
@@ -992,6 +994,8 @@
 		DADC5347209317DE0048FF1D /* TestHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItem.swift; sourceTree = "<group>"; };
 		DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemProtocol.swift; sourceTree = "<group>"; };
 		DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItemProtocol+Tools.swift"; sourceTree = "<group>"; };
+		DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItemCreateCard.swift; sourceTree = "<group>"; };
+		DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemCreateCard.swift; sourceTree = "<group>"; };
 		DADE83B82070DEF70053E7A0 /* TestLanding_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Cards.swift; sourceTree = "<group>"; };
 		DADE83BA2070E1660053E7A0 /* LandingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingProtocol.swift; sourceTree = "<group>"; };
 		DADE83BC2070E35C0053E7A0 /* TestLanding_Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Load.swift; sourceTree = "<group>"; };
@@ -2300,6 +2304,7 @@
 			children = (
 				DADC533A209316F20048FF1D /* TestHistory.swift */,
 				DADC5347209317DE0048FF1D /* TestHistoryItem.swift */,
+				DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */,
 				DADC533C209317020048FF1D /* MockHistoryProtocol.swift */,
 				DADC5345209317D00048FF1D /* MockHistoryItemProtocol.swift */,
 			);
@@ -2313,6 +2318,7 @@
 				DADC5343209317850048FF1D /* History.swift */,
 				DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */,
 				DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */,
+				DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -2598,6 +2604,7 @@
 				DA6F1B7E20735BE7001248E4 /* WriterPresenterProtocol.swift in Sources */,
 				DA3B7CAD2091A701009CCB93 /* StatsViewCompletionGeneral.swift in Sources */,
 				DA3A21DB208A06CD00E6E583 /* OrganiseViewModel.swift in Sources */,
+				DADC535020932D180048FF1D /* HistoryItemCreateCard.swift in Sources */,
 				DA4F97EF208F1086005E4725 /* StatsPresenter.swift in Sources */,
 				DA519A712069186000514098 /* LandingViewModelLoaderCollectionLayout.swift in Sources */,
 				DA86FBD620836C83005D31AF /* RepositoryLocal.swift in Sources */,
@@ -2912,6 +2919,7 @@
 				DAEEC732208F705C001B80A3 /* MockStatsPresenterFactoryProtocol.swift in Sources */,
 				DA54ED8B2089DF430078AF87 /* MockOrganisePresenterProtocol.swift in Sources */,
 				DA63F799206DD7830018F416 /* TestLandingController_DelegateProtocol.swift in Sources */,
+				DADC534E20932CD30048FF1D /* TestHistoryItemCreateCard.swift in Sources */,
 				DA1DF9A8207CA67300B03C6E /* TestLandingController_DataSourceProtocol_Header.swift in Sources */,
 				DA4F97E6208F0FED005E4725 /* TestStatsPresenter.swift in Sources */,
 				DA48DD6C20905CFD007EE369 /* MockStatsViewModelCollectionItemProtocol.swift in Sources */,
