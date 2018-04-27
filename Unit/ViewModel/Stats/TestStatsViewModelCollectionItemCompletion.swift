@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestStatsViewModelCollectionItemCompletionProtocol:XCTestCase {
-    private var viewModel:MockStatsViewModelCollectionItemCompletionProtocol!
+class TestStatsViewModelCollectionItemCompletion:XCTestCase {
+    private var viewModel:StatsViewModelCollectionItemCompletion!
     
     override func setUp() {
         super.setUp()
-        self.viewModel = MockStatsViewModelCollectionItemCompletionProtocol()
+        self.viewModel = StatsViewModelCollectionItemCompletion()
     }
     
     func testLoad() {

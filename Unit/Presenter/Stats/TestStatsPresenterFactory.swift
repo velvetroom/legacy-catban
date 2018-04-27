@@ -13,7 +13,7 @@ class TestStatsPresenterFactory:XCTestCase {
         self.board = Board()
         self.items = Stats.factoryItems()
         self.expectedItems = [
-            StatsViewCompletionFirstOrder.self,
+            StatsViewCompletion.self,
             StatsViewSpeed.self]
     }
     

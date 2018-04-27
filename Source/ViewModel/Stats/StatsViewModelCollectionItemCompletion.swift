@@ -1,6 +1,6 @@
 import Foundation
 
-struct StatsViewModelCollectionItemCompletionThirdOrder:StatsViewModelCollectionItemCompletionProtocol {
+struct StatsViewModelCollectionItemCompletion:StatsViewModelCollectionItemProtocol {
     var circles:[CircleViewModel]
     
     init() {

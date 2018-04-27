@@ -10,8 +10,8 @@ extension StatsViewCompletion {
         }
     }
     
-    class func factoryBacklogCircleWith(project:CircleCompletionViewModel) -> CircleViewModel {
-        let radians:CGFloat = project.backlog.radians - CircleViewModel.Constants.interSpace
+    class func factoryBacklogCircleWith(viewModel:CircleCompletionViewModel) -> CircleViewModel {
+        let radians:CGFloat = viewModel.backlog.radians - CircleViewModel.Constants.interSpace
         var circle:CircleViewModel = self.circle
         circle.endAngle = CircleViewModel.Constants.startAngle + radians
         return circle

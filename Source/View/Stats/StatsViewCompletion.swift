@@ -1,19 +1,23 @@
 import UIKit
 
-class StatsViewCompletion<ViewModel:StatsViewModelCollectionItemCompletionProtocol>:StatsView<ViewModel> {
+class StatsViewCompletion:StatsView<StatsViewModelCollectionItemCompletion> {
     private(set) var radius:CGFloat
     private(set) weak var viewGeneral:StatsViewCompletionGeneral!
-    var totalRadians:CGFloat
     
     override init() {
         self.radius = 0
-        self.totalRadians = CircleViewModel.Constants.circleRadians
         super.init()
         self.factoryOutlets()
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    override func render() {
+        for circle:CircleViewModel in self.viewModel.circles {
+            self.renderCircleWith(viewModel:circle)
+        }
     }
     
     override func draw(_ rect:CGRect) {
