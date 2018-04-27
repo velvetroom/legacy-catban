@@ -322,11 +322,11 @@
 		DA73A1DF2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */; };
 		DA73B8792091EE6F00A6A7D0 /* CircleViewModel+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8782091EE6F00A6A7D0 /* CircleViewModel+Constant.swift */; };
 		DA73B87D2091FDF400A6A7D0 /* CircleViewModel+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B87C2091FDF400A6A7D0 /* CircleViewModel+Tools.swift */; };
-		DA73B8802092008900A6A7D0 /* TestProjectCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B87F2092008900A6A7D0 /* TestProjectCompletionViewModel.swift */; };
-		DA73B883209200E400A6A7D0 /* ProjectCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B882209200E400A6A7D0 /* ProjectCompletionViewModel.swift */; };
-		DA73B8852092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8842092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift */; };
-		DA73B887209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B886209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift */; };
-		DA73B8892092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8882092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift */; };
+		DA73B8802092008900A6A7D0 /* TestCircleCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B87F2092008900A6A7D0 /* TestCircleCompletionViewModel.swift */; };
+		DA73B883209200E400A6A7D0 /* CircleCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B882209200E400A6A7D0 /* CircleCompletionViewModel.swift */; };
+		DA73B8852092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */; };
+		DA73B887209203F300A6A7D0 /* CircleCompletionStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */; };
+		DA73B8892092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B8882092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift */; };
 		DA73B88B2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */; };
 		DA73B88D2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */; };
 		DA73B88F2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */; };
@@ -852,11 +852,11 @@
 		DA73A1DE2080EE1A00ADC499 /* TestLandingCollectionUpdateFactory_Delete_Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCollectionUpdateFactory_Delete_Exceptions.swift; sourceTree = "<group>"; };
 		DA73B8782091EE6F00A6A7D0 /* CircleViewModel+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+Constant.swift"; sourceTree = "<group>"; };
 		DA73B87C2091FDF400A6A7D0 /* CircleViewModel+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleViewModel+Tools.swift"; sourceTree = "<group>"; };
-		DA73B87F2092008900A6A7D0 /* TestProjectCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectCompletionViewModel.swift; sourceTree = "<group>"; };
-		DA73B882209200E400A6A7D0 /* ProjectCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCompletionViewModel.swift; sourceTree = "<group>"; };
-		DA73B8842092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectCompletionViewModel+Factory.swift"; sourceTree = "<group>"; };
-		DA73B886209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCompletionViewModelStack.swift; sourceTree = "<group>"; };
-		DA73B8882092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectCompletionViewModelStack.swift; sourceTree = "<group>"; };
+		DA73B87F2092008900A6A7D0 /* TestCircleCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleCompletionViewModel.swift; sourceTree = "<group>"; };
+		DA73B882209200E400A6A7D0 /* CircleCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCompletionViewModel.swift; sourceTree = "<group>"; };
+		DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircleCompletionViewModel+Factory.swift"; sourceTree = "<group>"; };
+		DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCompletionStackViewModel.swift; sourceTree = "<group>"; };
+		DA73B8882092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleCompletionStackViewModel.swift; sourceTree = "<group>"; };
 		DA73B88A2092132D00A6A7D0 /* StatsViewCompletion+FactoryBacklog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryBacklog.swift"; sourceTree = "<group>"; };
 		DA73B88C2092148900A6A7D0 /* StatsViewCompletion+FactoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryProgress.swift"; sourceTree = "<group>"; };
 		DA73B88E2092149300A6A7D0 /* StatsViewCompletion+FactoryDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewCompletion+FactoryDone.swift"; sourceTree = "<group>"; };
@@ -1836,6 +1836,9 @@
 				DA3B7CB22091B566009CCB93 /* CircleViewModel.swift */,
 				DA73B8782091EE6F00A6A7D0 /* CircleViewModel+Constant.swift */,
 				DA73B87C2091FDF400A6A7D0 /* CircleViewModel+Tools.swift */,
+				DA73B882209200E400A6A7D0 /* CircleCompletionViewModel.swift */,
+				DA73B8842092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift */,
+				DA73B886209203F300A6A7D0 /* CircleCompletionStackViewModel.swift */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -1844,27 +1847,10 @@
 			isa = PBXGroup;
 			children = (
 				DA3B7CB42091B598009CCB93 /* TestCircleViewModel.swift */,
+				DA73B87F2092008900A6A7D0 /* TestCircleCompletionViewModel.swift */,
+				DA73B8882092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift */,
 			);
 			path = Circle;
-			sourceTree = "<group>";
-		};
-		DA73B87E2092007400A6A7D0 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				DA73B87F2092008900A6A7D0 /* TestProjectCompletionViewModel.swift */,
-				DA73B8882092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift */,
-			);
-			path = Project;
-			sourceTree = "<group>";
-		};
-		DA73B881209200D600A6A7D0 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				DA73B882209200E400A6A7D0 /* ProjectCompletionViewModel.swift */,
-				DA73B8842092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift */,
-				DA73B886209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift */,
-			);
-			path = Project;
 			sourceTree = "<group>";
 		};
 		DA79AF7D206A2F0700DE73FA /* Presenter */ = {
@@ -2320,7 +2306,6 @@
 		DAE698E22065810E0046721C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DA73B87E2092007400A6A7D0 /* Project */,
 				DA73B87B2091EEC100A6A7D0 /* Circle */,
 				DAEEC71B208F54AE001B80A3 /* Stats */,
 				DA3A21D7208A064600E6E583 /* Organise */,
@@ -2333,7 +2318,6 @@
 		DAE698E5206581770046721C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DA73B881209200D600A6A7D0 /* Project */,
 				DA73B87A2091EE7A00A6A7D0 /* Circle */,
 				DAEEC71E208F550D001B80A3 /* Stats */,
 				DA3A21D6208A063800E6E583 /* Organise */,
@@ -2546,7 +2530,7 @@
 				DA3B7CAF2091A7E7009CCB93 /* StatsViewCompletionGeneral+Constants.swift in Sources */,
 				DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */,
 				DA636FFE20810E5500C02447 /* ErrorPresenter.swift in Sources */,
-				DA73B887209203F300A6A7D0 /* ProjectCompletionViewModelStack.swift in Sources */,
+				DA73B887209203F300A6A7D0 /* CircleCompletionStackViewModel.swift in Sources */,
 				DA86FBCF20836933005D31AF /* RepositoryLocalProtocol.swift in Sources */,
 				DA8AB26B2064F662005A393E /* LandingController+Outlets.swift in Sources */,
 				DABC325420889A0F008BA213 /* File+Load.swift in Sources */,
@@ -2698,7 +2682,7 @@
 				DA54ED7C2089CBE20078AF87 /* Organise.swift in Sources */,
 				DA657E9B2074F683003C1645 /* WriterController+Notifications.swift in Sources */,
 				DA2538E02067C5F100EEB231 /* LandingViewModelLoaderProtocol.swift in Sources */,
-				DA73B8852092019A00A6A7D0 /* ProjectCompletionViewModel+Factory.swift in Sources */,
+				DA73B8852092019A00A6A7D0 /* CircleCompletionViewModel+Factory.swift in Sources */,
 				DA57BFFF208641E90016ECC4 /* DeserialiserProtocol.swift in Sources */,
 				DA79602A206BCD4F00548952 /* LandingController+PresenterCollectionDataSource.swift in Sources */,
 				DA42D5D3206A1A4C0042BD8B /* LandingViewModelCollectionLayoutCell.swift in Sources */,
@@ -2731,7 +2715,7 @@
 				DAFE7D7E2090B08C00A6DD41 /* StatsView.swift in Sources */,
 				DA79AF84206A342F00DE73FA /* LandingViewCollectionCell+Constants.swift in Sources */,
 				DA2538E62067CF1300EEB231 /* LandingPresenterCollection.swift in Sources */,
-				DA73B883209200E400A6A7D0 /* ProjectCompletionViewModel.swift in Sources */,
+				DA73B883209200E400A6A7D0 /* CircleCompletionViewModel.swift in Sources */,
 				DA519A812069460500514098 /* LandingViewCollectionCell.swift in Sources */,
 				DACE1D502077F7E4004E0CEB /* LandingAddController+Constants.swift in Sources */,
 				DAEA2CBC207CFA2700C15653 /* LandingCollectionUpdateFactory.swift in Sources */,
@@ -2871,7 +2855,7 @@
 				DA43877C20886FA0004D8559 /* TestDeserialiser_Columns.swift in Sources */,
 				DA1A19D5208CA4B000300FED /* TestLandingCollectionUpdateFactory_CreateProject.swift in Sources */,
 				DABC326D2088DCA9008BA213 /* TestSerialiser_Column.swift in Sources */,
-				DA73B8802092008900A6A7D0 /* TestProjectCompletionViewModel.swift in Sources */,
+				DA73B8802092008900A6A7D0 /* TestCircleCompletionViewModel.swift in Sources */,
 				DAD433FA20654A21002C0DEE /* TestProjectCard.swift in Sources */,
 				DAEB8194206D28EE00E55424 /* TestLandingPresenterOutlets.swift in Sources */,
 				DAD3C477207BAD0400F84829 /* TestLandingEditController.swift in Sources */,
@@ -2940,7 +2924,7 @@
 				DAC45AB1208DB2DB004E1236 /* TestBoard_Select.swift in Sources */,
 				DA4F97F5208F13B5005E4725 /* TestStatsPresenterCollection.swift in Sources */,
 				DA3A21E1208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift in Sources */,
-				DA73B8892092113900A6A7D0 /* TestProjectCompletionViewModelStack.swift in Sources */,
+				DA73B8892092113900A6A7D0 /* TestCircleCompletionStackViewModel.swift in Sources */,
 				DA1DF9AE207CADD800B03C6E /* TestLandingController_DataSourceProtocol_Columns.swift in Sources */,
 				DAE8C7EB207FB85400395318 /* TestLanding_CreateColumn.swift in Sources */,
 				DAEAA1382084788D003769B7 /* TestBoard_Factory.swift in Sources */,

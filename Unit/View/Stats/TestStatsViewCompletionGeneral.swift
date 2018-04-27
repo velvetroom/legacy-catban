@@ -3,7 +3,7 @@ import XCTest
 
 class TestStatsViewCompletionGeneral:XCTestCase {
     private var view:StatsViewCompletionGeneral!
-    private var viewModel:ProjectCompletionViewModel!
+    private var viewModel:CircleCompletionViewModel!
     private struct Constants {
         static let totalCards:Int = 123
     }
@@ -11,7 +11,7 @@ class TestStatsViewCompletionGeneral:XCTestCase {
     override func setUp() {
         super.setUp()
         self.view = StatsViewCompletionGeneral()
-        self.viewModel = ProjectCompletionViewModel()
+        self.viewModel = CircleCompletionViewModel()
         self.viewModel.totalCards = Constants.totalCards
     }
     

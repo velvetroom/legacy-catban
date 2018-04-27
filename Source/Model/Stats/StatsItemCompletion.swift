@@ -2,7 +2,7 @@ import UIKit
 
 class StatsItemCompletion:StatsItemProtocol {
     func factoryViewWith(project:ProjectProtocol) -> UIView {
-        let viewModel:ProjectCompletionViewModel = ProjectCompletionViewModel.factoryWith(project:project)
+        let viewModel:CircleCompletionViewModel = CircleCompletionViewModel.factoryWith(project:project)
         let countColumns:Int = project.columns.count
         if countColumns >= Constants.thirdOrder {
             return StatsViewCompletionThirdOrder.factoryWith(project:viewModel)
