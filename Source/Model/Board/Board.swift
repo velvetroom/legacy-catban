@@ -2,6 +2,7 @@ import Foundation
 
 class Board:BoardProtocol {
     var user:UserProtocol
+    var repository:BoardRepositoryProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
         get {
@@ -27,6 +28,7 @@ class Board:BoardProtocol {
     
     init() {
         self.user = User()
+        self.repository = BoardRepository()
         self.projects = []
     }
     
@@ -47,5 +49,9 @@ class Board:BoardProtocol {
         for update:UpdateProtocol in updates {
             update.strategy(board:self)
         }
+    }
+    
+    func save() {
+        
     }
 }
