@@ -2267,7 +2267,7 @@
 				DA6EBE7820824426004B639E /* Board */,
 				DA6EBE7920824426004B639E /* Load */,
 				DA73A1D82080EABF00ADC499 /* Error */,
-				DAEA2CAB207CF16600C15653 /* CollectionUpdate */,
+				DAEA2CAB207CF16600C15653 /* Update */,
 				DA4F8FEE2072791E0063D384 /* Writer */,
 				DA5B5A01207047E600122EEF /* Landing */,
 				DA1AD54B20653284002A7493 /* Project */,
@@ -2356,7 +2356,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DAEA2CAB207CF16600C15653 /* CollectionUpdate */ = {
+		DAEA2CAB207CF16600C15653 /* Update */ = {
 			isa = PBXGroup;
 			children = (
 				DAEA2CAD207CF19A00C15653 /* CollectionUpdateProtocol.swift */,
@@ -2369,7 +2369,7 @@
 				DA80303E208DFED000CCDBB1 /* CollectionUpdateOpenProject.swift */,
 				DA803046208E148100CCDBB1 /* CollectionUpdateDeleteProject.swift */,
 			);
-			path = CollectionUpdate;
+			path = Update;
 			sourceTree = "<group>";
 		};
 		DAEA2CAC207CF17800C15653 /* CollectionUpdate */ = {
