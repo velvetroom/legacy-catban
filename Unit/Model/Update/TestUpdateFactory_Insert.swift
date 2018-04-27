@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingCollectionUpdateFactory_Insert:XCTestCase {
+class TestUpdateFactory_Insert:XCTestCase {
     private var factory:UpdateFactory!
     private var project:Project!
     

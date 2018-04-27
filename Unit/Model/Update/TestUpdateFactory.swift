@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingCollectionUpdateFactory:XCTestCase {
+class TestUpdateFactory:XCTestCase {
     private var factory:UpdateFactory!
     
     override func setUp() {

@@ -7,7 +7,7 @@ class TestLanding_DeleteColumn:XCTestCase {
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
-    private var collectionUpdateFactory:MockLandingCollectionUpdateFactoryProtocol!
+    private var collectionUpdateFactory:MockUpdateFactoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -21,7 +21,7 @@ class TestLanding_DeleteColumn:XCTestCase {
         self.project = MockProjectProtocol()
         self.presenter = MockLandingPresenterProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
-        self.collectionUpdateFactory = MockLandingCollectionUpdateFactoryProtocol()
+        self.collectionUpdateFactory = MockUpdateFactoryProtocol()
         self.board.project = self.project
         self.model.board = self.board
         self.model.presenter = self.presenter

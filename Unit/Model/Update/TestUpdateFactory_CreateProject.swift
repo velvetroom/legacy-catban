@@ -1,7 +1,7 @@
 import XCTest
 @testable import catban
 
-class TestLandingCollectionUpdateFactory_CreateProject:XCTestCase {
+class TestUpdateFactory_CreateProject:XCTestCase {
     private var factory:UpdateFactory!
     private struct Constants {
         static let expectedUpdates:Int = 3

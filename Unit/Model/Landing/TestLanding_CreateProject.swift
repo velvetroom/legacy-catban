@@ -4,7 +4,7 @@ import XCTest
 class TestLanding_CreateProject:XCTestCase {
     private var model:Landing!
     private var board:MockBoardProtocol!
-    private var updateFactory:MockLandingCollectionUpdateFactoryProtocol!
+    private var updateFactory:MockUpdateFactoryProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var presenter:MockLandingPresenterProtocol!
     private var expect:XCTestExpectation?
@@ -16,7 +16,7 @@ class TestLanding_CreateProject:XCTestCase {
         super.setUp()
         self.model = Landing()
         self.board = MockBoardProtocol()
-        self.updateFactory = MockLandingCollectionUpdateFactoryProtocol()
+        self.updateFactory = MockUpdateFactoryProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.presenter = MockLandingPresenterProtocol()
         self.model.board = self.board

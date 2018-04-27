@@ -7,7 +7,7 @@ class TestLanding_CreateColumn:XCTestCase {
     private var project:MockProjectProtocol!
     private var presenter:MockLandingPresenterProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
-    private var updateFactory:MockLandingCollectionUpdateFactoryProtocol!
+    private var updateFactory:MockUpdateFactoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -18,7 +18,7 @@ class TestLanding_CreateColumn:XCTestCase {
         self.model = Landing()
         self.board = MockBoardProtocol()
         self.presenter = MockLandingPresenterProtocol()
-        self.updateFactory = MockLandingCollectionUpdateFactoryProtocol()
+        self.updateFactory = MockUpdateFactoryProtocol()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.project = MockProjectProtocol()
         self.board.project = self.project

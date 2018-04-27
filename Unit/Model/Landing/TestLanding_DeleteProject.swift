@@ -4,7 +4,7 @@ import XCTest
 class TestLanding_DeleteProject:XCTestCase {
     private var model:Landing!
     private var board:MockBoardProtocol!
-    private var updateFactory:MockLandingCollectionUpdateFactoryProtocol!
+    private var updateFactory:MockUpdateFactoryProtocol!
     private var viewModelLoader:MockLandingViewModelLoader!
     private var presenter:MockLandingPresenterProtocol!
     private var expect:XCTestExpectation?
@@ -19,7 +19,7 @@ class TestLanding_DeleteProject:XCTestCase {
         self.model = Landing()
         self.viewModelLoader = MockLandingViewModelLoader()
         self.board = MockBoardProtocol()
-        self.updateFactory = MockLandingCollectionUpdateFactoryProtocol()
+        self.updateFactory = MockUpdateFactoryProtocol()
         self.presenter = MockLandingPresenterProtocol()
         let projectOne:Project = Project()
         projectOne.identifier = Constants.identifierOne
