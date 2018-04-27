@@ -2078,7 +2078,7 @@
 				DA6EBE7D20824486004B639E /* Board */,
 				DA6EBE7E20824486004B639E /* Load */,
 				DA6EBE7520822235004B639E /* Error */,
-				DAEA2CAC207CF17800C15653 /* CollectionUpdate */,
+				DAEA2CAC207CF17800C15653 /* Update */,
 				DA4F8FF42072797D0063D384 /* Writer */,
 				DA5B59FE2070479700122EEF /* Landing */,
 				DA1AD54820653190002A7493 /* Project */,
@@ -2372,7 +2372,7 @@
 			path = Update;
 			sourceTree = "<group>";
 		};
-		DAEA2CAC207CF17800C15653 /* CollectionUpdate */ = {
+		DAEA2CAC207CF17800C15653 /* Update */ = {
 			isa = PBXGroup;
 			children = (
 				DAEA2CB1207CF2F000C15653 /* TestCollectionUpdateProtocol.swift */,
@@ -2385,7 +2385,7 @@
 				DA803044208E144600CCDBB1 /* TestCollectionUpdateDeleteProject.swift */,
 				DAEA2CAF207CF21700C15653 /* MockCollectionUpdateProtocol.swift */,
 			);
-			path = CollectionUpdate;
+			path = Update;
 			sourceTree = "<group>";
 		};
 		DAEEC71B208F54AE001B80A3 /* Stats */ = {
