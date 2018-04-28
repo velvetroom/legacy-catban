@@ -10,4 +10,5 @@ protocol FileProtocol {
     func save(project:Data, with identifier:String) throws
     func clearProjects() throws
     func createDirectories() throws
+    func deleteProjectWith(identifier:String) throws
 }

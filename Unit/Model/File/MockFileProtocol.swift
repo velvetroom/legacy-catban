@@ -8,6 +8,7 @@ class MockFileProtocol:FileProtocol {
     var onSaveProject:((Data, String) -> Void)?
     var onClearProjects:(() -> Void)?
     var onCreateDirectories:(() -> Void)?
+    var onDeleteProjectWithIdentifier:((String) -> Void)?
     var throwError:Error?
     var directory:URL
     var projects:URL {
@@ -54,5 +55,9 @@ class MockFileProtocol:FileProtocol {
     
     func createDirectories() throws {
         self.onCreateDirectories?()
+    }
+    
+    func deleteProjectWith(identifier:String) throws {
+        self.onDeleteProjectWithIdentifier?(identifier)
     }
 }

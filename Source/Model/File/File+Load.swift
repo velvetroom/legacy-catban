@@ -7,17 +7,17 @@ extension File {
     
     func loadProjects() throws -> [Data] {
         let urls:[URL] = try self.projectUrls()
-        if urls.isEmpty {
-            throw ErrorRepository.noProjectsFound
-        }
+        guard
+            urls.isEmpty == false
+        else { throw ErrorRepository.noProjectsFound }
         return try self.projectsWith(urls:urls)
     }
     
     private func loadFileAt(url:URL) throws -> Data {
-        if FileManager.default.fileExists(atPath:url.path) {
-            return try Data(contentsOf:url)
-        }
-        throw ErrorRepository.fileNotFound
+        guard
+            FileManager.default.fileExists(atPath:url.path)
+        else { throw ErrorRepository.fileNotFound }
+        return try Data(contentsOf:url)
     }
     
     private func projectUrls() throws -> [URL] {

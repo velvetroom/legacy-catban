@@ -26,6 +26,10 @@ class File:FileProtocol {
         try self.createDirectory(url:self.projects)
     }
     
+    func urlForProject(identifier:String) -> URL {
+        return self.projects.appendingPathComponent(identifier).appendingPathExtension(Constants.fileExtension)
+    }
+    
     private func createDirectory(url:URL) throws {
         guard
             FileManager.default.fileExists(atPath:url.path) == false

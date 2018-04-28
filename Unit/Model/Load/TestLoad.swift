@@ -6,11 +6,13 @@ class TestLoad:XCTestCase {
     private var repository:MockRepositoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
+        static let rootFolder:String = "tests"
         static let wait:TimeInterval = 0.3
     }
     
     override func setUp() {
         super.setUp()
+        File.rootFolder = Constants.rootFolder
         self.model = Load()
         self.repository = MockRepositoryProtocol()
         self.model.repository = self.repository
