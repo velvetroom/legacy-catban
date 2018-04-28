@@ -11,6 +11,7 @@ class UpdateCreateProject:UpdateProtocol {
         var board:BoardProtocol = board
         board.insertProject(project:self.project)
         board.project = self.project
+        board.saveProject()
     }
     
     func strategy(collectionView:UICollectionView) { }

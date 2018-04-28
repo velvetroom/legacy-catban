@@ -8,6 +8,7 @@ class TestUpdateCreateProject:XCTestCase {
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
+        static let identifier:String = "2313"
         static let wait:TimeInterval = 0.3
     }
     
@@ -18,6 +19,7 @@ class TestUpdateCreateProject:XCTestCase {
         self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
         self.board.project = self.project
+        self.project.identifier = Constants.identifier
     }
     
     func testLoad() {
@@ -38,7 +40,19 @@ class TestUpdateCreateProject:XCTestCase {
     func testStrategyBoardInsertsProject() {
         self.startExpectation()
         self.board.onInsertProject = { [weak self] (project:ProjectProtocol) in
-            XCTAssertEqual(project.identifier, self?.update.project.identifier,
+            XCTAssertEqual(project.identifier, self?.update.project.identifier, "Invalid project received")
+            self?.expect?.fulfill()
+        }
+        
+        self.update.strategy(board:self.board)
+        
+        self.waitExpectation()
+    }
+    
+    func testStrategyBoardSaveProject() {
+        self.startExpectation()
+        self.board.onSaveProject = { [weak self] in
+            XCTAssertEqual(self?.board.project.identifier, self?.update.project.identifier,
                            "Invalid project received")
             self?.expect?.fulfill()
         }
