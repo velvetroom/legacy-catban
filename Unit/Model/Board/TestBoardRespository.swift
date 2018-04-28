@@ -25,20 +25,6 @@ class TestBoardRespository:XCTestCase {
         XCTAssertNotNil(self.model.dispatchQueue, "Failed to load queue")
     }
     
-    func testSaveCallsRepositoryLocalSave() {
-        self.startExpectation()
-        self.repository.onLocalSave = { [weak self] (board:BoardProtocol) in
-            let board:Board = board as! Board
-            XCTAssertFalse(Thread.isMainThread, "Should not be on main thread")
-            XCTAssertTrue(board === self?.board, "Invalid board received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.save(board:self.board)
-        
-        self.waitExpectation()
-    }
-    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

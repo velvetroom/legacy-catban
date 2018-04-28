@@ -9,5 +9,4 @@ protocol BoardProtocol {
     func insertProject(project:ProjectProtocol)
     func deleteProject()
     func apply(updates:[UpdateProtocol])
-    func save()
 }

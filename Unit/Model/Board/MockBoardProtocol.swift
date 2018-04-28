@@ -6,7 +6,6 @@ class MockBoardProtocol:BoardProtocol {
     var onDeleteProject:(() -> Void)?
     var onApplyUpdates:(([UpdateProtocol]) -> Void)?
     var onSelectProjectAtIndex:((Int) -> Void)?
-    var onSave:(() -> Void)?
     var user:UserProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
@@ -37,9 +36,5 @@ class MockBoardProtocol:BoardProtocol {
     
     func apply(updates:[UpdateProtocol]) {
         self.onApplyUpdates?(updates)
-    }
-    
-    func save() {
-        self.onSave?()
     }
 }

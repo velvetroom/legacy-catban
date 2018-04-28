@@ -22,7 +22,6 @@ class TestBoardRespository_DeleteProject:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.repository, "Failed to load repository")
         XCTAssertNotNil(self.project, "Failed to load project")
-        XCTAssertNotNil(self.model.dispatchQueue, "Failed to load queue")
     }
     
     func testDeleteProjectOnLocalDeleteProject() {

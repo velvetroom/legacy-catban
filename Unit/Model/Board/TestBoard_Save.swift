@@ -23,32 +23,6 @@ class TestBoard_Save:XCTestCase {
         XCTAssertNotNil(self.repository, "Failed to load repository")
     }
     
-    func testInsertProjectSaves() {
-        self.startExpectation()
-        self.repository.onSaveBoard = { [weak self] (board:BoardProtocol) in
-            let board:Board = board as! Board
-            XCTAssertTrue(board === self?.model, "Invalid board received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.insertProject(project:Project())
-        
-        self.waitExpectation()
-    }
-    
-    func testDeleteProjectSaves() {
-        self.startExpectation()
-        self.repository.onSaveBoard = { [weak self] (board:BoardProtocol) in
-            let board:Board = board as! Board
-            XCTAssertTrue(board === self?.model, "Invalid board received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.deleteProject()
-        
-        self.waitExpectation()
-    }
-    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
