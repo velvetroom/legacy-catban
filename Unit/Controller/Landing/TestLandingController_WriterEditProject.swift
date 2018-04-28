@@ -4,6 +4,7 @@ import XCTest
 class TestLandingController_WriterEditProject:XCTestCase {
     private var controller:LandingController<MockLandingProtocol>!
     private var navigation:MockNavigationController!
+    private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,6 +18,8 @@ class TestLandingController_WriterEditProject:XCTestCase {
         self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
         self.project = MockProjectProtocol()
+        self.board = MockBoardProtocol()
+        self.controller.model.board = self.board
         self.project.name = Constants.name
         self.controller.model.project = self.project
         self.navigation.addChildViewController(self.controller)
@@ -25,6 +28,7 @@ class TestLandingController_WriterEditProject:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
+        XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
@@ -94,6 +98,23 @@ class TestLandingController_WriterEditProject:XCTestCase {
             controller.model.onFinish?(Constants.updatedName)
         }
         self.controller.model.onReloadViewModel = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.openWriterForProject()
+        
+        self.waitExpectations()
+    }
+    
+    func testOnFinishSavesProject() {
+        self.startExpectation()
+        self.navigation.onPresent = { (controller:UIViewController) in
+            guard
+                let controller:WriterController<Writer> = controller as? WriterController<Writer>
+            else { return }
+            controller.model.onFinish?(Constants.updatedName)
+        }
+        self.board.onSaveProject = { [weak self] in
             self?.expect?.fulfill()
         }
         

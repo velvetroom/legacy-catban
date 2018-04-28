@@ -29,6 +29,7 @@ extension LandingController {
         controller.model.text = project.name
         controller.model.onFinish = { [weak self] (name:String) in
             project.name = name
+            self?.model.board.saveProject()
             self?.model.reloadViewModel()
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
