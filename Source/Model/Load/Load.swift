@@ -23,7 +23,7 @@ class Load:LoadProtocol {
     func backgroundLoadBoard() -> BoardProtocol {
         let board:BoardProtocol
         do {
-            try board = self.repository.loadBoardFromLocal()
+            try board = self.repository.loadBoard()
         } catch {
             board = self.createNewBoard()
         }
@@ -32,7 +32,7 @@ class Load:LoadProtocol {
     
     func createNewBoard() -> BoardProtocol {
         let board:BoardProtocol = Board.factoryNewBoard()
-        do { try self.repository.localSave(board:board) } catch { }
+        do { try self.repository.save(board:board) } catch { }
         return board
     }
 }

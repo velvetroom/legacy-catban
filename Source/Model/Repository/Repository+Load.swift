@@ -1,7 +1,7 @@
 import Foundation
 
 extension Repository {
-    func loadBoardFromLocal() throws -> BoardProtocol {
+    func loadBoard() throws -> BoardProtocol {
         return try self.local.loadBoard()
     }
 }

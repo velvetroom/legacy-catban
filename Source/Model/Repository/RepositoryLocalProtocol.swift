@@ -2,6 +2,7 @@ import Foundation
 
 protocol RepositoryLocalProtocol {
     func loadBoard() throws -> BoardProtocol
-    func save(board:BoardProtocol) throws
     func delete(project:ProjectProtocol) throws
+    func save(board:BoardProtocol) throws
+    func save(project:ProjectProtocol) throws
 }

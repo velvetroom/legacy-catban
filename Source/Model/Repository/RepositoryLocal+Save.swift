@@ -6,6 +6,11 @@ extension RepositoryLocal {
         try self.save(projects:board.projects)
     }
     
+    func save(project:ProjectProtocol) throws {
+        let data:Data = try self.serialiser.serialise(project:project)
+        try self.file.save(project:data, with:project.identifier)
+    }
+    
     func save(user:UserProtocol) throws {
         let data:Data = try self.serialiser.serialise(user:user)
         try self.file.save(user:data)
@@ -15,10 +20,5 @@ extension RepositoryLocal {
         for project:ProjectProtocol in projects {
             try self.save(project:project)
         }
-    }
-    
-    private func save(project:ProjectProtocol) throws {
-        let data:Data = try self.serialiser.serialise(project:project)
-        try self.file.save(project:data, with:project.identifier)
     }
 }

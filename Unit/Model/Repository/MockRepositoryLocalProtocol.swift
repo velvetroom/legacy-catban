@@ -3,8 +3,9 @@ import Foundation
 
 class MockRepositoryLocalProtocol:RepositoryLocalProtocol {
     var onLoadBoard:(() -> Void)?
-    var onSaveBoard:((BoardProtocol) -> Void)?
     var onDeleteProject:((ProjectProtocol) -> Void)?
+    var onSaveBoard:((BoardProtocol) -> Void)?
+    var onSaveProject:((ProjectProtocol) -> Void)?
     
     func loadBoard() throws -> BoardProtocol {
         self.onLoadBoard?()
@@ -17,5 +18,9 @@ class MockRepositoryLocalProtocol:RepositoryLocalProtocol {
     
     func delete(project:ProjectProtocol) {
         self.onDeleteProject?(project)
+    }
+    
+    func save(project:ProjectProtocol) throws {
+        self.onSaveProject?(project)
     }
 }

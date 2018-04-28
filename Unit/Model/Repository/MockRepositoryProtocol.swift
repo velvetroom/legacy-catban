@@ -2,20 +2,25 @@ import Foundation
 @testable import catban
 
 class MockRepositoryProtocol:RepositoryProtocol {
-    var onLoadBoardFromLocal:(() -> Void)?
-    var onLocalSave:((BoardProtocol) -> Void)?
-    var onLocalDeleteProject:((ProjectProtocol) -> Void)?
+    var onLoadBoard:(() -> Void)?
+    var onDeleteProject:((ProjectProtocol) -> Void)?
+    var onSaveBoard:((BoardProtocol) -> Void)?
+    var onSaveProject:((ProjectProtocol) -> Void)?
     
-    func loadBoardFromLocal() throws -> BoardProtocol {
-        self.onLoadBoardFromLocal?()
+    func loadBoard() throws -> BoardProtocol {
+        self.onLoadBoard?()
         return Board()
     }
     
-    func localSave(board:BoardProtocol) throws {
-        self.onLocalSave?(board)
+    func delete(project:ProjectProtocol) throws {
+        self.onDeleteProject?(project)
     }
     
-    func localDelete(project:ProjectProtocol) throws {
-        self.onLocalDeleteProject?(project)
+    func save(board:BoardProtocol) throws {
+        self.onSaveBoard?(board)
+    }
+    
+    func save(project:ProjectProtocol) throws {
+        self.onSaveProject?(project)
     }
 }

@@ -27,11 +27,13 @@ class TestRepository_LoadBoardFromLocal:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        do {
-            let _:BoardProtocol = try self.model.loadBoardFromLocal()
-        } catch { }
+        do { let _:BoardProtocol = try self.model.loadBoard() } catch { }
         
         self.waitExpectations()
+    }
+    
+    func testNoThrows() {
+        XCTAssertNoThrow(try self.model.loadBoard(), "Failed to load board")
     }
     
     private func startExpectation() {

@@ -1,10 +1,10 @@
 import XCTest
 @testable import catban
 
-class TestRepository_LocalDeleteProject:XCTestCase {
-    private var model:Repository!
-    private var local:MockRepositoryLocalProtocol!
+class TestBoardRepository_Save:XCTestCase {
+    private var model:BoardRepository!
     private var project:Project!
+    private var repository:MockRepositoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -12,33 +12,30 @@ class TestRepository_LocalDeleteProject:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.model = Repository()
-        self.local = MockRepositoryLocalProtocol()
+        self.model = BoardRepository()
+        self.repository = MockRepositoryProtocol()
         self.project = Project()
-        self.model.local = self.local
+        self.model.repository = self.repository
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.local, "Failed to load local")
+        XCTAssertNotNil(self.repository, "Failed to load repository")
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testLocalDeleteCallsLocal() {
+    func testSaveProjectOnLocalDeleteProject() {
         self.startExpectation()
-        self.local.onDeleteProject = { [weak self] (project:ProjectProtocol) in
+        self.repository.onSaveProject = { [weak self] (project:ProjectProtocol) in
             let project:Project = project as! Project
-            XCTAssertTrue(self?.project === project, "Invalid project received")
+            XCTAssertFalse(Thread.isMainThread, "Should not be on main thread")
+            XCTAssertTrue(project === self?.project, "Invalid board received")
             self?.expect?.fulfill()
         }
         
-        do { try self.model.delete(project:self.project) } catch { }
+        self.model.save(project:self.project)
         
         self.waitExpectation()
-    }
-    
-    func testNoThrows() {
-        XCTAssertNoThrow(try self.model.delete(project:self.project), "Failed deleting project")
     }
     
     private func startExpectation() {

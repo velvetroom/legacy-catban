@@ -37,8 +37,12 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         XCTAssertNotNil(self.data, "Failed to load data")
     }
     
-    func testNoThrow() {
+    func testBoardNoThrow() {
         XCTAssertNoThrow(try self.model.save(board:self.board))
+    }
+    
+    func testProjectNoThrow() {
+        XCTAssertNoThrow(try self.model.save(project:self.project))
     }
     
     func testFileIsCalledForUser() {
@@ -113,6 +117,18 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         }
         
         do { try self.model.save(board:self.board) } catch { }
+        
+        self.waitExpectations()
+    }
+    
+    func testSaveProject() {
+        self.startExpectation()
+        self.file.onSaveProject = { [weak self] (project:Data, identifier:String) in
+            XCTAssertTrue(self?.data == project, "Invalid data received")
+            self?.expect?.fulfill()
+        }
+        
+        do { try self.model.save(project:self.project) } catch { }
         
         self.waitExpectations()
     }

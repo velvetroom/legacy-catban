@@ -1,9 +1,9 @@
 import XCTest
 @testable import catban
 
-class TestBoardRespository_DeleteProject:XCTestCase {
+class TestBoardRepository:XCTestCase {
     private var model:BoardRepository!
-    private var project:Project!
+    private var board:Board!
     private var repository:MockRepositoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -14,28 +14,15 @@ class TestBoardRespository_DeleteProject:XCTestCase {
         super.setUp()
         self.model = BoardRepository()
         self.repository = MockRepositoryProtocol()
-        self.project = Project()
+        self.board = Board()
         self.model.repository = self.repository
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.repository, "Failed to load repository")
-        XCTAssertNotNil(self.project, "Failed to load project")
-    }
-    
-    func testDeleteProjectOnLocalDeleteProject() {
-        self.startExpectation()
-        self.repository.onLocalDeleteProject = { [weak self] (project:ProjectProtocol) in
-            let project:Project = project as! Project
-            XCTAssertFalse(Thread.isMainThread, "Should not be on main thread")
-            XCTAssertTrue(project === self?.project, "Invalid board received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.delete(project:self.project)
-        
-        self.waitExpectation()
+        XCTAssertNotNil(self.board, "Failed to load board")
+        XCTAssertNotNil(self.model.dispatchQueue, "Failed to load queue")
     }
     
     private func startExpectation() {

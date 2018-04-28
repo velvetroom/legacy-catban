@@ -38,7 +38,7 @@ class TestLoad:XCTestCase {
     
     func testBackgroundLoadThread() {
         self.startExpectation()
-        self.repository.onLoadBoardFromLocal = { [weak self] in
+        self.repository.onLoadBoard = { [weak self] in
             self?.expect?.fulfill()
         }
         
@@ -50,7 +50,7 @@ class TestLoad:XCTestCase {
     func testCreateNewBoard() {
         self.startExpectation()
         var userIdentifier:String?
-        self.repository.onLocalSave = { [weak self] (board:BoardProtocol) in
+        self.repository.onSaveBoard = { [weak self] (board:BoardProtocol) in
             userIdentifier = board.user.identifier
             self?.expect?.fulfill()
         }

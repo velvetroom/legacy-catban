@@ -4,6 +4,7 @@ import XCTest
 class TestBoard_Save:XCTestCase {
     private var model:Board!
     private var repository:MockBoardRepositoryProtocol!
+    private var project:Project!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
@@ -13,14 +14,28 @@ class TestBoard_Save:XCTestCase {
         super.setUp()
         self.model = Board()
         self.repository = MockBoardRepositoryProtocol()
+        self.project = Project()
+        self.model.project = project
         self.model.repository = self.repository
-        self.model.projects.append(Project())
-        self.model.projects.append(Project())
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.repository, "Failed to load repository")
+        XCTAssertNotNil(self.project, "Failed to load project")
+    }
+    
+    func testSaveProject() {
+        self.startExpectation()
+        self.repository.onSaveProject = { [weak self] (project:ProjectProtocol) in
+            let project:Project = project as! Project
+            XCTAssertTrue(self?.project === project, "Invalid project received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.saveProject()
+        
+        self.waitExpectation()
     }
     
     private func startExpectation() {
