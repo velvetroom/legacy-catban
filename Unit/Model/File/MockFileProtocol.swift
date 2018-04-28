@@ -6,24 +6,8 @@ class MockFileProtocol:FileProtocol {
     var onLoadProjects:(() -> Void)?
     var onSaveUser:((Data) -> Void)?
     var onSaveProject:((Data, String) -> Void)?
-    var onClearProjects:(() -> Void)?
-    var onCreateDirectories:(() -> Void)?
     var onDeleteProjectWithIdentifier:((String) -> Void)?
     var throwError:Error?
-    var directory:URL
-    var projects:URL {
-        get {
-            return self.directory
-        }
-    }
-    
-    private struct Constants {
-        static let urlString:String = "www.google.com"
-    }
-    
-    init() {
-        self.directory = URL(string:Constants.urlString)!
-    }
     
     func loadUser() throws -> Data {
         self.onLoadUser?()
@@ -47,14 +31,6 @@ class MockFileProtocol:FileProtocol {
     
     func save(project:Data, with identifier:String) throws {
         self.onSaveProject?(project, identifier)
-    }
-    
-    func clearProjects() throws {
-        self.onClearProjects?()
-    }
-    
-    func createDirectories() throws {
-        self.onCreateDirectories?()
     }
     
     func deleteProjectWith(identifier:String) throws {

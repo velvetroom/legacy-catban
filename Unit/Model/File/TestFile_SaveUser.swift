@@ -21,7 +21,7 @@ class TestFile_SaveUser:XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        do { try FileManager.default.removeItem(at:self.model.directory) } catch { }
+        self.model.deleteAll()
     }
     
     func testLoad() {

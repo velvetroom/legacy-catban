@@ -1,8 +1,8 @@
 import Foundation
 
 extension File {
-    func clearProjects() throws {
-        try FileManager.default.removeItem(at:self.projects)
+    func deleteAll() {
+        do { try FileManager.default.removeItem(at:self.directory) } catch { }
     }
     
     func deleteProjectWith(identifier:String) throws {

@@ -15,9 +15,7 @@ class TestFile:XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        do {
-            try FileManager.default.removeItem(at:self.model.directory)
-        } catch { }
+        self.model.deleteAll()
     }
     
     func testLoad() {
@@ -25,6 +23,13 @@ class TestFile:XCTestCase {
         XCTAssertNotNil(self.model.directory, "Failed to load directory")
         XCTAssertNotNil(self.model.projects, "Failed to load projects")
         XCTAssertNotNil(self.model.user, "Failed to load user")
+    }
+    
+    func createDirectoriesOnLoad() {
+        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.directory.path),
+                      "Failed to create directory")
+        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.projects.path),
+                      "Failed to create projects")
     }
     
     func testCreateDirectory() {

@@ -1258,11 +1258,11 @@
 			children = (
 				DA4A69C12085E0D1005AE05F /* FileProtocol.swift */,
 				DA4A69C32085E0E1005AE05F /* File.swift */,
+				DA4A69C52085E3AA005AE05F /* File+Constants.swift */,
 				DABC325320889A0F008BA213 /* File+Load.swift */,
 				DABC325520889A39008BA213 /* File+Save.swift */,
 				DA4F0439208747A300A28894 /* File+Factory.swift */,
 				DA0DB1942093731700B2F963 /* File+Delete.swift */,
-				DA4A69C52085E3AA005AE05F /* File+Constants.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";

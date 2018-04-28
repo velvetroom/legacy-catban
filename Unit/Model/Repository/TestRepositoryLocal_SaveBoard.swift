@@ -117,28 +117,6 @@ class TestRepositoryLocal_SaveBoard:XCTestCase {
         self.waitExpectations()
     }
     
-    func testSaveBoardClearsProject() {
-        self.startExpectation()
-        self.file.onClearProjects = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        do { try self.model.save(board:self.board) } catch { }
-        
-        self.waitExpectations()
-    }
-    
-    func testSaveBoardCreatedDirectoriesAfterClearProjects() {
-        self.startExpectation()
-        self.file.onCreateDirectories = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        do { try self.model.save(board:self.board) } catch { }
-        
-        self.waitExpectations()
-    }
-    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

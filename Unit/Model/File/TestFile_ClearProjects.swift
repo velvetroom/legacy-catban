@@ -25,7 +25,7 @@ class TestFile_ClearProjects:XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        do { try FileManager.default.removeItem(at:self.model.directory) } catch { }
+        self.model.deleteAll()
     }
     
     func testLoad() {
@@ -34,18 +34,31 @@ class TestFile_ClearProjects:XCTestCase {
         XCTAssertNotNil(self.url, "Failed to load url")
     }
     
-    func testClearFolderDirectory() {
+    func testDeleteAllFiles() {
         XCTAssertFalse(self.fileExists(), "Project should not exist before")
         self.creatProject()
         XCTAssertTrue(self.fileExists(), "Project should be created now")
         
-        XCTAssertNoThrow(try self.model.clearProjects())
+        self.model.deleteAll()
         
-        XCTAssertFalse(self.fileExists(), "Failed to delete folder")
+        XCTAssertFalse(self.fileExists(), "Failed to delete file")
+    }
+    
+    func testDeleteAllFolder() {
+        self.creatProject()
+        XCTAssertTrue(self.fileExists(), "Project should be created now")
+        
+        self.model.deleteAll()
+        
+        XCTAssertFalse(self.folderExists(), "Failed to delete folder")
     }
     
     private func fileExists() -> Bool {
         return FileManager.default.fileExists(atPath:self.url.path)
+    }
+    
+    private func folderExists() -> Bool {
+        return FileManager.default.fileExists(atPath:self.model.directory.path)
     }
     
     private func creatProject() {
