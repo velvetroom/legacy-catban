@@ -4,23 +4,29 @@ import XCTest
 class TestBoard_DeleteProject:XCTestCase {
     private var model:Board!
     private var project:Project!
+    private var repository:MockBoardRepositoryProtocol!
+    private var expect:XCTestExpectation?
     private struct Constants {
         static let idOne:String = "lorem ipsum"
         static let idTwo:String = "hello world"
+        static let wait:TimeInterval = 0.3
     }
     
     override func setUp() {
         super.setUp()
         self.model = Board()
         self.project = Project()
+        self.repository = MockBoardRepositoryProtocol()
         self.project.identifier = Constants.idOne
-        self.model.project = project
-        self.model.projects = [project]
+        self.model.project = self.project
+        self.model.projects = [self.project]
+        self.model.repository = self.repository
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.repository, "Failed to load repository")
     }
     
     func testReduceProjects() {
@@ -60,5 +66,28 @@ class TestBoard_DeleteProject:XCTestCase {
         self.model.deleteProject()
         
         XCTAssertNil(weakReference, "Failed to release project")
+    }
+    
+    func testDeleteCallsRepository() {
+        self.startExpectation()
+        let newProject:Project = Project()
+        self.model.projects.append(newProject)
+        self.repository.onDeleteProject = { [weak self] (project:ProjectProtocol) in
+            let project:Project = project as! Project
+            XCTAssertTrue(self?.project === project, "Invalid project received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.deleteProject()
+        
+        self.waitExpectation()
+    }
+    
+    private func startExpectation() {
+        self.expect = expectation(description:"Waiting for expectation")
+    }
+    
+    private func waitExpectation() {
+        waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
     }
 }

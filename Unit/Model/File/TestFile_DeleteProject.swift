@@ -38,7 +38,13 @@ class TestFile_DeleteProject:XCTestCase {
         XCTAssertFalse(self.fileExists(), "Project already exists")
     }
     
-    func testNoThrow() {
+    func testNoThrowFileDoesNotExist() {
+        XCTAssertNoThrow(try self.model.deleteProjectWith(identifier:Constants.identifier),
+                         "Failed to delete project")
+    }
+    
+    func testNoThrowFileExists() {
+        self.saveFile()
         XCTAssertNoThrow(try self.model.deleteProjectWith(identifier:Constants.identifier),
                          "Failed to delete project")
     }

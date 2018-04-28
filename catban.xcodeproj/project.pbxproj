@@ -156,6 +156,15 @@
 		DA48EAE0208B1A2E00434E8B /* OrganisePresenterFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48EADF208B1A2E00434E8B /* OrganisePresenterFactoryProtocol.swift */; };
 		DA48EAE2208B1A4300434E8B /* OrganisePresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48EAE1208B1A4300434E8B /* OrganisePresenterFactory.swift */; };
 		DA49753B20947734007B4DDD /* TestFile_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49753A20947734007B4DDD /* TestFile_DeleteProject.swift */; };
+		DA49753D20948777007B4DDD /* TestBoardRepository_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49753C20948777007B4DDD /* TestBoardRepository_DeleteProject.swift */; };
+		DA49753F209488F5007B4DDD /* BoardRepository+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49753E209488F5007B4DDD /* BoardRepository+Save.swift */; };
+		DA497541209488FE007B4DDD /* BoardRepository+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA497540209488FE007B4DDD /* BoardRepository+Delete.swift */; };
+		DA49754320948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49754220948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift */; };
+		DA4975452094900E007B4DDD /* Repository+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4975442094900E007B4DDD /* Repository+Save.swift */; };
+		DA4975472094901C007B4DDD /* Repository+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4975462094901C007B4DDD /* Repository+Load.swift */; };
+		DA49754920949025007B4DDD /* Repository+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49754820949025007B4DDD /* Repository+Delete.swift */; };
+		DA49754B20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49754A20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift */; };
+		DA49754D2094932A007B4DDD /* RepositoryLocal+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49754C2094932A007B4DDD /* RepositoryLocal+Delete.swift */; };
 		DA4A69B82085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */; };
 		DA4A69BA2085DA9E005AE05F /* TestRepositoryLocal_LoadBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69B92085DA9E005AE05F /* TestRepositoryLocal_LoadBoard.swift */; };
 		DA4A69BD2085DE6E005AE05F /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A69BC2085DE6E005AE05F /* TestFile.swift */; };
@@ -699,6 +708,15 @@
 		DA48EADF208B1A2E00434E8B /* OrganisePresenterFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterFactoryProtocol.swift; sourceTree = "<group>"; };
 		DA48EAE1208B1A4300434E8B /* OrganisePresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterFactory.swift; sourceTree = "<group>"; };
 		DA49753A20947734007B4DDD /* TestFile_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile_DeleteProject.swift; sourceTree = "<group>"; };
+		DA49753C20948777007B4DDD /* TestBoardRepository_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoardRepository_DeleteProject.swift; sourceTree = "<group>"; };
+		DA49753E209488F5007B4DDD /* BoardRepository+Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Save.swift"; sourceTree = "<group>"; };
+		DA497540209488FE007B4DDD /* BoardRepository+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Delete.swift"; sourceTree = "<group>"; };
+		DA49754220948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_LocalDeleteProject.swift; sourceTree = "<group>"; };
+		DA4975442094900E007B4DDD /* Repository+Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Save.swift"; sourceTree = "<group>"; };
+		DA4975462094901C007B4DDD /* Repository+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Load.swift"; sourceTree = "<group>"; };
+		DA49754820949025007B4DDD /* Repository+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Delete.swift"; sourceTree = "<group>"; };
+		DA49754A20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal_DeleteProject.swift; sourceTree = "<group>"; };
+		DA49754C2094932A007B4DDD /* RepositoryLocal+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryLocal+Delete.swift"; sourceTree = "<group>"; };
 		DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryLocal+LoadBoard.swift"; sourceTree = "<group>"; };
 		DA4A69B92085DA9E005AE05F /* TestRepositoryLocal_LoadBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal_LoadBoard.swift; sourceTree = "<group>"; };
 		DA4A69BC2085DE6E005AE05F /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
@@ -1772,6 +1790,8 @@
 				DA0DB18A20935B2200B2F963 /* BoardRepositoryProtocol.swift */,
 				DA0DB18C20935B2B00B2F963 /* BoardRepository.swift */,
 				DA0DB18E20935EA900B2F963 /* BoardRepository+Constants.swift */,
+				DA49753E209488F5007B4DDD /* BoardRepository+Save.swift */,
+				DA497540209488FE007B4DDD /* BoardRepository+Delete.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -1804,6 +1824,7 @@
 				DAC45AB0208DB2DB004E1236 /* TestBoard_Select.swift */,
 				DA0DB19020936AD300B2F963 /* TestBoard_Save.swift */,
 				DA0DB18620935A8900B2F963 /* TestBoardRespository.swift */,
+				DA49753C20948777007B4DDD /* TestBoardRepository_DeleteProject.swift */,
 				DA6EBE81208244D8004B639E /* MockBoardProtocol.swift */,
 				DA0DB18820935AB300B2F963 /* MockBoardRepositoryProtocol.swift */,
 			);
@@ -1950,10 +1971,14 @@
 			children = (
 				DA86FBC520835DFE005D31AF /* RepositoryProtocol.swift */,
 				DA86FBC720835E17005D31AF /* Repository.swift */,
+				DA4975442094900E007B4DDD /* Repository+Save.swift */,
+				DA4975462094901C007B4DDD /* Repository+Load.swift */,
+				DA49754820949025007B4DDD /* Repository+Delete.swift */,
 				DA86FBCE20836933005D31AF /* RepositoryLocalProtocol.swift */,
 				DA86FBD520836C83005D31AF /* RepositoryLocal.swift */,
 				DA4A69B72085D6FD005AE05F /* RepositoryLocal+LoadBoard.swift */,
 				DABC324D208893EE008BA213 /* RepositoryLocal+SaveBoard.swift */,
+				DA49754C2094932A007B4DDD /* RepositoryLocal+Delete.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1964,9 +1989,11 @@
 				DA86FBC120835D86005D31AF /* TestRepository.swift */,
 				DA86FBCB20835F16005D31AF /* TestRepository_LoadBoardFromLocal.swift */,
 				DABC324F208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift */,
+				DA49754220948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift */,
 				DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */,
 				DA4A69B92085DA9E005AE05F /* TestRepositoryLocal_LoadBoard.swift */,
 				DABC324B2088936C008BA213 /* TestRepositoryLocal_SaveBoard.swift */,
+				DA49754A20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift */,
 				DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */,
 				DA86FBD120836951005D31AF /* MockRepositoryLocalProtocol.swift */,
 			);
@@ -2569,9 +2596,11 @@
 				DA2538E82067D18A00EEB231 /* LandingPresenterCollectionProtocol.swift in Sources */,
 				DA3A21D5208A027A00E6E583 /* OrganisePresenterCollectionDatasource.swift in Sources */,
 				DA48EAE0208B1A2E00434E8B /* OrganisePresenterFactoryProtocol.swift in Sources */,
+				DA4975472094901C007B4DDD /* Repository+Load.swift in Sources */,
 				DA30604F2082700300E55ECB /* LoadController.swift in Sources */,
 				DA5EAFC62075EF9D002BDAD8 /* LandingAddController.swift in Sources */,
 				DA1A19CF208C6AF000300FED /* UpdateCreateProject.swift in Sources */,
+				DA4975452094900E007B4DDD /* Repository+Save.swift in Sources */,
 				DA48DD7820906439007EE369 /* StatsViewModelCollectionItemCompletion.swift in Sources */,
 				DA6EBE84208244FF004B639E /* Board.swift in Sources */,
 				DA438785208877AB004D8559 /* Deserialiser+Cards.swift in Sources */,
@@ -2603,14 +2632,17 @@
 				DA3A21C72089FB3800E6E583 /* OrganisePresenterCollectionDelegate.swift in Sources */,
 				DA54ED7A2089CBCF0078AF87 /* OrganiseProtocol.swift in Sources */,
 				DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */,
+				DA497541209488FE007B4DDD /* BoardRepository+Delete.swift in Sources */,
 				DA4F97CA208EF8F2005E4725 /* StatsProtocol.swift in Sources */,
 				DA16043E2076994B0096EFE1 /* Project+Columns.swift in Sources */,
 				DABC326B2088DC57008BA213 /* Serialiser+Card.swift in Sources */,
 				DA3A21FF208A578900E6E583 /* OrganisePresenterCollectionDelegate+Constants.swift in Sources */,
 				DA48DD6A20904AF3007EE369 /* Stats+Factory.swift in Sources */,
 				DA657E992074F491003C1645 /* WriterViewText+Constants.swift in Sources */,
+				DA49754920949025007B4DDD /* Repository+Delete.swift in Sources */,
 				DABC32692088DC43008BA213 /* Serialiser+Column.swift in Sources */,
 				DA4F9801208F1D1C005E4725 /* StatsPresenterCollectionDatasource.swift in Sources */,
+				DA49753F209488F5007B4DDD /* BoardRepository+Save.swift in Sources */,
 				DAEEC720208F551E001B80A3 /* StatsViewModel.swift in Sources */,
 				DA73B8992092279600A6A7D0 /* StatsViewCompletionGeneral+Outlets.swift in Sources */,
 				DADE83BB2070E1660053E7A0 /* LandingProtocol.swift in Sources */,
@@ -2727,6 +2759,7 @@
 				DAD433FC20654AF3002C0DEE /* ProjectCard.swift in Sources */,
 				DA519A5D2068E6DE00514098 /* LandingViewModelCollectionLayout.swift in Sources */,
 				DAE698E7206581840046721C /* LandingViewModel.swift in Sources */,
+				DA49754D2094932A007B4DDD /* RepositoryLocal+Delete.swift in Sources */,
 				DA0D94CC2090C2CF00B48DC8 /* StatsViewCollectionLayout.swift in Sources */,
 				DA54ED7C2089CBE20078AF87 /* Organise.swift in Sources */,
 				DA657E9B2074F683003C1645 /* WriterController+Notifications.swift in Sources */,
@@ -2892,6 +2925,7 @@
 				DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */,
 				DA48DD5E209049FD007EE369 /* TestStatsItem.swift in Sources */,
 				DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */,
+				DA49754320948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift in Sources */,
 				DA5EAFC42075EF41002BDAD8 /* TestLandingAddController.swift in Sources */,
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
 				DABC3250208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift in Sources */,
@@ -3055,6 +3089,7 @@
 				DA796030206BD67F00548952 /* TestProject_Move.swift in Sources */,
 				DAEEC73C208F7999001B80A3 /* MockStatsPresenterCollectionDelegateProtocol.swift in Sources */,
 				DAFE7D862090B7D200A6DD41 /* TestStatsViewCompletion.swift in Sources */,
+				DA49754B20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift in Sources */,
 				DA796028206BCABC00548952 /* TestLandingController_DataSourceProtocol.swift in Sources */,
 				DA636FF02081020600C02447 /* TestErrorController.swift in Sources */,
 				DA3B7CB52091B598009CCB93 /* TestCircleViewModel.swift in Sources */,
@@ -3072,6 +3107,7 @@
 				DA636FF42081074C00C02447 /* TestErrorModel.swift in Sources */,
 				DA27D43A208A962A006A9732 /* TestWriterViewModel.swift in Sources */,
 				DA4F042E20871BAE00A28894 /* TestDeserialiser_User.swift in Sources */,
+				DA49753D20948777007B4DDD /* TestBoardRepository_DeleteProject.swift in Sources */,
 				DA30604520826BFE00E55ECB /* MockLoadProtocol.swift in Sources */,
 				DAC10C57207DD4FE00975FDD /* TestUpdateFactory_Delete.swift in Sources */,
 				DA3A21CB2089FB9300E6E583 /* MockOrganisePresenterCollectionDelegateProtocol.swift in Sources */,

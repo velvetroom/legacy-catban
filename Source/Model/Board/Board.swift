@@ -42,6 +42,7 @@ class Board:BoardProtocol {
     }
     
     func deleteProject() {
+        self.repository.delete(project:self.project)
         self.projects.remove(at:self.projectIndex)
         self.project = self.projects[0]
         self.save()
