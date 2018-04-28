@@ -4,6 +4,7 @@ import XCTest
 class TestBoardRepository_Save:XCTestCase {
     private var model:BoardRepository!
     private var project:Project!
+    private var user:User!
     private var repository:MockRepositoryProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -15,6 +16,7 @@ class TestBoardRepository_Save:XCTestCase {
         self.model = BoardRepository()
         self.repository = MockRepositoryProtocol()
         self.project = Project()
+        self.user = User()
         self.model.repository = self.repository
     }
     
@@ -22,18 +24,33 @@ class TestBoardRepository_Save:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.repository, "Failed to load repository")
         XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.user, "Failed to load user")
     }
     
-    func testSaveProjectOnLocalDeleteProject() {
+    func testSaveProject() {
         self.startExpectation()
         self.repository.onSaveProject = { [weak self] (project:ProjectProtocol) in
             let project:Project = project as! Project
             XCTAssertFalse(Thread.isMainThread, "Should not be on main thread")
-            XCTAssertTrue(project === self?.project, "Invalid board received")
+            XCTAssertTrue(project === self?.project, "Invalid project received")
             self?.expect?.fulfill()
         }
         
         self.model.save(project:self.project)
+        
+        self.waitExpectation()
+    }
+    
+    func testSaveUser() {
+        self.startExpectation()
+        self.repository.onSaveUser = { [weak self] (user:UserProtocol) in
+            let user:User = user as! User
+            XCTAssertFalse(Thread.isMainThread, "Should not be on main thread")
+            XCTAssertTrue(user === self?.user, "Invalid user received")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.save(user:self.user)
         
         self.waitExpectation()
     }

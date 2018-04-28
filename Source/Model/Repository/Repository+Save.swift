@@ -8,4 +8,8 @@ extension Repository {
     func save(project:ProjectProtocol) throws {
         try self.local.save(project:project)
     }
+    
+    func save(user:UserProtocol) throws {
+        try self.local.save(user:user)
+    }
 }

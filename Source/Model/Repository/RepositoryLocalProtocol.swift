@@ -5,4 +5,5 @@ protocol RepositoryLocalProtocol {
     func delete(project:ProjectProtocol) throws
     func save(board:BoardProtocol) throws
     func save(project:ProjectProtocol) throws
+    func save(user:UserProtocol) throws
 }

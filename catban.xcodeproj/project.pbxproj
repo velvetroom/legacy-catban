@@ -417,6 +417,8 @@
 		DA9A98882074B50200D82514 /* WriterViewBar.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */; };
 		DA9A988A2074B9FA00D82514 /* WriterViewBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */; };
 		DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA9A988B2074BB0C00D82514 /* LocalizableWriter.strings */; };
+		DA9C81922094AB6D00354120 /* TestRepository_SaveUserToLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C81912094AB6D00354120 /* TestRepository_SaveUserToLocal.swift */; };
+		DA9C81942094AC2600354120 /* TestRepositoryLocal_SaveBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C81932094AC2600354120 /* TestRepositoryLocal_SaveBoard.swift */; };
 		DAA804BA2089E9AE00EE14BB /* OrganisePresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA804B92089E9AE00EE14BB /* OrganisePresenterOutlets.swift */; };
 		DAABC2A6206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */; };
 		DAABC2A8206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */; };
@@ -980,6 +982,8 @@
 		DA9A98872074B50200D82514 /* WriterViewBar.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar.swift .swift"; sourceTree = "<group>"; };
 		DA9A98892074B9FA00D82514 /* WriterViewBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WriterViewBar+Constants.swift"; sourceTree = "<group>"; };
 		DA9A988C2074BB0C00D82514 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableWriter.strings; sourceTree = "<group>"; };
+		DA9C81912094AB6D00354120 /* TestRepository_SaveUserToLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_SaveUserToLocal.swift; sourceTree = "<group>"; };
+		DA9C81932094AC2600354120 /* TestRepositoryLocal_SaveBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal_SaveBoard.swift; sourceTree = "<group>"; };
 		DAA804B92089E9AE00EE14BB /* OrganisePresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganisePresenterOutlets.swift; sourceTree = "<group>"; };
 		DAABC2A5206A6FE0003B4BE4 /* LandingPresenterCollectionGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionGesture.swift; sourceTree = "<group>"; };
 		DAABC2A7206A70E4003B4BE4 /* LandingPresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenterCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -1999,8 +2003,10 @@
 				DABC324F208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift */,
 				DA49754220948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift */,
 				DA494C222094A304003BE3B4 /* TestRepository_SaveProjectToLocal.swift */,
+				DA9C81912094AB6D00354120 /* TestRepository_SaveUserToLocal.swift */,
 				DA86FBD320836A9A005D31AF /* TestRepositoryLocal.swift */,
 				DA4A69B92085DA9E005AE05F /* TestRepositoryLocal_LoadBoard.swift */,
+				DA9C81932094AC2600354120 /* TestRepositoryLocal_SaveBoard.swift */,
 				DABC324B2088936C008BA213 /* TestRepositoryLocal_Save.swift */,
 				DA49754A20949216007B4DDD /* TestRepositoryLocal_DeleteProject.swift */,
 				DA86FBC320835DCA005D31AF /* MockRepositoryProtocol.swift */,
@@ -2943,6 +2949,7 @@
 				DADE83B92070DEF70053E7A0 /* TestLanding_Cards.swift in Sources */,
 				DA6F1B7820735A9D001248E4 /* TestWriterPresenter.swift in Sources */,
 				DA657EA1207513D7003C1645 /* MockWriterViewText.swift in Sources */,
+				DA9C81942094AC2600354120 /* TestRepositoryLocal_SaveBoard.swift in Sources */,
 				DA4F97DA208F094F005E4725 /* TestStatsViewCollection.swift in Sources */,
 				DA723180208B8FAF008042F4 /* TestLandingController_SelectorsEditProject.swift in Sources */,
 				DA547844207A28C100F9301E /* MockProjectColumn.swift in Sources */,
@@ -3023,6 +3030,7 @@
 				DA6F1B6C2073536E001248E4 /* TestWriter.swift in Sources */,
 				DA63F791206DB0BA0018F416 /* MockLandingPresenterOutlets.swift in Sources */,
 				DA83177B2092F8C00088D6C3 /* MockStatsViewCompletionGeneral.swift in Sources */,
+				DA9C81922094AB6D00354120 /* TestRepository_SaveUserToLocal.swift in Sources */,
 				DA1DF9AA207CA68500B03C6E /* TestLandingController_DataSourceProtocol_Cards.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DAC45AB1208DB2DB004E1236 /* TestBoard_Select.swift in Sources */,

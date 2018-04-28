@@ -7,6 +7,7 @@ class MockBoardProtocol:BoardProtocol {
     var onApplyUpdates:(([UpdateProtocol]) -> Void)?
     var onSelectProjectAtIndex:((Int) -> Void)?
     var onSaveProject:(() -> Void)?
+    var onSaveUser:(() -> Void)?
     var user:UserProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
@@ -41,5 +42,9 @@ class MockBoardProtocol:BoardProtocol {
     
     func saveProject() {
         self.onSaveProject?()
+    }
+    
+    func saveUser() {
+        self.onSaveUser?()
     }
 }

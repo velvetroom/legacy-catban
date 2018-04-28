@@ -10,4 +10,5 @@ protocol BoardProtocol {
     func deleteProject()
     func apply(updates:[UpdateProtocol])
     func saveProject()
+    func saveUser()
 }

@@ -6,6 +6,7 @@ class MockRepositoryProtocol:RepositoryProtocol {
     var onDeleteProject:((ProjectProtocol) -> Void)?
     var onSaveBoard:((BoardProtocol) -> Void)?
     var onSaveProject:((ProjectProtocol) -> Void)?
+    var onSaveUser:((UserProtocol) -> Void)?
     
     func loadBoard() throws -> BoardProtocol {
         self.onLoadBoard?()
@@ -22,5 +23,9 @@ class MockRepositoryProtocol:RepositoryProtocol {
     
     func save(project:ProjectProtocol) throws {
         self.onSaveProject?(project)
+    }
+    
+    func save(user:UserProtocol) throws {
+        self.onSaveUser?(user)
     }
 }
