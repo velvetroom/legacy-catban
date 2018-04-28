@@ -75,46 +75,14 @@ class TestLandingController_WriterEditProject:XCTestCase {
     
     func testOnFinishUpdatesProject() {
         self.startExpectation()
-        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            guard
-                let controller:WriterController<Writer> = controller as? WriterController<Writer>
-            else { return }
-            controller.model.onFinish?(Constants.updatedName)
-            XCTAssertEqual(self?.project.name, Constants.updatedName, "Failed to update name")
-            self?.expect?.fulfill()
-        }
-        
-        self.controller.openWriterForProject()
-        
-        self.waitExpectations()
-    }
-    
-    func testOnFinishReloadsViewModel() {
-        self.startExpectation()
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
                 let controller:WriterController<Writer> = controller as? WriterController<Writer>
             else { return }
             controller.model.onFinish?(Constants.updatedName)
         }
-        self.controller.model.onReloadViewModel = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.controller.openWriterForProject()
-        
-        self.waitExpectations()
-    }
-    
-    func testOnFinishSavesProject() {
-        self.startExpectation()
-        self.navigation.onPresent = { (controller:UIViewController) in
-            guard
-                let controller:WriterController<Writer> = controller as? WriterController<Writer>
-            else { return }
-            controller.model.onFinish?(Constants.updatedName)
-        }
-        self.board.onSaveProject = { [weak self] in
+        self.controller.model.onUpdateProjectName = { [weak self] (name:String) in
+            XCTAssertEqual(Constants.updatedName, name, "Invalid name received")
             self?.expect?.fulfill()
         }
         

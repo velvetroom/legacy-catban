@@ -19,6 +19,7 @@ class MockLandingProtocol:LandingProtocol {
     var onScrollToEditingCard:(() -> Void)?
     var onScrollToTopRightCorner:(() -> Void)?
     var onDeleteProject:(() -> Void)?
+    var onUpdateProjectName:((String) -> Void)?
     var editingCard:IndexPath?
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
@@ -131,5 +132,9 @@ class MockLandingProtocol:LandingProtocol {
         if let throwingError:Error = self.throwingError {
             throw throwingError
         }
+    }
+    
+    func updateProject(name:String) {
+        self.onUpdateProjectName?(name)
     }
 }

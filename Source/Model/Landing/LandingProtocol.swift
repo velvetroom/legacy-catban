@@ -23,6 +23,7 @@ protocol LandingProtocol:ModelProtocol {
     func scrollToTopRightCorner()
     func updateCardAt(indexPath:IndexPath)
     func updateColumnAt(index:Int)
+    func updateProject(name:String)
     func createCard() -> IndexPath
     func createColumn()
     func createProject()
