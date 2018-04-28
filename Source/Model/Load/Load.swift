@@ -31,8 +31,7 @@ class Load:LoadProtocol {
     }
     
     func createNewBoard() -> BoardProtocol {
-        var board:BoardProtocol = Board.factoryNewBoard()
-        board.repository.repository = self.repository
+        let board:BoardProtocol = Board.factoryNewBoard()
         board.save()
         return board
     }

@@ -8,7 +8,6 @@ class MockBoardProtocol:BoardProtocol {
     var onSelectProjectAtIndex:((Int) -> Void)?
     var onSave:(() -> Void)?
     var user:UserProtocol
-    var repository:BoardRepositoryProtocol
     var projects:[ProjectProtocol]
     var project:ProjectProtocol {
         get {
@@ -21,7 +20,6 @@ class MockBoardProtocol:BoardProtocol {
     
     init() {
         self.user = User()
-        self.repository = BoardRepository()
         self.projects = []
     }
     
