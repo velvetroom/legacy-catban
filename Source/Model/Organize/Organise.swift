@@ -15,5 +15,6 @@ class Organise:OrganiseProtocol {
     
     func selectProjectAt(index:Int) {
         self.board.selectProjectAt(index:index)
+        self.board.saveUser()
     }
 }

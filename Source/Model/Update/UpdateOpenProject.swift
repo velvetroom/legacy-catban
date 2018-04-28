@@ -11,7 +11,9 @@ class UpdateOpenProject:UpdateProtocol {
         self.indexSet = IndexSet(0 ..< project.columns.count)
     }
     
-    func strategy(board:BoardProtocol) { }
+    func strategy(board:BoardProtocol) {
+        board.saveUser()
+    }
     
     func strategy(collectionView:UICollectionView) {
         collectionView.insertSections(self.indexSet)

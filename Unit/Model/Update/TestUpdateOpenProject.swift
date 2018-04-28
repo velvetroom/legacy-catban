@@ -46,6 +46,17 @@ class TestUpdateOpenProject:XCTestCase {
         self.waitExpectation()
     }
     
+    func testStrategyBoardSaveUser() {
+        self.startExpectation()
+        self.board.onSaveUser = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.update.strategy(board:self.board)
+        
+        self.waitExpectation()
+    }
+    
     func testStrategyBoardUpdatesIndexset() {
         self.update.updateIndexWith(project:self.project)
         XCTAssertEqual(self.update.indexSet.count, self.project.columns.count, "Failed to update insert indexset")

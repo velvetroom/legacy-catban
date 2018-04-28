@@ -52,6 +52,17 @@ class TestOrganise:XCTestCase {
         self.waitExpectations()
     }
     
+    func testSelectProjectAtSavesUser() {
+        self.startExpectation()
+        self.board.onSaveUser = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.model.selectProjectAt(index:Constants.index)
+        
+        self.waitExpectations()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }
