@@ -8,7 +8,7 @@ extension UpdateFactory {
     }
     
     func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol] {
-        let update:UpdateCreateSection = UpdateCreateSection()
+        let update:UpdateCreateColumn = UpdateCreateColumn()
         update.section = project.columns.count
         return [update]
     }
