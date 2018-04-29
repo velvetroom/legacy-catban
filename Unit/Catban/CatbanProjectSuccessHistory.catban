@@ -1,0 +1,47 @@
+{
+    "identifier": "dafgio445",
+    "name": "lorem ipsum",
+    "columns": [
+                {
+                "identifier": "fdsf34",
+                "name": "column a",
+                "cards": [
+                          {
+                          "identifier": "fdsfghrtfr54",
+                          "title": "hello world"
+                          },
+                          {
+                          "identifier": "afdsfaer",
+                          "title": "lorem ipsum"
+                          }
+                          ]
+                },
+                {
+                "identifier": "342dasd",
+                "name": "column b",
+                "cards": [
+                          {
+                          "identifier": "aadsd4",
+                          "title": "abc"
+                          }
+                          ]
+                }
+                ],
+    "history": [
+                {
+                "type": "CreateCard",
+                "created": "100000",
+                "card": "fdsfghrtfr54"
+                },
+                {
+                "type": "CreateCard",
+                "created": "100001",
+                "card": "afdsfaer"
+                },
+                {
+                "type": "CreateCard",
+                "created": "100002",
+                "card": "aadsd4"
+                }
+                ]
+}

@@ -7,6 +7,7 @@ extension Deserialiser {
     }
     
     private func parse(dictionary:[String:Any]) throws -> ProjectProtocol {
+        print(dictionary)
         var project:ProjectProtocol = try self.parseProjectWith(dictionary:dictionary)
         project.columns = try self.parseColumnsWith(dictionary:dictionary)
         return project

@@ -11,6 +11,7 @@ extension Serialiser {
             static let identifier:String = "identifier"
             static let name:String = "name"
             static let columns:String = "columns"
+            static let history:String = "history"
         }
         
         struct Column {
@@ -22,6 +23,11 @@ extension Serialiser {
         struct Card {
             static let identifier:String = "identifier"
             static let title:String = "title"
+        }
+        
+        struct History {
+            static let created:String = "created"
+            static let card:String = "card"
         }
     }
 }

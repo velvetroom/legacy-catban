@@ -1,14 +1,15 @@
 import XCTest
 @testable import catban
 
-class TestDeserialiser_Columns:XCTestCase {
+class TestDeserialiser_History:XCTestCase {
     private var model:Deserialiser!
     private var dataSuccess:Data!
     private var dataWrong:Data!
     private struct Constants {
-        static let dataSuccess:String = "CatbanProjectSuccess"
-        static let dataWrong:String = "CatbanProjectWrongColumnName"
-        static let expectedColumns:Int = 3
+        static let dataSuccess:String = "CatbanProjectSuccessHistory"
+        static let dataWrong:String = "CatbanProjectWrongHistoryType"
+        static let firstCreatedExpected:Int = 100000
+        static let expectedHistory:Int = 3
     }
     
     override func setUp() {
@@ -27,23 +28,22 @@ class TestDeserialiser_Columns:XCTestCase {
     func testNumberOfColumns() {
         var project:ProjectProtocol!
         do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
-        XCTAssertEqual(project.columns.count, Constants.expectedColumns, "Invalid number of columns deserialised")
+        XCTAssertEqual(project.history.items.count, Constants.expectedHistory, "Invalid number of history items")
     }
     
-    func testParsedName() {
+    func testParsedCreated() {
         var project:ProjectProtocol!
         do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
-        for column:ProjectColumn in project.columns {
-            XCTAssertFalse(column.name.isEmpty, "Failed to parse name")
+        for item:HistoryItemProtocol in project.history.items {
+            XCTAssertGreaterThan(item.created, 0, "Failed to parse created")
         }
     }
     
-    func testParsedIdentifier() {
+    func testFirstCreated() {
         var project:ProjectProtocol!
         do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
-        for column:ProjectColumn in project.columns {
-            XCTAssertFalse(column.identifier.isEmpty, "Failed to parse identifier")
-        }
+        XCTAssertEqual(project.history.items.first?.created, Constants.firstCreatedExpected,
+                       "Invalid created")
     }
     
     func testErrorWrongJson() {

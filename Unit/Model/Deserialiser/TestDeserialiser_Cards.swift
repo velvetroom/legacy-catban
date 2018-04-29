@@ -27,18 +27,14 @@ class TestDeserialiser_Cards:XCTestCase {
     
     func testNumberOfCards() {
         var project:ProjectProtocol!
-        do {
-            try project = self.model.deserialise(project:self.dataSuccess)
-        } catch { }
+        do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
         XCTAssertEqual(project.columns[Constants.columnIndex].cards.count, Constants.expectedCards,
                        "Invalid number of cards deserialised")
     }
     
     func testParsedTitle() {
         var project:ProjectProtocol!
-        do {
-            try project = self.model.deserialise(project:self.dataSuccess)
-        } catch { }
+        do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
         for card:ProjectCard in project.columns[Constants.columnIndex].cards {
             XCTAssertFalse(card.title.isEmpty, "Failed to parse title")
         }
@@ -46,9 +42,7 @@ class TestDeserialiser_Cards:XCTestCase {
     
     func testParsedIdentifier() {
         var project:ProjectProtocol!
-        do {
-            try project = self.model.deserialise(project:self.dataSuccess)
-        } catch { }
+        do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
         for card:ProjectCard in project.columns[Constants.columnIndex].cards {
             XCTAssertFalse(card.identifier.isEmpty, "Failed to parse identifier")
         }

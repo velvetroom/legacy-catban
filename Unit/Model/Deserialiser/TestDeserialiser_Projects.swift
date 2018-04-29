@@ -37,9 +37,7 @@ class TestDeserialiser_Projects:XCTestCase {
     
     func testIdentifier() {
         var project:ProjectProtocol!
-        do {
-            try project = self.model.deserialise(project:self.dataSuccess)
-        } catch { }
+        do { try project = self.model.deserialise(project:self.dataSuccess) } catch { }
         XCTAssertFalse(project.identifier.isEmpty, "Invalid identifier on project")
     }
 }

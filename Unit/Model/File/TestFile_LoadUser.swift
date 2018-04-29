@@ -32,10 +32,6 @@ class TestFile_LoadUser:XCTestCase {
     }
     
     private func createFile() {
-        do {
-            try Data().write(to:self.model.user)
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        do { try Data().write(to:self.model.user) } catch { }
     }
 }
