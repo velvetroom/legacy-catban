@@ -37,20 +37,9 @@ class TestLanding_DeleteCard:XCTestCase {
     
     func testDeleteClearsCurrentSelection() {
         self.model.editingCard = IndexPath(item:1320, section:230)
-        self.model.deleteEditingCard()
+        self.model.deleteCard()
         
         XCTAssertNil(self.model.editingCard, "Failed to clear editing card")
-    }
-    
-    func testDeleteClearsCollectionSelection() {
-        self.startExpectation()
-        self.collection.onClearSelection = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.model.deleteEditingCard()
-        
-        self.waitExpectation()
     }
     
     func testDeleteReloadsViewModel() {
@@ -59,7 +48,7 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteEditingCard()
+        self.model.deleteCard()
         
         self.waitExpectation()
     }
@@ -71,19 +60,7 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteEditingCard()
-        
-        self.waitExpectation()
-    }
-    
-    func testDeleteCallsDeleteOnPresenter() {
-        self.startExpectation()
-        self.presenter.onDeleteCardAtIndex = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, Constants.indexPath, "Invalid index path received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.deleteEditingCard()
+        self.model.deleteCard()
         
         self.waitExpectation()
     }

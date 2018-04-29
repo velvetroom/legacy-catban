@@ -447,6 +447,10 @@
 		DABCA7C92095AD1100F42A71 /* UpdateMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7C82095AD1100F42A71 /* UpdateMoveCard.swift */; };
 		DABCA7CB2095B3CC00F42A71 /* TestUpdateMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7CA2095B3CC00F42A71 /* TestUpdateMoveCard.swift */; };
 		DABCA7CD2095B7C600F42A71 /* TestLanding_CardsMoveUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7CC2095B7C600F42A71 /* TestLanding_CardsMoveUpdate.swift */; };
+		DABCA7CF2095C2FA00F42A71 /* TestUpdateFactory_DeleteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7CE2095C2FA00F42A71 /* TestUpdateFactory_DeleteCard.swift */; };
+		DABCA7D12095C4DC00F42A71 /* TestUpdateDeleteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7D02095C4DC00F42A71 /* TestUpdateDeleteCard.swift */; };
+		DABCA7D32095C61900F42A71 /* UpdateDeleteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7D22095C61900F42A71 /* UpdateDeleteCard.swift */; };
+		DABCA7D52095C71D00F42A71 /* TestLanding_DeleteCardUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCA7D42095C71D00F42A71 /* TestLanding_DeleteCardUpdate.swift */; };
 		DAC10C55207DD41000975FDD /* UpdateFactory+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C54207DD41000975FDD /* UpdateFactory+Delete.swift */; };
 		DAC10C57207DD4FE00975FDD /* TestUpdateFactory_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C56207DD4FE00975FDD /* TestUpdateFactory_Delete.swift */; };
 		DAC10C59207DD60000975FDD /* TestUpdateDeleteSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC10C58207DD60000975FDD /* TestUpdateDeleteSections.swift */; };
@@ -1022,6 +1026,10 @@
 		DABCA7C82095AD1100F42A71 /* UpdateMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMoveCard.swift; sourceTree = "<group>"; };
 		DABCA7CA2095B3CC00F42A71 /* TestUpdateMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateMoveCard.swift; sourceTree = "<group>"; };
 		DABCA7CC2095B7C600F42A71 /* TestLanding_CardsMoveUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_CardsMoveUpdate.swift; sourceTree = "<group>"; };
+		DABCA7CE2095C2FA00F42A71 /* TestUpdateFactory_DeleteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateFactory_DeleteCard.swift; sourceTree = "<group>"; };
+		DABCA7D02095C4DC00F42A71 /* TestUpdateDeleteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateDeleteCard.swift; sourceTree = "<group>"; };
+		DABCA7D22095C61900F42A71 /* UpdateDeleteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDeleteCard.swift; sourceTree = "<group>"; };
+		DABCA7D42095C71D00F42A71 /* TestLanding_DeleteCardUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_DeleteCardUpdate.swift; sourceTree = "<group>"; };
 		DAC10C54207DD41000975FDD /* UpdateFactory+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateFactory+Delete.swift"; sourceTree = "<group>"; };
 		DAC10C56207DD4FE00975FDD /* TestUpdateFactory_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateFactory_Delete.swift; sourceTree = "<group>"; };
 		DAC10C58207DD60000975FDD /* TestUpdateDeleteSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateDeleteSections.swift; sourceTree = "<group>"; };
@@ -1726,6 +1734,7 @@
 				DAE8C7EA207FB85400395318 /* TestLanding_CreateColumn.swift */,
 				DA1A19CA208C691100300FED /* TestLanding_CreateProject.swift */,
 				DA54783F207A1D7300F9301E /* TestLanding_DeleteCard.swift */,
+				DABCA7D42095C71D00F42A71 /* TestLanding_DeleteCardUpdate.swift */,
 				DA46AD60207C8A4B0083B310 /* TestLanding_DeleteColumn.swift */,
 				DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */,
 				DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */,
@@ -2449,6 +2458,7 @@
 				DA1A19D6208CC88900300FED /* UpdateCreateProject+Factory.swift */,
 				DA80303C208DFEC200CCDBB1 /* UpdateCloseProject.swift */,
 				DA80303E208DFED000CCDBB1 /* UpdateOpenProject.swift */,
+				DABCA7D22095C61900F42A71 /* UpdateDeleteCard.swift */,
 				DA803046208E148100CCDBB1 /* UpdateDeleteProject.swift */,
 				DAEA2CB9207CFA1400C15653 /* UpdateFactoryProtocol.swift */,
 				DAEA2CBB207CFA2700C15653 /* UpdateFactory.swift */,
@@ -2472,6 +2482,7 @@
 				DA1A19CC208C6A7C00300FED /* TestUpdateCreateProject.swift */,
 				DA803040208E057C00CCDBB1 /* TestUpdateCloseProject.swift */,
 				DA803042208E09CE00CCDBB1 /* TestUpdateOpenProject.swift */,
+				DABCA7D02095C4DC00F42A71 /* TestUpdateDeleteCard.swift */,
 				DAC10C58207DD60000975FDD /* TestUpdateDeleteSections.swift */,
 				DA803044208E144600CCDBB1 /* TestUpdateDeleteProject.swift */,
 				DAEA2CB7207CF9B800C15653 /* TestUpdateFactory.swift */,
@@ -2482,6 +2493,7 @@
 				DA1A19D4208CA4B000300FED /* TestUpdateFactory_CreateProject.swift */,
 				DAE8C7E8207FB27600395318 /* TestUpdateFactory_Insert.swift */,
 				DA803048208E15DF00CCDBB1 /* TestUpdateFactory_DeleteProject.swift */,
+				DABCA7CE2095C2FA00F42A71 /* TestUpdateFactory_DeleteCard.swift */,
 				DAEE96ED20952D09007EEE20 /* TestUpdateFactory_CreateCard.swift */,
 				DABCA7C42095AB0500F42A71 /* TestUpdateFactory_MoveCard.swift */,
 				DAEA2CAF207CF21700C15653 /* MockUpdateProtocol.swift */,
@@ -2859,6 +2871,7 @@
 				DADC5344209317850048FF1D /* History.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
 				DAEE96F220952FF3007EEE20 /* UpdateCreateCard.swift in Sources */,
+				DABCA7D32095C61900F42A71 /* UpdateDeleteCard.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
 				DA54ED8D2089E4040078AF87 /* OrganisePresenterProtocol.swift in Sources */,
 				DA2538E22067C60D00EEB231 /* LandingViewModelLoader.swift in Sources */,
@@ -2913,6 +2926,7 @@
 				DA803043208E09CE00CCDBB1 /* TestUpdateOpenProject.swift in Sources */,
 				DA2538E42067CED700EEB231 /* TestLandingPresenterCollection.swift in Sources */,
 				DA5EAFCC20760461002BDAD8 /* TestLanding_ClearCardSelection.swift in Sources */,
+				DABCA7D12095C4DC00F42A71 /* TestUpdateDeleteCard.swift in Sources */,
 				DADF4D4E207157A30037DCDD /* TestLandingViewModelLoaderOutlets_CollectionMenu.swift in Sources */,
 				DA494C232094A304003BE3B4 /* TestRepository_SaveProjectToLocal.swift in Sources */,
 				DA647A3B20716A2800F79DF1 /* TestLandingViewModelLoaderCollectionMenu.swift in Sources */,
@@ -2978,6 +2992,7 @@
 				DA5B6D15206B784E00C7EF72 /* TestLandingPresenterCollectionDelegate.swift in Sources */,
 				DA48DD5E209049FD007EE369 /* TestStatsItem.swift in Sources */,
 				DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */,
+				DABCA7CF2095C2FA00F42A71 /* TestUpdateFactory_DeleteCard.swift in Sources */,
 				DA49754320948E7B007B4DDD /* TestRepository_LocalDeleteProject.swift in Sources */,
 				DA5EAFC42075EF41002BDAD8 /* TestLandingAddController.swift in Sources */,
 				DA42D5D1206A1A0E0042BD8B /* TestLandingViewModelCollectionLayoutCell.swift in Sources */,
@@ -3178,6 +3193,7 @@
 				DA2538F820682A9B00EEB231 /* TestLandingController_ViewModel.swift in Sources */,
 				DABC325220889934008BA213 /* TestFile_SaveUser.swift in Sources */,
 				DA4F9809208F20D6005E4725 /* TestStatsViewPageControl.swift in Sources */,
+				DABCA7D52095C71D00F42A71 /* TestLanding_DeleteCardUpdate.swift in Sources */,
 				DA78A985208BEB1A00E5C473 /* TestLandingController_DeleteProject.swift in Sources */,
 				DADC533820930E460048FF1D /* TestCircleViewModel_Factory.swift in Sources */,
 			);

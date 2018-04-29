@@ -22,13 +22,13 @@ extension Landing {
         self.scrollToEditingCard()
     }
     
-    func deleteEditingCard() {
+    func deleteCard() {
         guard
             let editingCard:IndexPath = self.editingCard
         else { return }
-        self.project.deleteCardAt(indexPath:editingCard)
-        self.clearCardSelection()
-        self.presenter.deleteCardAt(index:editingCard)
+        self.editingCard = nil
+        let updates:[UpdateProtocol] = self.update.deleteCardAt(index:editingCard)
+        self.applyUpdates(updates:updates)
     }
     
     func moveEditingCardRight() {

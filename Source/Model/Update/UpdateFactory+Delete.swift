@@ -1,6 +1,12 @@
 import Foundation
 
 extension UpdateFactory {
+    func deleteCardAt(index:IndexPath) -> [UpdateProtocol] {
+        let update:UpdateDeleteCard = UpdateDeleteCard()
+        update.index = index
+        return [update]
+    }
+    
     func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         guard
             project.columns.count > Constants.minColumns

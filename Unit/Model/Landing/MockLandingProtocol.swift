@@ -4,7 +4,7 @@ import Foundation
 class MockLandingProtocol:LandingProtocol {
     var onReloadViewModel:(() -> Void)?
     var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
-    var onDeleteEditingCard:(() -> Void)?
+    var onDeleteCard:(() -> Void)?
     var onDeleteColumnAt:((Int) -> Void)?
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
@@ -85,8 +85,8 @@ class MockLandingProtocol:LandingProtocol {
         self.onMoveCardFrom?(origin, destination)
     }
     
-    func deleteEditingCard() {
-        self.onDeleteEditingCard?()
+    func deleteCard() {
+        self.onDeleteCard?()
     }
     
     func deleteColumnAndMoveCardsAt(index:Int) throws {

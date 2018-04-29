@@ -32,7 +32,7 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
             }
             controller.model.onConfirm?()
         }
-        self.controller.model.onDeleteEditingCard = { [weak self] in
+        self.controller.model.onDeleteCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
