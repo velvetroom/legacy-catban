@@ -5,7 +5,7 @@ class TestUpdateCreateColumn:XCTestCase {
     private var update:UpdateCreateColumn!
     private var view:MockLandingViewCollection!
     private var project:MockProjectProtocol!
-    private var board:Board!
+    private var board:MockBoardProtocol!
     private var column:ProjectColumn!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -17,7 +17,7 @@ class TestUpdateCreateColumn:XCTestCase {
         super.setUp()
         self.update = UpdateCreateColumn()
         self.view = MockLandingViewCollection()
-        self.board = Board()
+        self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
         self.board.project = self.project
         self.column = self.update.column
@@ -45,7 +45,6 @@ class TestUpdateCreateColumn:XCTestCase {
         }
         
         self.update.strategy(collectionView:self.view)
-        
         self.waitExpectation()
     }
     
@@ -58,7 +57,16 @@ class TestUpdateCreateColumn:XCTestCase {
         }
         
         self.update.strategy(board:self.board)
+        self.waitExpectation()
+    }
+    
+    func testStrategyBoardSavesProject() {
+        self.startExpectation()
+        self.board.onSaveProject = { [weak self] in
+            self?.expect?.fulfill()
+        }
         
+        self.update.strategy(board:self.board)
         self.waitExpectation()
     }
     

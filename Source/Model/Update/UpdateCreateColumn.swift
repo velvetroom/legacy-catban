@@ -12,6 +12,7 @@ class UpdateCreateColumn:UpdateProtocol {
     
     func strategy(board:BoardProtocol) {
         board.project.insert(column:self.column, at:self.section)
+        board.saveProject()
     }
     
     func strategy(collectionView:UICollectionView) {
