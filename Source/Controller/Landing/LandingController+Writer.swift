@@ -9,8 +9,7 @@ extension LandingController {
         let controller:WriterController<Writer> = WriterController<Writer>()
         controller.model.text = card.title
         controller.model.onFinish = { [weak self] (title:String) in
-            card.title = title
-            self?.model.updateCardAt(indexPath:indexPath)
+            self?.model.updateCard(title:title)
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }

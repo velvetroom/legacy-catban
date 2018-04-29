@@ -21,7 +21,7 @@ protocol LandingProtocol:ModelProtocol {
     func moveEditingCardLeft()
     func scrollToEditingCard()
     func scrollToTopRightCorner()
-    func updateCardAt(indexPath:IndexPath)
+    func updateCard(title:String)
     func updateColumnAt(index:Int)
     func updateProject(name:String)
     func createCard()

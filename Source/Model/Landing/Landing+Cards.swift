@@ -54,9 +54,14 @@ extension Landing {
         self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
     }
     
-    func updateCardAt(indexPath:IndexPath) {
+    func updateCard(title:String) {
+        guard
+            let indexPath:IndexPath = self.editingCard
+        else { return }
+        self.editingCardReference?.title = title
         self.reloadViewModel()
         self.presenter.updateCardAt(index:indexPath)
+        self.board.saveProject()
     }
     
     func createCard() {

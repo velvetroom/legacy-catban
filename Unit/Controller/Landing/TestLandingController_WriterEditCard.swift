@@ -43,23 +43,6 @@ class TestLandingController_Writer:XCTestCase {
         self.waitExpectations()
     }
     
-    func testWriterForCardCallbackTitleUpdated() {
-        self.startExpectation()
-        let card:ProjectCard = self.factoryCard()
-        self.controller.model.returnCardAtIndex = card
-        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            guard
-                let controller:WriterController<Writer> = controller as? WriterController<Writer>
-            else { return }
-            controller.model.onFinish?(Constants.cardUpdatedText)
-            XCTAssertEqual(card.title, Constants.cardUpdatedText, "Failed to update card")
-            self?.expect?.fulfill()
-        }
-        self.controller.openWriterForEditingCard()
-        
-        self.waitExpectations()
-    }
-    
     func testWriterForCardCallbackUpdatesCard() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
@@ -70,8 +53,8 @@ class TestLandingController_Writer:XCTestCase {
             else { return }
             controller.model.onFinish?(Constants.cardUpdatedText)
         }
-        self.controller.model.onUpdateCardAt = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(Constants.indexPath, index, "Invalid index to update")
+        self.controller.model.onUpdateCardTitle = { [weak self] (title:String) in
+            XCTAssertEqual(Constants.cardUpdatedText, title, "Invalid title")
             self?.expect?.fulfill()
         }
         self.controller.openWriterForEditingCard()
