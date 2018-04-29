@@ -531,6 +531,7 @@
 		DAEE96EE20952D09007EEE20 /* TestUpdateFactory_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE96ED20952D09007EEE20 /* TestUpdateFactory_CreateCard.swift */; };
 		DAEE96F020952E8C007EEE20 /* TestUpdateCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE96EF20952E8C007EEE20 /* TestUpdateCreateCard.swift */; };
 		DAEE96F220952FF3007EEE20 /* UpdateCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE96F120952FF3007EEE20 /* UpdateCreateCard.swift */; };
+		DAEE96F420954408007EEE20 /* TestLanding_ApplyUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE96F320954408007EEE20 /* TestLanding_ApplyUpdates.swift */; };
 		DAEEC71D208F54C2001B80A3 /* TestStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEC71C208F54C2001B80A3 /* TestStatsViewModel.swift */; };
 		DAEEC720208F551E001B80A3 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEC71F208F551E001B80A3 /* StatsViewModel.swift */; };
 		DAEEC722208F5547001B80A3 /* StatsViewModel+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEC721208F5547001B80A3 /* StatsViewModel+Constants.swift */; };
@@ -1101,6 +1102,7 @@
 		DAEE96ED20952D09007EEE20 /* TestUpdateFactory_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateFactory_CreateCard.swift; sourceTree = "<group>"; };
 		DAEE96EF20952E8C007EEE20 /* TestUpdateCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUpdateCreateCard.swift; sourceTree = "<group>"; };
 		DAEE96F120952FF3007EEE20 /* UpdateCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCreateCard.swift; sourceTree = "<group>"; };
+		DAEE96F320954408007EEE20 /* TestLanding_ApplyUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_ApplyUpdates.swift; sourceTree = "<group>"; };
 		DAEEC71C208F54C2001B80A3 /* TestStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewModel.swift; sourceTree = "<group>"; };
 		DAEEC71F208F551E001B80A3 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 		DAEEC721208F5547001B80A3 /* StatsViewModel+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewModel+Constants.swift"; sourceTree = "<group>"; };
@@ -1717,6 +1719,7 @@
 				DA78A986208BEE2500E5C473 /* TestLanding_DeleteProject.swift */,
 				DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */,
 				DAEE96E92095150E007EEE20 /* TestLanding_UpdateProject.swift */,
+				DAEE96F320954408007EEE20 /* TestLanding_ApplyUpdates.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
 				DA547845207A32B200F9301E /* TestLandingDelete.swift */,
 				DAD3C47E207BAF9800F84829 /* TestLandingEdit.swift */,
@@ -3050,6 +3053,7 @@
 				DA1DF9AA207CA68500B03C6E /* TestLandingController_DataSourceProtocol_Cards.swift in Sources */,
 				DA8AB2732064FEC3005A393E /* TestStringExtension.swift in Sources */,
 				DAC45AB1208DB2DB004E1236 /* TestBoard_Select.swift in Sources */,
+				DAEE96F420954408007EEE20 /* TestLanding_ApplyUpdates.swift in Sources */,
 				DA4F97F5208F13B5005E4725 /* TestStatsPresenterCollection.swift in Sources */,
 				DA3A21E1208A0CD400E6E583 /* TestOrganiseViewModelCollectionItem.swift in Sources */,
 				DA73B8892092113900A6A7D0 /* TestCircleViewModelCompletionStack.swift in Sources */,

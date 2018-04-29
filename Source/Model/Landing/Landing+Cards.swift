@@ -63,9 +63,7 @@ extension Landing {
         let indexPath:IndexPath = self.project.indexForNewCard()
         self.editingCard = indexPath
         let updates:[UpdateProtocol] = self.update.createCard(indexPath:indexPath)
-        self.board.apply(updates:updates)
-        self.reloadViewModel()
-        self.presenter.apply(updates:updates)
+        self.applyUpdates(updates:updates)
         self.scrollToEditingCard()
     }
     

@@ -16,16 +16,12 @@ extension Landing {
     
     func createColumn() {
         let updates:[UpdateProtocol] = self.update.createColumnIn(project:self.project)
-        self.board.apply(updates:updates)
-        self.reloadViewModel()
-        self.presenter.apply(updates:updates)
+        self.applyUpdates(updates:updates)
     }
     
     func deleteColumnAndMoveCardsAt(index:Int) throws {
         let updates:[UpdateProtocol] = try self.updatesForDeleteColumnAt(index:index)
-        self.board.apply(updates:updates)
-        self.reloadViewModel()
-        self.presenter.apply(updates:updates)
+        self.applyUpdates(updates:updates)
     }
     
     func updatesForDeleteColumnAt(index:Int) throws -> [UpdateProtocol] {

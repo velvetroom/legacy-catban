@@ -35,4 +35,10 @@ class Landing:LandingProtocol {
         let viewModel:LandingViewModel = self.viewModelLoader.factoryWith(model:self)
         self.presenter.update(viewModel:viewModel)
     }
+    
+    func applyUpdates(updates:[UpdateProtocol]) {
+        self.board.apply(updates:updates)
+        self.reloadViewModel()
+        self.presenter.apply(updates:updates)
+    }
 }
