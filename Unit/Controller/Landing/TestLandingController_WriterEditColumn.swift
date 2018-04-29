@@ -74,22 +74,6 @@ class TestLandingController_WriterEditColumn:XCTestCase {
         self.waitExpectations()
     }
     
-    func testOnFinishUpdatesColumnName() {
-        self.startExpectation()
-        let column:ProjectColumn = self.controller.model.columnAt(index:Constants.columnIndex)
-        self.navigation.onPresent = { [weak self] (controller:UIViewController) in
-            guard
-                let controller:WriterController<Writer> = controller as? WriterController<Writer>
-            else { return }
-            controller.model.onFinish?(Constants.updatedName)
-            XCTAssertEqual(column.name, Constants.updatedName, "Failed to update name")
-            self?.expect?.fulfill()
-        }
-        self.controller.openWriterForColumnAt(index:Constants.columnIndex)
-        
-        self.waitExpectations()
-    }
-    
     func testOnFinishUpdatesColumn() {
         self.startExpectation()
         self.navigation.onPresent = { (controller:UIViewController) in
@@ -98,8 +82,9 @@ class TestLandingController_WriterEditColumn:XCTestCase {
             else { return }
             controller.model.onFinish?(Constants.updatedName)
         }
-        self.controller.model.onUpdateColumnAt = { [weak self] (index:Int) in
+        self.controller.model.onUpdateColumnAtIndex = { [weak self] (index:Int, name:String) in
             XCTAssertEqual(index, Constants.columnIndex, "Invalid column index")
+            XCTAssertEqual(name, Constants.updatedName, "Invalid name received")
             self?.expect?.fulfill()
         }
         self.controller.openWriterForColumnAt(index:Constants.columnIndex)

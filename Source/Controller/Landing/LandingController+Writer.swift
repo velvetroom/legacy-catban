@@ -19,8 +19,7 @@ extension LandingController {
         let controller:WriterController<Writer> = WriterController<Writer>()
         controller.model.text = column.name
         controller.model.onFinish = { [weak self] (name:String) in
-            column.name = name
-            self?.model.updateColumnAt(index:index)
+            self?.model.updateColumnAt(index:index, with:name)
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }

@@ -9,9 +9,11 @@ extension Landing {
         return self.project.indexFor(column:column)
     }
     
-    func updateColumnAt(index:Int) {
+    func updateColumnAt(index:Int, with name:String) {
+        self.project.columnAt(index:index).name = name
         self.reloadViewModel()
         self.presenter.updateColumnAt(index:index)
+        self.board.saveProject()
     }
     
     func createColumn() {
