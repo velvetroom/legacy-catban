@@ -1,6 +1,6 @@
 import UIKit
 
-class UpdateCreateSections:UpdateProtocol {
+class UpdateCreateSection:UpdateProtocol {
     var column:ProjectColumn
     var section:Int
     

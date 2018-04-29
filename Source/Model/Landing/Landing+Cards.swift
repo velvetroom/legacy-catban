@@ -59,17 +59,14 @@ extension Landing {
         self.presenter.updateCardAt(index:indexPath)
     }
     
-    func createCard() -> IndexPath {
-        let card:ProjectCard = ProjectCard()
-        card.identifier = UUID().uuidString
-        self.project.history.created(card:card)
-        let index:IndexPath = self.project.indexForNewCard()
-        self.editingCard = index
-        self.project.insert(card:card, at:index)
+    func createCard() {
+        let indexPath:IndexPath = self.project.indexForNewCard()
+        self.editingCard = indexPath
+        let updates:[UpdateProtocol] = self.update.createCard(indexPath:indexPath)
+        self.board.apply(updates:updates)
         self.reloadViewModel()
-        self.presenter.insertCardAt(index:index)
+        self.presenter.apply(updates:updates)
         self.scrollToEditingCard()
-        return index
     }
     
     private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {

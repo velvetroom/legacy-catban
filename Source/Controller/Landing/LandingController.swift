@@ -40,9 +40,6 @@ class LandingController<ModelType:LandingProtocol>:Controller<ModelType> {
     }
     
     @objc func selectorEditCard(sender button:UIButton) {
-        guard
-            let indexPath:IndexPath = self.model.editingCard
-        else { return }
-        self.openWriterForCardAt(indexPath:indexPath)
+        self.openWriterForEditingCard()
     }
 }

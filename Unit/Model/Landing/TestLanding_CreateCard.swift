@@ -35,19 +35,7 @@ class TestLanding_CreateCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:IndexPath = self.model.createCard()
-        
-        self.waitExpectations()
-    }
-    
-    func testInsertCard() {
-        self.startExpectation()
-        self.project.onInsertCardAt = { [weak self] (card:ProjectCard) in
-            self?.expect?.fulfill()
-        }
-        
-        let _:IndexPath = self.model.createCard()
-        
+        self.model.createCard()
         self.waitExpectations()
     }
     
@@ -57,56 +45,17 @@ class TestLanding_CreateCard:XCTestCase {
         self.project.onIndexForNewCard = { (index:IndexPath) in
             createdCard = index
         }
-        self.project.onInsertCardAt = { [weak self] (card:ProjectCard) in
+        self.project.onInsertCardAt = { [weak self] (card:ProjectCard, index:IndexPath) in
             guard
                 let editingCard:IndexPath = self?.model.editingCard,
                 let createdCard:IndexPath = createdCard
             else { return }
             XCTAssertEqual(editingCard, createdCard, "Failed to assign editing card")
+            XCTAssertEqual(index, createdCard, "Invalid index received")
             self?.expect?.fulfill()
         }
         
-        let _:IndexPath = self.model.createCard()
-        
-        self.waitExpectations()
-    }
-    
-    func testCardCratedHasIdentifier() {
-        self.startExpectation()
-        self.project.onInsertCardAt = { [weak self] (card:ProjectCard) in
-            XCTAssertFalse(card.identifier.isEmpty, "Failed to create identifier for created card")
-            self?.expect?.fulfill()
-        }
-        
-        let _:IndexPath = self.model.createCard()
-        
-        self.waitExpectations()
-    }
-    
-    func testCreateCardUpdatesViewModel() {
-        self.startExpectation()
-        self.presenter.onUpdateViewModel = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        let _:IndexPath = self.model.createCard()
-        
-        self.waitExpectations()
-    }
-    
-    func testCreateCardInsertCard() {
-        self.startExpectation()
-        var createdCard:IndexPath?
-        self.project.onIndexForNewCard = { (index:IndexPath) in
-            createdCard = index
-        }
-        self.presenter.onInsertCardAtIndex = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, createdCard, "Failed to assign editing card")
-            self?.expect?.fulfill()
-        }
-        
-        let _:IndexPath = self.model.createCard()
-        
+        self.model.createCard()
         self.waitExpectations()
     }
     
@@ -121,8 +70,7 @@ class TestLanding_CreateCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        let _:IndexPath = self.model.createCard()
-        
+        self.model.createCard()
         self.waitExpectations()
     }
     

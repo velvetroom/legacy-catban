@@ -2,8 +2,8 @@ import Foundation
 
 extension LandingController:LandingAddControllerDelegateProtocol {
     func createCard() {
-        let indexPath:IndexPath = self.model.createCard()
-        self.openWriterForCardAt(indexPath:indexPath)
+        self.model.createCard()
+        self.openWriterForEditingCard()
     }
     
     func createColumn() {

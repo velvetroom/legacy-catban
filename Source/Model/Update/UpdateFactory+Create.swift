@@ -1,8 +1,14 @@
 import Foundation
 
 extension UpdateFactory {
+    func createCard(indexPath:IndexPath) -> [UpdateProtocol] {
+        let update:UpdateCreateCard = UpdateCreateCard()
+        update.indexPath = indexPath
+        return [update]
+    }
+    
     func createColumnIn(project:ProjectProtocol) -> [UpdateProtocol] {
-        let update:UpdateCreateSections = UpdateCreateSections()
+        let update:UpdateCreateSection = UpdateCreateSection()
         update.section = project.columns.count
         return [update]
     }

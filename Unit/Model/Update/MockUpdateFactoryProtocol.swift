@@ -2,6 +2,7 @@ import Foundation
 @testable import catban
 
 class MockUpdateFactoryProtocol:UpdateFactoryProtocol {
+    var onCreateCard:((IndexPath) -> Void)?
     var onCreateProject:(() -> Void)?
     var onDeleteColumnAtIndex:((Int, ProjectProtocol) -> Void)?
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
@@ -15,6 +16,11 @@ class MockUpdateFactoryProtocol:UpdateFactoryProtocol {
     
     func salvageItemsFromColumn(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         self.onMovingItemsFromColumn?(index, project)
+        return []
+    }
+    
+    func createCard(indexPath:IndexPath) -> [UpdateProtocol] {
+        self.onCreateCard?(indexPath)
         return []
     }
     

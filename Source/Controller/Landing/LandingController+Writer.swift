@@ -1,7 +1,10 @@
 import Foundation
 
 extension LandingController {
-    func openWriterForCardAt(indexPath:IndexPath) {
+    func openWriterForEditingCard() {
+        guard
+            let indexPath:IndexPath = self.model.editingCard
+        else { return }
         let card:ProjectCard = self.model.cardAt(indexPath:indexPath)
         let controller:WriterController<Writer> = WriterController<Writer>()
         controller.model.text = card.title

@@ -104,11 +104,6 @@ class MockLandingProtocol:LandingProtocol {
         self.onScrollToTopRightCorner?()
     }
     
-    func createCard() -> IndexPath {
-        self.onCreateCard?()
-        return IndexPath(item:0, section:0)
-    }
-    
     func createColumn() {
         self.onCreateColumn?()
     }
@@ -136,5 +131,9 @@ class MockLandingProtocol:LandingProtocol {
     
     func updateProject(name:String) {
         self.onUpdateProjectName?(name)
+    }
+    
+    func createCard() {
+        self.onCreateCard?()
     }
 }

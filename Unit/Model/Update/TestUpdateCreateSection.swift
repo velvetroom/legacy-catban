@@ -1,8 +1,8 @@
 import XCTest
 @testable import catban
 
-class TestUpdateCreateSections:XCTestCase {
-    private var update:UpdateCreateSections!
+class TestUpdateCreateSection:XCTestCase {
+    private var update:UpdateCreateSection!
     private var view:MockLandingViewCollection!
     private var project:MockProjectProtocol!
     private var board:Board!
@@ -15,7 +15,7 @@ class TestUpdateCreateSections:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = UpdateCreateSections()
+        self.update = UpdateCreateSection()
         self.view = MockLandingViewCollection()
         self.board = Board()
         self.project = MockProjectProtocol()
@@ -31,6 +31,9 @@ class TestUpdateCreateSections:XCTestCase {
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.project, "Failed to load project")
         XCTAssertNotNil(self.view, "Failed to load view")
+    }
+    
+    func testIdentifier() {
         XCTAssertFalse(self.column.identifier.isEmpty, "Failed to create identifier for column")
     }
     
@@ -46,7 +49,7 @@ class TestUpdateCreateSections:XCTestCase {
         self.waitExpectation()
     }
     
-    func testStrategyProject() {
+    func testStrategyBoard() {
         self.startExpectation()
         self.project.onInsertColumnAt = { [weak self] (column:ProjectColumn, index:Int) in
             XCTAssertTrue(column === self?.column, "Invalid column")

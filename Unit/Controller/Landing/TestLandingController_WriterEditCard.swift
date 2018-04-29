@@ -8,6 +8,7 @@ class TestLandingController_Writer:XCTestCase {
     private struct Constants {
         static let cardText:String = "lorem ipsum"
         static let cardUpdatedText:String = "hello world"
+        static let indexPath:IndexPath = IndexPath(item:1, section:0)
         static let wait:TimeInterval = 0.3
     }
     
@@ -16,6 +17,7 @@ class TestLandingController_Writer:XCTestCase {
         self.navigation = MockNavigationController()
         self.controller = LandingController<MockLandingProtocol>()
         self.navigation.addChildViewController(self.controller)
+        self.controller.model.editingCard = Constants.indexPath
     }
     
     func testLoad() {
@@ -36,7 +38,7 @@ class TestLandingController_Writer:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.controller.openWriterForCardAt(indexPath:IndexPath(item:2312, section:9342))
+        self.controller.openWriterForEditingCard()
         
         self.waitExpectations()
     }
@@ -53,7 +55,7 @@ class TestLandingController_Writer:XCTestCase {
             XCTAssertEqual(card.title, Constants.cardUpdatedText, "Failed to update card")
             self?.expect?.fulfill()
         }
-        self.controller.openWriterForCardAt(indexPath:IndexPath(item:2312, section:9342))
+        self.controller.openWriterForEditingCard()
         
         self.waitExpectations()
     }
@@ -61,7 +63,6 @@ class TestLandingController_Writer:XCTestCase {
     func testWriterForCardCallbackUpdatesCard() {
         self.startExpectation()
         let card:ProjectCard = self.factoryCard()
-        let indexPath:IndexPath = IndexPath(item:2312, section:9342)
         self.controller.model.returnCardAtIndex = card
         self.navigation.onPresent = { (controller:UIViewController) in
             guard
@@ -70,10 +71,10 @@ class TestLandingController_Writer:XCTestCase {
             controller.model.onFinish?(Constants.cardUpdatedText)
         }
         self.controller.model.onUpdateCardAt = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(indexPath, index, "Invalid index to update")
+            XCTAssertEqual(Constants.indexPath, index, "Invalid index to update")
             self?.expect?.fulfill()
         }
-        self.controller.openWriterForCardAt(indexPath:indexPath)
+        self.controller.openWriterForEditingCard()
         
         self.waitExpectations()
     }

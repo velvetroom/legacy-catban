@@ -23,13 +23,13 @@ class TestUpdateFactory_Insert:XCTestCase {
     
     func testInsertColumnsReturnsInsertSectionsUpdate() {
         let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:UpdateCreateSections? = updates.first as? UpdateCreateSections
+        let first:UpdateCreateSection? = updates.first as? UpdateCreateSection
         XCTAssertNotNil(first, "Returned update is not a type insert sections")
     }
     
     func testInsertColumnsOnEmptyProject() {
         let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:UpdateCreateSections = updates.first as! UpdateCreateSections
+        let first:UpdateCreateSection = updates.first as! UpdateCreateSection
         XCTAssertEqual(first.section, 0, "Invalid index for new section")
     }
     
@@ -37,7 +37,7 @@ class TestUpdateFactory_Insert:XCTestCase {
         self.project.columns.append(ProjectColumn())
         self.project.columns.append(ProjectColumn())
         let updates:[UpdateProtocol] = self.factory.createColumnIn(project:self.project)
-        let first:UpdateCreateSections = updates.first as! UpdateCreateSections
+        let first:UpdateCreateSection = updates.first as! UpdateCreateSection
         XCTAssertEqual(first.section, 2, "Invalid index for new section")
     }
 }
