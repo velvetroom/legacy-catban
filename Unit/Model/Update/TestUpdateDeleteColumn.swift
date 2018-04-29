@@ -1,10 +1,10 @@
 import XCTest
 @testable import catban
 
-class TestUpdateDeleteSections:XCTestCase {
-    private var update:UpdateDeleteSections!
+class TestUpdateDeleteColumn:XCTestCase {
+    private var update:UpdateDeleteColumn!
     private var view:MockLandingViewCollection!
-    private var board:Board!
+    private var board:MockBoardProtocol!
     private var project:MockProjectProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -14,9 +14,9 @@ class TestUpdateDeleteSections:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.update = UpdateDeleteSections()
+        self.update = UpdateDeleteColumn()
         self.view = MockLandingViewCollection()
-        self.board = Board()
+        self.board = MockBoardProtocol()
         self.project = MockProjectProtocol()
         self.board.project = self.project
         self.update.index = Constants.index
@@ -51,6 +51,16 @@ class TestUpdateDeleteSections:XCTestCase {
         
         self.update.strategy(board:self.board)
         
+        self.waitExpectation()
+    }
+    
+    func testStrategyBoardSavesProject() {
+        self.startExpectation()
+        self.board.onSaveProject = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.update.strategy(board:self.board)
         self.waitExpectation()
     }
     

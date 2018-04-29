@@ -29,7 +29,7 @@ class TestUpdateFactory_Delete:XCTestCase {
         self.addColumn()
         var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
-        let first:UpdateDeleteSections? = updates.first as? UpdateDeleteSections
+        let first:UpdateDeleteColumn? = updates.first as? UpdateDeleteColumn
         XCTAssertNotNil(first, "Returned update is not a type delete sections")
     }
     
@@ -38,7 +38,7 @@ class TestUpdateFactory_Delete:XCTestCase {
         self.addColumn()
         var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:0, in:self.project))
-        let update:UpdateDeleteSections = updates.first as! UpdateDeleteSections
+        let update:UpdateDeleteColumn = updates.first as! UpdateDeleteColumn
         XCTAssertEqual(update.index, 0, "Invalid column returned")
     }
     
@@ -48,7 +48,7 @@ class TestUpdateFactory_Delete:XCTestCase {
         self.addColumn()
         var updates:[UpdateProtocol] = []
         XCTAssertNoThrow(try updates = self.factory.deleteColumnAt(index:3, in:self.project))
-        let update:UpdateDeleteSections = updates.first as! UpdateDeleteSections
+        let update:UpdateDeleteColumn = updates.first as! UpdateDeleteColumn
         XCTAssertEqual(update.index, 3, "Invalid column returned")
     }
     

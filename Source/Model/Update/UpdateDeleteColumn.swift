@@ -1,6 +1,6 @@
 import UIKit
 
-class UpdateDeleteSections:UpdateProtocol {
+class UpdateDeleteColumn:UpdateProtocol {
     var index:Int
     
     init() {
@@ -9,6 +9,7 @@ class UpdateDeleteSections:UpdateProtocol {
     
     func strategy(board:BoardProtocol) {
         board.project.deleteColumnAt(index:self.index)
+        board.saveProject()
     }
     
     func strategy(collectionView:UICollectionView) {

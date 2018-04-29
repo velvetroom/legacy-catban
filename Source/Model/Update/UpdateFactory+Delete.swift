@@ -11,7 +11,7 @@ extension UpdateFactory {
         guard
             project.columns.count > Constants.minColumns
         else { throw ErrorProject.oneColumnMinimum }
-        let update:UpdateDeleteSections = UpdateDeleteSections()
+        let update:UpdateDeleteColumn = UpdateDeleteColumn()
         update.index = index
         return [update]
     }
