@@ -1,76 +1,79 @@
 import XCTest
 @testable import catban
 
-class TestLanding_CreateCardUpdate:XCTestCase {
+class TestLanding_CardsMoveUpdate:XCTestCase {
     private var model:Landing!
     private var board:MockBoardProtocol!
+    private var project:MockProjectProtocol!
     private var update:MockUpdateFactoryProtocol!
-    private var viewModelLoader:MockLandingViewModelLoader!
-    private var presenter:MockLandingPresenterProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
+        static let origin:IndexPath = IndexPath(item:11, section:22)
+        static let destination:IndexPath = IndexPath(item:22, section:11)
     }
     
     override func setUp() {
         super.setUp()
         self.model = Landing()
         self.board = MockBoardProtocol()
+        self.project = MockProjectProtocol()
         self.update = MockUpdateFactoryProtocol()
-        self.viewModelLoader = MockLandingViewModelLoader()
-        self.presenter = MockLandingPresenterProtocol()
         self.model.board = self.board
-        self.model.viewModelLoader = self.viewModelLoader
-        self.model.presenter = self.presenter
+        self.board.project = self.project
         self.model.update = self.update
         self.model.project.columns.append(ProjectColumn())
+        self.model.editingCard = Constants.origin
+        self.project.indexForCard = Constants.destination
     }
     
     func testLoad() {
         XCTAssertNotNil(self.board, "Failed to load board")
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.update, "Failed to load update")
-        XCTAssertNotNil(self.viewModelLoader, "Failed to load view model loader")
-        XCTAssertNotNil(self.presenter, "Failed to load presenter")
     }
     
-    func testGetUpdates() {
+    func testMovingLeftGetUpdates() {
         self.startExpectation()
-        self.update.onCreateCard = { [weak self] (indexPath:IndexPath) in
+        self.update.onMoveCardFrom = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Invalid origin received")
+            XCTAssertEqual(destination, Constants.destination, "Invalid destination received")
             self?.expect?.fulfill()
         }
         
-        self.model.createCard()
+        self.model.moveEditingCardLeft()
         self.waitExpectations()
     }
     
-    func testReloadViewModel() {
+    func testMovingRightGetUpdates() {
         self.startExpectation()
-        self.viewModelLoader.onLoadCalled = { [weak self] in
+        self.update.onMoveCardFrom = { [weak self] (origin:IndexPath, destination:IndexPath) in
+            XCTAssertEqual(origin, Constants.origin, "Invalid origin received")
+            XCTAssertEqual(destination, Constants.destination, "Invalid destination received")
             self?.expect?.fulfill()
         }
         
-        self.model.createCard()
+        self.model.moveEditingCardRight()
         self.waitExpectations()
     }
     
-    func testApplyUpdatesOnPresenter() {
-        self.startExpectation()
-        self.presenter.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
-            self?.expect?.fulfill()
-        }
-        
-        self.model.createProject()
-        self.waitExpectations()
-    }
-    
-    func testApplyUpdatesOnBoard() {
+    func testLeftApplyUpdatesOnBoard() {
         self.startExpectation()
         self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
             self?.expect?.fulfill()
         }
         
-        self.model.createProject()
+        self.model.moveEditingCardLeft()
+        self.waitExpectations()
+    }
+    
+    func testRightApplyUpdatesOnBoard() {
+        self.startExpectation()
+        self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
+            self?.expect?.fulfill()
+        }
+        
+        self.model.moveEditingCardRight()
         self.waitExpectations()
     }
     

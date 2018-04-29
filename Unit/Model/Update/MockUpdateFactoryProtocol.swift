@@ -8,6 +8,7 @@ class MockUpdateFactoryProtocol:UpdateFactoryProtocol {
     var onMovingItemsFromColumn:((Int, ProjectProtocol) -> Void)?
     var onCreateColumnIn:((ProjectProtocol) -> Void)?
     var onDeleteProject:((BoardProtocol) -> Void)?
+    var onMoveCardFrom:((IndexPath, IndexPath) -> Void)?
     
     func deleteColumnAt(index:Int, in project:ProjectProtocol) throws -> [UpdateProtocol] {
         self.onDeleteColumnAtIndex?(index, project)
@@ -36,6 +37,11 @@ class MockUpdateFactoryProtocol:UpdateFactoryProtocol {
     
     func deleteProject(board:BoardProtocol) throws -> [UpdateProtocol] {
         self.onDeleteProject?(board)
+        return []
+    }
+    
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath) -> [UpdateProtocol] {
+        self.onMoveCardFrom?(origin, destination)
         return []
     }
 }

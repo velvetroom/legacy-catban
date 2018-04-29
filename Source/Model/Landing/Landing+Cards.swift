@@ -22,11 +22,6 @@ extension Landing {
         self.scrollToEditingCard()
     }
     
-    func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
-        self.project.moveCardFrom(origin:origin, to:destination)
-        self.reloadViewModel()
-    }
-    
     func deleteEditingCard() {
         guard
             let editingCard:IndexPath = self.editingCard
@@ -41,8 +36,7 @@ extension Landing {
             let editingCard:IndexPath = self.editingCard
         else { return }
         let newIndex:IndexPath = self.project.indexOnRightForCardAt(index:editingCard)
-        self.editingCard = newIndex
-        self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
+        self.moveCardFrom(origin:editingCard, to:newIndex)
     }
     
     func moveEditingCardLeft() {
@@ -50,8 +44,14 @@ extension Landing {
             let editingCard:IndexPath = self.editingCard
         else { return }
         let newIndex:IndexPath = self.project.indexOnLeftForCardAt(index:editingCard)
-        self.editingCard = newIndex
-        self.moveCardAndCentreFrom(index:editingCard, to:newIndex)
+        self.moveCardFrom(origin:editingCard, to:newIndex)
+    }
+    
+    func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
+        self.editingCard = destination
+        let updates:[UpdateProtocol] = self.update.moveCardFrom(origin:origin, to:destination)
+        self.applyUpdates(updates:updates)
+        self.scrollToEditingCard()
     }
     
     func updateCard(title:String) {
@@ -69,12 +69,6 @@ extension Landing {
         self.editingCard = indexPath
         let updates:[UpdateProtocol] = self.update.createCard(indexPath:indexPath)
         self.applyUpdates(updates:updates)
-        self.scrollToEditingCard()
-    }
-    
-    private func moveCardAndCentreFrom(index:IndexPath, to destination:IndexPath) {
-        self.moveCardFrom(origin:index, to:destination)
-        self.collection?.moveItem(at:index, to:destination)
         self.scrollToEditingCard()
     }
 }

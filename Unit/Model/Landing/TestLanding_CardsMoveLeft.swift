@@ -69,19 +69,6 @@ class TestLanding_CardsMoveLeft:XCTestCase {
         self.waitExpectation()
     }
     
-    func testMoveEditingCardLeftUpdateCollection() {
-        self.startExpectation()
-        self.collection.onMoveItem = { [weak self] (origin:IndexPath, destination:IndexPath) in
-            XCTAssertEqual(origin, Constants.editingCard, "Invalid origin")
-            XCTAssertEqual(destination, Constants.returnIndex, "Invalid destination")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.moveEditingCardLeft()
-        
-        self.waitExpectation()
-    }
-    
     func testMoveEditingCardLeftScrollsCollection() {
         self.startExpectation()
         self.collection.onScrollToItem = { [weak self] (scrollItem:IndexPath) in
