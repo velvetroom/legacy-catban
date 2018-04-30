@@ -7,5 +7,6 @@ extension LandingViewCollectionMenu {
         static let buttonCloseWidth:CGFloat = 50
         static let buttonEditWidth:CGFloat = 90
         static let buttonEditFontSize:CGFloat = 16
+        static let contentHeight:CGFloat = 45
     }
 }

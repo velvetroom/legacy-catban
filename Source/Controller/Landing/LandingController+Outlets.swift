@@ -5,7 +5,6 @@ extension LandingController {
         get {
             return self.model.presenter.outlets.list
         }
-        
         set(newValue) {
             self.model.presenter.outlets.list = newValue
         }
@@ -57,7 +56,7 @@ extension LandingController {
         self.outletsList.viewCollectionMenu = viewCollectionMenu
         
         self.outletsList.layoutCollectionMenuBottom = viewCollectionMenu.bottomAnchor.constraint(
-            equalTo:self.safeArea.bottomAnchor, constant:LandingViewModel.Constants.collectionMenuHeight)
+            equalTo:self.view.bottomAnchor, constant:LandingViewModel.Constants.collectionMenuHeight)
         viewCollectionMenu.heightAnchor.constraint(
             equalToConstant:LandingViewModel.Constants.collectionMenuHeight).isActive = true
         viewCollectionMenu.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true

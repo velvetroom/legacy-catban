@@ -24,7 +24,7 @@ extension WriterController {
 
         self.view.addSubview(viewText)
         
-        viewText.topAnchor.constraint(equalTo:self.safeArea.topAnchor).isActive = true
+        viewText.topAnchor.constraint(equalTo:self.view.topAnchor).isActive = true
         viewText.bottomAnchor.constraint(equalTo:self.outletsList.viewBar!.topAnchor).isActive = true
         viewText.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
         viewText.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
@@ -39,7 +39,7 @@ extension WriterController {
         self.view.addSubview(viewBar)
         
         viewBar.heightAnchor.constraint(equalToConstant:WriterViewModel.Constants.barHeight).isActive = true
-        self.outletsList.layoutBarBottom = viewBar.bottomAnchor.constraint(equalTo:self.safeArea.bottomAnchor)
+        self.outletsList.layoutBarBottom = viewBar.bottomAnchor.constraint(equalTo:self.view.bottomAnchor)
         viewBar.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
         viewBar.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
         self.outletsList.layoutBarBottom?.isActive = true

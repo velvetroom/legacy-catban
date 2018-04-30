@@ -30,7 +30,7 @@ extension LandingViewCollectionMenu {
         self.addSubview(buttonMoveRight)
         
         buttonMoveRight.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        buttonMoveRight.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonMoveRight.heightAnchor.constraint(equalToConstant:Constants.contentHeight).isActive = true
         buttonMoveRight.rightAnchor.constraint(equalTo:self.rightAnchor,
                                                constant:Constants.buttonsMoveRight).isActive = true
         buttonMoveRight.widthAnchor.constraint(equalToConstant:Constants.buttonsMoveWidth).isActive = true
@@ -52,7 +52,7 @@ extension LandingViewCollectionMenu {
         self.addSubview(buttonMoveLeft)
         
         buttonMoveLeft.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        buttonMoveLeft.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonMoveLeft.heightAnchor.constraint(equalToConstant:Constants.contentHeight).isActive = true
         buttonMoveLeft.rightAnchor.constraint(equalTo:self.buttonMoveRight.leftAnchor).isActive = true
         buttonMoveLeft.widthAnchor.constraint(equalToConstant:Constants.buttonsMoveWidth).isActive = true
     }
@@ -71,7 +71,7 @@ extension LandingViewCollectionMenu {
         self.addSubview(buttonClose)
         
         buttonClose.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        buttonClose.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonClose.heightAnchor.constraint(equalToConstant:Constants.contentHeight).isActive = true
         buttonClose.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         buttonClose.widthAnchor.constraint(equalToConstant:Constants.buttonCloseWidth).isActive = true
     }
@@ -90,7 +90,7 @@ extension LandingViewCollectionMenu {
         self.addSubview(buttonEdit)
         
         buttonEdit.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        buttonEdit.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        buttonEdit.heightAnchor.constraint(equalToConstant:Constants.contentHeight).isActive = true
         buttonEdit.widthAnchor.constraint(equalToConstant:Constants.buttonEditWidth).isActive = true
         self.layoutButtonEditLeft = buttonEdit.leftAnchor.constraint(equalTo:self.leftAnchor)
         self.layoutButtonEditLeft.isActive = true
