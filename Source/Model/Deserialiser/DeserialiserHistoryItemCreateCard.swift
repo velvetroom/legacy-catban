@@ -1,5 +1,7 @@
 import Foundation
 
-class DeserialiserHistoryItemCreateCard:DeserialiserHistoryItemProtocol {
-    
+class DeserialiserHistoryItemCreateCard:DeserialiserHistoryItem {
+    override func deserialiseDetailsFor(item: [String : Any]) throws -> HistoryItemProtocol {
+        throw ErrorRepository.malformedData
+    }
 }
