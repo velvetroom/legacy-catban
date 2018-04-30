@@ -2630,6 +2630,7 @@
 				DA8AB2002064E349005A393E /* Sources */,
 				DA8AB2012064E349005A393E /* Frameworks */,
 				DA8AB2022064E349005A393E /* Resources */,
+				DA8D181120975E2800EC5852 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2734,6 +2735,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA8D181120975E2800EC5852 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = Scripts/versioner.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA8AB2002064E349005A393E /* Sources */ = {
