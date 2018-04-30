@@ -69,6 +69,16 @@ class TestUpdateMoveCard:XCTestCase {
         self.waitExpectation()
     }
     
+    func testAddToHistory() {
+        self.startExpectation()
+        self.history.onMovedCard = { [weak self] (card:ProjectCard, column:ProjectColumn) in
+            self?.expect?.fulfill()
+        }
+        
+        self.update.strategy(board:self.board)
+        self.waitExpectation()
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

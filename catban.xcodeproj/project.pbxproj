@@ -189,6 +189,8 @@
 		DA4A70DF209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70DE209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift */; };
 		DA4A70E12097421800E0D84C /* ProjectCard+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E02097421800E0D84C /* ProjectCard+Factory.swift */; };
 		DA4A70E3209743B100E0D84C /* ProjectColumn+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E2209743B100E0D84C /* ProjectColumn+Factory.swift */; };
+		DA4A70E520974B8900E0D84C /* TestHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E420974B8900E0D84C /* TestHistoryItemMoveCard.swift */; };
+		DA4A70E720974BD300E0D84C /* HistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E620974BD300E0D84C /* HistoryItemMoveCard.swift */; };
 		DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */; };
 		DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0426208718A000A28894 /* CatbanFileLoader.swift */; };
 		DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */; };
@@ -784,6 +786,8 @@
 		DA4A70DE209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiserHistoryItemCreateCard.swift; sourceTree = "<group>"; };
 		DA4A70E02097421800E0D84C /* ProjectCard+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectCard+Factory.swift"; sourceTree = "<group>"; };
 		DA4A70E2209743B100E0D84C /* ProjectColumn+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectColumn+Factory.swift"; sourceTree = "<group>"; };
+		DA4A70E420974B8900E0D84C /* TestHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DA4A70E620974BD300E0D84C /* HistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemMoveCard.swift; sourceTree = "<group>"; };
 		DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA4F0426208718A000A28894 /* CatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatbanFileLoader.swift; sourceTree = "<group>"; };
 		DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatbanFileLoader+Constants.swift"; sourceTree = "<group>"; };
@@ -2474,6 +2478,7 @@
 				DADC53532093375A0048FF1D /* TestHistory_Cards.swift */,
 				DADC5347209317DE0048FF1D /* TestHistoryItem.swift */,
 				DADC534D20932CD30048FF1D /* TestHistoryItemCreateCard.swift */,
+				DA4A70E420974B8900E0D84C /* TestHistoryItemMoveCard.swift */,
 				DADC533C209317020048FF1D /* MockHistoryProtocol.swift */,
 				DADC5345209317D00048FF1D /* MockHistoryItemProtocol.swift */,
 			);
@@ -2489,6 +2494,7 @@
 				DADC53492093183F0048FF1D /* HistoryItemProtocol.swift */,
 				DADC534B209319690048FF1D /* HistoryItemProtocol+Tools.swift */,
 				DADC534F20932D180048FF1D /* HistoryItemCreateCard.swift */,
+				DA4A70E620974BD300E0D84C /* HistoryItemMoveCard.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -2926,6 +2932,7 @@
 				DA519A7320691A8400514098 /* LandingViewModelLoaderCollectionLayout+Constants.swift in Sources */,
 				DA462D4A2068C52A0062E680 /* LandingViewCollectionHeader.swift in Sources */,
 				DA4F04382087282D00A28894 /* Deserialiser+Project.swift in Sources */,
+				DA4A70E720974BD300E0D84C /* HistoryItemMoveCard.swift in Sources */,
 				DA4A70D720970D6B00E0D84C /* Serialiser+History.swift in Sources */,
 				DA48BC0820808E460057F424 /* Landing+Scroll.swift in Sources */,
 				DA519A7D206940D300514098 /* LandingViewModelOutlets.swift in Sources */,
@@ -3211,6 +3218,7 @@
 				DA3A21FD208A560A00E6E583 /* MockOrganiseViewCollectionCell.swift in Sources */,
 				DA4A70DB209719D000E0D84C /* TestSerialiserHistoryItem.swift in Sources */,
 				DA4F04322087271C00A28894 /* TestDeserialiser_Projects.swift in Sources */,
+				DA4A70E520974B8900E0D84C /* TestHistoryItemMoveCard.swift in Sources */,
 				DA48DD6420904A76007EE369 /* TestStatsItemCompletion.swift in Sources */,
 				DAFE7D842090B67E00A6DD41 /* MockStatsView.swift in Sources */,
 				DA547856207A3D4600F9301E /* TestLandingDeletePresenter.swift in Sources */,

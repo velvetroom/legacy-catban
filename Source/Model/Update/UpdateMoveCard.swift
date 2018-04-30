@@ -10,7 +10,10 @@ class UpdateMoveCard:UpdateProtocol {
     }
     
     func strategy(board:BoardProtocol) {
+        let card:ProjectCard = board.project.cardAt(indexPath:self.origin)
+        let column:ProjectColumn = board.project.columnAt(indexPath:self.destination)
         board.project.moveCardFrom(origin:self.origin, to:self.destination)
+        board.project.history.moved(card:card, to:column)
         board.saveProject()
     }
     
