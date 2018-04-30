@@ -16,6 +16,7 @@ class TestSerialiser_Project:XCTestCase {
         self.project.identifier = Constants.identifier
         self.project.name = Constants.name
         self.project.columns.append(ProjectColumn())
+        self.project.history.items.append(HistoryItemCreateCard())
     }
     
     func testLoad() {
@@ -56,5 +57,17 @@ class TestSerialiser_Project:XCTestCase {
         let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
         let columns:[Any]! = dictionary[Serialiser.Constants.Project.columns] as? [Any]
         XCTAssertEqual(columns.count, self.project.columns.count, "Invalid number of columns serialised")
+    }
+    
+    func testDictionaryWithHistory() {
+        let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
+        let history:[Any]! = dictionary[Serialiser.Constants.Project.history] as? [Any]
+        XCTAssertNotNil(history, "Failed to serialise history")
+    }
+    
+    func testAmountOfHistory() {
+        let dictionary:[String:Any] = self.model.dictionaryWith(project:self.project)
+        let history:[Any]! = dictionary[Serialiser.Constants.Project.history] as? [Any]
+        XCTAssertEqual(history.count, self.project.history.items.count, "Invalid number of history items")
     }
 }

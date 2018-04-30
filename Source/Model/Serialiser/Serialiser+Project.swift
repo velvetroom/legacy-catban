@@ -11,6 +11,7 @@ extension Serialiser {
         dictionary[Constants.Project.identifier] = project.identifier
         dictionary[Constants.Project.name] = project.name
         dictionary[Constants.Project.columns] = self.columnArrayWith(project:project)
+        dictionary[Constants.Project.history] = self.historyArrayWith(project:project)
         return dictionary
     }
 }
