@@ -1,11 +1,11 @@
 import Foundation
 
 struct HistoryItemCreateCard:HistoryItemProtocol {
-    var card:ProjectCard
+    var cardIdentifier:String
     var created:Int
     
     init() {
-        self.card = ProjectCard()
+        self.cardIdentifier = String()
         self.created = HistoryItemCreateCard.currentTimestamp()
     }
 }

@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestDeserialiserHistoryItemCreatedCard:XCTestCase {
-    private var model:DeserialiserHistoryItemCreatedCard!
+class TestDeserialiserHistoryItemCreateCard:XCTestCase {
+    private var model:DeserialiserHistoryItemCreateCard!
     
     override func setUp() {
         super.setUp()
-        self.model = DeserialiserHistoryItemCreatedCard()
+        self.model = DeserialiserHistoryItemCreateCard()
     }
     
     func testLoad() {

@@ -5,12 +5,12 @@ class TestDeserialiserHistory:XCTestCase {
     private var model:DeserialiserHistory!
     private struct Constants {
         static let empty:[String:Any] = [:]
-        static let malformed:[String:Any] = ["typeWrong":"CreatedCard"]
+        static let malformed:[String:Any] = ["typeWrong":"CreateCard"]
         static let incomplete:[String:Any] = [
-            "type": "CreatedCard",
+            "type": "CreateCard",
             "card": "sda2"]
         static let success:[String:Any] = [
-            "type": "CreatedCard",
+            "type": "CreateCard",
             "created": 1000,
             "card": "sda2"]
     }
@@ -25,22 +25,22 @@ class TestDeserialiserHistory:XCTestCase {
     }
     
     func testDeserialiseShouldThrowOnEmpty() {
-        XCTAssertThrowsError(DeserialiserHistory.deserialise(item:Constants.empty),
+        XCTAssertThrowsError(try DeserialiserHistory.deserialise(item:Constants.empty),
                              "Failed to throw an error")
     }
     
     func testDeserialiseShouldThrowOnMalformed() {
-        XCTAssertThrowsError(DeserialiserHistory.deserialise(item:Constants.malformed),
+        XCTAssertThrowsError(try DeserialiserHistory.deserialise(item:Constants.malformed),
                              "Failed to throw an error")
     }
     
     func testDeserialiseShouldThrowOnIncomplete() {
-        XCTAssertThrowsError(DeserialiserHistory.deserialise(item:Constants.incomplete),
+        XCTAssertThrowsError(try DeserialiserHistory.deserialise(item:Constants.incomplete),
                              "Failed to throw an error")
     }
     
     func testDeserialiseNoThrows() {
-        XCTAssertNoThrow(DeserialiserHistory.deserialise(item:Constants.success),
+        XCTAssertNoThrow(try DeserialiserHistory.deserialise(item:Constants.success),
                              "Failed to deserialise item")
     }
 }

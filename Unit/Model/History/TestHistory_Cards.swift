@@ -25,6 +25,6 @@ class TestHistory_Cards:XCTestCase {
         let item:HistoryItemCreateCard? = self.model.items.first as? HistoryItemCreateCard
         XCTAssertEqual(self.model.items.count, 1, "Failed to add item")
         XCTAssertNotNil(item, "Invalid item type created")
-        XCTAssertTrue(item?.card === card, "Failed to assign card to item")
+        XCTAssertTrue(item?.cardIdentifier == card.identifier, "Failed to assign card to item")
     }
 }

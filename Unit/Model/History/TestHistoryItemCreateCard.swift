@@ -14,7 +14,7 @@ class TestHistoryItemCreateCard:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.date, "Failed to load date")
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.card, "Failed to load card")
+        XCTAssertNotNil(self.model.cardIdentifier, "Failed to load card")
     }
     
     func testDate() {

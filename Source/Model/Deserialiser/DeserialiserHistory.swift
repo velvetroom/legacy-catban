@@ -1,11 +1,7 @@
 import Foundation
 
 class DeserialiserHistory {
-    class func deserialise(user:Data) throws -> UserProtocol {
-        self.onDeserialiseUser?(user)
-        if let throwError:Error = self.throwError {
-            throw throwError
-        }
-        return self.user
+    class func deserialise(item:[String:Any]) throws -> HistoryItemProtocol {
+        throw ErrorRepository.malformedData
     }
 }
