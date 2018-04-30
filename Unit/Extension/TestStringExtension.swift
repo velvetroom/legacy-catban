@@ -5,7 +5,7 @@ class TestStringExtension:XCTestCase {
     private struct Constants {
         static let expectedLoad:String = "catban"
         static let expectedLanding:String = "catban"
-        static let expectedProject:String = "My first project"
+        static let expectedProject:String = "First Project"
         static let expectedWriter:String = "Done"
         static let expectedOrganise:String = "Projects"
         static let expectedStats:String = "Stats"

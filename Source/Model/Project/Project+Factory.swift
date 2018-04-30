@@ -6,6 +6,7 @@ extension Project {
         project.name = String.localizedProject(key:"Project_defaultName")
         project.columns = factoryDefaultColumns()
         project.identifier = UUID().uuidString
+        project.history = factoryHistoryForCards(project:project)
         return project
     }
     
@@ -24,15 +25,11 @@ extension Project {
         let firstCard:ProjectCard = factoryCardFirst()
         let secondCard:ProjectCard = factoryCardSecond()
         let thirdCard:ProjectCard = factoryCardThird()
-        let fourthCard:ProjectCard = factoryCardFourth()
-        let fifthCard:ProjectCard = factoryCardFifth()
         let column:ProjectColumn = ProjectColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnBacklog")
         column.cards.append(firstCard)
         column.cards.append(secondCard)
         column.cards.append(thirdCard)
-        column.cards.append(fourthCard)
-        column.cards.append(fifthCard)
         return column
     }
     
@@ -49,32 +46,30 @@ extension Project {
     }
     
     private class func factoryCardFirst() -> ProjectCard {
-        let card:ProjectCard = ProjectCard()
+        let card:ProjectCard = ProjectCard.factoryCard()
         card.title = String.localizedProject(key:"Project_defaultCardFirst")
         return card
     }
     
     private class func factoryCardSecond() -> ProjectCard {
-        let card:ProjectCard = ProjectCard()
+        let card:ProjectCard = ProjectCard.factoryCard()
         card.title = String.localizedProject(key:"Project_defaultCardSecond")
         return card
     }
     
     private class func factoryCardThird() -> ProjectCard {
-        let card:ProjectCard = ProjectCard()
+        let card:ProjectCard = ProjectCard.factoryCard()
         card.title = String.localizedProject(key:"Project_defaultCardThird")
         return card
     }
     
-    private class func factoryCardFourth() -> ProjectCard {
-        let card:ProjectCard = ProjectCard()
-        card.title = String.localizedProject(key:"Project_defaultCardFourth")
-        return card
-    }
-    
-    private class func factoryCardFifth() -> ProjectCard {
-        let card:ProjectCard = ProjectCard()
-        card.title = String.localizedProject(key:"Project_defaultCardFifth")
-        return card
+    private class func factoryHistoryForCards(project:Project) -> HistoryProtocol {
+        let history:History = History()
+        for column:ProjectColumn in project.columns {
+            for card:ProjectCard in column.cards {
+                history.created(card:card)
+            }
+        }
+        return history
     }
 }

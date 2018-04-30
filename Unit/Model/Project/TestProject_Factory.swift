@@ -23,6 +23,24 @@ class TestProject_Factory:XCTestCase {
         self.validateFirstCard(columns:columns)
     }
     
+    func testFactoryCards() {
+        for column:ProjectColumn in self.project.columns {
+            for card:ProjectCard in column.cards {
+                XCTAssertFalse(card.title.isEmpty, "Failed to assign title")
+                XCTAssertFalse(card.identifier.isEmpty, "Failed to assign identifier")
+            }
+        }
+    }
+    
+    func testFactoryHistory() {
+        var totalCards:Int = 0
+        for column:ProjectColumn in self.project.columns {
+            totalCards += column.cards.count
+        }
+        let history:HistoryProtocol = self.project.history
+        XCTAssertEqual(history.items.count, totalCards, "There should be 1 history item per card")
+    }
+    
     private func validateColumns(columns:[ProjectColumn]) {
         XCTAssertFalse(columns.isEmpty, "Columns factorised are empty")
     }

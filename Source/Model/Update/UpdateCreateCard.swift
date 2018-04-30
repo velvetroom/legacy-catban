@@ -5,8 +5,7 @@ class UpdateCreateCard:UpdateProtocol {
     var indexPath:IndexPath
     
     init() {
-        self.card = ProjectCard()
-        self.card.identifier = UUID().uuidString
+        self.card = ProjectCard.factoryCard()
         self.indexPath = IndexPath(item:0, section:0)
     }
     

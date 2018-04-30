@@ -187,6 +187,7 @@
 		DA4A70DB209719D000E0D84C /* TestSerialiserHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70DA209719D000E0D84C /* TestSerialiserHistoryItem.swift */; };
 		DA4A70DD2097235300E0D84C /* SerialiserHistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70DC2097235300E0D84C /* SerialiserHistoryItemCreateCard.swift */; };
 		DA4A70DF209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70DE209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift */; };
+		DA4A70E12097421800E0D84C /* ProjectCard+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E02097421800E0D84C /* ProjectCard+Factory.swift */; };
 		DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */; };
 		DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0426208718A000A28894 /* CatbanFileLoader.swift */; };
 		DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */; };
@@ -780,6 +781,7 @@
 		DA4A70DA209719D000E0D84C /* TestSerialiserHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiserHistoryItem.swift; sourceTree = "<group>"; };
 		DA4A70DC2097235300E0D84C /* SerialiserHistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialiserHistoryItemCreateCard.swift; sourceTree = "<group>"; };
 		DA4A70DE209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiserHistoryItemCreateCard.swift; sourceTree = "<group>"; };
+		DA4A70E02097421800E0D84C /* ProjectCard+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectCard+Factory.swift"; sourceTree = "<group>"; };
 		DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA4F0426208718A000A28894 /* CatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatbanFileLoader.swift; sourceTree = "<group>"; };
 		DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatbanFileLoader+Constants.swift"; sourceTree = "<group>"; };
@@ -1238,6 +1240,7 @@
 				DA16043F2076996E0096EFE1 /* Project+Cards.swift */,
 				DAD433F720654667002C0DEE /* ProjectColumn.swift */,
 				DAD433FB20654AF3002C0DEE /* ProjectCard.swift */,
+				DA4A70E02097421800E0D84C /* ProjectCard+Factory.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -2808,6 +2811,7 @@
 				DA3B7CAD2091A701009CCB93 /* StatsViewCompletionGeneral.swift in Sources */,
 				DA3A21DB208A06CD00E6E583 /* OrganiseViewModel.swift in Sources */,
 				DADC535020932D180048FF1D /* HistoryItemCreateCard.swift in Sources */,
+				DA4A70E12097421800E0D84C /* ProjectCard+Factory.swift in Sources */,
 				DA4F97EF208F1086005E4725 /* StatsPresenter.swift in Sources */,
 				DA519A712069186000514098 /* LandingViewModelLoaderCollectionLayout.swift in Sources */,
 				DA86FBD620836C83005D31AF /* RepositoryLocal.swift in Sources */,

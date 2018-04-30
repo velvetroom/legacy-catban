@@ -14,4 +14,9 @@ class TestProjectCard:XCTestCase {
         XCTAssertNotNil(self.card.title, "Failed to load title")
         XCTAssertNotNil(self.card.identifier, "Failed to load identifier")
     }
+    
+    func testFactory() {
+        let card:ProjectCard = ProjectCard.factoryCard()
+        XCTAssertFalse(card.identifier.isEmpty, "Failed to assign identifier")
+    }
 }
