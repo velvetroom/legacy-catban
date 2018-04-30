@@ -21,6 +21,7 @@ class DeserialiserHistory {
     
     private class func deserialiserMap() -> [SerialiserHistoryItemType:DeserialiserHistoryItem.Type] {
         return [
-            SerialiserHistoryItemType.createCard : DeserialiserHistoryItemCreateCard.self]
+            SerialiserHistoryItemType.createCard : DeserialiserHistoryItemCreateCard.self,
+            SerialiserHistoryItemType.moveCard : DeserialiserHistoryItemMoveCard.self]
     }
 }

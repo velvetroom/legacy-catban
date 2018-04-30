@@ -3,7 +3,9 @@ import XCTest
 
 class TestSerialiserHistoryItemType:XCTestCase {
     private struct Constants {
-        static let success:String = "CreateCard"
+        static let success:[String] = [
+            "CreateCard",
+            "MoveCard"]
         static let error:String = "lorem ipsum"
     }
     
@@ -12,8 +14,10 @@ class TestSerialiserHistoryItemType:XCTestCase {
     }
     
     func testSuccess() {
-        XCTAssertNoThrow(try SerialiserHistoryItemType.factoryWith(itemType:Constants.success),
-                         "Failed to factory item type")
+        for item:String in Constants.success {
+            XCTAssertNoThrow(try SerialiserHistoryItemType.factoryWith(itemType:item),
+                             "Failed to factory item type")
+        }
     }
     
     func testError() {

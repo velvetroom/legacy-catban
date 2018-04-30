@@ -42,6 +42,12 @@
                 "itemType": "CreateCard",
                 "created": 100002,
                 "cardIdentifier": "aadsd4"
+                },
+                {
+                "itemType": "MoveCard",
+                "created": 100003,
+                "cardIdentifier": "qwerty123",
+                "columnIdentifier": "azerty123"
                 }
                 ]
 }

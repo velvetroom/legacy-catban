@@ -68,6 +68,7 @@ extension Project {
         for column:ProjectColumn in project.columns {
             for card:ProjectCard in column.cards {
                 history.created(card:card)
+                history.moved(card:card, to:column)
             }
         }
         return history

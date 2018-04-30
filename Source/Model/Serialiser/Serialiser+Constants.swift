@@ -29,6 +29,7 @@ extension Serialiser {
             static let itemType:String = "itemType"
             static let created:String = "created"
             static let cardIdentifier:String = "cardIdentifier"
+            static let columnIdentifier:String = "columnIdentifier"
         }
     }
 }

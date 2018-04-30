@@ -15,7 +15,8 @@ class TestDeserialiserHistory:XCTestCase {
             "created": 1000,
             "cardIdentifier": "sda2"]
         static let identifiersMap:[String:DeserialiserHistoryItem.Type] = [
-            "CreateCard" : DeserialiserHistoryItemCreateCard.self]
+            "CreateCard" : DeserialiserHistoryItemCreateCard.self,
+            "MoveCard" : DeserialiserHistoryItemMoveCard.self]
     }
     
     override func setUp() {

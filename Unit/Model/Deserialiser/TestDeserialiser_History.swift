@@ -9,7 +9,7 @@ class TestDeserialiser_History:XCTestCase {
         static let dataSuccess:String = "CatbanProjectSuccessHistory"
         static let dataWrong:String = "CatbanProjectWrongHistoryType"
         static let firstCreatedExpected:Int = 100000
-        static let expectedHistory:Int = 3
+        static let expectedHistory:Int = 4
     }
     
     override func setUp() {

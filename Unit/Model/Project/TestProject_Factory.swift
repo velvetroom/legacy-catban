@@ -40,7 +40,8 @@ class TestProject_Factory:XCTestCase {
             totalCards += column.cards.count
         }
         let history:HistoryProtocol = self.project.history
-        XCTAssertEqual(history.items.count, totalCards, "There should be 1 history item per card")
+        XCTAssertEqual(history.items.count, totalCards * 2,
+                       "There should be 2 history items per card (create and move)")
     }
     
     func testFactoryTotalCards() {

@@ -8,9 +8,11 @@ class TestSerialiserHistory:XCTestCase {
     private struct Constants {
         static let created:Int = 2342
         static let items:[HistoryItemProtocol] = [
-            HistoryItemCreateCard()]
+            HistoryItemCreateCard(),
+            HistoryItemMoveCard()]
         static let serialisers:[SerialiserHistoryItem.Type] = [
-            SerialiserHistoryItemCreateCard.self]
+            SerialiserHistoryItemCreateCard.self,
+            SerialiserHistoryItemMoveCard.self]
     }
     
     override func setUp() {

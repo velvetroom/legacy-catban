@@ -4,7 +4,8 @@ class SerialiserHistory {
     private static var serialiserMap:[ObjectIdentifier:SerialiserHistoryItem.Type] {
         get {
             return [
-                ObjectIdentifier(HistoryItemCreateCard.self) : SerialiserHistoryItemCreateCard.self]
+                ObjectIdentifier(HistoryItemCreateCard.self) : SerialiserHistoryItemCreateCard.self,
+                ObjectIdentifier(HistoryItemMoveCard.self) : SerialiserHistoryItemMoveCard.self]
         }
     }
     

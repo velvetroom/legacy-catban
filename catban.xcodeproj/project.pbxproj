@@ -191,6 +191,10 @@
 		DA4A70E3209743B100E0D84C /* ProjectColumn+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E2209743B100E0D84C /* ProjectColumn+Factory.swift */; };
 		DA4A70E520974B8900E0D84C /* TestHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E420974B8900E0D84C /* TestHistoryItemMoveCard.swift */; };
 		DA4A70E720974BD300E0D84C /* HistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E620974BD300E0D84C /* HistoryItemMoveCard.swift */; };
+		DA4A70E920974FF500E0D84C /* TestDeserialiserHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70E820974FF500E0D84C /* TestDeserialiserHistoryItemMoveCard.swift */; };
+		DA4A70EB209750EB00E0D84C /* TestSerialiserHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70EA209750EB00E0D84C /* TestSerialiserHistoryItemMoveCard.swift */; };
+		DA4A70ED2097518500E0D84C /* SerialiserHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70EC2097518500E0D84C /* SerialiserHistoryItemMoveCard.swift */; };
+		DA4A70EF209751EB00E0D84C /* DeserialiserHistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A70EE209751EB00E0D84C /* DeserialiserHistoryItemMoveCard.swift */; };
 		DA4F0425208717E000A28894 /* CatbanUserSuccess.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */; };
 		DA4F0427208718A000A28894 /* CatbanFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0426208718A000A28894 /* CatbanFileLoader.swift */; };
 		DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */; };
@@ -788,6 +792,10 @@
 		DA4A70E2209743B100E0D84C /* ProjectColumn+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectColumn+Factory.swift"; sourceTree = "<group>"; };
 		DA4A70E420974B8900E0D84C /* TestHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHistoryItemMoveCard.swift; sourceTree = "<group>"; };
 		DA4A70E620974BD300E0D84C /* HistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DA4A70E820974FF500E0D84C /* TestDeserialiserHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialiserHistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DA4A70EA209750EB00E0D84C /* TestSerialiserHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialiserHistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DA4A70EC2097518500E0D84C /* SerialiserHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialiserHistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DA4A70EE209751EB00E0D84C /* DeserialiserHistoryItemMoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiserHistoryItemMoveCard.swift; sourceTree = "<group>"; };
 		DA4F0424208717E000A28894 /* CatbanUserSuccess.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatbanUserSuccess.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA4F0426208718A000A28894 /* CatbanFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatbanFileLoader.swift; sourceTree = "<group>"; };
 		DA4F0428208718CD00A28894 /* CatbanFileLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatbanFileLoader+Constants.swift"; sourceTree = "<group>"; };
@@ -1390,6 +1398,7 @@
 				DA4A70CE2096F21500E0D84C /* SerialiserHistoryItemType+Factory.swift */,
 				DA4A70D8209719B500E0D84C /* SerialiserHistoryItem.swift */,
 				DA4A70DC2097235300E0D84C /* SerialiserHistoryItemCreateCard.swift */,
+				DA4A70EC2097518500E0D84C /* SerialiserHistoryItemMoveCard.swift */,
 			);
 			path = Serialiser;
 			sourceTree = "<group>";
@@ -1766,6 +1775,7 @@
 				DABEEEF620960AC100E3576F /* DeserialiserHistory.swift */,
 				DA4A70CA2096F0E500E0D84C /* DeserialiserHistoryItem.swift */,
 				DABEEEFA20960CAA00E3576F /* DeserialiserHistoryItemCreateCard.swift */,
+				DA4A70EE209751EB00E0D84C /* DeserialiserHistoryItemMoveCard.swift */,
 			);
 			path = Deserialiser;
 			sourceTree = "<group>";
@@ -1782,6 +1792,7 @@
 				DABEEEFC20960CEA00E3576F /* TestDeserialiserHistory.swift */,
 				DABEEEFE20960D2B00E3576F /* TestDeserialiserHistoryItem.swift */,
 				DABEEF0020960D4500E3576F /* TestDeserialiserHistoryItemCreateCard.swift */,
+				DA4A70E820974FF500E0D84C /* TestDeserialiserHistoryItemMoveCard.swift */,
 				DA57BFFC208641B80016ECC4 /* MockDeserialiserProtocol.swift */,
 				DA4A70D22096F54500E0D84C /* MockDeserialiserHistoryItem.swift */,
 			);
@@ -2466,6 +2477,7 @@
 				DA4A70D02096F33100E0D84C /* TestSerialiserHistoryItemType.swift */,
 				DA4A70DA209719D000E0D84C /* TestSerialiserHistoryItem.swift */,
 				DA4A70DE209726C900E0D84C /* TestSerialiserHistoryItemCreateCard.swift */,
+				DA4A70EA209750EB00E0D84C /* TestSerialiserHistoryItemMoveCard.swift */,
 				DABC325C2088A3CC008BA213 /* MockSerialiserProtocol.swift */,
 			);
 			path = Serialiser;
@@ -2959,9 +2971,11 @@
 				DAFE7D982090B8C600A6DD41 /* StatsViewSpeed.swift in Sources */,
 				DAEEC734208F7096001B80A3 /* StatsPresenterFactoryProtocol.swift in Sources */,
 				DA86FBBE20835ADA005D31AF /* LoadController+Outlets.swift in Sources */,
+				DA4A70ED2097518500E0D84C /* SerialiserHistoryItemMoveCard.swift in Sources */,
 				DA2539002068347B00EEB231 /* LandingViewModelCollectionItem.swift in Sources */,
 				DADC5344209317850048FF1D /* History.swift in Sources */,
 				DAE698D7206576770046721C /* LandingController+Navigation.swift in Sources */,
+				DA4A70EF209751EB00E0D84C /* DeserialiserHistoryItemMoveCard.swift in Sources */,
 				DAEE96F220952FF3007EEE20 /* UpdateCreateCard.swift in Sources */,
 				DABCA7D32095C61900F42A71 /* UpdateDeleteCard.swift in Sources */,
 				DA796026206BCA1E00548952 /* LandingPresenterCollectionDataSourceProtocol.swift in Sources */,
@@ -3057,6 +3071,7 @@
 				DA30604D20826F8F00E55ECB /* TestLoadController.swift in Sources */,
 				DA6F1B8020735CA6001248E4 /* TestWriterPresenterOutlets.swift in Sources */,
 				DA3A21D9208A067000E6E583 /* TestOrganiseViewModel.swift in Sources */,
+				DA4A70EB209750EB00E0D84C /* TestSerialiserHistoryItemMoveCard.swift in Sources */,
 				DADF4D4620714B750037DCDD /* TestLandingViewModelCollectionMenu.swift in Sources */,
 				DA54ED892089DEF90078AF87 /* TestOrganisePresenter.swift in Sources */,
 				DA73A1D72080E80100ADC499 /* TestUpdateFactory_SalvageItemsFromDeletion_Exceptions.swift in Sources */,
@@ -3075,6 +3090,7 @@
 				DA49753B20947734007B4DDD /* TestFile_DeleteProject.swift in Sources */,
 				DA519A572068E40400514098 /* TestLandingViewCollectionLayout.swift in Sources */,
 				DA9A98862074B40B00D82514 /* TestWriterViewBar.swift in Sources */,
+				DA4A70E920974FF500E0D84C /* TestDeserialiserHistoryItemMoveCard.swift in Sources */,
 				DAEEC730208F700B001B80A3 /* TestStatsPresenterFactory.swift in Sources */,
 				DA4F0429208718CD00A28894 /* CatbanFileLoader+Constants.swift in Sources */,
 				DABCA7CD2095B7C600F42A71 /* TestLanding_CardsMoveUpdate.swift in Sources */,
