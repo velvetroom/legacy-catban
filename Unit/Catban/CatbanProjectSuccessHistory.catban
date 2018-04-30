@@ -29,18 +29,18 @@
                 ],
     "history": [
                 {
-                "type": "CreateCard",
-                "created": "100000",
+                "type": "CreatedCard",
+                "created": 100000,
                 "card": "fdsfghrtfr54"
                 },
                 {
-                "type": "CreateCard",
-                "created": "100001",
+                "type": "CreatedCard",
+                "created": 100001,
                 "card": "afdsfaer"
                 },
                 {
-                "type": "CreateCard",
-                "created": "100002",
+                "type": "CreatedCard",
+                "created": 100002,
                 "card": "aadsd4"
                 }
                 ]

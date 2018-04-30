@@ -14,9 +14,8 @@
                 }
     "history": [
                 {
-                "typeWrong": "CreateCard",
-                "created": "100000",
+                "typeWrong": "CreatedCard",
+                "created": 100000,
                 "card": "fdsfghrtfr54"
                 }]
 }
-

@@ -11,6 +11,9 @@ extension Deserialiser {
     private func parseHistoryWith(array:[Any]) throws -> History {
         let history:History = History()
         for item:Any in array {
+            guard
+                let itemDictionary:[String:Any] = item as? [String:Any]
+            else { throw ErrorRepository.malformedData }
             
         }
         return history
