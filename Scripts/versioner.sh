@@ -21,8 +21,6 @@ fi
 new_version="$version_major.$version_minor.$build"
 
 if [[ $new_version != $version ]]; then
-    sleep 1
-
     agvtool new-version -all $build
     agvtool new-marketing-version $new_version
 fi

@@ -1,0 +1,38 @@
+import UIKit
+
+class LandingColumnController:UIAlertController {
+    var model:LandingColumnEditProtocol
+    
+    init() {
+        self.model = LandingColumnEdit()
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    override var preferredStyle:UIAlertControllerStyle {
+        get {
+            return UIAlertControllerStyle.actionSheet
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.factoryActions()
+        self.prepareForIpad()
+    }
+    
+    private func prepareForIpad() {
+        if let popover:UIPopoverPresentationController = self.popoverPresentationController {
+            popover.sourceView = self.view
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
+            popover.sourceRect = CGRect(
+                x:self.view.center.x,
+                y:self.view.bounds.maxY - Constants.marginBottom,
+                width:1,
+                height:1)
+        }
+    }
+}
