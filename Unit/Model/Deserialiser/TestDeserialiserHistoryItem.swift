@@ -19,14 +19,11 @@ class TestDeserialiserHistoryItem:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
     }
     
-    func testCreatedBefore() {
-        XCTAssertEqual(self.model.created, 0, "Created should not be set")
-    }
-    
     func testCreatedAfter() {
         let expected:Int = Constants.success["created"] as! Int
-        do { let _:HistoryItemProtocol = try self.model.deserialise(item:Constants.success) } catch { }
-        XCTAssertEqual(self.model.created, expected, "Failed to parse created")
+        var item:HistoryItemProtocol!
+        do { item = try self.model.deserialise(item:Constants.success) } catch { }
+        XCTAssertEqual(item.created, expected, "Failed to parse created")
     }
     
     func testSuccess() {

@@ -1,25 +1,23 @@
 import Foundation
 
 class DeserialiserHistoryItem {
-    var created:Int
-    
-    required init() {
-        self.created = 0
-    }
+    required init() { }
     
     final func deserialise(item:[String:Any]) throws -> HistoryItemProtocol {
-        try self.deserialiseGeneric(item:item)
-        return try self.deserialiseDetailsFor(item:item)
+        let history:HistoryItemProtocol = try self.deserialiseDetailsFor(item:item)
+        return try self.deserialiseGeneric(history:history, item:item)
     }
     
     func deserialiseDetailsFor(item:[String:Any]) throws -> HistoryItemProtocol {
         throw ErrorRepository.malformedData
     }
     
-    private func deserialiseGeneric(item:[String:Any]) throws {
+    private func deserialiseGeneric(history:HistoryItemProtocol, item:[String:Any]) throws -> HistoryItemProtocol {
         guard
             let created:Int = item[Serialiser.Constants.History.created] as? Int
         else { throw ErrorRepository.malformedData }
-        self.created = created
+        var history:HistoryItemProtocol = history
+        history.created = created
+        return history
     }
 }
