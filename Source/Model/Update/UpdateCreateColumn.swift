@@ -6,8 +6,7 @@ class UpdateCreateColumn:UpdateProtocol {
     
     init() {
         self.section = 0
-        self.column = ProjectColumn()
-        self.column.identifier = UUID().uuidString
+        self.column = ProjectColumn.factoryColumn()
     }
     
     func strategy(board:BoardProtocol) {

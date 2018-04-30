@@ -25,7 +25,7 @@ extension Project {
         let firstCard:ProjectCard = factoryCardFirst()
         let secondCard:ProjectCard = factoryCardSecond()
         let thirdCard:ProjectCard = factoryCardThird()
-        let column:ProjectColumn = ProjectColumn()
+        let column:ProjectColumn = ProjectColumn.factoryColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnBacklog")
         column.cards.append(firstCard)
         column.cards.append(secondCard)
@@ -34,13 +34,13 @@ extension Project {
     }
     
     private class func factoryColumnProgress() -> ProjectColumn {
-        let column:ProjectColumn = ProjectColumn()
+        let column:ProjectColumn = ProjectColumn.factoryColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnProgress")
         return column
     }
     
     private class func factoryColumnDone() -> ProjectColumn {
-        let column:ProjectColumn = ProjectColumn()
+        let column:ProjectColumn = ProjectColumn.factoryColumn()
         column.name = String.localizedProject(key:"Project_defaultColumnDone")
         return column
     }

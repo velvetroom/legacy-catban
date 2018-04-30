@@ -61,6 +61,11 @@ class TestProjectColumn:XCTestCase {
         XCTAssertNil(card, "Failed to delete card")
     }
     
+    func testFactory() {
+        let column:ProjectColumn = ProjectColumn.factoryColumn()
+        XCTAssertFalse(column.identifier.isEmpty, "Failed to assign identifier")
+    }
+    
     private func titleAt(index:Int) -> String {
         return self.column.cards[index].title
     }

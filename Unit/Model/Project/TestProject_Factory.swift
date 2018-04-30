@@ -19,8 +19,10 @@ class TestProject_Factory:XCTestCase {
     func testFactoryColumns() {
         let columns:[ProjectColumn] = Project.factoryDefaultColumns()
         XCTAssertNotNil(columns, "Failed to factory columns")
-        self.validateColumns(columns:columns)
-        self.validateFirstCard(columns:columns)
+        for column:ProjectColumn in columns {
+            XCTAssertFalse(column.identifier.isEmpty, "Failed to assign identifier")
+            XCTAssertFalse(column.name.isEmpty, "Failed to assign name")
+        }
     }
     
     func testFactoryCards() {
@@ -41,12 +43,11 @@ class TestProject_Factory:XCTestCase {
         XCTAssertEqual(history.items.count, totalCards, "There should be 1 history item per card")
     }
     
-    private func validateColumns(columns:[ProjectColumn]) {
-        XCTAssertFalse(columns.isEmpty, "Columns factorised are empty")
-    }
-    
-    private func validateFirstCard(columns:[ProjectColumn]) {
-        let card:ProjectCard? = columns.first?.cards.first
-        XCTAssertNotNil(card, "Failed to create first card")
+    func testFactoryTotalCards() {
+        var totalCards:Int = 0
+        for column:ProjectColumn in self.project.columns {
+            totalCards += column.cards.count
+        }
+        XCTAssertGreaterThan(totalCards, 0, "There is no card on project")
     }
 }
