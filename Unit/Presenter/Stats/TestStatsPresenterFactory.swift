@@ -13,8 +13,7 @@ class TestStatsPresenterFactory:XCTestCase {
         self.board = Board()
         self.items = Stats.factoryItems()
         self.expectedItems = [
-            StatsViewCompletion.self,
-            StatsViewSpeed.self]
+            StatsViewCompletion.self]
     }
     
     func testLoad() {

@@ -19,8 +19,7 @@ class TestStats:XCTestCase {
         self.model.presenter = self.presenter
         self.model.board = self.board
         self.expectedItems = [
-            StatsItemCompletion.self,
-            StatsItemSpeed.self]
+            StatsItemCompletion.self]
     }
     
     func testLoad() {
