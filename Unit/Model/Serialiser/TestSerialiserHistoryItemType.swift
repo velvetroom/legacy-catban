@@ -12,12 +12,12 @@ class TestSerialiserHistoryItemType:XCTestCase {
     }
     
     func testSuccess() {
-        XCTAssertNoThrow(try SerialiserHistoryItemType.factoryWith(identifier:Constants.success),
+        XCTAssertNoThrow(try SerialiserHistoryItemType.factoryWith(itemType:Constants.success),
                          "Failed to factory item type")
     }
     
     func testError() {
-        XCTAssertThrowsError(try SerialiserHistoryItemType.factoryWith(identifier:Constants.error),
+        XCTAssertThrowsError(try SerialiserHistoryItemType.factoryWith(itemType:Constants.error),
                          "Failed to throw an error")
     }
 }

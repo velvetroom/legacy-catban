@@ -14,8 +14,8 @@
                 }
     "history": [
                 {
-                "typeWrong": "CreateCard",
+                "itemTypeWrong": "CreateCard",
                 "created": 100000,
-                "card": "fdsfghrtfr54"
+                "cardIdentifier": "fdsfghrtfr54"
                 }]
 }

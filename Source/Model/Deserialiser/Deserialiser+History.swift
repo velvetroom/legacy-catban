@@ -1,7 +1,7 @@
 import Foundation
 
 extension Deserialiser {
-    func parseHistortWith(dictionary:[String:Any]) throws -> History {
+    func parseHistoryWith(dictionary:[String:Any]) throws -> History {
         guard
             let array:[Any] = dictionary[Serialiser.Constants.Project.history] as? [Any]
         else { throw ErrorRepository.malformedData }
@@ -14,7 +14,8 @@ extension Deserialiser {
             guard
                 let itemDictionary:[String:Any] = item as? [String:Any]
             else { throw ErrorRepository.malformedData }
-            
+            let item:HistoryItemProtocol = try DeserialiserHistory.deserialise(item:itemDictionary)
+            history.items.append(item)
         }
         return history
     }

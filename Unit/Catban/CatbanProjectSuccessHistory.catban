@@ -29,19 +29,19 @@
                 ],
     "history": [
                 {
-                "type": "CreateCard",
+                "itemType": "CreateCard",
                 "created": 100000,
-                "card": "fdsfghrtfr54"
+                "cardIdentifier": "fdsfghrtfr54"
                 },
                 {
-                "type": "CreateCard",
+                "itemType": "CreateCard",
                 "created": 100001,
-                "card": "afdsfaer"
+                "cardIdentifier": "afdsfaer"
                 },
                 {
-                "type": "CreateCard",
+                "itemType": "CreateCard",
                 "created": 100002,
-                "card": "aadsd4"
+                "cardIdentifier": "aadsd4"
                 }
                 ]
 }

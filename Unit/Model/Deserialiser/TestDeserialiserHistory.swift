@@ -5,14 +5,15 @@ class TestDeserialiserHistory:XCTestCase {
     private var model:DeserialiserHistory!
     private struct Constants {
         static let empty:[String:Any] = [:]
-        static let malformed:[String:Any] = ["typeWrong":"CreateCard"]
+        static let malformed:[String:Any] = [
+            "itemTypeWrong":"CreateCard"]
         static let incomplete:[String:Any] = [
-            "type": "CreateCard",
-            "card": "sda2"]
+            "itemType": "CreateCard",
+            "cardIdentifier": "sda2"]
         static let success:[String:Any] = [
-            "type": "CreateCard",
+            "itemType": "CreateCard",
             "created": 1000,
-            "card": "sda2"]
+            "cardIdentifier": "sda2"]
         static let identifiersMap:[String:DeserialiserHistoryItem.Type] = [
             "CreateCard" : DeserialiserHistoryItemCreateCard.self]
     }
@@ -55,13 +56,13 @@ class TestDeserialiserHistory:XCTestCase {
     }
     
     func testDeserialiserForUnknown() {
-        XCTAssertThrowsError(try DeserialiserHistory.deserialiserFor(identifier:String()),
+        XCTAssertThrowsError(try DeserialiserHistory.deserialiserFor(itemType:String()),
                              "Failed to throw an error")
     }
     
     private func validate(identifier:String, with itemType:DeserialiserHistoryItem.Type) {
         var item:DeserialiserHistoryItem.Type!
-        XCTAssertNoThrow(try item = DeserialiserHistory.deserialiserFor(identifier:identifier))
+        XCTAssertNoThrow(try item = DeserialiserHistory.deserialiserFor(itemType:identifier))
         XCTAssertTrue(itemType == item, "Invalid deserialiser received")
     }
 }

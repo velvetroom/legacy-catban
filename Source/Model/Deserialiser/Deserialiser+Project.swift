@@ -10,6 +10,7 @@ extension Deserialiser {
         print(dictionary)
         var project:ProjectProtocol = try self.parseProjectWith(dictionary:dictionary)
         project.columns = try self.parseColumnsWith(dictionary:dictionary)
+        project.history = try self.parseHistoryWith(dictionary:dictionary)
         return project
     }
     

@@ -26,8 +26,9 @@ extension Serialiser {
         }
         
         struct History {
+            static let itemType:String = "itemType"
             static let created:String = "created"
-            static let card:String = "card"
+            static let cardIdentifier:String = "cardIdentifier"
         }
     }
 }

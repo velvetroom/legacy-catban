@@ -1,5 +1,5 @@
 import Foundation
 
 enum SerialiserHistoryItemType:String {
-    case CreatedCard = "CreatedCard"
+    case CreateCard = "CreateCard"
 }
