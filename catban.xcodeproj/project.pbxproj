@@ -141,14 +141,13 @@
 		DA474D3B20989ECD00C25D90 /* TestLandingStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D3A20989ECD00C25D90 /* TestLandingStateDelegate.swift */; };
 		DA474D3D20989F1400C25D90 /* MockLandingStateDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D3C20989F1400C25D90 /* MockLandingStateDelegateProtocol.swift */; };
 		DA474D3F20989F4700C25D90 /* LandingStateDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D3E20989F4700C25D90 /* LandingStateDelegateProtocol.swift */; };
-		DA474D4120989FD200C25D90 /* TestLandingStateDelegateNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4020989FD200C25D90 /* TestLandingStateDelegateNull.swift */; };
-		DA474D432098A06400C25D90 /* LandingStateDelegateNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D422098A06400C25D90 /* LandingStateDelegateNull.swift */; };
 		DA474D452098A1AF00C25D90 /* LandingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D442098A1AF00C25D90 /* LandingState.swift */; };
-		DA474D472098A2AE00C25D90 /* Landing+StateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */; };
 		DA474D492098A2E100C25D90 /* Landing+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D482098A2E100C25D90 /* Landing+State.swift */; };
 		DA474D4B2098A38E00C25D90 /* TestLandingStateCardSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */; };
 		DA474D4D2098A3E600C25D90 /* LandingStateCardSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */; };
 		DA474D4F2098A4C300C25D90 /* TestLanding_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */; };
+		DA474D512098AC5E00C25D90 /* TestLanding_StateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D502098AC5E00C25D90 /* TestLanding_StateDelegate.swift */; };
+		DA474D532098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D522098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift */; };
 		DA48BC0620808BC60057F424 /* TestLanding_Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */; };
 		DA48BC0820808E460057F424 /* Landing+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0720808E460057F424 /* Landing+Scroll.swift */; };
 		DA48DD5C209049D7007EE369 /* MockStatsItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48DD5A209049BF007EE369 /* MockStatsItemProtocol.swift */; };
@@ -757,14 +756,13 @@
 		DA474D3A20989ECD00C25D90 /* TestLandingStateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateDelegate.swift; sourceTree = "<group>"; };
 		DA474D3C20989F1400C25D90 /* MockLandingStateDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingStateDelegateProtocol.swift; sourceTree = "<group>"; };
 		DA474D3E20989F4700C25D90 /* LandingStateDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingStateDelegateProtocol.swift; sourceTree = "<group>"; };
-		DA474D4020989FD200C25D90 /* TestLandingStateDelegateNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateDelegateNull.swift; sourceTree = "<group>"; };
-		DA474D422098A06400C25D90 /* LandingStateDelegateNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingStateDelegateNull.swift; sourceTree = "<group>"; };
 		DA474D442098A1AF00C25D90 /* LandingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingState.swift; sourceTree = "<group>"; };
-		DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+StateDelegate.swift"; sourceTree = "<group>"; };
 		DA474D482098A2E100C25D90 /* Landing+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+State.swift"; sourceTree = "<group>"; };
 		DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateCardSelected.swift; sourceTree = "<group>"; };
 		DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingStateCardSelected.swift; sourceTree = "<group>"; };
 		DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_State.swift; sourceTree = "<group>"; };
+		DA474D502098AC5E00C25D90 /* TestLanding_StateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_StateDelegate.swift; sourceTree = "<group>"; };
+		DA474D522098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateCardSelected_Move.swift; sourceTree = "<group>"; };
 		DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Scroll.swift; sourceTree = "<group>"; };
 		DA48BC0720808E460057F424 /* Landing+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Scroll.swift"; sourceTree = "<group>"; };
 		DA48DD5A209049BF007EE369 /* MockStatsItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatsItemProtocol.swift; sourceTree = "<group>"; };
@@ -1853,11 +1851,12 @@
 				DAEE96E92095150E007EEE20 /* TestLanding_UpdateProject.swift */,
 				DAEE96F320954408007EEE20 /* TestLanding_ApplyUpdates.swift */,
 				DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */,
+				DA474D502098AC5E00C25D90 /* TestLanding_StateDelegate.swift */,
 				DA474D30209885AE00C25D90 /* TestLandingState.swift */,
 				DA474D3620988C9D00C25D90 /* TestLandingStateStandby.swift */,
 				DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */,
+				DA474D522098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift */,
 				DA474D3A20989ECD00C25D90 /* TestLandingStateDelegate.swift */,
-				DA474D4020989FD200C25D90 /* TestLandingStateDelegateNull.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
 				DA547845207A32B200F9301E /* TestLandingDelete.swift */,
 				DAD3C47E207BAF9800F84829 /* TestLandingEdit.swift */,
@@ -1878,12 +1877,10 @@
 				DA1A19C8208C689500300FED /* Landing+Project.swift */,
 				DA48BC0720808E460057F424 /* Landing+Scroll.swift */,
 				DA474D482098A2E100C25D90 /* Landing+State.swift */,
-				DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */,
 				DA474D442098A1AF00C25D90 /* LandingState.swift */,
 				DA474D3820988E1600C25D90 /* LandingStateStandby.swift */,
 				DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */,
 				DA474D3E20989F4700C25D90 /* LandingStateDelegateProtocol.swift */,
-				DA474D422098A06400C25D90 /* LandingStateDelegateNull.swift */,
 				DA391AE3207751D400484273 /* LandingAddProtocol.swift */,
 				DA391AE5207751EA00484273 /* LandingAdd.swift */,
 				DA547851207A3B4500F9301E /* LandingDeleteProtocol.swift */,
@@ -3038,7 +3035,6 @@
 				DA2A077A206CCA8300D02D1C /* ExtensionUIColor.swift in Sources */,
 				DA0DB18D20935B2B00B2F963 /* BoardRepository.swift in Sources */,
 				DA0DB18F20935EA900B2F963 /* BoardRepository+Constants.swift in Sources */,
-				DA474D472098A2AE00C25D90 /* Landing+StateDelegate.swift in Sources */,
 				DAEA2CBA207CFA1400C15653 /* UpdateFactoryProtocol.swift in Sources */,
 				DADF4D4820714BC10037DCDD /* LandingViewModelCollectionMenu.swift in Sources */,
 				DA6EBE6E20822042004B639E /* LandingController+Error.swift in Sources */,
@@ -3053,7 +3049,6 @@
 				DA73B88B2092132D00A6A7D0 /* CircleViewModel+FactoryBacklog.swift in Sources */,
 				DA54ED7F2089CFA40078AF87 /* OrganiseController.swift in Sources */,
 				DAD3C483207BB01F00F84829 /* LandingColumnEdit.swift in Sources */,
-				DA474D432098A06400C25D90 /* LandingStateDelegateNull.swift in Sources */,
 				DA4F97F3208F116D005E4725 /* StatsPresenterOutlets.swift in Sources */,
 				DA4A70D9209719B500E0D84C /* SerialiserHistoryItem.swift in Sources */,
 				DA4F97CC208EF904005E4725 /* Stats.swift in Sources */,
@@ -3216,6 +3211,7 @@
 				DA657EA3207528B6003C1645 /* MockWriterController.swift in Sources */,
 				DAEEC738208F7584001B80A3 /* MockStatsViewPageControl.swift in Sources */,
 				DA519A7F206945AB00514098 /* TestLandingViewCollectionCell.swift in Sources */,
+				DA474D512098AC5E00C25D90 /* TestLanding_StateDelegate.swift in Sources */,
 				DAD3C487207BB1CD00F84829 /* TestLandingEditPresenter.swift in Sources */,
 				DA438783208876B4004D8559 /* TestDeserialiser_Cards.swift in Sources */,
 				DA1AD54A206531A1002A7493 /* TestProject.swift in Sources */,
@@ -3229,6 +3225,7 @@
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */,
 				DAEEC71D208F54C2001B80A3 /* TestStatsViewModel.swift in Sources */,
+				DA474D532098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift in Sources */,
 				DAEE96F020952E8C007EEE20 /* TestUpdateCreateCard.swift in Sources */,
 				DA8AB25F2064F060005A393E /* TestLandingController.swift in Sources */,
 				DA48DD5C209049D7007EE369 /* MockStatsItemProtocol.swift in Sources */,
@@ -3293,7 +3290,6 @@
 				DA4A70E520974B8900E0D84C /* TestHistoryItemMoveCard.swift in Sources */,
 				DA48DD6420904A76007EE369 /* TestStatsItemCompletion.swift in Sources */,
 				DAFE7D842090B67E00A6DD41 /* MockStatsView.swift in Sources */,
-				DA474D4120989FD200C25D90 /* TestLandingStateDelegateNull.swift in Sources */,
 				DA547856207A3D4600F9301E /* TestLandingDeletePresenter.swift in Sources */,
 				DA57BFFD208641B80016ECC4 /* MockDeserialiserProtocol.swift in Sources */,
 				DA6F1B8620736054001248E4 /* TestWriterPresenterOutletsList.swift in Sources */,

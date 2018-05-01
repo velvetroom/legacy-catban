@@ -13,7 +13,8 @@ class Landing:LandingProtocol {
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.update = UpdateFactory()
-        self.state = LandingState()
+        self.state = LandingStateStandby()
+        self.state.delegate = self
     }
     
     func reloadViewModel() {

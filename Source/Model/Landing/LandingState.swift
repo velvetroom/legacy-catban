@@ -1,9 +1,9 @@
 import Foundation
 
 class LandingState {
-    var delegate:LandingStateDelegateProtocol
+    weak var delegate:LandingStateDelegateProtocol?
     
-    init() {
-        self.delegate = LandingStateDelegateNull()
-    }
+    init() { }
+    
+    func moveCardLeft() { }
 }

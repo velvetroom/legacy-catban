@@ -11,6 +11,6 @@ class TestLandingState:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.delegate, "Failed to load delegate")
+        XCTAssertNil(self.model.delegate, "Delegate should not be retained")
     }
 }

@@ -1,7 +1,6 @@
 import Foundation
 
-protocol LandingProtocol:ModelProtocol {
-    var project:ProjectProtocol { get set }
+protocol LandingProtocol:ModelProtocol, LandingStateDelegateProtocol {
     var board:BoardProtocol { get set }
     var presenter:LandingPresenterProtocol { get set }
     var editingCard:IndexPath? { get set }
@@ -14,7 +13,6 @@ protocol LandingProtocol:ModelProtocol {
     func columnAt(index:Int) -> ProjectColumn
     func indexFor(column:ProjectColumn) -> Int
     func update(editingCard:IndexPath?)
-    func moveCardFrom(origin:IndexPath, to destination:IndexPath)
     func deleteProject() throws
     func deleteCard()
     func deleteColumnAndMoveCardsAt(index:Int) throws
