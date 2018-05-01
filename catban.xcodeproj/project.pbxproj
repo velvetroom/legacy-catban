@@ -146,8 +146,8 @@
 		DA474D452098A1AF00C25D90 /* LandingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D442098A1AF00C25D90 /* LandingState.swift */; };
 		DA474D472098A2AE00C25D90 /* Landing+StateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */; };
 		DA474D492098A2E100C25D90 /* Landing+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D482098A2E100C25D90 /* Landing+State.swift */; };
-		DA474D4B2098A38E00C25D90 /* TestLandingStateEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4A2098A38E00C25D90 /* TestLandingStateEditing.swift */; };
-		DA474D4D2098A3E600C25D90 /* LandingStateEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4C2098A3E600C25D90 /* LandingStateEditing.swift */; };
+		DA474D4B2098A38E00C25D90 /* TestLandingStateCardSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */; };
+		DA474D4D2098A3E600C25D90 /* LandingStateCardSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */; };
 		DA474D4F2098A4C300C25D90 /* TestLanding_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */; };
 		DA48BC0620808BC60057F424 /* TestLanding_Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */; };
 		DA48BC0820808E460057F424 /* Landing+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48BC0720808E460057F424 /* Landing+Scroll.swift */; };
@@ -762,8 +762,8 @@
 		DA474D442098A1AF00C25D90 /* LandingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingState.swift; sourceTree = "<group>"; };
 		DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+StateDelegate.swift"; sourceTree = "<group>"; };
 		DA474D482098A2E100C25D90 /* Landing+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+State.swift"; sourceTree = "<group>"; };
-		DA474D4A2098A38E00C25D90 /* TestLandingStateEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateEditing.swift; sourceTree = "<group>"; };
-		DA474D4C2098A3E600C25D90 /* LandingStateEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingStateEditing.swift; sourceTree = "<group>"; };
+		DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateCardSelected.swift; sourceTree = "<group>"; };
+		DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingStateCardSelected.swift; sourceTree = "<group>"; };
 		DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_State.swift; sourceTree = "<group>"; };
 		DA48BC0520808BC60057F424 /* TestLanding_Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLanding_Scroll.swift; sourceTree = "<group>"; };
 		DA48BC0720808E460057F424 /* Landing+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing+Scroll.swift"; sourceTree = "<group>"; };
@@ -1855,7 +1855,7 @@
 				DA474D4E2098A4C300C25D90 /* TestLanding_State.swift */,
 				DA474D30209885AE00C25D90 /* TestLandingState.swift */,
 				DA474D3620988C9D00C25D90 /* TestLandingStateStandby.swift */,
-				DA474D4A2098A38E00C25D90 /* TestLandingStateEditing.swift */,
+				DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */,
 				DA474D3A20989ECD00C25D90 /* TestLandingStateDelegate.swift */,
 				DA474D4020989FD200C25D90 /* TestLandingStateDelegateNull.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
@@ -1881,7 +1881,7 @@
 				DA474D462098A2AE00C25D90 /* Landing+StateDelegate.swift */,
 				DA474D442098A1AF00C25D90 /* LandingState.swift */,
 				DA474D3820988E1600C25D90 /* LandingStateStandby.swift */,
-				DA474D4C2098A3E600C25D90 /* LandingStateEditing.swift */,
+				DA474D4C2098A3E600C25D90 /* LandingStateCardSelected.swift */,
 				DA474D3E20989F4700C25D90 /* LandingStateDelegateProtocol.swift */,
 				DA474D422098A06400C25D90 /* LandingStateDelegateNull.swift */,
 				DA391AE3207751D400484273 /* LandingAddProtocol.swift */,
@@ -2959,7 +2959,7 @@
 				DA54784E207A38FE00F9301E /* LandingDeleteController+Actions.swift in Sources */,
 				DA86FBE020838637005D31AF /* Thread.swift in Sources */,
 				DABC324E208893EE008BA213 /* RepositoryLocal+Save.swift in Sources */,
-				DA474D4D2098A3E600C25D90 /* LandingStateEditing.swift in Sources */,
+				DA474D4D2098A3E600C25D90 /* LandingStateCardSelected.swift in Sources */,
 				DA48EAD7208A96DB00434E8B /* LandingViewModel+Constants.swift in Sources */,
 				DAC45AAD208DAA33004E1236 /* OrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */,
 				DA1AD54D2065328D002A7493 /* Project.swift in Sources */,
@@ -3272,7 +3272,7 @@
 				DAFE7D7C2090B01000A6DD41 /* TestStatsView.swift in Sources */,
 				DA8AB2672064F41E005A393E /* TestLandingPresenterOutletsList.swift in Sources */,
 				DA3A21ED208A42AE00E6E583 /* TestOrganiseViewCollectionCell.swift in Sources */,
-				DA474D4B2098A38E00C25D90 /* TestLandingStateEditing.swift in Sources */,
+				DA474D4B2098A38E00C25D90 /* TestLandingStateCardSelected.swift in Sources */,
 				DAEA2CB0207CF21700C15653 /* MockUpdateProtocol.swift in Sources */,
 				DAC45AAB208DA9DF004E1236 /* MockOrganisePresenterCollectionDelegateDelegateProtocol.swift in Sources */,
 				DA907CD0209074FA00BD4959 /* MockStatsViewCollectionCell.swift in Sources */,

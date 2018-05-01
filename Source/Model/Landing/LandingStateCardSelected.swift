@@ -1,6 +1,6 @@
 import Foundation
 
-class LandingStateEditing:LandingState {
+class LandingStateCardSelected:LandingState {
     var indexPath:IndexPath
     
     override init() {

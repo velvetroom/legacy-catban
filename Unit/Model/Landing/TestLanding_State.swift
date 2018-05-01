@@ -22,10 +22,10 @@ class TestLanding_State:XCTestCase {
         XCTAssertNotNil(state, "Failed to update state")
     }
     
-    func testEditing() {
-        self.model.stateEditing(indexPath:Constants.indexPath)
+    func testCardSelected() {
+        self.model.stateCardSelected(indexPath:Constants.indexPath)
         
-        let state:LandingStateEditing? = self.model.state as? LandingStateEditing
+        let state:LandingStateCardSelected? = self.model.state as? LandingStateCardSelected
         XCTAssertNotNil(state, "Failed to upate state")
         XCTAssertEqual(state?.indexPath, Constants.indexPath, "Failed to assign index path")
     }

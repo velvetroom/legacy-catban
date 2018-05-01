@@ -1,12 +1,12 @@
 import XCTest
 @testable import catban
 
-class TestLandingStateEditing:XCTestCase {
-    private var model:LandingStateEditing!
+class TestLandingStateCardSelected:XCTestCase {
+    private var model:LandingStateCardSelected!
     
     override func setUp() {
         super.setUp()
-        self.model = LandingStateEditing()
+        self.model = LandingStateCardSelected()
     }
     
     func testLoad() {

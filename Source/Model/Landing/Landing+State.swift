@@ -7,8 +7,8 @@ extension Landing {
         self.state = state
     }
     
-    func stateEditing(indexPath:IndexPath) {
-        let state:LandingStateEditing = LandingStateEditing()
+    func stateCardSelected(indexPath:IndexPath) {
+        let state:LandingStateCardSelected = LandingStateCardSelected()
         state.delegate = self
         state.indexPath = indexPath
         self.state = state
