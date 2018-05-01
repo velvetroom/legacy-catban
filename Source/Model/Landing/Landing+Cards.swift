@@ -1,12 +1,6 @@
-import UIKit
+import Foundation
 
 extension Landing {
-    private var collection:LandingViewCollection? {
-        get {
-            return self.presenter.outlets.list.viewCollection
-        }
-    }
-    
     func clearCardSelection() {
         self.collection?.clearSelection()
         self.update(editingCard:nil)

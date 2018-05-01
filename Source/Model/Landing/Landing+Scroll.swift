@@ -1,12 +1,6 @@
 import UIKit
 
 extension Landing {
-    private var collection:LandingViewCollection? {
-        get {
-            return self.presenter.outlets.list.viewCollection
-        }
-    }
-    
     private var scrollPosition:UICollectionViewScrollPosition {
         get {
             return UICollectionViewScrollPosition([
