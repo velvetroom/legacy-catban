@@ -26,6 +26,7 @@ class TestLanding:XCTestCase {
         XCTAssertNotNil(self.model.viewModelLoader, "Failed to load view model loader")
         XCTAssertNotNil(self.model.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.model.update, "Failed to load factory")
+        XCTAssertNotNil(self.model.state, "Failed to load state")
     }
     
     func testEditingCardReference() {

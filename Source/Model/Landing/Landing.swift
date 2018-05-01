@@ -6,12 +6,14 @@ class Landing:LandingProtocol {
     var presenter:LandingPresenterProtocol
     var update:UpdateFactoryProtocol
     var editingCard:IndexPath?
+    var state:LandingState
     
     required init() {
         self.board = Board()
         self.viewModelLoader = LandingViewModelLoader()
         self.presenter = LandingPresenter()
         self.update = UpdateFactory()
+        self.state = LandingState()
     }
     
     func reloadViewModel() {

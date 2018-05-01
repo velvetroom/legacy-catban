@@ -20,6 +20,7 @@ class MockLandingProtocol:LandingProtocol {
     var onScrollToTopRightCorner:(() -> Void)?
     var onDeleteProject:(() -> Void)?
     var onUpdateProjectName:((String) -> Void)?
+    var state:LandingState
     var editingCard:IndexPath?
     var presenter:LandingPresenterProtocol
     var editingCardReference:ProjectCard?
@@ -42,6 +43,7 @@ class MockLandingProtocol:LandingProtocol {
         self.presenter = LandingPresenter()
         self.returnCardAtIndex = ProjectCard()
         self.returnColumnAtIndex = ProjectColumn()
+        self.state = LandingState()
         self.returnIndexForColumn = 0
     }
     

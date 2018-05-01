@@ -1,16 +1,15 @@
 import XCTest
 @testable import catban
 
-class TestLandingState:XCTestCase {
-    private var model:LandingState!
+class TestLandingStateDelegate:XCTestCase {
+    private var model:MockLandingStateDelegateProtocol!
     
     override func setUp() {
         super.setUp()
-        self.model = LandingState()
+        self.model = MockLandingStateDelegateProtocol()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.delegate, "Failed to load delegate")
     }
 }

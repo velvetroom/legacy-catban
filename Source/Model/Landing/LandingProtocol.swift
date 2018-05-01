@@ -6,6 +6,7 @@ protocol LandingProtocol:ModelProtocol {
     var presenter:LandingPresenterProtocol { get set }
     var editingCard:IndexPath? { get set }
     var editingCardReference:ProjectCard? { get }
+    var state:LandingState { get set }
     
     func reloadViewModel()
     func clearCardSelection()
