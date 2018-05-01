@@ -3,13 +3,8 @@ import Foundation
 
 class MockLoadProtocol:LoadProtocol {
     var onLoadBoard:(() -> Void)?
-    var repository:RepositoryProtocol
-    var dispatchQueue:DispatchQueue
     
-    required init() {
-        self.repository = Repository()
-        self.dispatchQueue = Thread.factoryBackgroundConcurrentWith(label:String())
-    }
+    required init() { }
     
     func loadBoard(completion:@escaping((BoardProtocol) -> Void)) {
         self.onLoadBoard?()
