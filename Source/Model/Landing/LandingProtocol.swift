@@ -26,4 +26,6 @@ protocol LandingProtocol:ModelProtocol, ProjectEditorProtocol {
     func createCard()
     func createColumn()
     func createProject()
+    func stateStandby()
+    func stateCardSelected(indexPath:IndexPath)
 }

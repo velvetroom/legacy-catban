@@ -5,6 +5,7 @@ extension Landing {
         let state:LandingStateStandby = LandingStateStandby()
         state.delegate = self
         self.state = state
+        self.reloadViewModel()
     }
     
     func stateCardSelected(indexPath:IndexPath) {
@@ -12,5 +13,6 @@ extension Landing {
         state.delegate = self
         state.indexPath = indexPath
         self.state = state
+        self.reloadViewModel()
     }
 }

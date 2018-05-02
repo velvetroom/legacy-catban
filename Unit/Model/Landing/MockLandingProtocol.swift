@@ -20,6 +20,8 @@ class MockLandingProtocol:LandingProtocol {
     var onScrollToTopRightCorner:(() -> Void)?
     var onDeleteProject:(() -> Void)?
     var onUpdateProjectName:((String) -> Void)?
+    var onStateStandby:(() -> Void)?
+    var onStateCardSelected:((IndexPath) -> Void)?
     var state:LandingState
     var editingCard:IndexPath?
     var presenter:LandingPresenterProtocol
@@ -137,5 +139,13 @@ class MockLandingProtocol:LandingProtocol {
     
     func createCard() {
         self.onCreateCard?()
+    }
+    
+    func stateStandby() {
+        self.onStateStandby?()
+    }
+    
+    func stateCardSelected(indexPath:IndexPath) {
+        self.onStateCardSelected?(indexPath)
     }
 }
