@@ -4,6 +4,7 @@ import XCTest
 class TestLanding_State:XCTestCase {
     private var model:Landing!
     private var viewModelLoader:MockLandingViewModelLoader!
+    private var view:MockLandingViewCollection!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let indexPath:IndexPath = IndexPath(item:334, section:123)
@@ -14,12 +15,15 @@ class TestLanding_State:XCTestCase {
         super.setUp()
         self.model = Landing()
         self.viewModelLoader = MockLandingViewModelLoader()
+        self.view = MockLandingViewCollection()
         self.model.viewModelLoader = self.viewModelLoader
+        self.model.presenter.outlets.list.viewCollection = self.view
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.viewModelLoader, "Failed to load view model loader")
+        XCTAssertNotNil(self.view, "Failed to load view")
     }
     
     func testInitialState() {
@@ -69,6 +73,17 @@ class TestLanding_State:XCTestCase {
     func testCardSelectedReloadsViewModel() {
         self.startExpectation()
         self.viewModelLoader.onLoadCalled = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.model.stateCardSelected(indexPath:Constants.indexPath)
+        self.waitExpectations()
+    }
+    
+    func testCardSelectedScrollsToCard() {
+        self.startExpectation()
+        self.view.onScrollToItem = { [weak self] (indexPath:IndexPath) in
+            XCTAssertEqual(indexPath, Constants.indexPath, "Invalid index path received")
             self?.expect?.fulfill()
         }
         

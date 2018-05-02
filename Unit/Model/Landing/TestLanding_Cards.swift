@@ -65,35 +65,6 @@ class TestLanding_Cards:XCTestCase {
         self.waitExpectation()
     }
     
-    func testUpdateEditingCardUpdatesViewModel() {
-        self.startExpectation()
-        self.presenter.onUpdateViewModel = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.model.update(editingCard:Constants.destination)
-        
-        self.waitExpectation()
-    }
-    
-    func testUpdateEditingCardUpdatesIndex() {
-        XCTAssertNil(self.model.editingCard, "Initial editing card should be nil")
-        self.model.update(editingCard:Constants.destination)
-        XCTAssertEqual(self.model.editingCard, Constants.destination, "Failed to update editing card")
-    }
-    
-    func testUpdateEditingCardScrollsToCard() {
-        self.startExpectation()
-        self.collection.onScrollToItem = { [weak self] (editingCard:IndexPath) in
-            XCTAssertEqual(editingCard, Constants.destination, "Scrolling to invalid index path")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.update(editingCard:Constants.destination)
-        
-        self.waitExpectation()
-    }
-    
     func testScrollToEditingCard() {
         self.startExpectation()
         self.model.editingCard = Constants.destination

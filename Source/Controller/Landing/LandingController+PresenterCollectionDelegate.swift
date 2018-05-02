@@ -2,10 +2,10 @@ import Foundation
 
 extension LandingController:LandingPresenterCollectionDelegateProtocol {
     func delegateSelectCellAt(index:IndexPath) {
-        self.model.update(editingCard:index)
+        self.model.stateCardSelected(indexPath:index)
     }
     
     func delegateClearSelection() {
-        self.model.update(editingCard:nil)
+        self.model.stateStandby()
     }
 }

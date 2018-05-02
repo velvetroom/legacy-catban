@@ -6,6 +6,7 @@ extension Landing {
         state.delegate = self
         self.state = state
         self.reloadViewModel()
+        self.editingCard = nil
     }
     
     func stateCardSelected(indexPath:IndexPath) {
@@ -13,6 +14,8 @@ extension Landing {
         state.delegate = self
         state.indexPath = indexPath
         self.state = state
+        self.editingCard = indexPath
         self.reloadViewModel()
+        self.scrollToEditingCard()
     }
 }

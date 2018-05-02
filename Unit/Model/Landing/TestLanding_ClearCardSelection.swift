@@ -38,6 +38,13 @@ class TestLanding_ClearCardSelection:XCTestCase {
         XCTAssertNil(self.model.editingCard, "Failed to clear editing card")
     }
     
+    func testClearUpdatesState() {
+        self.model.state = LandingStateCardSelected()
+        self.model.clearCardSelection()
+        let state:LandingStateStandby? = self.model.state as? LandingStateStandby
+        XCTAssertNotNil(state, "Failed to update state")
+    }
+    
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
     }

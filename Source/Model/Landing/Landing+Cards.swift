@@ -3,17 +3,11 @@ import Foundation
 extension Landing {
     func clearCardSelection() {
         self.collection?.clearSelection()
-        self.update(editingCard:nil)
+        self.stateStandby()
     }
     
     func cardAt(indexPath:IndexPath) -> ProjectCard {
         return self.project.cardAt(indexPath:indexPath)
-    }
-    
-    func update(editingCard:IndexPath?) {
-        self.editingCard = editingCard
-        self.reloadViewModel()
-        self.scrollToEditingCard()
     }
     
     func deleteCard() {

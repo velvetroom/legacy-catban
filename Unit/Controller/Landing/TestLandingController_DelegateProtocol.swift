@@ -2,16 +2,19 @@ import XCTest
 @testable import catban
 
 class TestLandingController_DelegateProtocol:XCTestCase {
-    private var controller:LandingController<Landing>!
+    private var controller:LandingController<MockLandingProtocol>!
     private var layoutMenuBottom:NSLayoutConstraint!
     private var project:Project!
+    private var expect:XCTestExpectation?
     private struct Constants {
         static let menuInitialBottom:CGFloat = 99
+        static let indexPath:IndexPath = IndexPath(item:1, section:1)
+        static let wait:TimeInterval = 0.3
     }
     
     override func setUp() {
         super.setUp()
-        self.controller = LandingController<Landing>()
+        self.controller = LandingController<MockLandingProtocol>()
         self.layoutMenuBottom = NSLayoutConstraint()
         self.project = Project.factoryFirstProject()
         self.controller.model.presenter.outlets.list.layoutCollectionMenuBottom = self.layoutMenuBottom
@@ -24,39 +27,38 @@ class TestLandingController_DelegateProtocol:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testUpdateEditingCardAfterCellSelect() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        
-        self.controller.delegateSelectCellAt(index:index)
-        
-        XCTAssertNotNil(self.controller.model.editingCard, "Failed to update editing card")
-    }
-    
-    func testUpdateViewModelAfterCellSelect() {
-        self.layoutMenuBottom.constant = Constants.menuInitialBottom
-        let index:IndexPath = IndexPath(item:0, section:0)
-        
-        self.controller.delegateSelectCellAt(index:index)
-        
-        XCTAssertEqual(self.layoutMenuBottom.constant, 0, "Failed to update view model")
-    }
-    
     func testRemoveEditingCardWhenDeselectCell() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        self.controller.delegateSelectCellAt(index:index)
-        
+        self.controller.delegateSelectCellAt(index:Constants.indexPath)
         self.controller.delegateClearSelection()
-        
         XCTAssertNil(self.controller.model.editingCard, "Failed to remove editing card")
     }
     
-    func testUpdateViewModelAfterCellDeselect() {
-        let index:IndexPath = IndexPath(item:0, section:0)
-        self.controller.delegateSelectCellAt(index:index)
+    func testSelectsUpdatesStateToSelected() {
+        self.startExpectation()
+        self.controller.model.onStateCardSelected = { [weak self] (indexPath:IndexPath) in
+            XCTAssertEqual(indexPath, Constants.indexPath, "Invalid indexPath received")
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.delegateSelectCellAt(index:Constants.indexPath)
+        self.waitExpectation()
+    }
+    
+    func testClearUpdatesStateToStandby() {
+        self.startExpectation()
+        self.controller.model.onStateStandby = { [weak self] in
+            self?.expect?.fulfill()
+        }
         
         self.controller.delegateClearSelection()
-        
-        XCTAssertEqual(self.layoutMenuBottom.constant, LandingViewModel.Constants.collectionMenuHeight,
-                       "Failed to update view model")
+        self.waitExpectation()
+    }
+    
+    private func startExpectation() {
+        self.expect = expectation(description:"Wait for expectation")
+    }
+    
+    private func waitExpectation() {
+        waitForExpectations(timeout:Constants.wait) { (error:Error?) in }
     }
 }

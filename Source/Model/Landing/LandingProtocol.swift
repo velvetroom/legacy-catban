@@ -12,7 +12,6 @@ protocol LandingProtocol:ModelProtocol, ProjectEditorProtocol {
     func cardAt(indexPath:IndexPath) -> ProjectCard
     func columnAt(index:Int) -> ProjectColumn
     func indexFor(column:ProjectColumn) -> Int
-    func update(editingCard:IndexPath?)
     func deleteProject() throws
     func deleteCard()
     func deleteColumnAndMoveCardsAt(index:Int) throws
