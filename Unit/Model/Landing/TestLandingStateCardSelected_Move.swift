@@ -38,12 +38,27 @@ class TestLandingStateCardSelected_Move:XCTestCase {
         }
         
         self.model.moveCardLeft()
-        
         self.waitExpectations()
     }
     
     func testMoveCardLeftUpdatesIndexPath() {
         self.model.moveCardLeft()
+        XCTAssertNotEqual(self.model.indexPath, Constants.indexPath, "Failed to update indexPath")
+    }
+    
+    func testMoveCardRightCallsDelegate() {
+        self.startExpectation()
+        self.delegate.onMoveCardFromOrigin = { [weak self] (indexA:IndexPath, indexB:IndexPath) in
+            XCTAssertNotEqual(indexA, indexB, "Origin and destination can't be the same")
+            self?.expect?.fulfill()
+        }
+        
+        self.model.moveCardRight()
+        self.waitExpectations()
+    }
+    
+    func testMoveCardRightUpdatesIndexPath() {
+        self.model.moveCardRight()
         XCTAssertNotEqual(self.model.indexPath, Constants.indexPath, "Failed to update indexPath")
     }
     

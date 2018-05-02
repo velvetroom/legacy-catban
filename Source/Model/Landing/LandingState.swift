@@ -6,4 +6,6 @@ class LandingState {
     init() { }
     
     func moveCardLeft() { }
+    
+    func moveCardRight() { }
 }
