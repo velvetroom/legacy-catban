@@ -9,10 +9,8 @@ class LandingStateCardSelected:LandingState {
     }
     
     override func moveCardLeft() {
-        guard
-            let newIndex:IndexPath = self.delegate?.project.indexOnLeftForCardAt(index:self.indexPath)
-        else { return }
-        self.delegate?.moveCardFrom(origin:self.indexPath, to:newIndex)
+        let newIndex:IndexPath = self.delegate.project.indexOnLeftForCardAt(index:self.indexPath)
+        self.delegate.moveCardFrom(origin:self.indexPath, to:newIndex)
         self.indexPath = newIndex
     }
 }

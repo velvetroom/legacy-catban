@@ -1,7 +1,7 @@
 import Foundation
 
 class LandingState {
-    weak var delegate:LandingStateDelegateProtocol?
+    weak var delegate:LandingStateDelegateProtocol!
     
     init() { }
     
