@@ -1,6 +1,6 @@
 import Foundation
 
-class Landing:LandingProtocol {
+class Landing:LandingProtocol, LandingStateDelegateProtocol {
     var board:BoardProtocol
     var viewModelLoader:LandingViewModelLoaderProtocol
     var presenter:LandingPresenterProtocol

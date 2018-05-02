@@ -1,7 +1,5 @@
 import Foundation
 
-protocol LandingStateDelegateProtocol:AnyObject {
-    var project:ProjectProtocol { get set }
+protocol LandingStateDelegateProtocol:AnyObject, ProjectEditorProtocol {
     
-    func moveCardFrom(origin:IndexPath, to destination:IndexPath)
 }

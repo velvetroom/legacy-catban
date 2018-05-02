@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LandingProtocol:ModelProtocol, LandingStateDelegateProtocol {
+protocol LandingProtocol:ModelProtocol, ProjectEditorProtocol {
     var board:BoardProtocol { get set }
     var presenter:LandingPresenterProtocol { get set }
     var editingCard:IndexPath? { get set }
