@@ -8,4 +8,6 @@ class LandingState {
     func moveCardLeft() { }
     
     func moveCardRight() { }
+    
+    func deleteCard() { }
 }

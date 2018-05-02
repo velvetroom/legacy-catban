@@ -13,7 +13,6 @@ protocol LandingProtocol:ModelProtocol, ProjectEditorProtocol {
     func columnAt(index:Int) -> ProjectColumn
     func indexFor(column:ProjectColumn) -> Int
     func deleteProject() throws
-    func deleteCard()
     func deleteColumnAndMoveCardsAt(index:Int) throws
     func scrollToEditingCard()
     func scrollToTopRightCorner()

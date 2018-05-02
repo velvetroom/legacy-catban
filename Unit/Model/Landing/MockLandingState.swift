@@ -4,6 +4,7 @@ import Foundation
 class MockLandingState:LandingState {
     var onMoveCardLeft:(() -> Void)?
     var onMoveCardRight:(() -> Void)?
+    var onDeleteCard:(() -> Void)?
     
     override func moveCardLeft() {
         self.onMoveCardLeft?()
@@ -11,5 +12,9 @@ class MockLandingState:LandingState {
     
     override func moveCardRight() {
         self.onMoveCardRight?()
+    }
+    
+    override func deleteCard() {
+        self.onDeleteCard?()
     }
 }

@@ -10,12 +10,9 @@ extension Landing {
         return self.project.cardAt(indexPath:indexPath)
     }
     
-    func deleteCard() {
-        guard
-            let editingCard:IndexPath = self.editingCard
-        else { return }
-        self.editingCard = nil
-        let updates:[UpdateProtocol] = self.update.deleteCardAt(index:editingCard)
+    func deleteCardAt(indexPath:IndexPath) {
+        self.stateStandby()
+        let updates:[UpdateProtocol] = self.update.deleteCardAt(index:indexPath)
         self.applyUpdates(updates:updates)
     }
     

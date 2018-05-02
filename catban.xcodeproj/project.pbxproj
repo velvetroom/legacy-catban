@@ -461,6 +461,7 @@
 		DAABC2AC206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2AB206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift */; };
 		DAABC2AE206A7C48003B4BE4 /* MockLandingPresenterCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABC2AD206A7C48003B4BE4 /* MockLandingPresenterCollection.swift */; };
 		DAAD6339209A02A7001AA847 /* MockLandingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD6338209A02A7001AA847 /* MockLandingState.swift */; };
+		DAAD633B209A0815001AA847 /* TestLandingStateCardSelected_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD633A209A0815001AA847 /* TestLandingStateCardSelected_Delete.swift */; };
 		DABC324C2088936C008BA213 /* TestRepositoryLocal_Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC324B2088936C008BA213 /* TestRepositoryLocal_Save.swift */; };
 		DABC324E208893EE008BA213 /* RepositoryLocal+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC324D208893EE008BA213 /* RepositoryLocal+Save.swift */; };
 		DABC3250208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC324F208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift */; };
@@ -1086,6 +1087,7 @@
 		DAABC2AB206A7774003B4BE4 /* TestLandingPresenterCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenterCollectionDataSource.swift; sourceTree = "<group>"; };
 		DAABC2AD206A7C48003B4BE4 /* MockLandingPresenterCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingPresenterCollection.swift; sourceTree = "<group>"; };
 		DAAD6338209A02A7001AA847 /* MockLandingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingState.swift; sourceTree = "<group>"; };
+		DAAD633A209A0815001AA847 /* TestLandingStateCardSelected_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingStateCardSelected_Delete.swift; sourceTree = "<group>"; };
 		DABC324B2088936C008BA213 /* TestRepositoryLocal_Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryLocal_Save.swift; sourceTree = "<group>"; };
 		DABC324D208893EE008BA213 /* RepositoryLocal+Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryLocal+Save.swift"; sourceTree = "<group>"; };
 		DABC324F208894F9008BA213 /* TestRepository_SaveBoardToLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_SaveBoardToLocal.swift; sourceTree = "<group>"; };
@@ -1861,6 +1863,7 @@
 				DA474D3620988C9D00C25D90 /* TestLandingStateStandby.swift */,
 				DA474D4A2098A38E00C25D90 /* TestLandingStateCardSelected.swift */,
 				DA474D522098B41E00C25D90 /* TestLandingStateCardSelected_Move.swift */,
+				DAAD633A209A0815001AA847 /* TestLandingStateCardSelected_Delete.swift */,
 				DA474D3A20989ECD00C25D90 /* TestLandingStateDelegate.swift */,
 				DA391AE12077516800484273 /* TestLandingAdd.swift */,
 				DA547845207A32B200F9301E /* TestLandingDelete.swift */,
@@ -3230,6 +3233,7 @@
 				DA519A7520693DA800514098 /* TestLandingViewModelLoaderOutlets.swift in Sources */,
 				DA4F97D7208F02C5005E4725 /* TestApplicationNavigationController_ModelUpdate.swift in Sources */,
 				DA0DB18920935AB300B2F963 /* MockBoardRepositoryProtocol.swift in Sources */,
+				DAAD633B209A0815001AA847 /* TestLandingStateCardSelected_Delete.swift in Sources */,
 				DA0D94CE2090CB2200B48DC8 /* MockStatsViewCollectionLayoutCollection.swift in Sources */,
 				DA79AF8C206A5F0200DE73FA /* TestLandingPresenterCollectionGesture.swift in Sources */,
 				DA86FBD420836A9A005D31AF /* TestRepositoryLocal.swift in Sources */,

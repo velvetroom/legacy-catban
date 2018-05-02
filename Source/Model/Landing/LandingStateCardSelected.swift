@@ -18,6 +18,10 @@ class LandingStateCardSelected:LandingState {
         self.moveCardTo(indexPath:indexPath)
     }
     
+    override func deleteCard() {
+        self.delegate.deleteCardAt(indexPath:self.indexPath)
+    }
+    
     private func moveCardTo(indexPath:IndexPath) {
         self.delegate.moveCardFrom(origin:self.indexPath, to:indexPath)
         self.indexPath = indexPath
