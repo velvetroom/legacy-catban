@@ -29,7 +29,6 @@ class TestProject_DeleteCard:XCTestCase {
         }
         
         self.model.deleteCardAt(indexPath:index)
-        
         self.waitExpectation()
     }
     

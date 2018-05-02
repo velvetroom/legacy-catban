@@ -15,8 +15,6 @@ protocol LandingProtocol:ModelProtocol, ProjectEditorProtocol {
     func deleteProject() throws
     func deleteCard()
     func deleteColumnAndMoveCardsAt(index:Int) throws
-    func moveEditingCardRight()
-    func moveEditingCardLeft()
     func scrollToEditingCard()
     func scrollToTopRightCorner()
     func updateCard(title:String)

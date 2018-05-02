@@ -32,11 +32,11 @@ class LandingController<ModelType:LandingProtocol>:Controller<ModelType> {
     }
     
     @objc func selectorMoveEditingCardRight(sender button:UIButton) {
-        self.model.moveEditingCardRight()
+        self.model.state.moveCardRight()
     }
     
     @objc func selectorMoveEditingCardLeft(sender button:UIButton) {
-        self.model.moveEditingCardLeft()
+        self.model.state.moveCardLeft()
     }
     
     @objc func selectorEditCard(sender button:UIButton) {

@@ -3,25 +3,24 @@ import XCTest
 
 class TestLandingStateCardSelected_Move:XCTestCase {
     private var model:LandingStateCardSelected!
-    private var project:Project!
+    private var project:MockProjectProtocol!
     private var delegate:MockLandingStateDelegateProtocol!
     private var expect:XCTestExpectation?
     private struct Constants {
         static let wait:TimeInterval = 0.3
-        static let indexPath:IndexPath = IndexPath(item:0, section:1)
+        static let indexPath:IndexPath = IndexPath(item:3, section:4)
+        static let returnIndex:IndexPath = IndexPath(item:4, section:3)
     }
     
     override func setUp() {
         super.setUp()
         self.model = LandingStateCardSelected()
         self.delegate = MockLandingStateDelegateProtocol()
-        self.project = Project()
+        self.project = MockProjectProtocol()
         self.delegate.project = self.project
         self.model.delegate = self.delegate
         self.model.indexPath = Constants.indexPath
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
-        self.project.columns.append(ProjectColumn())
+        self.project.indexForCard = Constants.returnIndex
     }
     
     func testLoad() {
@@ -34,6 +33,8 @@ class TestLandingStateCardSelected_Move:XCTestCase {
         self.startExpectation()
         self.delegate.onMoveCardFromOrigin = { [weak self] (indexA:IndexPath, indexB:IndexPath) in
             XCTAssertNotEqual(indexA, indexB, "Origin and destination can't be the same")
+            XCTAssertEqual(indexB, Constants.returnIndex,
+                           "Destination is not the same as indexForCard in project")
             self?.expect?.fulfill()
         }
         
@@ -50,6 +51,8 @@ class TestLandingStateCardSelected_Move:XCTestCase {
         self.startExpectation()
         self.delegate.onMoveCardFromOrigin = { [weak self] (indexA:IndexPath, indexB:IndexPath) in
             XCTAssertNotEqual(indexA, indexB, "Origin and destination can't be the same")
+            XCTAssertEqual(indexB, Constants.returnIndex,
+                           "Destination is not the same as indexForCard in project")
             self?.expect?.fulfill()
         }
         

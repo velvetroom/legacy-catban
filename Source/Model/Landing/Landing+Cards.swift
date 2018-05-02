@@ -19,22 +19,6 @@ extension Landing {
         self.applyUpdates(updates:updates)
     }
     
-    func moveEditingCardRight() {
-        guard
-            let editingCard:IndexPath = self.editingCard
-        else { return }
-        let newIndex:IndexPath = self.project.indexOnRightForCardAt(index:editingCard)
-        self.moveCardFrom(origin:editingCard, to:newIndex)
-    }
-    
-    func moveEditingCardLeft() {
-        guard
-            let editingCard:IndexPath = self.editingCard
-        else { return }
-        let newIndex:IndexPath = self.project.indexOnLeftForCardAt(index:editingCard)
-        self.moveCardFrom(origin:editingCard, to:newIndex)
-    }
-    
     func moveCardFrom(origin:IndexPath, to destination:IndexPath) {
         self.editingCard = destination
         let updates:[UpdateProtocol] = self.update.moveCardFrom(origin:origin, to:destination)

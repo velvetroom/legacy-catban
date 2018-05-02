@@ -42,7 +42,7 @@ class TestLanding_CardsMoveUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardLeft()
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         self.waitExpectations()
     }
     
@@ -54,7 +54,7 @@ class TestLanding_CardsMoveUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         self.waitExpectations()
     }
     
@@ -64,7 +64,7 @@ class TestLanding_CardsMoveUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardLeft()
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         self.waitExpectations()
     }
     
@@ -74,7 +74,7 @@ class TestLanding_CardsMoveUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.moveEditingCardRight()
+        self.model.moveCardFrom(origin:Constants.origin, to:Constants.destination)
         self.waitExpectations()
     }
     
