@@ -1,7 +1,7 @@
 import UIKit
 
 open class View:UIViewController, ViewProtocol {
-    var delegate:ViewDelegateProtocol?
+    open var delegate:ViewDelegateProtocol?
     
     public init() {
         super.init(nibName:nil, bundle:nil)

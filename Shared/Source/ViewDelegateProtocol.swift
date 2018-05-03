@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ViewDelegateProtocol {
+public protocol ViewDelegateProtocol {
     func viewDidLoad()
 }

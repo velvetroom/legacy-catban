@@ -1,4 +1,5 @@
 import XCTest
+@testable import Shared
 @testable import Home
 
 class TestPresenter:XCTestCase {
@@ -11,5 +12,7 @@ class TestPresenter:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.presenter.view, "Failed to load view")
+        XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
     }
 }

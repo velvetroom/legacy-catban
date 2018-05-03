@@ -6,5 +6,6 @@ class Presenter:PresenterProtocol {
     
     init() {
         self.view = View()
+        self.view.delegate = self
     }
 }

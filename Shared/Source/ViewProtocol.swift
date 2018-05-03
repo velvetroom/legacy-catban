@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ViewProtocol {
+public protocol ViewProtocol {
     var delegate:ViewDelegateProtocol? { get set }
 }
