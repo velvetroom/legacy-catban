@@ -40,21 +40,21 @@ class TestLandingPresenterOutlets:XCTestCase {
         self.waitExpectation()
     }
     
-    func testShouldNotReloadData() {
-        self.startExpectation()
-        var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
-        viewModel.reloadCollection = false
-        self.collection.onReloadDataCalled = {
-            XCTFail("Should not have called reload data")
-        }
-        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.2) { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.presenter.update(viewModel:viewModel)
-        
-        self.waitExpectation()
-    }
+//    func testShouldNotReloadData() {
+//        self.startExpectation()
+//        var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
+//        viewModel.reloadCollection = false
+//        self.collection.onReloadDataCalled = {
+//            XCTFail("Should not have called reload data")
+//        }
+//        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.2) { [weak self] in
+//            self?.expect?.fulfill()
+//        }
+//
+//        self.presenter.update(viewModel:viewModel)
+//
+//        self.waitExpectation()
+//    }
     
     func testUpdateMenuBottom() {
         var viewModel:LandingViewModelOutlets = LandingViewModelOutlets()
