@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Home/Home.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Catban/catban.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Board/Board.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Home/Home.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Design">

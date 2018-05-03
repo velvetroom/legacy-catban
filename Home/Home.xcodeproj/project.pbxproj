@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
+		DAFEF368209AF8C700740A88 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF367209AF8C700740A88 /* TestController.swift */; };
+		DAFEF36A209AF90200740A88 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF369209AF90200740A88 /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,8 @@
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF357209AF82B00740A88 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF362209AF85800740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
+		DAFEF367209AF8C700740A88 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		DAFEF369209AF90200740A88 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		DAFEF33E209AF7D800740A88 = {
 			isa = PBXGroup;
 			children = (
+				DAFEF363209AF88400740A88 /* Source */,
+				DAFEF364209AF88D00740A88 /* Tests */,
 				DAFEF362209AF85800740A88 /* Configuration */,
 				DAFEF349209AF7D800740A88 /* Products */,
 			);
@@ -60,6 +66,38 @@
 				DAFEF357209AF82B00740A88 /* Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DAFEF363209AF88400740A88 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF365209AF8B100740A88 /* Controller */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DAFEF364209AF88D00740A88 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF366209AF8B800740A88 /* Controller */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DAFEF365209AF8B100740A88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF369209AF90200740A88 /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAFEF366209AF8B800740A88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF367209AF8C700740A88 /* TestController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +161,11 @@
 				TargetAttributes = {
 					DAFEF347209AF7D800740A88 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					DAFEF356209AF82B00740A88 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -169,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +355,7 @@
 		DAFEF351209AF7D800740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -330,6 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Home;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +382,7 @@
 		DAFEF352209AF7D800740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -363,6 +408,8 @@
 		DAFEF360209AF82B00740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -373,6 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Home.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,6 +429,8 @@
 		DAFEF361209AF82B00740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Tests/Info.plist;
