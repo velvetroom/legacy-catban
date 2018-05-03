@@ -11,5 +11,7 @@ class TestController:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
+        XCTAssertNotNil(self.controller.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.controller.presenter.controller, "Failed to assign controller to presenter")
     }
 }

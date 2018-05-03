@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
-		DAF7E658209B02FE00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF7E657209B02FE00B8A39A /* Shared.framework */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
@@ -45,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF7E658209B02FE00B8A39A /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

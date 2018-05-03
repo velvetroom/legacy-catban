@@ -6,5 +6,6 @@ class Controller:ControllerProtocol {
     
     init() {
         self.presenter = Presenter()
+        self.presenter.controller = self
     }
 }
