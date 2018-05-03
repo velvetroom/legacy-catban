@@ -106,8 +106,8 @@
 				DAFEF363209AF88400740A88 /* Source */,
 				DAFEF364209AF88D00740A88 /* Tests */,
 				DAFEF349209AF7D800740A88 /* Products */,
-				DAFEF362209AF85800740A88 /* Configuration */,
 				DA58BD7B209B3AE10013DBF0 /* Frameworks */,
+				DAFEF362209AF85800740A88 /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};

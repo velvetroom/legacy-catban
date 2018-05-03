@@ -100,8 +100,8 @@
 				DADB5EF5209B154900CFFC9A /* Tests */,
 				DADB5EFB209B1DA000CFFC9A /* Assets */,
 				DADB5ED1209B144900CFFC9A /* Products */,
-				DADB5EF3209B153500CFFC9A /* Configuration */,
 				DA58BD7E209B3B4A0013DBF0 /* Frameworks */,
+				DADB5EF3209B153500CFFC9A /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};

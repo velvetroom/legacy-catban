@@ -119,9 +119,9 @@
 			children = (
 				DA58BD6A209B37F80013DBF0 /* Source */,
 				DA58BD6B209B38070013DBF0 /* Tests */,
-				DA58BD69209B37F30013DBF0 /* Configuration */,
 				DAB6133D209B3587005267A8 /* Products */,
 				DA58BD78209B3A890013DBF0 /* Frameworks */,
+				DA58BD69209B37F30013DBF0 /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
