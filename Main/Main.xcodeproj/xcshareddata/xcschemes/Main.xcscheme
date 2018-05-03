@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Main.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAFEF374209AFC6900740A88"
+               BuildableName = "Shared.framework"
+               BlueprintName = "Shared"
+               ReferencedContainer = "container:../Shared/Shared.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -36,6 +50,16 @@
                BuildableName = "TestsMain.xctest"
                BlueprintName = "TestsMain"
                ReferencedContainer = "container:Main.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAF7E664209B077E00B8A39A"
+               BuildableName = "TestsShared.xctest"
+               BlueprintName = "TestsShared"
+               ReferencedContainer = "container:../Shared/Shared.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -28,6 +28,7 @@ class TestNavigation:XCTestCase {
     
     func testNavigateToController() {
         var viewUpdated:Bool = false
+        self.model.view = self.view
         self.view.onSetViewController = { [weak self] (views:[UIViewController], animated:Bool) in
             XCTAssertEqual(views.count, 1, "Invalid amount of views recevied")
             XCTAssertEqual(views.first, self?.controller.presenter.view, "Invalid view received")
