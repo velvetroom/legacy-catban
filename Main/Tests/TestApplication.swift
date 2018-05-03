@@ -10,6 +10,6 @@ class TestApplication:XCTestCase {
     }
     
     func testLoad() {
-        
+        XCTAssertNotNil(self.app, "Failed to load app")
     }
 }
