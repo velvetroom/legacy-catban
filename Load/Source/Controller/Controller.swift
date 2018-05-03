@@ -1,10 +1,10 @@
 import Foundation
 import Shared
 
-class Controller:ControllerProtocol {
-    var presenter:PresenterProtocol
+public class Controller:ControllerProtocol {
+    public var presenter:PresenterProtocol
     
-    init() {
+    public init() {
         self.presenter = Presenter()
     }
 }

@@ -3,7 +3,7 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var controller:ControllerProtocol!
-    var view:View
+    var view:Shared.View
     
     init() {
         self.view = View()

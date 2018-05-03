@@ -1,5 +1,6 @@
 import XCTest
 @testable import Main
+@testable import Load
 
 class TestNavigation:XCTestCase {
     private var model:Navigation!
@@ -37,5 +38,15 @@ class TestNavigation:XCTestCase {
         
         self.model.navigateTo(controller:self.controller)
         XCTAssertTrue(viewUpdated, "Failed to update view")
+    }
+    
+    func testFirstControllerIsLoad() {
+        self.model.view = self.view
+        self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
+            let view:Load.View? = views.first as? Load.View
+            XCTAssertNotNil(view, "Invalid view received")
+        }
+        
+        let _:UIWindow = self.model.launch()
     }
 }
