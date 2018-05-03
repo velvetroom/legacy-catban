@@ -1046,13 +1046,8 @@
 		DA86FBDF20838637005D31AF /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DA8AB21C2064E476005A393E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DA8AB21E2064E476005A393E /* catbanInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = catbanInfo.plist; sourceTree = "<group>"; };
-		DA8AB21F2064E476005A393E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		DA8AB2202064E476005A393E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA8AB2232064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA8AB22E2064E484005A393E /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
-		DA8AB22F2064E484005A393E /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		DA8AB2362064E59A005A393E /* unitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = unitTestsInfo.plist; sourceTree = "<group>"; };
 		DA8AB2562064EA7F005A393E /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
@@ -2205,11 +2200,6 @@
 				DA8AB2192064E476005A393E /* Source */,
 				DA8AB2262064E476005A393E /* Unit */,
 				DA8AB2052064E349005A393E /* Products */,
-				DA8AB22E2064E484005A393E /* Design */,
-				DA8AB22F2064E484005A393E /* Scripts */,
-				DA8AB21C2064E476005A393E /* .gitignore */,
-				DA8AB21F2064E476005A393E /* LICENSE */,
-				DA8AB2202064E476005A393E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};

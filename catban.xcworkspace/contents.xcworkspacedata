@@ -4,4 +4,16 @@
    <FileRef
       location = "group:Catban/catban.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Design">
+   </FileRef>
+   <FileRef
+      location = "group:Scripts">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
 </Workspace>
