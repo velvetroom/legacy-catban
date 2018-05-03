@@ -3,14 +3,26 @@ import XCTest
 
 class TestView:XCTestCase {
     private var view:View!
+    private var delegate:MockViewDelegateProtocol!
     
     override func setUp() {
         super.setUp()
         self.view = View()
+        self.delegate = MockViewDelegateProtocol()
+        self.view.delegate = self.delegate
     }
     
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
-        XCTAssertNil(self.view.delegate, "Delegate should not be set initially")
+        XCTAssertNotNil(self.delegate, "Failed to load delegate")
+    }
+    
+    func testViewDidLoad() {
+        var delegateCalled:Bool = false
+        self.delegate.onViewDidLoad = {
+            delegateCalled = false
+        }
+        XCTAssertNotNil(self.view.view, "Failed to load view")
+        XCTAssertFalse(delegateCalled, "Delegate is not called")
     }
 }
