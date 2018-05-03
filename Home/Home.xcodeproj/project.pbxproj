@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA58BD7B209B3AE10013DBF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA58BD7C209B3AE10013DBF0 /* Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DADB5EC1209B11E200CFFC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +107,7 @@
 				DAFEF364209AF88D00740A88 /* Tests */,
 				DAFEF349209AF7D800740A88 /* Products */,
 				DAFEF362209AF85800740A88 /* Configuration */,
+				DA58BD7B209B3AE10013DBF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
