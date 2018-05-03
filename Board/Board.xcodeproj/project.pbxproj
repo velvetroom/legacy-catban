@@ -10,7 +10,6 @@
 		DAFEF2BB209AE18300740A88 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF2A7209AE0FE00740A88 /* Board.framework */; };
 		DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */; };
 		DAFEF30C209AEC7700740A88 /* Project+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F5209AEC7700740A88 /* Project+Move.swift */; };
-		DAFEF30D209AEC7700740A88 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F6209AEC7700740A88 /* UserProtocol.swift */; };
 		DAFEF30E209AEC7700740A88 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F7209AEC7700740A88 /* Board.swift */; };
 		DAFEF30F209AEC7700740A88 /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F8209AEC7700740A88 /* ProjectProtocol.swift */; };
 		DAFEF310209AEC7700740A88 /* Project+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F9209AEC7700740A88 /* Project+Columns.swift */; };
@@ -20,10 +19,8 @@
 		DAFEF314209AEC7700740A88 /* Board+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FD209AEC7700740A88 /* Board+Save.swift */; };
 		DAFEF315209AEC7700740A88 /* ProjectCard+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FE209AEC7700740A88 /* ProjectCard+Factory.swift */; };
 		DAFEF316209AEC7700740A88 /* BoardRepository+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */; };
-		DAFEF317209AEC7700740A88 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF300209AEC7700740A88 /* User.swift */; };
 		DAFEF318209AEC7700740A88 /* BoardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF301209AEC7700740A88 /* BoardRepository.swift */; };
 		DAFEF319209AEC7700740A88 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF302209AEC7700740A88 /* Project.swift */; };
-		DAFEF31A209AEC7700740A88 /* User+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF303209AEC7700740A88 /* User+Factory.swift */; };
 		DAFEF31B209AEC7700740A88 /* ProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF304209AEC7700740A88 /* ProjectColumn.swift */; };
 		DAFEF31C209AEC7700740A88 /* BoardRepository+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */; };
 		DAFEF31D209AEC7700740A88 /* BoardRepository+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */; };
@@ -58,7 +55,6 @@
 		DAFEF2C1209AE1F500740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard.swift; sourceTree = "<group>"; };
 		DAFEF2F5209AEC7700740A88 /* Project+Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+Move.swift"; sourceTree = "<group>"; };
-		DAFEF2F6209AEC7700740A88 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		DAFEF2F7209AEC7700740A88 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		DAFEF2F8209AEC7700740A88 /* ProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DAFEF2F9209AEC7700740A88 /* Project+Columns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+Columns.swift"; sourceTree = "<group>"; };
@@ -68,10 +64,8 @@
 		DAFEF2FD209AEC7700740A88 /* Board+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Board+Save.swift"; sourceTree = "<group>"; };
 		DAFEF2FE209AEC7700740A88 /* ProjectCard+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProjectCard+Factory.swift"; sourceTree = "<group>"; };
 		DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Save.swift"; sourceTree = "<group>"; };
-		DAFEF300209AEC7700740A88 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DAFEF301209AEC7700740A88 /* BoardRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRepository.swift; sourceTree = "<group>"; };
 		DAFEF302209AEC7700740A88 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		DAFEF303209AEC7700740A88 /* User+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Factory.swift"; sourceTree = "<group>"; };
 		DAFEF304209AEC7700740A88 /* ProjectColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectColumn.swift; sourceTree = "<group>"; };
 		DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Delete.swift"; sourceTree = "<group>"; };
 		DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Constants.swift"; sourceTree = "<group>"; };
@@ -142,7 +136,6 @@
 				DAFEF335209AF0BF00740A88 /* Extensions */,
 				DAFEF323209AEE6400740A88 /* Board */,
 				DAFEF325209AEE6F00740A88 /* Project */,
-				DAFEF324209AEE6900740A88 /* User */,
 				DAFEF326209AEEDE00740A88 /* History */,
 			);
 			path = Source;
@@ -151,8 +144,8 @@
 		DAFEF323209AEE6400740A88 /* Board */ = {
 			isa = PBXGroup;
 			children = (
-				DAFEF2F7209AEC7700740A88 /* Board.swift */,
 				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
+				DAFEF2F7209AEC7700740A88 /* Board.swift */,
 				DAFEF2FD209AEC7700740A88 /* Board+Save.swift */,
 				DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */,
 				DAFEF301209AEC7700740A88 /* BoardRepository.swift */,
@@ -162,16 +155,6 @@
 				DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */,
 			);
 			path = Board;
-			sourceTree = "<group>";
-		};
-		DAFEF324209AEE6900740A88 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				DAFEF2F6209AEC7700740A88 /* UserProtocol.swift */,
-				DAFEF300209AEC7700740A88 /* User.swift */,
-				DAFEF303209AEC7700740A88 /* User+Factory.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		DAFEF325209AEE6F00740A88 /* Project */ = {
@@ -325,7 +308,6 @@
 			files = (
 				DAFEF311209AEC7700740A88 /* ProjectColumn+Factory.swift in Sources */,
 				DAFEF337209AF10900740A88 /* StringExtension.swift in Sources */,
-				DAFEF30D209AEC7700740A88 /* UserProtocol.swift in Sources */,
 				DAFEF316209AEC7700740A88 /* BoardRepository+Save.swift in Sources */,
 				DAFEF322209AEC7700740A88 /* BoardRepositoryProtocol.swift in Sources */,
 				DAFEF321209AEC7700740A88 /* Project+Cards.swift in Sources */,
@@ -340,10 +322,8 @@
 				DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */,
 				DAFEF31F209AEC7700740A88 /* Board+Factory.swift in Sources */,
 				DAFEF30F209AEC7700740A88 /* ProjectProtocol.swift in Sources */,
-				DAFEF31A209AEC7700740A88 /* User+Factory.swift in Sources */,
 				DAFEF332209AEEDE00740A88 /* HistoryProtocol.swift in Sources */,
 				DAFEF310209AEC7700740A88 /* Project+Columns.swift in Sources */,
-				DAFEF317209AEC7700740A88 /* User.swift in Sources */,
 				DAFEF330209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift in Sources */,
 				DAFEF31E209AEC7700740A88 /* Project+Factory.swift in Sources */,
 				DAFEF318209AEC7700740A88 /* BoardRepository.swift in Sources */,

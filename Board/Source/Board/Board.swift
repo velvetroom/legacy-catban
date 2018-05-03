@@ -45,10 +45,4 @@ class Board:BoardProtocol {
         self.projects.remove(at:self.projectIndex)
         self.project = self.projects[0]
     }
-    
-    func apply(updates:[UpdateProtocol]) {
-        for update:UpdateProtocol in updates {
-            update.strategy(board:self)
-        }
-    }
 }
