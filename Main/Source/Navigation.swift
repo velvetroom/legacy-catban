@@ -1,9 +1,12 @@
 import UIKit
 
 class Navigation:NavigationProtocol {
-    var window:UIWindow?
+    var view:UINavigationController!
     
-    func launch() {
-        
+    func launch() -> UIWindow {
+        let window:UIWindow = NavigationFactory.newWindow()
+        self.view = NavigationFactory.newView()
+        window.rootViewController = self.view
+        return window
     }
 }

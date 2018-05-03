@@ -10,8 +10,7 @@ import UIKit
     }
     
     func application(_:UIApplication, didFinishLaunchingWithOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool {
-        self.navigation.launch()
-        self.window = self.navigation.window
+        self.window = self.navigation.launch()
         return true
     }
 }

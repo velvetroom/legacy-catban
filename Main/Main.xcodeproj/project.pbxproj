@@ -15,6 +15,8 @@
 		DADB5F03209B1EFA00CFFC9A /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F02209B1EFA00CFFC9A /* Navigation.swift */; };
 		DADB5F05209B1F0B00CFFC9A /* TestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F04209B1F0B00CFFC9A /* TestNavigation.swift */; };
 		DADB5F07209B1F1B00CFFC9A /* MockNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F06209B1F1B00CFFC9A /* MockNavigationProtocol.swift */; };
+		DADB5F09209B21BD00CFFC9A /* NavigationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F08209B21BD00CFFC9A /* NavigationFactory.swift */; };
+		DADB5F0B209B23AF00CFFC9A /* TestNavigationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F0A209B23AF00CFFC9A /* TestNavigationFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		DADB5F02209B1EFA00CFFC9A /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		DADB5F04209B1F0B00CFFC9A /* TestNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation.swift; sourceTree = "<group>"; };
 		DADB5F06209B1F1B00CFFC9A /* MockNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationProtocol.swift; sourceTree = "<group>"; };
+		DADB5F08209B21BD00CFFC9A /* NavigationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFactory.swift; sourceTree = "<group>"; };
+		DADB5F0A209B23AF00CFFC9A /* TestNavigationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				DADB5EF8209B158400CFFC9A /* Application.swift */,
 				DADB5F00209B1EF000CFFC9A /* NavigationProtocol.swift */,
+				DADB5F08209B21BD00CFFC9A /* NavigationFactory.swift */,
 				DADB5F02209B1EFA00CFFC9A /* Navigation.swift */,
 			);
 			path = Source;
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DADB5EF6209B157900CFFC9A /* TestApplication.swift */,
+				DADB5F0A209B23AF00CFFC9A /* TestNavigationFactory.swift */,
 				DADB5F04209B1F0B00CFFC9A /* TestNavigation.swift */,
 				DADB5F06209B1F1B00CFFC9A /* MockNavigationProtocol.swift */,
 			);
@@ -211,6 +217,7 @@
 			files = (
 				DADB5F03209B1EFA00CFFC9A /* Navigation.swift in Sources */,
 				DADB5EF9209B158400CFFC9A /* Application.swift in Sources */,
+				DADB5F09209B21BD00CFFC9A /* NavigationFactory.swift in Sources */,
 				DADB5F01209B1EF000CFFC9A /* NavigationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +228,7 @@
 			files = (
 				DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */,
 				DADB5F05209B1F0B00CFFC9A /* TestNavigation.swift in Sources */,
+				DADB5F0B209B23AF00CFFC9A /* TestNavigationFactory.swift in Sources */,
 				DADB5F07209B1F1B00CFFC9A /* MockNavigationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

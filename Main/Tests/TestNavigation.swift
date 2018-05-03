@@ -11,12 +11,12 @@ class TestNavigation:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNil(self.model.window, "Window should not be set")
+        XCTAssertNil(self.model.view, "View should not be set")
     }
     
     func testLaunch() {
-        self.model.launch()
-        XCTAssertNotNil(self.model.window, "Failed to load window")
-        XCTAssertNotNil(self.model.window?.rootViewController, "Failed to assign root controller")
+        let window:UIWindow = self.model.launch()
+        XCTAssertNotNil(self.model.view, "Failed to load view")
+        XCTAssertNotNil(window.rootViewController, "Failed to assign root controller")
     }
 }

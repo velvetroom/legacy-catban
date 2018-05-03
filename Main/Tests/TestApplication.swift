@@ -24,7 +24,6 @@ class TestApplication:XCTestCase {
         }
         
         let _:Bool = self.app.application(UIApplication.shared, didFinishLaunchingWithOptions:nil)
-        
         XCTAssertTrue(navigationLaunched, "Failed to call navigation on launch")
     }
 }

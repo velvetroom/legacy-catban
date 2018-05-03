@@ -3,9 +3,9 @@ import UIKit
 
 class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
-    var window:UIWindow?
     
-    func launch() {
+    func launch() -> UIWindow {
         self.onLaunch?()
+        return UIApplication.shared.keyWindow!
     }
 }
