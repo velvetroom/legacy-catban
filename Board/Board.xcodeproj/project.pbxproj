@@ -39,6 +39,7 @@
 		DAFEF332209AEEDE00740A88 /* HistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32B209AEEDE00740A88 /* HistoryProtocol.swift */; };
 		DAFEF333209AEEDE00740A88 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32C209AEEDE00740A88 /* History.swift */; };
 		DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */; };
+		DAFEF337209AF10900740A88 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF336209AF10900740A88 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DAFEF32B209AEEDE00740A88 /* HistoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryProtocol.swift; sourceTree = "<group>"; };
 		DAFEF32C209AEEDE00740A88 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemCreateCard.swift; sourceTree = "<group>"; };
+		DAFEF336209AF10900740A88 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		DAFEF2F4209AEC7700740A88 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DAFEF335209AF0BF00740A88 /* Extensions */,
 				DAFEF323209AEE6400740A88 /* Board */,
 				DAFEF325209AEE6F00740A88 /* Project */,
 				DAFEF324209AEE6900740A88 /* User */,
@@ -201,6 +204,14 @@
 				DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		DAFEF335209AF0BF00740A88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF336209AF10900740A88 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFEF311209AEC7700740A88 /* ProjectColumn+Factory.swift in Sources */,
+				DAFEF337209AF10900740A88 /* StringExtension.swift in Sources */,
 				DAFEF30D209AEC7700740A88 /* UserProtocol.swift in Sources */,
 				DAFEF316209AEC7700740A88 /* BoardRepository+Save.swift in Sources */,
 				DAFEF322209AEC7700740A88 /* BoardRepositoryProtocol.swift in Sources */,
