@@ -612,6 +612,7 @@
 		DAFE7D8E2090B80100A6DD41 /* TestStatsViewSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7D8D2090B80100A6DD41 /* TestStatsViewSpeed.swift */; };
 		DAFE7D902090B89B00A6DD41 /* StatsViewCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7D8F2090B89B00A6DD41 /* StatsViewCompletion.swift */; };
 		DAFE7D982090B8C600A6DD41 /* StatsViewSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE7D972090B8C600A6DD41 /* StatsViewSpeed.swift */; };
+		DAFEF279209ADE6E00740A88 /* Configuration in Resources */ = {isa = PBXBuildFile; fileRef = DAFEF278209ADE6E00740A88 /* Configuration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1046,10 +1047,8 @@
 		DA86FBDF20838637005D31AF /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		DA8AB2042064E349005A393E /* catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AB21B2064E476005A393E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DA8AB21E2064E476005A393E /* catbanInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = catbanInfo.plist; sourceTree = "<group>"; };
 		DA8AB2232064E476005A393E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA8AB2362064E59A005A393E /* unitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = unitTestsInfo.plist; sourceTree = "<group>"; };
 		DA8AB2562064EA7F005A393E /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
 		DA8AB2582064EB00005A393E /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA8AB25A2064ED96005A393E /* TestApplicationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationNavigationController.swift; sourceTree = "<group>"; };
@@ -1234,6 +1233,7 @@
 		DAFE7D8D2090B80100A6DD41 /* TestStatsViewSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatsViewSpeed.swift; sourceTree = "<group>"; };
 		DAFE7D8F2090B89B00A6DD41 /* StatsViewCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewCompletion.swift; sourceTree = "<group>"; };
 		DAFE7D972090B8C600A6DD41 /* StatsViewSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewSpeed.swift; sourceTree = "<group>"; };
+		DAFEF278209ADE6E00740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2195,11 +2195,11 @@
 			isa = PBXGroup;
 			children = (
 				DA8AB21A2064E476005A393E /* Assets */,
-				DA8AB21D2064E476005A393E /* Configuration */,
 				DA8AB2212064E476005A393E /* Resources */,
 				DA8AB2192064E476005A393E /* Source */,
 				DA8AB2262064E476005A393E /* Unit */,
 				DA8AB2052064E349005A393E /* Products */,
+				DAFEF278209ADE6E00740A88 /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2233,15 +2233,6 @@
 				DAE698D420656F940046721C /* assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		DA8AB21D2064E476005A393E /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				DA8AB2402064E5C8005A393E /* unitTestsInfo.plist */,
-				DA8AB21E2064E476005A393E /* catbanInfo.plist */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		DA8AB2212064E476005A393E /* Resources */ = {
@@ -2750,6 +2741,7 @@
 				DA54ED852089D3110078AF87 /* LocalizableOrganise.strings in Resources */,
 				DA30605220827A2A00E55ECB /* LocalizableLoad.strings in Resources */,
 				DA9A988D2074BB0C00D82514 /* LocalizableWriter.strings in Resources */,
+				DAFEF279209ADE6E00740A88 /* Configuration in Resources */,
 				DAD433F4206540AC002C0DEE /* LocalizableProject.strings in Resources */,
 				DA8AB22C2064E476005A393E /* InfoPlist.strings in Resources */,
 				DA73A1DD2080EBD500ADC499 /* LocalizableError.strings in Resources */,
