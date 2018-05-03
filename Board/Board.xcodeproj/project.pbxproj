@@ -32,6 +32,13 @@
 		DAFEF320209AEC7700740A88 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF309209AEC7700740A88 /* ProjectCard.swift */; };
 		DAFEF321209AEC7700740A88 /* Project+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF30A209AEC7700740A88 /* Project+Cards.swift */; };
 		DAFEF322209AEC7700740A88 /* BoardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */; };
+		DAFEF32E209AEEDE00740A88 /* History+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF327209AEEDE00740A88 /* History+Cards.swift */; };
+		DAFEF32F209AEEDE00740A88 /* HistoryItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF328209AEEDE00740A88 /* HistoryItemProtocol.swift */; };
+		DAFEF330209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF329209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift */; };
+		DAFEF331209AEEDE00740A88 /* HistoryItemMoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32A209AEEDE00740A88 /* HistoryItemMoveCard.swift */; };
+		DAFEF332209AEEDE00740A88 /* HistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32B209AEEDE00740A88 /* HistoryProtocol.swift */; };
+		DAFEF333209AEEDE00740A88 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32C209AEEDE00740A88 /* History.swift */; };
+		DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		DAFEF309209AEC7700740A88 /* ProjectCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
 		DAFEF30A209AEC7700740A88 /* Project+Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+Cards.swift"; sourceTree = "<group>"; };
 		DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DAFEF327209AEEDE00740A88 /* History+Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+Cards.swift"; sourceTree = "<group>"; };
+		DAFEF328209AEEDE00740A88 /* HistoryItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemProtocol.swift; sourceTree = "<group>"; };
+		DAFEF329209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoryItemProtocol+Tools.swift"; sourceTree = "<group>"; };
+		DAFEF32A209AEEDE00740A88 /* HistoryItemMoveCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemMoveCard.swift; sourceTree = "<group>"; };
+		DAFEF32B209AEEDE00740A88 /* HistoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryProtocol.swift; sourceTree = "<group>"; };
+		DAFEF32C209AEEDE00740A88 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemCreateCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,31 +137,70 @@
 		DAFEF2F4209AEC7700740A88 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DAFEF2F5209AEC7700740A88 /* Project+Move.swift */,
-				DAFEF2F6209AEC7700740A88 /* UserProtocol.swift */,
+				DAFEF323209AEE6400740A88 /* Board */,
+				DAFEF325209AEE6F00740A88 /* Project */,
+				DAFEF324209AEE6900740A88 /* User */,
+				DAFEF326209AEEDE00740A88 /* History */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DAFEF323209AEE6400740A88 /* Board */ = {
+			isa = PBXGroup;
+			children = (
 				DAFEF2F7209AEC7700740A88 /* Board.swift */,
+				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
+				DAFEF2FD209AEC7700740A88 /* Board+Save.swift */,
+				DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */,
+				DAFEF301209AEC7700740A88 /* BoardRepository.swift */,
+				DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */,
+				DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */,
+				DAFEF308209AEC7700740A88 /* Board+Factory.swift */,
+				DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		DAFEF324209AEE6900740A88 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF2F6209AEC7700740A88 /* UserProtocol.swift */,
+				DAFEF300209AEC7700740A88 /* User.swift */,
+				DAFEF303209AEC7700740A88 /* User+Factory.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		DAFEF325209AEE6F00740A88 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF2F5209AEC7700740A88 /* Project+Move.swift */,
 				DAFEF2F8209AEC7700740A88 /* ProjectProtocol.swift */,
 				DAFEF2F9209AEC7700740A88 /* Project+Columns.swift */,
 				DAFEF2FA209AEC7700740A88 /* ProjectColumn+Factory.swift */,
-				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
 				DAFEF2FC209AEC7700740A88 /* ProjectEditorProtocol.swift */,
-				DAFEF2FD209AEC7700740A88 /* Board+Save.swift */,
 				DAFEF2FE209AEC7700740A88 /* ProjectCard+Factory.swift */,
-				DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */,
-				DAFEF300209AEC7700740A88 /* User.swift */,
-				DAFEF301209AEC7700740A88 /* BoardRepository.swift */,
 				DAFEF302209AEC7700740A88 /* Project.swift */,
-				DAFEF303209AEC7700740A88 /* User+Factory.swift */,
 				DAFEF304209AEC7700740A88 /* ProjectColumn.swift */,
-				DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */,
-				DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */,
 				DAFEF307209AEC7700740A88 /* Project+Factory.swift */,
-				DAFEF308209AEC7700740A88 /* Board+Factory.swift */,
 				DAFEF309209AEC7700740A88 /* ProjectCard.swift */,
 				DAFEF30A209AEC7700740A88 /* Project+Cards.swift */,
-				DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */,
 			);
-			path = Source;
+			path = Project;
+			sourceTree = "<group>";
+		};
+		DAFEF326209AEEDE00740A88 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF327209AEEDE00740A88 /* History+Cards.swift */,
+				DAFEF328209AEEDE00740A88 /* HistoryItemProtocol.swift */,
+				DAFEF329209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift */,
+				DAFEF32A209AEEDE00740A88 /* HistoryItemMoveCard.swift */,
+				DAFEF32B209AEEDE00740A88 /* HistoryProtocol.swift */,
+				DAFEF32C209AEEDE00740A88 /* History.swift */,
+				DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,20 +320,27 @@
 				DAFEF31B209AEC7700740A88 /* ProjectColumn.swift in Sources */,
 				DAFEF315209AEC7700740A88 /* ProjectCard+Factory.swift in Sources */,
 				DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */,
+				DAFEF32E209AEEDE00740A88 /* History+Cards.swift in Sources */,
 				DAFEF319209AEC7700740A88 /* Project.swift in Sources */,
+				DAFEF331209AEEDE00740A88 /* HistoryItemMoveCard.swift in Sources */,
 				DAFEF314209AEC7700740A88 /* Board+Save.swift in Sources */,
 				DAFEF31D209AEC7700740A88 /* BoardRepository+Constants.swift in Sources */,
+				DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */,
 				DAFEF31F209AEC7700740A88 /* Board+Factory.swift in Sources */,
 				DAFEF30F209AEC7700740A88 /* ProjectProtocol.swift in Sources */,
 				DAFEF31A209AEC7700740A88 /* User+Factory.swift in Sources */,
+				DAFEF332209AEEDE00740A88 /* HistoryProtocol.swift in Sources */,
 				DAFEF310209AEC7700740A88 /* Project+Columns.swift in Sources */,
 				DAFEF317209AEC7700740A88 /* User.swift in Sources */,
+				DAFEF330209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift in Sources */,
 				DAFEF31E209AEC7700740A88 /* Project+Factory.swift in Sources */,
 				DAFEF318209AEC7700740A88 /* BoardRepository.swift in Sources */,
 				DAFEF30C209AEC7700740A88 /* Project+Move.swift in Sources */,
+				DAFEF333209AEEDE00740A88 /* History.swift in Sources */,
 				DAFEF313209AEC7700740A88 /* ProjectEditorProtocol.swift in Sources */,
 				DAFEF320209AEC7700740A88 /* ProjectCard.swift in Sources */,
 				DAFEF31C209AEC7700740A88 /* BoardRepository+Delete.swift in Sources */,
+				DAFEF32F209AEEDE00740A88 /* HistoryItemProtocol.swift in Sources */,
 				DAFEF30E209AEC7700740A88 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
