@@ -29,9 +29,12 @@ class TestLandingStateCardSelected_Delete:XCTestCase {
     
     func testCallDelegate() {
         self.startExpectation()
+        self.delegate.onDeleteCardAtIndexPath = { [weak self] (indexPath:IndexPath) in
+            XCTAssertEqual(indexPath, Constants.indexPath, "Invalid index received")
+            self?.expect?.fulfill()
+        }
         
-        self.delegate.
-        
+        self.model.deleteCard()
         self.waitExpectations()
     }
     

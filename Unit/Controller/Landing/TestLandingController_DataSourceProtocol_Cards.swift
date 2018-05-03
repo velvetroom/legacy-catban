@@ -3,6 +3,7 @@ import XCTest
 
 class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
     private var controller:LandingController<MockLandingProtocol>!
+    private var state:MockLandingState!
     private var navigation:MockNavigationController!
     private var expect:XCTestExpectation?
     private struct Constants {
@@ -14,12 +15,15 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
         super.setUp()
         self.controller = LandingController<MockLandingProtocol>()
         self.navigation = MockNavigationController()
+        self.state = MockLandingState()
+        self.controller.model.state = self.state
         self.navigation.addChildViewController(self.controller)
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNotNil(self.navigation, "Failed to load navigation")
+        XCTAssertNotNil(self.state, "Failed to load state")
     }
     
     func testDeleteItem() {
@@ -32,12 +36,11 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
             }
             controller.model.onConfirm?()
         }
-        self.controller.model.onDeleteCard = { [weak self] in
+        self.state.onDeleteCard = { [weak self] in
             self?.expect?.fulfill()
         }
         
         self.controller.deleteSelectedItem()
-        
         self.waitExpectation()
     }
     
@@ -54,6 +57,16 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
         
         self.controller.deleteSelectedItem()
         
+        self.waitExpectation()
+    }
+    
+    func testDeleteSelectedItemCallsState() {
+        self.startExpectation()
+        self.state.onDeleteCard = { [weak self] in
+            self?.expect?.fulfill()
+        }
+        
+        self.controller.deleteSelectedItem()
         self.waitExpectation()
     }
     

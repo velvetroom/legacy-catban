@@ -37,7 +37,7 @@ class TestLanding_DeleteCard:XCTestCase {
     
     func testDeleteClearsCurrentSelection() {
         self.model.editingCard = IndexPath(item:1320, section:230)
-        self.model.deleteCard()
+        self.model.state.deleteCard()
         
         XCTAssertNil(self.model.editingCard, "Failed to clear editing card")
     }
@@ -48,8 +48,7 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCard()
-        
+        self.model.state.deleteCard()
         self.waitExpectation()
     }
     
@@ -60,8 +59,7 @@ class TestLanding_DeleteCard:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCard()
-        
+        self.model.state.deleteCard()
         self.waitExpectation()
     }
     

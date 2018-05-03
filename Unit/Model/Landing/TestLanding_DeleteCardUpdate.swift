@@ -39,13 +39,13 @@ class TestLanding_DeleteCardUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCard()
+        self.model.state.deleteCard()
         self.waitExpectations()
     }
     
     func testClearsEditingCard() {
         XCTAssertNotNil(self.model.editingCard, "Should be editing at the beginning")
-        self.model.deleteCard()
+        self.model.state.deleteCard()
         XCTAssertNil(self.model.editingCard, "Failed to clear editing")
     }
     
@@ -55,7 +55,7 @@ class TestLanding_DeleteCardUpdate:XCTestCase {
             self?.expect?.fulfill()
         }
         
-        self.model.deleteCard()
+        self.model.state.deleteCard()
         self.waitExpectations()
     }
     

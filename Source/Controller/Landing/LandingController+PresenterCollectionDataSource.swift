@@ -13,7 +13,7 @@ extension LandingController:LandingPresenterCollectionDataSourceProtocol {
         let controller:LandingDeleteController = LandingDeleteController()
         controller.model.itemName = String.localizedLanding(key:"LandingController_deleteItemAtName")
         controller.model.onConfirm = { [weak self] in
-            self?.model.deleteCard()
+            self?.model.state.deleteCard()
         }
         self.navigationController?.present(controller, animated:true, completion:nil)
     }
