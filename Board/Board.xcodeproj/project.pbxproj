@@ -12,6 +12,7 @@
 		DAFEF30E209AEC7700740A88 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F7209AEC7700740A88 /* Board.swift */; };
 		DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */; };
 		DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF338209AF47600740A88 /* BoardFactory.swift */; };
+		DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		DAFEF2F7209AEC7700740A88 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardProtocol.swift; sourceTree = "<group>"; };
 		DAFEF338209AF47600740A88 /* BoardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFactory.swift; sourceTree = "<group>"; };
+		DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoardFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */,
+				DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
+				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
