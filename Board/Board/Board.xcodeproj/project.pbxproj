@@ -6,12 +6,30 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		DAFEF283209ADEC900740A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFEF25B209ADE0900740A88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFEF262209ADE0900740A88;
+			remoteInfo = Board;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DAFEF263209ADE0900740A88 /* Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFEF27E209ADEC900740A88 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DAFEF260209ADE0900740A88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFEF27B209ADEC900740A88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF263209ADE0900740A88 /* Board.app */,
+				DAFEF27E209ADEC900740A88 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +75,24 @@
 			productReference = DAFEF263209ADE0900740A88 /* Board.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DAFEF27D209ADEC900740A88 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFEF285209ADEC900740A88 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				DAFEF27A209ADEC900740A88 /* Sources */,
+				DAFEF27B209ADEC900740A88 /* Frameworks */,
+				DAFEF27C209ADEC900740A88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAFEF284209ADEC900740A88 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = DAFEF27E209ADEC900740A88 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -68,6 +105,10 @@
 				TargetAttributes = {
 					DAFEF262209ADE0900740A88 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					DAFEF27D209ADEC900740A88 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = DAFEF262209ADE0900740A88;
 					};
 				};
 			};
@@ -85,12 +126,20 @@
 			projectRoot = "";
 			targets = (
 				DAFEF262209ADE0900740A88 /* Board */,
+				DAFEF27D209ADEC900740A88 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DAFEF261209ADE0900740A88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFEF27C209ADEC900740A88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,7 +156,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAFEF27A209ADEC900740A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAFEF284209ADEC900740A88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFEF262209ADE0900740A88 /* Board */;
+			targetProxy = DAFEF283209ADEC900740A88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DAFEF273209ADE0A00740A88 /* Debug */ = {
@@ -260,6 +324,46 @@
 			};
 			name = Release;
 		};
+		DAFEF286209ADEC900740A88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Board.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
+			};
+			name = Debug;
+		};
+		DAFEF287209ADEC900740A88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Board.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -277,6 +381,15 @@
 			buildConfigurations = (
 				DAFEF276209ADE0A00740A88 /* Debug */,
 				DAFEF277209ADE0A00740A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFEF285209ADEC900740A88 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFEF286209ADEC900740A88 /* Debug */,
+				DAFEF287209ADEC900740A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
