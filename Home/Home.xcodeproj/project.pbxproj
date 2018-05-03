@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		DAF7E657209B02FE00B8A39A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,14 +73,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DAF7E656209B02FE00B8A39A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DAF7E657209B02FE00B8A39A /* Shared.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DAF7E65B209B062400B8A39A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +96,6 @@
 				DAFEF364209AF88D00740A88 /* Tests */,
 				DAFEF349209AF7D800740A88 /* Products */,
 				DAFEF362209AF85800740A88 /* Configuration */,
-				DAF7E656209B02FE00B8A39A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
