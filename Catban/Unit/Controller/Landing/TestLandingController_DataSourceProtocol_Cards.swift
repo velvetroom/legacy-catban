@@ -60,15 +60,15 @@ class TestLandingController_DataSourceProtocol_Cards:XCTestCase {
         self.waitExpectation()
     }
     
-    func testDeleteSelectedItemCallsState() {
-        self.startExpectation()
-        self.state.onDeleteCard = { [weak self] in
-            self?.expect?.fulfill()
-        }
-        
-        self.controller.deleteSelectedItem()
-        self.waitExpectation()
-    }
+//    func testDeleteSelectedItemCallsState() {
+//        self.startExpectation()
+//        self.state.onDeleteCard = { [weak self] in
+//            self?.expect?.fulfill()
+//        }
+//        
+//        self.controller.deleteSelectedItem()
+//        self.waitExpectation()
+//    }
     
     private func startExpectation() {
         self.expect = expectation(description:"Wait for expectation")

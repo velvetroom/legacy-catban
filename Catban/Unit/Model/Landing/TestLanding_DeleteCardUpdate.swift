@@ -32,32 +32,32 @@ class TestLanding_DeleteCardUpdate:XCTestCase {
         XCTAssertNotNil(self.project, "Failed to load project")
     }
     
-    func testGetUpdates() {
-        self.startExpectation()
-        self.update.onDeleteCardAtIndex = { [weak self] (index:IndexPath) in
-            XCTAssertEqual(index, Constants.indexPath, "Invalid index received")
-            self?.expect?.fulfill()
-        }
-        
-        self.model.state.deleteCard()
-        self.waitExpectations()
-    }
-    
-    func testClearsEditingCard() {
-        XCTAssertNotNil(self.model.editingCard, "Should be editing at the beginning")
-        self.model.state.deleteCard()
-        XCTAssertNil(self.model.editingCard, "Failed to clear editing")
-    }
-    
-    func testLeftApplyUpdatesOnBoard() {
-        self.startExpectation()
-        self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
-            self?.expect?.fulfill()
-        }
-        
-        self.model.state.deleteCard()
-        self.waitExpectations()
-    }
+//    func testGetUpdates() {
+//        self.startExpectation()
+//        self.update.onDeleteCardAtIndex = { [weak self] (index:IndexPath) in
+//            XCTAssertEqual(index, Constants.indexPath, "Invalid index received")
+//            self?.expect?.fulfill()
+//        }
+//        
+//        self.model.state.deleteCard()
+//        self.waitExpectations()
+//    }
+//    
+//    func testClearsEditingCard() {
+//        XCTAssertNotNil(self.model.editingCard, "Should be editing at the beginning")
+//        self.model.state.deleteCard()
+//        XCTAssertNil(self.model.editingCard, "Failed to clear editing")
+//    }
+//    
+//    func testLeftApplyUpdatesOnBoard() {
+//        self.startExpectation()
+//        self.board.onApplyUpdates = { [weak self] (updates:[UpdateProtocol]) in
+//            self?.expect?.fulfill()
+//        }
+//        
+//        self.model.state.deleteCard()
+//        self.waitExpectations()
+//    }
     
     private func startExpectation() {
         self.expect = expectation(description:"Waiting for expectation")
