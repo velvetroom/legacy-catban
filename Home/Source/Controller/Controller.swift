@@ -1,5 +1,6 @@
 import Foundation
+import Shared
 
-class Controller {
+class Controller:ControllerProtocol {
     
 }

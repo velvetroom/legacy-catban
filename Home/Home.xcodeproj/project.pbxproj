@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAF7E658209B02FE00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF7E657209B02FE00B8A39A /* Shared.framework */; };
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
 		DAFEF368209AF8C700740A88 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF367209AF8C700740A88 /* TestController.swift */; };
 		DAFEF36A209AF90200740A88 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF369209AF90200740A88 /* Controller.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAF7E657209B02FE00B8A39A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF357209AF82B00740A88 /* TestsHome.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsHome.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF362209AF85800740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF7E658209B02FE00B8A39A /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAF7E656209B02FE00B8A39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAF7E657209B02FE00B8A39A /* Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAFEF33E209AF7D800740A88 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +67,7 @@
 				DAFEF364209AF88D00740A88 /* Tests */,
 				DAFEF349209AF7D800740A88 /* Products */,
 				DAFEF362209AF85800740A88 /* Configuration */,
+				DAF7E656209B02FE00B8A39A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

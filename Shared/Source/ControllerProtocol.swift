@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ControllerProtocol {
+public protocol ControllerProtocol {
     
 }
