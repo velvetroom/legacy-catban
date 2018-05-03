@@ -6,65 +6,83 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DAFEF2BB209AE18300740A88 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF2A7209AE0FE00740A88 /* Board.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		DAFEF283209ADEC900740A88 /* PBXContainerItemProxy */ = {
+		DAFEF2BC209AE18300740A88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DAFEF25B209ADE0900740A88 /* Project object */;
+			containerPortal = DAFEF29E209AE0FE00740A88 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DAFEF262209ADE0900740A88;
+			remoteGlobalIDString = DAFEF2A6209AE0FE00740A88;
 			remoteInfo = Board;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DAFEF263209ADE0900740A88 /* Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAFEF27E209ADEC900740A88 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFEF2A7209AE0FE00740A88 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFEF2B6209AE18200740A88 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFEF2C1209AE1F500740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DAFEF260209ADE0900740A88 /* Frameworks */ = {
+		DAFEF2A3209AE0FE00740A88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAFEF27B209ADEC900740A88 /* Frameworks */ = {
+		DAFEF2B3209AE18200740A88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFEF2BB209AE18300740A88 /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DAFEF25A209ADE0900740A88 = {
+		DAFEF29D209AE0FE00740A88 = {
 			isa = PBXGroup;
 			children = (
-				DAFEF264209ADE0900740A88 /* Products */,
+				DAFEF2C1209AE1F500740A88 /* Configuration */,
+				DAFEF2A8209AE0FE00740A88 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DAFEF264209ADE0900740A88 /* Products */ = {
+		DAFEF2A8209AE0FE00740A88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAFEF263209ADE0900740A88 /* Board.app */,
-				DAFEF27E209ADEC900740A88 /* Tests.xctest */,
+				DAFEF2A7209AE0FE00740A88 /* Board.framework */,
+				DAFEF2B6209AE18200740A88 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DAFEF2A4209AE0FE00740A88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		DAFEF262209ADE0900740A88 /* Board */ = {
+		DAFEF2A6209AE0FE00740A88 /* Board */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAFEF275209ADE0A00740A88 /* Build configuration list for PBXNativeTarget "Board" */;
+			buildConfigurationList = DAFEF2AF209AE0FE00740A88 /* Build configuration list for PBXNativeTarget "Board" */;
 			buildPhases = (
-				DAFEF25F209ADE0900740A88 /* Sources */,
-				DAFEF260209ADE0900740A88 /* Frameworks */,
-				DAFEF261209ADE0900740A88 /* Resources */,
+				DAFEF2A2209AE0FE00740A88 /* Sources */,
+				DAFEF2A3209AE0FE00740A88 /* Frameworks */,
+				DAFEF2A4209AE0FE00740A88 /* Headers */,
+				DAFEF2A5209AE0FE00740A88 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -72,74 +90,72 @@
 			);
 			name = Board;
 			productName = Board;
-			productReference = DAFEF263209ADE0900740A88 /* Board.app */;
-			productType = "com.apple.product-type.application";
+			productReference = DAFEF2A7209AE0FE00740A88 /* Board.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		DAFEF27D209ADEC900740A88 /* Tests */ = {
+		DAFEF2B5209AE18200740A88 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAFEF285209ADEC900740A88 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = DAFEF2BE209AE18300740A88 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				DAFEF27A209ADEC900740A88 /* Sources */,
-				DAFEF27B209ADEC900740A88 /* Frameworks */,
-				DAFEF27C209ADEC900740A88 /* Resources */,
+				DAFEF2B2209AE18200740A88 /* Sources */,
+				DAFEF2B3209AE18200740A88 /* Frameworks */,
+				DAFEF2B4209AE18200740A88 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DAFEF284209ADEC900740A88 /* PBXTargetDependency */,
+				DAFEF2BD209AE18300740A88 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
-			productReference = DAFEF27E209ADEC900740A88 /* Tests.xctest */;
+			productReference = DAFEF2B6209AE18200740A88 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DAFEF25B209ADE0900740A88 /* Project object */ = {
+		DAFEF29E209AE0FE00740A88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = iturbide;
 				TargetAttributes = {
-					DAFEF262209ADE0900740A88 = {
+					DAFEF2A6209AE0FE00740A88 = {
 						CreatedOnToolsVersion = 9.3;
 					};
-					DAFEF27D209ADEC900740A88 = {
+					DAFEF2B5209AE18200740A88 = {
 						CreatedOnToolsVersion = 9.3;
-						TestTargetID = DAFEF262209ADE0900740A88;
 					};
 				};
 			};
-			buildConfigurationList = DAFEF25E209ADE0900740A88 /* Build configuration list for PBXProject "Board" */;
+			buildConfigurationList = DAFEF2A1209AE0FE00740A88 /* Build configuration list for PBXProject "Board" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = DAFEF25A209ADE0900740A88;
-			productRefGroup = DAFEF264209ADE0900740A88 /* Products */;
+			mainGroup = DAFEF29D209AE0FE00740A88;
+			productRefGroup = DAFEF2A8209AE0FE00740A88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAFEF262209ADE0900740A88 /* Board */,
-				DAFEF27D209ADEC900740A88 /* Tests */,
+				DAFEF2A6209AE0FE00740A88 /* Board */,
+				DAFEF2B5209AE18200740A88 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DAFEF261209ADE0900740A88 /* Resources */ = {
+		DAFEF2A5209AE0FE00740A88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAFEF27C209ADEC900740A88 /* Resources */ = {
+		DAFEF2B4209AE18200740A88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,14 +165,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DAFEF25F209ADE0900740A88 /* Sources */ = {
+		DAFEF2A2209AE0FE00740A88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAFEF27A209ADEC900740A88 /* Sources */ = {
+		DAFEF2B2209AE18200740A88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,15 +182,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DAFEF284209ADEC900740A88 /* PBXTargetDependency */ = {
+		DAFEF2BD209AE18300740A88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAFEF262209ADE0900740A88 /* Board */;
-			targetProxy = DAFEF283209ADEC900740A88 /* PBXContainerItemProxy */;
+			target = DAFEF2A6209AE0FE00740A88 /* Board */;
+			targetProxy = DAFEF2BC209AE18300740A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DAFEF273209ADE0A00740A88 /* Debug */ = {
+		DAFEF2AD209AE0FE00740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,6 +224,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -231,10 +248,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		DAFEF274209ADE0A00740A88 /* Release */ = {
+		DAFEF2AE209AE0FE00740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,6 +287,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -285,49 +305,64 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		DAFEF276209ADE0A00740A88 /* Debug */ = {
+		DAFEF2B0209AE0FE00740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Board/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Board;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DAFEF277209ADE0A00740A88 /* Release */ = {
+		DAFEF2B1209AE0FE00740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Board/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.catban.Board;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		DAFEF286209ADEC900740A88 /* Debug */ = {
+		DAFEF2BF209AE18300740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -340,14 +375,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
 			};
 			name = Debug;
 		};
-		DAFEF287209ADEC900740A88 /* Release */ = {
+		DAFEF2C0209AE18300740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -360,41 +393,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAFEF25E209ADE0900740A88 /* Build configuration list for PBXProject "Board" */ = {
+		DAFEF2A1209AE0FE00740A88 /* Build configuration list for PBXProject "Board" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DAFEF273209ADE0A00740A88 /* Debug */,
-				DAFEF274209ADE0A00740A88 /* Release */,
+				DAFEF2AD209AE0FE00740A88 /* Debug */,
+				DAFEF2AE209AE0FE00740A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAFEF275209ADE0A00740A88 /* Build configuration list for PBXNativeTarget "Board" */ = {
+		DAFEF2AF209AE0FE00740A88 /* Build configuration list for PBXNativeTarget "Board" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DAFEF276209ADE0A00740A88 /* Debug */,
-				DAFEF277209ADE0A00740A88 /* Release */,
+				DAFEF2B0209AE0FE00740A88 /* Debug */,
+				DAFEF2B1209AE0FE00740A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAFEF285209ADEC900740A88 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		DAFEF2BE209AE18300740A88 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DAFEF286209ADEC900740A88 /* Debug */,
-				DAFEF287209ADEC900740A88 /* Release */,
+				DAFEF2BF209AE18300740A88 /* Debug */,
+				DAFEF2C0209AE18300740A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DAFEF25B209ADE0900740A88 /* Project object */;
+	rootObject = DAFEF29E209AE0FE00740A88 /* Project object */;
 }

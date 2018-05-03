@@ -5,7 +5,7 @@
       location = "group:Catban/catban.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Board/Board/Board.xcodeproj">
+      location = "group:Board/Board.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Design">
