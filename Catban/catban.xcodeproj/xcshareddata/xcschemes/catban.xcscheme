@@ -85,8 +85,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAFEF2B5209AE18200740A88"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BuildableName = "TestsBoard.xctest"
+               BlueprintName = "TestsBoard"
                ReferencedContainer = "container:../Board/Board.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -95,8 +95,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAFEF356209AF82B00740A88"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BuildableName = "TestsHome.xctest"
+               BlueprintName = "TestsHome"
                ReferencedContainer = "container:../Home/Home.xcodeproj">
             </BuildableReference>
          </TestableReference>

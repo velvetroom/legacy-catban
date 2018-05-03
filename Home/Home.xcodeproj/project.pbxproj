@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAFEF357209AF82B00740A88 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFEF357209AF82B00740A88 /* TestsHome.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsHome.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF362209AF85800740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAFEF367209AF8C700740A88 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DAFEF369209AF90200740A88 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF348209AF7D800740A88 /* Home.framework */,
-				DAFEF357209AF82B00740A88 /* Tests.xctest */,
+				DAFEF357209AF82B00740A88 /* TestsHome.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 			productReference = DAFEF348209AF7D800740A88 /* Home.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DAFEF356209AF82B00740A88 /* Tests */ = {
+		DAFEF356209AF82B00740A88 /* TestsHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAFEF35F209AF82B00740A88 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = DAFEF35F209AF82B00740A88 /* Build configuration list for PBXNativeTarget "TestsHome" */;
 			buildPhases = (
 				DAFEF353209AF82B00740A88 /* Sources */,
 				DAFEF354209AF82B00740A88 /* Frameworks */,
@@ -144,9 +144,9 @@
 			dependencies = (
 				DAFEF35E209AF82B00740A88 /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = TestsHome;
 			productName = Tests;
-			productReference = DAFEF357209AF82B00740A88 /* Tests.xctest */;
+			productReference = DAFEF357209AF82B00740A88 /* TestsHome.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 			projectRoot = "";
 			targets = (
 				DAFEF347209AF7D800740A88 /* Home */,
-				DAFEF356209AF82B00740A88 /* Tests */,
+				DAFEF356209AF82B00740A88 /* TestsHome */,
 			);
 		};
 /* End PBXProject section */
@@ -465,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAFEF35F209AF82B00740A88 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		DAFEF35F209AF82B00740A88 /* Build configuration list for PBXNativeTarget "TestsHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAFEF360209AF82B00740A88 /* Debug */,
