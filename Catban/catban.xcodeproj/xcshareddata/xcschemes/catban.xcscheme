@@ -100,6 +100,16 @@
                ReferencedContainer = "container:../Home/Home.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAF7E664209B077E00B8A39A"
+               BuildableName = "TestsShared.xctest"
+               BlueprintName = "TestsShared"
+               ReferencedContainer = "container:../Shared/Shared.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
