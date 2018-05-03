@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    var view:View
+    var view:Shared.View
     
     init() {
         self.view = View()

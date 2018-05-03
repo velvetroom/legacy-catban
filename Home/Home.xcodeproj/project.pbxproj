@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
+		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAF7E658209B02FE00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF7E657209B02FE00B8A39A /* Shared.framework */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAF7E657209B02FE00B8A39A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
@@ -56,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DADB5EC1209B11E200CFFC9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DADB5EC5209B124700CFFC9A /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DADB5EC2209B11F800CFFC9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DADB5EC3209B120F00CFFC9A /* TestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DAF7E656209B02FE00B8A39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +125,7 @@
 			children = (
 				DAFEF365209AF8B100740A88 /* Controller */,
 				DAF7E65B209B062400B8A39A /* Presenter */,
+				DADB5EC1209B11E200CFFC9A /* View */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -114,6 +135,7 @@
 			children = (
 				DAFEF366209AF8B800740A88 /* Controller */,
 				DAF7E65E209B063800B8A39A /* Presenter */,
+				DADB5EC2209B11F800CFFC9A /* View */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -245,6 +267,7 @@
 			files = (
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
+				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
 			);
