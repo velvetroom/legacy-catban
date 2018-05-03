@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAF7E65A209B051F00B8A39A /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */; };
 		DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DAFEF375209AFC6900740A88 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF380209AFCEF00740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
+				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF7E65A209B051F00B8A39A /* PresenterProtocol.swift in Sources */,
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
