@@ -16,19 +16,12 @@
 		DAFEF311209AEC7700740A88 /* ProjectColumn+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FA209AEC7700740A88 /* ProjectColumn+Factory.swift */; };
 		DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */; };
 		DAFEF313209AEC7700740A88 /* ProjectEditorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FC209AEC7700740A88 /* ProjectEditorProtocol.swift */; };
-		DAFEF314209AEC7700740A88 /* Board+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FD209AEC7700740A88 /* Board+Save.swift */; };
 		DAFEF315209AEC7700740A88 /* ProjectCard+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FE209AEC7700740A88 /* ProjectCard+Factory.swift */; };
-		DAFEF316209AEC7700740A88 /* BoardRepository+Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */; };
-		DAFEF318209AEC7700740A88 /* BoardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF301209AEC7700740A88 /* BoardRepository.swift */; };
 		DAFEF319209AEC7700740A88 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF302209AEC7700740A88 /* Project.swift */; };
 		DAFEF31B209AEC7700740A88 /* ProjectColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF304209AEC7700740A88 /* ProjectColumn.swift */; };
-		DAFEF31C209AEC7700740A88 /* BoardRepository+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */; };
-		DAFEF31D209AEC7700740A88 /* BoardRepository+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */; };
 		DAFEF31E209AEC7700740A88 /* Project+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF307209AEC7700740A88 /* Project+Factory.swift */; };
-		DAFEF31F209AEC7700740A88 /* Board+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF308209AEC7700740A88 /* Board+Factory.swift */; };
 		DAFEF320209AEC7700740A88 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF309209AEC7700740A88 /* ProjectCard.swift */; };
 		DAFEF321209AEC7700740A88 /* Project+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF30A209AEC7700740A88 /* Project+Cards.swift */; };
-		DAFEF322209AEC7700740A88 /* BoardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */; };
 		DAFEF32E209AEEDE00740A88 /* History+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF327209AEEDE00740A88 /* History+Cards.swift */; };
 		DAFEF32F209AEEDE00740A88 /* HistoryItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF328209AEEDE00740A88 /* HistoryItemProtocol.swift */; };
 		DAFEF330209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF329209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift */; };
@@ -37,6 +30,7 @@
 		DAFEF333209AEEDE00740A88 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32C209AEEDE00740A88 /* History.swift */; };
 		DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */; };
 		DAFEF337209AF10900740A88 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF336209AF10900740A88 /* StringExtension.swift */; };
+		DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF338209AF47600740A88 /* BoardFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,19 +55,12 @@
 		DAFEF2FA209AEC7700740A88 /* ProjectColumn+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProjectColumn+Factory.swift"; sourceTree = "<group>"; };
 		DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardProtocol.swift; sourceTree = "<group>"; };
 		DAFEF2FC209AEC7700740A88 /* ProjectEditorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectEditorProtocol.swift; sourceTree = "<group>"; };
-		DAFEF2FD209AEC7700740A88 /* Board+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Board+Save.swift"; sourceTree = "<group>"; };
 		DAFEF2FE209AEC7700740A88 /* ProjectCard+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProjectCard+Factory.swift"; sourceTree = "<group>"; };
-		DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Save.swift"; sourceTree = "<group>"; };
-		DAFEF301209AEC7700740A88 /* BoardRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRepository.swift; sourceTree = "<group>"; };
 		DAFEF302209AEC7700740A88 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DAFEF304209AEC7700740A88 /* ProjectColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectColumn.swift; sourceTree = "<group>"; };
-		DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Delete.swift"; sourceTree = "<group>"; };
-		DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BoardRepository+Constants.swift"; sourceTree = "<group>"; };
 		DAFEF307209AEC7700740A88 /* Project+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+Factory.swift"; sourceTree = "<group>"; };
-		DAFEF308209AEC7700740A88 /* Board+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Board+Factory.swift"; sourceTree = "<group>"; };
 		DAFEF309209AEC7700740A88 /* ProjectCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
 		DAFEF30A209AEC7700740A88 /* Project+Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+Cards.swift"; sourceTree = "<group>"; };
-		DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRepositoryProtocol.swift; sourceTree = "<group>"; };
 		DAFEF327209AEEDE00740A88 /* History+Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+Cards.swift"; sourceTree = "<group>"; };
 		DAFEF328209AEEDE00740A88 /* HistoryItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemProtocol.swift; sourceTree = "<group>"; };
 		DAFEF329209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoryItemProtocol+Tools.swift"; sourceTree = "<group>"; };
@@ -82,6 +69,7 @@
 		DAFEF32C209AEEDE00740A88 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DAFEF32D209AEEDE00740A88 /* HistoryItemCreateCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemCreateCard.swift; sourceTree = "<group>"; };
 		DAFEF336209AF10900740A88 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		DAFEF338209AF47600740A88 /* BoardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +134,7 @@
 			children = (
 				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
 				DAFEF2F7209AEC7700740A88 /* Board.swift */,
-				DAFEF2FD209AEC7700740A88 /* Board+Save.swift */,
-				DAFEF2FF209AEC7700740A88 /* BoardRepository+Save.swift */,
-				DAFEF301209AEC7700740A88 /* BoardRepository.swift */,
-				DAFEF305209AEC7700740A88 /* BoardRepository+Delete.swift */,
-				DAFEF306209AEC7700740A88 /* BoardRepository+Constants.swift */,
-				DAFEF308209AEC7700740A88 /* Board+Factory.swift */,
-				DAFEF30B209AEC7700740A88 /* BoardRepositoryProtocol.swift */,
+				DAFEF338209AF47600740A88 /* BoardFactory.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -307,9 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFEF311209AEC7700740A88 /* ProjectColumn+Factory.swift in Sources */,
+				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
 				DAFEF337209AF10900740A88 /* StringExtension.swift in Sources */,
-				DAFEF316209AEC7700740A88 /* BoardRepository+Save.swift in Sources */,
-				DAFEF322209AEC7700740A88 /* BoardRepositoryProtocol.swift in Sources */,
 				DAFEF321209AEC7700740A88 /* Project+Cards.swift in Sources */,
 				DAFEF31B209AEC7700740A88 /* ProjectColumn.swift in Sources */,
 				DAFEF315209AEC7700740A88 /* ProjectCard+Factory.swift in Sources */,
@@ -317,21 +298,16 @@
 				DAFEF32E209AEEDE00740A88 /* History+Cards.swift in Sources */,
 				DAFEF319209AEC7700740A88 /* Project.swift in Sources */,
 				DAFEF331209AEEDE00740A88 /* HistoryItemMoveCard.swift in Sources */,
-				DAFEF314209AEC7700740A88 /* Board+Save.swift in Sources */,
-				DAFEF31D209AEC7700740A88 /* BoardRepository+Constants.swift in Sources */,
 				DAFEF334209AEEDE00740A88 /* HistoryItemCreateCard.swift in Sources */,
-				DAFEF31F209AEC7700740A88 /* Board+Factory.swift in Sources */,
 				DAFEF30F209AEC7700740A88 /* ProjectProtocol.swift in Sources */,
 				DAFEF332209AEEDE00740A88 /* HistoryProtocol.swift in Sources */,
 				DAFEF310209AEC7700740A88 /* Project+Columns.swift in Sources */,
 				DAFEF330209AEEDE00740A88 /* HistoryItemProtocol+Tools.swift in Sources */,
 				DAFEF31E209AEC7700740A88 /* Project+Factory.swift in Sources */,
-				DAFEF318209AEC7700740A88 /* BoardRepository.swift in Sources */,
 				DAFEF30C209AEC7700740A88 /* Project+Move.swift in Sources */,
 				DAFEF333209AEEDE00740A88 /* History.swift in Sources */,
 				DAFEF313209AEC7700740A88 /* ProjectEditorProtocol.swift in Sources */,
 				DAFEF320209AEC7700740A88 /* ProjectCard.swift in Sources */,
-				DAFEF31C209AEC7700740A88 /* BoardRepository+Delete.swift in Sources */,
 				DAFEF32F209AEEDE00740A88 /* HistoryItemProtocol.swift in Sources */,
 				DAFEF30E209AEC7700740A88 /* Board.swift in Sources */,
 			);

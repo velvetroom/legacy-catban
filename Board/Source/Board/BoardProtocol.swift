@@ -6,6 +6,4 @@ protocol BoardProtocol {
     func selectProjectAt(index:Int)
     func insertProject(project:ProjectProtocol)
     func deleteProject()
-    func saveProject()
-    func saveUser()
 }
