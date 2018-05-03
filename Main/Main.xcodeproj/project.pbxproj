@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAB61348209B361A005267A8 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB61347209B361A005267A8 /* Shared.framework */; };
+		DAB61349209B361A005267A8 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAB61347209B361A005267A8 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
 		DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */; };
@@ -39,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DAB61349209B361A005267A8 /* Shared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DAB61347209B361A005267A8 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EF3209B153500CFFC9A /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB61348209B361A005267A8 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 				DADB5EFB209B1DA000CFFC9A /* Assets */,
 				DADB5ED1209B144900CFFC9A /* Products */,
 				DADB5EF3209B153500CFFC9A /* Configuration */,
+				DAB61347209B361A005267A8 /* Shared.framework */,
 			);
 			sourceTree = "<group>";
 		};
