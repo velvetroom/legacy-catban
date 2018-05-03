@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 class Navigation:NavigationProtocol {
     var view:UINavigationController!
@@ -8,5 +9,9 @@ class Navigation:NavigationProtocol {
         self.view = NavigationFactory.newView()
         window.rootViewController = self.view
         return window
+    }
+    
+    func navigateTo(controller:ControllerProtocol) {
+        self.view.setViewControllers([controller.presenter.view], animated:true)
     }
 }
