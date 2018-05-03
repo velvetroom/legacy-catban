@@ -54,8 +54,8 @@
 			children = (
 				DAFEF363209AF88400740A88 /* Source */,
 				DAFEF364209AF88D00740A88 /* Tests */,
-				DAFEF362209AF85800740A88 /* Configuration */,
 				DAFEF349209AF7D800740A88 /* Products */,
+				DAFEF362209AF85800740A88 /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};

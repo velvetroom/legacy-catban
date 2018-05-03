@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Shared/Shared.xcodeproj">
+      location = "group:Catban/catban.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Catban/catban.xcodeproj">
+      location = "group:Shared/Shared.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Board/Board.xcodeproj">
