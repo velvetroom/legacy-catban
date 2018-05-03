@@ -1,17 +1,17 @@
 import UIKit
 
-class View:UIViewController, ViewProtocol {
+open class View:UIViewController, ViewProtocol {
     var delegate:ViewDelegateProtocol?
     
-    init() {
+    public init() {
         super.init(nibName:nil, bundle:nil)
     }
     
-    required init?(coder:NSCoder) {
+    public required init?(coder:NSCoder) {
         return nil
     }
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate?.viewDidLoad()
     }
