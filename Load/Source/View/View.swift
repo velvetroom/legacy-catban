@@ -4,7 +4,7 @@ import Shared
 class View:Shared.View {
     override init() {
         super.init()
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.blue
     }
     
     required init?(coder:NSCoder) {
