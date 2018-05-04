@@ -1,10 +1,11 @@
 import Foundation
 import Shared
 
-class Controller:ControllerProtocol {
-    var presenter:PresenterProtocol
+public class Controller:ControllerProtocol {
+    public var transiton:TransitionProtocol!
+    public var presenter:PresenterProtocol
     
-    required init() {
+    public required init() {
         self.presenter = Presenter()
         self.presenter.delegate = self
     }

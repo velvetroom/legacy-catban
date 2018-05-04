@@ -3,6 +3,7 @@ import Shared
 import Board
 
 public class Controller:ControllerProtocol {
+    public var transiton:TransitionProtocol!
     public var presenter:PresenterProtocol
     var dispatchQueue:DispatchQueue
     var repository:RepositoryBoardProtocol

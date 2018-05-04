@@ -5,19 +5,16 @@ import XCTest
 class TestNavigation:XCTestCase {
     private var model:Navigation!
     private var view:MockNavigationController!
-    private var controller:MockControllerProtocol!
     
     override func setUp() {
         super.setUp()
         self.model = Navigation()
         self.view = MockNavigationController()
-        self.controller = MockControllerProtocol()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.view, "Failed to load view")
-        XCTAssertNotNil(self.controller, "Failed to load controller")
         XCTAssertNil(self.model.view, "View should be initially not set")
     }
     
@@ -31,12 +28,11 @@ class TestNavigation:XCTestCase {
         var viewUpdated:Bool = false
         self.model.view = self.view
         self.view.onSetViewController = { [weak self] (views:[UIViewController], animated:Bool) in
-            XCTAssertEqual(views.count, 1, "Invalid amount of views recevied")
-            XCTAssertEqual(views.first, self?.controller.presenter.view, "Invalid view received")
+            XCTAssertEqual(views.count, 1, "Invalid amount of views received")
             viewUpdated = true
         }
         
-        self.model.navigateTo(controller:self.controller)
+        self.model.transitionToLoad()
         XCTAssertTrue(viewUpdated, "Failed to update view")
     }
     

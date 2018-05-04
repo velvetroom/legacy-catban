@@ -4,6 +4,8 @@ import UIKit
 
 class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
+    var onTransitionToLoad:(() -> Void)?
+    var onTransitionToHome:(() -> Void)?
     var onNavigateToController:((ControllerProtocol) -> Void)?
     
     required init() { }
@@ -13,7 +15,11 @@ class MockNavigationProtocol:NavigationProtocol {
         return UIApplication.shared.keyWindow!
     }
     
-    func navigateTo(controller:ControllerProtocol) {
-        self.onNavigateToController?(controller)
+    func transitionToLoad() {
+        self.onTransitionToLoad?()
+    }
+    
+    func transitionToHome() {
+        self.onTransitionToHome?()
     }
 }

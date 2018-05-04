@@ -4,22 +4,23 @@ import Shared
 class Navigation:NavigationProtocol {
     var view:UINavigationController!
     
-    required init() { }
-    
     func launch() -> UIWindow {
         self.view = NavigationView()
         let window:UIWindow = NavigationFactory.newWindow()
         window.rootViewController = self.view
-        self.navigateToFirstController()
+        self.transitionToLoad()
         return window
     }
     
-    func navigateTo(controller:ControllerProtocol) {
+    func transitionToLoad() {
+        var controller:ControllerProtocol = ControllerFactory.factoryLoad()
+        controller.transiton = self
         self.view.setViewControllers([controller.presenter.view], animated:false)
     }
     
-    private func navigateToFirstController() {
-        let controller:ControllerProtocol = ControllerFactory.factoryLoad()
-        self.navigateTo(controller:controller)
+    func transitionToHome() {
+        var controller:ControllerProtocol = ControllerFactory.factoryHome()
+        controller.transiton = self
+        self.view.setViewControllers([controller.presenter.view], animated:false)
     }
 }
