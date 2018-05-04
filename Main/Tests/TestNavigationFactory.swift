@@ -7,8 +7,8 @@ class TestNavigationFactory:XCTestCase {
         XCTAssertNotNil(window, "Failed to factory window")
     }
     
-    func testFactoryView() {
-        let view:UINavigationController? = NavigationFactory.newView()
-        XCTAssertNotNil(view, "Failed to factory view")
+    func testFactoryNavigation() {
+        let navigation:NavigationProtocol? = NavigationFactory.newNavigation()
+        XCTAssertNotNil(navigation, "Failed to factory navigation")
     }
 }

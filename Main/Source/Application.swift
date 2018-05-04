@@ -5,7 +5,7 @@ import UIKit
     var window:UIWindow?
     
     override init() {
-        self.navigation = Navigation()
+        self.navigation = NavigationFactory.newNavigation()
         super.init()
     }
     
