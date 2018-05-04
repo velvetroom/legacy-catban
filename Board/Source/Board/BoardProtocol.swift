@@ -1,5 +1,5 @@
 import Foundation
 
-protocol BoardProtocol {
+public protocol BoardProtocol {
     var identifier:String { get set }
 }

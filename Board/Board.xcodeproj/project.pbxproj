@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA567B37209C70D5005D74EE /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B36209C70D5005D74EE /* TestProject.swift */; };
+		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
+		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
 		DAFEF2BB209AE18300740A88 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF2A7209AE0FE00740A88 /* Board.framework */; };
 		DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */; };
 		DAFEF30E209AEC7700740A88 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F7209AEC7700740A88 /* Board.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA567B36209C70D5005D74EE /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
+		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
+		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DAFEF2A7209AE0FE00740A88 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF2B6209AE18200740A88 /* TestsBoard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsBoard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF2C1209AE1F500740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -55,6 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA567B34209C70BA005D74EE /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B38209C7117005D74EE /* ProjectProtocol.swift */,
+				DA567B3A209C7147005D74EE /* Project.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		DA567B35209C70C0005D74EE /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B36209C70D5005D74EE /* TestProject.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		DAFEF29D209AE0FE00740A88 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF33B209AF58400740A88 /* Board */,
+				DA567B35209C70C0005D74EE /* Project */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -86,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF323209AEE6400740A88 /* Board */,
+				DA567B34209C70BA005D74EE /* Project */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -219,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
+				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
 				DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */,
+				DA567B3B209C7147005D74EE /* Project.swift in Sources */,
 				DAFEF30E209AEC7700740A88 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +257,7 @@
 			files = (
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
+				DA567B37209C70D5005D74EE /* TestProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

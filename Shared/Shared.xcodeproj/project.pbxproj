@@ -14,6 +14,7 @@
 		DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFCF209C3F4C00B736CD /* Configuration.swift */; };
 		DA3ADFD2209C3F9E00B736CD /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD1209C3F9E00B736CD /* NavigationProtocol.swift */; };
 		DA567B30209C662C005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B2F209C662C005D74EE /* RepositoryProtocol.swift */; };
+		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DADB5EB8209B092100CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EB7209B092100CFFC9A /* View.swift */; };
 		DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */; };
 		DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */; };
@@ -43,6 +44,7 @@
 		DA3ADFCF209C3F4C00B736CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DA3ADFD1209C3F9E00B736CD /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		DA567B2F209C662C005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EB7209B092100CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA567B33209C6F89005D74EE /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		DA567B31209C6F89005D74EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B32209C6F89005D74EE /* Board.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAF7E670209B079900B8A39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +158,7 @@
 				DAFEF381209AFD2000740A88 /* Source */,
 				DAF7E670209B079900B8A39A /* Tests */,
 				DAFEF376209AFC6900740A88 /* Products */,
+				DA567B31209C6F89005D74EE /* Frameworks */,
 				DAFEF380209AFCEF00740A88 /* Configuration */,
 			);
 			sourceTree = "<group>";
