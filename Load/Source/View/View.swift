@@ -4,6 +4,7 @@ import Shared
 class View:Shared.View {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = String.localized(key:"View_title", in:type(of:self))
         self.addLogo()
     }
     

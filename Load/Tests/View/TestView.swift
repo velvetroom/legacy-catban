@@ -12,4 +12,10 @@ class TestView:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
     }
+    
+    func testTitle() {
+        XCTAssertNotNil(self.view.view, "Failed to load view in view")
+        XCTAssertNotNil(self.view.title, "Failed to assign title")
+        XCTAssertFalse(self.view.title!.isEmpty, "Title should not be empty")
+    }
 }

@@ -5,7 +5,6 @@ open class View:UIViewController, ViewProtocol {
     
     public init() {
         super.init(nibName:nil, bundle:nil)
-        self.view.backgroundColor = UIColor.white
     }
     
     public required init?(coder:NSCoder) {
@@ -14,6 +13,12 @@ open class View:UIViewController, ViewProtocol {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureView()
         self.delegate?.viewDidLoad()
+    }
+    
+    private func configureView() {
+        self.view.backgroundColor = UIColor.white
+        self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
     }
 }
