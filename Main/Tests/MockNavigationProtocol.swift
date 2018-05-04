@@ -6,6 +6,8 @@ class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
     var onNavigateToController:((ControllerProtocol) -> Void)?
     
+    required init() { }
+    
     func launch() -> UIWindow {
         self.onLaunch?()
         return UIApplication.shared.keyWindow!

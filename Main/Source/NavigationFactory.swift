@@ -3,7 +3,7 @@ import Shared
 
 class NavigationFactory {
     class func newNavigation() -> NavigationProtocol {
-        return Navigation()
+        return Configuration.navigationType.init()
     }
     
     class func newWindow() -> UIWindow {

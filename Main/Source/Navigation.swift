@@ -1,9 +1,10 @@
 import UIKit
 import Shared
-import Load
 
 class Navigation:NavigationProtocol {
     var view:UINavigationController!
+    
+    required init() { }
     
     func launch() -> UIWindow {
         self.view = NavigationView()
@@ -18,7 +19,7 @@ class Navigation:NavigationProtocol {
     }
     
     private func navigateToFirstController() {
-        let controller:ControllerProtocol = Load.Controller()
+        let controller:ControllerProtocol = ControllerFactory.factoryLoad()
         self.navigateTo(controller:controller)
     }
 }

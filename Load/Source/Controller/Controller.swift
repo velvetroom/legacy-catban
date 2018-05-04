@@ -4,7 +4,7 @@ import Shared
 public class Controller:ControllerProtocol {
     public var presenter:PresenterProtocol
     
-    public init() {
+    public required init() {
         self.presenter = Presenter()
     }
 }

@@ -4,7 +4,7 @@ import Foundation
 class MockControllerProtocol:ControllerProtocol {
     var presenter:PresenterProtocol
     
-    init() {
+    required init() {
         self.presenter = MockPresenterProtocol()
     }
 }

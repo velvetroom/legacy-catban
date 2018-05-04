@@ -14,6 +14,8 @@
 		DA3ADFD4209C40BC00B736CD /* TestInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD3209C40BC00B736CD /* TestInjection.swift */; };
 		DA3ADFD6209C41AC00B736CD /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD5209C41AC00B736CD /* Injection.swift */; };
 		DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD7209C427400B736CD /* MockInjection.swift */; };
+		DA3ADFDA209C61AB00B736CD /* TestControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */; };
+		DA3ADFDC209C61EF00B736CD /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFDB209C61EF00B736CD /* ControllerFactory.swift */; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
 		DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */; };
@@ -60,6 +62,8 @@
 		DA3ADFD3209C40BC00B736CD /* TestInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInjection.swift; sourceTree = "<group>"; };
 		DA3ADFD5209C41AC00B736CD /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		DA3ADFD7209C427400B736CD /* MockInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInjection.swift; sourceTree = "<group>"; };
+		DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestControllerFactory.swift; sourceTree = "<group>"; };
+		DA3ADFDB209C61EF00B736CD /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		DA58BD7F209B3B4A0013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,7 @@
 				DADB5F08209B21BD00CFFC9A /* NavigationFactory.swift */,
 				DADB5F02209B1EFA00CFFC9A /* Navigation.swift */,
 				DA3ADF93209C314500B736CD /* NavigationView.swift */,
+				DA3ADFDB209C61EF00B736CD /* ControllerFactory.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				DADB5F0A209B23AF00CFFC9A /* TestNavigationFactory.swift */,
 				DADB5F04209B1F0B00CFFC9A /* TestNavigation.swift */,
 				DA3ADF95209C315600B736CD /* TestNavigationView.swift */,
+				DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */,
 				DADB5F06209B1F1B00CFFC9A /* MockNavigationProtocol.swift */,
 				DADB5F0C209B273700CFFC9A /* MockNavigationController.swift */,
 				DADB5F0E209B27D100CFFC9A /* MockControllerProtocol.swift */,
@@ -266,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3ADFDC209C61EF00B736CD /* ControllerFactory.swift in Sources */,
 				DA3ADFD6209C41AC00B736CD /* Injection.swift in Sources */,
 				DADB5F03209B1EFA00CFFC9A /* Navigation.swift in Sources */,
 				DADB5EF9209B158400CFFC9A /* Application.swift in Sources */,
@@ -284,6 +291,7 @@
 				DADB5F0D209B273700CFFC9A /* MockNavigationController.swift in Sources */,
 				DADB5F11209B283A00CFFC9A /* MockPresenterProtocol.swift in Sources */,
 				DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */,
+				DA3ADFDA209C61AB00B736CD /* TestControllerFactory.swift in Sources */,
 				DADB5F05209B1F0B00CFFC9A /* TestNavigation.swift in Sources */,
 				DADB5F0B209B23AF00CFFC9A /* TestNavigationFactory.swift in Sources */,
 				DA3ADF96209C315600B736CD /* TestNavigationView.swift in Sources */,
