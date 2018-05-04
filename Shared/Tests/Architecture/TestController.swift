@@ -1,16 +1,16 @@
 import XCTest
-@testable import Load
+@testable import Shared
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:ControllerProtocol!
     
     override func setUp() {
         super.setUp()
-        self.controller = Controller()
+        self.controller = MockControllerProtocol()
     }
     
     func testLoad() {
         XCTAssertNotNil(self.controller, "Failed to load controller")
-        xctasssert
+        XCTAssertNotNil(self.controller.presenter, "Failed to load presenter")
     }
 }
