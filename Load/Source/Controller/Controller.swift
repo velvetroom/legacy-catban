@@ -22,7 +22,9 @@ public class Controller:ControllerProtocol {
     }
     
     func boardLoaded(board:BoardProtocol) {
-        
+        DispatchQueue.main.async { [weak self] in
+            self?.transiton.transitionToHome()
+        }
     }
     
     private func loadBoard() {

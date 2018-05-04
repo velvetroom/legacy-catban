@@ -23,6 +23,7 @@
 		DAFD2FBF209CA9D80005F5D2 /* MockControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FBE209CA9D80005F5D2 /* MockControllerProtocol.swift */; };
 		DAFD2FC7209CB2420005F5D2 /* ControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC6209CB2420005F5D2 /* ControllerConstants.swift */; };
 		DAFD2FC9209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */; };
+		DAFD2FD5209CC7BB0005F5D2 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FD4209CC7BB0005F5D2 /* MockTransitionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		DAFD2FBE209CA9D80005F5D2 /* MockControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockControllerProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FC6209CB2420005F5D2 /* ControllerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerConstants.swift; sourceTree = "<group>"; };
 		DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryBoardProtocol.swift; sourceTree = "<group>"; };
+		DAFD2FD4209CC7BB0005F5D2 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				DA58BD70209B384E0013DBF0 /* TestController.swift */,
 				DAFD2FBE209CA9D80005F5D2 /* MockControllerProtocol.swift */,
 				DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */,
+				DAFD2FD4209CC7BB0005F5D2 /* MockTransitionProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				DAFD2FBF209CA9D80005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DAFD2FBB209CA9C90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA58BD71209B384E0013DBF0 /* TestController.swift in Sources */,
+				DAFD2FD5209CC7BB0005F5D2 /* MockTransitionProtocol.swift in Sources */,
 				DAFD2FC9209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
