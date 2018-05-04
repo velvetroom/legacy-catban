@@ -11,6 +11,9 @@
 		DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */; };
 		DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC8209C3A3500B736CD /* Repository.swift */; };
 		DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFCB209C3B9300B736CD /* Shared.framework */; };
+		DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */; };
+		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
+		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,9 @@
 		DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		DA3ADFC8209C3A3500B736CD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DA3ADFCB209C3B9300B736CD /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
+		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			children = (
 				DA3ADFB4209C385500B736CD /* Source */,
 				DA3ADFB5209C385E00B736CD /* Tests */,
+				DA567B4F209C7A11005D74EE /* Resources */,
 				DA3ADFAA209C36E100B736CD /* Products */,
 				DA3ADFCA209C3B9300B736CD /* Frameworks */,
 				DA3ADFC5209C394F00B736CD /* Configuration */,
@@ -75,7 +82,8 @@
 		DA3ADFB4209C385500B736CD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DA3ADFC8209C3A3500B736CD /* Repository.swift */,
+				DA567B4B209C78D9005D74EE /* Error */,
+				DA567B4A209C78D3005D74EE /* Repository */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -83,7 +91,7 @@
 		DA3ADFB5209C385E00B736CD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */,
+				DA567B4E209C78F7005D74EE /* Repository */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -94,6 +102,39 @@
 				DA3ADFCB209C3B9300B736CD /* Shared.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA567B4A209C78D3005D74EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */,
+				DA3ADFC8209C3A3500B736CD /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DA567B4B209C78D9005D74EE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B4C209C78E5005D74EE /* ErrorRepository.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DA567B4E209C78F7005D74EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DA567B4F209C7A11005D74EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA567B50209C7A11005D74EE /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA567B52209C7A11005D74EE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */,
 				DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */,
+				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +270,17 @@
 			targetProxy = DA3ADFC0209C387800B736CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA567B50209C7A11005D74EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA567B51209C7A11005D74EE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA3ADFAF209C36E100B736CD /* Debug */ = {

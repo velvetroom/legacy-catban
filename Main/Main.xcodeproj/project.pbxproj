@@ -16,6 +16,8 @@
 		DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD7209C427400B736CD /* MockInjection.swift */; };
 		DA3ADFDA209C61AB00B736CD /* TestControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */; };
 		DA3ADFDC209C61EF00B736CD /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFDB209C61EF00B736CD /* ControllerFactory.swift */; };
+		DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB71209C7EA400509F4A /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
 		DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 			files = (
 				DA063621209B64390037D22F /* Load.framework in Embed Frameworks */,
 				DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */,
+				DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */,
+				DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,8 @@
 		DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestControllerFactory.swift; sourceTree = "<group>"; };
 		DA3ADFDB209C61EF00B736CD /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		DA58BD7F209B3B4A0013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA1DB71209C7EA400509F4A /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA1DB75209C7EDB00509F4A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EF3209B153500CFFC9A /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 		DA58BD7E209B3B4A0013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAA1DB75209C7EDB00509F4A /* Board.framework */,
+				DAA1DB71209C7EA400509F4A /* Repository.framework */,
 				DA06361F209B62D30037D22F /* Load.framework */,
 				DA58BD7F209B3B4A0013DBF0 /* Shared.framework */,
 			);
