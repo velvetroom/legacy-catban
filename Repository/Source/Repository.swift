@@ -1,5 +1,6 @@
 import Foundation
+import Shared
 
-class Repository {
+public class Repository:RepositoryProtocol {
     
 }
