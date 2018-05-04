@@ -12,6 +12,7 @@
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
 		DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFCF209C3F4C00B736CD /* Configuration.swift */; };
+		DA3ADFD2209C3F9E00B736CD /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD1209C3F9E00B736CD /* NavigationProtocol.swift */; };
 		DADB5EB8209B092100CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EB7209B092100CFFC9A /* View.swift */; };
 		DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */; };
 		DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */; };
@@ -39,6 +40,7 @@
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF99209C347200B736CD /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADFCF209C3F4C00B736CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DA3ADFD1209C3F9E00B736CD /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		DADB5EB7209B092100CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegateProtocol.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		DA3ADFCD209C3F0600B736CD /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				DA3ADFD1209C3F9E00B736CD /* NavigationProtocol.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
 				DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
+				DA3ADFD2209C3F9E00B736CD /* NavigationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

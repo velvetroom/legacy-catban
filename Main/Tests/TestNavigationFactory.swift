@@ -1,5 +1,6 @@
 import XCTest
 @testable import Main
+@testable import Shared
 
 class TestNavigationFactory:XCTestCase {
     func testFactoryWindow() {

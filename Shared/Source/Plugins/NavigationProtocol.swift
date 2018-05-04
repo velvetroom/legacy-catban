@@ -1,7 +1,6 @@
 import UIKit
-import Shared
 
-protocol NavigationProtocol {
+public protocol NavigationProtocol {
     func launch() -> UIWindow
     func navigateTo(controller:ControllerProtocol)
 }

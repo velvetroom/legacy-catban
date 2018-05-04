@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 @UIApplicationMain class Application:UIResponder, UIApplicationDelegate {
     var navigation:NavigationProtocol
