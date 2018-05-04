@@ -3,6 +3,8 @@ import Shared
 import Board
 
 public class Repository:RepositoryProtocol {
+    public required init() { }
+    
     public func loadBoard() throws -> BoardProtocol {
         throw ErrorRepository.boardNotFound
     }
