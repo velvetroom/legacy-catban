@@ -10,6 +10,7 @@
 		DA3ADFBF209C387800B736CD /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFA9209C36E100B736CD /* Repository.framework */; };
 		DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */; };
 		DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC8209C3A3500B736CD /* Repository.swift */; };
+		DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFCB209C3B9300B736CD /* Shared.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 		DA3ADFC5209C394F00B736CD /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		DA3ADFC8209C3A3500B736CD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DA3ADFCB209C3B9300B736CD /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +58,7 @@
 				DA3ADFB4209C385500B736CD /* Source */,
 				DA3ADFB5209C385E00B736CD /* Tests */,
 				DA3ADFAA209C36E100B736CD /* Products */,
+				DA3ADFCA209C3B9300B736CD /* Frameworks */,
 				DA3ADFC5209C394F00B736CD /* Configuration */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +86,14 @@
 				DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		DA3ADFCA209C3B9300B736CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3ADFCB209C3B9300B736CD /* Shared.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

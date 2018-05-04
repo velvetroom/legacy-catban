@@ -10,6 +10,6 @@ class TestRepository:XCTestCase {
     }
     
     func testLoad() {
-        
+        XCTAssertNotNil(self.model, "Failed to load model")
     }
 }
