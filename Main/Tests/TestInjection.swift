@@ -12,6 +12,7 @@ class TestInjection:XCTestCase {
     }
     
     func testConfigurationIsUpdated() {
+        XCTAssertNotNil(Configuration.repositoryType, "Failed to inject repository")
         XCTAssertNotNil(Configuration.navigationType, "Failed to inject navigation")
         XCTAssertNotNil(Configuration.controllerLoadType, "Failed to inject controller load")
     }
