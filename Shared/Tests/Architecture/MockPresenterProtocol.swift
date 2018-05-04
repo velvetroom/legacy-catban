@@ -2,7 +2,7 @@ import Foundation
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
-    var controller:ControllerProtocol!
+    var delegate:PresenterDelegateProtocol!
     var view:View
     
     init() {

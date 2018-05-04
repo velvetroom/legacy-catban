@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol ControllerProtocol {
+public protocol ControllerProtocol:PresenterDelegateProtocol {
     var presenter:PresenterProtocol { get set }
     
     init()

@@ -1,6 +1,6 @@
 import Foundation
 
 public protocol PresenterProtocol:ViewDelegateProtocol {
-    var controller:ControllerProtocol! { get set }
+    var delegate:PresenterDelegateProtocol! { get set }
     var view:View { get set }
 }

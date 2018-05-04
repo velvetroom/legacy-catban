@@ -30,6 +30,8 @@
 		DAFD2FAD209CA4560005F5D2 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAC209CA4560005F5D2 /* MockPresenterProtocol.swift */; };
 		DAFD2FAF209CA4A20005F5D2 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAE209CA4A20005F5D2 /* TestController.swift */; };
 		DAFD2FB1209CA4E50005F5D2 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB0209CA4E50005F5D2 /* TestPresenter.swift */; };
+		DAFD2FB4209CA6380005F5D2 /* PresenterDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */; };
+		DAFD2FB9209CA82F0005F5D2 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */; };
 		DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		DAFD2FAC209CA4560005F5D2 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FAE209CA4A20005F5D2 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DAFD2FB0209CA4E50005F5D2 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegateProtocol.swift; sourceTree = "<group>"; };
+		DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAFEF375209AFC6900740A88 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF380209AFCEF00740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
@@ -96,8 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
+				DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */,
 				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
+				DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */,
 				DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
 				DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */,
@@ -341,6 +347,8 @@
 				DA3ADFD2209C3F9E00B736CD /* NavigationProtocol.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
+				DAFD2FB9209CA82F0005F5D2 /* ControllerProtocol+Default.swift in Sources */,
+				DAFD2FB4209CA6380005F5D2 /* PresenterDelegateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

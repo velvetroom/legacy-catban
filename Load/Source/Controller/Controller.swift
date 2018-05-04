@@ -6,5 +6,6 @@ public class Controller:ControllerProtocol {
     
     public required init() {
         self.presenter = Presenter()
+        self.presenter.delegate = self
     }
 }
