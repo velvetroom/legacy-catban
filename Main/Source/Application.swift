@@ -6,8 +6,11 @@ import Shared
     var window:UIWindow?
     
     override init() {
+        let injection:Injection = Injection()
+        injection.load()
         self.navigation = NavigationFactory.newNavigation()
         super.init()
+        
     }
     
     func application(_:UIApplication, didFinishLaunchingWithOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool {
