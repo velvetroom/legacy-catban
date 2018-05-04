@@ -65,12 +65,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DAF7E670209B079900B8A39A /* Tests */ = {
+		DA3ADF8F209C307C00B736CD /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
+				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
+				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
+				DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */,
+				DADB5EB7209B092100CFFC9A /* View.swift */,
+				DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		DA3ADF90209C308500B736CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA3ADF91209C309B00B736CD /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
 				DAF7E671209B07B300B8A39A /* TestView.swift */,
-				DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */,
 				DADB5EBD209B0B8700CFFC9A /* MockViewDelegateProtocol.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		DA3ADF92209C30A200B736CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAF7E670209B079900B8A39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA3ADF91209C309B00B736CD /* Architecture */,
+				DA3ADF92209C30A200B736CD /* Extensions */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -97,13 +134,8 @@
 		DAFEF381209AFD2000740A88 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
-				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
-				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
-				DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */,
-				DADB5EB7209B092100CFFC9A /* View.swift */,
-				DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */,
-				DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */,
+				DA3ADF8F209C307C00B736CD /* Architecture */,
+				DA3ADF90209C308500B736CD /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
