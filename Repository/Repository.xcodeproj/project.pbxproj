@@ -14,6 +14,15 @@
 		DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */; };
 		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
 		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
+		DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF399209C9D53003EE7D8 /* TestSerialise.swift */; };
+		DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */; };
+		DAAFF3A2209C9DAE003EE7D8 /* SerialiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A1209C9DAE003EE7D8 /* SerialiseProtocol.swift */; };
+		DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */; };
+		DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */; };
+		DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */; };
+		DAAFF3AA209C9F6C003EE7D8 /* ErrorSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */; };
+		DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */; };
+		DAAFF3AF209CA0B3003EE7D8 /* TestErrorSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAAFF399209C9D53003EE7D8 /* TestSerialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialise.swift; sourceTree = "<group>"; };
+		DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialise.swift; sourceTree = "<group>"; };
+		DAAFF3A1209C9DAE003EE7D8 /* SerialiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialiseProtocol.swift; sourceTree = "<group>"; };
+		DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiseProtocol.swift; sourceTree = "<group>"; };
+		DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialise.swift; sourceTree = "<group>"; };
+		DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialise.swift; sourceTree = "<group>"; };
+		DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSerial.swift; sourceTree = "<group>"; };
+		DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorRepository.swift; sourceTree = "<group>"; };
+		DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +100,9 @@
 		DA3ADFB4209C385500B736CD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DA567B4B209C78D9005D74EE /* Error */,
 				DA567B4A209C78D3005D74EE /* Repository */,
+				DAAFF397209C9C9A003EE7D8 /* Serial */,
+				DA567B4B209C78D9005D74EE /* Error */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -92,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				DA567B4E209C78F7005D74EE /* Repository */,
+				DAAFF398209C9CA7003EE7D8 /* Serial */,
+				DAAFF3AB209C9FD1003EE7D8 /* Error */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -117,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DA567B4C209C78E5005D74EE /* ErrorRepository.swift */,
+				DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -135,6 +157,67 @@
 				DA567B50209C7A11005D74EE /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAAFF397209C9C9A003EE7D8 /* Serial */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF39F209C9D93003EE7D8 /* Serialise */,
+				DAAFF3A0209C9D9E003EE7D8 /* Deserialise */,
+			);
+			path = Serial;
+			sourceTree = "<group>";
+		};
+		DAAFF398209C9CA7003EE7D8 /* Serial */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF39E209C9D6A003EE7D8 /* Deserialise */,
+				DAAFF39D209C9D66003EE7D8 /* Serialise */,
+			);
+			path = Serial;
+			sourceTree = "<group>";
+		};
+		DAAFF39D209C9D66003EE7D8 /* Serialise */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF399209C9D53003EE7D8 /* TestSerialise.swift */,
+			);
+			path = Serialise;
+			sourceTree = "<group>";
+		};
+		DAAFF39E209C9D6A003EE7D8 /* Deserialise */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */,
+			);
+			path = Deserialise;
+			sourceTree = "<group>";
+		};
+		DAAFF39F209C9D93003EE7D8 /* Serialise */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF3A1209C9DAE003EE7D8 /* SerialiseProtocol.swift */,
+				DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */,
+			);
+			path = Serialise;
+			sourceTree = "<group>";
+		};
+		DAAFF3A0209C9D9E003EE7D8 /* Deserialise */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */,
+				DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */,
+			);
+			path = Deserialise;
+			sourceTree = "<group>";
+		};
+		DAAFF3AB209C9FD1003EE7D8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */,
+				DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */,
+				DAAFF3A2209C9DAE003EE7D8 /* SerialiseProtocol.swift in Sources */,
+				DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */,
 				DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */,
+				DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */,
+				DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */,
+				DAAFF3AA209C9F6C003EE7D8 /* ErrorSerial.swift in Sources */,
 				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAFF3AF209CA0B3003EE7D8 /* TestErrorSerial.swift in Sources */,
 				DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */,
+				DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */,
+				DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */,
+				DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
