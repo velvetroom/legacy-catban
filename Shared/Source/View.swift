@@ -5,6 +5,7 @@ open class View:UIViewController, ViewProtocol {
     
     public init() {
         super.init(nibName:nil, bundle:nil)
+        self.view.backgroundColor = UIColor.white
     }
     
     public required init?(coder:NSCoder) {
