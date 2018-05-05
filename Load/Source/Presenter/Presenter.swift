@@ -3,10 +3,14 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var delegate:PresenterDelegateProtocol!
-    var view:Shared.View
+    lazy weak var view:Shared.View? = View()
     
     init() {
         self.view = View()
-        self.view.delegate = self
+        self.view?.delegate = self
+    }
+    
+    deinit {
+        print("de init presenter")
     }
 }

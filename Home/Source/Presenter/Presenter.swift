@@ -3,10 +3,13 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var delegate:PresenterDelegateProtocol!
-    var view:Shared.View
+    lazy var view:Shared.View? = self.factoryView()
     
     init() {
-        self.view = View()
-        self.view.delegate = self
+        self.view?.delegate = self
+    }
+    
+    private func factoryView() -> Shared.View? {
+        return View()
     }
 }

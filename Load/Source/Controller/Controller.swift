@@ -15,6 +15,10 @@ public class Controller:ControllerProtocol {
         self.presenter.delegate = self
     }
     
+    deinit {
+        print("deinit")
+    }
+    
     public func viewDidLoad() {
         self.dispatchQueue.async { [weak self] in
             self?.loadBoard()

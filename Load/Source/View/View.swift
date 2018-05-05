@@ -2,6 +2,10 @@ import UIKit
 import Shared
 
 class View:Shared.View {
+    deinit {
+        print("de init view")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = String.localized(key:"View_title", in:type(of:self))
