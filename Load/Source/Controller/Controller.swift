@@ -3,8 +3,8 @@ import Shared
 import Board
 
 public class Controller:ControllerProtocol {
-    public var transiton:TransitionProtocol!
     public var presenter:PresenterProtocol
+    public var transiton:TransitionProtocol!
     var dispatchQueue:DispatchQueue
     var repository:RepositoryBoardProtocol
     
@@ -15,11 +15,7 @@ public class Controller:ControllerProtocol {
         self.presenter.delegate = self
     }
     
-    deinit {
-        print("deinit")
-    }
-    
-    public func viewDidLoad() {
+    public func didLoadPresenter() {
         self.dispatchQueue.async { [weak self] in
             self?.loadBoard()
         }

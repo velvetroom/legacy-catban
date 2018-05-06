@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0E58B1209F250000AD4425 /* PresenterDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */; };
+		DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */; };
 		DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */; };
 		DA3ADF8C209C29E300B736CD /* TestUIImage_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */; };
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
@@ -29,8 +31,7 @@
 		DAFD2FAD209CA4560005F5D2 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAC209CA4560005F5D2 /* MockPresenterProtocol.swift */; };
 		DAFD2FAF209CA4A20005F5D2 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAE209CA4A20005F5D2 /* TestController.swift */; };
 		DAFD2FB1209CA4E50005F5D2 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB0209CA4E50005F5D2 /* TestPresenter.swift */; };
-		DAFD2FB4209CA6380005F5D2 /* PresenterDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */; };
-		DAFD2FB9209CA82F0005F5D2 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */; };
+		DAFD2FB9209CA82F0005F5D2 /* PresenterDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FB5209CA7850005F5D2 /* PresenterDelegateProtocol+Default.swift */; };
 		DAFD2FCB209CBDAC0005F5D2 /* TransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FCA209CBDAC0005F5D2 /* TransitionProtocol.swift */; };
 		DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegateProtocol.swift; sourceTree = "<group>"; };
+		DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIImage_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
@@ -68,8 +71,7 @@
 		DAFD2FAC209CA4560005F5D2 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FAE209CA4A20005F5D2 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DAFD2FB0209CA4E50005F5D2 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
-		DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegateProtocol.swift; sourceTree = "<group>"; };
-		DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
+		DAFD2FB5209CA7850005F5D2 /* PresenterDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresenterDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAFD2FCA209CBDAC0005F5D2 /* TransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionProtocol.swift; sourceTree = "<group>"; };
 		DAFEF375209AFC6900740A88 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF380209AFCEF00740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -100,13 +102,14 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
-				DAFD2FB5209CA7850005F5D2 /* ControllerProtocol+Default.swift */,
 				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
-				DAFD2FB2209CA6340005F5D2 /* PresenterDelegateProtocol.swift */,
+				DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */,
+				DAFD2FB5209CA7850005F5D2 /* PresenterDelegateProtocol+Default.swift */,
 				DADB5EB9209B0A0600CFFC9A /* ViewProtocol.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
 				DADB5EBB209B0A5300CFFC9A /* ViewDelegateProtocol.swift */,
+				DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -343,12 +346,13 @@
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
 				DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
+				DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */,
 				DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
-				DAFD2FB9209CA82F0005F5D2 /* ControllerProtocol+Default.swift in Sources */,
-				DAFD2FB4209CA6380005F5D2 /* PresenterDelegateProtocol.swift in Sources */,
+				DAFD2FB9209CA82F0005F5D2 /* PresenterDelegateProtocol+Default.swift in Sources */,
+				DA0E58B1209F250000AD4425 /* PresenterDelegateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

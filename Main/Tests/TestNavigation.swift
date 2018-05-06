@@ -15,6 +15,7 @@ class TestNavigation:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.view, "Failed to load view")
+        XCTAssertNil(self.model.controller, "Controller should not be set")
         XCTAssertNil(self.model.view, "View should be initially not set")
     }
     
@@ -27,7 +28,7 @@ class TestNavigation:XCTestCase {
     func testNavigateToController() {
         var viewUpdated:Bool = false
         self.model.view = self.view
-        self.view.onSetViewController = { [weak self] (views:[UIViewController], animated:Bool) in
+        self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
             XCTAssertEqual(views.count, 1, "Invalid amount of views received")
             viewUpdated = true
         }

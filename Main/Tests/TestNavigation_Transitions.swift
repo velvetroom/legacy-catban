@@ -19,6 +19,11 @@ class TestNavigation_Transitions:XCTestCase {
         XCTAssertNotNil(self.view, "Failed to load view")
     }
     
+    func testTransitionToRetainsController() {
+        self.model.transitionTo(controller:MockControllerProtocol())
+        XCTAssertNotNil(self.model.controller, "Failed to retain controller")
+    }
+    
     func testTransitionToLoad() {
         var transition:Bool = false
         self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in

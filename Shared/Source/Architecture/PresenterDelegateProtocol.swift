@@ -1,5 +1,5 @@
 import Foundation
 
-public protocol PresenterDelegateProtocol {
-    func viewDidLoad()
+public protocol PresenterDelegateProtocol:class {
+    func didLoadPresenter()
 }

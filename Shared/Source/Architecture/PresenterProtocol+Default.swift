@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 public extension PresenterProtocol {
     var viewType:View.Type {
@@ -9,13 +9,13 @@ public extension PresenterProtocol {
     
     var view:View {
         get {
-            let view:View = View()
+            let view:View = self.viewType.init()
             view.delegate = self
             return view
         }
     }
     
-    func viewDidLoad() {
-        self.delegate.viewDidLoad()
+    func didLoad(view:UIView) {
+        self.delegate?.didLoadPresenter()
     }
 }

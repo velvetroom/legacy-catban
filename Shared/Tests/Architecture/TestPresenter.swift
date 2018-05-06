@@ -26,10 +26,10 @@ class TestPresenter:XCTestCase {
     
     func testViewDidLoad() {
         var delegateCalled:Bool = false
-        self.delegate.onViewDidLoad = {
+        self.delegate.onDidLoadPresenter = {
             delegateCalled = true
         }
-        self.presenter.viewDidLoad()
+        self.presenter.didLoad(view:UIView())
         XCTAssertTrue(delegateCalled, "Delegate is not called")
     }
 }

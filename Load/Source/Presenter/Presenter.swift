@@ -2,9 +2,6 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    var delegate:PresenterDelegateProtocol!
-
-    deinit {
-        print("de init presenter")
-    }
+    var viewType:Shared.View.Type = View.self
+    weak var delegate:PresenterDelegateProtocol?
 }

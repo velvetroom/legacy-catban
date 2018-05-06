@@ -1,9 +1,9 @@
 import UIKit
 
 open class View:UIViewController, ViewProtocol {
-    open var delegate:ViewDelegateProtocol!
+    open weak var delegate:ViewDelegateProtocol?
     
-    public init() {
+    public required init() {
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -14,7 +14,7 @@ open class View:UIViewController, ViewProtocol {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
-        self.delegate.viewDidLoad()
+        self.delegate?.didLoad(view:self.view)
     }
     
     private func configureView() {

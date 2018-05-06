@@ -32,7 +32,7 @@ class TestController:XCTestCase {
             expect.fulfill()
         }
         
-        self.controller.viewDidLoad()
+        self.controller.didLoadPresenter()
         self.waitForExpectations(timeout:0.1, handler:nil)
     }
     
@@ -43,7 +43,7 @@ class TestController:XCTestCase {
             expect.fulfill()
         }
         
-        self.controller.viewDidLoad()
+        self.controller.didLoadPresenter()
         self.waitForExpectations(timeout:0.1, handler:nil)
     }
     

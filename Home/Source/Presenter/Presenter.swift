@@ -2,5 +2,5 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    var delegate:PresenterDelegateProtocol!
+    weak var delegate:PresenterDelegateProtocol?
 }

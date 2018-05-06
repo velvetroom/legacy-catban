@@ -3,6 +3,7 @@ import Shared
 
 class Navigation:NavigationProtocol {
     var view:UINavigationController!
+    var controller:ControllerProtocol!
     
     func launch() -> UIWindow {
         self.view = NavigationView()
@@ -13,14 +14,18 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToLoad() {
-        var controller:ControllerProtocol = ControllerFactory.factoryLoad()
-        controller.transiton = self
-        self.view.setViewControllers([controller.presenter.view], animated:false)
+        let controller:ControllerProtocol = ControllerFactory.factoryLoad()
+        self.transitionTo(controller:controller)
     }
     
     func transitionToHome() {
-        var controller:ControllerProtocol = ControllerFactory.factoryHome()
-        controller.transiton = self
-//        self.view.setViewControllers([controller.presenter.view], animated:false)
+        let controller:ControllerProtocol = ControllerFactory.factoryHome()
+        self.transitionTo(controller:controller)
+    }
+    
+    func transitionTo(controller:ControllerProtocol) {
+        self.controller = controller
+        self.controller.transiton = self
+        self.view.setViewControllers([self.controller.presenter.view], animated:false)
     }
 }

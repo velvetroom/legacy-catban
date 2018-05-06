@@ -1,8 +1,6 @@
-import Foundation
+import UIKit
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
-    var delegate:PresenterDelegateProtocol!
-    
-    init() { }
+    var delegate:PresenterDelegateProtocol?
 }
