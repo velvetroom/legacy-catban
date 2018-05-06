@@ -1,7 +1,7 @@
 import XCTest
 @testable import Board
 
-class TestProject:XCTestCase {
+class TestCreatedProtocol:XCTestCase {
     private var model:Project!
     
     override func setUp() {
@@ -11,5 +11,6 @@ class TestProject:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.created, "Failed to load created")
     }
 }

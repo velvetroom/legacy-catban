@@ -21,10 +21,6 @@ class Board:BoardProtocol, Equatable {
     }
     
     static func == (lhs:Board, rhs:Board) -> Bool {
-        guard
-            lhs.identifier.isEmpty == false,
-            rhs.identifier.isEmpty == false
-        else { return false }
-        return lhs.identifier == rhs.identifier
+        return rhs.equals(model:lhs)
     }
 }

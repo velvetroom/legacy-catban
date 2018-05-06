@@ -3,14 +3,19 @@ import XCTest
 
 class TestBoard_Equatable:XCTestCase {
     private var model:Board!
+    private struct Constants {
+        static let identifier:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
-        self.model = BoardFactory.newBoard() as? Board
+        self.model = Board()
+        self.model.identifier = Constants.identifier
     }
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.identifier, "Failed to load identifier")
     }
     
     func testNonEmptyIdentifier() {
@@ -29,12 +34,6 @@ class TestBoard_Equatable:XCTestCase {
     func testCompareWithSelf() {
         let selfBoard:Board = self.model
         XCTAssertEqual(self.model, selfBoard, "Comparison should Succeed")
-    }
-    
-    func testComparingTwoNonEmpty() {
-        let newBoardA:Board = BoardFactory.newBoard() as! Board
-        let newBoardB:Board = BoardFactory.newBoard() as! Board
-        XCTAssertNotEqual(newBoardA, newBoardB, "Different identifiers")
     }
     
     func testComparingTwoEmpties() {

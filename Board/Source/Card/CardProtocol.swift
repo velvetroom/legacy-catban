@@ -1,5 +1,3 @@
 import Foundation
 
-public protocol CardProtocol {
-
-}
+public protocol CardProtocol:IdentifierProtocol, CreatedProtocol { }
