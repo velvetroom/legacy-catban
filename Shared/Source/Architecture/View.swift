@@ -18,7 +18,6 @@ open class View:UIViewController, ViewProtocol {
     }
     
     private func configureView() {
-        self.view.backgroundColor = UIColor.white
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
     }
 }

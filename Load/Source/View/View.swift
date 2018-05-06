@@ -4,8 +4,13 @@ import Shared
 class View:Shared.View {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = String.localized(key:"View_title", in:type(of:self))
+        self.configureView()
         self.addLogo()
+    }
+    
+    private func configureView() {
+        self.title = String.localized(key:"View_title", in:type(of:self))
+        self.view.backgroundColor = UIColor.white
     }
     
     private func addLogo() {

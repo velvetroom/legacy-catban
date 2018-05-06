@@ -15,7 +15,7 @@ class TestPresenter:XCTestCase {
     }
     
     func testViewType() {
-        let viewType:Load.View.Type? = self.presenter.viewType as? Load.View.Type
-        XCTAssertNotNil(viewType, "View type is not Load.ViewType")
+        let view:Load.View? = self.presenter.view as? Load.View
+        XCTAssertNotNil(view, "Invalid view received")
     }
 }

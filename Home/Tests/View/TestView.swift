@@ -12,4 +12,9 @@ class TestView:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
     }
+    
+    func testScroll() {
+        let scroll:ViewScroll? = self.view.view as? ViewScroll
+        XCTAssertNotNil(scroll, "Failed to load scroll")
+    }
 }

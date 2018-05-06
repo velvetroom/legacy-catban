@@ -4,6 +4,9 @@ import Shared
 class View:Shared.View {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+    }
+    
+    override func loadView() {
+        self.view = ViewScroll()
     }
 }

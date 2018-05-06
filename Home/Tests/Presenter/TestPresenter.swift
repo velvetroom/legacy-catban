@@ -14,4 +14,9 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
     }
+    
+    func testLoadView() {
+        let view:Home.View? = self.presenter.view as? Home.View
+        XCTAssertNotNil(view, "Invalid view received")
+    }
 }
