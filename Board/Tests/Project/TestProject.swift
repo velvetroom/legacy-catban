@@ -11,5 +11,7 @@ class TestProject:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.identifier, "Failed to load identifier")
+        XCTAssertNotNil(self.model.created, "Failed to load created")
     }
 }

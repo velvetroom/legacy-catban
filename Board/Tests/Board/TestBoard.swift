@@ -15,13 +15,4 @@ class TestBoard:XCTestCase {
         XCTAssertNotNil(self.model.countProjects, "Failed to load count projects")
         XCTAssertNotNil(self.model.projects, "Failed to load projects")
     }
-    
-    func testCountProjects() {
-        XCTAssertEqual(self.model.projects.count, self.model.countProjects, "Invalid count projects")
-    }
-    
-    func testCountProjectsAfterAdding() {
-        self.model.projects.append(Project())
-        XCTAssertEqual(self.model.projects.count, self.model.countProjects, "Invalid count projects")
-    }
 }

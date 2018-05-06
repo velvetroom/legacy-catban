@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */; };
+		DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */; };
 		DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */; };
 		DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */; };
 		DA0E58C3209F453000AD4425 /* TestProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */; };
+		DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C4209F486100AD4425 /* ProjectFactory.swift */; };
+		DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */; };
+		DA0E58CE209F4AB500AD4425 /* TestDate_Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */; };
+		DA0E58D1209F4AD900AD4425 /* Date+Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58D0209F4AD900AD4425 /* Date+Timestamp.swift */; };
+		DA0E58D3209F4B6400AD4425 /* TestBoard_ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */; };
+		DA0E58D5209F4DB800AD4425 /* TestBoard_Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58D4209F4DB800AD4425 /* TestBoard_Equatable.swift */; };
 		DA567B37209C70D5005D74EE /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B36209C70D5005D74EE /* TestProject.swift */; };
 		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
 		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
@@ -33,10 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerProtocol.swift; sourceTree = "<group>"; };
+		DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardProjectsProtocol.swift; sourceTree = "<group>"; };
 		DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManaged.swift; sourceTree = "<group>"; };
 		DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectManaged.swift; sourceTree = "<group>"; };
+		DA0E58C4209F486100AD4425 /* ProjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFactory.swift; sourceTree = "<group>"; };
+		DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectFactory.swift; sourceTree = "<group>"; };
+		DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDate_Timestamp.swift; sourceTree = "<group>"; };
+		DA0E58D0209F4AD900AD4425 /* Date+Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Timestamp.swift"; sourceTree = "<group>"; };
+		DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_ProjectManager.swift; sourceTree = "<group>"; };
+		DA0E58D4209F4DB800AD4425 /* TestBoard_Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_Equatable.swift; sourceTree = "<group>"; };
 		DA567B36209C70D5005D74EE /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -69,12 +81,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0E58CC209F4AA400AD4425 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA0E58CF209F4AC400AD4425 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA0E58D0209F4AD900AD4425 /* Date+Timestamp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DA567B34209C70BA005D74EE /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */,
 				DA567B38209C7117005D74EE /* ProjectProtocol.swift */,
 				DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */,
+				DA0E58C4209F486100AD4425 /* ProjectFactory.swift */,
 				DA567B3A209C7147005D74EE /* Project.swift */,
 				DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */,
 			);
@@ -86,6 +114,7 @@
 			children = (
 				DA567B36209C70D5005D74EE /* TestProject.swift */,
 				DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */,
+				DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -114,6 +143,7 @@
 			children = (
 				DAFEF33B209AF58400740A88 /* Board */,
 				DA567B35209C70C0005D74EE /* Project */,
+				DA0E58CC209F4AA400AD4425 /* Extensions */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -123,6 +153,7 @@
 			children = (
 				DAFEF323209AEE6400740A88 /* Board */,
 				DA567B34209C70BA005D74EE /* Project */,
+				DA0E58CF209F4AC400AD4425 /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -131,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
+				DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */,
 				DAFEF338209AF47600740A88 /* BoardFactory.swift */,
 				DAFEF2F7209AEC7700740A88 /* Board.swift */,
 			);
@@ -141,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */,
+				DA0E58D4209F4DB800AD4425 /* TestBoard_Equatable.swift */,
+				DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */,
 				DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */,
 			);
 			path = Board;
@@ -255,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */,
 				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
-				DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */,
+				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
+				DA0E58D1209F4AD900AD4425 /* Date+Timestamp.swift in Sources */,
 				DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */,
 				DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */,
 				DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */,
@@ -273,7 +309,11 @@
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
 				DA567B37209C70D5005D74EE /* TestProject.swift in Sources */,
+				DA0E58D3209F4B6400AD4425 /* TestBoard_ProjectManager.swift in Sources */,
 				DA0E58C3209F453000AD4425 /* TestProjectManaged.swift in Sources */,
+				DA0E58CE209F4AB500AD4425 /* TestDate_Timestamp.swift in Sources */,
+				DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */,
+				DA0E58D5209F4DB800AD4425 /* TestBoard_Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
