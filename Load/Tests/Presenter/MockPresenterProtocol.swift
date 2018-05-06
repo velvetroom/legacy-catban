@@ -3,9 +3,6 @@ import Foundation
 
 class MockPresenterProtocol:PresenterProtocol {
     var delegate:PresenterDelegateProtocol!
-    var view:View
-    
-    init() {
-        self.view = View()
-    }
+
+    init() { }
 }

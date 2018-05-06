@@ -1,9 +1,17 @@
 import Foundation
 
 public extension PresenterProtocol {
+    var viewType:View.Type {
+        get {
+            return View.self
+        }
+    }
+    
     var view:View {
         get {
-            return View()
+            let view:View = View()
+            view.delegate = self
+            return view
         }
     }
     

@@ -21,6 +21,6 @@ class Navigation:NavigationProtocol {
     func transitionToHome() {
         var controller:ControllerProtocol = ControllerFactory.factoryHome()
         controller.transiton = self
-        self.view.setViewControllers([controller.presenter.view], animated:false)
+//        self.view.setViewControllers([controller.presenter.view], animated:false)
     }
 }
