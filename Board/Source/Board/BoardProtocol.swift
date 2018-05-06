@@ -1,5 +1,6 @@
 import Foundation
 
-public protocol BoardProtocol {
+public protocol BoardProtocol:ProjectManagerProtocol {
     var identifier:String { get set }
+    
 }
