@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA063621209B64390037D22F /* Load.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA06361F209B62D30037D22F /* Load.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7F209B3B4A0013DBF0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA0E58BB209F3CB300AD4425 /* TestNavigation_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */; };
 		DA3ADF94209C314500B736CD /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF93209C314500B736CD /* NavigationView.swift */; };
 		DA3ADF96209C315600B736CD /* TestNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF95209C315600B736CD /* TestNavigationView.swift */; };
 		DA3ADFD4209C40BC00B736CD /* TestInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD3209C40BC00B736CD /* TestInjection.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		DA06361F209B62D30037D22F /* Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Load.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation_Animation.swift; sourceTree = "<group>"; };
 		DA3ADF93209C314500B736CD /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		DA3ADF95209C315600B736CD /* TestNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationView.swift; sourceTree = "<group>"; };
 		DA3ADFD3209C40BC00B736CD /* TestInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInjection.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				DADB5F0A209B23AF00CFFC9A /* TestNavigationFactory.swift */,
 				DADB5F04209B1F0B00CFFC9A /* TestNavigation.swift */,
 				DAFD2FCE209CC0C10005F5D2 /* TestNavigation_Transitions.swift */,
+				DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */,
 				DA3ADF95209C315600B736CD /* TestNavigationView.swift */,
 				DA3ADFD9209C61AB00B736CD /* TestControllerFactory.swift */,
 				DADB5F06209B1F1B00CFFC9A /* MockNavigationProtocol.swift */,
@@ -306,6 +309,7 @@
 			files = (
 				DAFD2FCF209CC0C10005F5D2 /* TestNavigation_Transitions.swift in Sources */,
 				DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */,
+				DA0E58BB209F3CB300AD4425 /* TestNavigation_Animation.swift in Sources */,
 				DA3ADFD4209C40BC00B736CD /* TestInjection.swift in Sources */,
 				DADB5F0F209B27D100CFFC9A /* MockControllerProtocol.swift in Sources */,
 				DADB5F0D209B273700CFFC9A /* MockNavigationController.swift in Sources */,
