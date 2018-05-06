@@ -1,5 +1,5 @@
 import Foundation
 
-extension ControllerProtocol {
-    public func viewDidLoad() { }
+public extension ControllerProtocol {
+    func viewDidLoad() { }
 }
