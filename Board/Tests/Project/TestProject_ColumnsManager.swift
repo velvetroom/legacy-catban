@@ -33,4 +33,12 @@ class TestProject_ColumnsManager:XCTestCase {
         self.model.add(column:column)
         XCTAssertEqual(self.model.countColumns, 0, "Column with no identifier should not be added")
     }
+    
+    func testRemoveColumn() {
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        self.model.add(column:column)
+        XCTAssertEqual(self.model.countColumns, 1, "Failed to add column")
+        self.model.remove(column:column)
+        XCTAssertEqual(self.model.countColumns, 0, "Failed to remove column")
+    }
 }

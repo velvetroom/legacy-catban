@@ -30,6 +30,17 @@ class Project:ProjectProtocol, Equatable {
         self.columns.append(column)
     }
     
+    func remove(column:ColumnProtocol) {
+        let countColumns:Int = self.columns.count
+        for index:Int in 0 ..< countColumns {
+            let item:ColumnProtocol = self.columns[index]
+            if column.identifier == item.identifier {
+                self.columns.remove(at:index)
+                break
+            }
+        }
+    }
+    
     static func == (lhs:Project, rhs:Project) -> Bool {
         return rhs.equals(model:lhs)
     }
