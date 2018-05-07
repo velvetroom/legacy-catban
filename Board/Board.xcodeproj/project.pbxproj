@@ -23,6 +23,8 @@
 		DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */; };
 		DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */; };
 		DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */; };
+		DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */; };
+		DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */; };
 		DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */; };
 		DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */; };
 		DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */; };
@@ -69,6 +71,8 @@
 		DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_CardsManager.swift; sourceTree = "<group>"; };
 		DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumnsProtocol.swift; sourceTree = "<group>"; };
 		DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_ColumnsManager.swift; sourceTree = "<group>"; };
+		DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumnFactory.swift; sourceTree = "<group>"; };
+		DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFactory.swift; sourceTree = "<group>"; };
 		DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCardsProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */,
 				DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */,
+				DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */,
 				DAE3E7DC209F53C900F8240C /* Column.swift */,
 			);
 			path = Column;
@@ -181,6 +186,7 @@
 			children = (
 				DAE3E7D8209F532F00F8240C /* TestColumn.swift */,
 				DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */,
+				DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */,
 			);
 			path = Column;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
 				DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */,
+				DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */,
 				DAE3E7DF209F53DC00F8240C /* Card.swift in Sources */,
 				DAE3E7E2209F542C00F8240C /* IdentifierProtocol.swift in Sources */,
 				DA0E58D1209F4AD900AD4425 /* Date+Timestamp.swift in Sources */,
@@ -405,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */,
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
