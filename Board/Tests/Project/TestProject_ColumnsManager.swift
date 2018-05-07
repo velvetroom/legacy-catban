@@ -21,4 +21,16 @@ class TestProject_ColumnsManager:XCTestCase {
         self.model.columns.append(Column())
         XCTAssertEqual(self.model.countColumns, 1, "There should be 1 column")
     }
+    
+    func testAddColumn() {
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        self.model.add(column:column)
+        XCTAssertEqual(self.model.countColumns, 1, "Failed to add column")
+    }
+    
+    func testAddColumnNoIdentifierShouldFail() {
+        let column:ColumnProtocol = ColumnFactory.blankColumn()
+        self.model.add(column:column)
+        XCTAssertEqual(self.model.countColumns, 0, "Column with no identifier should not be added")
+    }
 }

@@ -15,4 +15,28 @@ class TestProject:XCTestCase {
         XCTAssertNotNil(self.model.columns, "Failed to load columns")
         XCTAssertNotNil(self.model.name, "Failed to load name")
     }
+    
+    func testCopyIdentifier() {
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+        let projectB:ProjectProtocol = ProjectFactory.blankProject()
+        projectB.copy(project:projectA)
+        XCTAssertEqual(projectA.identifier, projectB.identifier, "Failed to copy identifier")
+    }
+    
+    func testCopyCreated() {
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+        let projectB:ProjectProtocol = ProjectFactory.blankProject()
+        projectB.copy(project:projectA)
+        XCTAssertEqual(projectA.created, projectB.created, "Failed to copy created")
+    }
+    
+    func testCopyColumns() {/*
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+
+        
+        
+        let projectB:ProjectProtocol = ProjectFactory.blankProject()
+        projectB.copy(project:projectA)
+        XCTAssertEqual(projectA.identifier, projectB.identifier, "Failed to copy identifier")*/
+    }
 }
