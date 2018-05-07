@@ -50,6 +50,10 @@ class TestBoard_ProjectManager:XCTestCase {
     }
     
     func testRemoveProject() {
-        
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        self.model.add(project:project)
+        XCTAssertEqual(self.model.countProjects, 1, "There should be 1 project")
+        self.model.remove(project:project)
+        XCTAssertEqual(self.model.countProjects, 0, "Failed to remove project")
     }
 }

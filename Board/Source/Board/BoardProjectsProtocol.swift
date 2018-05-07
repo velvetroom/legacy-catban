@@ -5,4 +5,5 @@ public protocol BoardProjectsProtocol {
     
     func manage(project:ProjectProtocol) -> ProjectManagedProtocol
     func add(project:ProjectProtocol)
+    func remove(project:ProjectProtocol)
 }
