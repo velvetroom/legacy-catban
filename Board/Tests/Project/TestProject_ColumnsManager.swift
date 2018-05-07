@@ -41,4 +41,13 @@ class TestProject_ColumnsManager:XCTestCase {
         self.model.remove(column:column)
         XCTAssertEqual(self.model.countColumns, 0, "Failed to remove column")
     }
+    
+    func testColumnAtIndex() {
+        let columnA:ColumnProtocol = ColumnFactory.newColumn()
+        let columnB:ColumnProtocol = ColumnFactory.newColumn()
+        self.model.add(column:columnA)
+        self.model.add(column:columnB)
+        let retrieveB:ColumnProtocol = self.model.columnAt(index:1)
+        XCTAssertEqual(retrieveB.identifier, columnB.identifier, "Failed to retrive the right column")
+    }
 }

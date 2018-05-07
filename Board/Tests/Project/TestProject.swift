@@ -30,13 +30,12 @@ class TestProject:XCTestCase {
         XCTAssertEqual(projectA.created, projectB.created, "Failed to copy created")
     }
     
-    func testCopyColumns() {/*
+    func testCopyColumns() {
         let projectA:ProjectProtocol = ProjectFactory.newProject()
-
-        
-        
+        projectA.add(column:ColumnFactory.newColumn())
+        projectA.add(column:ColumnFactory.newColumn())
         let projectB:ProjectProtocol = ProjectFactory.blankProject()
         projectB.copy(project:projectA)
-        XCTAssertEqual(projectA.identifier, projectB.identifier, "Failed to copy identifier")*/
+        XCTAssertEqual(projectA.countColumns, projectB.countColumns, "Failed to copy columns")
     }
 }

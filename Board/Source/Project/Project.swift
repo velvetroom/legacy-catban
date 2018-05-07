@@ -21,6 +21,11 @@ class Project:ProjectProtocol, Equatable {
     func copy(project:ProjectProtocol) {
         self.identifier = project.identifier
         self.created = project.created
+        self.columns = self.columnsFrom(project:project)
+    }
+    
+    func columnAt(index:Int) -> ColumnProtocol {
+        return self.columns[index]
     }
     
     func add(column:ColumnProtocol) {
@@ -39,6 +44,16 @@ class Project:ProjectProtocol, Equatable {
                 break
             }
         }
+    }
+    
+    private func columnsFrom(project:ProjectProtocol) -> [ColumnProtocol] {
+        var columns:[ColumnProtocol] = []
+        let countColumns:Int = project.countColumns
+        for indexColumn:Int in 0 ..< countColumns {
+            let column:ColumnProtocol = project.columnAt(index:indexColumn)
+            columns.append(column)
+        }
+        return columns
     }
     
     static func == (lhs:Project, rhs:Project) -> Bool {
