@@ -32,4 +32,17 @@ class TestBoard_Manage:XCTestCase {
         let _:ProjectManagedProtocol = self.model.manage(project:project)
         XCTAssertEqual(self.model.countProjects, 0, "Failed to remove project when it becomes managed")
     }
+    
+    func testManageCopyIdentifier() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = self.model.manage(project:project)
+        XCTAssertEqual(project.identifier, managed.identifier, "Failed to copy identifier to managed")
+    }
+    
+    func testManageCopyColumns() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        project.add(column:ColumnFactory.newColumn())
+        let managed:ProjectManagedProtocol = self.model.manage(project:project)
+        XCTAssertEqual(project.countColumns, managed.countColumns, "Failed to copy columns to managed")
+    }
 }

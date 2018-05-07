@@ -1,35 +1,34 @@
-//
-//  TestProjectManagedFactory.swift
-//  TestsBoard
-//
-//  Created by zero on 07.05.18.
-//  Copyright © 2018 iturbide. All rights reserved.
-//
-
 import XCTest
+@testable import Board
 
-class TestProjectManagedFactory: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class TestProjectManagedFactory:XCTestCase {
+    func testBlankManagedNoIdentifier() {
+        let project:ProjectManagedProtocol = ProjectManagedFactory.blankProjectManaged()
+        XCTAssertTrue(project.identifier.isEmpty, "Project should not have identifier")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testBlankManagedNoCreated() {
+        let project:ProjectManagedProtocol = ProjectManagedFactory.blankProjectManaged()
+        XCTAssertEqual(project.created, 0, "Project should not have created")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBlankManagedNoColumns() {
+        let project:ProjectManagedProtocol = ProjectManagedFactory.blankProjectManaged()
+        XCTAssertEqual(project.countColumns, 0, "Project should not have columns")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testForNewProjectManagedAssignsManager() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let manager:BoardProtocol = BoardFactory.newBoard()
+        let managed:ProjectManagedProtocol = ProjectManagedFactory.assign(manager:manager, to:project)
+        let assigned:BoardProtocol = managed.manager as! BoardProtocol
+        XCTAssertEqual(manager.identifier, assigned.identifier, "Invalid manager assigned")
     }
     
+    func testForNewProjectCopiesContent() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let manager:BoardProtocol = BoardFactory.newBoard()
+        let managed:ProjectManagedProtocol = ProjectManagedFactory.assign(manager:manager, to:project)
+        XCTAssertEqual(managed.identifier, project.identifier, "Content not copied")
+    }
 }
