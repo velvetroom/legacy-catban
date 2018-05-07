@@ -45,4 +45,26 @@ class TestBoard_Manage:XCTestCase {
         let managed:ProjectManagedProtocol = self.model.manage(project:project)
         XCTAssertEqual(project.countColumns, managed.countColumns, "Failed to copy columns to managed")
     }
+    
+    func testUnmanageAddsToProjects() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = self.model.manage(project:project)
+        self.model.unmanage(project:managed)
+        XCTAssertEqual(self.model.countProjects, 1, "Failed to add project to list")
+    }
+    
+    func testUnmanageCopiesContent() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = self.model.manage(project:project)
+        self.model.unmanage(project:managed)
+        XCTAssertEqual(self.model.projects[0].identifier, project.identifier, "Add project is not the managed")
+    }
+    
+    func testUnmanageIsNotManaged() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = self.model.manage(project:project)
+        self.model.unmanage(project:managed)
+        let added:ProjectManagedProtocol? = self.model.projects[0] as? ProjectManagedProtocol
+        XCTAssertNil(added, "Added project should not be managed")
+    }
 }

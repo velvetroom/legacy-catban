@@ -27,4 +27,21 @@ class TestProjectFactory:XCTestCase {
         let project:ProjectProtocol = ProjectFactory.blankProject()
         XCTAssertEqual(project.countColumns, 0, "Should have no columns")
     }
+    
+    func testUnmanagedProject() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let board:BoardProtocol = BoardFactory.newBoard()
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        let unmanaged:ProjectManagedProtocol? = ProjectFactory.removeManagementFrom(
+            project:managed) as? ProjectManagedProtocol
+        XCTAssertNil(unmanaged, "Unmanaged should not be managed protocol")
+    }
+    
+    func testUnmanagedProjectIdentifier() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let board:BoardProtocol = BoardFactory.newBoard()
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        let unmanaged:ProjectProtocol = ProjectFactory.removeManagementFrom(project:managed)
+        XCTAssertEqual(unmanaged.identifier, project.identifier, "Failed to copy content")
+    }
 }
