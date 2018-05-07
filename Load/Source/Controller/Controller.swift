@@ -38,7 +38,7 @@ public class Controller:ControllerProtocol {
     }
     
     private func newBoard() -> BoardProtocol {
-        let board:BoardProtocol = BoardFactory.newBoard()
+        let board:BoardProtocol = BoardFactory.newKanbanBoard()
         do { try self.repository.save(board:board) } catch { }
         return board
     }
