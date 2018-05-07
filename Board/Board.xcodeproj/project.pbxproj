@@ -27,6 +27,7 @@
 		DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */; };
 		DAC6800120A022F200791B6A /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800020A022F200791B6A /* CardFactory.swift */; };
 		DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800220A0230700791B6A /* TestCardFactory.swift */; };
+		DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */; };
 		DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */; };
 		DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */; };
 		DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */; };
@@ -77,6 +78,7 @@
 		DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFactory.swift; sourceTree = "<group>"; };
 		DAC6800020A022F200791B6A /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		DAC6800220A0230700791B6A /* TestCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCardFactory.swift; sourceTree = "<group>"; };
+		DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_Manage.swift; sourceTree = "<group>"; };
 		DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCardsProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */,
 				DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */,
+				DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */,
 				DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */,
 			);
 			path = Board;
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */,
+				DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */,
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,

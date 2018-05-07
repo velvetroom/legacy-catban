@@ -15,6 +15,7 @@ class Board:BoardProtocol, Equatable {
     }
     
     func manage(project:ProjectProtocol) -> ProjectManagedProtocol {
+        self.remove(project:project)
         let managed:ProjectManaged = ProjectManaged()
         managed.manager = self
         return managed
