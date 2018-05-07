@@ -20,6 +20,13 @@ class Board:BoardProtocol, Equatable {
         return managed
     }
     
+    func add(project:ProjectProtocol) {
+        guard
+            project.identifier.isEmpty == false
+        else { return }
+        self.projects.append(project)
+    }
+    
     static func == (lhs:Board, rhs:Board) -> Bool {
         return rhs.equals(model:lhs)
     }

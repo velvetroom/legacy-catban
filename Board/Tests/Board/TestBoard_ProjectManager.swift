@@ -21,12 +21,12 @@ class TestBoard_ProjectManager:XCTestCase {
     }
     
     func testCountProjects() {
-        XCTAssertEqual(self.model.projects.count, self.model.countProjects, "Invalid count projects")
+        XCTAssertEqual(self.model.countProjects, 0, "There should be no projects")
     }
     
     func testCountProjectsAfterAdding() {
         self.model.projects.append(Project())
-        XCTAssertEqual(self.model.projects.count, self.model.countProjects, "Invalid count projects")
+        XCTAssertEqual(self.model.countProjects, 1, "There should be 1 project")
     }
     
     func testManageProjectAssignsProject() {
@@ -34,5 +34,22 @@ class TestBoard_ProjectManager:XCTestCase {
         let board:Board? = project.manager as? Board
         XCTAssertNotNil(board, "Manager is not a board")
         XCTAssertEqual(board, self.model, "Failed to assign manager")
+    }
+    
+    func testAddProject() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        self.model.add(project:project)
+        XCTAssertEqual(self.model.countProjects, 1, "There should be 1 project")
+        XCTAssertEqual(project.identifier, self.model.projects.first?.identifier, "Invalid project added")
+    }
+    
+    func testAddProjectNoIdentifierShouldFail() {
+        let project:ProjectProtocol = Project()
+        self.model.add(project:project)
+        XCTAssertEqual(self.model.countProjects, 0, "There should be no projects")
+    }
+    
+    func testRemoveProject() {
+        
     }
 }
