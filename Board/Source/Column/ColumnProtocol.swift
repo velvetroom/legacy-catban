@@ -1,3 +1,5 @@
 import Foundation
 
-public protocol ColumnProtocol:IdentifierProtocol, CreatedProtocol, ColumnCardsProtocol { }
+public protocol ColumnProtocol:IdentifierProtocol, CreatedProtocol, ColumnCardsProtocol {
+    var name:String { get set }
+}

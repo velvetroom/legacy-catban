@@ -11,5 +11,6 @@ class TestCard:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
+        XCTAssertNotNil(self.model.content, "Failed to load content")
     }
 }

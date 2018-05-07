@@ -2,8 +2,9 @@ import Foundation
 
 class Column:ColumnProtocol {
     var identifier:String
-    var created:Int
+    var name:String
     var cards:[CardProtocol]
+    var created:Int
     var countCards:Int {
         get {
             return self.cards.count
@@ -12,7 +13,8 @@ class Column:ColumnProtocol {
     
     init() {
         self.identifier = String()
-        self.created = 0
+        self.name = String()
         self.cards = []
+        self.created = 0
     }
 }

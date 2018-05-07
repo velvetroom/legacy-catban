@@ -13,5 +13,6 @@ class TestColumn:XCTestCase {
         XCTAssertNotNil(self.model, "Failed to load model")
         XCTAssertNotNil(self.model.countCards, "Failed to load count")
         XCTAssertNotNil(self.model.cards, "Failed to load cards")
+        XCTAssertNotNil(self.model.name, "Failed to load name")
     }
 }

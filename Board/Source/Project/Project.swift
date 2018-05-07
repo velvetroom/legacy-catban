@@ -2,8 +2,9 @@ import Foundation
 
 class Project:ProjectProtocol {
     var identifier:String
-    var created:Int
+    var name:String
     var columns:[ColumnProtocol]
+    var created:Int
     var countColumns:Int {
         get {
             return self.columns.count
@@ -12,7 +13,8 @@ class Project:ProjectProtocol {
     
     init() {
         self.identifier = String()
-        self.created = 0
+        self.name = String()
         self.columns = []
+        self.created = 0
     }
 }
