@@ -18,6 +18,28 @@ class Column:ColumnProtocol, Equatable {
         self.created = 0
     }
     
+    func add(card:CardProtocol) {
+        guard
+            card.identifier.isEmpty == false
+        else { return }
+        self.cards.append(card)
+    }
+    
+    func remove(card:CardProtocol) {
+        let countCards:Int = self.cards.count
+        for index:Int in 0 ..< countCards {
+            let item:CardProtocol = self.cards[index]
+            if card.identifier == item.identifier {
+                self.cards.remove(at:index)
+                break
+            }
+        }
+    }
+    
+    func cardAt(index:Int) -> CardProtocol {
+        return self.cards[index]
+    }
+    
     static func == (lhs:Column, rhs:Column) -> Bool {
         return rhs.equals(model:lhs)
     }
