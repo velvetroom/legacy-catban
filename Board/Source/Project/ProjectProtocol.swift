@@ -1,3 +1,3 @@
 import Foundation
 
-public protocol ProjectProtocol:IdentifierProtocol, CreatedProtocol { }
+public protocol ProjectProtocol:IdentifierProtocol, CreatedProtocol, ProjectColumnsProtocol { }
