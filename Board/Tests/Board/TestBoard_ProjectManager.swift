@@ -43,4 +43,13 @@ class TestBoard_ProjectManager:XCTestCase {
         self.model.remove(project:project)
         XCTAssertEqual(self.model.countProjects, 0, "Failed to remove project")
     }
+    
+    func testProjectAtIndex() {
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+        let projectB:ProjectProtocol = ProjectFactory.newProject()
+        self.model.add(project:projectA)
+        self.model.add(project:projectB)
+        let retrieved:ProjectProtocol = self.model.projectAt(index:1)
+        XCTAssertEqual(retrieved.identifier, projectB.identifier, "Invalid project retrieved")
+    }
 }

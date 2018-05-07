@@ -42,6 +42,10 @@ class Board:BoardProtocol, Equatable {
         }
     }
     
+    func projectAt(index:Int) -> ProjectProtocol {
+        return self.projects[index]
+    }
+    
     static func == (lhs:Board, rhs:Board) -> Bool {
         return rhs.equals(model:lhs)
     }

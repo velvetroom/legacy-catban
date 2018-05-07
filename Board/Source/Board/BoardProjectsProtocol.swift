@@ -7,4 +7,5 @@ public protocol BoardProjectsProtocol {
     func unmanage(project:ProjectManagedProtocol)
     func add(project:ProjectProtocol)
     func remove(project:ProjectProtocol)
+    func projectAt(index:Int) -> ProjectProtocol
 }
