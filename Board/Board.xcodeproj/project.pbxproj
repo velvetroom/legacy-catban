@@ -25,6 +25,8 @@
 		DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */; };
 		DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */; };
 		DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */; };
+		DAC6800120A022F200791B6A /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800020A022F200791B6A /* CardFactory.swift */; };
+		DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800220A0230700791B6A /* TestCardFactory.swift */; };
 		DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */; };
 		DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */; };
 		DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */; };
@@ -73,6 +75,8 @@
 		DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_ColumnsManager.swift; sourceTree = "<group>"; };
 		DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumnFactory.swift; sourceTree = "<group>"; };
 		DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFactory.swift; sourceTree = "<group>"; };
+		DAC6800020A022F200791B6A /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
+		DAC6800220A0230700791B6A /* TestCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCardFactory.swift; sourceTree = "<group>"; };
 		DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCardsProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */,
+				DAC6800020A022F200791B6A /* CardFactory.swift */,
 				DAE3E7DE209F53DC00F8240C /* Card.swift */,
 			);
 			path = Card;
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE3E7DA209F536700F8240C /* TestCard.swift */,
+				DAC6800220A0230700791B6A /* TestCardFactory.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */,
 				DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */,
 				DAE3E7EA209F59F500F8240C /* CreatedProtocol.swift in Sources */,
+				DAC6800120A022F200791B6A /* CardFactory.swift in Sources */,
 				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
 				DAE3E7DD209F53C900F8240C /* Column.swift in Sources */,
 				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
@@ -426,6 +433,7 @@
 				DAE3E7DB209F536700F8240C /* TestCard.swift in Sources */,
 				DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */,
 				DA0E58D5209F4DB800AD4425 /* TestIdentifierProtocol.swift in Sources */,
+				DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
