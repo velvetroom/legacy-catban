@@ -5,9 +5,20 @@ class Project:ProjectProtocol, Equatable {
     var name:String
     var columns:[ColumnProtocol]
     var created:Int
+    
     var countColumns:Int {
         get {
             return self.columns.count
+        }
+    }
+    
+    var countCards:Int {
+        get {
+            var counter:Int = 0
+            self.columns.forEach { (column:ColumnProtocol) in
+                counter += column.countCards
+            }
+            return counter
         }
     }
     

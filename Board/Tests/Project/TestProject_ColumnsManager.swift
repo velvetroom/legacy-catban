@@ -17,6 +17,20 @@ class TestProject_ColumnsManager:XCTestCase {
         XCTAssertEqual(self.model.countColumns, 0, "There should be no columns")
     }
     
+    func testCountCards() {
+        let cardA:CardProtocol = CardFactory.newCard()
+        let cardB:CardProtocol = CardFactory.newCard()
+        let cardC:CardProtocol = CardFactory.newCard()
+        let columnA:ColumnProtocol = ColumnFactory.newColumn()
+        let columnB:ColumnProtocol = ColumnFactory.newColumn()
+        columnA.add(card:cardA)
+        columnA.add(card:cardB)
+        columnB.add(card:cardC)
+        self.model.add(column:columnA)
+        self.model.add(column:columnB)
+        XCTAssertEqual(self.model.countCards, 3, "Invalid number of cards")
+    }
+    
     func testCountColumnsAfterAppend() {
         self.model.columns.append(Column())
         XCTAssertEqual(self.model.countColumns, 1, "There should be 1 column")

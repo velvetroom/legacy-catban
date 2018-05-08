@@ -1,0 +1,6 @@
+KanbanFactory_project_name="catban";
+KanbanFactory_backlogColumn_name="Backlog";
+KanbanFactory_progressColumn_name="Progress";
+KanbanFactory_doneColumn_name="Done";
+KanbanFactory_editProjectCard_content="You can move the cards along the columns and create more if you need.";
+KanbanFactory_checkStatsCard_content="Check the project stats and monitor your progress.";
