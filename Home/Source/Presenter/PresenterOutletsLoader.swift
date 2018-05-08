@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 class PresenterOutletsLoader {
     var outlets:PresenterOutlets
@@ -7,13 +8,13 @@ class PresenterOutletsLoader {
         self.outlets = PresenterOutlets()
     }
     
-    func loadFor(view:View) {
+    func loadFor(view:Shared.View) {
         self.loadView(view:view)
         self.loadScroll()
         self.loadBoard()
     }
     
-    private func loadView(view:View) {
+    private func loadView(view:Shared.View) {
         self.outlets.view = view
     }
     

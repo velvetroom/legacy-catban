@@ -12,7 +12,7 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
-    func didLoad(view:View) {
+    func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.delegate?.didLoadPresenter()
     }
@@ -23,7 +23,7 @@ class Presenter:PresenterProtocol {
         self.updateWith(viewModel:builder.viewModel)
     }
     
-    private func loadOutlets(view:View) {
+    private func loadOutlets(view:Shared.View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.loadFor(view:view)
         self.outlets = loader.outlets

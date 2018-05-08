@@ -3,6 +3,9 @@ import XCTest
 
 class TestProject:XCTestCase {
     private var model:Project!
+    private struct Constants {
+        static let projectName:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
@@ -37,5 +40,13 @@ class TestProject:XCTestCase {
         let projectB:ProjectProtocol = ProjectFactory.blankProject()
         projectB.copy(project:projectA)
         XCTAssertEqual(projectA.countColumns, projectB.countColumns, "Failed to copy columns")
+    }
+    
+    func testCopyProjectName() {
+        var projectA:ProjectProtocol = ProjectFactory.newProject()
+        let projectB:ProjectProtocol = ProjectFactory.blankProject()
+        projectA.name = Constants.projectName
+        projectB.copy(project:projectA)
+        XCTAssertEqual(projectA.name, projectB.name, "Failed to copy project name")
     }
 }

@@ -50,7 +50,7 @@ class TestPresenter:XCTestCase {
             delegateCalled = true
         }
         
-        self.presenter.didLoad(view:View())
+        self.presenter.didLoad(view:Shared.View())
         XCTAssertTrue(delegateCalled, "Failed to call delegate")
     }
     

@@ -15,7 +15,7 @@ public extension PresenterProtocol {
         }
     }
     
-    func didLoad(view:View) {
+    func didLoad(view:Shared.View) {
         self.delegate?.didLoadPresenter()
     }
     

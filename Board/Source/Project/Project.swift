@@ -31,6 +31,7 @@ class Project:ProjectProtocol, Equatable {
     
     func copy(project:ProjectProtocol) {
         self.identifier = project.identifier
+        self.name = project.name
         self.created = project.created
         self.columns = self.columnsFrom(project:project)
     }
