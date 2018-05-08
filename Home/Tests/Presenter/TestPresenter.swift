@@ -12,6 +12,7 @@ class TestPresenter:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
+        XCTAssertNotNil(self.presenter.outlets, "Failed to load outlets")
         XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
     }
     
