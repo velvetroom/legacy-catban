@@ -1,5 +1,5 @@
-import UIKit
+import Foundation
 
 public protocol ViewDelegateProtocol:class {
-    func didLoad(view:UIView)
+    func didLoad(view:View)
 }

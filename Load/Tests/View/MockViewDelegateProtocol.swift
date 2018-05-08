@@ -1,10 +1,10 @@
-import UIKit
+import Foundation
 @testable import Shared
 
 class MockViewDelegateProtocol:ViewDelegateProtocol {
-    var onDidLoadView:((UIView) -> Void)?
+    var onDidLoadView:((View) -> Void)?
     
-    func didLoad(view:UIView) {
+    func didLoad(view:View) {
         self.onDidLoadView?(view)
     }
 }

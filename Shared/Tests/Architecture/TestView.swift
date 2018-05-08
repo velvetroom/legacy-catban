@@ -19,8 +19,8 @@ class TestView:XCTestCase {
     
     func testViewDidLoad() {
         var delegateCalled:Bool = false
-        self.delegate.onDidLoadView = { (view:UIView) in
-            XCTAssertEqual(view, self.view.view, "Invalid view received")
+        self.delegate.onDidLoadView = { (view:View) in
+            XCTAssertEqual(view, self.view, "Invalid view received")
             delegateCalled = true
         }
         XCTAssertNotNil(self.view.view, "Failed to load view")

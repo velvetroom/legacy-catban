@@ -14,7 +14,7 @@ open class View:UIViewController, ViewProtocol {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
-        self.delegate?.didLoad(view:self.view)
+        self.delegate?.didLoad(view:self)
     }
     
     private func configureView() {

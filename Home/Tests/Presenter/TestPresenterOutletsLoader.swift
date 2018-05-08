@@ -4,12 +4,12 @@ import XCTest
 class TestPresenterOutletsLoader:XCTestCase {
     private var presenter:PresenterOutletsLoader!
     private var outlets:PresenterOutlets!
-    private var view:ViewScroll!
+    private var view:View!
     
     override func setUp() {
         super.setUp()
         self.presenter = PresenterOutletsLoader()
-        self.view = ViewScroll()
+        self.view = View()
         self.presenter.loadFor(view:self.view)
         self.outlets = self.presenter.outlets
     }

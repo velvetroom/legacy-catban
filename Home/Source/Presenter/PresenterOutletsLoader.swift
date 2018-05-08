@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class PresenterOutletsLoader {
     var outlets:PresenterOutlets
@@ -7,13 +7,13 @@ class PresenterOutletsLoader {
         self.outlets = PresenterOutlets()
     }
     
-    func loadFor(view:UIView) {
+    func loadFor(view:View) {
         self.loadScroll(view:view)
         self.loadBoard()
     }
     
-    private func loadScroll(view:UIView) {
-        self.outlets.viewScroll = view as? ViewScroll
+    private func loadScroll(view:View) {
+        self.outlets.viewScroll = view.view as? ViewScroll
     }
     
     private func loadBoard() {

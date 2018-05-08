@@ -29,7 +29,7 @@ class TestPresenter:XCTestCase {
         self.delegate.onDidLoadPresenter = {
             delegateCalled = true
         }
-        self.presenter.didLoad(view:UIView())
+        self.presenter.didLoad(view:View())
         XCTAssertTrue(delegateCalled, "Delegate is not called")
     }
 }

@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
@@ -10,12 +10,12 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
-    func didLoad(view:UIView) {
+    func didLoad(view:View) {
         self.loadOutlets(view:view)
         self.delegate?.didLoadPresenter()
     }
     
-    private func loadOutlets(view:UIView) {
+    private func loadOutlets(view:View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.loadFor(view:view)
         self.outlets = loader.outlets

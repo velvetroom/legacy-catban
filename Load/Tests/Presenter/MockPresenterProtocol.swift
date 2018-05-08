@@ -1,13 +1,13 @@
-import UIKit
+import Foundation
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
-    var onDidLoadView:((UIView) -> Void)?
+    var onDidLoadView:((View) -> Void)?
     var delegate:PresenterDelegateProtocol?
     
     init() { }
     
-    func didLoad(view:UIView) {
+    func didLoad(view:View) {
         self.onDidLoadView?(view)
     }
 }
