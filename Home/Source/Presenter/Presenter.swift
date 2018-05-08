@@ -11,6 +11,11 @@ class Presenter:PresenterProtocol {
     }
     
     func didLoad(view:UIView) {
+        self.loadOutlets(view:view)
+        self.delegate?.didLoadPresenter()
+    }
+    
+    private func loadOutlets(view:UIView) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.loadFor(view:view)
         self.outlets = loader.outlets

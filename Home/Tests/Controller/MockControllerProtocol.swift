@@ -2,7 +2,7 @@ import Foundation
 @testable import Shared
 
 class MockControllerProtocol:ControllerProtocol {
-    var onViewDidLoad:(() -> Void)?
+    var onDidLoadPresenter:(() -> Void)?
     var transiton:TransitionProtocol!
     var presenter:PresenterProtocol
     
@@ -10,7 +10,7 @@ class MockControllerProtocol:ControllerProtocol {
         self.presenter = MockPresenterProtocol()
     }
     
-    func viewDidLoad() {
-        self.onViewDidLoad?()
+    func didLoadPresenter() {
+        self.onDidLoadPresenter?()
     }
 }
