@@ -10,6 +10,7 @@
 		DA063621209B64390037D22F /* Load.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA06361F209B62D30037D22F /* Load.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7F209B3B4A0013DBF0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA0E58BB209F3CB300AD4425 /* TestNavigation_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */; };
+		DA347D1F20A16DFE00009316 /* Template.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA347D1C20A16DF400009316 /* Template.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA3ADF94209C314500B736CD /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF93209C314500B736CD /* NavigationView.swift */; };
 		DA3ADF96209C315600B736CD /* TestNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF95209C315600B736CD /* TestNavigationView.swift */; };
 		DA3ADFD4209C40BC00B736CD /* TestInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD3209C40BC00B736CD /* TestInjection.swift */; };
@@ -57,6 +58,7 @@
 				DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */,
 				DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */,
 				DAFD2FD3209CC4190005F5D2 /* Home.framework in Embed Frameworks */,
+				DA347D1F20A16DFE00009316 /* Template.framework in Embed Frameworks */,
 				DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -67,6 +69,7 @@
 /* Begin PBXFileReference section */
 		DA06361F209B62D30037D22F /* Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Load.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation_Animation.swift; sourceTree = "<group>"; };
+		DA347D1C20A16DF400009316 /* Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADF93209C314500B736CD /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		DA3ADF95209C315600B736CD /* TestNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationView.swift; sourceTree = "<group>"; };
 		DA3ADFD3209C40BC00B736CD /* TestInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInjection.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		DA58BD7E209B3B4A0013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA347D1C20A16DF400009316 /* Template.framework */,
 				DAFD2FD0209CC4120005F5D2 /* Home.framework */,
 				DAA1DB75209C7EDB00509F4A /* Board.framework */,
 				DAA1DB71209C7EA400509F4A /* Repository.framework */,

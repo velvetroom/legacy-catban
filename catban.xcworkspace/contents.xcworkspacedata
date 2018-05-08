@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Template/Template.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Catban/catban.xcodeproj">
    </FileRef>
    <FileRef
@@ -18,6 +15,9 @@
    </FileRef>
    <FileRef
       location = "group:Repository/Repository.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Template/Template.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Load/Load.xcodeproj">
