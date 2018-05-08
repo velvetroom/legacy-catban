@@ -30,10 +30,6 @@
 		DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */; };
 		DAC6800720A036B600791B6A /* TestProjectManagedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */; };
 		DAC6800920A036C700791B6A /* ProjectManagedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */; };
-		DADBF48720A09ACC00D7370F /* TestProjectFactory_Kanban.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF48620A09ACC00D7370F /* TestProjectFactory_Kanban.swift */; };
-		DADBF48B20A0A0BA00D7370F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DADBF48920A0A0BA00D7370F /* Localizable.strings */; };
-		DADBF48D20A0A1D000D7370F /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF48C20A0A1D000D7370F /* String+Bundle.swift */; };
-		DADBF48F20A0A20400D7370F /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF48E20A0A20400D7370F /* TestString_Bundle.swift */; };
 		DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */; };
 		DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */; };
 		DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */; };
@@ -87,10 +83,6 @@
 		DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_Manage.swift; sourceTree = "<group>"; };
 		DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectManagedFactory.swift; sourceTree = "<group>"; };
 		DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagedFactory.swift; sourceTree = "<group>"; };
-		DADBF48620A09ACC00D7370F /* TestProjectFactory_Kanban.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectFactory_Kanban.swift; sourceTree = "<group>"; };
-		DADBF48A20A0A0BA00D7370F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DADBF48C20A0A1D000D7370F /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
-		DADBF48E20A0A20400D7370F /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
 		DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCardsProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
@@ -135,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */,
-				DADBF48E20A0A20400D7370F /* TestString_Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				DA0E58D0209F4AD900AD4425 /* Date+Timestamp.swift */,
-				DADBF48C20A0A1D000D7370F /* String+Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,18 +181,9 @@
 				DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */,
 				DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */,
 				DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */,
-				DADBF48620A09ACC00D7370F /* TestProjectFactory_Kanban.swift */,
 				DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */,
 			);
 			path = Project;
-			sourceTree = "<group>";
-		};
-		DADBF48820A09F3A00D7370F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DADBF48920A0A0BA00D7370F /* Localizable.strings */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		DAE3E7D0209F52BC00F8240C /* Card */ = {
@@ -248,7 +229,6 @@
 			children = (
 				DAFEF2F4209AEC7700740A88 /* Source */,
 				DAFEF2C3209AE26900740A88 /* Tests */,
-				DADBF48820A09F3A00D7370F /* Resources */,
 				DAFEF2A8209AE0FE00740A88 /* Products */,
 				DAFEF2C1209AE1F500740A88 /* Configuration */,
 			);
@@ -403,7 +383,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADBF48B20A0A0BA00D7370F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +408,6 @@
 				DAE3E7DD209F53C900F8240C /* Column.swift in Sources */,
 				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
-				DADBF48D20A0A1D000D7370F /* String+Bundle.swift in Sources */,
 				DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */,
 				DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */,
 				DAE3E7DF209F53DC00F8240C /* Card.swift in Sources */,
@@ -453,7 +431,6 @@
 			files = (
 				DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */,
 				DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */,
-				DADBF48F20A0A20400D7370F /* TestString_Bundle.swift in Sources */,
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
@@ -468,7 +445,6 @@
 				DAE3E7DB209F536700F8240C /* TestCard.swift in Sources */,
 				DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */,
 				DA0E58D5209F4DB800AD4425 /* TestIdentifierProtocol.swift in Sources */,
-				DADBF48720A09ACC00D7370F /* TestProjectFactory_Kanban.swift in Sources */,
 				DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,17 +458,6 @@
 			targetProxy = DAFEF2BC209AE18300740A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DADBF48920A0A0BA00D7370F /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DADBF48A20A0A0BA00D7370F /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DAFEF2AD209AE0FE00740A88 /* Debug */ = {

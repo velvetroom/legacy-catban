@@ -27,14 +27,4 @@ class TestCardFactory:XCTestCase {
         let card:CardProtocol = CardFactory.blankCard()
         XCTAssertTrue(card.content.isEmpty, "Card should have no content")
     }
-    
-    func testFactoryCardEditProject() {
-        let card:CardProtocol = CardFactory.newEditProjectCard()
-        XCTAssertFalse(card.content.isEmpty, "Failed to assign content to card")
-    }
-    
-    func testFactoryCardCheckStats() {
-        let card:CardProtocol = CardFactory.newCheckStatsCard()
-        XCTAssertFalse(card.content.isEmpty, "Failed to assign content to card")
-    }
 }
