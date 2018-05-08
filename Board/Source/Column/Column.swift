@@ -40,6 +40,10 @@ class Column:ColumnProtocol, Equatable {
         return self.cards[index]
     }
     
+    func iterate(cards:((CardProtocol) -> Void)) {
+        self.cards.forEach(cards)
+    }
+    
     static func == (lhs:Column, rhs:Column) -> Bool {
         return rhs.equals(model:lhs)
     }

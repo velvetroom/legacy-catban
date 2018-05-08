@@ -57,4 +57,24 @@ class TestColumn_CardsManager:XCTestCase {
         let retrieved:CardProtocol = self.model.cardAt(index:1)
         XCTAssertEqual(retrieved.identifier, cardB.identifier, "Retrieved card is not the right one")
     }
+    
+    func testIterate() {
+        let cardA:CardProtocol = CardFactory.newCard()
+        let cardB:CardProtocol = CardFactory.newCard()
+        self.model.add(card:cardA)
+        self.model.add(card:cardB)
+        var foundA:Bool = false
+        var foundB:Bool = false
+        
+        self.model.iterate { (card:CardProtocol) in
+            if card.identifier == cardA.identifier {
+                foundA = true
+            } else if card.identifier == cardB.identifier {
+                foundB = true
+            }
+        }
+        
+        XCTAssertTrue(foundA, "Failed to iterate card A")
+        XCTAssertTrue(foundB, "Failed to iterate card B")
+    }
 }

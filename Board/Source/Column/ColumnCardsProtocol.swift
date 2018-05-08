@@ -6,4 +6,5 @@ public protocol ColumnCardsProtocol {
     func cardAt(index:Int) -> CardProtocol
     func add(card:CardProtocol)
     func remove(card:CardProtocol)
+    func iterate(cards:((CardProtocol) -> Void))
 }
