@@ -19,6 +19,6 @@ class TestPresenter_Outlets:XCTestCase {
     }
     
     func testOutlets() {
-        XCTAssertNotNil(self.outlets.viewScroll, "Failed to assign view scroll")
+        XCTAssertNotNil(self.outlets.view, "Failed to assign view")
     }
 }

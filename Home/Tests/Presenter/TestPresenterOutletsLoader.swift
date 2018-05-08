@@ -21,6 +21,7 @@ class TestPresenterOutletsLoader:XCTestCase {
     }
     
     func testLoadOutlets() {
+        XCTAssertNotNil(self.outlets.view, "Failed to load")
         XCTAssertNotNil(self.outlets.viewScroll, "Failed to load")
         XCTAssertNotNil(self.outlets.viewBoard, "Failed to load")
     }

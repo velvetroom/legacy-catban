@@ -23,6 +23,7 @@
 		DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FBF20A1AB6D002461E6 /* PresenterOutletsLoader.swift */; };
 		DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC320A1B467002461E6 /* ViewModel.swift */; };
 		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
+		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
@@ -60,6 +61,7 @@
 		DA978FBF20A1AB6D002461E6 /* PresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutletsLoader.swift; sourceTree = "<group>"; };
 		DA978FC320A1B467002461E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF367209AF8C700740A88 /* TestController.swift */,
+				DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */,
 				DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */,
 			);
 			path = Controller;
@@ -359,6 +362,7 @@
 				DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */,
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
+				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,

@@ -1,9 +1,11 @@
 import Foundation
 import Shared
+import Board
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
+    var controller:Controller!
     weak var delegate:PresenterDelegateProtocol?
     
     init() {

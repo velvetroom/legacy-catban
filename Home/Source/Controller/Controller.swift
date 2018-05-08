@@ -8,7 +8,9 @@ public class Controller:ControllerProjectProtocol {
     public var transiton:TransitionProtocol!
     
     public required init() {
-        self.presenter = Presenter()
+        let presenter:Presenter = Presenter()
+        self.presenter = presenter
         self.presenter.delegate = self
+        presenter.controller = self
     }
 }

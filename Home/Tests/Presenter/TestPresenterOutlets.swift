@@ -14,6 +14,7 @@ class TestPresenterOutlets:XCTestCase {
     }
     
     func testOutlets() {
+        XCTAssertNil(self.presenter.view, "Property not found")
         XCTAssertNil(self.presenter.viewScroll, "Property not found")
         XCTAssertNil(self.presenter.viewBoard, "Property not found")
         

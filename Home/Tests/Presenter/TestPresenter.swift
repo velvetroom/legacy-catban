@@ -27,6 +27,7 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets, "Failed to load outlets")
         XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
         XCTAssertNotNil(self.delegate, "Failed to load delegate")
+        XCTAssertNil(self.presenter.controller, "Controller property not defined")
     }
     
     func testLoadView() {
@@ -45,7 +46,7 @@ class TestPresenter:XCTestCase {
     }
     
     func testUpdateWithProject() {
-//        self.presenter.updateWith(project:self.project)
-//        XCTAssertEqual(<#T##expression1: Equatable##Equatable#>, <#T##expression2: Equatable##Equatable#>)
+        self.presenter.shouldUpdate()
+        XCTAssertEqual(self.presenter.outlets.view?.title, Constants.projectName, "Failed to update view model")
     }
 }

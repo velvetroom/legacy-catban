@@ -8,12 +8,17 @@ class PresenterOutletsLoader {
     }
     
     func loadFor(view:View) {
-        self.loadScroll(view:view)
+        self.loadView(view:view)
+        self.loadScroll()
         self.loadBoard()
     }
     
-    private func loadScroll(view:View) {
-        self.outlets.viewScroll = view.view as? ViewScroll
+    private func loadView(view:View) {
+        self.outlets.view = view
+    }
+    
+    private func loadScroll() {
+        self.outlets.viewScroll = self.outlets.view?.view as? ViewScroll
     }
     
     private func loadBoard() {
