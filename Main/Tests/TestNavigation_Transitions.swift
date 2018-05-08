@@ -45,9 +45,10 @@ class TestNavigation_Transitions:XCTestCase {
         self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
             let view:View = views.first as! View
             let presenter:PresenterProtocol = view.delegate as! PresenterProtocol
-            let controller:ControllerProtocol = presenter.delegate as! ControllerProtocol
+            let controller:ControllerProjectProtocol = presenter.delegate as! ControllerProjectProtocol
             XCTAssertNotNil(controller, "Invalid view received")
             XCTAssertNotNil(controller.transiton, "Failed to assign transition")
+            XCTAssertNotNil(controller.project, "Failed to inject project")
             transition = true
         }
         

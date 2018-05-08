@@ -6,7 +6,7 @@ class ControllerFactory {
         return Configuration.controllerLoadType.init()
     }
     
-    class func factoryHome() -> ControllerProtocol {
+    class func factoryHome() -> ControllerProjectProtocol {
         return Configuration.controllerHomeType.init()
     }
 }

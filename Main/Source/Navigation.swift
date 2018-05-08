@@ -25,7 +25,8 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToHome(project:ProjectManagedProtocol) {
-        let controller:ControllerProtocol = ControllerFactory.factoryHome()
+        let controller:ControllerProjectProtocol = ControllerFactory.factoryHome()
+        controller.project = project
         self.transitionTo(controller:controller)
     }
     
