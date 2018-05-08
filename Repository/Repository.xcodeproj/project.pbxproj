@@ -14,6 +14,9 @@
 		DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */; };
 		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
 		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
+		DA978FCB20A1BDBE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FCA20A1BDBE002461E6 /* Board.framework */; };
+		DA978FCC20A1BDC9002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FCA20A1BDBE002461E6 /* Board.framework */; };
+		DA978FCD20A1BDCB002461E6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFCB209C3B9300B736CD /* Shared.framework */; };
 		DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF399209C9D53003EE7D8 /* TestSerialise.swift */; };
 		DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */; };
 		DAAFF3A2209C9DAE003EE7D8 /* SerialiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A1209C9DAE003EE7D8 /* SerialiseProtocol.swift */; };
@@ -45,6 +48,7 @@
 		DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA978FCA20A1BDBE002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFF399209C9D53003EE7D8 /* TestSerialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialise.swift; sourceTree = "<group>"; };
 		DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialise.swift; sourceTree = "<group>"; };
 		DAAFF3A1209C9DAE003EE7D8 /* SerialiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialiseProtocol.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA978FCB20A1BDBE002461E6 /* Board.framework in Frameworks */,
 				DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +75,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3ADFBF209C387800B736CD /* Repository.framework in Frameworks */,
+				DA978FCC20A1BDC9002461E6 /* Board.framework in Frameworks */,
+				DA978FCD20A1BDCB002461E6 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +127,7 @@
 		DA3ADFCA209C3B9300B736CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA978FCA20A1BDBE002461E6 /* Board.framework */,
 				DA3ADFCB209C3B9300B736CD /* Shared.framework */,
 			);
 			name = Frameworks;

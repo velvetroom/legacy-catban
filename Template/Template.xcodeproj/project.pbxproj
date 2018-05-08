@@ -12,6 +12,9 @@
 		DA6981C520A16A8A00A8D342 /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6981A220A16A1C00A8D342 /* Template.framework */; };
 		DA6981CF20A16B1400A8D342 /* TestKanbanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6981CE20A16B1400A8D342 /* TestKanbanFactory.swift */; };
 		DA6981D120A16B2300A8D342 /* KanbanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6981D020A16B2300A8D342 /* KanbanFactory.swift */; };
+		DA978FC720A1BDA4002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864B720A174AE00B638FE /* Board.framework */; };
+		DA978FC820A1BDAE002461E6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864B920A174B400B638FE /* Shared.framework */; };
+		DA978FC920A1BDB0002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864B720A174AE00B638FE /* Board.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3864BA20A174B400B638FE /* Shared.framework in Frameworks */,
+				DA978FC720A1BDA4002461E6 /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +53,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA6981C520A16A8A00A8D342 /* Template.framework in Frameworks */,
+				DA978FC820A1BDAE002461E6 /* Shared.framework in Frameworks */,
+				DA978FC920A1BDB0002461E6 /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

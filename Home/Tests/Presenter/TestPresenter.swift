@@ -7,6 +7,9 @@ class TestPresenter:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockControllerProtocol!
     private var project:ProjectManagedProtocol!
+    private struct Constants {
+        static let projectName:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
@@ -16,6 +19,7 @@ class TestPresenter:XCTestCase {
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
         self.project = board.manage(project:project)
+        self.project.name = Constants.projectName
     }
     
     func testLoad() {
@@ -41,6 +45,7 @@ class TestPresenter:XCTestCase {
     }
     
     func testUpdateWithProject() {
-        //self.presenter.updateWith(project:self.project)
+//        self.presenter.updateWith(project:self.project)
+//        XCTAssertEqual(<#T##expression1: Equatable##Equatable#>, <#T##expression2: Equatable##Equatable#>)
     }
 }
