@@ -5,8 +5,10 @@ import XCTest
 
 class TestPresenter:XCTestCase {
     private var presenter:Presenter!
+    private var controller:Controller!
     private var delegate:MockControllerProtocol!
     private var project:ProjectManagedProtocol!
+    private var view:Home.View!
     private struct Constants {
         static let projectName:String = "lorem ipsum"
     }
@@ -14,12 +16,17 @@ class TestPresenter:XCTestCase {
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
+        self.controller = Controller()
+        self.presenter.controller = self.controller
         self.delegate = MockControllerProtocol()
-        self.presenter.delegate = self.delegate
+        self.view = View()
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
         self.project = board.manage(project:project)
         self.project.name = Constants.projectName
+        self.controller.project = self.project
+        self.presenter.delegate = self.delegate
+        self.presenter.outlets.view = self.view
     }
     
     func testLoad() {
@@ -27,7 +34,9 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets, "Failed to load outlets")
         XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
         XCTAssertNotNil(self.delegate, "Failed to load delegate")
-        XCTAssertNil(self.presenter.controller, "Controller property not defined")
+        XCTAssertNotNil(self.controller, "Failed to load controller")
+        XCTAssertNotNil(self.project, "Failed to load project")
+        XCTAssertNotNil(self.view, "Failed to load view")
     }
     
     func testLoadView() {
