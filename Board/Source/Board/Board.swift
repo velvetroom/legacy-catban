@@ -46,6 +46,10 @@ class Board:BoardProtocol, Equatable {
         return self.projects[index]
     }
     
+    func iterate(projects:((ProjectProtocol) -> Void)) {
+        self.projects.forEach(projects)
+    }
+    
     static func == (lhs:Board, rhs:Board) -> Bool {
         return rhs.equals(model:lhs)
     }

@@ -8,4 +8,5 @@ public protocol BoardProjectsProtocol {
     func add(project:ProjectProtocol)
     func remove(project:ProjectProtocol)
     func projectAt(index:Int) -> ProjectProtocol
+    func iterate(projects:((ProjectProtocol) -> Void))
 }
