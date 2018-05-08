@@ -1,12 +1,13 @@
 import Foundation
 @testable import Shared
+@testable import Board
 
 class MockTransitionProtocol:TransitionProtocol {
-    var onTransitionToHome:(() -> Void)?
+    var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
     
     func transitionToLoad() { }
     
-    func transitionToHome() {
-        self.onTransitionToHome?()
+    func transitionToHome(project:ProjectManagedProtocol) {
+        self.onTransitionToHome?(project)
     }
 }

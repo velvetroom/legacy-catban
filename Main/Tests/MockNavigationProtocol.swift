@@ -1,11 +1,12 @@
 import UIKit
 @testable import Main
 @testable import Shared
+@testable import Board
 
 class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
     var onTransitionToLoad:(() -> Void)?
-    var onTransitionToHome:(() -> Void)?
+    var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
     var onNavigateToController:((ControllerProtocol) -> Void)?
     
     required init() { }
@@ -19,7 +20,7 @@ class MockNavigationProtocol:NavigationProtocol {
         self.onTransitionToLoad?()
     }
     
-    func transitionToHome() {
-        self.onTransitionToHome?()
+    func transitionToHome(project:ProjectManagedProtocol) {
+        self.onTransitionToHome?(project)
     }
 }

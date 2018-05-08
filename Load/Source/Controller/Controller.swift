@@ -22,9 +22,9 @@ public class Controller:ControllerProtocol {
         }
     }
     
-    func boardLoaded(board:BoardProtocol) {
+    func projectLoaded(project:ProjectManagedProtocol) {
         DispatchQueue.main.async { [weak self] in
-            self?.transiton.transitionToHome()
+            self?.transiton.transitionToHome(project:project)
         }
     }
     
@@ -36,6 +36,15 @@ public class Controller:ControllerProtocol {
             board = self.newBoard()
         }
         self.boardLoaded(board:board)
+    }
+    
+    private func boardLoaded(board:BoardProtocol) {
+        guard
+            board.countProjects > 0
+        else { return }
+        let project:ProjectProtocol = board.projectAt(index:0)
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        self.projectLoaded(project:managed)
     }
     
     private func newBoard() -> BoardProtocol {

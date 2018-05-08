@@ -1,4 +1,5 @@
 import UIKit
+import Board
 import Shared
 
 class Navigation:NavigationProtocol {
@@ -23,7 +24,7 @@ class Navigation:NavigationProtocol {
         self.transitionTo(controller:controller)
     }
     
-    func transitionToHome() {
+    func transitionToHome(project:ProjectManagedProtocol) {
         let controller:ControllerProtocol = ControllerFactory.factoryHome()
         self.transitionTo(controller:controller)
     }

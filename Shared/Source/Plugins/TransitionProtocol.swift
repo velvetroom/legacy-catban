@@ -1,6 +1,7 @@
 import Foundation
+import Board
 
 public protocol TransitionProtocol {
     func transitionToLoad()
-    func transitionToHome()
+    func transitionToHome(project:ProjectManagedProtocol)
 }

@@ -64,13 +64,16 @@ class TestController:XCTestCase {
     
     func testBoardLoadedTransitionsToHome() {
         let expect:XCTestExpectation = expectation(description:"Waiting transition")
-        self.transition.onTransitionToHome = {
+        self.transition.onTransitionToHome = { (project:ProjectManagedProtocol) in
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
             expect.fulfill()
         }
         
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
-            self?.controller.boardLoaded(board:BoardFactory.newBoard())
+            let board:BoardProtocol = BoardFactory.newBoard()
+            let project:ProjectProtocol = ProjectFactory.newProject()
+            let managed:ProjectManagedProtocol = board.manage(project:project)
+            self?.controller.projectLoaded(project:managed)
         }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }

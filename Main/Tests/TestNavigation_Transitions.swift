@@ -1,6 +1,7 @@
 import XCTest
 @testable import Main
 @testable import Shared
+@testable import Board
 
 class TestNavigation_Transitions:XCTestCase {
     private var model:Navigation!
@@ -50,7 +51,11 @@ class TestNavigation_Transitions:XCTestCase {
             transition = true
         }
         
-        self.model.transitionToHome()
+        let board:BoardProtocol = BoardFactory.newBoard()
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        
+        self.model.transitionToHome(project:managed)
         XCTAssertTrue(transition, "Transition never happened")
     }
 }
