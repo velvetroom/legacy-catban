@@ -33,7 +33,22 @@ class TestController:XCTestCase {
         }
         
         self.controller.didLoadPresenter()
-        self.waitForExpectations(timeout:0.1, handler:nil)
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testFactoredBoardNonEmpty() {
+        let expect:XCTestExpectation = expectation(description:"Waiting for save board")
+        self.repository.error = NSError(domain:String(), code:0)
+        self.repository.onSaveBoard = { (board:BoardProtocol) in
+            XCTAssertGreaterThan(board.countProjects, 0, "Board has not projects")
+            board.iterate { (project:ProjectProtocol) in
+                XCTAssertGreaterThan(project.countColumns, 0, "Project has no columns")
+            }
+            expect.fulfill()
+        }
+        
+        self.controller.didLoadPresenter()
+        self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testSaveFactoredBoard() {
@@ -44,7 +59,7 @@ class TestController:XCTestCase {
         }
         
         self.controller.didLoadPresenter()
-        self.waitForExpectations(timeout:0.1, handler:nil)
+        self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testBoardLoadedTransitionsToHome() {
@@ -57,6 +72,6 @@ class TestController:XCTestCase {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
             self?.controller.boardLoaded(board:BoardFactory.newBoard())
         }
-        self.waitForExpectations(timeout:0.1, handler:nil)
+        self.waitForExpectations(timeout:0.3, handler:nil)
     }
 }

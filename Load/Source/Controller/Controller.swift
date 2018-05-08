@@ -1,6 +1,7 @@
 import Foundation
-import Shared
 import Board
+import Shared
+import Template
 
 public class Controller:ControllerProtocol {
     public var presenter:PresenterProtocol
@@ -38,7 +39,9 @@ public class Controller:ControllerProtocol {
     }
     
     private func newBoard() -> BoardProtocol {
-        let board:BoardProtocol = BoardFactory.newKanbanBoard()
+        let kanbanProject:ProjectProtocol = KanbanFactory.newProject()
+        let board:BoardProtocol = BoardFactory.newBoard()
+        board.add(project:kanbanProject)
         do { try self.repository.save(board:board) } catch { }
         return board
     }
