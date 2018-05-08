@@ -1,35 +1,27 @@
-//
-//  TestFactoryKanban.swift
-//  TestsTemplate
-//
-//  Created by zero on 08.05.18.
-//  Copyright © 2018 iturbide. All rights reserved.
-//
-
 import XCTest
+@testable import Template
+@testable import Board
 
-class TestKanbanFactory: XCTestCase {
+class TestKanbanFactory:XCTestCase {
+    private var model:ProjectProtocol!
+    private struct Constants {
+        static let totalColumns:Int =
+    }
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.model = KanbanFactory.newProject()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testLoad() {
+        XCTAssertNotNil(self.model, "Failed to load model")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTotalColumns() {
+        XCTAssertEqual(self.model.countColumns, Constants.totalColumns, "Invalid number of columns")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testColumnTitles() {
+        let e = EnumeratedSequence
     }
-    
 }
