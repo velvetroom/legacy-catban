@@ -5,8 +5,8 @@ public protocol BoardProjectsProtocol {
     
     func manage(project:ProjectProtocol) -> ProjectManagedProtocol
     func unmanage(project:ProjectManagedProtocol)
+    func projectAt(index:Int) -> ProjectProtocol
     func add(project:ProjectProtocol)
     func remove(project:ProjectProtocol)
-    func projectAt(index:Int) -> ProjectProtocol
     func iterate(projects:((ProjectProtocol) -> Void))
 }

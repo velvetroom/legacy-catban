@@ -50,4 +50,24 @@ class TestProject_ColumnsManager:XCTestCase {
         let retrieveB:ColumnProtocol = self.model.columnAt(index:1)
         XCTAssertEqual(retrieveB.identifier, columnB.identifier, "Failed to retrive the right column")
     }
+    
+    func testIterate() {
+        let columnA:ColumnProtocol = ColumnFactory.newColumn()
+        let columnB:ColumnProtocol = ColumnFactory.newColumn()
+        self.model.add(column:columnA)
+        self.model.add(column:columnB)
+        var foundA:Bool = false
+        var foundB:Bool = false
+        
+        self.model.iterate { (column:ColumnProtocol) in
+            if column.identifier == columnA.identifier {
+                foundA = true
+            } else if column.identifier == columnB.identifier {
+                foundB = true
+            }
+        }
+        
+        XCTAssertTrue(foundA, "Failed to iterate column A")
+        XCTAssertTrue(foundB, "Failed to iterate column B")
+    }
 }

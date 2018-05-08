@@ -53,7 +53,7 @@ class TestBoard_ProjectManager:XCTestCase {
         XCTAssertEqual(retrieved.identifier, projectB.identifier, "Invalid project retrieved")
     }
     
-    func testEnumerate() {
+    func testIterate() {
         let projectA:ProjectProtocol = ProjectFactory.newProject()
         let projectB:ProjectProtocol = ProjectFactory.newProject()
         self.model.add(project:projectA)
@@ -68,6 +68,7 @@ class TestBoard_ProjectManager:XCTestCase {
                 foundB = true
             }
         }
+        
         XCTAssertTrue(foundA, "Failed to iterate project A")
         XCTAssertTrue(foundB, "Failed to iterate project B")
     }

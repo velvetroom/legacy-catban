@@ -46,6 +46,10 @@ class Project:ProjectProtocol, Equatable {
         }
     }
     
+    func iterate(columns:((ColumnProtocol) -> Void)) {
+        self.columns.forEach(columns)
+    }
+    
     private func columnsFrom(project:ProjectProtocol) -> [ColumnProtocol] {
         var columns:[ColumnProtocol] = []
         let countColumns:Int = project.countColumns
