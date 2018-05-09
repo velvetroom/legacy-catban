@@ -15,5 +15,7 @@ class ViewScroll:UIScrollView {
         self.backgroundColor = UIColor.Shared.gray
         self.alwaysBounceVertical = true
         self.alwaysBounceHorizontal = true
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
     }
 }
