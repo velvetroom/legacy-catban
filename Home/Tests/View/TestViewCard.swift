@@ -19,5 +19,6 @@ class TestViewCard:XCTestCase {
         XCTAssertNil(self.view.layoutTop, "Property not found")
         XCTAssertNil(self.view.layoutHeight, "Property not found")
         XCTAssertNil(self.view.layoutWidth, "Property not found")
+        XCTAssertNil(self.view.controller, "Property not found")
     }
 }

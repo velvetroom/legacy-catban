@@ -1,6 +1,10 @@
 import UIKit
 
 struct ViewConstants {
+    struct Generic {
+        static let animationDuration:TimeInterval = 0.4
+    }
+    
     struct Board {
         static let paddingHorizontal:CGFloat = 20
         static let columnSpacing:CGFloat = 15

@@ -3,6 +3,7 @@ import XCTest
 
 class TestPresenter_ViewModel_Cards:XCTestCase {
     private var presenter:Presenter!
+    private var controller:Controller!
     private var viewModel:ViewModel!
     private var viewBoard:ViewBoard!
     private struct Constants {
@@ -20,13 +21,16 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
         self.presenter = Presenter()
         self.viewModel = ViewModel()
         self.viewBoard = ViewBoard()
+        self.controller = Controller()
         self.presenter.outlets.viewBoard = self.viewBoard
+        self.presenter.controller = self.controller
     }
     
     func testLoad() {
         XCTAssertNotNil(self.presenter, "Failed to load presenter")
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
         XCTAssertNotNil(self.viewBoard, "Failed to load view board")
+        XCTAssertNotNil(self.controller, "Failed to load controller")
     }
     
     func testReloadColumns() {
@@ -59,10 +63,11 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
     
     private func validateCards() {
         for card:ViewCard in self.viewBoard.cards {
-            XCTAssertEqual(card.superview, self.viewBoard, "Failed to assign superview")
+            XCTAssertNotNil(card.controller, "Failed to load controller")
             XCTAssertNotNil(card.layoutLeft, "Failed to assign layout")
             XCTAssertNotNil(card.layoutTop, "Failed to assign layout")
             XCTAssertNotNil(card.layoutHeight, "Failed to assign layout")
+            XCTAssertEqual(card.superview, self.viewBoard, "Failed to assign superview")
             XCTAssertEqual(card.layoutLeft.constant, Constants.layoutConstantLeft, "Failed to assign constant")
             XCTAssertEqual(card.layoutTop.constant, Constants.layoutConstantTop, "Failed to assign constant")
             XCTAssertEqual(card.layoutHeight.constant, Constants.layoutConstantHeight, "Failed to assign constant")

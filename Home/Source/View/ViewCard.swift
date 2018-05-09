@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewCard:UIView {
+    weak var controller:Controller?
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutHeight:NSLayoutConstraint!
@@ -25,7 +26,20 @@ class ViewCard:UIView {
     }
     
     private func factoryOutlets() {
+        self.factoryButton()
         self.factoryLabel()
+    }
+    
+    private func factoryButton() {
+        let button:UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action:#selector(self.selectorButton(sender:)), for:UIControlEvents.touchUpInside)
+        self.addSubview(button)
+        
+        button.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        button.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        button.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func factoryLabel() {
@@ -48,5 +62,16 @@ class ViewCard:UIView {
                                            constant:ViewConstants.Card.contentPadding).isActive = true
         labelContent.rightAnchor.constraint(equalTo:self.rightAnchor,
                                             constant:-ViewConstants.Card.contentPadding).isActive = true
+    }
+    
+    @objc private func selectorButton(sender button:UIButton) {
+        self.showSelected()
+    }
+    
+    private func showSelected() {
+        UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
+            self?.backgroundColor = UIColor.Shared.blue
+            self?.labelContent.textColor = UIColor.white
+        }
     }
 }

@@ -117,6 +117,7 @@ class Presenter:PresenterProtocol {
     }
     
     private func addCard(view:ViewCard, to viewBoard:ViewBoard) {
+        view.controller = self.controller
         viewBoard.addSubview(view)
         viewBoard.cards.append(view)
 
