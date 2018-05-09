@@ -15,5 +15,6 @@ class TestViewColumn:XCTestCase {
     
     func testProperties() {
         XCTAssertNil(self.view.layoutLeft, "Property not found")
+        XCTAssertNotNil(self.view.labelName, "Failed to load label title")
     }
 }

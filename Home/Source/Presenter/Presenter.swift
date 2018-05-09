@@ -69,6 +69,7 @@ class Presenter:PresenterProtocol {
         let view:ViewColumn = ViewColumn()
         self.addColumn(view:view, to:viewBoard)
         view.layoutLeft.constant = viewModel.left
+        view.labelName.text = viewModel.name
     }
     
     private func addColumn(view:ViewColumn, to viewBoard:ViewBoard) {

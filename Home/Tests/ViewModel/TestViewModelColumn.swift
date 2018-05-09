@@ -14,7 +14,7 @@ class TestViewModelColumn:XCTestCase {
     }
     
     func testProperties() {
-        XCTAssertNotNil(self.viewModel.title, "Failed to load property")
+        XCTAssertNotNil(self.viewModel.name, "Failed to load property")
         XCTAssertNotNil(self.viewModel.left, "Failed to load property")
     }
 }

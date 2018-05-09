@@ -8,7 +8,7 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
     private struct Constants {
         static let initialColumns:Int = 2
         static let finalColumns:Int = 1
-        static let columnTitle:String = "lorem ipsum"
+        static let columnName:String = "lorem ipsum"
         static let layoutConstant:CGFloat = 3
     }
     
@@ -46,7 +46,7 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
         self.viewModel.columns = []
         for _:Int in 0 ..< columns {
             var column:ViewModelColumn = ViewModelColumn()
-            column.title = Constants.columnTitle
+            column.name = Constants.columnName
             column.left = Constants.layoutConstant
             self.viewModel.columns.append(column)
         }
@@ -57,6 +57,7 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
             XCTAssertEqual(column.superview, self.viewBoard, "Failed to assign superview")
             XCTAssertNotNil(column.layoutLeft, "Failed to assign layout")
             XCTAssertEqual(column.layoutLeft.constant, Constants.layoutConstant, "Failed to assign constant")
+            XCTAssertEqual(column.labelName.text, Constants.columnName, "Failed to assign name")
         }
     }
 }

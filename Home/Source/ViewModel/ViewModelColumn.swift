@@ -1,11 +1,11 @@
 import UIKit
 
 struct ViewModelColumn {
-    var title:String
+    var name:String
     var left:CGFloat
     
     init() {
-        self.title = String()
+        self.name = String()
         self.left = 0
     }
 }

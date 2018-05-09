@@ -61,7 +61,7 @@ class ViewModelBuilder {
     }
     
     private func columnHeight() -> CGFloat {
-        var height:CGFloat = ViewConstants.Column.titleHeight + ViewConstants.Column.paddingBottom
+        var height:CGFloat = ViewConstants.ColumnTitle.height + ViewConstants.Column.paddingBottom
         height += CGFloat(self.maxCards()) * ViewConstants.Card.height
         return height
     }
@@ -78,7 +78,7 @@ class ViewModelBuilder {
     
     private func add(column:ColumnProtocol, at left:CGFloat) {
         var viewModel:ViewModelColumn = ViewModelColumn()
-        viewModel.title = column.name
+        viewModel.name = column.name
         viewModel.left = left
         self.viewModel.columns.append(viewModel)
     }
