@@ -10,7 +10,6 @@ class TestViewModelBuilder:XCTestCase {
         static let projectName:String = "lorem ipsum"
     }
     
-    
     override func setUp() {
         super.setUp()
         let board:BoardProtocol = BoardFactory.newBoard()
@@ -31,6 +30,8 @@ class TestViewModelBuilder:XCTestCase {
     
     func testProperties() {
         XCTAssertEqual(self.viewModel.viewTitle, Constants.projectName, "Failed to assign project name")
+        XCTAssertNotEqual(self.viewModel.scrollContentSize, CGSize.zero, "Failed to build content size")
+        XCTAssertNotEqual(self.viewModel.boardFrame, CGRect.zero, "Failed to build board frame")
     }
     
     private func configureProject() {

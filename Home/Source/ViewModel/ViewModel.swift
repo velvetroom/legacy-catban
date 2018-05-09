@@ -2,10 +2,12 @@ import UIKit
 
 struct ViewModel {
     var viewTitle:String
-    var contentSize:CGSize
+    var scrollContentSize:CGSize
+    var boardFrame:CGRect
     
     init() {
         self.viewTitle = String()
-        self.contentSize = CGSize.zero
+        self.scrollContentSize = CGSize.zero
+        self.boardFrame = CGRect.zero
     }
 }

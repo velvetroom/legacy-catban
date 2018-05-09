@@ -12,6 +12,12 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
+    func updateWith(viewModel:ViewModel) {
+        self.updateViewWith(viewModel:viewModel)
+        self.updateScrollWith(viewModel:viewModel)
+        self.updateBoardWith(viewModel:viewModel)
+    }
+    
     func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.delegate?.didLoadPresenter()
@@ -29,7 +35,15 @@ class Presenter:PresenterProtocol {
         self.outlets = loader.outlets
     }
     
-    private func updateWith(viewModel:ViewModel) {
+    private func updateViewWith(viewModel:ViewModel) {
         self.outlets.view?.title = viewModel.viewTitle
+    }
+    
+    private func updateScrollWith(viewModel:ViewModel) {
+        self.outlets.viewScroll?.contentSize = viewModel.scrollContentSize
+    }
+    
+    private func updateBoardWith(viewModel:ViewModel) {
+        self.outlets.viewBoard?.frame = viewModel.boardFrame
     }
 }
