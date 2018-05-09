@@ -8,7 +8,6 @@ class ViewColumn:UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.isUserInteractionEnabled = false
-        self.backgroundColor = UIColor.red
     }
     
     required init?(coder:NSCoder) {

@@ -42,12 +42,25 @@ class ViewModelBuilder {
     }
     
     private func contentWidth() -> CGFloat {
-        var width:CGFloat = CGFloat(self.project.countColumns) * ViewConstants.Column.width
-        width += ViewConstants.Board.paddingHorizontal + ViewConstants.Board.paddingHorizontal
-        return width
+        let spacingWidth:CGFloat = ViewConstants.Board.paddingHorizontal + ViewConstants.Board.paddingHorizontal
+        return spacingWidth + self.columnsWidth()
     }
     
     private func contentHeight() -> CGFloat {
+        let minimumHeight:CGFloat = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        return max(minimumHeight, self.columnHeight())
+    }
+    
+    private func columnsWidth() -> CGFloat {
+        let columnsWidth:CGFloat = CGFloat(self.project.countColumns) * ViewConstants.Column.width
+        var columnsSpacing:CGFloat = 0
+        if self.project.countColumns > 1 {
+            columnsSpacing = CGFloat(self.project.countColumns - 1) * ViewConstants.Board.columnSpacing
+        }
+        return columnsWidth + columnsSpacing
+    }
+    
+    private func columnHeight() -> CGFloat {
         var height:CGFloat = ViewConstants.Column.titleHeight + ViewConstants.Column.paddingBottom
         height += CGFloat(self.maxCards()) * ViewConstants.Card.height
         return height
