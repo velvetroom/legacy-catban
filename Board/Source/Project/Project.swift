@@ -36,10 +36,6 @@ class Project:ProjectProtocol, Equatable {
         self.columns = self.columnsFrom(project:project)
     }
     
-    func columnAt(index:Int) -> ColumnProtocol {
-        return self.columns[index]
-    }
-    
     func add(column:ColumnProtocol) {
         guard
             column.identifier.isEmpty == false
@@ -64,9 +60,7 @@ class Project:ProjectProtocol, Equatable {
     
     private func columnsFrom(project:ProjectProtocol) -> [ColumnProtocol] {
         var columns:[ColumnProtocol] = []
-        let countColumns:Int = project.countColumns
-        for indexColumn:Int in 0 ..< countColumns {
-            let column:ColumnProtocol = project.columnAt(index:indexColumn)
+        project.iterate { (column:ColumnProtocol) in
             columns.append(column)
         }
         return columns
