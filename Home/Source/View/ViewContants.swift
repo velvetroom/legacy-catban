@@ -2,7 +2,7 @@ import UIKit
 
 struct ViewConstants {
     struct Generic {
-        static let animationDuration:TimeInterval = 0.4
+        static let animationDuration:TimeInterval = 0.3
     }
     
     struct Board {
@@ -12,15 +12,15 @@ struct ViewConstants {
     }
     
     struct Column {
-        static let width:CGFloat = 240
-        static let paddingHorizontal:CGFloat = 0
+        static let width:CGFloat = 200
+        static let paddingHorizontal:CGFloat = 1
         static let paddingBottom:CGFloat = 40
     }
     
     struct ColumnTitle {
         static let iconImage:String = "assetColumnIcon"
         static let height:CGFloat = 70
-        static let fontSize:CGFloat = 15
+        static let fontSize:CGFloat = 14
         static let labelTop:CGFloat = 30
         static let labelHeight:CGFloat = 20
         static let labelLeft:CGFloat = 14
@@ -31,9 +31,9 @@ struct ViewConstants {
     }
     
     struct Card {
-        static let contentPadding:CGFloat = 20
-        static let fontSize:CGFloat = 15
-        static let minContentHeight:CGFloat = 10
+        static let contentPadding:CGFloat = 15
+        static let fontSize:CGFloat = 16
+        static let minContentHeight:CGFloat = 15
         static let maxHeight:CGFloat = 1000
         static let cornerRadius:CGFloat = 4
     }
