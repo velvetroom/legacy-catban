@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA055B0020A38FCB002854F9 /* ControllerCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055AFF20A38FCB002854F9 /* ControllerCardProtocol.swift */; };
 		DA0E58B1209F250000AD4425 /* PresenterDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */; };
 		DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */; };
 		DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA055AFF20A38FCB002854F9 /* ControllerCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerCardProtocol.swift; sourceTree = "<group>"; };
 		DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegateProtocol.swift; sourceTree = "<group>"; };
 		DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Shared.swift"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				DAFEF382209AFD2D00740A88 /* ControllerProtocol.swift */,
 				DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */,
 				DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */,
+				DA055AFF20A38FCB002854F9 /* ControllerCardProtocol.swift */,
 				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
 				DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */,
@@ -353,6 +356,7 @@
 				DAFD2FCB209CBDAC0005F5D2 /* TransitionProtocol.swift in Sources */,
 				DADB5EC0209B109B00CFFC9A /* PresenterProtocol+Default.swift in Sources */,
 				DAF7E65A209B051F00B8A39A /* PresenterProtocol.swift in Sources */,
+				DA055B0020A38FCB002854F9 /* ControllerCardProtocol.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
 				DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
