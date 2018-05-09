@@ -20,7 +20,7 @@ class TestPresenter_ViewModel:XCTestCase {
         let title:String = "hello world"
         let view:View = View()
         self.presenter.outlets.view = view
-        self.viewModel.viewTitle = title
+        self.viewModel.view.title = title
         
         self.presenter.updateWith(viewModel:self.viewModel)
         
@@ -31,7 +31,7 @@ class TestPresenter_ViewModel:XCTestCase {
         let size:CGSize = CGSize(width:10, height:10)
         let viewScroll:ViewScroll = ViewScroll()
         self.presenter.outlets.viewScroll = viewScroll
-        self.viewModel.scrollContentSize = size
+        self.viewModel.scroll.contentSize = size
         
         self.presenter.updateWith(viewModel:self.viewModel)
         
@@ -42,7 +42,7 @@ class TestPresenter_ViewModel:XCTestCase {
         let frame:CGRect = CGRect(x:12, y:23, width:34, height:45)
         let viewBoard:ViewBoard = ViewBoard()
         self.presenter.outlets.viewBoard = viewBoard
-        self.viewModel.boardFrame = frame
+        self.viewModel.board.frame = frame
         
         self.presenter.updateWith(viewModel:self.viewModel)
         

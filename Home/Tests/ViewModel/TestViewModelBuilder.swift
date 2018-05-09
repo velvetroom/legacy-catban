@@ -29,9 +29,9 @@ class TestViewModelBuilder:XCTestCase {
     }
     
     func testProperties() {
-        XCTAssertEqual(self.viewModel.viewTitle, Constants.projectName, "Failed to assign project name")
-        XCTAssertNotEqual(self.viewModel.scrollContentSize, CGSize.zero, "Failed to build content size")
-        XCTAssertNotEqual(self.viewModel.boardFrame, CGRect.zero, "Failed to build board frame")
+        XCTAssertEqual(self.viewModel.view.title, Constants.projectName, "Failed to assign project name")
+        XCTAssertNotEqual(self.viewModel.scroll.contentSize, CGSize.zero, "Failed to build content size")
+        XCTAssertNotEqual(self.viewModel.board.frame, CGRect.zero, "Failed to build board frame")
     }
     
     private func configureProject() {

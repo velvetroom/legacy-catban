@@ -17,15 +17,15 @@ class ViewModelBuilder {
     }
     
     private func buildViewWith() {
-        self.viewModel.viewTitle = self.project.name
+        self.viewModel.view.title = self.project.name
     }
     
     private func buildScrollWith() {
-        self.viewModel.scrollContentSize = self.contentSize()
+        self.viewModel.scroll.contentSize = self.contentSize()
     }
     
     private func buildBoardWith() {
-        self.viewModel.boardFrame = CGRect(origin:CGPoint.zero, size:self.viewModel.scrollContentSize)
+        self.viewModel.board.frame = CGRect(origin:CGPoint.zero, size:self.viewModel.scroll.contentSize)
     }
     
     private func contentSize() -> CGSize {

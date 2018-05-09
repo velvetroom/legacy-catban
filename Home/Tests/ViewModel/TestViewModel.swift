@@ -11,8 +11,11 @@ class TestViewModel:XCTestCase {
     
     func testLoad() {
         XCTAssertNotNil(self.viewModel, "Failed to load view model")
-        XCTAssertNotNil(self.viewModel.scrollContentSize, "Failed to load")
-        XCTAssertNotNil(self.viewModel.boardFrame, "Failed to load")
-        XCTAssertNotNil(self.viewModel.viewTitle, "Failed to load")
+    }
+    
+    func testProperties() {
+        XCTAssertNotNil(self.viewModel.view, "Failed to load")
+        XCTAssertNotNil(self.viewModel.scroll, "Failed to load")
+        XCTAssertNotNil(self.viewModel.board, "Failed to load")
     }
 }

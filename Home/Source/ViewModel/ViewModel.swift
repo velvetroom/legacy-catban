@@ -1,13 +1,13 @@
 import UIKit
 
 struct ViewModel {
-    var viewTitle:String
-    var scrollContentSize:CGSize
-    var boardFrame:CGRect
+    var view:ViewModelView
+    var scroll:ViewModelScroll
+    var board:ViewModelBoard
     
     init() {
-        self.viewTitle = String()
-        self.scrollContentSize = CGSize.zero
-        self.boardFrame = CGRect.zero
+        self.view = ViewModelView()
+        self.scroll = ViewModelScroll()
+        self.board = ViewModelBoard()
     }
 }

@@ -10,6 +10,13 @@
 		DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B4209F383500AD4425 /* TestViewScroll.swift */; };
 		DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B6209F386300AD4425 /* ViewScroll.swift */; };
 		DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */; };
+		DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8020A2C27800E89334 /* ViewColumn.swift */; };
+		DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */; };
+		DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8420A2C33500E89334 /* ViewModelView.swift */; };
+		DA47FB8720A2C35600E89334 /* ViewModelScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */; };
+		DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */; };
+		DA47FB8B20A2C39F00E89334 /* TestViewModelScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */; };
+		DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAB20A199AC002461E6 /* ViewContants.swift */; };
 		DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAD20A19B13002461E6 /* TestViewBoard.swift */; };
@@ -53,6 +60,13 @@
 		DA0E58B4209F383500AD4425 /* TestViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewScroll.swift; sourceTree = "<group>"; };
 		DA0E58B6209F386300AD4425 /* ViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScroll.swift; sourceTree = "<group>"; };
 		DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
+		DA47FB8020A2C27800E89334 /* ViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
+		DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelView.swift; sourceTree = "<group>"; };
+		DA47FB8420A2C33500E89334 /* ViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelView.swift; sourceTree = "<group>"; };
+		DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScroll.swift; sourceTree = "<group>"; };
+		DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoard.swift; sourceTree = "<group>"; };
+		DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelScroll.swift; sourceTree = "<group>"; };
+		DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBoard.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA978FAB20A199AC002461E6 /* ViewContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContants.swift; sourceTree = "<group>"; };
 		DA978FAD20A19B13002461E6 /* TestViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoard.swift; sourceTree = "<group>"; };
@@ -119,6 +133,9 @@
 			children = (
 				DA978FC520A1B476002461E6 /* TestViewModel.swift */,
 				DAEE4AA720A1F1B0002D1419 /* TestViewModelBuilder.swift */,
+				DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */,
+				DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */,
+				DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +145,9 @@
 			children = (
 				DA978FC320A1B467002461E6 /* ViewModel.swift */,
 				DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */,
+				DA47FB8420A2C33500E89334 /* ViewModelView.swift */,
+				DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */,
+				DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -139,6 +159,7 @@
 				DA978FAB20A199AC002461E6 /* ViewContants.swift */,
 				DA0E58B6209F386300AD4425 /* ViewScroll.swift */,
 				DA978FAF20A19EFD002461E6 /* ViewBoard.swift */,
+				DA47FB8020A2C27800E89334 /* ViewColumn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,13 +368,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
+				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
+				DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */,
 				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
+				DA47FB8720A2C35600E89334 /* ViewModelScroll.swift in Sources */,
 				DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA978FB420A1A3F5002461E6 /* PresenterOutlets.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
+				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
 				DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */,
 			);
@@ -372,6 +397,9 @@
 				DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */,
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
+				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
+				DA47FB8B20A2C39F00E89334 /* TestViewModelScroll.swift in Sources */,
+				DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
