@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 class ViewColumn:UIView {
     weak var labelName:UILabel!
@@ -21,7 +22,25 @@ class ViewColumn:UIView {
     }
     
     private func factoryOutlets() {
+        self.factoryIcon()
         self.factoryLabelTitle()
+    }
+    
+    private func factoryIcon() {
+        let icon:UIImageView = UIImageView()
+        icon.isUserInteractionEnabled = false
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.contentMode = UIViewContentMode.center
+        icon.clipsToBounds = true
+        icon.image = UIImage(name:ViewConstants.ColumnTitle.iconImage, in:type(of:self))
+        
+        self.addSubview(icon)
+        
+        icon.topAnchor.constraint(
+            equalTo:self.topAnchor, constant:ViewConstants.ColumnTitle.iconTop).isActive = true
+        icon.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        icon.widthAnchor.constraint(equalToConstant:ViewConstants.ColumnTitle.iconWidth).isActive = true
+        icon.heightAnchor.constraint(equalToConstant:ViewConstants.ColumnTitle.iconHeight).isActive = true
     }
     
     private func factoryLabelTitle() {

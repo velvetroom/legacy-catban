@@ -13,12 +13,16 @@ struct ViewConstants {
     }
     
     struct ColumnTitle {
+        static let iconImage:String = "assetColumnIcon"
         static let height:CGFloat = 60
         static let fontSize:CGFloat = 15
         static let labelTop:CGFloat = 30
         static let labelHeight:CGFloat = 20
-        static let labelLeft:CGFloat = 10
+        static let labelLeft:CGFloat = 14
         static let labelAlpha:CGFloat = 0.3
+        static let iconTop:CGFloat = 30
+        static let iconHeight:CGFloat = 22
+        static let iconWidth:CGFloat = 14
     }
     
     struct Card {
