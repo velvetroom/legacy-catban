@@ -4,17 +4,19 @@ import Board
 class ViewModelBuilder {
     var viewModel:ViewModel
     private var project:ProjectManagedProtocol!
+    private let cardBuilder:ViewModelBuilderCard
     
     init() {
+        self.cardBuilder = ViewModelBuilderCard()
         self.viewModel = ViewModel()
     }
     
     func buildWith(project:ProjectManagedProtocol) {
         self.project = project
+        self.buildColumns()
         self.buildView()
         self.buildScroll()
         self.buildBoard()
-        self.buildColumns()
     }
     
     private func buildView() {
@@ -33,6 +35,7 @@ class ViewModelBuilder {
         var left:CGFloat = ViewConstants.Board.paddingHorizontal
         self.project.iterate { (column:ColumnProtocol) in
             self.add(column:column, at:left)
+            self.buildCardsFor(column:column, at:left)
             left += ViewConstants.Column.width + ViewConstants.Board.columnSpacing
         }
     }
@@ -61,9 +64,18 @@ class ViewModelBuilder {
     }
     
     private func columnHeight() -> CGFloat {
-        var height:CGFloat = ViewConstants.ColumnTitle.height + ViewConstants.Column.paddingBottom
-        height += CGFloat(self.maxCards()) * ViewConstants.Card.height
-        return height
+        return self.maxCardBottom() + ViewConstants.Column.paddingBottom
+    }
+    
+    private func maxCardBottom() -> CGFloat {
+        var maxBottom:CGFloat = 0
+        for card:ViewModelCard in self.viewModel.cards {
+            let bottom:CGFloat = card.top + card.height
+            if bottom > maxBottom {
+                maxBottom = bottom
+            }
+        }
+        return maxBottom
     }
     
     private func maxCards() -> Int {
@@ -81,5 +93,27 @@ class ViewModelBuilder {
         viewModel.name = column.name
         viewModel.left = left
         self.viewModel.columns.append(viewModel)
+    }
+    
+    private func buildCardsFor(column:ColumnProtocol, at left:CGFloat) {
+        let left:CGFloat = left + ViewConstants.Card.contentPadding
+        var top:CGFloat = ViewConstants.ColumnTitle.height
+        column.iterate { (card:CardProtocol) in
+            self.add(card:card, at:left, and:top)
+            if let lastCard:ViewModelCard = self.viewModel.cards.last {
+                top += lastCard.height
+            }
+            top += ViewConstants.Board.cardSpacing
+        }
+    }
+    
+    private func add(card:CardProtocol, at left:CGFloat, and top:CGFloat) {
+        var viewModel:ViewModelCard = ViewModelCard()
+        viewModel.content = card.content
+        viewModel.left = left
+        viewModel.top = top
+        viewModel.width = self.cardBuilder.width
+        viewModel.height = self.cardBuilder.heightFor(content:card.content)
+        self.viewModel.cards.append(viewModel)
     }
 }

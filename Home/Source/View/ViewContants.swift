@@ -4,6 +4,7 @@ struct ViewConstants {
     struct Board {
         static let paddingHorizontal:CGFloat = 20
         static let columnSpacing:CGFloat = 10
+        static let cardSpacing:CGFloat = 4
     }
     
     struct Column {
@@ -26,6 +27,9 @@ struct ViewConstants {
     }
     
     struct Card {
-        static let height:CGFloat = 120
+        static let contentPadding:CGFloat = 15
+        static let fontSize:CGFloat = 15
+        static let minContentHeight:CGFloat = 10
+        static let maxHeight:CGFloat = 1000
     }
 }

@@ -1,0 +1,33 @@
+import UIKit
+
+class ViewModelBuilderCard {
+    let width:CGFloat
+    private let attributes:[NSAttributedStringKey:Any]
+    private let options:NSStringDrawingOptions
+    private let size:CGSize
+    private let minHeight:CGFloat
+    
+    init() {
+        let outerPadding:CGFloat = ViewConstants.Column.paddingHorizontal + ViewConstants.Column.paddingHorizontal
+        let innerPadding:CGFloat = ViewConstants.Card.contentPadding + ViewConstants.Card.contentPadding
+        let width:CGFloat = ViewConstants.Column.width - outerPadding
+        let maxWidth:CGFloat = width - innerPadding
+        self.attributes = [NSAttributedStringKey.font:
+            UIFont.systemFont(ofSize:ViewConstants.Card.fontSize, weight:UIFont.Weight.regular)]
+        self.options = NSStringDrawingOptions([NSStringDrawingOptions.usesFontLeading,
+                                               NSStringDrawingOptions.usesLineFragmentOrigin])
+        self.size = CGSize(width:maxWidth, height:ViewConstants.Card.maxHeight)
+        self.minHeight = innerPadding + ViewConstants.Card.minContentHeight
+        self.width = width
+    }
+    
+    func heightFor(content:String) -> CGFloat {
+        return max(self.heightForStringWith(content:content), self.minHeight)
+    }
+    
+    private func heightForStringWith(content:String) -> CGFloat {
+        let string:NSAttributedString = NSAttributedString(string:content, attributes:self.attributes)
+        let rect:CGRect = string.boundingRect(with:self.size, options:self.options, context:nil)
+        return ceil(rect.height)
+    }
+}

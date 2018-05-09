@@ -27,22 +27,20 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
     }
     
     func testReloadColumns() {
-        self.configureViewModelWith(columns:Constants.initialColumns)
-        self.presenter.updateWith(viewModel:self.viewModel)
+        self.updatePresenterWith(columns:Constants.initialColumns)
         
         XCTAssertEqual(self.viewBoard.columns.count, Constants.initialColumns, "Invalid amount of columns")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.initialColumns, "Invalid amount of subviews")
         self.validateColumns()
         
-        self.configureViewModelWith(columns:Constants.finalColumns)
-        self.presenter.updateWith(viewModel:self.viewModel)
+        self.updatePresenterWith(columns:Constants.finalColumns)
         
         XCTAssertEqual(self.viewBoard.columns.count, Constants.finalColumns, "Invalid amount of columns")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.finalColumns, "Invalid amount of subviews")
         self.validateColumns()
     }
     
-    private func configureViewModelWith(columns:Int) {
+    private func updatePresenterWith(columns:Int) {
         self.viewModel.columns = []
         for _:Int in 0 ..< columns {
             var column:ViewModelColumn = ViewModelColumn()
@@ -50,6 +48,7 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
             column.left = Constants.layoutConstant
             self.viewModel.columns.append(column)
         }
+        self.presenter.updateWith(viewModel:self.viewModel)
     }
     
     private func validateColumns() {

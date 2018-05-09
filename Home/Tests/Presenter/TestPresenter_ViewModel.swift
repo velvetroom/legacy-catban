@@ -59,4 +59,15 @@ class TestPresenter_ViewModel:XCTestCase {
         
         XCTAssertEqual(viewBoard.columns.count, columns.count, "Failed to update columns")
     }
+    
+    func testUpdateCards() {
+        let cards:[ViewModelCard] = [ViewModelCard(), ViewModelCard()]
+        let viewBoard:ViewBoard = ViewBoard()
+        self.presenter.outlets.viewBoard = viewBoard
+        self.viewModel.cards = cards
+        
+        self.presenter.updateWith(viewModel:self.viewModel)
+        
+        XCTAssertEqual(viewBoard.cards.count, cards.count, "Failed to update cards")
+    }
 }

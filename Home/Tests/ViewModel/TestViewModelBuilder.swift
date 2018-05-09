@@ -33,10 +33,14 @@ class TestViewModelBuilder:XCTestCase {
         XCTAssertNotEqual(self.viewModel.scroll.contentSize, CGSize.zero, "Failed to build content size")
         XCTAssertNotEqual(self.viewModel.board.frame, CGRect.zero, "Failed to build board frame")
         XCTAssertFalse(self.viewModel.columns.isEmpty, "Failed to build columns")
+        XCTAssertFalse(self.viewModel.cards.isEmpty, "Failed to build cards")
     }
     
     private func configureProject() {
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        let card:CardProtocol = CardFactory.newCard()
+        column.add(card:card)
         self.project.name = Constants.projectName
-        self.project.add(column:ColumnFactory.newColumn())
+        self.project.add(column:column)
     }
 }

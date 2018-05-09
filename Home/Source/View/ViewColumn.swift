@@ -2,8 +2,8 @@ import UIKit
 import Shared
 
 class ViewColumn:UIView {
-    weak var labelName:UILabel!
     weak var layoutLeft:NSLayoutConstraint!
+    private(set) weak var labelName:UILabel!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -23,7 +23,7 @@ class ViewColumn:UIView {
     
     private func factoryOutlets() {
         self.factoryIcon()
-        self.factoryLabelTitle()
+        self.factoryLabelName()
     }
     
     private func factoryIcon() {
@@ -43,7 +43,7 @@ class ViewColumn:UIView {
         icon.heightAnchor.constraint(equalToConstant:ViewConstants.ColumnTitle.iconHeight).isActive = true
     }
     
-    private func factoryLabelTitle() {
+    private func factoryLabelName() {
         let labelName:UILabel = UILabel()
         labelName.isUserInteractionEnabled = false
         labelName.translatesAutoresizingMaskIntoConstraints = false
