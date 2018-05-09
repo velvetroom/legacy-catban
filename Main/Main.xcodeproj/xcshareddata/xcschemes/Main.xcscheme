@@ -98,6 +98,16 @@
                ReferencedContainer = "container:../Template/Template.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DABDB02020A38840001B7D47"
+               BuildableName = "TestsCard.xctest"
+               BlueprintName = "TestsCard"
+               ReferencedContainer = "container:../Card/Card.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
