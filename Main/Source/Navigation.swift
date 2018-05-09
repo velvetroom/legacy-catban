@@ -20,12 +20,12 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToLoad() {
-        let controller:ControllerProtocol = ControllerFactory.factoryLoad()
+        let controller:ControllerProtocol = Configuration.controllerLoadType.init()
         self.transitionTo(controller:controller)
     }
     
     func transitionToHome(project:ProjectManagedProtocol) {
-        let controller:ControllerProjectProtocol = ControllerFactory.factoryHome()
+        let controller:ControllerProjectProtocol = Configuration.controllerHomeType.init()
         controller.project = project
         self.transitionTo(controller:controller)
     }

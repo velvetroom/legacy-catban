@@ -5,4 +5,5 @@ public struct Configuration {
     public static var repositoryProjectType:RepositoryProjectProtocol.Type!
     public static var controllerLoadType:ControllerProtocol.Type!
     public static var controllerHomeType:ControllerProjectProtocol.Type!
+    public static var controllerCardType:ControllerCardProtocol.Type!
 }
