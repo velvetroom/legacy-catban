@@ -14,10 +14,10 @@ struct ViewConstants {
     
     struct ColumnTitle {
         static let height:CGFloat = 60
-        static let fontSize:CGFloat = 17
-        static let labelTop:CGFloat = 20
+        static let fontSize:CGFloat = 15
+        static let labelTop:CGFloat = 30
         static let labelHeight:CGFloat = 20
-        static let labelLeft:CGFloat = 20
+        static let labelLeft:CGFloat = 10
         static let labelAlpha:CGFloat = 0.3
     }
     
