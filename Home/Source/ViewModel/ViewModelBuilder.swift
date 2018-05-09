@@ -96,7 +96,7 @@ class ViewModelBuilder {
     }
     
     private func buildCardsFor(column:ColumnProtocol, at left:CGFloat) {
-        let left:CGFloat = left + ViewConstants.Card.contentPadding
+        let left:CGFloat = left + ViewConstants.Column.paddingHorizontal
         var top:CGFloat = ViewConstants.ColumnTitle.height
         column.iterate { (card:CardProtocol) in
             self.add(card:card, at:left, and:top)

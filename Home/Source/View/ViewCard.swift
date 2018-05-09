@@ -21,6 +21,7 @@ class ViewCard:UIView {
         self.backgroundColor = UIColor.white
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
     }
     
     private func factoryOutlets() {
@@ -39,9 +40,13 @@ class ViewCard:UIView {
         
         self.addSubview(labelContent)
         
-        labelContent.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        labelContent.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        labelContent.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        labelContent.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        labelContent.topAnchor.constraint(equalTo:self.topAnchor,
+                                          constant:ViewConstants.Card.contentPadding).isActive = true
+        labelContent.bottomAnchor.constraint(equalTo:self.bottomAnchor,
+                                             constant:-ViewConstants.Card.contentPadding).isActive = true
+        labelContent.leftAnchor.constraint(equalTo:self.leftAnchor,
+                                           constant:ViewConstants.Card.contentPadding).isActive = true
+        labelContent.rightAnchor.constraint(equalTo:self.rightAnchor,
+                                            constant:-ViewConstants.Card.contentPadding).isActive = true
     }
 }

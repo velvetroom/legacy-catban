@@ -6,6 +6,7 @@ class ViewModelBuilderCard {
     private let options:NSStringDrawingOptions
     private let size:CGSize
     private let minHeight:CGFloat
+    private let innerPadding:CGFloat
     
     init() {
         let outerPadding:CGFloat = ViewConstants.Column.paddingHorizontal + ViewConstants.Column.paddingHorizontal
@@ -19,6 +20,7 @@ class ViewModelBuilderCard {
         self.size = CGSize(width:maxWidth, height:ViewConstants.Card.maxHeight)
         self.minHeight = innerPadding + ViewConstants.Card.minContentHeight
         self.width = width
+        self.innerPadding = innerPadding
     }
     
     func heightFor(content:String) -> CGFloat {
@@ -28,6 +30,6 @@ class ViewModelBuilderCard {
     private func heightForStringWith(content:String) -> CGFloat {
         let string:NSAttributedString = NSAttributedString(string:content, attributes:self.attributes)
         let rect:CGRect = string.boundingRect(with:self.size, options:self.options, context:nil)
-        return ceil(rect.height)
+        return ceil(rect.height) + innerPadding
     }
 }

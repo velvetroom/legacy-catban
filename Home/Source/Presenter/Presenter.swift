@@ -109,6 +109,11 @@ class Presenter:PresenterProtocol {
         view.layoutTop.constant = viewModel.top
         view.layoutLeft.constant = viewModel.left
         view.labelContent.text = viewModel.content
+        
+        view.layoutWidth.isActive = true
+        view.layoutHeight.isActive = true
+        view.layoutTop.isActive = true
+        view.layoutLeft.isActive = true
     }
     
     private func addCard(view:ViewCard, to viewBoard:ViewBoard) {
@@ -119,9 +124,5 @@ class Presenter:PresenterProtocol {
         view.layoutHeight = view.heightAnchor.constraint(equalToConstant:0)
         view.layoutTop = view.topAnchor.constraint(equalTo:viewBoard.topAnchor)
         view.layoutLeft = view.leftAnchor.constraint(equalTo:viewBoard.leftAnchor)
-        view.layoutWidth.isActive = true
-        view.layoutHeight.isActive = true
-        view.layoutTop.isActive = true
-        view.layoutLeft.isActive = true
     }
 }
