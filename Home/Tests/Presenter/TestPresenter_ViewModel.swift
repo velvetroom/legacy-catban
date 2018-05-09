@@ -48,4 +48,15 @@ class TestPresenter_ViewModel:XCTestCase {
         
         XCTAssertEqual(viewBoard.frame, frame, "Failed to update board frame")
     }
+    
+    func testUpdateColumns() {
+        let columns:[ViewModelColumn] = [ViewModelColumn(), ViewModelColumn()]
+        let viewBoard:ViewBoard = ViewBoard()
+        self.presenter.outlets.viewBoard = viewBoard
+        self.viewModel.columns = columns
+        
+        self.presenter.updateWith(viewModel:self.viewModel)
+        
+        XCTAssertEqual(viewBoard.columns.count, columns.count, "Failed to update columns")
+    }
 }

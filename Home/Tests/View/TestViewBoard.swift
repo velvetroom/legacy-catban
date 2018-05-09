@@ -12,4 +12,9 @@ class TestViewBoard:XCTestCase {
     func testLoad() {
         XCTAssertNotNil(self.view, "Failed to load view")
     }
+    
+    func testProperties() {
+        XCTAssertNotNil(self.view.columns, "Failed to load property")
+        XCTAssertTrue(self.view.columns.isEmpty, "Columns should be initially empty")
+    }
 }

@@ -17,5 +17,6 @@ class TestViewModel:XCTestCase {
         XCTAssertNotNil(self.viewModel.view, "Failed to load")
         XCTAssertNotNil(self.viewModel.scroll, "Failed to load")
         XCTAssertNotNil(self.viewModel.board, "Failed to load")
+        XCTAssertNotNil(self.viewModel.columns, "Failed to load")
     }
 }

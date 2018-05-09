@@ -32,9 +32,11 @@ class TestViewModelBuilder:XCTestCase {
         XCTAssertEqual(self.viewModel.view.title, Constants.projectName, "Failed to assign project name")
         XCTAssertNotEqual(self.viewModel.scroll.contentSize, CGSize.zero, "Failed to build content size")
         XCTAssertNotEqual(self.viewModel.board.frame, CGRect.zero, "Failed to build board frame")
+        XCTAssertFalse(self.viewModel.columns.isEmpty, "Failed to build columns")
     }
     
     private func configureProject() {
         self.project.name = Constants.projectName
+        self.project.add(column:ColumnFactory.newColumn())
     }
 }

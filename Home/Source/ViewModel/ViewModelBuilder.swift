@@ -11,21 +11,30 @@ class ViewModelBuilder {
     
     func buildWith(project:ProjectManagedProtocol) {
         self.project = project
-        self.buildViewWith()
-        self.buildScrollWith()
-        self.buildBoardWith()
+        self.buildView()
+        self.buildScroll()
+        self.buildBoard()
+        self.buildColumns()
     }
     
-    private func buildViewWith() {
+    private func buildView() {
         self.viewModel.view.title = self.project.name
     }
     
-    private func buildScrollWith() {
+    private func buildScroll() {
         self.viewModel.scroll.contentSize = self.contentSize()
     }
     
-    private func buildBoardWith() {
+    private func buildBoard() {
         self.viewModel.board.frame = CGRect(origin:CGPoint.zero, size:self.viewModel.scroll.contentSize)
+    }
+    
+    private func buildColumns() {
+        var left:CGFloat = ViewConstants.Board.paddingHorizontal
+        self.project.iterate { (column:ColumnProtocol) in
+            self.add(column:column, at:left)
+            left += ViewConstants.Column.width + ViewConstants.Board.columnSpacing
+        }
     }
     
     private func contentSize() -> CGSize {
@@ -52,5 +61,12 @@ class ViewModelBuilder {
             }
         }
         return max
+    }
+    
+    private func add(column:ColumnProtocol, at left:CGFloat) {
+        var viewModel:ViewModelColumn = ViewModelColumn()
+        viewModel.title = column.name
+        viewModel.left = left
+        self.viewModel.columns.append(viewModel)
     }
 }

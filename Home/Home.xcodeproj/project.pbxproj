@@ -17,6 +17,10 @@
 		DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */; };
 		DA47FB8B20A2C39F00E89334 /* TestViewModelScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */; };
 		DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */; };
+		DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */; };
+		DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */; };
+		DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */; };
+		DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAB20A199AC002461E6 /* ViewContants.swift */; };
 		DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAD20A19B13002461E6 /* TestViewBoard.swift */; };
@@ -67,6 +71,10 @@
 		DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoard.swift; sourceTree = "<group>"; };
 		DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelScroll.swift; sourceTree = "<group>"; };
 		DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBoard.swift; sourceTree = "<group>"; };
+		DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
+		DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelColumn.swift; sourceTree = "<group>"; };
+		DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelColumn.swift; sourceTree = "<group>"; };
+		DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel_Columns.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA978FAB20A199AC002461E6 /* ViewContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContants.swift; sourceTree = "<group>"; };
 		DA978FAD20A19B13002461E6 /* TestViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoard.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */,
 				DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */,
 				DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */,
+				DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				DA47FB8420A2C33500E89334 /* ViewModelView.swift */,
 				DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */,
 				DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */,
+				DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 				DADB5EC3209B120F00CFFC9A /* TestView.swift */,
 				DA0E58B4209F383500AD4425 /* TestViewScroll.swift */,
 				DA978FAD20A19B13002461E6 /* TestViewBoard.swift */,
+				DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */,
 				DAFD2FC0209CA9E30005F5D2 /* MockViewDelegateProtocol.swift */,
 			);
 			path = View;
@@ -191,6 +202,7 @@
 				DAF7E65F209B064700B8A39A /* TestPresenter.swift */,
 				DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */,
 				DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */,
+				DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */,
 				DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */,
 				DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
@@ -372,6 +384,7 @@
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
 				DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */,
 				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
+				DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */,
 				DA47FB8720A2C35600E89334 /* ViewModelScroll.swift in Sources */,
 				DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
@@ -398,6 +411,8 @@
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
 				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
+				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
+				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
 				DA47FB8B20A2C39F00E89334 /* TestViewModelScroll.swift in Sources */,
 				DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
@@ -406,6 +421,7 @@
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
+				DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

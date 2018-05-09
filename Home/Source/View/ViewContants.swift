@@ -3,6 +3,7 @@ import UIKit
 struct ViewConstants {
     struct Board {
         static let paddingHorizontal:CGFloat = 20
+        static let columnSpacing:CGFloat = 10
     }
     
     struct Column {
