@@ -12,6 +12,8 @@
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
 		DABDB03920A38B85001B7D47 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03820A38B85001B7D47 /* Shared.framework */; };
 		DABDB03B20A38B97001B7D47 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03A20A38B97001B7D47 /* Board.framework */; };
+		DABDB03C20A38BB9001B7D47 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03A20A38B97001B7D47 /* Board.framework */; };
+		DABDB03D20A38BBB001B7D47 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03820A38B85001B7D47 /* Shared.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DABDB02620A38840001B7D47 /* Card.framework in Frameworks */,
+				DABDB03C20A38BB9001B7D47 /* Board.framework in Frameworks */,
+				DABDB03D20A38BBB001B7D47 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,6 @@ class TestController:XCTestCase {
     }
     
     func testLoad() {
-        
+        XCTAssertNotNil(self.controller, "Failed to load controller")
     }
 }
