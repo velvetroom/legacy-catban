@@ -43,7 +43,7 @@ class TestProject:XCTestCase {
     }
     
     func testCopyProjectName() {
-        var projectA:ProjectProtocol = ProjectFactory.newProject()
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
         let projectB:ProjectProtocol = ProjectFactory.blankProject()
         projectA.name = Constants.projectName
         projectB.copy(project:projectA)
