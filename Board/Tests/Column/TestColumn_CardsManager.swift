@@ -49,15 +49,6 @@ class TestColumn_CardsManager:XCTestCase {
         XCTAssertEqual(self.model.countCards, 0, "Failed to remove card")
     }
     
-    func testCardAt() {
-        let cardA:CardProtocol = CardFactory.newCard()
-        let cardB:CardProtocol = CardFactory.newCard()
-        self.model.add(card:cardA)
-        self.model.add(card:cardB)
-        let retrieved:CardProtocol = self.model.cardAt(index:1)
-        XCTAssertEqual(retrieved.identifier, cardB.identifier, "Retrieved card is not the right one")
-    }
-    
     func testIterate() {
         let cardA:CardProtocol = CardFactory.newCard()
         let cardB:CardProtocol = CardFactory.newCard()

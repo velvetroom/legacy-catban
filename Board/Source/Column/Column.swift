@@ -36,10 +36,6 @@ class Column:ColumnProtocol, Equatable {
         }
     }
     
-    func cardAt(index:Int) -> CardProtocol {
-        return self.cards[index]
-    }
-    
     func iterate(cards:((CardProtocol) -> Void)) {
         self.cards.forEach(cards)
     }
