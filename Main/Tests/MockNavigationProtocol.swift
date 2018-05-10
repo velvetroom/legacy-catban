@@ -7,6 +7,7 @@ class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
     var onTransitionToLoad:(() -> Void)?
     var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
+    var onTransitionToCard:((CardProtocol, ProjectManagedProtocol) -> Void)?
     var onNavigateToController:((ControllerProtocol) -> Void)?
     
     required init() { }
@@ -22,5 +23,9 @@ class MockNavigationProtocol:NavigationProtocol {
     
     func transitionToHome(project:ProjectManagedProtocol) {
         self.onTransitionToHome?(project)
+    }
+    
+    func transitionToCard(card:CardProtocol, in project:ProjectManagedProtocol) {
+        self.onTransitionToCard?(card, project)
     }
 }

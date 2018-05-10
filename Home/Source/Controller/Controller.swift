@@ -13,4 +13,8 @@ public class Controller:ControllerProjectProtocol {
         self.presenter.delegate = self
         presenter.controller = self
     }
+    
+    func editCard(card:CardProtocol) {
+        self.transiton.transitionToCard(card:card, in:self.project)
+    }
 }

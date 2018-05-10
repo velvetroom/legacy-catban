@@ -1,12 +1,19 @@
 import XCTest
 @testable import Home
+@testable import Board
 
 class TestViewCard:XCTestCase {
     private var view:ViewCard!
+    private var card:CardProtocol!
+    private var controller:MockController!
     
     override func setUp() {
         super.setUp()
         self.view = ViewCard()
+        self.controller = MockController()
+        self.card = CardFactory.newCard()
+        self.view.card = self.card
+        self.view.controller = controller
     }
     
     func testLoad() {
@@ -19,11 +26,20 @@ class TestViewCard:XCTestCase {
         XCTAssertNil(self.view.layoutTop, "Property not found")
         XCTAssertNil(self.view.layoutHeight, "Property not found")
         XCTAssertNil(self.view.layoutWidth, "Property not found")
-        XCTAssertNil(self.view.controller, "Property not found")
     }
     
     func testControllerIsNotRetained() {
         self.view.controller = Controller()
         XCTAssertNil(self.view.controller, "Strong retained controller")
+    }
+    
+    func testCallEditCardOnController() {
+        var controllerCalled:Bool = false
+        self.controller.onEditCard = { (card:CardProtocol) in
+            controllerCalled = true
+        }
+        
+        self.view.selectorButton(sender:UIButton())
+        XCTAssertTrue(controllerCalled, "Not called")
     }
 }

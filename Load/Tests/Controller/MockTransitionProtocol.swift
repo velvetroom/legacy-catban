@@ -7,6 +7,8 @@ class MockTransitionProtocol:TransitionProtocol {
     
     func transitionToLoad() { }
     
+    func transitionToCard(card:CardProtocol, in project:ProjectManagedProtocol) { }
+    
     func transitionToHome(project:ProjectManagedProtocol) {
         self.onTransitionToHome?(project)
     }

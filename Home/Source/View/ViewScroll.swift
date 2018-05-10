@@ -17,5 +17,6 @@ class ViewScroll:UIScrollView {
         self.alwaysBounceHorizontal = true
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
+        self.decelerationRate = UIScrollViewDecelerationRateFast
     }
 }

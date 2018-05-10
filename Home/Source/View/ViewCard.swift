@@ -1,6 +1,8 @@
 import UIKit
+import Board
 
 class ViewCard:UIView {
+    weak var card:CardProtocol!
     weak var controller:Controller?
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
@@ -16,6 +18,11 @@ class ViewCard:UIView {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    @objc func selectorButton(sender button:UIButton) {
+        self.showSelected()
+        self.controller?.editCard(card:self.card)
     }
     
     private func configureView() {
@@ -62,10 +69,6 @@ class ViewCard:UIView {
                                            constant:ViewConstants.Card.contentPadding).isActive = true
         labelContent.rightAnchor.constraint(equalTo:self.rightAnchor,
                                             constant:-ViewConstants.Card.contentPadding).isActive = true
-    }
-    
-    @objc private func selectorButton(sender button:UIButton) {
-        self.showSelected()
     }
     
     private func showSelected() {

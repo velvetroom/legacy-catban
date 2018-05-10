@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B4209F383500AD4425 /* TestViewScroll.swift */; };
 		DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B6209F386300AD4425 /* ViewScroll.swift */; };
+		DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */; };
+		DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451420A4691F00CCC59D /* TestController_Transition.swift */; };
+		DA15451720A46DAD00CCC59D /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockController.swift */; };
 		DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */; };
 		DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8020A2C27800E89334 /* ViewColumn.swift */; };
 		DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */; };
@@ -72,6 +75,9 @@
 /* Begin PBXFileReference section */
 		DA0E58B4209F383500AD4425 /* TestViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewScroll.swift; sourceTree = "<group>"; };
 		DA0E58B6209F386300AD4425 /* ViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScroll.swift; sourceTree = "<group>"; };
+		DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
+		DA15451420A4691F00CCC59D /* TestController_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Transition.swift; sourceTree = "<group>"; };
+		DA15451620A46DAD00CCC59D /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
 		DA47FB8020A2C27800E89334 /* ViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
 		DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelView.swift; sourceTree = "<group>"; };
@@ -299,8 +305,11 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF367209AF8C700740A88 /* TestController.swift */,
+				DA15451420A4691F00CCC59D /* TestController_Transition.swift */,
 				DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */,
+				DA15451620A46DAD00CCC59D /* MockController.swift */,
 				DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */,
+				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,12 +453,14 @@
 				DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
+				DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */,
 				DA978FBE20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */,
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
+				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
 				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
 				DA6D001920A30B7A00E50F0A /* TestViewModelBuilder_Height.swift in Sources */,
@@ -458,6 +469,7 @@
 				DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
+				DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */,
 				DA6D002120A31F0800E50F0A /* TestViewModelBuilderCard.swift in Sources */,
 				DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,

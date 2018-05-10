@@ -59,4 +59,26 @@ class TestNavigation_Transitions:XCTestCase {
         self.model.transitionToHome(project:managed)
         XCTAssertTrue(transition, "Transition never happened")
     }
+    
+    func testTransitionToCard() {
+        var transition:Bool = false
+        self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
+            let view:View = views.first as! View
+            let presenter:PresenterProtocol = view.delegate as! PresenterProtocol
+            let controller:ControllerCardProtocol = presenter.delegate as! ControllerCardProtocol
+            XCTAssertNotNil(controller, "Invalid view received")
+            XCTAssertNotNil(controller.transiton, "Failed to assign transition")
+            XCTAssertNotNil(controller.project, "Failed to inject project")
+            XCTAssertNotNil(controller.card, "Failed to inject")
+            transition = true
+        }
+        
+        let board:BoardProtocol = BoardFactory.newBoard()
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        let card:CardProtocol = CardFactory.newCard()
+        
+        self.model.transitionToCard(card:card, in:managed)
+        XCTAssertTrue(transition, "Transition never happened")
+    }
 }
