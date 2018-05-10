@@ -21,4 +21,9 @@ class TestController:XCTestCase {
         let presenter:Presenter = self.controller.presenter as! Presenter
         XCTAssertNotNil(presenter.controller, "Failed to inject controller to presenter")
     }
+    
+    func testTransitionIsNotRetained() {
+        self.controller.transiton = MockTransitionProtocol()
+        XCTAssertNil(self.controller.transiton, "Strong retained")
+    }
 }

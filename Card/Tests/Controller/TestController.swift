@@ -1,5 +1,6 @@
 import XCTest
 @testable import Card
+@testable import Board
 
 class TestController:XCTestCase {
     private var controller:Controller!
@@ -21,5 +22,15 @@ class TestController:XCTestCase {
     func testControllerOnPresenter() {
         let presenter:Presenter = self.controller.presenter as! Presenter
         XCTAssertNotNil(presenter.controller, "Failed to assign")
+    }
+    
+    func testCardIsNotRetained() {
+        self.controller.card = CardFactory.newCard()
+        XCTAssertNil(self.controller.card, "Strong retained")
+    }
+    
+    func testTransitionIsNotRetained() {
+        self.controller.transiton = MockTransitionProtocol()
+        XCTAssertNil(self.controller.transiton, "Strong retained")
     }
 }

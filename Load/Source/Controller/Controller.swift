@@ -5,7 +5,7 @@ import Template
 
 public class Controller:ControllerProtocol {
     public var presenter:PresenterProtocol
-    public var transiton:TransitionProtocol!
+    public weak var transiton:TransitionProtocol!
     var dispatchQueue:DispatchQueue
     var repository:RepositoryBoardProtocol
     

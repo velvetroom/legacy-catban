@@ -5,7 +5,7 @@ import Board
 public class Controller:ControllerProjectProtocol {
     public var presenter:PresenterProtocol
     public var project:ProjectManagedProtocol!
-    public var transiton:TransitionProtocol!
+    public weak var transiton:TransitionProtocol!
     
     public required init() {
         let presenter:Presenter = Presenter()
@@ -15,6 +15,9 @@ public class Controller:ControllerProjectProtocol {
     }
     
     func editCardWith(identifier:String) {
+        guard
+            let card:CardProtocol = self.project.cardWith(identifier:identifier)
+        else { return }
         self.transiton.transitionToCard(card:card, in:self.project)
     }
 }

@@ -77,4 +77,9 @@ class TestController:XCTestCase {
         }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
+    
+    func testTransitionIsNotRetained() {
+        self.controller.transiton = MockTransitionProtocol()
+        XCTAssertNil(self.controller.transiton, "Strong retained")
+    }
 }
