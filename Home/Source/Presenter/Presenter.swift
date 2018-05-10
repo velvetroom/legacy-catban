@@ -5,8 +5,8 @@ import Board
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
-    weak var controller:Controller?
-    weak var delegate:PresenterDelegateProtocol?
+    weak var controller:Controller!
+    weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
@@ -22,15 +22,12 @@ class Presenter:PresenterProtocol {
     
     func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
-        self.delegate?.didLoadPresenter()
+        self.delegate.didLoadPresenter()
     }
     
     func shouldUpdate() {
-        guard
-            let project:ProjectManagedProtocol = self.controller?.project
-        else { return }
         let builder:ViewModelBuilder = ViewModelBuilder()
-        builder.buildWith(project:project)
+        builder.buildWith(project:controller.project)
         self.updateWith(viewModel:builder.viewModel)
     }
     

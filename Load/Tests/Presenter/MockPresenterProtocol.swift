@@ -3,7 +3,7 @@ import Foundation
 
 class MockPresenterProtocol:PresenterProtocol {
     var onDidLoadView:((View) -> Void)?
-    var delegate:PresenterDelegateProtocol?
+    var delegate:PresenterDelegateProtocol!
     
     init() { }
     
