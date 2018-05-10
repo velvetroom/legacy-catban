@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450A20A45EE300CCC59D /* Presenter.swift */; };
+		DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450E20A45F0000CCC59D /* TestPresenter.swift */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestController.swift */; };
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA15450A20A45EE300CCC59D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DA15450E20A45F0000CCC59D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -59,6 +63,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA15450820A45EC900CCC59D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DABDB03120A389B9001B7D47 /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA15450920A45ED300CCC59D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA15450A20A45EE300CCC59D /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DA15450C20A45EEA00CCC59D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DABDB02F20A389AE001B7D47 /* TestController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA15450D20A45EF100CCC59D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA15450E20A45F0000CCC59D /* TestPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		DABDB00820A387B6001B7D47 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +118,8 @@
 		DABDB02D20A38935001B7D47 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DABDB03120A389B9001B7D47 /* Controller.swift */,
+				DA15450820A45EC900CCC59D /* Controller */,
+				DA15450920A45ED300CCC59D /* Presenter */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -90,7 +127,8 @@
 		DABDB02E20A38944001B7D47 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DABDB02F20A389AE001B7D47 /* TestController.swift */,
+				DA15450C20A45EEA00CCC59D /* Controller */,
+				DA15450D20A45EF100CCC59D /* Presenter */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -213,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */,
 				DABDB03220A389B9001B7D47 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */,
 				DABDB03020A389AE001B7D47 /* TestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

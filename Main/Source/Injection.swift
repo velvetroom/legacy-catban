@@ -11,6 +11,6 @@ class Injection {
         Configuration.repositoryProjectType = Repository.self
         Configuration.controllerLoadType = Load.Controller.self
         Configuration.controllerHomeType = Home.Controller.self
-        Configuration.controllerLoadType = Card.Controller.self
+        Configuration.controllerCardType = Card.Controller.self
     }
 }
