@@ -21,4 +21,9 @@ class TestViewCard:XCTestCase {
         XCTAssertNil(self.view.layoutWidth, "Property not found")
         XCTAssertNil(self.view.controller, "Property not found")
     }
+    
+    func testControllerIsNotRetained() {
+        self.view.controller = Controller()
+        XCTAssertNil(self.view.controller, "Strong retained controller")
+    }
 }

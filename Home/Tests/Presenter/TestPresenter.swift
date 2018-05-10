@@ -58,4 +58,14 @@ class TestPresenter:XCTestCase {
         self.presenter.shouldUpdate()
         XCTAssertEqual(self.presenter.outlets.view?.title, Constants.projectName, "Failed to update view model")
     }
+    
+    func testDelegateIsNotRetained() {
+        self.presenter.delegate = Controller()
+        XCTAssertNil(self.presenter.delegate, "Strong retained delegate")
+    }
+    
+    func testControllerIsNotRetained() {
+        self.presenter.controller = Controller()
+        XCTAssertNil(self.presenter.controller, "Strong retained controller")
+    }
 }

@@ -18,4 +18,9 @@ class TestPresenter:XCTestCase {
         let view:Load.View? = self.presenter.view as? Load.View
         XCTAssertNotNil(view, "Invalid view received")
     }
+    
+    func testDelegateIsNotRetained() {
+        self.presenter.delegate = Controller()
+        XCTAssertNil(self.presenter.delegate, "Strong retained delegate")
+    }
 }
