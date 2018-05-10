@@ -2,8 +2,8 @@ import UIKit
 import Board
 
 class ViewCard:UIView {
-    weak var card:CardProtocol!
-    weak var controller:Controller?
+    var identifier:String
+    weak var controller:Controller!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutHeight:NSLayoutConstraint!
@@ -11,6 +11,7 @@ class ViewCard:UIView {
     private(set) weak var labelContent:UILabel!
     
     init() {
+        self.identifier = String()
         super.init(frame:CGRect.zero)
         self.configureView()
         self.factoryOutlets()
@@ -22,7 +23,7 @@ class ViewCard:UIView {
     
     @objc func selectorButton(sender button:UIButton) {
         self.showSelected()
-        self.controller?.editCard(card:self.card)
+        self.controller.editCardWith(identifier:self.identifier)
     }
     
     private func configureView() {

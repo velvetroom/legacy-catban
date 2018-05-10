@@ -104,16 +104,8 @@ class Presenter:PresenterProtocol {
     private func addCardWith(viewModel:ViewModelCard, to viewBoard:ViewBoard) {
         let view:ViewCard = ViewCard()
         self.addCard(view:view, to:viewBoard)
-        view.layoutWidth.constant = viewModel.width
-        view.layoutHeight.constant = viewModel.height
-        view.layoutTop.constant = viewModel.top
-        view.layoutLeft.constant = viewModel.left
-        view.labelContent.text = viewModel.content
-        
-        view.layoutWidth.isActive = true
-        view.layoutHeight.isActive = true
-        view.layoutTop.isActive = true
-        view.layoutLeft.isActive = true
+        self.configure(view:view, with:viewModel)
+        self.activateLayoutFrom(view:view)
     }
     
     private func addCard(view:ViewCard, to viewBoard:ViewBoard) {
@@ -125,5 +117,21 @@ class Presenter:PresenterProtocol {
         view.layoutHeight = view.heightAnchor.constraint(equalToConstant:0)
         view.layoutTop = view.topAnchor.constraint(equalTo:viewBoard.topAnchor)
         view.layoutLeft = view.leftAnchor.constraint(equalTo:viewBoard.leftAnchor)
+    }
+    
+    private func configure(view:ViewCard, with viewModel:ViewModelCard) {
+        view.identifier = viewModel.identifier
+        view.layoutWidth.constant = viewModel.width
+        view.layoutHeight.constant = viewModel.height
+        view.layoutTop.constant = viewModel.top
+        view.layoutLeft.constant = viewModel.left
+        view.labelContent.text = viewModel.content
+    }
+    
+    private func activateLayoutFrom(view:ViewCard) {
+        view.layoutWidth.isActive = true
+        view.layoutHeight.isActive = true
+        view.layoutTop.isActive = true
+        view.layoutLeft.isActive = true
     }
 }

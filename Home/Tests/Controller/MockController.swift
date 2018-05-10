@@ -3,9 +3,9 @@ import Foundation
 @testable import Board
 
 class MockController:Controller {
-    var onEditCard:((CardProtocol) -> Void)?
+    var onEditCardWith:((String) -> Void)?
     
-    override func editCard(card:CardProtocol) {
-        self.onEditCard?(card)
+    override func editCardWith(identifier:String) {
+        self.onEditCardWith?(identifier)
     }
 }

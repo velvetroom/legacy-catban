@@ -109,6 +109,7 @@ class ViewModelBuilder {
     
     private func add(card:CardProtocol, at left:CGFloat, and top:CGFloat) {
         var viewModel:ViewModelCard = ViewModelCard()
+        viewModel.identifier = card.identifier
         viewModel.content = card.content
         viewModel.left = left
         viewModel.top = top

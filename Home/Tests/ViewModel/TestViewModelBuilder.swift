@@ -36,9 +36,24 @@ class TestViewModelBuilder:XCTestCase {
         XCTAssertFalse(self.viewModel.cards.isEmpty, "Failed to build cards")
     }
     
+    func testColumns() {
+        for column:ViewModelColumn in self.viewModel.columns {
+            XCTAssertFalse(column.name.isEmpty, "No name")
+        }
+    }
+    
+    func testCards() {
+        for card:ViewModelCard in self.viewModel.cards {
+            XCTAssertFalse(card.content.isEmpty, "No content")
+            XCTAssertFalse(card.identifier.isEmpty, "No identifier")
+        }
+    }
+    
     private func configureProject() {
         let column:ColumnProtocol = ColumnFactory.newColumn()
+        column.name = "hello world"
         let card:CardProtocol = CardFactory.newCard()
+        card.content = "lorem ipsum"
         column.add(card:card)
         self.project.name = Constants.projectName
         self.project.add(column:column)

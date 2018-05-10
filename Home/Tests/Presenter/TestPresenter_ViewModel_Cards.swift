@@ -9,6 +9,7 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
     private struct Constants {
         static let initialCards:Int = 2
         static let finalCards:Int = 1
+        static let cardIdentifier:String = "hello world"
         static let cardContent:String = "lorem ipsum"
         static let layoutConstantLeft:CGFloat = 3
         static let layoutConstantTop:CGFloat = 4
@@ -51,6 +52,7 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
         self.viewModel.cards = []
         for _:Int in 0 ..< cards {
             var card:ViewModelCard = ViewModelCard()
+            card.identifier = Constants.cardIdentifier
             card.content = Constants.cardContent
             card.left = Constants.layoutConstantLeft
             card.top = Constants.layoutConstantTop
@@ -67,6 +69,7 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
             XCTAssertNotNil(card.layoutLeft, "Failed to assign layout")
             XCTAssertNotNil(card.layoutTop, "Failed to assign layout")
             XCTAssertNotNil(card.layoutHeight, "Failed to assign layout")
+            XCTAssertEqual(card.identifier, Constants.cardIdentifier, "Not assigned")
             XCTAssertEqual(card.superview, self.viewBoard, "Failed to assign superview")
             XCTAssertEqual(card.layoutLeft.constant, Constants.layoutConstantLeft, "Failed to assign constant")
             XCTAssertEqual(card.layoutTop.constant, Constants.layoutConstantTop, "Failed to assign constant")

@@ -14,7 +14,7 @@ public class Controller:ControllerProjectProtocol {
         presenter.controller = self
     }
     
-    func editCard(card:CardProtocol) {
+    func editCardWith(identifier:String) {
         self.transiton.transitionToCard(card:card, in:self.project)
     }
 }

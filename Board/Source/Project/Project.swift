@@ -58,6 +58,15 @@ class Project:ProjectProtocol, Equatable {
         self.columns.forEach(columns)
     }
     
+    func cardWith(identifier:String) -> CardProtocol? {
+        for column:ColumnProtocol in self.columns {
+            if let card:CardProtocol = column.cardWith(identifier:identifier) {
+                return card
+            }
+        }
+        return nil
+    }
+    
     private func columnsFrom(project:ProjectProtocol) -> [ColumnProtocol] {
         var columns:[ColumnProtocol] = []
         project.iterate { (column:ColumnProtocol) in

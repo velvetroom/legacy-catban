@@ -4,15 +4,12 @@ import XCTest
 
 class TestViewCard:XCTestCase {
     private var view:ViewCard!
-    private var card:CardProtocol!
     private var controller:MockController!
     
     override func setUp() {
         super.setUp()
         self.view = ViewCard()
         self.controller = MockController()
-        self.card = CardFactory.newCard()
-        self.view.card = self.card
         self.view.controller = controller
     }
     
@@ -35,7 +32,7 @@ class TestViewCard:XCTestCase {
     
     func testCallEditCardOnController() {
         var controllerCalled:Bool = false
-        self.controller.onEditCard = { (card:CardProtocol) in
+        self.controller.onEditCardWith = { (identifier:String) in
             controllerCalled = true
         }
         

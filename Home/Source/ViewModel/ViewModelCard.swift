@@ -1,6 +1,7 @@
 import UIKit
 
 struct ViewModelCard {
+    var identifier:String
     var content:String
     var top:CGFloat
     var left:CGFloat
@@ -8,6 +9,7 @@ struct ViewModelCard {
     var width:CGFloat
     
     init() {
+        self.identifier = String()
         self.content = String()
         self.top = 0
         self.left = 0

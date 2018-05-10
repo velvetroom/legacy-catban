@@ -6,13 +6,11 @@ class TestController_Transition:XCTestCase {
     private var controller:Controller!
     private var transition:MockTransitionProtocol!
     private var project:ProjectManagedProtocol!
-    private var card:CardProtocol!
     
     override func setUp() {
         super.setUp()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
-        self.card = CardFactory.newCard()
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
         let managed:ProjectManagedProtocol = board.manage(project:project)
@@ -25,7 +23,6 @@ class TestController_Transition:XCTestCase {
         XCTAssertNotNil(self.controller, "Not loading")
         XCTAssertNotNil(self.transition, "Not loading")
         XCTAssertNotNil(self.project, "Not loading")
-        XCTAssertNotNil(self.card, "Not loading")
     }
     
     func testEditCardTransitionsToCard() {
@@ -34,7 +31,7 @@ class TestController_Transition:XCTestCase {
             transitioned = true
         }
         
-        self.controller.editCard(card:self.card)
+        self.controller.editCardWith(identifier:String())
         XCTAssertTrue(transitioned, "Failed to transition")
     }
 }
