@@ -15,9 +15,7 @@ public class Controller:ControllerProjectProtocol {
     }
     
     func editCardWith(identifier:String) {
-        guard
-            let card:CardProtocol = self.project.cardWith(identifier:identifier)
-        else { return }
+        let card:CardProtocol = self.project.cardWith(identifier:identifier)
         self.transiton.transitionToCard(card:card, in:self.project)
     }
 }
