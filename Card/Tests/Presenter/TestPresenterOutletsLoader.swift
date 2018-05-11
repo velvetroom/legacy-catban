@@ -23,4 +23,9 @@ class TestPresenterOutletsLoader:XCTestCase {
     func testLoadTextLayoutBottom() {
         XCTAssertNotNil(self.loader.loadOulets().viewText?.layoutBottom, "Not loaded")
     }
+    
+    func testNotRetainingView() {
+        self.view = nil
+        XCTAssertNil(self.loader.view, "Retaining view")
+    }
 }

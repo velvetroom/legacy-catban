@@ -25,4 +25,9 @@ class TestPresenterOutletsLoader:XCTestCase {
         XCTAssertNotNil(self.outlets.viewScroll, "Failed to load")
         XCTAssertNotNil(self.outlets.viewBoard, "Failed to load")
     }
+    
+    func testNotRetainingView() {
+        self.presenter.view = View()
+        XCTAssertNil(self.presenter.view, "Retaining view")
+    }
 }

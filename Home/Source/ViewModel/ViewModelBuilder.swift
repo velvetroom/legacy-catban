@@ -2,7 +2,7 @@ import UIKit
 import Board
 
 class ViewModelBuilder {
-    var project:ProjectManagedProtocol!
+    weak var project:ProjectManagedProtocol!
     private var viewModel:ViewModel
     private let cardBuilder:ViewModelBuilderCard
     

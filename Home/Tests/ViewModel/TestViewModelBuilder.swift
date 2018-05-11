@@ -49,6 +49,11 @@ class TestViewModelBuilder:XCTestCase {
         }
     }
     
+    func testNotRetainingProject() {
+        self.project = nil
+        XCTAssertNil(self.builder.project, "Retaining project")
+    }
+    
     private func configureProject() {
         let column:ColumnProtocol = ColumnFactory.newColumn()
         column.name = "hello world"

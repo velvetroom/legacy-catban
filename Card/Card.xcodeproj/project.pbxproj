@@ -22,6 +22,11 @@
 		DA7E00A320A5697800AD4A74 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A220A5697800AD4A74 /* PresenterOutlets.swift */; };
 		DA7E00A520A5706B00AD4A74 /* TestPresenterKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A420A5706B00AD4A74 /* TestPresenterKeyboard.swift */; };
 		DA7E00A720A570A600AD4A74 /* PresenterKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A620A570A600AD4A74 /* PresenterKeyboard.swift */; };
+		DA7E00AA20A57D3100AD4A74 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A920A57D3100AD4A74 /* ViewModel.swift */; };
+		DA7E00AC20A57D6800AD4A74 /* ViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00AB20A57D6800AD4A74 /* ViewModelView.swift */; };
+		DA7E00AE20A57D7600AD4A74 /* ViewModelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00AD20A57D7600AD4A74 /* ViewModelText.swift */; };
+		DA7E00B120A57E7300AD4A74 /* TestViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00B020A57E7300AD4A74 /* TestViewModelBuilder.swift */; };
+		DA7E00B320A580B300AD4A74 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestController.swift */; };
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
@@ -57,6 +62,11 @@
 		DA7E00A220A5697800AD4A74 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
 		DA7E00A420A5706B00AD4A74 /* TestPresenterKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterKeyboard.swift; sourceTree = "<group>"; };
 		DA7E00A620A570A600AD4A74 /* PresenterKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterKeyboard.swift; sourceTree = "<group>"; };
+		DA7E00A920A57D3100AD4A74 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DA7E00AB20A57D6800AD4A74 /* ViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelView.swift; sourceTree = "<group>"; };
+		DA7E00AD20A57D7600AD4A74 /* ViewModelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelText.swift; sourceTree = "<group>"; };
+		DA7E00B020A57E7300AD4A74 /* TestViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder.swift; sourceTree = "<group>"; };
+		DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -148,6 +158,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DA7E00A820A57D1A00AD4A74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA7E00A920A57D3100AD4A74 /* ViewModel.swift */,
+				DA7E00AB20A57D6800AD4A74 /* ViewModelView.swift */,
+				DA7E00AD20A57D7600AD4A74 /* ViewModelText.swift */,
+				DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA7E00AF20A57E5D00AD4A74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA7E00B020A57E7300AD4A74 /* TestViewModelBuilder.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DABDB00820A387B6001B7D47 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +203,7 @@
 				DA15450820A45EC900CCC59D /* Controller */,
 				DA15450920A45ED300CCC59D /* Presenter */,
 				DA7E008E20A5629000AD4A74 /* View */,
+				DA7E00A820A57D1A00AD4A74 /* ViewModel */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -184,6 +214,7 @@
 				DA15450C20A45EEA00CCC59D /* Controller */,
 				DA15450D20A45EF100CCC59D /* Presenter */,
 				DA7E008F20A5629E00AD4A74 /* View */,
+				DA7E00AF20A57E5D00AD4A74 /* ViewModel */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -306,7 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7E00B320A580B300AD4A74 /* ViewModelBuilder.swift in Sources */,
 				DA7E009720A5635F00AD4A74 /* ViewConstants.swift in Sources */,
+				DA7E00AC20A57D6800AD4A74 /* ViewModelView.swift in Sources */,
+				DA7E00AE20A57D7600AD4A74 /* ViewModelText.swift in Sources */,
+				DA7E00AA20A57D3100AD4A74 /* ViewModel.swift in Sources */,
 				DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */,
 				DA7E009520A5630F00AD4A74 /* ViewText.swift in Sources */,
 				DA7E00A720A570A600AD4A74 /* PresenterKeyboard.swift in Sources */,
@@ -327,6 +362,7 @@
 				DA7E009B20A565D500AD4A74 /* MockControllerProtocol.swift in Sources */,
 				DA7E00A520A5706B00AD4A74 /* TestPresenterKeyboard.swift in Sources */,
 				DA7E00A120A5693B00AD4A74 /* TestPresenterOutletsLoader.swift in Sources */,
+				DA7E00B120A57E7300AD4A74 /* TestViewModelBuilder.swift in Sources */,
 				DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */,
 				DABDB03020A389AE001B7D47 /* TestController.swift in Sources */,
 				DA7E009D20A5661100AD4A74 /* MockPresenterProtocol.swift in Sources */,

@@ -16,6 +16,13 @@
 		DA3ADFD4209C40BC00B736CD /* TestInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD3209C40BC00B736CD /* TestInjection.swift */; };
 		DA3ADFD6209C41AC00B736CD /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD5209C41AC00B736CD /* Injection.swift */; };
 		DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD7209C427400B736CD /* MockInjection.swift */; };
+		DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; };
+		DA7E00B520A584BC00AD4A74 /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA347D1C20A16DF400009316 /* Template.framework */; };
+		DA7E00B620A584BE00AD4A74 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD2FD0209CC4120005F5D2 /* Home.framework */; };
+		DA7E00B720A584C000AD4A74 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; };
+		DA7E00B820A584C300AD4A74 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB71209C7EA400509F4A /* Repository.framework */; };
+		DA7E00B920A584C500AD4A74 /* Load.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA06361F209B62D30037D22F /* Load.framework */; };
+		DA7E00BA20A584C600AD4A74 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7F209B3B4A0013DBF0 /* Shared.framework */; };
 		DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB71209C7EA400509F4A /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -111,6 +118,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7E00B720A584C000AD4A74 /* Board.framework in Frameworks */,
+				DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */,
+				DA7E00BA20A584C600AD4A74 /* Shared.framework in Frameworks */,
+				DA7E00B920A584C500AD4A74 /* Load.framework in Frameworks */,
+				DA7E00B520A584BC00AD4A74 /* Template.framework in Frameworks */,
+				DA7E00B820A584C300AD4A74 /* Repository.framework in Frameworks */,
+				DA7E00B620A584BE00AD4A74 /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
