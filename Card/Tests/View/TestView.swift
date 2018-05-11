@@ -7,6 +7,7 @@ class TestView:XCTestCase {
     private var view:Card.View!
     private var controller:MockController!
     private var card:CardProtocol!
+    private var presenter:MockPresenter!
     private var textView:UITextView!
     private struct Constants {
         static let initialText:String = "hello world"
@@ -19,7 +20,9 @@ class TestView:XCTestCase {
         self.controller = MockController()
         self.card = CardFactory.newCard()
         self.textView = UITextView()
-        self.view.controller = self.controller
+        self.presenter = MockPresenter()
+        self.presenter.controller = self.controller
+        self.view.presenter = self.presenter
         self.controller.card = self.card
         self.card.content = Constants.initialText
         self.textView.text = Constants.updatedText
@@ -31,8 +34,8 @@ class TestView:XCTestCase {
     }
     
     func testControllerNotRetained() {
-        self.controller = nil
-        XCTAssertNil(self.view.controller, "Strong retained controller")
+        self.presenter = nil
+        XCTAssertNil(self.view.presenter, "Strong retained")
     }
     
     func testSelectorDone() {
@@ -43,6 +46,16 @@ class TestView:XCTestCase {
         
         self.view.selectorDone(sender:UIBarButtonItem())
         XCTAssertTrue(calledController, "Not called")
+    }
+    
+    func testSelectorDelete() {
+        var calledPresenter:Bool = false
+        self.presenter.onDelete = {
+            calledPresenter = true
+        }
+        
+        self.view.selectorDelete(sender:UIBarButtonItem())
+        XCTAssertTrue(calledPresenter, "Not called")
     }
     
     func testUpdateCardContent() {

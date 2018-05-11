@@ -16,6 +16,24 @@ class Presenter:PresenterProtocol {
         NotificationCenter.default.removeObserver(self)
     }
     
+    func done() {
+        self.outlets.viewText?.resignFirstResponder()
+        self.controller.done()
+    }
+    
+    func delete() {
+        self.outlets.viewText?.resignFirstResponder()
+        let presenter:PresenterDelete = PresenterDelete()
+        presenter.controller = self.controller
+        presenter.view = self.outlets.view
+        presenter.card = self.controller.card
+        presenter.askConfirmation()
+    }
+    
+    func update(content:String) {
+        self.controller.update(content:content)
+    }
+    
     func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.configureController(view:view)
@@ -34,7 +52,7 @@ class Presenter:PresenterProtocol {
         guard
             let view:Card.View = view as? Card.View
         else { return }
-        view.controller = self.controller
+        view.presenter = self
         self.outlets.viewText?.delegate = view
     }
     

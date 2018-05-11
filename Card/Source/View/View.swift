@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 class View:Shared.View, UITextViewDelegate {
-    weak var controller:Controller!
+    weak var presenter:Presenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +21,14 @@ class View:Shared.View, UITextViewDelegate {
     }
     
     @objc func selectorDone(sender button:UIBarButtonItem) {
-        self.controller.done()
+        self.presenter.done()
     }
     
     @objc func selectorDelete(sender button:UIBarButtonItem) {
-        
+        self.presenter.delete()
     }
     
     func textViewDidChange(_ textView:UITextView) {
-        self.controller.card.content = textView.text
+        self.presenter.update(content:textView.text)
     }
 }

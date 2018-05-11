@@ -10,7 +10,6 @@ class TestPresenter:XCTestCase {
     private var controller:Controller!
     private var card:CardProtocol!
     private var column:ColumnProtocol!
-    private var text:MockViewText!
     private struct Constants {
         static let columnName:String = "lorem ipsum"
     }
@@ -23,26 +22,13 @@ class TestPresenter:XCTestCase {
         self.controller = Controller()
         self.column = ColumnFactory.newColumn()
         self.card = CardFactory.newCard()
-        self.text = MockViewText()
         self.card.container = self.column
+        self.presenter.outlets.view = self.view
         self.presenter.controller = self.controller
         self.presenter.delegate = self.delegate
         self.controller.card = self.card
         self.column.name = Constants.columnName
         self.controller.card.content = Constants.columnName
-        self.presenter.outlets.view = self.view
-        self.presenter.outlets.viewText = self.text
-        XCTAssertNotNil(self.view.view, "Loading view")
-    }
-    
-    func testDelegateIsNotRetained() {
-        self.presenter.delegate = Controller()
-        XCTAssertNil(self.presenter.delegate, "Strong retained delegate")
-    }
-    
-    func testControllerIsNotRetained() {
-        self.presenter.controller = Controller()
-        XCTAssertNil(self.presenter.controller, "Strong retained controller")
     }
     
     func testViewType() {
@@ -76,19 +62,9 @@ class TestPresenter:XCTestCase {
         XCTAssertEqual(self.view.title, Constants.columnName, "Failed to update")
     }
     
-    func testTextBecomesFirstResponder() {
-        var firstResponder:Bool = false
-        self.text.onBecomeFirstResponder = {
-            firstResponder = true
-        }
-        
-        self.presenter.didAppear(view:self.view)
-        XCTAssertTrue(firstResponder, "Not first responder")
-    }
-    
     func testLoadSetControllerOnView() {
         let view:Card.View = Card.View()
         self.presenter.didLoad(view:view)
-        XCTAssertNotNil(view.controller, "Not setting controller")
+        XCTAssertNotNil(view.presenter, "Not setting controller")
     }
 }

@@ -18,4 +18,12 @@ public class Controller:ControllerCardProtocol {
     func done() {
         self.transiton.transitionToHome(project:self.project)
     }
+    
+    func delete() {
+        
+    }
+    
+    func update(content:String) {
+        self.card.content = content
+    }
 }
