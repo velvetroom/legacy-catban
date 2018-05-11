@@ -39,6 +39,11 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.view, "Failed to load view")
     }
     
+    func testViewType() {
+        let view:Home.View? = self.presenter.view as? Home.View
+        XCTAssertNotNil(view, "Invalid view received")
+    }
+    
     func testLoadView() {
         let view:Home.View? = self.presenter.view as? Home.View
         XCTAssertNotNil(view, "Invalid view received")
