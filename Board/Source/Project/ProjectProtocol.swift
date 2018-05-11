@@ -1,11 +1,11 @@
 import Foundation
 
-public protocol ProjectProtocol:class,
+public protocol ProjectProtocol:
     IdentifierProtocol,
     CreatedProtocol,
+    ContainerProtocol,
     ProjectColumnsProtocol,
     CardManagerProtocol {
-    var name:String { get set }
     
     func copy(project:ProjectProtocol)
 }

@@ -1,9 +1,8 @@
 import Foundation
 
-public protocol ColumnProtocol:class,
+public protocol ColumnProtocol:
     IdentifierProtocol,
     CreatedProtocol,
+    ContainerProtocol,
     ColumnCardsProtocol,
-    CardManagerProtocol {
-    var name:String { get set }
-}
+    CardManagerProtocol { }
