@@ -43,13 +43,24 @@ class Column:ColumnProtocol, Equatable {
         self.cards.forEach(cards)
     }
     
-    func cardWith(identifier:String) -> CardProtocol? {
+    func cardWith(identifier:String) -> CardProtocol {
+        var found:CardProtocol!
         for card:CardProtocol in self.cards {
             if identifier == card.identifier {
-                return card
+                found = card
+                break
             }
         }
-        return nil
+        return found
+    }
+    
+    func hasCardWith(identifier:String) -> Bool {
+        for card:CardProtocol in self.cards {
+            if identifier == card.identifier {
+                return true
+            }
+        }
+        return false
     }
     
     static func == (lhs:Column, rhs:Column) -> Bool {

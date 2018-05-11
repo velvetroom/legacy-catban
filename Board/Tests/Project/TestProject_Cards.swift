@@ -3,15 +3,15 @@ import XCTest
 
 class TestProject_Cards:XCTestCase {
     private var project:Project!
+    private var card:CardProtocol!
     private struct Constants {
         static let identifier:String = "lorem ipsum"
-        static let notFound:String = "hello world"
     }
     
     override func setUp() {
         super.setUp()
         self.project = Project()
-        var card:CardProtocol = CardFactory.newCard()
+        self.card = CardFactory.newCard()
         card.identifier = Constants.identifier
         let columnA:ColumnProtocol = ColumnFactory.newColumn()
         let columnB:ColumnProtocol = ColumnFactory.newColumn()
@@ -20,11 +20,13 @@ class TestProject_Cards:XCTestCase {
         self.project.add(column:columnB)
     }
     
-    func testCardWithIndex() {
+    func testCardWithIdentifier() {
         XCTAssertNotNil(self.project.cardWith(identifier:Constants.identifier), "Not found")
     }
     
-    func testCardNotFound() {
-        XCTAssertNil(self.project.cardWith(identifier:Constants.notFound), "Should not exist")
+    func testRemoveCard() {
+        let countCards:Int = self.project.countCards
+        self.project.remove(card:self.card)
+        XCTAssertLessThan(self.project.countCards, countCards, "Not removing")
     }
 }

@@ -18,11 +18,15 @@ class TestColumn_Cards:XCTestCase {
         self.column.add(card:cardB)
     }
     
-    func testCardWithIndex() {
+    func testCardWithIdentifier() {
         XCTAssertNotNil(self.column.cardWith(identifier:Constants.identifier), "Not found")
     }
     
-    func testCardNotFound() {
-        XCTAssertNil(self.column.cardWith(identifier:Constants.notFound), "Should not exist")
+    func testHasCard() {
+        XCTAssertTrue(self.column.hasCardWith(identifier:Constants.identifier), "Failed to find")
+    }
+    
+    func testHasCardFails() {
+        XCTAssertFalse(self.column.hasCardWith(identifier:Constants.notFound), "Should not have it")
     }
 }

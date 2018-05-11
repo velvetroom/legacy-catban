@@ -56,17 +56,28 @@ class Project:ProjectProtocol, Equatable {
         }
     }
     
+    func remove(card:CardProtocol) {
+        for column:ColumnProtocol in self.columns {
+            if column.hasCardWith(identifier:card.identifier) {
+                column.remove(card:card)
+                break
+            }
+        }
+    }
+    
     func iterate(columns:((ColumnProtocol) -> Void)) {
         self.columns.forEach(columns)
     }
     
-    func cardWith(identifier:String) -> CardProtocol? {
+    func cardWith(identifier:String) -> CardProtocol {
+        var found:CardProtocol!
         for column:ColumnProtocol in self.columns {
-            if let card:CardProtocol = column.cardWith(identifier:identifier) {
-                return card
+            if column.hasCardWith(identifier:identifier) {
+                found = column.cardWith(identifier:identifier)
+                break
             }
         }
-        return nil
+        return found
     }
     
     private func columnsFrom(project:ProjectProtocol) -> [ColumnProtocol] {
