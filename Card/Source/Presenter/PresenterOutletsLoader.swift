@@ -16,11 +16,12 @@ class PresenterOutletsLoader {
     
     func loadFor(view:Shared.View) {
         self.view = view
-        self.configureView()
+        self.loadView()
         self.loadText()
     }
     
-    private func configureView() {
+    private func loadView() {
+        self.outlets.view = self.view
         self.view.view.backgroundColor = UIColor.white
     }
     

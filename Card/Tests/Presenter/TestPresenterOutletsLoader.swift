@@ -11,6 +11,11 @@ class TestPresenterOutletsLoader:XCTestCase {
         self.view = View()
     }
     
+    func testLoadView() {
+        self.loader.loadFor(view:self.view)
+        XCTAssertNotNil(self.loader.outlets.view, "Not loaded")
+    }
+    
     func testLoadText() {
         self.loader.loadFor(view:self.view)
         XCTAssertNotNil(self.loader.outlets.viewText, "Not loaded")

@@ -9,6 +9,11 @@ class Presenter:PresenterProtocol {
     
     init() {
         self.outlets = PresenterOutlets()
+        self.registerForNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func didLoad(view:Shared.View) {
@@ -20,5 +25,17 @@ class Presenter:PresenterProtocol {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.loadFor(view:view)
         self.outlets = loader.outlets
+    }
+    
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector:#selector(self.notifiedKeyboardChanged(sender:)),
+                                               name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
+    }
+    
+    @objc private func notifiedKeyboardChanged(sender notification:Notification) {
+        let keyboard:PresenterKeyboard = PresenterKeyboard()
+        keyboard.outlets = self.outlets
+        keyboard.notification = notification
+        keyboard.adjustOutlets()
     }
 }
