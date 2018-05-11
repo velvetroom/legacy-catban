@@ -5,11 +5,13 @@ import XCTest
 class TestPresenter:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockControllerProtocol!
+    private var view:Shared.View!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
         self.delegate = MockControllerProtocol()
+        self.view = Shared.View()
         self.presenter.delegate = self.delegate
     }
     
@@ -34,7 +36,12 @@ class TestPresenter:XCTestCase {
             delegateCalled = true
         }
         
-        self.presenter.didLoad(view:Shared.View())
+        self.presenter.didLoad(view:self.view)
         XCTAssertTrue(delegateCalled, "Failed to call delegate")
+    }
+    
+    func testLoadOutlets() {
+        self.presenter.didLoad(view:self.view)
+        XCTAssertNotNil(self.presenter.outlets.viewText, "Not loaded")
     }
 }

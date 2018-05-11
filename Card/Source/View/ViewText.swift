@@ -1,11 +1,13 @@
 import UIKit
 
 class ViewText:UITextView {
+    weak var layoutBottom:NSLayoutConstraint!
+    
     init() {
         super.init(frame:CGRect.zero, textContainer:nil)
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.clear
         self.textColor = UIColor.black
         self.tintColor = UIColor.black
         self.bounces = true
@@ -23,10 +25,10 @@ class ViewText:UITextView {
         self.textAlignment = NSTextAlignment.left
         self.font = UIFont.systemFont(ofSize:ViewConstants.Text.fontSize, weight:UIFont.Weight.regular)
         self.textContainerInset = UIEdgeInsets(
-            top:ViewConstants.Text.insetsTop,
-            left:ViewConstants.Text.insetsHorizontal,
-            bottom:ViewConstants.Text.insetsBottom,
-            right:ViewConstants.Text.insetsHorizontal)
+            top:ViewConstants.Text.insets,
+            left:ViewConstants.Text.insets,
+            bottom:ViewConstants.Text.insets,
+            right:ViewConstants.Text.insets)
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
     }
     

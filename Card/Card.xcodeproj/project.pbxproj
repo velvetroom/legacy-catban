@@ -17,6 +17,9 @@
 		DA7E009920A5638200AD4A74 /* TestViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009820A5638200AD4A74 /* TestViewText.swift */; };
 		DA7E009B20A565D500AD4A74 /* MockControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009A20A565D500AD4A74 /* MockControllerProtocol.swift */; };
 		DA7E009D20A5661100AD4A74 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009C20A5661100AD4A74 /* MockPresenterProtocol.swift */; };
+		DA7E009F20A5690C00AD4A74 /* PresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009E20A5690C00AD4A74 /* PresenterOutletsLoader.swift */; };
+		DA7E00A120A5693B00AD4A74 /* TestPresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A020A5693B00AD4A74 /* TestPresenterOutletsLoader.swift */; };
+		DA7E00A320A5697800AD4A74 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00A220A5697800AD4A74 /* PresenterOutlets.swift */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestController.swift */; };
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
@@ -47,6 +50,9 @@
 		DA7E009820A5638200AD4A74 /* TestViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewText.swift; sourceTree = "<group>"; };
 		DA7E009A20A565D500AD4A74 /* MockControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockControllerProtocol.swift; sourceTree = "<group>"; };
 		DA7E009C20A5661100AD4A74 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
+		DA7E009E20A5690C00AD4A74 /* PresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutletsLoader.swift; sourceTree = "<group>"; };
+		DA7E00A020A5693B00AD4A74 /* TestPresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutletsLoader.swift; sourceTree = "<group>"; };
+		DA7E00A220A5697800AD4A74 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -91,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				DA15450A20A45EE300CCC59D /* Presenter.swift */,
+				DA7E00A220A5697800AD4A74 /* PresenterOutlets.swift */,
+				DA7E009E20A5690C00AD4A74 /* PresenterOutletsLoader.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				DA15450E20A45F0000CCC59D /* TestPresenter.swift */,
+				DA7E00A020A5693B00AD4A74 /* TestPresenterOutletsLoader.swift */,
 				DA7E009C20A5661100AD4A74 /* MockPresenterProtocol.swift */,
 			);
 			path = Presenter;
@@ -295,6 +304,8 @@
 				DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */,
 				DA7E009520A5630F00AD4A74 /* ViewText.swift in Sources */,
 				DABDB03220A389B9001B7D47 /* Controller.swift in Sources */,
+				DA7E00A320A5697800AD4A74 /* PresenterOutlets.swift in Sources */,
+				DA7E009F20A5690C00AD4A74 /* PresenterOutletsLoader.swift in Sources */,
 				DA7E009120A562AC00AD4A74 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +318,7 @@
 				DA7E009920A5638200AD4A74 /* TestViewText.swift in Sources */,
 				DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */,
 				DA7E009B20A565D500AD4A74 /* MockControllerProtocol.swift in Sources */,
+				DA7E00A120A5693B00AD4A74 /* TestPresenterOutletsLoader.swift in Sources */,
 				DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */,
 				DABDB03020A389AE001B7D47 /* TestController.swift in Sources */,
 				DA7E009D20A5661100AD4A74 /* MockPresenterProtocol.swift in Sources */,
