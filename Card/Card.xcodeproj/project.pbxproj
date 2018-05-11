@@ -27,6 +27,7 @@
 		DA7E00AE20A57D7600AD4A74 /* ViewModelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00AD20A57D7600AD4A74 /* ViewModelText.swift */; };
 		DA7E00B120A57E7300AD4A74 /* TestViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00B020A57E7300AD4A74 /* TestViewModelBuilder.swift */; };
 		DA7E00B320A580B300AD4A74 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */; };
+		DAA0B95920A58DAB0084C753 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA0B95820A58DAB0084C753 /* assets.xcassets */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestController.swift */; };
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
@@ -67,6 +68,7 @@
 		DA7E00AD20A57D7600AD4A74 /* ViewModelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelText.swift; sourceTree = "<group>"; };
 		DA7E00B020A57E7300AD4A74 /* TestViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder.swift; sourceTree = "<group>"; };
 		DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
+		DAA0B95820A58DAB0084C753 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -177,11 +179,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DAA0B95720A58D970084C753 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0B95820A58DAB0084C753 /* assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		DABDB00820A387B6001B7D47 = {
 			isa = PBXGroup;
 			children = (
 				DABDB02D20A38935001B7D47 /* Source */,
 				DABDB02E20A38944001B7D47 /* Tests */,
+				DAA0B95720A58D970084C753 /* Assets */,
 				DABDB01320A387B6001B7D47 /* Products */,
 				DABDB03720A38B85001B7D47 /* Frameworks */,
 				DABDB02C20A388FD001B7D47 /* Configuration */,
@@ -320,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA0B95920A58DAB0084C753 /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
