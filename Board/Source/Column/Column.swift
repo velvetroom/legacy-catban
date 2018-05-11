@@ -1,7 +1,7 @@
 import Foundation
 
 class Column:ColumnProtocol, Equatable {
-    var container:ContainerProtocol?
+    weak var container:ContainerProtocol?
     var identifier:String
     var name:String
     var cards:[CardProtocol]
@@ -23,7 +23,9 @@ class Column:ColumnProtocol, Equatable {
         guard
             card.identifier.isEmpty == false
         else { return }
+        var card:CardProtocol = card
         self.cards.append(card)
+        card.container = self
     }
     
     func remove(card:CardProtocol) {

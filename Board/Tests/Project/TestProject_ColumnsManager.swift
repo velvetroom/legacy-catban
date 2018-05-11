@@ -75,4 +75,10 @@ class TestProject_ColumnsManager:XCTestCase {
         XCTAssertTrue(foundA, "Failed to iterate column A")
         XCTAssertTrue(foundB, "Failed to iterate column B")
     }
+    
+    func testAddColumnSetsContainer() {
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        self.model.add(column:column)
+        XCTAssertNotNil(column.container, "Not assigned")
+    }
 }

@@ -40,7 +40,9 @@ class Project:ProjectProtocol, Equatable {
         guard
             column.identifier.isEmpty == false
         else { return }
+        var column:ColumnProtocol = column
         self.columns.append(column)
+        column.container = self
     }
     
     func remove(column:ColumnProtocol) {

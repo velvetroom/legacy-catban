@@ -1,7 +1,7 @@
 import Foundation
 
 class Card:CardProtocol, Equatable {
-    var container:ContainerProtocol?
+    weak var container:ContainerProtocol?
     var identifier:String
     var content:String
     var created:Int

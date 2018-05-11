@@ -15,4 +15,9 @@ class TestColumn:XCTestCase {
         XCTAssertNotNil(self.model.cards, "Failed to load cards")
         XCTAssertNotNil(self.model.name, "Failed to load name")
     }
+    
+    func testContainerNotRetained() {
+        self.model.container = Project()
+        XCTAssertNil(self.model.container, "Strong retain")
+    }
 }

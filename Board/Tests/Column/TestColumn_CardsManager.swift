@@ -68,4 +68,10 @@ class TestColumn_CardsManager:XCTestCase {
         XCTAssertTrue(foundA, "Failed to iterate card A")
         XCTAssertTrue(foundB, "Failed to iterate card B")
     }
+    
+    func testAddCardSetsContainer() {
+        let card:CardProtocol = CardFactory.newCard()
+        self.model.add(card:card)
+        XCTAssertNotNil(card.container, "Not assigned")
+    }
 }
