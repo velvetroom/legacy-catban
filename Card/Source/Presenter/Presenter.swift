@@ -21,9 +21,12 @@ class Presenter:PresenterProtocol {
         self.delegate.didLoadPresenter()
     }
     
+    func didAppear(view:Shared.View) {
+        self.outlets.viewText?.becomeFirstResponder()
+    }
+    
     func shouldUpdate() {
         self.updateViewModel()
-        self.outlets.viewText?.becomeFirstResponder()
     }
     
     private func loadOutlets(view:Shared.View) {

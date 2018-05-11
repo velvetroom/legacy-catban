@@ -10,7 +10,7 @@ class TestPresenter:XCTestCase {
     private var controller:Controller!
     private var card:CardProtocol!
     private var column:ColumnProtocol!
-    private var text:ViewText!
+    private var text:MockViewText!
     private struct Constants {
         static let columnName:String = "lorem ipsum"
     }
@@ -23,7 +23,7 @@ class TestPresenter:XCTestCase {
         self.controller = Controller()
         self.column = ColumnFactory.newColumn()
         self.card = CardFactory.newCard()
-        self.text = ViewText()
+        self.text = MockViewText()
         self.card.container = self.column
         self.presenter.controller = self.controller
         self.presenter.delegate = self.delegate
@@ -32,6 +32,7 @@ class TestPresenter:XCTestCase {
         self.controller.card.content = Constants.columnName
         self.presenter.outlets.view = self.view
         self.presenter.outlets.viewText = self.text
+        XCTAssertNotNil(self.view.view, "Loading view")
     }
     
     func testDelegateIsNotRetained() {
@@ -70,7 +71,12 @@ class TestPresenter:XCTestCase {
     }
     
     func testTextBecomesFirstResponder() {
-        self.presenter.shouldUpdate()
-        XCTAssertTrue(self.text.isFirstResponder, "Not first responder")
+        var firstResponder:Bool = false
+        self.text.onBecomeFirstResponder = {
+            firstResponder = true
+        }
+        
+        self.presenter.didAppear(view:self.view)
+        XCTAssertTrue(firstResponder, "Not first responder")
     }
 }
