@@ -17,6 +17,9 @@ class Presenter:PresenterProtocol {
     }
     
     func didLoad(view:Shared.View) {
+        if let view:Card.View = view as? Card.View {
+            view.controller = self.controller
+        }
         self.loadOutlets(view:view)
         self.delegate.didLoadPresenter()
     }

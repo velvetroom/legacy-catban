@@ -2,20 +2,7 @@ import UIKit
 import Shared
 
 class View:Shared.View {
-    private var buttonDone:UIBarButtonItem {
-        get {
-            return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                   target:nil, action:nil)
-        }
-    }
-    
-    private var buttonDelete:UIBarButtonItem {
-        get {
-            let deleteIcon:UIImage = UIImage(name:ViewConstants.View.iconTrash, in:type(of:self))
-            return UIBarButtonItem(image:deleteIcon, style:UIBarButtonItemStyle.plain,
-                                    target:nil, action:nil)
-        }
-    }
+    weak var controller:Controller!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +10,21 @@ class View:Shared.View {
     }
     
     private func configureNavigationItem() {
-        self.navigationItem.rightBarButtonItems = [self.buttonDone, self.buttonDelete]
+        let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
+                                                         target:self,
+                                                         action:#selector(self.selectorDone(sender:)))
+        let deleteIcon:UIImage = UIImage(name:ViewConstants.View.iconTrash, in:type(of:self))
+        let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
+                                                           target:self,
+                                                           action:#selector(self.selectorDelete(sender:)))
+        self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
+    }
+    
+    @objc func selectorDone(sender button:UIBarButtonItem) {
+        self.controller.done()
+    }
+    
+    @objc func selectorDelete(sender button:UIBarButtonItem) {
+        
     }
 }

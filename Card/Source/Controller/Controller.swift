@@ -14,4 +14,8 @@ public class Controller:ControllerCardProtocol {
         self.presenter.delegate = self
         presenter.controller = self
     }
+    
+    func done() {
+        self.transiton.transitionToHome(project:self.project)
+    }
 }

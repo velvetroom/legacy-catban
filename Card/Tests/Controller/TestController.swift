@@ -4,14 +4,19 @@ import XCTest
 
 class TestController:XCTestCase {
     private var controller:Controller!
+    private var transition:MockTransitionProtocol!
+    private var project:ProjectManagedProtocol!
     
     override func setUp() {
         super.setUp()
         self.controller = Controller()
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.controller, "Failed to load controller")
+        self.transition = MockTransitionProtocol()
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let board:BoardProtocol = BoardFactory.newBoard()
+        let managed:ProjectManagedProtocol = board.manage(project:project)
+        self.project = managed
+        self.controller.transiton = self.transition
+        self.controller.project = self.project
     }
     
     func testPresenter() {
@@ -30,7 +35,17 @@ class TestController:XCTestCase {
     }
     
     func testTransitionIsNotRetained() {
-        self.controller.transiton = MockTransitionProtocol()
+        self.transition = nil
         XCTAssertNil(self.controller.transiton, "Strong retained")
+    }
+    
+    func testDone() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToHome = {
+            transitioned = true
+        }
+        
+        self.controller.done()
+        XCTAssertTrue(transitioned, "No transition")
     }
 }

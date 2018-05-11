@@ -79,4 +79,10 @@ class TestPresenter:XCTestCase {
         self.presenter.didAppear(view:self.view)
         XCTAssertTrue(firstResponder, "Not first responder")
     }
+    
+    func testLoadSetControllerOnView() {
+        let view:Card.View = Card.View()
+        self.presenter.didLoad(view:view)
+        XCTAssertNotNil(view.controller, "Not setting controller")
+    }
 }

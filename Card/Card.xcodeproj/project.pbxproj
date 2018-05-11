@@ -29,6 +29,7 @@
 		DA7E00B320A580B300AD4A74 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */; };
 		DAA0B95920A58DAB0084C753 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA0B95820A58DAB0084C753 /* assets.xcassets */; };
 		DAA0B95B20A5B23F0084C753 /* MockViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0B95A20A5B23F0084C753 /* MockViewText.swift */; };
+		DAA0B95D20A5C3640084C753 /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0B95C20A5C3640084C753 /* MockController.swift */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestController.swift */; };
 		DABDB03220A389B9001B7D47 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Controller.swift */; };
@@ -71,6 +72,7 @@
 		DA7E00B220A580B300AD4A74 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
 		DAA0B95820A58DAB0084C753 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAA0B95A20A5B23F0084C753 /* MockViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewText.swift; sourceTree = "<group>"; };
+		DAA0B95C20A5C3640084C753 /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				DABDB02F20A389AE001B7D47 /* TestController.swift */,
 				DA46315720A4864800070042 /* MockTransitionProtocol.swift */,
 				DA7E009A20A565D500AD4A74 /* MockControllerProtocol.swift */,
+				DAA0B95C20A5C3640084C753 /* MockController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7E009320A562D800AD4A74 /* TestView.swift in Sources */,
+				DAA0B95D20A5C3640084C753 /* MockController.swift in Sources */,
 				DA7E009920A5638200AD4A74 /* TestViewText.swift in Sources */,
 				DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */,
 				DA7E009B20A565D500AD4A74 /* MockControllerProtocol.swift in Sources */,
