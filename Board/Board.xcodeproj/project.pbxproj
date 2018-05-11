@@ -24,6 +24,7 @@
 		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
 		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
 		DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */; };
+		DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551D20A5608100813E95 /* ContainedProtocol.swift */; };
 		DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */; };
 		DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */; };
 		DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */; };
@@ -81,6 +82,7 @@
 		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		DAB7551D20A5608100813E95 /* ContainedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedProtocol.swift; sourceTree = "<group>"; };
 		DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_CardsManager.swift; sourceTree = "<group>"; };
 		DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumnsProtocol.swift; sourceTree = "<group>"; };
 		DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_ColumnsManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				DAE3E7E3209F545000F8240C /* IdentifierProtocol+Default.swift */,
 				DAE3E7E9209F59F500F8240C /* CreatedProtocol.swift */,
 				DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */,
+				DAB7551D20A5608100813E95 /* ContainedProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */,
+				DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */,
 				DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */,
 				DAE3E7EA209F59F500F8240C /* CreatedProtocol.swift in Sources */,
 				DAC6800120A022F200791B6A /* CardFactory.swift in Sources */,

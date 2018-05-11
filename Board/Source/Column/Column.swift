@@ -1,6 +1,7 @@
 import Foundation
 
 class Column:ColumnProtocol, Equatable {
+    var container:ContainerProtocol?
     var identifier:String
     var name:String
     var cards:[CardProtocol]
