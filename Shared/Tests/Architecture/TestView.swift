@@ -26,4 +26,14 @@ class TestView:XCTestCase {
         XCTAssertNotNil(self.view.view, "Failed to load view")
         XCTAssertTrue(delegateCalled, "Delegate is not called")
     }
+    
+    func testViewDidAppear() {
+        var delegateCalled:Bool = false
+        self.delegate.onDidAppear = { (view:View) in
+            XCTAssertEqual(view, self.view, "Invalid view received")
+            delegateCalled = true
+        }
+        self.view.viewDidAppear(false)
+        XCTAssertTrue(delegateCalled, "Delegate is not called")
+    }
 }

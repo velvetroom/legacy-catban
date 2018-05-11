@@ -12,7 +12,6 @@
 		DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */; };
 		DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */; };
 		DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */; };
-		DA3ADF8C209C29E300B736CD /* TestUIImage_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */; };
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
 		DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFCF209C3F4C00B736CD /* Configuration.swift */; };
@@ -57,7 +56,6 @@
 		DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Shared.swift"; sourceTree = "<group>"; };
 		DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
-		DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIImage_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF99209C347200B736CD /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADFCF209C3F4C00B736CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 		DA3ADF92209C30A200B736CD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DA3ADF8B209C29E300B736CD /* TestUIImage_Bundle.swift */,
 				DA3ADF99209C347200B736CD /* TestString_Bundle.swift */,
 				DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */,
 			);
@@ -342,7 +339,6 @@
 				DAFD2FAF209CA4A20005F5D2 /* TestController.swift in Sources */,
 				DAFD2FAB209CA41E0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */,
-				DA3ADF8C209C29E300B736CD /* TestUIImage_Bundle.swift in Sources */,
 				DAFD2FAD209CA4560005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DAFD2FB1209CA4E50005F5D2 /* TestPresenter.swift in Sources */,
 			);

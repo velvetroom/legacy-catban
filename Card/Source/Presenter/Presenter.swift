@@ -22,9 +22,8 @@ class Presenter:PresenterProtocol {
     }
     
     func shouldUpdate() {
-        let builder:ViewModelBuilder = ViewModelBuilder()
-        builder.card = self.controller.card
-        self.updateWith(viewModel:builder.buildViewModel())
+        self.updateViewModel()
+        self.outlets.viewText?.becomeFirstResponder()
     }
     
     private func loadOutlets(view:Shared.View) {
@@ -36,6 +35,12 @@ class Presenter:PresenterProtocol {
     private func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector:#selector(self.notifiedKeyboardChanged(sender:)),
                                                name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
+    }
+    
+    private func updateViewModel() {
+        let builder:ViewModelBuilder = ViewModelBuilder()
+        builder.card = self.controller.card
+        self.updateWith(viewModel:builder.buildViewModel())
     }
     
     private func updateWith(viewModel:ViewModel) {
