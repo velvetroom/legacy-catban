@@ -20,7 +20,8 @@ public class Controller:ControllerCardProtocol {
     }
     
     func delete() {
-        
+        self.project.remove(card:self.card)
+        self.transiton.transitionToHome(project:self.project)
     }
     
     func update(content:String) {

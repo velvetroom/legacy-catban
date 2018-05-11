@@ -5,18 +5,18 @@ import XCTest
 class TestController:XCTestCase {
     private var controller:Controller!
     private var transition:MockTransitionProtocol!
-    private var project:ProjectManagedProtocol!
+    private var project:MockProjectManagedProtocol!
+    private var card:CardProtocol!
     
     override func setUp() {
         super.setUp()
+        self.card = CardFactory.newCard()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
-        let project:ProjectProtocol = ProjectFactory.newProject()
-        let board:BoardProtocol = BoardFactory.newBoard()
-        let managed:ProjectManagedProtocol = board.manage(project:project)
-        self.project = managed
+        self.project = MockProjectManagedProtocol()
         self.controller.transiton = self.transition
         self.controller.project = self.project
+        self.controller.card = self.card
     }
     
     func testPresenter() {
@@ -47,5 +47,25 @@ class TestController:XCTestCase {
         
         self.controller.done()
         XCTAssertTrue(transitioned, "No transition")
+    }
+    
+    func testDeleteTransitions() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToHome = {
+            transitioned = true
+        }
+        
+        self.controller.delete()
+        XCTAssertTrue(transitioned, "No transition")
+    }
+    
+    func testDeleteRemovesCard() {
+        var removed:Bool = false
+        project.onRemoveCard = {
+            removed = true
+        }
+        
+        self.controller.delete()
+        XCTAssertTrue(removed, "Not removed")
     }
 }
