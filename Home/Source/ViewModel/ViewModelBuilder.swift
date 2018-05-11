@@ -2,8 +2,8 @@ import UIKit
 import Board
 
 class ViewModelBuilder {
-    var viewModel:ViewModel
-    private var project:ProjectManagedProtocol!
+    var project:ProjectManagedProtocol!
+    private var viewModel:ViewModel
     private let cardBuilder:ViewModelBuilderCard
     
     init() {
@@ -11,12 +11,12 @@ class ViewModelBuilder {
         self.viewModel = ViewModel()
     }
     
-    func buildWith(project:ProjectManagedProtocol) {
-        self.project = project
+    func buildViewModel() -> ViewModel {
         self.buildColumns()
         self.buildView()
         self.buildScroll()
         self.buildBoard()
+        return self.viewModel
     }
     
     private func buildView() {

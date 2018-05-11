@@ -18,8 +18,8 @@ class TestViewModelBuilder:XCTestCase {
         self.project = managed
         self.configureProject()
         self.builder = ViewModelBuilder()
-        self.builder.buildWith(project:self.project)
-        self.viewModel = builder.viewModel
+        self.builder.project = self.project
+        self.viewModel = self.builder.buildViewModel()
     }
     
     func testLoad() {

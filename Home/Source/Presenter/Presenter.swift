@@ -27,14 +27,14 @@ class Presenter:PresenterProtocol {
     
     func shouldUpdate() {
         let builder:ViewModelBuilder = ViewModelBuilder()
-        builder.buildWith(project:controller.project)
-        self.updateWith(viewModel:builder.viewModel)
+        builder.project = self.controller.project
+        self.updateWith(viewModel:builder.buildViewModel())
     }
     
     private func loadOutlets(view:Shared.View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
-        loader.loadFor(view:view)
-        self.outlets = loader.outlets
+        loader.view = view
+        self.outlets = loader.loadOutlets()
     }
     
     private func updateViewWith(viewModel:ViewModelView) {

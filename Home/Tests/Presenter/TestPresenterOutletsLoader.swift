@@ -10,8 +10,8 @@ class TestPresenterOutletsLoader:XCTestCase {
         super.setUp()
         self.presenter = PresenterOutletsLoader()
         self.view = View()
-        self.presenter.loadFor(view:self.view)
-        self.outlets = self.presenter.outlets
+        self.presenter.view = self.view
+        self.outlets = self.presenter.loadOutlets()
     }
     
     func testLoad() {

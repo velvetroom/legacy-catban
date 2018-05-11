@@ -39,8 +39,8 @@ class TestViewModelBuilder_Height:XCTestCase {
     }
     
     private func configureProject() {
-        self.builder.buildWith(project:self.project)
-        self.viewModel = builder.viewModel
+        self.builder.project = self.project
+        self.viewModel = builder.buildViewModel()
     }
     
     private func addColumns() {

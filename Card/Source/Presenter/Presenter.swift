@@ -23,8 +23,8 @@ class Presenter:PresenterProtocol {
     
     private func loadOutlets(view:Shared.View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
-        loader.loadFor(view:view)
-        self.outlets = loader.outlets
+        loader.view = view
+        self.outlets = loader.loadOulets()
     }
     
     private func registerForNotifications() {

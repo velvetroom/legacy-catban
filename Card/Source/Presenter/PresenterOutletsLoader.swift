@@ -2,8 +2,8 @@ import UIKit
 import Shared
 
 class PresenterOutletsLoader {
-    var outlets:PresenterOutlets
-    private weak var view:Shared.View!
+    weak var view:Shared.View!
+    private var outlets:PresenterOutlets
     private var safeArea:UILayoutGuide {
         get {
             return self.view.view.safeAreaLayoutGuide
@@ -14,10 +14,10 @@ class PresenterOutletsLoader {
         self.outlets = PresenterOutlets()
     }
     
-    func loadFor(view:Shared.View) {
-        self.view = view
+    func loadOulets() -> PresenterOutlets {
         self.loadView()
         self.loadText()
+        return self.outlets
     }
     
     private func loadView() {

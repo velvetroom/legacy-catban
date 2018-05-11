@@ -9,20 +9,18 @@ class TestPresenterOutletsLoader:XCTestCase {
         super.setUp()
         self.loader = PresenterOutletsLoader()
         self.view = View()
+        self.loader.view = view
     }
     
     func testLoadView() {
-        self.loader.loadFor(view:self.view)
-        XCTAssertNotNil(self.loader.outlets.view, "Not loaded")
+        XCTAssertNotNil(self.loader.loadOulets().view, "Not loaded")
     }
     
     func testLoadText() {
-        self.loader.loadFor(view:self.view)
-        XCTAssertNotNil(self.loader.outlets.viewText, "Not loaded")
+        XCTAssertNotNil(self.loader.loadOulets().viewText, "Not loaded")
     }
     
     func testLoadTextLayoutBottom() {
-        self.loader.loadFor(view:self.view)
-        XCTAssertNotNil(self.loader.outlets.viewText?.layoutBottom, "Not loaded")
+        XCTAssertNotNil(self.loader.loadOulets().viewText?.layoutBottom, "Not loaded")
     }
 }
