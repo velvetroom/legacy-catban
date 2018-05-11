@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class View:Shared.View {
+class View:Shared.View, UITextViewDelegate {
     weak var controller:Controller!
     
     override func viewDidLoad() {
@@ -26,5 +26,9 @@ class View:Shared.View {
     
     @objc func selectorDelete(sender button:UIBarButtonItem) {
         
+    }
+    
+    func textViewDidChange(_ textView:UITextView) {
+        self.controller.card.content = textView.text
     }
 }

@@ -17,10 +17,8 @@ class Presenter:PresenterProtocol {
     }
     
     func didLoad(view:Shared.View) {
-        if let view:Card.View = view as? Card.View {
-            view.controller = self.controller
-        }
         self.loadOutlets(view:view)
+        self.configureController(view:view)
         self.delegate.didLoadPresenter()
     }
     
@@ -30,6 +28,14 @@ class Presenter:PresenterProtocol {
     
     func shouldUpdate() {
         self.updateViewModel()
+    }
+    
+    private func configureController(view:Shared.View) {
+        guard
+            let view:Card.View = view as? Card.View
+        else { return }
+        view.controller = self.controller
+        self.outlets.viewText?.delegate = view
     }
     
     private func loadOutlets(view:Shared.View) {

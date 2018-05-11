@@ -65,6 +65,12 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets.viewText, "Not loaded")
     }
     
+    func testSetsTextDelegate() {
+        let view:Card.View = Card.View()
+        self.presenter.didLoad(view:view)
+        XCTAssertNotNil(self.presenter.outlets.viewText?.delegate, "Not set")
+    }
+    
     func testShouldUpdate() {
         self.presenter.shouldUpdate()
         XCTAssertEqual(self.view.title, Constants.columnName, "Failed to update")
