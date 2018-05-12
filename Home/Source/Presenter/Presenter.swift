@@ -16,7 +16,7 @@ class Presenter:PresenterProtocol {
             PresenterUpdaterScroll.self,
             PresenterUpdaterBoard.self,
             PresenterUpdaterColumns.self,
-            PresenterUpdaterCards.self]
+            PresenterUpdaterBoardItems.self]
     }
     
     func updateWith(viewModel:ViewModel) {

@@ -1,6 +1,6 @@
 import Foundation
 
-class PresenterUpdaterCards:PresenterUpdaterProtocol {
+class PresenterUpdaterBoardItems:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
     var controller:Controller!
