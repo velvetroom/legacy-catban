@@ -1,4 +1,5 @@
 import XCTest
+@testable import Home
 @testable import Shared
 
 class TestViewNewCard:XCTestCase {

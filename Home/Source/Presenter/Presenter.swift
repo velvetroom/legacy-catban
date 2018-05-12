@@ -5,11 +5,13 @@ import Board
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
+    var updaters:[PresenterUpdaterProtocol]
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
+        self.updaters = []
     }
     
     func updateWith(viewModel:ViewModel) {
