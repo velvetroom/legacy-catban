@@ -31,6 +31,7 @@ struct ViewConstants {
     }
     
     struct Card {
+        static let iconNewCard:String = "assetNewCard"
         static let contentPadding:CGFloat = 15
         static let fontSize:CGFloat = 16
         static let minContentHeight:CGFloat = 15
