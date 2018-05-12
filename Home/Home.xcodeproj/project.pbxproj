@@ -27,6 +27,8 @@
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
+		DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */; };
+		DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */; };
 		DA6D001320A2F6EC00E50F0A /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D001220A2F6EC00E50F0A /* assets.xcassets */; };
 		DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001420A2FC1C00E50F0A /* ViewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
@@ -95,6 +97,8 @@
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
+		DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardItem.swift; sourceTree = "<group>"; };
+		DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoardItem.swift; sourceTree = "<group>"; };
 		DA6D001220A2F6EC00E50F0A /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA6D001420A2FC1C00E50F0A /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				DA978FAB20A199AC002461E6 /* ViewContants.swift */,
 				DA0E58B6209F386300AD4425 /* ViewScroll.swift */,
 				DA978FAF20A19EFD002461E6 /* ViewBoard.swift */,
+				DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */,
 				DA47FB8020A2C27800E89334 /* ViewColumn.swift */,
 				DA6D001420A2FC1C00E50F0A /* ViewCard.swift */,
 				DA683E1A20A7067F006D15CE /* ViewNewCard.swift */,
@@ -223,6 +228,7 @@
 				DADB5EC3209B120F00CFFC9A /* TestView.swift */,
 				DA0E58B4209F383500AD4425 /* TestViewScroll.swift */,
 				DA978FAD20A19B13002461E6 /* TestViewBoard.swift */,
+				DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */,
 				DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */,
 				DA6D001620A2FC3400E50F0A /* TestViewCard.swift */,
 				DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */,
@@ -446,6 +452,7 @@
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
+				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
 				DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */,
@@ -469,6 +476,7 @@
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
+				DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */,
 				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
 				DA6D001920A30B7A00E50F0A /* TestViewModelBuilder_Height.swift in Sources */,
 				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
