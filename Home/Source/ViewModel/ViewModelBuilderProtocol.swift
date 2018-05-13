@@ -6,5 +6,5 @@ protocol ViewModelBuilderProtocol {
     var viewModel:ViewModel! { get set }
     
     init()
-    func build()
+    func build() -> ViewModel
 }

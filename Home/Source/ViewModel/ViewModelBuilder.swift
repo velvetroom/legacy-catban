@@ -4,16 +4,22 @@ import Board
 class ViewModelBuilder {
     weak var project:ProjectManagedProtocol!
     var builders:[ViewModelBuilderProtocol.Type]
-    private var viewModel:ViewModel
+    var viewModel:ViewModel
     private let cardBuilder:ViewModelBuilderCard
     
     init() {
         self.builders = []
-        self.cardBuilder = ViewModelBuilderCard()
         self.viewModel = ViewModel()
+        self.cardBuilder = ViewModelBuilderCard()
     }
     
     func buildViewModel() -> ViewModel {
+        for builderType:ViewModelBuilderProtocol.Type in self.builders {
+            var builder:ViewModelBuilderProtocol = builderType.init()
+            builder.viewModel = self.viewModel
+            builder.project = self.project
+            self.viewModel = builder.build()
+        }
         self.buildColumns()
         self.buildView()
         self.buildScroll()
