@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewModelBuilderCard {
+class ViewModelBuilderColumnsTextContent {
     let width:CGFloat
     private let attributes:[NSAttributedStringKey:Any]
     private let options:NSStringDrawingOptions

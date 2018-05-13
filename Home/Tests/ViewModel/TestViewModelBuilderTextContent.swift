@@ -1,15 +1,15 @@
 import XCTest
 @testable import Home
 
-class TestViewModelBuilderCard:XCTestCase {
-    private var builder:ViewModelBuilderCard!
+class TestViewModelBuilderTextContent:XCTestCase {
+    private var builder:ViewModelBuilderColumnsTextContent!
     private struct Constants {
         static let text:String = "lorem ipsum"
     }
     
     override func setUp() {
         super.setUp()
-        self.builder = ViewModelBuilderCard()
+        self.builder = ViewModelBuilderColumnsTextContent()
     }
     
     func testLoad() {

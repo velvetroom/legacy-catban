@@ -14,7 +14,7 @@ class TestViewModelBuilder_Builders:XCTestCase {
         super.setUp()
         self.builder = ViewModelBuilder()
         self.project = MockProjectManagedProtocol()
-        self.builder.builders.append(MockViewModelBuilderProtocol.self)
+        self.builder.builders = [MockViewModelBuilderProtocol.self]
         self.builder.project = self.project
     }
     
