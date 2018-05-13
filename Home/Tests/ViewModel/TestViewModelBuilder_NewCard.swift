@@ -6,14 +6,14 @@ class TestViewModelBuilder_NewCard:XCTestCase {
     private var builder:ViewModelBuilder!
     private var viewModel:ViewModel!
     private var project:MockProjectManagedProtocol!
-    private var column:ColumnProtocol!
     
     override func setUp() {
         super.setUp()
         self.builder = ViewModelBuilder()
         self.project = MockProjectManagedProtocol()
-        self.column = ColumnFactory.newColumn()
-        self.project.add(column:self.column)
+        self.project.add(column:ColumnFactory.newColumn())
+        self.project.add(column:ColumnFactory.newColumn())
+        self.project.add(column:ColumnFactory.newColumn())
         self.builder.project = self.project
         self.viewModel = self.builder.buildViewModel()
     }

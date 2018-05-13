@@ -1,16 +1,15 @@
 import UIKit
+import Shared
 
 class ViewNewCard:ViewBoardItem {
-    override init() {
-        super.init()
-        self.backgroundColor = UIColor.red
+    override func factoryOutlets() {
+        let image:UIImage = UIImage(name:ViewConstants.NewCard.icon, in:type(of:self))
+        self.button.setImage(image, for:UIControlState.normal)
+        self.button.imageView!.contentMode = UIViewContentMode.center
+        self.button.imageView!.clipsToBounds = true
     }
     
-    required init?(coder: NSCoder) {
-        return nil
-    }
-    
-    override func selectorButton(sender button:UIButton) {
-        
+    override func buttonDidSelect() {
+        super.buttonDidSelect()
     }
 }

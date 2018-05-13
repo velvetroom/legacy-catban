@@ -1,32 +1,23 @@
 import UIKit
 
 class ViewCard:ViewBoardItem {
-    var identifier:String
+    var identifier:String!
     private(set) weak var labelContent:UILabel!
     
-    override init() {
-        self.identifier = String()
-        super.init()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
-    override func selectorButton(sender button:UIButton) {
+    override func buttonDidSelect() {
         self.showSelected()
         self.controller.editCardWith(identifier:self.identifier)
     }
     
-    override func configureView() {
-        super.configureView()
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
-    }
-    
     override func factoryOutlets() {
         super.factoryOutlets()
+        self.configureView()
         self.factoryLabel()
+    }
+    
+    private func configureView() {
+        self.backgroundColor = UIColor.white
+        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
     }
     
     private func factoryLabel() {

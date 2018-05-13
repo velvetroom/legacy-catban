@@ -45,7 +45,7 @@ class TestViewModelBuilder_Height:XCTestCase {
     
     private func addColumns() {
         let column:ColumnProtocol = ColumnFactory.newColumn()
-        for _:Int in 0 ..< 20 {
+        for _:Int in 0 ..< 30 {
             column.add(card:CardFactory.newCard())
         }
         self.project.add(column:column)

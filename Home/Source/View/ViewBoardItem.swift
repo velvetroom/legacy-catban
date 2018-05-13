@@ -11,22 +11,29 @@ class ViewBoardItem:UIView {
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryOutlets()
+        self.factoryBaseOutlets()
     }
     
     required init?(coder:NSCoder) {
         return nil
     }
     
-    @objc func selectorButton(sender button:UIButton) { }
+    func buttonDidSelect() { }
     
-    func configureView() {
+    func factoryOutlets() { }
+    
+    @objc private func selectorButton(sender button:UIButton) {
+        self.buttonDidSelect()
+    }
+    
+    private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
     }
     
-    func factoryOutlets() {
+    private func factoryBaseOutlets() {
         self.factoryButton()
+        self.factoryOutlets()
     }
     
     private func factoryButton() {

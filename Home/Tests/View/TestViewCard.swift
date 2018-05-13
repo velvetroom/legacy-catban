@@ -32,11 +32,12 @@ class TestViewCard:XCTestCase {
     
     func testCallEditCardOnController() {
         var controllerCalled:Bool = false
+        self.view.identifier = String()
         self.controller.onEditCardWith = { (identifier:String) in
             controllerCalled = true
         }
         
-        self.view.selectorButton(sender:UIButton())
+        self.view.buttonDidSelect()
         XCTAssertTrue(controllerCalled, "Not called")
     }
 }
