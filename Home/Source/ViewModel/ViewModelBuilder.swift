@@ -3,10 +3,12 @@ import Board
 
 class ViewModelBuilder {
     weak var project:ProjectManagedProtocol!
+    var builders:[ViewModelBuilderProtocol.Type]
     private var viewModel:ViewModel
     private let cardBuilder:ViewModelBuilderCard
     
     init() {
+        self.builders = []
         self.cardBuilder = ViewModelBuilderCard()
         self.viewModel = ViewModel()
     }
