@@ -4,49 +4,52 @@ import Board
 class ViewModelBuilderColumns:ViewModelBuilderProtocol {
     var project:ProjectManagedProtocol!
     var viewModel:ViewModel!
-    private let textContent:ViewModelBuilderColumnsTextContent
+    private var items:ViewModelBuilderItems
+    private var left:CGFloat
     
     required init() {
-        self.textContent = ViewModelBuilderColumnsTextContent()
+        self.items = ViewModelBuilderItems()
+        self.left = ViewConstants.Board.paddingHorizontal
     }
     
     func build() -> ViewModel {
-        var left:CGFloat = ViewConstants.Board.paddingHorizontal
         self.project.iterate { (column:ColumnProtocol) in
-            self.add(column:column, at:left)
-            self.buildCardsFor(column:column, at:left)
-            left += ViewConstants.Column.width + ViewConstants.Board.columnSpacing
+            self.buildFor(column:column)
+            self.left += ViewConstants.Column.width + ViewConstants.Board.columnSpacing
         }
         return self.viewModel
     }
     
-    private func add(column:ColumnProtocol, at left:CGFloat) {
+    private func buildFor(column:ColumnProtocol) {
+        self.add(column:column)
+        self.buildItems(column:column)
+    }
+    
+    private func add(column:ColumnProtocol) {
         var viewModel:ViewModelColumn = ViewModelColumn()
         viewModel.name = column.name
-        viewModel.left = left
+        viewModel.left = self.left
         self.viewModel.columns.append(viewModel)
     }
     
-    private func buildCardsFor(column:ColumnProtocol, at left:CGFloat) {
-        let left:CGFloat = left + ViewConstants.Column.paddingHorizontal
-        var top:CGFloat = ViewConstants.ColumnTitle.height
-        column.iterate { (card:CardProtocol) in
-            self.add(card:card, at:left, and:top)
-            if let lastCard:ViewModelCard = self.viewModel.cards.last {
-                top += lastCard.height
-            }
-            top += ViewConstants.Board.cardSpacing
+    private func buildItems(column:ColumnProtocol) {
+        self.items.left = self.left
+        self.items.column = column
+        self.items.buildCards()
+        self.buildNewCard()
+        self.viewModel.items.append(contentsOf:self.items.items)
+        self.updateMaxY()
+    }
+    
+    private func buildNewCard() {
+        if self.viewModel.columns.count == ViewModelConstants.newCardColumnIndex + 1 {
+            self.items.buildNewCard()
         }
     }
     
-    private func add(card:CardProtocol, at left:CGFloat, and top:CGFloat) {
-        var viewModel:ViewModelCard = ViewModelCard()
-        viewModel.identifier = card.identifier
-        viewModel.content = card.content
-        viewModel.left = left
-        viewModel.top = top
-        viewModel.width = self.textContent.width
-        viewModel.height = self.textContent.heightFor(content:card.content)
-        self.viewModel.cards.append(viewModel)
+    private func updateMaxY() {
+        if self.items.maxY > self.viewModel.board.maxColumnY {
+            self.viewModel.board.maxColumnY = self.items.maxY
+        }
     }
 }

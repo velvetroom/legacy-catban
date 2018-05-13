@@ -4,7 +4,7 @@ import XCTest
 
 class TestViewNewCard:XCTestCase {
     func testImage() {
-        let image:UIImage? = UIImage(name:ViewConstants.Card.iconNewCard, in:ViewNewCard.self)
+        let image:UIImage? = UIImage(name:ViewConstants.NewCard.icon, in:ViewNewCard.self)
         XCTAssertNotNil(image, "Failed loading image")
     }
 }

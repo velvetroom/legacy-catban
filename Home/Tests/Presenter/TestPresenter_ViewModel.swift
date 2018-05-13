@@ -4,16 +4,14 @@ import XCTest
 class TestPresenter_ViewModel:XCTestCase {
     private var presenter:Presenter!
     private var viewModel:ViewModel!
+    private var viewBoard:ViewBoard!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
         self.viewModel = ViewModel()
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.presenter, "Failed to load presenter")
-        XCTAssertNotNil(self.viewModel, "Failed to load view model")
+        self.viewBoard = ViewBoard()
+        self.presenter.outlets.viewBoard = self.viewBoard
     }
     
     func testUpdateTitle() {
@@ -64,10 +62,10 @@ class TestPresenter_ViewModel:XCTestCase {
         let cards:[ViewModelCard] = [ViewModelCard(), ViewModelCard()]
         let viewBoard:ViewBoard = ViewBoard()
         self.presenter.outlets.viewBoard = viewBoard
-        self.viewModel.cards = cards
+        self.viewModel.items = cards
         
         self.presenter.updateWith(viewModel:self.viewModel)
         
-        XCTAssertEqual(viewBoard.cards.count, cards.count, "Failed to update cards")
+        XCTAssertEqual(viewBoard.items.count, cards.count, "Failed to update cards")
     }
 }

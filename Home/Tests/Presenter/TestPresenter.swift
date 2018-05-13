@@ -9,6 +9,7 @@ class TestPresenter:XCTestCase {
     private var delegate:MockControllerProtocol!
     private var project:ProjectManagedProtocol!
     private var view:Home.View!
+    private var viewBoard:ViewBoard!
     private struct Constants {
         static let projectName:String = "lorem ipsum"
     }
@@ -20,6 +21,7 @@ class TestPresenter:XCTestCase {
         self.presenter.controller = self.controller
         self.delegate = MockControllerProtocol()
         self.view = View()
+        self.viewBoard = ViewBoard()
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
         self.project = board.manage(project:project)
@@ -27,16 +29,7 @@ class TestPresenter:XCTestCase {
         self.controller.project = self.project
         self.presenter.delegate = self.delegate
         self.presenter.outlets.view = self.view
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.presenter, "Failed to load presenter")
-        XCTAssertNotNil(self.presenter.outlets, "Failed to load outlets")
-        XCTAssertNotNil(self.presenter.view.delegate, "Failed to assign delegate")
-        XCTAssertNotNil(self.delegate, "Failed to load delegate")
-        XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.project, "Failed to load project")
-        XCTAssertNotNil(self.view, "Failed to load view")
+        self.presenter.outlets.viewBoard = self.viewBoard
     }
     
     func testViewType() {

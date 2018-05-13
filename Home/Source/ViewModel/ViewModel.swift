@@ -5,13 +5,13 @@ struct ViewModel {
     var scroll:ViewModelScroll
     var board:ViewModelBoard
     var columns:[ViewModelColumn]
-    var cards:[ViewModelCard]
+    var items:[ViewModelBoardItemProtocol]
     
     init() {
         self.view = ViewModelView()
         self.scroll = ViewModelScroll()
         self.board = ViewModelBoard()
         self.columns = []
-        self.cards = []
+        self.items = []
     }
 }

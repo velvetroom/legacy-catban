@@ -36,17 +36,6 @@ class ViewModelBuilderScroll:ViewModelBuilderProtocol {
     }
     
     private func columnHeight() -> CGFloat {
-        return self.maxCardBottom() + ViewConstants.Column.paddingBottom
-    }
-    
-    private func maxCardBottom() -> CGFloat {
-        var maxBottom:CGFloat = 0
-        for card:ViewModelCard in self.viewModel.cards {
-            let bottom:CGFloat = card.top + card.height
-            if bottom > maxBottom {
-                maxBottom = bottom
-            }
-        }
-        return maxBottom
+        return self.viewModel.board.maxColumnY + ViewConstants.Column.paddingBottom
     }
 }

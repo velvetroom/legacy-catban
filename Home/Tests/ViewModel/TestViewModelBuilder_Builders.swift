@@ -3,7 +3,6 @@ import XCTest
 
 class TestViewModelBuilder_Builders:XCTestCase {
     private var builder:ViewModelBuilder!
-    private var viewModel:ViewModel!
     private var project:MockProjectManagedProtocol!
     private struct Contants {
         static let initialName:String = "lorem ipsum"

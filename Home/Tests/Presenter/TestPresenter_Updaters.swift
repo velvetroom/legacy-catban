@@ -6,6 +6,7 @@ class TestPresenter_Updaters:XCTestCase {
     private var controller:Controller!
     private var outlets:PresenterOutlets!
     private var viewModel:ViewModel!
+    private var viewBoard:ViewBoard!
     
     override func setUp() {
         super.setUp()
@@ -13,7 +14,9 @@ class TestPresenter_Updaters:XCTestCase {
         self.controller = Controller()
         self.outlets = PresenterOutlets()
         self.viewModel = ViewModel()
+        self.viewBoard = ViewBoard()
         self.presenter.controller = self.controller
+        self.presenter.outlets.viewBoard = self.viewBoard
         self.presenter.updaters.append(MockPresenterUpdaterProtocol.self)
     }
     

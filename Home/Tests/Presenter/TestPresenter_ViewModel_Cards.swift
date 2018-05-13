@@ -37,19 +37,19 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
     func testReloadColumns() {
         self.updatePresenterWith(cards:Constants.initialCards)
         
-        XCTAssertEqual(self.viewBoard.cards.count, Constants.initialCards, "Invalid amount of cards")
+        XCTAssertEqual(self.viewBoard.items.count, Constants.initialCards, "Invalid amount of cards")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.initialCards, "Invalid amount of subviews")
         self.validateCards()
         
         self.updatePresenterWith(cards:Constants.finalCards)
         
-        XCTAssertEqual(self.viewBoard.cards.count, Constants.finalCards, "Invalid amount of cards")
+        XCTAssertEqual(self.viewBoard.items.count, Constants.finalCards, "Invalid amount of cards")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.finalCards, "Invalid amount of subviews")
         self.validateCards()
     }
     
     private func updatePresenterWith(cards:Int) {
-        self.viewModel.cards = []
+        self.viewModel.items = []
         for _:Int in 0 ..< cards {
             var card:ViewModelCard = ViewModelCard()
             card.identifier = Constants.cardIdentifier
@@ -58,13 +58,14 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
             card.top = Constants.layoutConstantTop
             card.height = Constants.layoutConstantHeight
             card.width = Constants.layoutConstantWidth
-            self.viewModel.cards.append(card)
+            self.viewModel.items.append(card)
         }
         self.presenter.updateWith(viewModel:self.viewModel)
     }
     
     private func validateCards() {
-        for card:ViewCard in self.viewBoard.cards {
+        for item:ViewBoardItem in self.viewBoard.items {
+            let card:ViewCard = item as! ViewCard
             XCTAssertNotNil(card.controller, "Failed to load controller")
             XCTAssertNotNil(card.layoutLeft, "Failed to assign layout")
             XCTAssertNotNil(card.layoutTop, "Failed to assign layout")

@@ -2,11 +2,11 @@ import UIKit
 
 class ViewBoard:UIView {
     var columns:[ViewColumn]
-    var cards:[ViewCard]
+    var items:[ViewBoardItem]
     
     init() {
         self.columns = []
-        self.cards = []
+        self.items = []
         super.init(frame:CGRect.zero)
         self.clipsToBounds = true
     }

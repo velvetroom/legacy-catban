@@ -33,7 +33,7 @@ class TestViewModelBuilder:XCTestCase {
         XCTAssertNotEqual(self.viewModel.scroll.contentSize, CGSize.zero, "Failed to build content size")
         XCTAssertNotEqual(self.viewModel.board.frame, CGRect.zero, "Failed to build board frame")
         XCTAssertFalse(self.viewModel.columns.isEmpty, "Failed to build columns")
-        XCTAssertFalse(self.viewModel.cards.isEmpty, "Failed to build cards")
+        XCTAssertFalse(self.viewModel.items.isEmpty, "Failed to build items")
     }
     
     func testColumns() {
@@ -42,10 +42,20 @@ class TestViewModelBuilder:XCTestCase {
         }
     }
     
-    func testCards() {
-        for card:ViewModelCard in self.viewModel.cards {
-            XCTAssertFalse(card.content.isEmpty, "No content")
-            XCTAssertFalse(card.identifier.isEmpty, "No identifier")
+    func testItemNewCard() {
+        for item:ViewModelBoardItemProtocol in self.viewModel.items {
+            if let itemNewCard:ViewModelNewCard = item as? ViewModelNewCard {
+                XCTAssertGreaterThan(itemNewCard.width, 0, "Not loaded")
+            }
+        }
+    }
+    
+    func testItemsCard() {
+        for item:ViewModelBoardItemProtocol in self.viewModel.items {
+            if let itemCard:ViewModelCard = item as? ViewModelCard {
+                XCTAssertFalse(itemCard.content.isEmpty, "No content")
+                XCTAssertFalse(itemCard.identifier.isEmpty, "No identifier")
+            }
         }
     }
     
