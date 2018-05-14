@@ -4,7 +4,8 @@ import XCTest
 class TestPresenterBoardDrag:XCTestCase {
     private var presenter:PresenterBoardDrag!
     private struct Constants {
-        static let poisition:CGPoint = CGPoint(x:3, y:4)
+        static let initialPosition:CGPoint = CGPoint(x:3, y:4)
+        static let updatedPosition:CGPoint = CGPoint(x:4, y:3)
     }
     
     override func setUp() {
@@ -12,15 +13,16 @@ class TestPresenterBoardDrag:XCTestCase {
         self.presenter = PresenterBoardDrag()
     }
     
-    func testBegan() {
-        self.presenter.updated(state:PresenterBoardDragState.began, at:Constants.poisition)
+    func testBeganDraggingCard() {
+        let viewCard:ViewCard = ViewCard()
+        self.presenter.beganDragging(view:viewCard, at:Constants.initialPosition)
     }
     
-    func testChanged() {
-        self.presenter.updated(state:PresenterBoardDragState.changed, at:Constants.poisition)
+    func testDraggedTo() {
+        self.presenter.draggedTo(position:Constants.updatedPosition)
     }
     
-    func testEnded() {
-        self.presenter.updated(state:PresenterBoardDragState.ended, at:Constants.poisition)
+    func testDragEnded() {
+        self.presenter.dragEnded()
     }
 }

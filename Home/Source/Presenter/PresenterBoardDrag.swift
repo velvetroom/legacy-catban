@@ -1,28 +1,15 @@
 import UIKit
 
 class PresenterBoardDrag:PresenterBoardDragProtocol {
-    private var router:[PresenterBoardDragState : ((CGPoint) -> Void)] {
-        get {
-            return [
-                PresenterBoardDragState.began : self.stateBegan,
-                PresenterBoardDragState.changed : self.stateChanged,
-                PresenterBoardDragState.ended : self.stateEnded]
-        }
+    func beganDragging(view:ViewCard, at position:CGPoint) {
+        print("dragging \(position)")
     }
     
-    func updated(state:PresenterBoardDragState, at position:CGPoint) {
-        self.router[state]!(position)
-    }
-    
-    private func stateBegan(position:CGPoint) {
+    func draggedTo(position:CGPoint) {
         
     }
     
-    private func stateChanged(position:CGPoint) {
-        
-    }
-    
-    private func stateEnded(position:CGPoint) {
+    func dragEnded() {
         
     }
 }

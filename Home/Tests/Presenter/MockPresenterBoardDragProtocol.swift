@@ -2,9 +2,19 @@ import UIKit
 @testable import Home
 
 class MockPresenterBoardDragProtocol:PresenterBoardDragProtocol {
-    var onUpdated:((PresenterBoardDragState, CGPoint) -> Void)?
+    var onBeganDragging:((ViewCard, CGPoint) -> Void)?
+    var onDraggedTo:((CGPoint) -> Void)?
+    var onDragEnded:(() -> Void)?
     
-    func updated(state:PresenterBoardDragState, at position:CGPoint) {
-        self.onUpdated?(state, position)
+    func beganDragging(view:ViewCard, at position:CGPoint) {
+        self.onBeganDragging?(view, position)
+    }
+    
+    func draggedTo(position:CGPoint) {
+        self.onDraggedTo?(position)
+    }
+    
+    func dragEnded() {
+        self.onDragEnded?()
     }
 }

@@ -10,27 +10,41 @@ class ViewBoard:UIView {
         self.items = []
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryGestures()
     }
     
     required init?(coder:NSCoder) {
         return nil
     }
     
-    @objc func selectorPan(sender gesture:UIPanGestureRecognizer) {
-        let gestureState:UIGestureRecognizerState = gesture.state
-        let state:PresenterBoardDragState = PresenterBoardDragStateFactory.factoryStateWith(state:gestureState)
-        let point:CGPoint = gesture.location(in:self)
-        self.dragDelegate.updated(state:state, at:point)
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?) {
+        guard
+            let touch:UITouch = touches.first,
+            let view:ViewCard = touch.view as? ViewCard
+        else {
+            print(touches.first?.view)
+            return
+        }
+        let location:CGPoint = touch.location(in:self)
+        self.dragDelegate.beganDragging(view:view, at:location)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event:UIEvent?) {
+        guard
+            let touch:UITouch = touches.first
+        else { return }
+        let location:CGPoint = touch.location(in:self)
+        self.dragDelegate.draggedTo(position:location)
+    }
+    
+    override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?) {
+        self.dragDelegate.dragEnded()
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?) {
+        self.dragDelegate.dragEnded()
     }
     
     private func configureView() {
         self.clipsToBounds = true
-    }
-    
-    private func factoryGestures() {
-        let pan:UIPanGestureRecognizer = UIPanGestureRecognizer(target:self,
-                                                                action:#selector(self.selectorPan(sender:)))
-        self.addGestureRecognizer(pan)
     }
 }

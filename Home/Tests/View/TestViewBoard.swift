@@ -21,14 +21,4 @@ class TestViewBoard:XCTestCase {
         self.view.dragDelegate = MockPresenterBoardDragProtocol()
         XCTAssertNil(self.view.dragDelegate, "Retaining")
     }
-    
-    func testDragEventsCallsDelegate() {
-        var delegateCalled:Bool = false
-        self.dragDelegate.onUpdated = { (_:PresenterBoardDragState, _:CGPoint) in
-            delegateCalled = true
-        }
-        
-        self.view.selectorPan(sender:UIPanGestureRecognizer())
-        XCTAssertTrue(delegateCalled, "Not called")
-    }
 }
