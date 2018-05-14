@@ -18,7 +18,6 @@ class PresenterUpdaterCard:PresenterUpdaterBoardItemProtocol {
     }
     
     private func addCard() {
-        self.view.controller = self.controller
         self.viewBoard.addSubview(self.view)
         self.viewBoard.items.append(self.view)
     }

@@ -17,12 +17,14 @@ class TestPresenterOutletsLoader:XCTestCase {
     func testLoadOutlets() {
         let view:View = View()
         let parentPresenter:Presenter = Presenter()
+        let controller:Controller = Controller()
+        parentPresenter.controller = controller
         self.presenter.presenter = parentPresenter
         self.presenter.view = view
         self.presenter.loadOutlets()
         XCTAssertNotNil(parentPresenter.outlets.view, "Failed to load")
         XCTAssertNotNil(parentPresenter.outlets.viewScroll, "Failed to load")
         XCTAssertNotNil(parentPresenter.outlets.viewBoard, "Failed to load")
-        XCTAssertNotNil(parentPresenter.outlets.viewBoard?.dragDelegate, "Delegate not assigned")
+        XCTAssertNotNil(parentPresenter.outlets.viewBoard?.drag.controller, "Controller not assigned")
     }
 }

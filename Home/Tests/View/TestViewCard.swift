@@ -10,7 +10,6 @@ class TestViewCard:XCTestCase {
         super.setUp()
         self.view = ViewCard()
         self.controller = MockController()
-        self.view.controller = controller
     }
     
     func testLoad() {
@@ -23,21 +22,5 @@ class TestViewCard:XCTestCase {
         XCTAssertNil(self.view.layoutTop, "Property not found")
         XCTAssertNil(self.view.layoutHeight, "Property not found")
         XCTAssertNil(self.view.layoutWidth, "Property not found")
-    }
-    
-    func testControllerIsNotRetained() {
-        self.view.controller = Controller()
-        XCTAssertNil(self.view.controller, "Strong retained controller")
-    }
-    
-    func testCallEditCardOnController() {
-        var controllerCalled:Bool = false
-        self.view.identifier = String()
-        self.controller.onEditCardWith = { (identifier:String) in
-            controllerCalled = true
-        }
-        
-        self.view.buttonDidSelect()
-        XCTAssertTrue(controllerCalled, "Not called")
     }
 }

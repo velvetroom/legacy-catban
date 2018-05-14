@@ -66,7 +66,6 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
     private func validateCards() {
         for item:ViewBoardItem in self.viewBoard.items {
             let card:ViewCard = item as! ViewCard
-            XCTAssertNotNil(card.controller, "Failed to load controller")
             XCTAssertNotNil(card.layoutLeft, "Failed to assign layout")
             XCTAssertNotNil(card.layoutTop, "Failed to assign layout")
             XCTAssertNotNil(card.layoutHeight, "Failed to assign layout")

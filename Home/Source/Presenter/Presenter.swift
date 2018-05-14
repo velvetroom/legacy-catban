@@ -1,18 +1,16 @@
-import Foundation
+import UIKit
 import Shared
 import Board
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
-    var boardDrag:PresenterBoardDragProtocol
     var updaters:[PresenterUpdaterProtocol.Type]
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
-        self.boardDrag = PresenterBoardDrag()
         self.updaters = [
             PresenterUpdaterView.self,
             PresenterUpdaterScroll.self,

@@ -66,4 +66,8 @@ class TestPresenter:XCTestCase {
         self.presenter.controller = Controller()
         XCTAssertNil(self.presenter.controller, "Strong retained controller")
     }
+    
+    func testPresenterAssignsControllerToBoard() {
+        self.presenter.shouldUpdate()
+    }
 }

@@ -33,6 +33,8 @@ struct ViewConstants {
     struct NewCard {
         static let icon:String = "assetNewCard"
         static let height:CGFloat = 70
+        static let alphaOn:CGFloat = 0.3
+        static let alphaOff:CGFloat = 1
     }
     
     struct Card {
