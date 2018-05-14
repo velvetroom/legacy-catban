@@ -45,6 +45,13 @@ class Project:ProjectProtocol, Equatable {
         column.container = self
     }
     
+    func add(card:CardProtocol) {
+        guard
+            let column:ColumnProtocol = self.columns.first
+        else { return }
+        column.add(card:card)
+    }
+    
     func remove(column:ColumnProtocol) {
         let countColumns:Int = self.columns.count
         for index:Int in 0 ..< countColumns {
