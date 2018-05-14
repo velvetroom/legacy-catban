@@ -67,6 +67,7 @@
 		DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC320A1B467002461E6 /* ViewModel.swift */; };
 		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
 		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
+		DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */; };
@@ -159,6 +160,7 @@
 		DA978FC320A1B467002461E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
+		DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_CreateCard.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				DAFEF367209AF8C700740A88 /* TestController.swift */,
 				DA15451420A4691F00CCC59D /* TestController_Transition.swift */,
 				DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */,
+				DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */,
 				DA15451620A46DAD00CCC59D /* MockController.swift */,
 				DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */,
 				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
@@ -588,6 +591,7 @@
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,
+				DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */,
 				DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */,
 				DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */,
 			);

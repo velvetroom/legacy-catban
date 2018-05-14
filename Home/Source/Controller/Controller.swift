@@ -18,4 +18,10 @@ public class Controller:ControllerProjectProtocol {
         let card:CardProtocol = self.project.cardWith(identifier:identifier)
         self.transiton.transitionToCard(card:card, in:self.project)
     }
+    
+    func createNewCard() {
+        let card:CardProtocol = CardFactory.newCard()
+        self.project.add(card:card)
+        self.transiton.transitionToCard(card:card, in:self.project)
+    }
 }

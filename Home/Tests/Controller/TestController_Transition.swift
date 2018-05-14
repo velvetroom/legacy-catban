@@ -42,4 +42,14 @@ class TestController_Transition:XCTestCase {
         self.controller.editCardWith(identifier:Constants.identifier)
         XCTAssertTrue(transitioned, "Failed to transition")
     }
+    
+    func testCreateCardTransitionsToCard() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
+            transitioned = true
+        }
+        
+        self.controller.createNewCard()
+        XCTAssertTrue(transitioned, "Failed to transition")
+    }
 }
