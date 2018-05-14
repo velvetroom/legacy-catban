@@ -68,6 +68,10 @@
 		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
 		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
 		DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */; };
+		DAAF5E6520A96C9F00354B08 /* PresenterBoardDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6420A96C9F00354B08 /* PresenterBoardDrag.swift */; };
+		DAAF5E6720A96CDD00354B08 /* TestPresenterBoardDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6620A96CDD00354B08 /* TestPresenterBoardDrag.swift */; };
+		DAAF5E6920A96D4600354B08 /* PresenterBoardDragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6820A96D4600354B08 /* PresenterBoardDragProtocol.swift */; };
+		DAAF5E6B20A96EBA00354B08 /* MockPresenterBoardDragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6A20A96EBA00354B08 /* MockPresenterBoardDragProtocol.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */; };
@@ -161,6 +165,10 @@
 		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
 		DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_CreateCard.swift; sourceTree = "<group>"; };
+		DAAF5E6420A96C9F00354B08 /* PresenterBoardDrag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBoardDrag.swift; sourceTree = "<group>"; };
+		DAAF5E6620A96CDD00354B08 /* TestPresenterBoardDrag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterBoardDrag.swift; sourceTree = "<group>"; };
+		DAAF5E6820A96D4600354B08 /* PresenterBoardDragProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBoardDragProtocol.swift; sourceTree = "<group>"; };
+		DAAF5E6A20A96EBA00354B08 /* MockPresenterBoardDragProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterBoardDragProtocol.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
@@ -314,6 +322,8 @@
 				DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */,
 				DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */,
 				DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */,
+				DAAF5E6820A96D4600354B08 /* PresenterBoardDragProtocol.swift */,
+				DAAF5E6420A96C9F00354B08 /* PresenterBoardDrag.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -329,8 +339,10 @@
 				DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */,
 				DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */,
 				DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */,
+				DAAF5E6620A96CDD00354B08 /* TestPresenterBoardDrag.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
 				DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */,
+				DAAF5E6A20A96EBA00354B08 /* MockPresenterBoardDragProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -516,6 +528,7 @@
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
+				DAAF5E6520A96C9F00354B08 /* PresenterBoardDrag.swift in Sources */,
 				DA6FDEFF20A71D9100D148DD /* PresenterUpdaterBoardItems.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
 				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
@@ -548,6 +561,7 @@
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
 				DAF84E5920A84FE70000BF06 /* ViewModelBuilderBoard.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
+				DAAF5E6920A96D4600354B08 /* PresenterBoardDragProtocol.swift in Sources */,
 				DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +579,7 @@
 				DA978FBE20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */,
+				DAAF5E6B20A96EBA00354B08 /* MockPresenterBoardDragProtocol.swift in Sources */,
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
@@ -592,6 +607,7 @@
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,
 				DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */,
+				DAAF5E6720A96CDD00354B08 /* TestPresenterBoardDrag.swift in Sources */,
 				DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */,
 				DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */,
 			);

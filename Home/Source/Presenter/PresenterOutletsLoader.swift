@@ -3,30 +3,26 @@ import Shared
 
 class PresenterOutletsLoader {
     weak var view:Shared.View!
-    private var outlets:PresenterOutlets
+    weak var presenter:Presenter!
     
-    init() {
-        self.outlets = PresenterOutlets()
-    }
-    
-    func loadOutlets() -> PresenterOutlets {
+    func loadOutlets() {
         self.loadView()
         self.loadScroll()
         self.loadBoard()
-        return self.outlets
     }
     
     private func loadView() {
-        self.outlets.view = view
+        self.presenter.outlets.view = view
     }
     
     private func loadScroll() {
-        self.outlets.viewScroll = self.view.view as? ViewScroll
+        self.presenter.outlets.viewScroll = self.view.view as? ViewScroll
     }
     
     private func loadBoard() {
         let viewBoard:ViewBoard = ViewBoard()
-        self.outlets.viewBoard = viewBoard
-        self.outlets.viewScroll?.addSubview(viewBoard)
+        viewBoard.dragDelegate = self.presenter.boardDrag
+        self.presenter.outlets.viewBoard = viewBoard
+        self.presenter.outlets.viewScroll?.addSubview(viewBoard)
     }
 }

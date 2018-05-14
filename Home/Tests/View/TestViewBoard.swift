@@ -13,4 +13,9 @@ class TestViewBoard:XCTestCase {
         XCTAssertTrue(self.view.columns.isEmpty, "Columns should be initially empty")
         XCTAssertTrue(self.view.items.isEmpty, "Items should be initially empty")
     }
+    
+    func testDragDelegateNotRetained() {
+        self.view.dragDelegate = MockPresenterBoardDragProtocol()
+        XCTAssertNil(self.view.dragDelegate, "Retaining")
+    }
 }

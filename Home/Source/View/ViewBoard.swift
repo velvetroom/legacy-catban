@@ -3,6 +3,7 @@ import UIKit
 class ViewBoard:UIView {
     var columns:[ViewColumn]
     var items:[ViewBoardItem]
+    weak var dragDelegate:PresenterBoardDragProtocol!
     
     init() {
         self.columns = []
