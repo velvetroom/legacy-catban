@@ -5,19 +5,15 @@ class ViewCard:ViewBoardItem {
     private(set) weak var labelContent:UILabel!
     
     override func buttonDidSelect() {
-        self.showSelected()
+        self.showOn()
         self.controller.editCardWith(identifier:self.identifier)
     }
     
     override func factoryOutlets() {
         super.factoryOutlets()
-        self.configureView()
         self.factoryLabel()
-    }
-    
-    private func configureView() {
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
+        self.configureView()
+        self.configureButton()
     }
     
     private func factoryLabel() {
@@ -27,7 +23,6 @@ class ViewCard:ViewBoardItem {
         labelContent.backgroundColor = UIColor.clear
         labelContent.numberOfLines = 0
         labelContent.font = UIFont.systemFont(ofSize:ViewConstants.Card.fontSize, weight:UIFont.Weight.regular)
-        labelContent.textColor = UIColor.black
         self.labelContent = labelContent
         
         self.addSubview(labelContent)
@@ -42,10 +37,39 @@ class ViewCard:ViewBoardItem {
                                             constant:-ViewConstants.Card.contentPadding).isActive = true
     }
     
-    private func showSelected() {
+    private func configureView() {
+        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
+        self.showOff()
+    }
+    
+    private func configureButton() {
+        self.button.addTarget(self, action:#selector(self.selectorHighlighted(sender:)),
+                              for:UIControlEvents.touchDown)
+        self.button.addTarget(self, action:#selector(self.selectorReleased(sender:)),
+                              for:UIControlEvents.touchUpOutside)
+        self.button.addTarget(self, action:#selector(self.selectorReleased(sender:)),
+                              for:UIControlEvents.touchCancel)
+    }
+    
+    private func showOn() {
         UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.Shared.blue
             self?.labelContent.textColor = UIColor.white
         }
+    }
+    
+    private func showOff() {
+        UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
+            self?.backgroundColor = UIColor.white
+            self?.labelContent.textColor = UIColor.black
+        }
+    }
+    
+    @objc private func selectorHighlighted(sender button:UIButton) {
+        self.showOn()
+    }
+    
+    @objc private func selectorReleased(sender button:UIButton) {
+        self.showOff()
     }
 }
