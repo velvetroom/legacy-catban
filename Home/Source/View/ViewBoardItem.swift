@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewBoardItem:UIView {
+    var dragStrategy:PresenterDragStrategyProtocol.Type!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutHeight:NSLayoutConstraint!
@@ -17,8 +18,9 @@ class ViewBoardItem:UIView {
     }
     
     func factoryOutlets() { }
-    func showOn() { }
-    func showOff() { }
+    func dragStart() { }
+    func drag(delta:CGPoint) { }
+    func dragEnd() { }
     
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false

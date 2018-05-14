@@ -2,11 +2,22 @@ import UIKit
 import Shared
 
 class ViewNewCard:ViewBoardItem {
-    override func showOn() {
+    override init() {
+        super.init()
+        self.dragStrategy = PresenterDragStrategyFixed.self
+    }
+    
+    required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    override func dragStart() {
+        super.dragStart()
         self.alpha = ViewConstants.NewCard.alphaOn
     }
     
-    override func showOff() {
+    override func dragEnd() {
+        super.dragEnd()
         self.alpha = ViewConstants.NewCard.alphaOff
     }
     

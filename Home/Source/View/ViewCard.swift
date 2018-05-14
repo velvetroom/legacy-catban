@@ -4,14 +4,25 @@ class ViewCard:ViewBoardItem {
     var identifier:String!
     private(set) weak var labelContent:UILabel!
     
-    override func showOn() {
+    override init() {
+        super.init()
+        self.dragStrategy = PresenterDragStrategyCard.self
+    }
+    
+    required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    override func dragStart() {
+        super.dragStart()
         UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.Shared.blue
             self?.labelContent.textColor = UIColor.white
         }
     }
     
-    override func showOff() {
+    override func dragEnd() {
+        super.dragEnd()
         UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.white
             self?.labelContent.textColor = UIColor.black
@@ -47,6 +58,6 @@ class ViewCard:ViewBoardItem {
     
     private func configureView() {
         self.layer.cornerRadius = ViewConstants.Card.cornerRadius
-        self.showOff()
+        self.dragEnd()
     }
 }

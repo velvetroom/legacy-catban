@@ -1,15 +1,29 @@
-import Foundation
+import UIKit
 @testable import Home
 
 class MockViewBoardItem:ViewBoardItem {
-    var onShowOn:(() -> Void)?
-    var onShowOff:(() -> Void)?
+    var onDragStart:(() -> Void)?
+    var onDragDelta:((CGPoint) -> Void)?
+    var onDragEnd:(() -> Void)?
     
-    override func showOn() {
-        self.onShowOn?()
+    override init() {
+        super.init()
+        self.dragStrategy = MockPresenterDragStrategyProtocol.self
     }
     
-    override func showOff() {
-        self.onShowOff?()
+    required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    override func dragStart() {
+        self.onDragStart?()
+    }
+    
+    override func drag(delta:CGPoint) {
+        self.onDragDelta?(delta)
+    }
+    
+    override func dragEnd() {
+        self.onDragEnd?()
     }
 }

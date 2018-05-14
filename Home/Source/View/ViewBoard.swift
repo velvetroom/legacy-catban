@@ -31,15 +31,15 @@ class ViewBoard:UIView {
             let touch:UITouch = touches.first
         else { return }
         let position:CGPoint = touch.location(in:self)
-        self.drag.draggedOn(board:self, to:position)
+        self.drag.draggedTo(position:position)
     }
     
     override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?) {
-        self.drag.dragEndedOn(board:self)
+        self.drag.dragEnded()
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?) {
-        self.drag.dragEndedOn(board:self)
+        self.drag.dragEnded()
     }
     
     private func configureView() {
