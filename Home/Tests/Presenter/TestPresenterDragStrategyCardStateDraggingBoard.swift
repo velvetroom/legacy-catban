@@ -9,8 +9,13 @@ class TestPresenterDragStrategyCardStateDraggingBoard:XCTestCase {
         self.board = PresenterDragStrategyCardStateDraggingBoard()
     }
     
+    func testNotRetainsViewBoard() {
+        self.board.viewBoard = ViewBoard()
+        XCTAssertNil(self.board.viewBoard, "Retaining view")
+    }
+    
     func testNotRetainsView() {
-        self.board.view = ViewBoard()
+        self.board.view = ViewBoardItem()
         XCTAssertNil(self.board.view, "Retaining view")
     }
 }

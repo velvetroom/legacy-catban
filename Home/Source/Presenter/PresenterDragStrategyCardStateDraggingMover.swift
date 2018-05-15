@@ -3,10 +3,15 @@ import UIKit
 class PresenterDragStrategyCardStateDraggingMover {
     weak var view:ViewBoardItem?
     
-    func updatedPositionWith(deltaPosition:CGPoint) -> CGPoint {
-        guard
-            let view:ViewBoardItem = self.view
-        else { return CGPoint.zero }
-        return CGPoint(x:view.position.x - deltaPosition.x, y:view.position.y - deltaPosition.y)
+    func updatedRectWith(deltaPosition:CGPoint) -> CGRect {
+        var rect:CGRect = CGRect.zero
+        if let view:ViewBoardItem = self.view {
+            rect = CGRect(
+                x:view.position.x - deltaPosition.x,
+                y:view.position.y - deltaPosition.y,
+                width:view.layoutWidth.constant,
+                height:view.layoutHeight.constant)
+        }
+        return rect
     }
 }

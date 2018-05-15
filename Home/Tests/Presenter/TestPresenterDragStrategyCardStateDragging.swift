@@ -31,9 +31,4 @@ class TestPresenterDragStrategyCardStateDragging:XCTestCase {
         self.state.strategy = self.strategy
         XCTAssertNotNil(self.state.mover.view, "Not assigned")
     }
-    
-    func testAssignsViewToBoard() {
-        self.state.strategy = self.strategy
-        XCTAssertNotNil(self.state.board.view, "Not assigned")
-    }
 }
