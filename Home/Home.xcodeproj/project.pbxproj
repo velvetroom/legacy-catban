@@ -22,18 +22,8 @@
 		DA417C5420AAC37600D2BB8E /* TestPresenterDragStrategyCardStateDragging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5320AAC37600D2BB8E /* TestPresenterDragStrategyCardStateDragging.swift */; };
 		DA417C5620AAC3F800D2BB8E /* MockPresenterDragStrategyCardStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5520AAC3F800D2BB8E /* MockPresenterDragStrategyCardStateProtocol.swift */; };
 		DA417C5820AAC73400D2BB8E /* MockViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5720AAC73400D2BB8E /* MockViewCard.swift */; };
-		DA417C5F20AADB1200D2BB8E /* PresenterDragStrategyCardDropColumnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5D20AADADF00D2BB8E /* PresenterDragStrategyCardDropColumnChange.swift */; };
-		DA417C6020AADB1500D2BB8E /* PresenterDragStrategyCardDropBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5B20AADAB000D2BB8E /* PresenterDragStrategyCardDropBack.swift */; };
-		DA417C6120AADB1800D2BB8E /* PresenterDragStrategyCardDropProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5920AADA3C00D2BB8E /* PresenterDragStrategyCardDropProtocol.swift */; };
-		DA417C6320AADB2D00D2BB8E /* PresenterDragStrategyCardDropPositionChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6220AADB2D00D2BB8E /* PresenterDragStrategyCardDropPositionChange.swift */; };
-		DA417C6720AAE86700D2BB8E /* MockPresenterDragStrategyCardDropProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6620AAE86700D2BB8E /* MockPresenterDragStrategyCardDropProtocol.swift */; };
-		DA417C6920AAE89100D2BB8E /* TestPresenterDragStrategyCardDropBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6820AAE89100D2BB8E /* TestPresenterDragStrategyCardDropBack.swift */; };
-		DA417C6B20AAEBB900D2BB8E /* TestPresenterDragStrategyCardDropColumnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6A20AAEBB900D2BB8E /* TestPresenterDragStrategyCardDropColumnChange.swift */; };
-		DA417C6D20AAEBD200D2BB8E /* TestPresenterDragStrategyCardDropPositionChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6C20AAEBD200D2BB8E /* TestPresenterDragStrategyCardDropPositionChange.swift */; };
-		DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingAnimation.swift */; };
-		DA417C7120AAFEF800D2BB8E /* PresenterDragStrategyCardStateDraggingMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7020AAFEF800D2BB8E /* PresenterDragStrategyCardStateDraggingMover.swift */; };
-		DA417C7320AAFF4200D2BB8E /* TestPresenterDragStrategyCardStateDraggingMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7220AAFF4200D2BB8E /* TestPresenterDragStrategyCardStateDraggingMover.swift */; };
-		DA417C7520AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingAnimation.swift */; };
+		DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift */; };
+		DA417C7520AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingView.swift */; };
 		DA417C7720AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7620AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift */; };
 		DA417C7920AB0B9600D2BB8E /* TestPresenterDragStrategyCardStateDraggingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C7820AB0B9600D2BB8E /* TestPresenterDragStrategyCardStateDraggingBoard.swift */; };
 		DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */; };
@@ -150,18 +140,8 @@
 		DA417C5320AAC37600D2BB8E /* TestPresenterDragStrategyCardStateDragging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardStateDragging.swift; sourceTree = "<group>"; };
 		DA417C5520AAC3F800D2BB8E /* MockPresenterDragStrategyCardStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDragStrategyCardStateProtocol.swift; sourceTree = "<group>"; };
 		DA417C5720AAC73400D2BB8E /* MockViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewCard.swift; sourceTree = "<group>"; };
-		DA417C5920AADA3C00D2BB8E /* PresenterDragStrategyCardDropProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardDropProtocol.swift; sourceTree = "<group>"; };
-		DA417C5B20AADAB000D2BB8E /* PresenterDragStrategyCardDropBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardDropBack.swift; sourceTree = "<group>"; };
-		DA417C5D20AADADF00D2BB8E /* PresenterDragStrategyCardDropColumnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardDropColumnChange.swift; sourceTree = "<group>"; };
-		DA417C6220AADB2D00D2BB8E /* PresenterDragStrategyCardDropPositionChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardDropPositionChange.swift; sourceTree = "<group>"; };
-		DA417C6620AAE86700D2BB8E /* MockPresenterDragStrategyCardDropProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDragStrategyCardDropProtocol.swift; sourceTree = "<group>"; };
-		DA417C6820AAE89100D2BB8E /* TestPresenterDragStrategyCardDropBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardDropBack.swift; sourceTree = "<group>"; };
-		DA417C6A20AAEBB900D2BB8E /* TestPresenterDragStrategyCardDropColumnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardDropColumnChange.swift; sourceTree = "<group>"; };
-		DA417C6C20AAEBD200D2BB8E /* TestPresenterDragStrategyCardDropPositionChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardDropPositionChange.swift; sourceTree = "<group>"; };
-		DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardStateDraggingAnimation.swift; sourceTree = "<group>"; };
-		DA417C7020AAFEF800D2BB8E /* PresenterDragStrategyCardStateDraggingMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardStateDraggingMover.swift; sourceTree = "<group>"; };
-		DA417C7220AAFF4200D2BB8E /* TestPresenterDragStrategyCardStateDraggingMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardStateDraggingMover.swift; sourceTree = "<group>"; };
-		DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardStateDraggingAnimation.swift; sourceTree = "<group>"; };
+		DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardStateDraggingView.swift; sourceTree = "<group>"; };
+		DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardStateDraggingView.swift; sourceTree = "<group>"; };
 		DA417C7620AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDragStrategyCardStateDraggingBoard.swift; sourceTree = "<group>"; };
 		DA417C7820AB0B9600D2BB8E /* TestPresenterDragStrategyCardStateDraggingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDragStrategyCardStateDraggingBoard.swift; sourceTree = "<group>"; };
 		DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
@@ -390,13 +370,8 @@
 				DA417C4B20AABF5800D2BB8E /* PresenterDragStrategyCardStateProtocol.swift */,
 				DA417C4D20AABF7300D2BB8E /* PresenterDragStrategyCardStateTouchable.swift */,
 				DA417C4F20AABF8D00D2BB8E /* PresenterDragStrategyCardStateDragging.swift */,
-				DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingAnimation.swift */,
-				DA417C7020AAFEF800D2BB8E /* PresenterDragStrategyCardStateDraggingMover.swift */,
+				DA417C6E20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift */,
 				DA417C7620AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift */,
-				DA417C5920AADA3C00D2BB8E /* PresenterDragStrategyCardDropProtocol.swift */,
-				DA417C5B20AADAB000D2BB8E /* PresenterDragStrategyCardDropBack.swift */,
-				DA417C5D20AADADF00D2BB8E /* PresenterDragStrategyCardDropColumnChange.swift */,
-				DA417C6220AADB2D00D2BB8E /* PresenterDragStrategyCardDropPositionChange.swift */,
 				DAFF568D20A9E9E500EF26E3 /* PresenterDragStrategyFixed.swift */,
 			);
 			path = Presenter;
@@ -419,17 +394,12 @@
 				DAFF569320A9EE6B00EF26E3 /* TestPresenterDragStrategyFixed.swift */,
 				DA417C5120AAC2EE00D2BB8E /* TestPresenterDragStrategyCardStateTouchable.swift */,
 				DA417C5320AAC37600D2BB8E /* TestPresenterDragStrategyCardStateDragging.swift */,
-				DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingAnimation.swift */,
-				DA417C7220AAFF4200D2BB8E /* TestPresenterDragStrategyCardStateDraggingMover.swift */,
+				DA417C7420AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingView.swift */,
 				DA417C7820AB0B9600D2BB8E /* TestPresenterDragStrategyCardStateDraggingBoard.swift */,
-				DA417C6820AAE89100D2BB8E /* TestPresenterDragStrategyCardDropBack.swift */,
-				DA417C6A20AAEBB900D2BB8E /* TestPresenterDragStrategyCardDropColumnChange.swift */,
-				DA417C6C20AAEBD200D2BB8E /* TestPresenterDragStrategyCardDropPositionChange.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
 				DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */,
 				DAFF568F20A9EC0700EF26E3 /* MockPresenterDragStrategyProtocol.swift */,
 				DA417C5520AAC3F800D2BB8E /* MockPresenterDragStrategyCardStateProtocol.swift */,
-				DA417C6620AAE86700D2BB8E /* MockPresenterDragStrategyCardDropProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -616,9 +586,7 @@
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DAFF568E20A9E9E500EF26E3 /* PresenterDragStrategyFixed.swift in Sources */,
 				DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */,
-				DA417C5F20AADB1200D2BB8E /* PresenterDragStrategyCardDropColumnChange.swift in Sources */,
 				DA417C5020AABF8D00D2BB8E /* PresenterDragStrategyCardStateDragging.swift in Sources */,
-				DA417C6120AADB1800D2BB8E /* PresenterDragStrategyCardDropProtocol.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
 				DA6FDEFF20A71D9100D148DD /* PresenterUpdaterBoardItems.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
@@ -637,7 +605,7 @@
 				DA417C4E20AABF7300D2BB8E /* PresenterDragStrategyCardStateTouchable.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 				DAF84E6120A85DBC0000BF06 /* ViewModelConstants.swift in Sources */,
-				DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingAnimation.swift in Sources */,
+				DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift in Sources */,
 				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */,
 				DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */,
@@ -647,7 +615,6 @@
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
 				DAF84E5720A84FDD0000BF06 /* ViewModelBuilderScroll.swift in Sources */,
-				DA417C6320AADB2D00D2BB8E /* PresenterDragStrategyCardDropPositionChange.swift in Sources */,
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
 				DA417C7720AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift in Sources */,
 				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
@@ -655,11 +622,9 @@
 				DA417C4620AAAA0300D2BB8E /* PresenterConstants.swift in Sources */,
 				DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */,
 				DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */,
-				DA417C7120AAFEF800D2BB8E /* PresenterDragStrategyCardStateDraggingMover.swift in Sources */,
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
 				DA417C4C20AABF5800D2BB8E /* PresenterDragStrategyCardStateProtocol.swift in Sources */,
 				DAF84E5920A84FE70000BF06 /* ViewModelBuilderBoard.swift in Sources */,
-				DA417C6020AADB1500D2BB8E /* PresenterDragStrategyCardDropBack.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DA417C4820AAAD9700D2BB8E /* PresenterDragStrategyProtocol+Default.swift in Sources */,
 				DAAF5E6920A96D4600354B08 /* PresenterDrag.swift in Sources */,
@@ -673,9 +638,7 @@
 			files = (
 				DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */,
 				DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */,
-				DA417C6720AAE86700D2BB8E /* MockPresenterDragStrategyCardDropProtocol.swift in Sources */,
 				DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */,
-				DA417C6B20AAEBB900D2BB8E /* TestPresenterDragStrategyCardDropColumnChange.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DA417C7920AB0B9600D2BB8E /* TestPresenterDragStrategyCardStateDraggingBoard.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
@@ -686,7 +649,6 @@
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
-				DA417C6920AAE89100D2BB8E /* TestPresenterDragStrategyCardDropBack.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */,
 				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
@@ -694,7 +656,6 @@
 				DAFF568820A9E56800EF26E3 /* TestPresenterDrag.swift in Sources */,
 				DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */,
 				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
-				DA417C7320AAFF4200D2BB8E /* TestPresenterDragStrategyCardStateDraggingMover.swift in Sources */,
 				DA6D001920A30B7A00E50F0A /* TestViewModelBuilder_Height.swift in Sources */,
 				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
 				DA417C4A20AAAE8E00D2BB8E /* TestPresenterDragStrategyProtocol.swift in Sources */,
@@ -704,14 +665,13 @@
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DAFF569420A9EE6B00EF26E3 /* TestPresenterDragStrategyFixed.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
-				DA417C6D20AAEBD200D2BB8E /* TestPresenterDragStrategyCardDropPositionChange.swift in Sources */,
 				DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */,
 				DA6FDEF120A7179E00D148DD /* MockPresenterUpdaterProtocol.swift in Sources */,
 				DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */,
 				DA6FDEEF20A7178B00D148DD /* TestPresenter_Updaters.swift in Sources */,
 				DA6D002120A31F0800E50F0A /* TestViewModelBuilderTextContent.swift in Sources */,
 				DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */,
-				DA417C7520AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingAnimation.swift in Sources */,
+				DA417C7520AAFF4B00D2BB8E /* TestPresenterDragStrategyCardStateDraggingView.swift in Sources */,
 				DAFF569020A9EC0700EF26E3 /* MockPresenterDragStrategyProtocol.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
 				DA417C5220AAC2EE00D2BB8E /* TestPresenterDragStrategyCardStateTouchable.swift in Sources */,

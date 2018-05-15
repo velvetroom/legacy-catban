@@ -33,4 +33,8 @@ class TestViewCard:XCTestCase {
         self.view.touchSucceded(controller:self.controller)
         XCTAssertTrue(called, "Failed to call")
     }
+    
+    func testSavePosition() {
+        XCTAssertFalse(true, "Implement this")
+    }
 }

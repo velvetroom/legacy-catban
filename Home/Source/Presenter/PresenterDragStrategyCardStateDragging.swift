@@ -1,40 +1,30 @@
 import UIKit
 
 class PresenterDragStrategyCardStateDragging:PresenterDragStrategyCardStateProtocol {
-    let animation:PresenterDragStrategyCardStateDraggingAnimation
-    let mover:PresenterDragStrategyCardStateDraggingMover
-    private var drop:PresenterDragStrategyCardDropProtocol!
+    let view:PresenterDragStrategyCardStateDraggingView
     
     weak var strategy:PresenterDragStrategyCard! {
         didSet {
-            self.animation.view = self.strategy.view
-            self.mover.view = self.strategy.view
+            self.view.view = self.strategy.view
         }
     }
     
     init() {
-        self.animation = PresenterDragStrategyCardStateDraggingAnimation()
-        self.mover = PresenterDragStrategyCardStateDraggingMover()
-        self.dropBack()
+        self.view = PresenterDragStrategyCardStateDraggingView()
     }
     
     func moved() {
-        let rect:CGRect = self.mover.updatedRectWith(deltaPosition:self.strategy.deltaPosition)
+        let rect:CGRect = self.view.updatedRectWith(deltaPosition:self.strategy.deltaPosition)
         self.moveView(position:rect.origin)
         self.updateBoardWith(rect:rect)
     }
     
     func endDragging() {
-        self.drop.endDragging()
-    }
-    
-    func dropBack() {
-        self.drop = PresenterDragStrategyCardDropBack()
-        self.drop.state = self
+        self.view.animateDrop()
     }
     
     private func moveView(position:CGPoint) {
-        self.animation.updateView(position:position)
+        self.view.updateView(position:position)
     }
     
     private func updateBoardWith(rect:CGRect) {
@@ -49,8 +39,7 @@ class PresenterDragStrategyCardStateDragging:PresenterDragStrategyCardStateProto
     }
     
     private func updateBoardWith(rect:CGRect, and board:PresenterDragStrategyCardStateDraggingBoard) {
-        guard
-            let column:ViewColumn = board.columnAtPosition(rect:rect)
-        else { return }
+        let prospectPosition:CGPoint = board.prospectPositionFor(rect:rect)
+        self.view.prospectPosition = prospectPosition
     }
 }

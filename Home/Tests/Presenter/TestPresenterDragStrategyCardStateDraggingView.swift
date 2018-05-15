@@ -1,12 +1,12 @@
 import XCTest
 @testable import Home
 
-class TestPresenterDragStrategyCardStateDraggingAnimation:XCTestCase {
-    private var animation:PresenterDragStrategyCardStateDraggingAnimation!
+class TestPresenterDragStrategyCardStateDraggingView:XCTestCase {
+    private var animation:PresenterDragStrategyCardStateDraggingView!
     
     override func setUp() {
         super.setUp()
-        self.animation = PresenterDragStrategyCardStateDraggingAnimation()
+        self.animation = PresenterDragStrategyCardStateDraggingView()
     }
     
     func testNotRetainingView() {

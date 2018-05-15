@@ -29,7 +29,6 @@ class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
             equalTo:self.viewBoard.topAnchor, constant:viewModel.top)
         self.view.layoutLeft = self.view.leftAnchor.constraint(
             equalTo:self.viewBoard.leftAnchor, constant:viewModel.left)
-        self.view.savePosition()
     }
     
     private func activateLayout() {
