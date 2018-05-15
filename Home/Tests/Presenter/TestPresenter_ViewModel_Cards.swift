@@ -76,6 +76,7 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
             XCTAssertEqual(card.layoutHeight.constant, Constants.layoutConstantHeight, "Failed to assign constant")
             XCTAssertEqual(card.layoutWidth.constant, Constants.layoutConstantWidth, "Failed to assign constant")
             XCTAssertEqual(card.labelContent.text, Constants.cardContent, "Failed to assign content")
+            XCTAssertNotEqual(card.position, CGPoint.zero, "Failed to save position")
         }
     }
 }

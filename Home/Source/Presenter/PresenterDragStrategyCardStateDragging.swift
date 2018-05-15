@@ -2,25 +2,34 @@ import UIKit
 
 class PresenterDragStrategyCardStateDragging:PresenterDragStrategyCardStateProtocol {
     let animation:PresenterDragStrategyCardStateDraggingAnimation
-    private var drop:PresenterDragStrategyCardDropProtocol
+    let mover:PresenterDragStrategyCardStateDraggingMover
+    private var drop:PresenterDragStrategyCardDropProtocol!
     
     weak var strategy:PresenterDragStrategyCard! {
         didSet {
             self.animation.view = self.strategy.view
+            self.mover.view = self.strategy.view
         }
     }
     
     init() {
         self.animation = PresenterDragStrategyCardStateDraggingAnimation()
-        self.drop = PresenterDragStrategyCardDropBack()
-        self.drop.state = self
+        self.mover = PresenterDragStrategyCardStateDraggingMover()
+        self.dropBack()
     }
     
     func moved() {
-        self.animation.updateViewPositionWith(deltaPosition:self.strategy.deltaPosition)
+        self.mover.deltaPosition = self.strategy.deltaPosition
+        let position:CGPoint = self.mover.updatedPosition
+        self.animation.updateView(position:position)
     }
     
     func endDragging() {
         self.drop.endDragging()
+    }
+    
+    func dropBack() {
+        self.drop = PresenterDragStrategyCardDropBack()
+        self.drop.state = self
     }
 }
