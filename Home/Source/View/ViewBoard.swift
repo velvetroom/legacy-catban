@@ -23,7 +23,7 @@ class ViewBoard:UIView {
             let view:ViewBoardItem = touch.view as? ViewBoardItem
         else { return }
         let position:CGPoint = touch.location(in:self)
-        self.drag.beganDragging(view:view, on:self, at:position)
+        self.drag.beginDragging(view:view, on:self, at:position)
     }
     
     override func touchesMoved(_ touches:Set<UITouch>, with event:UIEvent?) {

@@ -5,7 +5,7 @@ class PresenterDrag {
     weak var view:ViewBoardItem?
     var strategy:PresenterDragStrategyProtocol!
     
-    func beganDragging(view:ViewBoardItem, on board:ViewBoard, at position:CGPoint) {
+    func beginDragging(view:ViewBoardItem, on board:ViewBoard, at position:CGPoint) {
         self.strategy = view.dragStrategy.init()
         self.strategy.view = view
         self.strategy.viewBoard = board
@@ -15,10 +15,17 @@ class PresenterDrag {
     }
     
     func draggedTo(position:CGPoint) {
-        
+        self.strategy.latestPosition = position
+        self.strategy.moved()
     }
     
     func dragEnded() {
-        view?.dragEnd()
+        self.strategy.endDragging()
+        self.clearResources()
+    }
+    
+    private func clearResources() {
+        self.view = nil
+        self.strategy = nil
     }
 }
