@@ -4,10 +4,6 @@ import Foundation
 class MockPresenterDragStrategyCardDropProtocol:PresenterDragStrategyCardDropProtocol {
     var state:PresenterDragStrategyCardStateDragging!
     
-    func moved() {
-        
-    }
-    
     func endDragging() {
         
     }
