@@ -4,14 +4,17 @@ import XCTest
 class TestPresenterDragStrategyCardStateDragging:XCTestCase {
     private var state:PresenterDragStrategyCardStateDragging!
     private var view:MockViewBoardItem!
+    private var viewBoard:ViewBoard!
     private var strategy:PresenterDragStrategyCard!
     
     override func setUp() {
         super.setUp()
         self.state = PresenterDragStrategyCardStateDragging()
         self.view = MockViewBoardItem()
+        self.viewBoard = ViewBoard()
         self.strategy = PresenterDragStrategyCard()
         self.strategy.view = self.view
+        self.strategy.viewBoard = self.viewBoard
     }
     
     func testNotRetainingStrategy() {
@@ -27,5 +30,10 @@ class TestPresenterDragStrategyCardStateDragging:XCTestCase {
     func testAssignsViewToMover() {
         self.state.strategy = self.strategy
         XCTAssertNotNil(self.state.mover.view, "Not assigned")
+    }
+    
+    func testAssignsViewToBoard() {
+        self.state.strategy = self.strategy
+        XCTAssertNotNil(self.state.board.view, "Not assigned")
     }
 }
