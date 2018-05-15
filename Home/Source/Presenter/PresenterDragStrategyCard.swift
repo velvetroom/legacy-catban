@@ -20,11 +20,12 @@ class PresenterDragStrategyCard:PresenterDragStrategyProtocol {
     }
     
     func moved() {
-
+        self.state.moved()
     }
     
     func endDragging() {
         self.view?.dragEnd()
+        self.state.endDragging()
     }
     
     func draggingDetected() {

@@ -3,10 +3,12 @@ import XCTest
 
 class TestPresenterDragStrategyCard:XCTestCase {
     private var strategy:PresenterDragStrategyCard!
+    private var state:MockPresenterDragStrategyCardStateProtocol!
     
     override func setUp() {
         super.setUp()
         self.strategy = PresenterDragStrategyCard()
+        self.state = MockPresenterDragStrategyCardStateProtocol()
     }
     
     func testInitialState() {
@@ -44,5 +46,27 @@ class TestPresenterDragStrategyCard:XCTestCase {
     func testNotRetainsBoard() {
         self.strategy.viewBoard = ViewBoard()
         XCTAssertNil(self.strategy.viewBoard, "Retains")
+    }
+    
+    func testMovingCallsState() {
+        var called:Bool = false
+        self.strategy.state = self.state
+        self.state.onMoved = {
+            called = true
+        }
+        
+        self.strategy.moved()
+        XCTAssertTrue(called, "Not called")
+    }
+    
+    func testEndDraggingCallsState() {
+        var called:Bool = false
+        self.strategy.state = self.state
+        self.state.onEndDragging = {
+            called = true
+        }
+        
+        self.strategy.endDragging()
+        XCTAssertTrue(called, "Not called")
     }
 }
