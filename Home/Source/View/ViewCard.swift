@@ -1,16 +1,21 @@
 import UIKit
 
 class ViewCard:ViewBoardItem {
-    var identifier:String!
+    var identifier:String
     private(set) weak var labelContent:UILabel!
     
     override init() {
+        self.identifier = String()
         super.init()
         self.dragStrategy = PresenterDragStrategyCard.self
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    override func touchSucceded(controller:Controller) {
+        controller.editCardWith(identifier:self.identifier)
     }
     
     override func dragStart() {

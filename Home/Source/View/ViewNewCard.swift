@@ -11,6 +11,10 @@ class ViewNewCard:ViewBoardItem {
         return nil
     }
     
+    override func touchSucceded(controller:Controller) {
+        controller.createNewCard()
+    }
+    
     override func dragStart() {
         super.dragStart()
         self.alpha = ViewConstants.NewCard.alphaOn

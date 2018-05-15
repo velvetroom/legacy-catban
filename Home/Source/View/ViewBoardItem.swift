@@ -21,6 +21,7 @@ class ViewBoardItem:UIView {
     func dragStart() { }
     func drag(delta:CGPoint) { }
     func dragEnd() { }
+    func touchSucceded(controller:Controller) { }
     
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false

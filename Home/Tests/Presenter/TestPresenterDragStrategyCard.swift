@@ -9,6 +9,28 @@ class TestPresenterDragStrategyCard:XCTestCase {
         self.strategy = PresenterDragStrategyCard()
     }
     
+    func testInitialState() {
+        let state:PresenterDragStrategyCardStateTouchable? = self.strategy.state as?
+        PresenterDragStrategyCardStateTouchable
+        XCTAssertNotNil(state, "Initial state should be touchable")
+    }
+    
+    func testInjectsItselfToState() {
+        XCTAssertNotNil(self.strategy.state.strategy, "Not injected")
+    }
+    
+    func testDraggingDetectedChangesState() {
+        self.strategy.draggingDetected()
+        let state:PresenterDragStrategyCardStateDragging? = self.strategy.state as?
+        PresenterDragStrategyCardStateDragging
+        XCTAssertNotNil(state, "State should be dragging")
+    }
+    
+    func testDraggingDetectedInjectsItselfOnNewState() {
+        self.strategy.draggingDetected()
+        XCTAssertNotNil(self.strategy.state.strategy, "Not injected")
+    }
+    
     func testNotRetainsController() {
         self.strategy.controller = Controller()
         XCTAssertNil(self.strategy.controller, "Retains")

@@ -23,4 +23,14 @@ class TestViewCard:XCTestCase {
         XCTAssertNil(self.view.layoutHeight, "Property not found")
         XCTAssertNil(self.view.layoutWidth, "Property not found")
     }
+    
+    func testSucceded() {
+        var called:Bool = false
+        self.controller.onEditCardWith = { (identifier:String) in
+            called = true
+        }
+        
+        self.view.touchSucceded(controller:self.controller)
+        XCTAssertTrue(called, "Failed to call")
+    }
 }

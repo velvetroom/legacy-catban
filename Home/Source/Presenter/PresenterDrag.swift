@@ -2,7 +2,6 @@ import UIKit
 
 class PresenterDrag {
     weak var controller:Controller!
-    weak var view:ViewBoardItem?
     var strategy:PresenterDragStrategyProtocol!
     
     func beginDragging(view:ViewBoardItem, on board:ViewBoard, at position:CGPoint) {
@@ -25,7 +24,6 @@ class PresenterDrag {
     }
     
     private func clearResources() {
-        self.view = nil
         self.strategy = nil
     }
 }

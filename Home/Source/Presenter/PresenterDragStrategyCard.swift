@@ -6,19 +6,33 @@ class PresenterDragStrategyCard:PresenterDragStrategyProtocol {
     weak var viewBoard:ViewBoard?
     var initialPosition:CGPoint
     var latestPosition:CGPoint
+    var state:PresenterDragStrategyCardStateProtocol
     
     required init() {
         self.initialPosition = CGPoint.zero
         self.latestPosition = CGPoint.zero
+        self.state = PresenterDragStrategyCardStateTouchable()
+        self.state.strategy = self
     }
     
     func beginDragging() {
         self.view?.dragStart()
     }
     
-    func moved() { }
+    func moved() {
+
+    }
     
     func endDragging() {
         self.view?.dragEnd()
+    }
+    
+    func draggingDetected() {
+        self.state = PresenterDragStrategyCardStateDragging()
+        self.state.strategy = self
+    }
+    
+    func touchSucceded() {
+        self.view?.touchSucceded(controller:self.controller)
     }
 }

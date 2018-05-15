@@ -5,6 +5,7 @@ class MockViewBoardItem:ViewBoardItem {
     var onDragStart:(() -> Void)?
     var onDragDelta:((CGPoint) -> Void)?
     var onDragEnd:(() -> Void)?
+    var onTouchSucceded:((Controller) -> Void)?
     
     override init() {
         super.init()
@@ -25,5 +26,9 @@ class MockViewBoardItem:ViewBoardItem {
     
     override func dragEnd() {
         self.onDragEnd?()
+    }
+    
+    override func touchSucceded(controller:Controller) {
+        self.onTouchSucceded?(controller)
     }
 }

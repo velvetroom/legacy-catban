@@ -20,11 +20,6 @@ class TestPresenterDrag:XCTestCase {
         XCTAssertNil(self.presenter.controller, "Retains")
     }
     
-    func testViewNotRetained() {
-        self.presenter.view = MockViewBoardItem()
-        XCTAssertNil(self.presenter.view, "Retained")
-    }
-    
     func testDragStart() {
         let position:CGPoint = CGPoint(x:12, y:22)
         self.presenter.beginDragging(view:self.view, on:ViewBoard(), at:position)
@@ -57,7 +52,6 @@ class TestPresenterDrag:XCTestCase {
     func testEndDragingClearsAll() {
         self.presenter.strategy = MockPresenterDragStrategyProtocol()
         self.presenter.dragEnded()
-        XCTAssertNil(self.presenter.view, "Not cleared")
         XCTAssertNil(self.presenter.strategy, "Not cleared")
     }
     

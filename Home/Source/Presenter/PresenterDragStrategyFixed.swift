@@ -16,9 +16,19 @@ class PresenterDragStrategyFixed:PresenterDragStrategyProtocol {
         self.view?.dragStart()
     }
     
-    func moved() { }
+    func moved() {
+        if isMoving {
+            self.cancelTouch()
+        }
+    }
     
     func endDragging() {
         self.view?.dragEnd()
+        self.view?.touchSucceded(controller:self.controller)
+    }
+    
+    private func cancelTouch() {
+        self.view?.dragEnd()
+        self.view = nil
     }
 }
