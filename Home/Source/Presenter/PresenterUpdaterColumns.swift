@@ -27,9 +27,16 @@ class PresenterUpdaterColumns:PresenterUpdaterProtocol {
     
     private func addColumnWith(viewModel:ViewModelColumn, to viewBoard:ViewBoard) {
         let view:ViewColumn = ViewColumn()
+        self.addDragging(view:view)
         self.addColumn(view:view, to:viewBoard)
         view.layoutLeft.constant = viewModel.left
         view.labelName.text = viewModel.name
+    }
+    
+    private func addDragging(view:ViewColumn) {
+        var column:DragColumn = DragColumn()
+        column.view = view
+        self.drag.columns.append(column)
     }
     
     private func addColumn(view:ViewColumn, to viewBoard:ViewBoard) {

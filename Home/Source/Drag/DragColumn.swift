@@ -1,9 +1,19 @@
 import UIKit
 
-struct DragColumn {
-    var items:[DragItemProtocol]
+class DragColumn:DragParentProtocol {
+    weak var view:ViewColumn!
+    var nextColumn:DragColumn?
+    var childItem:DragItemProtocol?
     
-    init() {
-        self.items = []
+    var minX:CGFloat {
+        get {
+            return self.view.layoutLeft.constant
+        }
+    }
+    
+    var maxX:CGFloat {
+        get {
+            return self.view.layoutLeft.constant + ViewConstants.Column.width
+        }
     }
 }

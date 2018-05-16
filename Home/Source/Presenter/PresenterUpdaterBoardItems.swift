@@ -5,8 +5,8 @@ class PresenterUpdaterBoardItems:PresenterUpdaterProtocol {
     var viewModel:ViewModel!
     var controller:Controller!
     var drag:Drag!
+    var updaterMap:[ObjectIdentifier:PresenterUpdaterBoardItemProtocol.Type]
     private var viewBoard:ViewBoard!
-    private let updaterMap:[ObjectIdentifier:PresenterUpdaterBoardItemProtocol.Type]
     
     required init() {
         let identifierCard:ObjectIdentifier = ObjectIdentifier(ViewModelCard.self)
@@ -37,8 +37,9 @@ class PresenterUpdaterBoardItems:PresenterUpdaterProtocol {
     private func factoryViewsFor(item:ViewModelBoardItemProtocol) {
         var updater:PresenterUpdaterBoardItemProtocol = self.updaterFor(item:item)
         updater.controller = self.controller
-        updater.viewModel = item
         updater.viewBoard = self.viewBoard
+        updater.drag = self.drag
+        updater.viewModel = item
         updater.factoryView()
     }
     

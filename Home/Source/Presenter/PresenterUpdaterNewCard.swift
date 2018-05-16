@@ -4,6 +4,7 @@ class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
     var controller:Controller!
     var viewBoard:ViewBoard!
     var viewModel:ViewModelBoardItemProtocol!
+    var drag:Drag!
     private let view:ViewNewCard
     
     required init() {

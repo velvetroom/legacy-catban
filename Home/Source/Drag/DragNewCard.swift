@@ -1,5 +1,10 @@
 import UIKit
 
-struct DragNewCard:DragItemProtocol {
+class DragNewCard:DragItemProtocol {
+    weak var parent:DragParentProtocol!
+    weak var view:ViewBoardItem!
     
+    init() {
+        
+    }
 }
