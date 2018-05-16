@@ -5,6 +5,8 @@ class TestPresenterDragStrategyCardStateDragging:XCTestCase {
     private var state:PresenterDragStrategyCardStateDragging!
     private var view:MockViewBoardItem!
     private var viewBoard:ViewBoard!
+    private var layoutTop:NSLayoutConstraint!
+    private var layoutLeft:NSLayoutConstraint!
     private var strategy:PresenterDragStrategyCard!
     
     override func setUp() {
@@ -12,6 +14,10 @@ class TestPresenterDragStrategyCardStateDragging:XCTestCase {
         self.state = PresenterDragStrategyCardStateDragging()
         self.view = MockViewBoardItem()
         self.viewBoard = ViewBoard()
+        self.layoutTop = NSLayoutConstraint()
+        self.layoutLeft = NSLayoutConstraint()
+        self.view.layoutTop = self.layoutTop
+        self.view.layoutLeft = self.layoutLeft
         self.strategy = PresenterDragStrategyCard()
         self.strategy.view = self.view
         self.strategy.viewBoard = self.viewBoard
@@ -24,11 +30,6 @@ class TestPresenterDragStrategyCardStateDragging:XCTestCase {
     
     func testAssignsViewToAnimate() {
         self.state.strategy = self.strategy
-        XCTAssertNotNil(self.state.animation.view, "Not assigned")
-    }
-    
-    func testAssignsViewToMover() {
-        self.state.strategy = self.strategy
-        XCTAssertNotNil(self.state.mover.view, "Not assigned")
+        XCTAssertNotNil(self.state.view.view, "Not assigned")
     }
 }

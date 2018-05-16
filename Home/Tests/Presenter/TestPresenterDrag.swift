@@ -24,11 +24,11 @@ class TestPresenterDrag:XCTestCase {
         let position:CGPoint = CGPoint(x:12, y:22)
         self.presenter.beginDragging(view:self.view, on:ViewBoard(), at:position)
         
-        XCTAssertNotNil(self.presenter.strategy.initialPosition, "Position not injected")
-        XCTAssertNotNil(self.presenter.strategy.controller, "Controller not injected")
-        XCTAssertNotNil(self.presenter.strategy.view, "View not injected")
-        XCTAssertNotNil(self.presenter.strategy.viewBoard, "Board not injected")
-        XCTAssertEqual(self.presenter.strategy.initialPosition, position, "Invalid position")
+        XCTAssertNotNil(self.presenter.strategy?.initialPosition, "Position not injected")
+        XCTAssertNotNil(self.presenter.strategy?.controller, "Controller not injected")
+        XCTAssertNotNil(self.presenter.strategy?.view, "View not injected")
+        XCTAssertNotNil(self.presenter.strategy?.viewBoard, "Board not injected")
+        XCTAssertEqual(self.presenter.strategy?.initialPosition, position, "Invalid position")
     }
     
     func testStrategyType() {
@@ -46,7 +46,7 @@ class TestPresenterDrag:XCTestCase {
         let position:CGPoint = CGPoint(x:134, y:321)
         self.presenter.strategy = MockPresenterDragStrategyProtocol()
         self.presenter.draggedTo(position:position)
-        XCTAssertEqual(self.presenter.strategy.latestPosition, position, "Position not injected")
+        XCTAssertEqual(self.presenter.strategy?.latestPosition, position, "Position not injected")
     }
     
     func testEndDragingClearsAll() {
