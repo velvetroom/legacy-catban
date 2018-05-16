@@ -15,7 +15,7 @@ class ViewModelBuilderColumns:ViewModelBuilderProtocol {
     func build() -> ViewModel {
         self.project.iterate { (column:ColumnProtocol) in
             self.buildFor(column:column)
-            self.left += ViewConstants.Column.width + ViewConstants.Board.columnSpacing
+            self.left += ViewConstants.Column.width + ViewConstants.Board.horizontalSpacing
         }
         return self.viewModel
     }

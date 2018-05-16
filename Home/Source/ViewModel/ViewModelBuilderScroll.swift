@@ -30,7 +30,7 @@ class ViewModelBuilderScroll:ViewModelBuilderProtocol {
         let columnsWidth:CGFloat = CGFloat(self.project.countColumns) * ViewConstants.Column.width
         var columnsSpacing:CGFloat = 0
         if self.project.countColumns > 1 {
-            columnsSpacing = CGFloat(self.project.countColumns - 1) * ViewConstants.Board.columnSpacing
+            columnsSpacing = CGFloat(self.project.countColumns - 1) * ViewConstants.Board.horizontalSpacing
         }
         return columnsWidth + columnsSpacing
     }

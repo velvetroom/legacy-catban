@@ -7,8 +7,8 @@ class PresenterDragStrategyCardStateDraggingView {
                 let view:ViewBoardItem = self.view
             else { return }
             view.superview?.bringSubview(toFront:view)
-            self.prospectPosition = view.position
-            self.originalPosition = view.position
+//            self.prospectPosition = view.position
+//            self.originalPosition = view.position
         }
     }
     

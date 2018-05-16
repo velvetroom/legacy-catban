@@ -17,7 +17,7 @@ class ViewModelBuilderItems {
         self.maxY = ViewConstants.ColumnTitle.height
         self.column.iterate { (card:CardProtocol) in
             self.add(card:card)
-            self.maxY = self.maxY + ViewConstants.Board.cardSpacing
+            self.maxY = self.maxY + ViewConstants.Board.verticalSpacing
         }
     }
     
