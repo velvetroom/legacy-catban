@@ -45,6 +45,7 @@
 		DA5876C120ABFEE200E9A6B7 /* DragCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876C020ABFEE200E9A6B7 /* DragCard.swift */; };
 		DA5876C420ABFFD100E9A6B7 /* DragNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876C320ABFFD100E9A6B7 /* DragNewCard.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
+		DA613A4C20AC06910088A29B /* TestDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A4B20AC06910088A29B /* TestDrag.swift */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
 		DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */; };
@@ -169,6 +170,7 @@
 		DA5876C020ABFEE200E9A6B7 /* DragCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCard.swift; sourceTree = "<group>"; };
 		DA5876C320ABFFD100E9A6B7 /* DragNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNewCard.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA613A4B20AC06910088A29B /* TestDrag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDrag.swift; sourceTree = "<group>"; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardItem.swift; sourceTree = "<group>"; };
@@ -286,6 +288,14 @@
 				DA58BD7C209B3AE10013DBF0 /* Shared.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA613A4A20AC06770088A29B /* Drag */ = {
+			isa = PBXGroup;
+			children = (
+				DA613A4B20AC06910088A29B /* TestDrag.swift */,
+			);
+			path = Drag;
 			sourceTree = "<group>";
 		};
 		DA6D001120A2F6D200E50F0A /* Assets */ = {
@@ -469,6 +479,7 @@
 				DAF7E65E209B063800B8A39A /* Presenter */,
 				DADB5EC2209B11F800CFFC9A /* View */,
 				DA978FC120A1B43E002461E6 /* ViewModel */,
+				DA613A4A20AC06770088A29B /* Drag */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -710,6 +721,7 @@
 				DAFF567E20A9C99000EF26E3 /* MockViewBoardItem.swift in Sources */,
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
+				DA613A4C20AC06910088A29B /* TestDrag.swift in Sources */,
 				DA417C5620AAC3F800D2BB8E /* MockPresenterDragStrategyCardStateProtocol.swift in Sources */,
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,

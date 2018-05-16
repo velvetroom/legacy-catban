@@ -10,5 +10,6 @@ class PresenterUpdaterBoard:PresenterUpdaterProtocol {
     
     func update() {
         self.outlets.viewBoard?.frame = self.viewModel.board.frame
+        self.drag.viewBoard = self.outlets.viewBoard
     }
 }
