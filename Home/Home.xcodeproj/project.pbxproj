@@ -38,6 +38,11 @@
 		DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */; };
 		DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */; };
 		DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */; };
+		DA5876BB20ABFE8500E9A6B7 /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876BA20ABFE8500E9A6B7 /* Drag.swift */; };
+		DA5876BD20ABFE9E00E9A6B7 /* DragColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876BC20ABFE9E00E9A6B7 /* DragColumn.swift */; };
+		DA5876BF20ABFECC00E9A6B7 /* DragItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876BE20ABFECC00E9A6B7 /* DragItemProtocol.swift */; };
+		DA5876C120ABFEE200E9A6B7 /* DragCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876C020ABFEE200E9A6B7 /* DragCard.swift */; };
+		DA5876C420ABFFD100E9A6B7 /* DragNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5876C320ABFFD100E9A6B7 /* DragNewCard.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
@@ -156,6 +161,11 @@
 		DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelColumn.swift; sourceTree = "<group>"; };
 		DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelColumn.swift; sourceTree = "<group>"; };
 		DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel_Columns.swift; sourceTree = "<group>"; };
+		DA5876BA20ABFE8500E9A6B7 /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
+		DA5876BC20ABFE9E00E9A6B7 /* DragColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragColumn.swift; sourceTree = "<group>"; };
+		DA5876BE20ABFECC00E9A6B7 /* DragItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragItemProtocol.swift; sourceTree = "<group>"; };
+		DA5876C020ABFEE200E9A6B7 /* DragCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCard.swift; sourceTree = "<group>"; };
+		DA5876C320ABFFD100E9A6B7 /* DragNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragNewCard.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
@@ -255,6 +265,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA5876C220ABFF7A00E9A6B7 /* Drag */ = {
+			isa = PBXGroup;
+			children = (
+				DA5876BA20ABFE8500E9A6B7 /* Drag.swift */,
+				DA5876BC20ABFE9E00E9A6B7 /* DragColumn.swift */,
+				DA5876BE20ABFECC00E9A6B7 /* DragItemProtocol.swift */,
+				DA5876C020ABFEE200E9A6B7 /* DragCard.swift */,
+				DA5876C320ABFFD100E9A6B7 /* DragNewCard.swift */,
+			);
+			path = Drag;
+			sourceTree = "<group>";
+		};
 		DA58BD7B209B3AE10013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +454,7 @@
 				DAF7E65B209B062400B8A39A /* Presenter */,
 				DADB5EC1209B11E200CFFC9A /* View */,
 				DA978FC220A1B457002461E6 /* ViewModel */,
+				DA5876C220ABFF7A00E9A6B7 /* Drag */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -582,6 +605,7 @@
 			files = (
 				DA683E2B20A71567006D15CE /* PresenterUpdaterProtocol.swift in Sources */,
 				DAFF568A20A9E96A00EF26E3 /* PresenterDragStrategyProtocol.swift in Sources */,
+				DA5876C120ABFEE200E9A6B7 /* DragCard.swift in Sources */,
 				DAF84E6B20A870C50000BF06 /* PresenterUpdaterNewCard.swift in Sources */,
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DAFF568E20A9E9E500EF26E3 /* PresenterDragStrategyFixed.swift in Sources */,
@@ -605,6 +629,8 @@
 				DA417C4E20AABF7300D2BB8E /* PresenterDragStrategyCardStateTouchable.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 				DAF84E6120A85DBC0000BF06 /* ViewModelConstants.swift in Sources */,
+				DA5876C420ABFFD100E9A6B7 /* DragNewCard.swift in Sources */,
+				DA5876BF20ABFECC00E9A6B7 /* DragItemProtocol.swift in Sources */,
 				DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift in Sources */,
 				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */,
@@ -618,9 +644,11 @@
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
 				DA417C7720AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift in Sources */,
 				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
+				DA5876BB20ABFE8500E9A6B7 /* Drag.swift in Sources */,
 				DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */,
 				DA417C4620AAAA0300D2BB8E /* PresenterConstants.swift in Sources */,
 				DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */,
+				DA5876BD20ABFE9E00E9A6B7 /* DragColumn.swift in Sources */,
 				DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */,
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
 				DA417C4C20AABF5800D2BB8E /* PresenterDragStrategyCardStateProtocol.swift in Sources */,
