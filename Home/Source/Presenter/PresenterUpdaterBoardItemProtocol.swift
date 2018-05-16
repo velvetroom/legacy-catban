@@ -1,11 +1,12 @@
 import Foundation
 
 protocol PresenterUpdaterBoardItemProtocol {
-    var controller:Controller! { get set }
     var viewBoard:ViewBoard! { get set }
     var viewModel:ViewModelBoardItemProtocol! { get set }
-    var drag:Drag! { get set }
+    var column:DragColumn! { get set }
+    var viewItem:ViewBoardItem { get }
+    var dragItem:DragItemProtocol { get }
     
     init()
-    func factoryView()
+    func configureContent()
 }

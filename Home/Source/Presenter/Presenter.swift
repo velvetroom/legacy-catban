@@ -17,14 +17,12 @@ class Presenter:PresenterProtocol {
             PresenterUpdaterView.self,
             PresenterUpdaterScroll.self,
             PresenterUpdaterBoard.self,
-            PresenterUpdaterColumns.self,
-            PresenterUpdaterBoardItems.self]
+            PresenterUpdaterColumns.self]
     }
     
     func updateWith(viewModel:ViewModel) {
         for updaterType:PresenterUpdaterProtocol.Type in self.updaters {
             var updater:PresenterUpdaterProtocol = updaterType.init()
-            updater.controller = self.controller
             updater.outlets = self.outlets
             updater.drag = self.drag
             updater.viewModel = viewModel

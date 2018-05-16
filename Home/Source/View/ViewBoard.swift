@@ -1,13 +1,9 @@
 import UIKit
 
 class ViewBoard:UIView {
-    var columns:[ViewColumn]
-    var items:[ViewBoardItem]
     var drag:PresenterDrag
     
     init() {
-        self.columns = []
-        self.items = []
         self.drag = PresenterDrag()
         super.init(frame:CGRect.zero)
         self.configureView()
@@ -15,6 +11,12 @@ class ViewBoard:UIView {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    func removeSubviews() {
+        for subview:UIView in self.subviews {
+            subview.removeFromSuperview()
+        }
     }
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?) {

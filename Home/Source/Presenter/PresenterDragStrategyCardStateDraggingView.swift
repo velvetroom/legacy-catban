@@ -52,8 +52,8 @@ class PresenterDragStrategyCardStateDraggingView {
             rect = CGRect(
                 x:self.originalPosition.x - deltaPosition.x,
                 y:self.originalPosition.y - deltaPosition.y,
-                width:view.layoutWidth.constant,
-                height:view.layoutHeight.constant)
+                width:view.frame.width,
+                height:view.frame.height)
         }
         return rect
     }

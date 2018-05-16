@@ -3,8 +3,6 @@ import Board
 
 class ViewModelBuilderItems {
     var column:ColumnProtocol!
-    var left:CGFloat!
-    var maxY:CGFloat!
     private(set) var items:[ViewModelBoardItemProtocol]!
     private let textContent:ViewModelBuilderColumnsTextContent
     
@@ -14,35 +12,22 @@ class ViewModelBuilderItems {
     
     func buildCards() {
         self.items = []
-        self.maxY = ViewConstants.ColumnTitle.height
         self.column.iterate { (card:CardProtocol) in
             self.add(card:card)
-            self.maxY = self.maxY + ViewConstants.Board.verticalSpacing
         }
     }
     
     func buildNewCard() {
         var viewModel:ViewModelNewCard = ViewModelNewCard()
-        viewModel.left = self.left
-        viewModel.width = ViewConstants.Column.width
         viewModel.height = ViewConstants.NewCard.height
-        self.add(item:viewModel)
+        self.items.append(viewModel)
     }
     
     private func add(card:CardProtocol) {
         var viewModel:ViewModelCard = ViewModelCard()
         viewModel.identifier = card.identifier
         viewModel.content = card.content
-        viewModel.left = self.left + ViewConstants.Column.paddingHorizontal
-        viewModel.width = self.textContent.width
         viewModel.height = self.textContent.heightFor(content:card.content)
-        self.add(item:viewModel)
-    }
-    
-    private func add(item:ViewModelBoardItemProtocol) {
-        var item:ViewModelBoardItemProtocol = item
-        item.top = self.maxY
-        self.maxY = self.maxY + item.height
-        self.items.append(item)
+        self.items.append(viewModel)
     }
 }

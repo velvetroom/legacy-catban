@@ -2,10 +2,10 @@ import UIKit
 
 struct ViewModelColumn {
     var name:String
-    var left:CGFloat
+    var items:[ViewModelBoardItemProtocol]
     
     init() {
         self.name = String()
-        self.left = 0
+        self.items = []
     }
 }

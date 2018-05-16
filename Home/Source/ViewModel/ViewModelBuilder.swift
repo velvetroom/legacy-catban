@@ -9,10 +9,8 @@ class ViewModelBuilder {
     init() {
         self.viewModel = ViewModel()
         self.builders = [
-            ViewModelBuilderColumns.self,
             ViewModelBuilderView.self,
-            ViewModelBuilderScroll.self,
-            ViewModelBuilderBoard.self]
+            ViewModelBuilderColumns.self]
     }
     
     func buildViewModel() -> ViewModel {

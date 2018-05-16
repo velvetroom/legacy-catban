@@ -22,11 +22,11 @@ class PresenterDragStrategyCardStateDraggingBoard {
     
     func columnAtPosition(rect:CGRect) -> ViewColumn? {
         let midX:CGFloat = rect.midX
-        for column:ViewColumn in self.viewBoard.columns {
-            if column.frame.maxX >= midX {
-                return column
-            }
-        }
+//        for column:ViewColumn in self.viewBoard.columns {
+//            if column.frame.maxX >= midX {
+//                return column
+//            }
+//        }
         return nil
     }
     
@@ -46,15 +46,15 @@ class PresenterDragStrategyCardStateDraggingBoard {
     
     private func cardsIn(column:ViewColumn) -> [ViewCard] {
         var cards:[ViewCard] = []
-        for item:ViewBoardItem in self.viewBoard.items {
-            guard
-                self.view != item,
-                let card:ViewCard = item as? ViewCard
-            else { continue }
-            if self.isChild(card:card, of:column) {
-                cards.append(card)
-            }
-        }
+//        for item:ViewBoardItem in self.viewBoard.items {
+//            guard
+//                self.view != item,
+//                let card:ViewCard = item as? ViewCard
+//            else { continue }
+//            if self.isChild(card:card, of:column) {
+//                cards.append(card)
+//            }
+//        }
         return cards
     }
     

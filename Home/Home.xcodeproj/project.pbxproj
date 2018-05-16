@@ -31,8 +31,6 @@
 		DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8020A2C27800E89334 /* ViewColumn.swift */; };
 		DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */; };
 		DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8420A2C33500E89334 /* ViewModelView.swift */; };
-		DA47FB8720A2C35600E89334 /* ViewModelScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */; };
-		DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */; };
 		DA47FB8B20A2C39F00E89334 /* TestViewModelScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */; };
 		DA47FB8D20A2C3B900E89334 /* TestViewModelBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */; };
 		DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */; };
@@ -61,6 +59,9 @@
 		DA613A6E20AC57F10088A29B /* DragPositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6D20AC57F10088A29B /* DragPositionProtocol.swift */; };
 		DA613A7020AC59660088A29B /* DragPositionStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6F20AC59660088A29B /* DragPositionStatic.swift */; };
 		DA613A7220AC598B0088A29B /* DragPositionInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7120AC598B0088A29B /* DragPositionInteractive.swift */; };
+		DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */; };
+		DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */; };
+		DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
 		DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */; };
@@ -83,7 +84,6 @@
 		DA6FDEF720A71C5E00D148DD /* PresenterUpdaterScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */; };
 		DA6FDEF920A71CAB00D148DD /* PresenterUpdaterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF820A71CAB00D148DD /* PresenterUpdaterBoard.swift */; };
 		DA6FDEFD20A71CFD00D148DD /* PresenterUpdaterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */; };
-		DA6FDEFF20A71D9100D148DD /* PresenterUpdaterBoardItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEFE20A71D9100D148DD /* PresenterUpdaterBoardItems.swift */; };
 		DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70320A834EE000756C3 /* ViewModelBuilderProtocol.swift */; };
 		DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */; };
 		DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */; };
@@ -112,8 +112,6 @@
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
 		DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E5420A84F960000BF06 /* ViewModelBuilderView.swift */; };
-		DAF84E5720A84FDD0000BF06 /* ViewModelBuilderScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E5620A84FDD0000BF06 /* ViewModelBuilderScroll.swift */; };
-		DAF84E5920A84FE70000BF06 /* ViewModelBuilderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E5820A84FE70000BF06 /* ViewModelBuilderBoard.swift */; };
 		DAF84E6120A85DBC0000BF06 /* ViewModelConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6020A85DBC0000BF06 /* ViewModelConstants.swift */; };
 		DAF84E6320A85E160000BF06 /* TestViewModelBuilder_NewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */; };
 		DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6420A861460000BF06 /* ViewModelBuilderItems.swift */; };
@@ -171,8 +169,6 @@
 		DA47FB8020A2C27800E89334 /* ViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
 		DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelView.swift; sourceTree = "<group>"; };
 		DA47FB8420A2C33500E89334 /* ViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelView.swift; sourceTree = "<group>"; };
-		DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScroll.swift; sourceTree = "<group>"; };
-		DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoard.swift; sourceTree = "<group>"; };
 		DA47FB8A20A2C39F00E89334 /* TestViewModelScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelScroll.swift; sourceTree = "<group>"; };
 		DA47FB8C20A2C3B900E89334 /* TestViewModelBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBoard.swift; sourceTree = "<group>"; };
 		DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
@@ -201,6 +197,9 @@
 		DA613A6D20AC57F10088A29B /* DragPositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragPositionProtocol.swift; sourceTree = "<group>"; };
 		DA613A6F20AC59660088A29B /* DragPositionStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragPositionStatic.swift; sourceTree = "<group>"; };
 		DA613A7120AC598B0088A29B /* DragPositionInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragPositionInteractive.swift; sourceTree = "<group>"; };
+		DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
+		DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItemChild.swift; sourceTree = "<group>"; };
+		DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresenterUpdaterBoardItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardItem.swift; sourceTree = "<group>"; };
@@ -223,7 +222,6 @@
 		DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterScroll.swift; sourceTree = "<group>"; };
 		DA6FDEF820A71CAB00D148DD /* PresenterUpdaterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterBoard.swift; sourceTree = "<group>"; };
 		DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumns.swift; sourceTree = "<group>"; };
-		DA6FDEFE20A71D9100D148DD /* PresenterUpdaterBoardItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterBoardItems.swift; sourceTree = "<group>"; };
 		DA75B70320A834EE000756C3 /* ViewModelBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderProtocol.swift; sourceTree = "<group>"; };
 		DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelBuilderProtocol.swift; sourceTree = "<group>"; };
 		DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_Builders.swift; sourceTree = "<group>"; };
@@ -250,8 +248,6 @@
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DAF84E5420A84F960000BF06 /* ViewModelBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderView.swift; sourceTree = "<group>"; };
-		DAF84E5620A84FDD0000BF06 /* ViewModelBuilderScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderScroll.swift; sourceTree = "<group>"; };
-		DAF84E5820A84FE70000BF06 /* ViewModelBuilderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderBoard.swift; sourceTree = "<group>"; };
 		DAF84E6020A85DBC0000BF06 /* ViewModelConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelConstants.swift; sourceTree = "<group>"; };
 		DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_NewCard.swift; sourceTree = "<group>"; };
 		DAF84E6420A861460000BF06 /* ViewModelBuilderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderItems.swift; sourceTree = "<group>"; };
@@ -374,15 +370,11 @@
 				DAF84E6020A85DBC0000BF06 /* ViewModelConstants.swift */,
 				DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */,
 				DA75B70320A834EE000756C3 /* ViewModelBuilderProtocol.swift */,
+				DAF84E5420A84F960000BF06 /* ViewModelBuilderView.swift */,
 				DA75B70B20A83C8E000756C3 /* ViewModelBuilderColumns.swift */,
 				DAF84E6420A861460000BF06 /* ViewModelBuilderItems.swift */,
 				DA6D002220A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift */,
-				DAF84E5420A84F960000BF06 /* ViewModelBuilderView.swift */,
-				DAF84E5620A84FDD0000BF06 /* ViewModelBuilderScroll.swift */,
-				DAF84E5820A84FE70000BF06 /* ViewModelBuilderBoard.swift */,
 				DA47FB8420A2C33500E89334 /* ViewModelView.swift */,
-				DA47FB8620A2C35600E89334 /* ViewModelScroll.swift */,
-				DA47FB8820A2C37A00E89334 /* ViewModelBoard.swift */,
 				DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */,
 				DA47FB9220A2C7C100E89334 /* ViewModelColumn.swift */,
 				DA6D001C20A3126200E50F0A /* ViewModelCard.swift */,
@@ -436,8 +428,10 @@
 				DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */,
 				DA6FDEF820A71CAB00D148DD /* PresenterUpdaterBoard.swift */,
 				DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */,
-				DA6FDEFE20A71D9100D148DD /* PresenterUpdaterBoardItems.swift */,
+				DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */,
+				DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */,
 				DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */,
+				DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */,
 				DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */,
 				DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */,
 				DAAF5E6820A96D4600354B08 /* PresenterDrag.swift */,
@@ -672,20 +666,18 @@
 				DA417C5020AABF8D00D2BB8E /* PresenterDragStrategyCardStateDragging.swift in Sources */,
 				DA613A6A20AC49F90088A29B /* DragObjectProtocol+Default.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
-				DA6FDEFF20A71D9100D148DD /* PresenterUpdaterBoardItems.swift in Sources */,
 				DA613A7020AC59660088A29B /* DragPositionStatic.swift in Sources */,
+				DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
 				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
 				DA6FDEFD20A71CFD00D148DD /* PresenterUpdaterColumns.swift in Sources */,
 				DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */,
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
 				DA6FDEF720A71C5E00D148DD /* PresenterUpdaterScroll.swift in Sources */,
-				DA47FB8920A2C37A00E89334 /* ViewModelBoard.swift in Sources */,
 				DA613A7220AC598B0088A29B /* DragPositionInteractive.swift in Sources */,
 				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
 				DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */,
 				DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */,
-				DA47FB8720A2C35600E89334 /* ViewModelScroll.swift in Sources */,
 				DAF84E6720A8688E0000BF06 /* PresenterUpdaterCard.swift in Sources */,
 				DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */,
 				DA417C4E20AABF7300D2BB8E /* PresenterDragStrategyCardStateTouchable.swift in Sources */,
@@ -695,17 +687,18 @@
 				DA5876C420ABFFD100E9A6B7 /* DragNewCard.swift in Sources */,
 				DA5876BF20ABFECC00E9A6B7 /* DragItemProtocol.swift in Sources */,
 				DA417C6F20AAF68300D2BB8E /* PresenterDragStrategyCardStateDraggingView.swift in Sources */,
+				DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */,
 				DA613A6820AC47AD0088A29B /* DragObjectProtocol.swift in Sources */,
 				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */,
 				DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */,
 				DA978FB420A1A3F5002461E6 /* PresenterOutlets.swift in Sources */,
 				DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */,
+				DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */,
 				DA6FDEF920A71CAB00D148DD /* PresenterUpdaterBoard.swift in Sources */,
 				DAFF568C20A9E98600EF26E3 /* PresenterDragStrategyCard.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
-				DAF84E5720A84FDD0000BF06 /* ViewModelBuilderScroll.swift in Sources */,
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
 				DA417C7720AB0B6100D2BB8E /* PresenterDragStrategyCardStateDraggingBoard.swift in Sources */,
 				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
@@ -719,7 +712,6 @@
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
 				DA417C4C20AABF5800D2BB8E /* PresenterDragStrategyCardStateProtocol.swift in Sources */,
 				DA613A6E20AC57F10088A29B /* DragPositionProtocol.swift in Sources */,
-				DAF84E5920A84FE70000BF06 /* ViewModelBuilderBoard.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DA417C4820AAAD9700D2BB8E /* PresenterDragStrategyProtocol+Default.swift in Sources */,
 				DAAF5E6920A96D4600354B08 /* PresenterDrag.swift in Sources */,

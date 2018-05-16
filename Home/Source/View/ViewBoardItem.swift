@@ -2,8 +2,6 @@ import UIKit
 
 class ViewBoardItem:ViewBoardElement {
     var dragStrategy:PresenterDragStrategyProtocol.Type!
-    weak var layoutHeight:NSLayoutConstraint!
-    weak var layoutWidth:NSLayoutConstraint!
     
     init() {
         super.init(frame:CGRect.zero)
