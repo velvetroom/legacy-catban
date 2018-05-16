@@ -12,6 +12,7 @@ class Drag {
         } else {
             self.column = column
         }
+        self.updateContentSize()
     }
     
     func add(item:DragItemProtocol) {
@@ -35,8 +36,8 @@ class Drag {
     private var lastColumn:DragColumn? {
         get {
             var column:DragColumn? = self.column
-            while let _:DragColumn = column {
-                column = column?.nextColumn
+            while let nextColumn:DragColumn = column?.nextColumn {
+                column = nextColumn
             }
             return column
         }
@@ -53,7 +54,7 @@ class Drag {
                 }
                 column = currentColumn.nextColumn
             }
-            return maxHeight + ViewConstants.Column.paddingBottom
+            return maxHeight
         }
     }
     

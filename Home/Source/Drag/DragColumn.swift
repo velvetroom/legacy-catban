@@ -19,6 +19,45 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
         } else {
             self.replaceChild(item:item)
         }
+        self.updateSize()
+    }
+    
+    func addToLast(item:DragItemProtocol) {
+        self.lastParent.replaceChild(item:item)
+        self.updateSize()
+    }
+    
+    private var lastParent:DragParentProtocol {
+        get {
+            if let lastItem:DragParentProtocol = self.lastItem as? DragParentProtocol {
+                return lastItem
+            }
+            return self
+        }
+    }
+    
+    private var lastItem:DragItemProtocol? {
+        get {
+            var childItem:DragItemProtocol? = self.childItem
+            while let parentItem:DragParentProtocol = childItem as? DragParentProtocol {
+                if let nextItem:DragItemProtocol = parentItem.childItem {
+                    childItem = nextItem
+                } else {
+                    break
+                }
+            }
+            return childItem
+        }
+    }
+    
+    private var contentBottom:CGFloat {
+        get {
+            var bottom:CGFloat = ViewConstants.ColumnTitle.height
+            if let lastItem:DragItemProtocol = self.lastItem {
+                bottom = lastItem.maxY
+            }
+            return bottom
+        }
     }
     
     private func parentFor(item:DragItemProtocol) -> DragParentProtocol? {
@@ -32,5 +71,9 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
             }
         }
         return nil
+    }
+    
+    private func updateSize() {
+        self.view.layoutHeight.constant = self.contentBottom + ViewConstants.Column.paddingBottom
     }
 }
