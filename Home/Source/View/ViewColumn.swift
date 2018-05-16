@@ -1,8 +1,7 @@
 import UIKit
 import Shared
 
-class ViewColumn:UIView {
-    weak var layoutLeft:NSLayoutConstraint!
+class ViewColumn:ViewBoardElement {
     private(set) weak var labelName:UILabel!
     
     init() {

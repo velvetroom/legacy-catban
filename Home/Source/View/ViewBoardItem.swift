@@ -1,16 +1,9 @@
 import UIKit
 
-class ViewBoardItem:UIView {
+class ViewBoardItem:ViewBoardElement {
     var dragStrategy:PresenterDragStrategyProtocol.Type!
-    weak var layoutLeft:NSLayoutConstraint!
-    weak var layoutTop:NSLayoutConstraint!
     weak var layoutHeight:NSLayoutConstraint!
     weak var layoutWidth:NSLayoutConstraint!
-    var position:CGPoint {
-        get {
-            return CGPoint(x:self.layoutLeft.constant, y:self.layoutTop.constant)
-        }
-    }
     
     init() {
         super.init(frame:CGRect.zero)

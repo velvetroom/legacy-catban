@@ -5,42 +5,41 @@ class Drag {
     weak var viewBoard:ViewBoard!
     var firstColumn:DragColumn?
     
-    var width:CGFloat {
-        get {
-            return self.viewScroll.contentSize.width
-        }
-        set(newValue) {
-            self.viewScroll.contentSize.width = newValue
-            self.updateBoardFrame()
-        }
-    }
-    
-    var height:CGFloat {
-        get {
-            return self.viewScroll.contentSize.height
-        }
-        set(newValue) {
-            self.viewScroll.contentSize.height = newValue
-            self.updateBoardFrame()
-        }
-    }
-    
-    func columnFor(item:DragItemProtocol) -> DragColumn {
-        var found:DragColumn!
-        for column:DragColumn in self.columns {
-            if column.maxX > item.midX {
-                found = column
-                break
-            }
-        }
-        return found
-    }
-    
     func add(item:DragItemProtocol) {
-        let column:DragColumn = self.columnFor(item:item)
+        if let column:DragColumn = self.columnFor(item:item) {
+            
+        }
+        self.updateContentSize()
     }
     
-    private func updateBoardFrame() {
+    private func columnFor(item:DragItemProtocol) -> DragColumn? {
+        var column:DragColumn? = self.firstColumn
+        while let current:DragColumn = column {
+            if current.maxX > item.midX {
+                return current
+            }
+            column = current.nextColumn
+        }
+        return nil
+    }
+    
+    private var maxContentHeight:CGFloat {
+        get {
+            var maxHeight:CGFloat = 0
+            var column:DragColumn? = self.firstColumn
+            while let currentColumn:DragColumn = column {
+                let columnMaxY:CGFloat = currentColumn.maxY
+                if columnMaxY > maxHeight {
+                    maxHeight = columnMaxY
+                }
+                column = currentColumn.nextColumn
+            }
+            return maxHeight
+        }
+    }
+    
+    private func updateContentSize() {
+        self.viewScroll.contentSize.height = self.maxContentHeight
         self.viewBoard.frame = CGRect(origin:CGPoint.zero, size:self.viewScroll.contentSize)
     }
 }

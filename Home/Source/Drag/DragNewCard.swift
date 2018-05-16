@@ -2,9 +2,9 @@ import UIKit
 
 class DragNewCard:DragItemProtocol {
     weak var parent:DragParentProtocol!
-    weak var view:ViewBoardItem!
+    var position:DragPositionProtocol
     
     init() {
-        
+        self.position = DragPositionStatic()
     }
 }

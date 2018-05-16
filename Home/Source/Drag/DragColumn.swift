@@ -1,19 +1,36 @@
 import UIKit
 
-class DragColumn:DragParentProtocol {
-    weak var view:ViewColumn!
+class DragColumn:DragObjectProtocol, DragParentProtocol {
+    var position:DragPositionProtocol
     var nextColumn:DragColumn?
     var childItem:DragItemProtocol?
+    let paddingVertical:CGFloat
+    let paddingHorizontal:CGFloat
     
-    var minX:CGFloat {
-        get {
-            return self.view.layoutLeft.constant
+    init() {
+        self.position = DragPositionStatic()
+        self.paddingVertical = ViewConstants.ColumnTitle.height
+        self.paddingHorizontal = ViewConstants.Column.paddingHorizontal
+    }
+    
+    func add(item:DragItemProtocol) {
+        if let parent:DragParentProtocol = self.parentFor(item:item) {
+            parent.replaceChild(item:item)
+        } else {
+            self.replaceChild(item:item)
         }
     }
     
-    var maxX:CGFloat {
-        get {
-            return self.view.layoutLeft.constant + ViewConstants.Column.width
+    private func parentFor(item:DragItemProtocol) -> DragParentProtocol? {
+        var child:DragItemProtocol? = self.childItem
+        while let current:DragItemProtocol = child {
+            if current.minY > item.midY {
+                return current.parent
+            }
+            if let parent:DragParentProtocol = current as? DragParentProtocol {
+                child = parent.childItem
+            }
         }
+        return nil
     }
 }

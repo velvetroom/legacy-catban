@@ -7,8 +7,8 @@ struct ViewConstants {
     
     struct Board {
         static let paddingHorizontal:CGFloat = 20
-        static let columnSpacing:CGFloat = 15
-        static let cardSpacing:CGFloat = 4
+        static let horizontalSpacing:CGFloat = 15
+        static let verticalSpacing:CGFloat = 4
     }
     
     struct Column {
