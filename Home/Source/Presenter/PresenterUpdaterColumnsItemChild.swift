@@ -23,7 +23,8 @@ class PresenterUpdaterColumnsItemChild {
     }
     
     private func factoryUpdater() -> PresenterUpdaterBoardItemProtocol {
-        let identifier:ObjectIdentifier = ObjectIdentifier(type(of:self.viewModel))
+        let viewModel:ViewModelBoardItemProtocol = self.viewModel
+        let identifier:ObjectIdentifier = ObjectIdentifier(type(of:viewModel))
         let updaterType:PresenterUpdaterBoardItemProtocol.Type = self.updaterMap[identifier]!
         return updaterType.init()
     }

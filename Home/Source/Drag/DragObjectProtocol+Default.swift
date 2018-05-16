@@ -6,7 +6,7 @@ extension DragObjectProtocol {
             return self.position.view
         }
         set(newValue) {
-            self.position.view = self.view
+            self.position.view = newValue
         }
     }
     
