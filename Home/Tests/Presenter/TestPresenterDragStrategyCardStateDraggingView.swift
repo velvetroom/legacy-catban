@@ -19,6 +19,7 @@ class TestPresenterDragStrategyCardStateDraggingView:XCTestCase {
     
     func testNotRetainingView() {
         self.presenter.view = self.view
+        self.view = nil
         XCTAssertNil(self.presenter.view, "Retains view")
     }
 }

@@ -26,5 +26,6 @@ class TestPresenter_Updaters:XCTestCase {
         XCTAssertNotNil(MockPresenterUpdaterProtocol.updated.viewModel, "Not injected")
         XCTAssertNotNil(MockPresenterUpdaterProtocol.updated.outlets, "Not injected")
         XCTAssertNotNil(MockPresenterUpdaterProtocol.updated.controller, "Not injected")
+        XCTAssertNotNil(MockPresenterUpdaterProtocol.updated.drag, "Not injected")
     }
 }

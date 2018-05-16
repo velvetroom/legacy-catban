@@ -4,6 +4,7 @@ class PresenterUpdaterBoard:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
     var controller:Controller!
+    var drag:Drag!
     
     required init() { }
     

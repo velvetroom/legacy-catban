@@ -4,6 +4,7 @@ class PresenterUpdaterBoardItems:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
     var controller:Controller!
+    var drag:Drag!
     private var viewBoard:ViewBoard!
     private let updaterMap:[ObjectIdentifier:PresenterUpdaterBoardItemProtocol.Type]
     
@@ -16,7 +17,10 @@ class PresenterUpdaterBoardItems:PresenterUpdaterProtocol {
     }
     
     func update() {
-        self.viewBoard = self.outlets.viewBoard!
+        guard
+            let viewBoard:ViewBoard = self.outlets.viewBoard
+        else { return }
+        self.viewBoard = viewBoard
         self.clearItems()
         for item:ViewModelBoardItemProtocol in self.viewModel.items {
             self.factoryViewsFor(item:item)
