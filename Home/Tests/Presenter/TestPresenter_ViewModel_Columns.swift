@@ -5,11 +5,11 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
     private var presenter:Presenter!
     private var viewModel:ViewModel!
     private var viewBoard:ViewBoard!
+    private var viewScroll:ViewScroll!
     private struct Constants {
         static let initialColumns:Int = 2
         static let finalColumns:Int = 1
         static let columnName:String = "lorem ipsum"
-        static let layoutConstant:CGFloat = 3
     }
     
     override func setUp() {
@@ -17,7 +17,9 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
         self.presenter = Presenter()
         self.viewModel = ViewModel()
         self.viewBoard = ViewBoard()
+        self.viewScroll = ViewScroll()
         self.presenter.outlets.viewBoard = self.viewBoard
+        self.presenter.outlets.viewScroll = self.viewScroll
     }
     
     func testLoad() {
@@ -29,13 +31,11 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
     func testReloadColumns() {
         self.updatePresenterWith(columns:Constants.initialColumns)
         
-        XCTAssertEqual(self.viewBoard.columns.count, Constants.initialColumns, "Invalid amount of columns")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.initialColumns, "Invalid amount of subviews")
         self.validateColumns()
         
         self.updatePresenterWith(columns:Constants.finalColumns)
         
-        XCTAssertEqual(self.viewBoard.columns.count, Constants.finalColumns, "Invalid amount of columns")
         XCTAssertEqual(self.viewBoard.subviews.count, Constants.finalColumns, "Invalid amount of subviews")
         self.validateColumns()
     }
@@ -45,17 +45,18 @@ class TestPresenter_ViewModel_Columns:XCTestCase {
         for _:Int in 0 ..< columns {
             var column:ViewModelColumn = ViewModelColumn()
             column.name = Constants.columnName
-            column.left = Constants.layoutConstant
             self.viewModel.columns.append(column)
         }
         self.presenter.updateWith(viewModel:self.viewModel)
     }
     
     private func validateColumns() {
-        for column:ViewColumn in self.viewBoard.columns {
+        for view:UIView in self.viewBoard.subviews {
+            guard
+                let column:ViewColumn = view as? ViewColumn
+            else { break }
             XCTAssertEqual(column.superview, self.viewBoard, "Failed to assign superview")
             XCTAssertNotNil(column.layoutLeft, "Failed to assign layout")
-            XCTAssertEqual(column.layoutLeft.constant, Constants.layoutConstant, "Failed to assign constant")
             XCTAssertEqual(column.labelName.text, Constants.columnName, "Failed to assign name")
         }
     }

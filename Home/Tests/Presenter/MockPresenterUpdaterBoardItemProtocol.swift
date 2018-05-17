@@ -3,14 +3,27 @@ import Foundation
 
 class MockPresenterUpdaterBoardItemProtocol:PresenterUpdaterBoardItemProtocol {
     static var updater:MockPresenterUpdaterBoardItemProtocol?
-    var controller:Controller!
     var viewBoard:ViewBoard!
     var viewModel:ViewModelBoardItemProtocol!
-    var drag:Map!
+    var column:MapColumn!
+    var returnViewItem:ViewBoardItem!
+    var returnMapItem:MapItemProtocol!
+    
+    var viewItem:ViewBoardItem {
+        get {
+            return self.returnViewItem
+        }
+    }
+    
+    var mapItem:MapItemProtocol {
+        get {
+            return self.returnMapItem
+        }
+    }
     
     required init() { }
     
-    func factoryView() {
+    func configureContent() {
         MockPresenterUpdaterBoardItemProtocol.updater = self
     }
 }

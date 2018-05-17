@@ -8,9 +8,4 @@ class TestViewBoard:XCTestCase {
         super.setUp()
         self.view = ViewBoard()
     }
-    
-    func testProperties() {
-        XCTAssertTrue(self.view.columns.isEmpty, "Columns should be initially empty")
-        XCTAssertTrue(self.view.items.isEmpty, "Items should be initially empty")
-    }
 }

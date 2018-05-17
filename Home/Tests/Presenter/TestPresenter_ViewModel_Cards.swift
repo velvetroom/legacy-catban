@@ -6,6 +6,7 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
     private var controller:Controller!
     private var viewModel:ViewModel!
     private var viewBoard:ViewBoard!
+    private var viewScroll:ViewScroll!
     private struct Constants {
         static let initialCards:Int = 2
         static let finalCards:Int = 1
@@ -22,50 +23,44 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
         self.presenter = Presenter()
         self.viewModel = ViewModel()
         self.viewBoard = ViewBoard()
+        self.viewScroll = ViewScroll()
         self.controller = Controller()
         self.presenter.outlets.viewBoard = self.viewBoard
+        self.presenter.outlets.viewScroll = self.viewScroll
         self.presenter.controller = self.controller
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.presenter, "Failed to load presenter")
-        XCTAssertNotNil(self.viewModel, "Failed to load view model")
-        XCTAssertNotNil(self.viewBoard, "Failed to load view board")
-        XCTAssertNotNil(self.controller, "Failed to load controller")
     }
     
     func testReloadColumns() {
         self.updatePresenterWith(cards:Constants.initialCards)
         
-        XCTAssertEqual(self.viewBoard.items.count, Constants.initialCards, "Invalid amount of cards")
-        XCTAssertEqual(self.viewBoard.subviews.count, Constants.initialCards, "Invalid amount of subviews")
+        XCTAssertEqual(self.viewBoard.subviews.count, Constants.initialCards + 1, "Invalid amount of subviews")
         self.validateCards()
         
         self.updatePresenterWith(cards:Constants.finalCards)
         
-        XCTAssertEqual(self.viewBoard.items.count, Constants.finalCards, "Invalid amount of cards")
-        XCTAssertEqual(self.viewBoard.subviews.count, Constants.finalCards, "Invalid amount of subviews")
+        XCTAssertEqual(self.viewBoard.subviews.count, Constants.finalCards + 1, "Invalid amount of subviews")
         self.validateCards()
     }
     
     private func updatePresenterWith(cards:Int) {
-        self.viewModel.items = []
+        self.viewModel.columns = []
+        var column:ViewModelColumn = ViewModelColumn()
         for _:Int in 0 ..< cards {
             var card:ViewModelCard = ViewModelCard()
             card.identifier = Constants.cardIdentifier
             card.content = Constants.cardContent
-            card.left = Constants.layoutConstantLeft
-            card.top = Constants.layoutConstantTop
             card.height = Constants.layoutConstantHeight
-            card.width = Constants.layoutConstantWidth
-            self.viewModel.items.append(card)
+            column.items.append(card)
         }
+        self.viewModel.columns.append(column)
         self.presenter.updateWith(viewModel:self.viewModel)
     }
     
     private func validateCards() {
-        for item:ViewBoardItem in self.viewBoard.items {
-            let card:ViewCard = item as! ViewCard
+        for subView:UIView in self.viewBoard.subviews {
+            guard
+                let card:ViewCard = subView as? ViewCard
+            else { break }
             XCTAssertNotNil(card.layoutLeft, "Failed to assign layout")
             XCTAssertNotNil(card.layoutTop, "Failed to assign layout")
             XCTAssertNotNil(card.layoutHeight, "Failed to assign layout")
@@ -76,7 +71,6 @@ class TestPresenter_ViewModel_Cards:XCTestCase {
             XCTAssertEqual(card.layoutHeight.constant, Constants.layoutConstantHeight, "Failed to assign constant")
             XCTAssertEqual(card.layoutWidth.constant, Constants.layoutConstantWidth, "Failed to assign constant")
             XCTAssertEqual(card.labelContent.text, Constants.cardContent, "Failed to assign content")
-            XCTAssertNotEqual(card.position, CGPoint.zero, "Failed to save position")
         }
     }
 }

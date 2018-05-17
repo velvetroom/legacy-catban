@@ -14,12 +14,14 @@ class Map {
     }
     
     func add(item:MapItemProtocol) {
+        var parentColumn:MapColumn? = self.columns.first
         for column:MapColumn in self.columns {
             if column.maxX > item.midX {
-                column.add(item:item)
+                parentColumn = column
                 break
             }
         }
+        parentColumn?.add(item:item)
         self.updateContentSize()
     }
     

@@ -10,6 +10,7 @@ class TestPresenter:XCTestCase {
     private var project:ProjectManagedProtocol!
     private var view:Home.View!
     private var viewBoard:ViewBoard!
+    private var viewScroll:ViewScroll!
     private struct Constants {
         static let projectName:String = "lorem ipsum"
     }
@@ -22,6 +23,7 @@ class TestPresenter:XCTestCase {
         self.delegate = MockControllerProtocol()
         self.view = View()
         self.viewBoard = ViewBoard()
+        self.viewScroll = ViewScroll()
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
         self.project = board.manage(project:project)
@@ -30,6 +32,7 @@ class TestPresenter:XCTestCase {
         self.presenter.delegate = self.delegate
         self.presenter.outlets.view = self.view
         self.presenter.outlets.viewBoard = self.viewBoard
+        self.presenter.outlets.viewScroll = self.viewScroll
     }
     
     func testViewType() {
@@ -67,7 +70,8 @@ class TestPresenter:XCTestCase {
         XCTAssertNil(self.presenter.controller, "Strong retained controller")
     }
     
-    func testPresenterAssignsControllerToBoard() {
+    func testPresenterAssignsMapToBoard() {
         self.presenter.shouldUpdate()
+        XCTAssertNotNil(self.viewBoard.drag.map, "Not assigned")
     }
 }

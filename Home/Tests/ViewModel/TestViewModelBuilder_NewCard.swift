@@ -20,9 +20,11 @@ class TestViewModelBuilder_NewCard:XCTestCase {
     
     func testHasNewCard() {
         var newCard:ViewModelNewCard?
-        for item:ViewModelBoardItemProtocol in self.viewModel.items {
-            if let itemNewCard:ViewModelNewCard = item as? ViewModelNewCard {
-                newCard = itemNewCard
+        for column:ViewModelColumn in self.viewModel.columns {
+            for item:ViewModelBoardItemProtocol in column.items {
+                if let itemNewCard:ViewModelNewCard = item as? ViewModelNewCard {
+                    newCard = itemNewCard
+                }
             }
         }
         XCTAssertNotNil(newCard, "View model has no new card")
@@ -30,9 +32,11 @@ class TestViewModelBuilder_NewCard:XCTestCase {
     
     func testOnlyOneNewCard() {
         var countNewCards:Int = 0
-        for item:ViewModelBoardItemProtocol in self.viewModel.items {
-            if let _:ViewModelNewCard = item as? ViewModelNewCard {
-                countNewCards += 1
+        for column:ViewModelColumn in self.viewModel.columns {
+            for item:ViewModelBoardItemProtocol in column.items {
+                if let _:ViewModelNewCard = item as? ViewModelNewCard {
+                    countNewCards += 1
+                }
             }
         }
         XCTAssertEqual(countNewCards, 1, "Invalid amount of new cards")

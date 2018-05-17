@@ -8,13 +8,4 @@ class TestViewModelColumn:XCTestCase {
         super.setUp()
         self.viewModel = ViewModelColumn()
     }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.viewModel, "Failed to load view model")
-    }
-    
-    func testProperties() {
-        XCTAssertNotNil(self.viewModel.name, "Failed to load property")
-        XCTAssertNotNil(self.viewModel.left, "Failed to load property")
-    }
 }
