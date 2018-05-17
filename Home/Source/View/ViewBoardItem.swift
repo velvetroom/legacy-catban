@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewBoardItem:ViewBoardElement {
+    weak var mapItem:MapItemProtocol!
     var dragState:DragStateProtocol.Type!
     
     init() {
@@ -16,7 +17,7 @@ class ViewBoardItem:ViewBoardElement {
     func factoryOutlets() { }
     func stateHighlighted() { }
     func stateNormal() { }
-    func touchSucceded(controller:Controller) { }
+    func triggerAction(controller:Controller) { }
     
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false

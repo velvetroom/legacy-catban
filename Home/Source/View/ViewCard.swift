@@ -14,7 +14,7 @@ class ViewCard:ViewBoardItem {
         return nil
     }
     
-    override func touchSucceded(controller:Controller) {
+    override func triggerAction(controller:Controller) {
         controller.editCardWith(identifier:self.identifier)
     }
     
@@ -63,6 +63,6 @@ class ViewCard:ViewBoardItem {
     
     private func configureView() {
         self.layer.cornerRadius = ViewConstants.Card.cornerRadius
-        self.dragEnd()
+        self.stateNormal()
     }
 }

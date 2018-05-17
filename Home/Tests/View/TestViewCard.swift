@@ -30,7 +30,7 @@ class TestViewCard:XCTestCase {
             called = true
         }
         
-        self.view.touchSucceded(controller:self.controller)
+        self.view.triggerAction(controller:self.controller)
         XCTAssertTrue(called, "Failed to call")
     }
 }

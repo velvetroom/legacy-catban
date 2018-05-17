@@ -18,7 +18,7 @@ class MockViewCard:ViewCard {
         return nil
     }
     
-    override func touchSucceded(controller:Controller) {
+    override func triggerAction(controller:Controller) {
         self.onTouchSucceded?(controller)
     }
 }

@@ -28,7 +28,7 @@ class MockViewBoardItem:ViewBoardItem {
         self.onDragEnd?()
     }
     
-    override func touchSucceded(controller:Controller) {
+    override func triggerAction(controller:Controller) {
         self.onTouchSucceded?(controller)
     }
 }

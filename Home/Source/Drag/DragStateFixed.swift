@@ -7,7 +7,7 @@ class DragStateFixed:DragStateProtocol {
     
     func update() {
         if self.drag.position.isMoving {
-            self.cancelDrag()
+            self.finishDrag()
         }
     }
     

@@ -11,7 +11,7 @@ class ViewNewCard:ViewBoardItem {
         return nil
     }
     
-    override func touchSucceded(controller:Controller) {
+    override func triggerAction(controller:Controller) {
         controller.createNewCard()
     }
     

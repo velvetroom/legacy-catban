@@ -1,10 +1,10 @@
 import UIKit
 
 class ViewBoard:UIView {
-    var drag:PresenterDrag
+    let drag:Drag
     
     init() {
-        self.drag = PresenterDrag()
+        self.drag = Drag()
         super.init(frame:CGRect.zero)
         self.configureView()
     }
@@ -19,29 +19,30 @@ class ViewBoard:UIView {
         }
     }
     
-    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?) {
+    override func touchesBegan(_ touches:Set<UITouch>, with:UIEvent?) {
         guard
             let touch:UITouch = touches.first,
             let view:ViewBoardItem = touch.view as? ViewBoardItem
         else { return }
         let position:CGPoint = touch.location(in:self)
-        self.drag.beginDragging(view:view, on:self, at:position)
+        self.drag.beginWith(view:view, and:position)
     }
     
-    override func touchesMoved(_ touches:Set<UITouch>, with event:UIEvent?) {
+    override func touchesMoved(_ touches:Set<UITouch>, with:UIEvent?) {
         guard
             let touch:UITouch = touches.first
         else { return }
         let position:CGPoint = touch.location(in:self)
-        self.drag.draggedTo(position:position)
+        self.drag.position.latestTouch = position
+        self.drag.update()
     }
     
-    override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?) {
-        self.drag.dragEnded()
+    override func touchesCancelled(_ touches:Set<UITouch>, with:UIEvent?) {
+        self.drag.end()
     }
     
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?) {
-        self.drag.dragEnded()
+    override func touchesEnded(_ touches:Set<UITouch>, with:UIEvent?) {
+        self.drag.end()
     }
     
     private func configureView() {

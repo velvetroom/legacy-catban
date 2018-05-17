@@ -11,6 +11,7 @@ class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
         self.viewItem = ViewNewCard()
         self.mapItem = MapNewCard()
         self.mapItem.view = self.viewItem
+        self.viewItem.mapItem = self.mapItem
     }
     
     func configureContent() { }

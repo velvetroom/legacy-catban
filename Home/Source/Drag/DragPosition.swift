@@ -1,11 +1,13 @@
 import UIKit
 
 struct DragPosition {
-    var initial:CGPoint
-    var latest:CGPoint
+    var initialItem:CGPoint
+    var initialTouch:CGPoint
+    var latestTouch:CGPoint
     
     init() {
-        self.initial = CGPoint.zero
-        self.latest = CGPoint.zero
+        self.initialItem = CGPoint.zero
+        self.initialTouch = CGPoint.zero
+        self.latestTouch = CGPoint.zero
     }
 }

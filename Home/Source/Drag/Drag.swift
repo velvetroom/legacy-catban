@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class Drag {
     weak var controller:Controller!
@@ -12,7 +12,9 @@ class Drag {
         self.state = DragStateNone()
     }
     
-    func begin() {
+    func beginWith(view:ViewBoardItem, and touch:CGPoint) {
+        self.view = view
+        self.position.restartWith(item:view.mapItem, and:touch)
         self.changeState(stateType:self.view.dragState)
         self.view.stateHighlighted()
     }
