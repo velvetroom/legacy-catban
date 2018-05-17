@@ -12,6 +12,7 @@ class ViewNewCard:ViewBoardItem {
     }
     
     override func triggerAction(controller:Controller) {
+        super.triggerAction(controller:controller)
         controller.createNewCard()
     }
     
@@ -26,6 +27,7 @@ class ViewNewCard:ViewBoardItem {
     }
     
     override func factoryOutlets() {
+        super.factoryOutlets()
         let image:UIImageView = UIImageView()
         image.image = UIImage(name:ViewConstants.NewCard.icon, in:type(of:self))
         image.isUserInteractionEnabled = false

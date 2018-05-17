@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class DragStateMoving:DragStateProtocol {
     weak var drag:Drag!
@@ -7,6 +7,7 @@ class DragStateMoving:DragStateProtocol {
     
     func update() {
         self.drag.position.update(item:self.drag.mapItem)
+        self.drag.view.animateChanges()
     }
     
     func end() {

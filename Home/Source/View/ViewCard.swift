@@ -15,6 +15,7 @@ class ViewCard:ViewBoardItem {
     }
     
     override func triggerAction(controller:Controller) {
+        super.triggerAction(controller:controller)
         controller.editCardWith(identifier:self.identifier)
     }
     
