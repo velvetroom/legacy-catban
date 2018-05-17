@@ -3,13 +3,13 @@ import Foundation
 class PresenterUpdaterColumnsItem {
     var viewBoard:ViewBoard!
     var viewModel:ViewModelColumn!
-    var drag:Drag!
+    var drag:Map!
     private let viewColumn:ViewColumn
-    private let dragColumn:DragColumn
+    private let dragColumn:MapColumn
     
     init() {
         self.viewColumn = ViewColumn()
-        self.dragColumn = DragColumn()
+        self.dragColumn = MapColumn()
         self.dragColumn.view = self.viewColumn
     }
     

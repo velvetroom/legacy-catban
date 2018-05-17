@@ -2,8 +2,8 @@ import XCTest
 @testable import Home
 
 class TestDrag_InsertItem:XCTestCase {
-    private var model:Drag!
-    private var item:DragCard!
+    private var model:Map!
+    private var item:MapCard!
     private var viewColumnA:ViewColumn!
     private var viewColumnB:ViewColumn!
     private var viewCard:ViewCard!
@@ -20,8 +20,8 @@ class TestDrag_InsertItem:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.model = Drag()
-        self.item = DragCard()
+        self.model = Map()
+        self.item = MapCard()
         self.viewColumnA = ViewColumn()
         self.viewColumnB = ViewColumn()
         self.viewCard = ViewCard()
@@ -36,8 +36,8 @@ class TestDrag_InsertItem:XCTestCase {
         self.viewCard.layoutLeft = self.layoutCardLeft
         self.viewCard.layoutTop = self.layoutCardTop
         self.item.view = self.viewCard
-        let columnA:DragColumn = DragColumn()
-        let columnB:DragColumn = DragColumn()
+        let columnA:MapColumn = MapColumn()
+        let columnB:MapColumn = MapColumn()
         columnA.view = self.viewColumnA
         columnB.view = self.viewColumnB
         self.model.columns = [columnA, columnB]
@@ -57,13 +57,13 @@ class TestDrag_InsertItem:XCTestCase {
     
     func testFirstColumnForItem() {
         self.viewCard.frame = Constants.cardLeftA
-        let column:DragColumn = self.model.columnFor(item:self.item)
+        let column:MapColumn = self.model.columnFor(item:self.item)
         XCTAssertEqual(column.view, self.viewColumnA, "Invalid column")
     }
     
     func testSecondColumnForItem() {
         self.viewCard.frame = Constants.cardLeftB
-        let column:DragColumn = self.model.columnFor(item:self.item)
+        let column:MapColumn = self.model.columnFor(item:self.item)
         XCTAssertEqual(column.view, self.viewColumnB, "Invalid column")
     }
 }

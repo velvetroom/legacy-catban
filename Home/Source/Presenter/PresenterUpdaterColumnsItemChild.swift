@@ -3,7 +3,7 @@ import Foundation
 class PresenterUpdaterColumnsItemChild {
     var viewBoard:ViewBoard!
     var viewModel:ViewModelBoardItemProtocol!
-    var column:DragColumn!
+    var column:MapColumn!
     private var updaterMap:[ObjectIdentifier:PresenterUpdaterBoardItemProtocol.Type]
     
     init() {

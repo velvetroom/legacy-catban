@@ -6,7 +6,7 @@ class MockPresenterUpdaterBoardItemProtocol:PresenterUpdaterBoardItemProtocol {
     var controller:Controller!
     var viewBoard:ViewBoard!
     var viewModel:ViewModelBoardItemProtocol!
-    var drag:Drag!
+    var drag:Map!
     
     required init() { }
     

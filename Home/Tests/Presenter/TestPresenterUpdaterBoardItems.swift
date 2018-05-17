@@ -5,7 +5,7 @@ class TestPresenterUpdaterBoardItems:XCTestCase {
     private var presenter:PresenterUpdaterBoardItems!
     private var viewBoard:ViewBoard!
     private var controller:Controller!
-    private var drag:Drag!
+    private var drag:Map!
     private struct Constants {
         static let itemTop:CGFloat = 24
     }
@@ -17,7 +17,7 @@ class TestPresenterUpdaterBoardItems:XCTestCase {
         self.viewBoard = ViewBoard()
         self.presenter.viewModel = ViewModel()
         self.presenter.outlets = PresenterOutlets()
-        self.drag = Drag()
+        self.drag = Map()
         self.presenter.controller = self.controller
         self.presenter.outlets.viewBoard = self.viewBoard
         self.presenter.drag = self.drag

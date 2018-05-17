@@ -2,13 +2,13 @@ import XCTest
 @testable import Home
 
 class TestDragColumn:XCTestCase {
-    private var model:DragColumn!
+    private var model:MapColumn!
     private var view:ViewColumn!
     private var layoutLeft:NSLayoutConstraint!
     
     override func setUp() {
         super.setUp()
-        self.model = DragColumn()
+        self.model = MapColumn()
         self.view = ViewColumn()
         self.layoutLeft = NSLayoutConstraint()
         self.view.layoutLeft = self.layoutLeft

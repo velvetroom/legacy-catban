@@ -23,7 +23,7 @@ class TestPresenter_Drag:XCTestCase {
     }
     
     func testCreatesNewDragOnUpdate() {
-        self.presenter.drag.columns.append(DragColumn())
+        self.presenter.drag.columns.append(MapColumn())
         XCTAssertFalse(self.presenter.drag.columns.isEmpty, "Failed to add column")
         self.presenter.shouldUpdate()
         XCTAssertTrue(self.presenter.drag.columns.isEmpty, "Not updated")

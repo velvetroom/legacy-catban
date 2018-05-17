@@ -1,13 +1,13 @@
 import UIKit
 
-class Drag {
+class Map {
     weak var viewScroll:ViewScroll!
     weak var viewBoard:ViewBoard!
-    var column:DragColumn?
+    var column:MapColumn?
     
-    func add(column:DragColumn) {
+    func add(column:MapColumn) {
         column.minX = self.maxContentWidth
-        if let lastColumn:DragColumn = self.lastColumn {
+        if let lastColumn:MapColumn = self.lastColumn {
             lastColumn.nextColumn = column
         } else {
             self.column = column
@@ -15,16 +15,16 @@ class Drag {
         self.updateContentSize()
     }
     
-    func add(item:DragItemProtocol) {
-        if let column:DragColumn = self.columnFor(item:item) {
+    func add(item:MapItemProtocol) {
+        if let column:MapColumn = self.columnFor(item:item) {
             column.add(item:item)
         }
         self.updateContentSize()
     }
     
-    private func columnFor(item:DragItemProtocol) -> DragColumn? {
-        var column:DragColumn? = self.column
-        while let current:DragColumn = column {
+    private func columnFor(item:MapItemProtocol) -> MapColumn? {
+        var column:MapColumn? = self.column
+        while let current:MapColumn = column {
             if current.maxX > item.midX {
                 return current
             }
@@ -33,10 +33,10 @@ class Drag {
         return nil
     }
     
-    private var lastColumn:DragColumn? {
+    private var lastColumn:MapColumn? {
         get {
-            var column:DragColumn? = self.column
-            while let nextColumn:DragColumn = column?.nextColumn {
+            var column:MapColumn? = self.column
+            while let nextColumn:MapColumn = column?.nextColumn {
                 column = nextColumn
             }
             return column
@@ -46,8 +46,8 @@ class Drag {
     private var maxContentHeight:CGFloat {
         get {
             var maxHeight:CGFloat = 0
-            var column:DragColumn? = self.column
-            while let currentColumn:DragColumn = column {
+            var column:MapColumn? = self.column
+            while let currentColumn:MapColumn = column {
                 let columnMaxY:CGFloat = currentColumn.maxY
                 if columnMaxY > maxHeight {
                     maxHeight = columnMaxY
@@ -61,7 +61,7 @@ class Drag {
     private var maxContentWidth:CGFloat {
         get {
             var width:CGFloat = ViewConstants.Board.paddingHorizontal
-            if let lastColumn:DragColumn = self.lastColumn {
+            if let lastColumn:MapColumn = self.lastColumn {
                 width += lastColumn.maxX
             }
             return width

@@ -6,13 +6,13 @@ class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
     var updaters:[PresenterUpdaterProtocol.Type]
-    var drag:Drag
+    var drag:Map
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
-        self.drag = Drag()
+        self.drag = Map()
         self.updaters = [
             PresenterUpdaterView.self,
             PresenterUpdaterScroll.self,
@@ -38,7 +38,7 @@ class Presenter:PresenterProtocol {
     func shouldUpdate() {
         let builder:ViewModelBuilder = ViewModelBuilder()
         builder.project = self.controller.project
-        self.drag = Drag()
+        self.drag = Map()
         self.updateWith(viewModel:builder.buildViewModel())
     }
     

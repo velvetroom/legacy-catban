@@ -3,13 +3,13 @@ import Foundation
 class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
     var viewBoard:ViewBoard!
     var viewModel:ViewModelBoardItemProtocol!
-    var column:DragColumn!
+    var column:MapColumn!
     let viewItem:ViewBoardItem
-    let dragItem:DragItemProtocol
+    let dragItem:MapItemProtocol
     
     required init() {
         self.viewItem = ViewNewCard()
-        self.dragItem = DragNewCard()
+        self.dragItem = MapNewCard()
         self.dragItem.view = self.viewItem
     }
     

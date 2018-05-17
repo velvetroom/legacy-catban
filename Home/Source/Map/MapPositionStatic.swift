@@ -1,6 +1,6 @@
 import UIKit
 
-class DragPositionStatic:DragPositionProtocol {
+class MapPositionStatic:MapPositionProtocol {
     weak var view:ViewBoardElement!
     
     var minX:CGFloat {

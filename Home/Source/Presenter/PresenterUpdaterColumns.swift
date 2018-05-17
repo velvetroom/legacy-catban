@@ -3,7 +3,7 @@ import UIKit
 class PresenterUpdaterColumns:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var drag:Drag!
+    var drag:Map!
     private var viewBoard:ViewBoard!
     
     required init() { }

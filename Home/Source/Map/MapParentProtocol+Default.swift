@@ -1,8 +1,8 @@
 import UIKit
 
-extension DragParentProtocol {
-    func replaceChild(item:DragItemProtocol) {
-        if let parent:DragParentProtocol = item as? DragParentProtocol {
+extension MapParentProtocol {
+    func replaceChild(item:MapItemProtocol) {
+        if let parent:MapParentProtocol = item as? MapParentProtocol {
             parent.childItem = self.childItem
             self.childItem?.parent = parent
         }

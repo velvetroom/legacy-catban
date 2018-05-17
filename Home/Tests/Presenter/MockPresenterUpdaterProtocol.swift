@@ -6,7 +6,7 @@ class MockPresenterUpdaterProtocol:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
     var controller:Controller!
-    var drag:Drag!
+    var drag:Map!
     
     required init() { }
     

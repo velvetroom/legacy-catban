@@ -1,6 +1,6 @@
 import UIKit
 
-class DragPositionInteractive:DragPositionProtocol {
+class MapPositionInteractive:MapPositionProtocol {
     var dropableX:CGFloat
     var dropableY:CGFloat
     

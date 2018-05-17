@@ -2,14 +2,14 @@ import XCTest
 @testable import Home
 
 class TestDragCard:XCTestCase {
-    private var model:DragCard!
+    private var model:MapCard!
     private var view:ViewCard!
     private var layoutLeft:NSLayoutConstraint!
     private var layoutTop:NSLayoutConstraint!
     
     override func setUp() {
         super.setUp()
-        self.model = DragCard()
+        self.model = MapCard()
         self.view = ViewCard()
         self.layoutLeft = NSLayoutConstraint()
         self.layoutTop = NSLayoutConstraint()

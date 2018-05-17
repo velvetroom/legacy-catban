@@ -2,13 +2,13 @@ import XCTest
 @testable import Home
 
 class TestDrag:XCTestCase {
-    private var model:Drag!
+    private var model:Map!
     private var viewScroll:ViewScroll!
     private var viewBoard:ViewBoard!
     
     override func setUp() {
         super.setUp()
-        self.model = Drag()
+        self.model = Map()
         self.viewScroll = ViewScroll()
         self.viewBoard = ViewBoard()
         self.model.viewScroll = self.viewScroll

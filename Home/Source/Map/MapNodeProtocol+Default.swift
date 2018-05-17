@@ -1,6 +1,6 @@
 import UIKit
 
-extension DragObjectProtocol {
+extension MapNodeProtocol {
     var view:ViewBoardElement! {
         get {
             return self.position.view
@@ -67,7 +67,7 @@ extension DragObjectProtocol {
     }
     
     private func updatedPosition() {
-        if let parent:DragParentProtocol = self as? DragParentProtocol {
+        if let parent:MapParentProtocol = self as? MapParentProtocol {
             parent.updateChildPosition()
         }
     }

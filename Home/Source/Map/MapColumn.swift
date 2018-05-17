@@ -1,16 +1,16 @@
 import UIKit
 
-class DragColumn:DragObjectProtocol, DragParentProtocol {
-    var position:DragPositionProtocol
-    var nextColumn:DragColumn?
-    var childItem:DragItemProtocol?
+class MapColumn:MapNodeProtocol, MapParentProtocol {
+    var position:MapPositionProtocol
+    var nextColumn:MapColumn?
+    var childItem:MapItemProtocol?
     
     init() {
-        self.position = DragPositionStatic()
+        self.position = MapPositionStatic()
     }
     
-    func add(item:DragItemProtocol) {
-        if let parent:DragParentProtocol = self.parentFor(item:item) {
+    func add(item:MapItemProtocol) {
+        if let parent:MapParentProtocol = self.parentFor(item:item) {
             parent.replaceChild(item:item)
         } else {
             self.replaceChild(item:item)
@@ -18,25 +18,25 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
         self.updateSize()
     }
     
-    func append(item:DragItemProtocol) {
+    func append(item:MapItemProtocol) {
         self.lastParent.replaceChild(item:item)
         self.updateSize()
     }
     
-    private var lastParent:DragParentProtocol {
+    private var lastParent:MapParentProtocol {
         get {
-            if let lastItem:DragParentProtocol = self.lastItem as? DragParentProtocol {
+            if let lastItem:MapParentProtocol = self.lastItem as? MapParentProtocol {
                 return lastItem
             }
             return self
         }
     }
     
-    private var lastItem:DragItemProtocol? {
+    private var lastItem:MapItemProtocol? {
         get {
-            var childItem:DragItemProtocol? = self.childItem
-            while let parentItem:DragParentProtocol = childItem as? DragParentProtocol {
-                if let nextItem:DragItemProtocol = parentItem.childItem {
+            var childItem:MapItemProtocol? = self.childItem
+            while let parentItem:MapParentProtocol = childItem as? MapParentProtocol {
+                if let nextItem:MapItemProtocol = parentItem.childItem {
                     childItem = nextItem
                 } else {
                     break
@@ -49,20 +49,20 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
     private var contentBottom:CGFloat {
         get {
             var bottom:CGFloat = ViewConstants.ColumnTitle.height
-            if let lastItem:DragItemProtocol = self.lastItem {
+            if let lastItem:MapItemProtocol = self.lastItem {
                 bottom = lastItem.maxY
             }
             return bottom
         }
     }
     
-    private func parentFor(item:DragItemProtocol) -> DragParentProtocol? {
-        var child:DragItemProtocol? = self.childItem
-        while let current:DragItemProtocol = child {
+    private func parentFor(item:MapItemProtocol) -> MapParentProtocol? {
+        var child:MapItemProtocol? = self.childItem
+        while let current:MapItemProtocol = child {
             if current.minY > item.midY {
                 return current.parent
             }
-            if let parent:DragParentProtocol = current as? DragParentProtocol {
+            if let parent:MapParentProtocol = current as? MapParentProtocol {
                 child = parent.childItem
             }
         }
