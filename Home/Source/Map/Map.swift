@@ -2,57 +2,41 @@ import UIKit
 
 class Map {
     weak var viewScroll:ViewScroll!
-    weak var viewBoard:ViewBoard!
-    var column:MapColumn?
+    private var columns:[MapColumn]
+    
+    init() {
+        self.columns = []
+    }
     
     func add(column:MapColumn) {
         column.minX = self.maxContentWidth
-        if let lastColumn:MapColumn = self.lastColumn {
-            lastColumn.nextColumn = column
-        } else {
-            self.column = column
-        }
-        self.updateContentSize()
+        self.columns.append(column)
     }
     
     func add(item:MapItemProtocol) {
-        if let column:MapColumn = self.columnFor(item:item) {
-            column.add(item:item)
+        for column:MapColumn in self.columns {
+            if column.maxX > item.midX {
+                column.add(item:item)
+                break
+            }
         }
         self.updateContentSize()
     }
     
-    private func columnFor(item:MapItemProtocol) -> MapColumn? {
-        var column:MapColumn? = self.column
-        while let current:MapColumn = column {
-            if current.maxX > item.midX {
-                return current
-            }
-            column = current.nextColumn
-        }
-        return nil
-    }
-    
-    private var lastColumn:MapColumn? {
-        get {
-            var column:MapColumn? = self.column
-            while let nextColumn:MapColumn = column?.nextColumn {
-                column = nextColumn
-            }
-            return column
-        }
+    func updateContentSize() {
+        let size:CGSize = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
+        self.viewScroll.updateContent(size:size)
     }
     
     private var maxContentHeight:CGFloat {
         get {
             var maxHeight:CGFloat = 0
-            var column:MapColumn? = self.column
-            while let currentColumn:MapColumn = column {
-                let columnMaxY:CGFloat = currentColumn.maxY
-                if columnMaxY > maxHeight {
-                    maxHeight = columnMaxY
-                }
-                column = currentColumn.nextColumn
+            for column:MapColumn in self.columns {
+                guard
+                    let columnMaxY:CGFloat = column.lastItem?.maxY,
+                    columnMaxY > maxHeight
+                else { continue }
+                maxHeight = columnMaxY
             }
             return maxHeight
         }
@@ -61,16 +45,10 @@ class Map {
     private var maxContentWidth:CGFloat {
         get {
             var width:CGFloat = ViewConstants.Board.paddingHorizontal
-            if let lastColumn:MapColumn = self.lastColumn {
+            if let lastColumn:MapColumn = self.columns.last {
                 width += lastColumn.maxX
             }
             return width
         }
-    }
-    
-    private func updateContentSize() {
-        self.viewScroll.contentSize.height = self.maxContentHeight
-        self.viewScroll.contentSize.width = self.maxContentWidth
-        self.viewBoard.frame = CGRect(origin:CGPoint.zero, size:self.viewScroll.contentSize)
     }
 }

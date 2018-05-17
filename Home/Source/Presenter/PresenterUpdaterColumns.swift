@@ -17,6 +17,7 @@ class PresenterUpdaterColumns:PresenterUpdaterProtocol {
         for column:ViewModelColumn in self.viewModel.columns {
             self.add(column:column)
         }
+        self.map.updateContentSize()
     }
     
     private func add(column:ViewModelColumn) {

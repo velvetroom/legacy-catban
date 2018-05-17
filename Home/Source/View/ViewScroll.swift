@@ -1,6 +1,12 @@
 import UIKit
 
 class ViewScroll:UIScrollView {
+    override var frame:CGRect {
+        didSet {
+            self.updateContentSize()
+        }
+    }
+    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
@@ -8,6 +14,24 @@ class ViewScroll:UIScrollView {
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    func updateContentSize() {
+        self.updateContent(size:self.contentSize)
+    }
+    
+    func updateContent(size:CGSize) {
+        let width:CGFloat = max(size.width, self.frame.width)
+        let height:CGFloat = max(size.height, self.frame.height)
+        self.contentSize = CGSize(width:width, height:height)
+        self.updateSubview()
+    }
+    
+    private func updateSubview() {
+        guard
+            let subview:UIView = self.subviews.first
+        else { return }
+        subview.frame = CGRect(origin:CGPoint.zero, size:self.contentSize)
     }
     
     private func configureView() {

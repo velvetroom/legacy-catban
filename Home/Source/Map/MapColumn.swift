@@ -2,8 +2,32 @@ import UIKit
 
 class MapColumn:MapNodeProtocol, MapParentProtocol {
     var position:MapPositionProtocol
-    var nextColumn:MapColumn?
     var childItem:MapItemProtocol?
+    
+    var lastParent:MapParentProtocol {
+        get {
+            if let lastItem:MapItemProtocol = self.lastItem {
+                if let parent:MapParentProtocol = lastItem as? MapParentProtocol {
+                    return parent
+                }
+                return lastItem.parent
+            }
+            return self
+        }
+    }
+    
+    var lastItem:MapItemProtocol? {
+        get {
+            var childItem:MapItemProtocol? = self.childItem
+            while let parentItem:MapParentProtocol = childItem as? MapParentProtocol {
+                guard
+                    let nextItem:MapItemProtocol = parentItem.childItem
+                else { break }
+                childItem = nextItem
+            }
+            return childItem
+        }
+    }
     
     init() {
         self.position = MapPositionStatic()
@@ -19,29 +43,6 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
     
     func append(item:MapItemProtocol) {
         self.lastParent.replaceChild(item:item)
-    }
-    
-    private var lastParent:MapParentProtocol {
-        get {
-            if let lastItem:MapParentProtocol = self.lastItem as? MapParentProtocol {
-                return lastItem
-            }
-            return self
-        }
-    }
-    
-    private var lastItem:MapItemProtocol? {
-        get {
-            var childItem:MapItemProtocol? = self.childItem
-            while let parentItem:MapParentProtocol = childItem as? MapParentProtocol {
-                if let nextItem:MapItemProtocol = parentItem.childItem {
-                    childItem = nextItem
-                } else {
-                    break
-                }
-            }
-            return childItem
-        }
     }
     
     private var contentBottom:CGFloat {

@@ -16,7 +16,6 @@ class Presenter:PresenterProtocol {
         self.updaters = [
             PresenterUpdaterView.self,
             PresenterUpdaterScroll.self,
-            PresenterUpdaterBoard.self,
             PresenterUpdaterColumns.self]
     }
     
