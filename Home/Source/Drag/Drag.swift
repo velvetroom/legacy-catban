@@ -32,5 +32,6 @@ class Drag:DragProtocol, DragStateChangerProtocol {
     func change(stateType:DragStateProtocol.Type) {
         self.state = stateType.init()
         self.state.drag = self
+        self.state.state = self
     }
 }
