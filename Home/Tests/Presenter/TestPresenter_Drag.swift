@@ -31,8 +31,8 @@ class TestPresenter_Drag:XCTestCase {
     
     func testLoadsDragViews() {
         self.presenter.shouldUpdate()
-        XCTAssertNotNil(self.presenter.drag.viewBoard, "Not loaded")
-        XCTAssertNotNil(self.presenter.drag.viewScroll, "Not loaded")
+        XCTAssertNotNil(self.presenter.map.viewBoard, "Not loaded")
+        XCTAssertNotNil(self.presenter.map.viewScroll, "Not loaded")
     }
     
     func testLoadColumns() {

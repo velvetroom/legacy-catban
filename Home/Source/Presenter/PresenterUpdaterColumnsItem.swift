@@ -3,19 +3,19 @@ import Foundation
 class PresenterUpdaterColumnsItem {
     var viewBoard:ViewBoard!
     var viewModel:ViewModelColumn!
-    var drag:Map!
+    var map:Map!
     private let viewColumn:ViewColumn
-    private let dragColumn:MapColumn
+    private let mapColumn:MapColumn
     
     init() {
         self.viewColumn = ViewColumn()
-        self.dragColumn = MapColumn()
-        self.dragColumn.view = self.viewColumn
+        self.mapColumn = MapColumn()
+        self.mapColumn.view = self.viewColumn
     }
     
     func update() {
         self.configureView()
-        self.drag.add(column:self.dragColumn)
+        self.map.add(column:self.mapColumn)
         self.updateItems()
     }
     
@@ -47,7 +47,7 @@ class PresenterUpdaterColumnsItem {
     private func add(item:ViewModelBoardItemProtocol) {
         let updater:PresenterUpdaterColumnsItemChild = PresenterUpdaterColumnsItemChild()
         updater.viewBoard = self.viewBoard
-        updater.column = self.dragColumn
+        updater.column = self.mapColumn
         updater.viewModel = item
         updater.update()
     }

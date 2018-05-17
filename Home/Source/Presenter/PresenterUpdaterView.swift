@@ -3,7 +3,7 @@ import Foundation
 class PresenterUpdaterView:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var drag:Map!
+    var map:Map!
     
     required init() { }
     

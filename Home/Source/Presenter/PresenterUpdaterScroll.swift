@@ -3,11 +3,11 @@ import Foundation
 class PresenterUpdaterScroll:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var drag:Map!
+    var map:Map!
     
     required init() { }
     
     func update() {
-        self.drag.viewScroll = self.outlets.viewScroll
+        self.map.viewScroll = self.outlets.viewScroll
     }
 }

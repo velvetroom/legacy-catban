@@ -5,12 +5,12 @@ class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
     var viewModel:ViewModelBoardItemProtocol!
     var column:MapColumn!
     let viewItem:ViewBoardItem
-    let dragItem:MapItemProtocol
+    let mapItem:MapItemProtocol
     
     required init() {
         self.viewItem = ViewNewCard()
-        self.dragItem = MapNewCard()
-        self.dragItem.view = self.viewItem
+        self.mapItem = MapNewCard()
+        self.mapItem.view = self.viewItem
     }
     
     func configureContent() { }

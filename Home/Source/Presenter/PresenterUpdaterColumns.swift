@@ -3,7 +3,7 @@ import UIKit
 class PresenterUpdaterColumns:PresenterUpdaterProtocol {
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var drag:Map!
+    var map:Map!
     private var viewBoard:ViewBoard!
     
     required init() { }
@@ -22,7 +22,7 @@ class PresenterUpdaterColumns:PresenterUpdaterProtocol {
     private func add(column:ViewModelColumn) {
         let updater:PresenterUpdaterColumnsItem = PresenterUpdaterColumnsItem()
         updater.viewModel = column
-        updater.drag = drag
+        updater.map = map
         updater.viewBoard = self.viewBoard
         updater.update()
     }

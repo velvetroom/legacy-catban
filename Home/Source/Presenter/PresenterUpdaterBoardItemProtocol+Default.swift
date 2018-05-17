@@ -3,7 +3,7 @@ import Foundation
 extension PresenterUpdaterBoardItemProtocol {
     func update() {
         self.configureView()
-        self.column.append(item:self.dragItem)
+        self.column.append(item:self.mapItem)
     }
     
     private func configureView() {
