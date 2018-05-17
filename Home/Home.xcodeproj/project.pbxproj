@@ -48,9 +48,6 @@
 		DA613A6820AC47AD0088A29B /* MapNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */; };
 		DA613A6A20AC49F90088A29B /* MapNodeProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */; };
 		DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6B20AC50890088A29B /* ViewBoardElement.swift */; };
-		DA613A6E20AC57F10088A29B /* MapPositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6D20AC57F10088A29B /* MapPositionProtocol.swift */; };
-		DA613A7020AC59660088A29B /* MapPositionStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6F20AC59660088A29B /* MapPositionStatic.swift */; };
-		DA613A7220AC598B0088A29B /* MapPositionInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7120AC598B0088A29B /* MapPositionInteractive.swift */; };
 		DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */; };
 		DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */; };
 		DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */; };
@@ -186,9 +183,6 @@
 		DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeProtocol.swift; sourceTree = "<group>"; };
 		DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapNodeProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA613A6B20AC50890088A29B /* ViewBoardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardElement.swift; sourceTree = "<group>"; };
-		DA613A6D20AC57F10088A29B /* MapPositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPositionProtocol.swift; sourceTree = "<group>"; };
-		DA613A6F20AC59660088A29B /* MapPositionStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPositionStatic.swift; sourceTree = "<group>"; };
-		DA613A7120AC598B0088A29B /* MapPositionInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPositionInteractive.swift; sourceTree = "<group>"; };
 		DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
 		DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItemChild.swift; sourceTree = "<group>"; };
 		DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresenterUpdaterBoardItemProtocol+Default.swift"; sourceTree = "<group>"; };
@@ -305,9 +299,6 @@
 				DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */,
 				DA613A6120AC30330088A29B /* MapParentProtocol.swift */,
 				DA613A6520AC45E20088A29B /* MapParentProtocol+Default.swift */,
-				DA613A6D20AC57F10088A29B /* MapPositionProtocol.swift */,
-				DA613A6F20AC59660088A29B /* MapPositionStatic.swift */,
-				DA613A7120AC598B0088A29B /* MapPositionInteractive.swift */,
 				DA5876BC20ABFE9E00E9A6B7 /* MapColumn.swift */,
 				DA5876C020ABFEE200E9A6B7 /* MapCard.swift */,
 				DA5876C320ABFFD100E9A6B7 /* MapNewCard.swift */,
@@ -673,7 +664,6 @@
 				DAB7666420AD5ED40090B7CA /* DragStateFixed.swift in Sources */,
 				DAB7666C20AD5FC60090B7CA /* DragConstants.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
-				DA613A7020AC59660088A29B /* MapPositionStatic.swift in Sources */,
 				DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
 				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
@@ -682,7 +672,6 @@
 				DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */,
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
 				DA6FDEF720A71C5E00D148DD /* PresenterUpdaterScroll.swift in Sources */,
-				DA613A7220AC598B0088A29B /* MapPositionInteractive.swift in Sources */,
 				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
 				DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */,
 				DAB7665A20AD597F0090B7CA /* DragPosition.swift in Sources */,
@@ -719,7 +708,6 @@
 				DA613A6220AC30330088A29B /* MapParentProtocol.swift in Sources */,
 				DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */,
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
-				DA613A6E20AC57F10088A29B /* MapPositionProtocol.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DAB7666A20AD5F730090B7CA /* DragPosition+Tools.swift in Sources */,
 				DAB7666820AD5EFF0090B7CA /* DragStateNone.swift in Sources */,

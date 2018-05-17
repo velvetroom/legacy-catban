@@ -1,7 +1,7 @@
 import UIKit
 
 class MapColumn:MapNodeProtocol, MapParentProtocol {
-    var position:MapPositionProtocol
+    weak var view:ViewBoardElement!
     var childItem:MapItemProtocol?
     
     var lastParent:MapParentProtocol {
@@ -27,10 +27,6 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
             }
             return childItem
         }
-    }
-    
-    init() {
-        self.position = MapPositionStatic()
     }
     
     func add(item:MapItemProtocol) {

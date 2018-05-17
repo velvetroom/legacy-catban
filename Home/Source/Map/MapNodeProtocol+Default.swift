@@ -1,31 +1,22 @@
 import UIKit
 
 extension MapNodeProtocol {
-    var view:ViewBoardElement! {
-        get {
-            return self.position.view
-        }
-        set(newValue) {
-            self.position.view = newValue
-        }
-    }
-    
     var minX:CGFloat {
         get {
-            return self.position.minX
+            return self.view.layoutLeft.constant
         }
         set(newValue) {
-            self.position.minX = newValue
+            self.view.layoutLeft.constant = newValue
             self.updatedPosition()
         }
     }
     
     var minY:CGFloat {
         get {
-            return self.position.minY
+            return self.view.layoutTop.constant
         }
         set(newValue) {
-            self.position.minY = newValue
+            self.view.layoutTop.constant = newValue
             self.updatedPosition()
         }
     }
