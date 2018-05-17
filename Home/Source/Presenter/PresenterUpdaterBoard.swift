@@ -1,9 +1,9 @@
 import Foundation
 
 class PresenterUpdaterBoard:PresenterUpdaterProtocol {
+    weak var map:MapProtocol!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var map:Map!
     
     required init() { }
     

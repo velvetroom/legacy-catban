@@ -1,8 +1,8 @@
 import UIKit
 
 class Drag {
+    weak var map:MapProtocol!
     weak var controller:Controller!
-    weak var map:Map!
     weak var view:ViewBoardItem!
     var mapItem:MapItemProtocol!
     var position:DragPosition

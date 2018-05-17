@@ -1,9 +1,9 @@
 import Foundation
 
 class PresenterUpdaterColumnsItem {
+    weak var map:MapProtocol!
     var viewBoard:ViewBoard!
     var viewModel:ViewModelColumn!
-    var map:Map!
     private let viewColumn:ViewColumn
     private let mapColumn:MapColumn
     

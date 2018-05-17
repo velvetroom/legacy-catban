@@ -1,9 +1,9 @@
 import UIKit
 
 class PresenterUpdaterColumns:PresenterUpdaterProtocol {
+    weak var map:MapProtocol!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
-    var map:Map!
     private var viewBoard:ViewBoard!
     
     required init() { }

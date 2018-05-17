@@ -1,8 +1,8 @@
 import UIKit
 
-class Map {
+class Map:MapProtocol {
     weak var viewScroll:ViewScroll!
-    private var columns:[MapColumn]
+    var columns:[MapColumn]
     
     init() {
         self.columns = []

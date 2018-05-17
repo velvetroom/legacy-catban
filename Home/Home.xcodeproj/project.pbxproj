@@ -91,6 +91,7 @@
 		DAB7667020AD633F0090B7CA /* DragStateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */; };
 		DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */; };
 		DAB7667420AD9B9A0090B7CA /* PresenterUpdaterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */; };
+		DAB7667620ADCB000090B7CA /* MapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667520ADCB000090B7CA /* MapProtocol.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */; };
@@ -205,6 +206,7 @@
 		DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DragStateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterBoard.swift; sourceTree = "<group>"; };
+		DAB7667520ADCB000090B7CA /* MapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProtocol.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		DA5876C220ABFF7A00E9A6B7 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				DAB7667520ADCB000090B7CA /* MapProtocol.swift */,
 				DA5876BA20ABFE8500E9A6B7 /* Map.swift */,
 				DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */,
 				DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */,
@@ -648,6 +651,7 @@
 				DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */,
 				DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */,
 				DA5876BD20ABFE9E00E9A6B7 /* MapColumn.swift in Sources */,
+				DAB7667620ADCB000090B7CA /* MapProtocol.swift in Sources */,
 				DA613A6220AC30330088A29B /* MapParentProtocol.swift in Sources */,
 				DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */,
 				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
