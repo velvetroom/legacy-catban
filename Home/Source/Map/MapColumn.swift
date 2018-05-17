@@ -15,12 +15,10 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
         } else {
             self.replaceChild(item:item)
         }
-        self.updateSize()
     }
     
     func append(item:MapItemProtocol) {
         self.lastParent.replaceChild(item:item)
-        self.updateSize()
     }
     
     private var lastParent:MapParentProtocol {
@@ -67,9 +65,5 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
             }
         }
         return nil
-    }
-    
-    private func updateSize() {
-        self.view.layoutHeight.constant = self.contentBottom + ViewConstants.Column.paddingBottom
     }
 }

@@ -6,7 +6,7 @@ class DragStateMoving:DragStateProtocol {
     required init() { }
     
     func update() {
-        self.drag.position.update(item:self.drag.view.mapItem)
+        self.drag.position.update(item:self.drag.mapItem)
     }
     
     func end() {

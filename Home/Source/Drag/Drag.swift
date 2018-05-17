@@ -4,6 +4,7 @@ class Drag {
     weak var controller:Controller!
     weak var map:Map!
     weak var view:ViewBoardItem!
+    var mapItem:MapItemProtocol!
     var position:DragPosition
     private var state:DragStateProtocol
     
@@ -14,7 +15,8 @@ class Drag {
     
     func beginWith(view:ViewBoardItem, and touch:CGPoint) {
         self.view = view
-        self.position.restartWith(item:view.mapItem, and:touch)
+        self.mapItem = view.mapItem
+        self.position.restartWith(item:self.mapItem, and:touch)
         self.changeState(stateType:self.view.dragState)
         self.view.stateHighlighted()
     }

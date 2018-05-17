@@ -107,6 +107,7 @@
 		DAB7666C20AD5FC60090B7CA /* DragConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666B20AD5FC60090B7CA /* DragConstants.swift */; };
 		DAB7666E20AD61620090B7CA /* DragStateDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666D20AD61620090B7CA /* DragStateDynamic.swift */; };
 		DAB7667020AD633F0090B7CA /* DragStateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */; };
+		DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */; };
@@ -242,6 +243,7 @@
 		DAB7666B20AD5FC60090B7CA /* DragConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragConstants.swift; sourceTree = "<group>"; };
 		DAB7666D20AD61620090B7CA /* DragStateDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragStateDynamic.swift; sourceTree = "<group>"; };
 		DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DragStateProtocol+Default.swift"; sourceTree = "<group>"; };
+		DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAEE4AA520A1F1A1002D1419 /* ViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilder.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */,
 				DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */,
 				DAB6A40020AD532200C1B8D6 /* MapItemProtocol.swift */,
+				DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */,
 				DA613A6120AC30330088A29B /* MapParentProtocol.swift */,
 				DA613A6520AC45E20088A29B /* MapParentProtocol+Default.swift */,
 				DA613A6D20AC57F10088A29B /* MapPositionProtocol.swift */,
@@ -704,6 +707,7 @@
 				DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */,
 				DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */,
 				DA6FDEF920A71CAB00D148DD /* PresenterUpdaterBoard.swift in Sources */,
+				DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
 				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,

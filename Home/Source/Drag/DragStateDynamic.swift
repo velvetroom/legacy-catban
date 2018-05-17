@@ -16,6 +16,7 @@ class DragStateDynamic:DragStateProtocol {
     }
     
     private func startMoving() {
+        self.drag.mapItem.detach()
         self.drag.changeState(stateType:DragStateMoving.self)
     }
 }
