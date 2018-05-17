@@ -32,7 +32,7 @@ class ViewModelBuilderColumns:ViewModelBuilderProtocol {
     }
     
     private func buildNewCard() {
-        if self.viewModel.columns.count == ViewModelConstants.newCardColumnIndex + 1 {
+        if self.viewModel.columns.count == ViewModelConstants.newCardColumnIndex {
             self.itemsBuilder.buildNewCard()
         }
     }

@@ -45,6 +45,6 @@ class ViewBoard:UIView {
     }
     
     private func configureView() {
-        self.clipsToBounds = true
+        self.clipsToBounds = false
     }
 }

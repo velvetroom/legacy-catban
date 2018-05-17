@@ -9,17 +9,15 @@ class ViewModelBuilderColumnsTextContent {
     private let innerPadding:CGFloat
     
     init() {
-        let outerPadding:CGFloat = ViewConstants.Column.paddingHorizontal + ViewConstants.Column.paddingHorizontal
         let innerPadding:CGFloat = ViewConstants.Card.contentPadding + ViewConstants.Card.contentPadding
-        let width:CGFloat = ViewConstants.Column.width - outerPadding
-        let maxWidth:CGFloat = width - innerPadding
+        let maxWidth:CGFloat = ViewConstants.Column.itemWidth - innerPadding
         self.attributes = [NSAttributedStringKey.font:
             UIFont.systemFont(ofSize:ViewConstants.Card.fontSize, weight:UIFont.Weight.regular)]
         self.options = NSStringDrawingOptions([NSStringDrawingOptions.usesFontLeading,
                                                NSStringDrawingOptions.usesLineFragmentOrigin])
         self.size = CGSize(width:maxWidth, height:ViewConstants.Card.maxHeight)
         self.minHeight = innerPadding + ViewConstants.Card.minContentHeight
-        self.width = width
+        self.width = ViewConstants.Column.itemWidth
         self.innerPadding = innerPadding
     }
     
