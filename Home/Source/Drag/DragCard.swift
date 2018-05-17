@@ -4,13 +4,9 @@ class DragCard:DragItemProtocol, DragParentProtocol {
     weak var parent:DragParentProtocol!
     var position:DragPositionProtocol
     var childItem:DragItemProtocol?
-    let paddingVertical:CGFloat
-    let paddingHorizontal:CGFloat
     
     init() {
         self.position = DragPositionStatic()
-        self.paddingVertical = ViewConstants.Board.verticalSpacing
-        self.paddingHorizontal = 0
     }
     
     func becomeInteractive() {

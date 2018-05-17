@@ -4,13 +4,9 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
     var position:DragPositionProtocol
     var nextColumn:DragColumn?
     var childItem:DragItemProtocol?
-    let paddingVertical:CGFloat
-    let paddingHorizontal:CGFloat
     
     init() {
         self.position = DragPositionStatic()
-        self.paddingVertical = ViewConstants.ColumnTitle.height
-        self.paddingHorizontal = ViewConstants.Column.paddingHorizontal
     }
     
     func add(item:DragItemProtocol) {
@@ -22,7 +18,7 @@ class DragColumn:DragObjectProtocol, DragParentProtocol {
         self.updateSize()
     }
     
-    func addToLast(item:DragItemProtocol) {
+    func append(item:DragItemProtocol) {
         self.lastParent.replaceChild(item:item)
         self.updateSize()
     }

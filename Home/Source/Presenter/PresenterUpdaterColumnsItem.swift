@@ -28,7 +28,8 @@ class PresenterUpdaterColumnsItem {
     private func configureConstraints() {
         self.viewColumn.layoutTop = self.viewColumn.topAnchor.constraint(equalTo:self.viewBoard.topAnchor)
         self.viewColumn.layoutLeft = self.viewColumn.leftAnchor.constraint(equalTo:self.viewBoard.leftAnchor)
-        self.viewColumn.layoutHeight = self.viewColumn.heightAnchor.constraint(equalToConstant:0)
+        self.viewColumn.layoutHeight = self.viewColumn.heightAnchor.constraint(
+            equalToConstant:ViewConstants.ColumnTitle.height)
         self.viewColumn.layoutWidth = self.viewColumn.widthAnchor.constraint(
             equalToConstant:ViewConstants.Column.width)
         self.viewColumn.layoutTop.isActive = true

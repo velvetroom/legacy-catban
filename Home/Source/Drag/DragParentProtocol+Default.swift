@@ -12,7 +12,7 @@ extension DragParentProtocol {
     }
     
     func updateChildPosition() {
-        self.childItem?.minY = self.maxY + self.paddingVertical
-        self.childItem?.minX = self.minX + self.paddingHorizontal
+        self.childItem?.minY = self.maxY + ViewConstants.Board.verticalSpacing
+        self.childItem?.minX = self.minX
     }
 }

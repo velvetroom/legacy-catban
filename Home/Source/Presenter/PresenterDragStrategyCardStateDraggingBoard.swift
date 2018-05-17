@@ -10,7 +10,7 @@ class PresenterDragStrategyCardStateDraggingBoard {
         else { return CGPoint.zero }
         let allCards:[ViewCard] = self.cardsIn(column:column)
         if allCards.isEmpty {
-            return CGPoint(x:column.layoutLeft.constant + ViewConstants.Column.paddingHorizontal, y:ViewConstants.ColumnTitle.height)
+            return CGPoint(x:column.layoutLeft.constant, y:ViewConstants.ColumnTitle.height)
         } else {
             for card:ViewCard in allCards {
                 

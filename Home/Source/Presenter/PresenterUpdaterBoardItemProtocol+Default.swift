@@ -3,7 +3,7 @@ import Foundation
 extension PresenterUpdaterBoardItemProtocol {
     func update() {
         self.configureView()
-        self.column.addToLast(item:self.dragItem)
+        self.column.append(item:self.dragItem)
     }
     
     private func configureView() {
@@ -17,7 +17,7 @@ extension PresenterUpdaterBoardItemProtocol {
         self.viewItem.layoutLeft = self.viewItem.leftAnchor.constraint(equalTo:self.viewBoard.leftAnchor)
         self.viewItem.layoutHeight = self.viewItem.heightAnchor.constraint(equalToConstant:self.viewModel.height)
         self.viewItem.layoutWidth = self.viewItem.widthAnchor.constraint(
-            equalToConstant:ViewConstants.Column.itemWidth)
+            equalToConstant:ViewConstants.Column.width)
         self.viewItem.layoutTop.isActive = true
         self.viewItem.layoutLeft.isActive = true
         self.viewItem.layoutHeight.isActive = true

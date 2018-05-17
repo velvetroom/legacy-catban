@@ -13,9 +13,7 @@ struct ViewConstants {
     
     struct Column {
         static let width:CGFloat = 200
-        static let paddingHorizontal:CGFloat = 1
         static let paddingBottom:CGFloat = 20
-        static let itemWidth:CGFloat = Column.width - (Column.paddingHorizontal + Column.paddingHorizontal)
     }
     
     struct ColumnTitle {

@@ -10,14 +10,14 @@ class ViewModelBuilderColumnsTextContent {
     
     init() {
         let innerPadding:CGFloat = ViewConstants.Card.contentPadding + ViewConstants.Card.contentPadding
-        let maxWidth:CGFloat = ViewConstants.Column.itemWidth - innerPadding
+        let maxWidth:CGFloat = ViewConstants.Column.width - innerPadding
         self.attributes = [NSAttributedStringKey.font:
             UIFont.systemFont(ofSize:ViewConstants.Card.fontSize, weight:UIFont.Weight.regular)]
         self.options = NSStringDrawingOptions([NSStringDrawingOptions.usesFontLeading,
                                                NSStringDrawingOptions.usesLineFragmentOrigin])
         self.size = CGSize(width:maxWidth, height:ViewConstants.Card.maxHeight)
         self.minHeight = innerPadding + ViewConstants.Card.minContentHeight
-        self.width = ViewConstants.Column.itemWidth
+        self.width = ViewConstants.Column.width
         self.innerPadding = innerPadding
     }
     
