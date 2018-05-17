@@ -44,7 +44,7 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
             if let lastItem:MapItemProtocol = self.lastItem {
                 bottom = lastItem.maxY
             }
-            return bottom
+            return bottom + ViewConstants.Column.paddingBottom
         }
     }
     
