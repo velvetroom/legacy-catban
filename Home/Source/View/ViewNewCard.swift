@@ -4,7 +4,7 @@ import Shared
 class ViewNewCard:ViewBoardItem {
     override init() {
         super.init()
-        self.dragStrategy = PresenterDragStrategyFixed.self
+        self.dragState = DragStateFixed.self
     }
     
     required init?(coder:NSCoder) {
@@ -15,13 +15,13 @@ class ViewNewCard:ViewBoardItem {
         controller.createNewCard()
     }
     
-    override func dragStart() {
-        super.dragStart()
+    override func stateHighlighted() {
+        super.stateHighlighted()
         self.alpha = ViewConstants.NewCard.alphaOn
     }
     
-    override func dragEnd() {
-        super.dragEnd()
+    override func stateNormal() {
+        super.stateNormal()
         self.alpha = ViewConstants.NewCard.alphaOff
     }
     

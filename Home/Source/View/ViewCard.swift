@@ -7,7 +7,7 @@ class ViewCard:ViewBoardItem {
     override init() {
         self.identifier = String()
         super.init()
-        self.dragStrategy = PresenterDragStrategyCard.self
+        self.dragState = DragStateDynamic.self
     }
     
     required init?(coder:NSCoder) {
@@ -18,16 +18,16 @@ class ViewCard:ViewBoardItem {
         controller.editCardWith(identifier:self.identifier)
     }
     
-    override func dragStart() {
-        super.dragStart()
+    override func stateHighlighted() {
+        super.stateHighlighted()
         UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.Shared.blue
             self?.labelContent.textColor = UIColor.white
         }
     }
     
-    override func dragEnd() {
-        super.dragEnd()
+    override func stateNormal() {
+        super.stateNormal()
         UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.white
             self?.labelContent.textColor = UIColor.black

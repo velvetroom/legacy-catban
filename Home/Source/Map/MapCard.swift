@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class MapCard:MapItemProtocol, MapParentProtocol {
     weak var parent:MapParentProtocol!

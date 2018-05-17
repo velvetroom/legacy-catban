@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 extension MapParentProtocol {
     func replaceChild(item:MapItemProtocol) {

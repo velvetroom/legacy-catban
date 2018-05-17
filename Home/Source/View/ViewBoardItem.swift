@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewBoardItem:ViewBoardElement {
-    var dragStrategy:PresenterDragStrategyProtocol.Type!
+    var dragState:DragStateProtocol.Type!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -14,9 +14,8 @@ class ViewBoardItem:ViewBoardElement {
     }
     
     func factoryOutlets() { }
-    func dragStart() { }
-    func drag(delta:CGPoint) { }
-    func dragEnd() { }
+    func stateHighlighted() { }
+    func stateNormal() { }
     func touchSucceded(controller:Controller) { }
     
     private func configureView() {

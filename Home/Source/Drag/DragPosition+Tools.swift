@@ -1,10 +1,10 @@
 import UIKit
 
-extension PresenterDragStrategyProtocol {
+extension DragPosition {
     var deltaPosition:CGPoint {
         get {
-            let deltaX:CGFloat = self.initialPosition.x - self.latestPosition.x
-            let deltaY:CGFloat = self.initialPosition.y - self.latestPosition.y
+            let deltaX:CGFloat = self.initial.x - self.latest.x
+            let deltaY:CGFloat = self.initial.y - self.latest.y
             return CGPoint(x:deltaX, y:deltaY)
         }
     }
@@ -18,7 +18,7 @@ extension PresenterDragStrategyProtocol {
     
     var isMoving:Bool {
         get {
-            return self.deltaDistance > PresenterConstants.Drag.minDeltaForMovement
+            return self.deltaDistance > DragConstants.deltaForMovement
         }
     }
 }
