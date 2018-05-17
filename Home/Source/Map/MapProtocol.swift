@@ -6,4 +6,5 @@ protocol MapProtocol:class {
     func add(column:MapColumn)
     func add(item:MapItemProtocol)
     func updateContentSize()
+    func clear()
 }

@@ -1,7 +1,8 @@
 import Foundation
 
 class DragStateFixed:DragStateProtocol {
-    weak var drag:Drag!
+    weak var drag:DragProtocol!
+    weak var state:DragStateChangerProtocol!
     
     required init() { }
     

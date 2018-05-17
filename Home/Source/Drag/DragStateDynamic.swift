@@ -1,7 +1,8 @@
 import Foundation
 
 class DragStateDynamic:DragStateProtocol {
-    weak var drag:Drag!
+    weak var drag:DragProtocol!
+    weak var state:DragStateChangerProtocol!
     
     required init() { }
     
@@ -19,6 +20,6 @@ class DragStateDynamic:DragStateProtocol {
         self.drag.view.bringToFront()
         self.drag.mapItem.detach()
         self.drag.view.animateChanges()
-        self.drag.changeState(stateType:DragStateMoving.self)
+        self.state.change(stateType:DragStateMoving.self)
     }
 }

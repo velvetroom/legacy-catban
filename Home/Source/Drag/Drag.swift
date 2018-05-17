@@ -1,12 +1,12 @@
 import UIKit
 
-class Drag {
+class Drag:DragProtocol, DragStateChangerProtocol {
     weak var map:MapProtocol!
     weak var controller:Controller!
     weak var view:ViewBoardItem!
     var mapItem:MapItemProtocol!
     var position:DragPosition
-    private var state:DragStateProtocol
+    var state:DragStateProtocol
     
     init() {
         self.position = DragPosition()
@@ -17,7 +17,7 @@ class Drag {
         self.view = view
         self.mapItem = view.mapItem
         self.position.restartWith(item:self.mapItem, and:touch)
-        self.changeState(stateType:self.view.dragState)
+        self.change(stateType:self.view.dragState)
         self.view.stateHighlighted()
     }
     
@@ -29,7 +29,7 @@ class Drag {
         self.state.end()
     }
     
-    func changeState(stateType:DragStateProtocol.Type) {
+    func change(stateType:DragStateProtocol.Type) {
         self.state = stateType.init()
         self.state.drag = self
     }

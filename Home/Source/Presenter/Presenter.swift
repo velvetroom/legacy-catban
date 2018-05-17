@@ -6,7 +6,7 @@ class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
     var updaters:[PresenterUpdaterProtocol.Type]
-    var map:MapProtocol
+    let map:MapProtocol
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
@@ -38,7 +38,7 @@ class Presenter:PresenterProtocol {
     func shouldUpdate() {
         let builder:ViewModelBuilder = ViewModelBuilder()
         builder.project = self.controller.project
-        self.map = Map()
+        self.map.clear()
         self.updateWith(viewModel:builder.buildViewModel())
     }
     

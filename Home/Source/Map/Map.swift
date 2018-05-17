@@ -4,6 +4,30 @@ class Map:MapProtocol {
     weak var viewScroll:ViewScroll!
     var columns:[MapColumn]
     
+    var maxContentHeight:CGFloat {
+        get {
+            var maxHeight:CGFloat = 0
+            for column:MapColumn in self.columns {
+                guard
+                    let columnMaxY:CGFloat = column.lastItem?.maxY,
+                    columnMaxY > maxHeight
+                    else { continue }
+                maxHeight = columnMaxY
+            }
+            return maxHeight
+        }
+    }
+    
+    var maxContentWidth:CGFloat {
+        get {
+            var width:CGFloat = ViewConstants.Board.paddingHorizontal
+            if let lastColumn:MapColumn = self.columns.last {
+                width += lastColumn.maxX
+            }
+            return width
+        }
+    }
+    
     init() {
         self.columns = []
     }
@@ -30,27 +54,7 @@ class Map:MapProtocol {
         self.viewScroll.updateContent(size:size)
     }
     
-    private var maxContentHeight:CGFloat {
-        get {
-            var maxHeight:CGFloat = 0
-            for column:MapColumn in self.columns {
-                guard
-                    let columnMaxY:CGFloat = column.lastItem?.maxY,
-                    columnMaxY > maxHeight
-                else { continue }
-                maxHeight = columnMaxY
-            }
-            return maxHeight
-        }
-    }
-    
-    private var maxContentWidth:CGFloat {
-        get {
-            var width:CGFloat = ViewConstants.Board.paddingHorizontal
-            if let lastColumn:MapColumn = self.columns.last {
-                width += lastColumn.maxX
-            }
-            return width
-        }
+    func clear() {
+        self.columns = []
     }
 }
