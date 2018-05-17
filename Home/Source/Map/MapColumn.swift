@@ -34,11 +34,8 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
     }
     
     func add(item:MapItemProtocol) {
-        if let parent:MapParentProtocol = self.parentFor(item:item) {
-            parent.replaceChild(item:item)
-        } else {
-            self.replaceChild(item:item)
-        }
+        let parent:MapParentProtocol = self.parentFor(item:item)
+        parent.replaceChild(item:item)
     }
     
     func append(item:MapItemProtocol) {
@@ -55,16 +52,14 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
         }
     }
     
-    private func parentFor(item:MapItemProtocol) -> MapParentProtocol? {
-        var child:MapItemProtocol? = self.childItem
-        while let current:MapItemProtocol = child {
-            if current.minY > item.midY {
-                return current.parent
-            }
-            if let parent:MapParentProtocol = current as? MapParentProtocol {
-                child = parent.childItem
-            }
+    private func parentFor(item:MapItemProtocol) -> MapParentProtocol {
+        var parent:MapParentProtocol = self.lastParent
+        while parent.minY > item.minY {
+            guard
+                let item:MapItemProtocol = parent as? MapItemProtocol
+            else { break }
+            parent = item.parent
         }
-        return nil
+        return parent
     }
 }

@@ -11,6 +11,8 @@ class DragStateMoving:DragStateProtocol {
     }
     
     func end() {
+        self.drag.map.add(item:self.drag.mapItem)
+        self.drag.view.animateChanges()
         self.finishDrag()
     }
 }

@@ -10,12 +10,11 @@ extension MapParentProtocol {
     }
     
     func detachChild() {
-        guard
-            let parent:MapParentProtocol = self.childItem as? MapParentProtocol,
-            let childItem:MapItemProtocol = parent.childItem
-        else { return }
-        parent.childItem = nil
-        self.assignChild(item:childItem)
+        if let parent:MapParentProtocol = self.childItem as? MapParentProtocol {
+            self.rearrangeChildsFrom(parent:parent)
+        } else {
+            self.clearChild()
+        }
     }
     
     func updateChildPosition() {
@@ -27,5 +26,19 @@ extension MapParentProtocol {
         item.parent = self
         self.childItem = item
         self.updateChildPosition()
+    }
+    
+    private func clearChild() {
+        self.childItem?.parent = nil
+        self.childItem = nil
+    }
+    
+    private func rearrangeChildsFrom(parent:MapParentProtocol) {
+        if let childItem:MapItemProtocol = parent.childItem {
+            parent.childItem = nil
+            self.assignChild(item:childItem)
+        } else {
+            self.clearChild()
+        }
     }
 }

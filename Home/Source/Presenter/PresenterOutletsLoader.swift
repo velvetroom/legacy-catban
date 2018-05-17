@@ -21,7 +21,6 @@ class PresenterOutletsLoader {
     
     private func loadBoard() {
         let viewBoard:ViewBoard = ViewBoard()
-        viewBoard.drag.map = self.presenter.map
         viewBoard.drag.controller = self.presenter.controller
         self.presenter.outlets.viewBoard = viewBoard
         self.presenter.outlets.viewScroll?.addSubview(viewBoard)
