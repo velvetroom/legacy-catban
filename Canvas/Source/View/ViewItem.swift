@@ -17,7 +17,7 @@ class ViewItem:ViewNode {
     func factoryOutlets() { }
     func stateHighlighted() { }
     func stateNormal() { }
-    func triggerAction(controller:Controller) { }
+    func triggerAction(canvas:CanvasEditorProtocol) { }
     
     final func bringToFront() {
         guard
@@ -27,7 +27,7 @@ class ViewItem:ViewNode {
     }
     
     final func animateChanges() {
-        UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
+        UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
             self?.superview?.layoutIfNeeded()
         }
     }

@@ -11,25 +11,25 @@ class ViewNewCard:ViewItem {
         return nil
     }
     
-    override func triggerAction(controller:Controller) {
-        super.triggerAction(controller:controller)
-        controller.createNewCard()
+    override func triggerAction(canvas:CanvasEditorProtocol) {
+        super.triggerAction(canvas:canvas)
+        canvas.createNewCard()
     }
     
     override func stateHighlighted() {
         super.stateHighlighted()
-        self.alpha = ViewConstants.NewCard.alphaOn
+        self.alpha = Constants.NewCard.alphaOn
     }
     
     override func stateNormal() {
         super.stateNormal()
-        self.alpha = ViewConstants.NewCard.alphaOff
+        self.alpha = Constants.NewCard.alphaOff
     }
     
     override func factoryOutlets() {
         super.factoryOutlets()
         let image:UIImageView = UIImageView()
-        image.image = UIImage(name:ViewConstants.NewCard.icon, in:type(of:self))
+        image.image = UIImage(name:Constants.NewCard.icon, in:type(of:self))
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
         image.contentMode = UIViewContentMode.center

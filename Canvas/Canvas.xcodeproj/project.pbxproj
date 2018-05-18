@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA034AE720AF42E4001E461F /* CanvasEditorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */; };
 		DA535F3120AF0991000FB3FD /* CanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */; };
 		DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */; };
 		DA61312620AF10A2002563BA /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
@@ -34,7 +35,6 @@
 		DAB5E5F220AF080A00F860B3 /* DragPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B920AF080A00F860B3 /* DragPosition.swift */; };
 		DAB5E5F320AF080A00F860B3 /* DragStateFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5BA20AF080A00F860B3 /* DragStateFixed.swift */; };
 		DAB5E5F420AF080A00F860B3 /* DragStateMoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5BB20AF080A00F860B3 /* DragStateMoving.swift */; };
-		DAB5E5F520AF080A00F860B3 /* DragConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5BC20AF080A00F860B3 /* DragConstants.swift */; };
 		DAB5E5F620AF080A00F860B3 /* MapNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5BE20AF080A00F860B3 /* MapNodeProtocol.swift */; };
 		DAB5E5F720AF080A00F860B3 /* MapItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5BF20AF080A00F860B3 /* MapItemProtocol.swift */; };
 		DAB5E5F820AF080A00F860B3 /* MapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5C020AF080A00F860B3 /* MapColumn.swift */; };
@@ -55,7 +55,7 @@
 		DAB5E61A20AF080A00F860B3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E520AF080A00F860B3 /* View.swift */; };
 		DAB5E61B20AF080A00F860B3 /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E620AF080A00F860B3 /* ViewContent.swift */; };
 		DAB5E61C20AF080A00F860B3 /* ViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E720AF080A00F860B3 /* ViewItem.swift */; };
-		DAB5E61D20AF080A00F860B3 /* ViewContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E820AF080A00F860B3 /* ViewContants.swift */; };
+		DAB5E61D20AF080A00F860B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E820AF080A00F860B3 /* Constants.swift */; };
 		DAB5E61E20AF080A00F860B3 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */; };
 		DAB5E64720AF081600F860B3 /* TestPresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E62020AF081600F860B3 /* TestPresenterUpdaterCard.swift */; };
 		DAB5E64820AF081600F860B3 /* TestPresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E62120AF081600F860B3 /* TestPresenterUpdaterColumnsItem.swift */; };
@@ -105,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEditorProtocol.swift; sourceTree = "<group>"; };
 		DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
 		DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
 		DA61312520AF10A2002563BA /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +135,6 @@
 		DAB5E5B920AF080A00F860B3 /* DragPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragPosition.swift; sourceTree = "<group>"; };
 		DAB5E5BA20AF080A00F860B3 /* DragStateFixed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragStateFixed.swift; sourceTree = "<group>"; };
 		DAB5E5BB20AF080A00F860B3 /* DragStateMoving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragStateMoving.swift; sourceTree = "<group>"; };
-		DAB5E5BC20AF080A00F860B3 /* DragConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragConstants.swift; sourceTree = "<group>"; };
 		DAB5E5BE20AF080A00F860B3 /* MapNodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNodeProtocol.swift; sourceTree = "<group>"; };
 		DAB5E5BF20AF080A00F860B3 /* MapItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemProtocol.swift; sourceTree = "<group>"; };
 		DAB5E5C020AF080A00F860B3 /* MapColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapColumn.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		DAB5E5E520AF080A00F860B3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAB5E5E620AF080A00F860B3 /* ViewContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		DAB5E5E720AF080A00F860B3 /* ViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewItem.swift; sourceTree = "<group>"; };
-		DAB5E5E820AF080A00F860B3 /* ViewContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewContants.swift; sourceTree = "<group>"; };
+		DAB5E5E820AF080A00F860B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
 		DAB5E62020AF081600F860B3 /* TestPresenterUpdaterCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterCard.swift; sourceTree = "<group>"; };
 		DAB5E62120AF081600F860B3 /* TestPresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
@@ -218,8 +218,10 @@
 			isa = PBXGroup;
 			children = (
 				DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */,
+				DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */,
 				DA61312920AF1153002563BA /* CanvasDelegateProtocol.swift */,
 				DA61312720AF1109002563BA /* Canvas.swift */,
+				DAB5E5E820AF080A00F860B3 /* Constants.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -302,14 +304,13 @@
 				DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */,
 				DA61313520AF248A002563BA /* DragEventProtocol.swift */,
 				DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */,
-				DAB5E5B420AF080A00F860B3 /* DragStateNone.swift */,
-				DAB5E5B520AF080A00F860B3 /* DragStateDynamic.swift */,
 				DAB5E5B720AF080A00F860B3 /* DragStateProtocol.swift */,
 				DAB5E5B820AF080A00F860B3 /* DragStateProtocol+Default.swift */,
-				DAB5E5B920AF080A00F860B3 /* DragPosition.swift */,
+				DAB5E5B420AF080A00F860B3 /* DragStateNone.swift */,
+				DAB5E5B520AF080A00F860B3 /* DragStateDynamic.swift */,
 				DAB5E5BA20AF080A00F860B3 /* DragStateFixed.swift */,
 				DAB5E5BB20AF080A00F860B3 /* DragStateMoving.swift */,
-				DAB5E5BC20AF080A00F860B3 /* DragConstants.swift */,
+				DAB5E5B920AF080A00F860B3 /* DragPosition.swift */,
 			);
 			path = Drag;
 			sourceTree = "<group>";
@@ -354,7 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				DAB5E5E520AF080A00F860B3 /* View.swift */,
-				DAB5E5E820AF080A00F860B3 /* ViewContants.swift */,
 				DAB5E5E620AF080A00F860B3 /* ViewContent.swift */,
 				DAB5E5E220AF080A00F860B3 /* ViewNode.swift */,
 				DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */,
@@ -580,14 +580,14 @@
 				DAB5E61220AF080A00F860B3 /* PresenterColumn.swift in Sources */,
 				DAB5E61120AF080A00F860B3 /* PresenterCard.swift in Sources */,
 				DAB5E61B20AF080A00F860B3 /* ViewContent.swift in Sources */,
-				DAB5E5F520AF080A00F860B3 /* DragConstants.swift in Sources */,
 				DA61313420AF2176002563BA /* MapDelegateProtocol.swift in Sources */,
 				DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */,
-				DAB5E61D20AF080A00F860B3 /* ViewContants.swift in Sources */,
+				DAB5E61D20AF080A00F860B3 /* Constants.swift in Sources */,
 				DAB5E61720AF080A00F860B3 /* ViewNode.swift in Sources */,
 				DAB5E5F620AF080A00F860B3 /* MapNodeProtocol.swift in Sources */,
 				DAB5E5FB20AF080A00F860B3 /* MapParentProtocol+Default.swift in Sources */,
 				DAB5E5EF20AF080A00F860B3 /* DragProtocol.swift in Sources */,
+				DA034AE720AF42E4001E461F /* CanvasEditorProtocol.swift in Sources */,
 				DA61312E20AF12EA002563BA /* PresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

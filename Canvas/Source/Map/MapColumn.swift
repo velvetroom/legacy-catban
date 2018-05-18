@@ -40,11 +40,11 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
     
     private var contentBottom:CGFloat {
         get {
-            var bottom:CGFloat = ViewConstants.ColumnTitle.height
+            var bottom:CGFloat = Constants.ColumnTitle.height
             if let lastItem:MapItemProtocol = self.lastItem {
                 bottom = lastItem.maxY
             }
-            return bottom + ViewConstants.Column.paddingBottom
+            return bottom + Constants.Column.paddingBottom
         }
     }
     

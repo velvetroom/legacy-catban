@@ -1,8 +1,9 @@
 import Foundation
 
 protocol DragStateProtocol {
-    var drag:DragProtocol! { get set }
-    var state:DragStateChangerProtocol! { get set }
+    var event:DragEventProtocol! { get set }
+    var changer:DragStateChangerProtocol! { get set }
+    var mapEditor:MapEditorProtocol! { get set }
     
     init()
     func update()

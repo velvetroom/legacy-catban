@@ -14,14 +14,14 @@ class ViewCard:ViewItem {
         return nil
     }
     
-    override func triggerAction(controller:Controller) {
-        super.triggerAction(controller:controller)
-        controller.editCardWith(identifier:self.identifier)
+    override func triggerAction(canvas:CanvasEditorProtocol) {
+        super.triggerAction(canvas:canvas)
+        canvas.editCardWith(identifier:self.identifier)
     }
     
     override func stateHighlighted() {
         super.stateHighlighted()
-        UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
+        UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.Shared.blue
             self?.labelContent.textColor = UIColor.white
         }
@@ -29,7 +29,7 @@ class ViewCard:ViewItem {
     
     override func stateNormal() {
         super.stateNormal()
-        UIView.animate(withDuration:ViewConstants.Generic.animationDuration) { [weak self] in
+        UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
             self?.backgroundColor = UIColor.white
             self?.labelContent.textColor = UIColor.black
         }
@@ -47,23 +47,23 @@ class ViewCard:ViewItem {
         labelContent.translatesAutoresizingMaskIntoConstraints = false
         labelContent.backgroundColor = UIColor.clear
         labelContent.numberOfLines = 0
-        labelContent.font = UIFont.systemFont(ofSize:ViewConstants.Card.fontSize, weight:UIFont.Weight.regular)
+        labelContent.font = UIFont.systemFont(ofSize:Constants.Card.fontSize, weight:UIFont.Weight.regular)
         self.labelContent = labelContent
         
         self.addSubview(labelContent)
         
         labelContent.topAnchor.constraint(equalTo:self.topAnchor,
-                                          constant:ViewConstants.Card.contentPadding).isActive = true
+                                          constant:Constants.Card.contentPadding).isActive = true
         labelContent.bottomAnchor.constraint(equalTo:self.bottomAnchor,
-                                             constant:-ViewConstants.Card.contentPadding).isActive = true
+                                             constant:-Constants.Card.contentPadding).isActive = true
         labelContent.leftAnchor.constraint(equalTo:self.leftAnchor,
-                                           constant:ViewConstants.Card.contentPadding).isActive = true
+                                           constant:Constants.Card.contentPadding).isActive = true
         labelContent.rightAnchor.constraint(equalTo:self.rightAnchor,
-                                            constant:-ViewConstants.Card.contentPadding).isActive = true
+                                            constant:-Constants.Card.contentPadding).isActive = true
     }
     
     private func configureView() {
-        self.layer.cornerRadius = ViewConstants.Card.cornerRadius
+        self.layer.cornerRadius = Constants.Card.cornerRadius
         self.stateNormal()
     }
 }

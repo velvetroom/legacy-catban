@@ -1,6 +1,10 @@
 import UIKit
 
-struct ViewConstants {
+struct Constants {
+    struct Drag {
+        static let deltaForMovement:CGFloat = 20
+    }
+    
     struct Generic {
         static let animationDuration:TimeInterval = 0.3
     }

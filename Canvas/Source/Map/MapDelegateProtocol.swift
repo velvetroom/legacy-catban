@@ -1,5 +1,5 @@
-import Foundation
+import UIKit
 
 protocol MapDelegateProtocol:class {
-    func mapSizeChanged()
+    func mapChanged(size:CGSize)
 }

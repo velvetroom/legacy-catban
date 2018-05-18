@@ -1,7 +1,7 @@
 import UIKit
 import Board
 
-class Canvas:CanvasProtocol {
+class Canvas:CanvasProtocol, CanvasEditorProtocol {
     weak var delegate:CanvasDelegateProtocol!
     var presenter:PresenterProtocol
     
@@ -25,6 +25,14 @@ class Canvas:CanvasProtocol {
     }
     
     func refresh() {
+        
+    }
+    
+    func editCardWith(identifier: String) {
+        
+    }
+    
+    func createNewCard() {
         
     }
 }

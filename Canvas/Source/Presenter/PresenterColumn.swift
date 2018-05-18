@@ -34,9 +34,9 @@ class PresenterColumn:PresenterColumnProtocol {
         self.viewColumn.layoutTop = self.viewColumn.topAnchor.constraint(equalTo:self.view.topAnchor)
         self.viewColumn.layoutLeft = self.viewColumn.leftAnchor.constraint(equalTo:self.view.leftAnchor)
         self.viewColumn.layoutHeight = self.viewColumn.heightAnchor.constraint(
-            equalToConstant:ViewConstants.ColumnTitle.height)
+            equalToConstant:Constants.ColumnTitle.height)
         self.viewColumn.layoutWidth = self.viewColumn.widthAnchor.constraint(
-            equalToConstant:ViewConstants.Column.width)
+            equalToConstant:Constants.Column.width)
     }
     
     private func activateConstraints() {

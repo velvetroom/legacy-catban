@@ -1,13 +1,14 @@
 import Foundation
 
 class DragStateFixed:DragStateProtocol {
-    weak var drag:DragProtocol!
-    weak var state:DragStateChangerProtocol!
+    weak var event:DragEventProtocol!
+    weak var changer:DragStateChangerProtocol!
+    weak var mapEditor:MapEditorProtocol!
     
     required init() { }
     
     func update() {
-        if self.drag.position.isMoving {
+        if self.event.position.isMoving {
             self.finishDrag()
         }
     }

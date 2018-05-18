@@ -1,18 +1,21 @@
 import UIKit
 
-class Model:ModelProtocol {
-    weak var canvas:CanvasProtocol!
+class Model:
+    ModelProtocol,
+    DragEventProtocol,
+    DragStateChangerProtocol {
+    weak var canvas:CanvasEditorProtocol!
     weak var mapDelegate:MapDelegateProtocol!
     weak var viewItem:ViewItem!
     var mapItem:MapItemProtocol!
     var position:DragPosition
     var state:DragStateProtocol
     var columns:[MapColumn]
-    var size:CGSize
-    var lastTouch:CGPoint
+    var latestTouch:CGPoint
     
     init() {
         self.columns = []
+        self.latestTouch = CGPoint.zero
         self.position = DragPosition()
         self.state = DragStateNone()
     }
@@ -41,12 +44,13 @@ class Model:ModelProtocol {
     
     func dragBegin() {
         self.mapItem = self.viewItem.mapItem
-        self.position.restartWith(item:self.mapItem, and:self.lastTouch)
+        self.position.restartWith(item:self.mapItem, and:self.latestTouch)
         self.change(stateType:self.viewItem.dragState)
         self.viewItem.stateHighlighted()
     }
     
     func dragUpdate() {
+        self.position.latestTouch = self.latestTouch
         self.state.update()
     }
     
@@ -56,8 +60,9 @@ class Model:ModelProtocol {
     
     func change(stateType:DragStateProtocol.Type) {
         self.state = stateType.init()
-        self.state.drag = self
-        self.state.state = self
+        self.state.event = self
+        self.state.changer = self
+        self.state.mapEditor = self
     }
     
     private var maxContentHeight:CGFloat {
@@ -76,7 +81,7 @@ class Model:ModelProtocol {
     
     private var maxContentWidth:CGFloat {
         get {
-            var width:CGFloat = ViewConstants.Board.paddingHorizontal
+            var width:CGFloat = Constants.Board.paddingHorizontal
             if let lastColumn:MapColumn = self.columns.last {
                 width += lastColumn.maxX
             }
@@ -85,6 +90,6 @@ class Model:ModelProtocol {
     }
     
     private func updateSize() {
-        self.size = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
+        //self.size = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
     }
 }

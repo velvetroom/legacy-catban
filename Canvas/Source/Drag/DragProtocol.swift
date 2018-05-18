@@ -1,7 +1,8 @@
 import UIKit
 
 protocol DragProtocol:class {
-    var lastTouch:CGPoint { get set }
+    var latestTouch:CGPoint { get set }
+    var viewItem:ViewItem! { get set }
     
     func dragBegin()
     func dragUpdate()

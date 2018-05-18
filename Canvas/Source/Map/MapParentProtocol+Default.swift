@@ -18,7 +18,7 @@ extension MapParentProtocol {
     }
     
     func updateChildPosition() {
-        self.childItem?.minY = self.maxY + ViewConstants.Board.verticalSpacing
+        self.childItem?.minY = self.maxY + Constants.Board.verticalSpacing
         self.childItem?.minX = self.minX
     }
     

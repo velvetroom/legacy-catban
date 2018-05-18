@@ -10,7 +10,7 @@ class PresenterNewCard:PresenterItemProtocol {
     required init() {
         self.viewItem = ViewNewCard()
         self.mapItem = MapNewCard()
-        self.height = ViewConstants.NewCard.height
+        self.height = Constants.NewCard.height
     }
     
     func configureContent() { }

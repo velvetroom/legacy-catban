@@ -1,13 +1,14 @@
 import Foundation
 
 class DragStateDynamic:DragStateProtocol {
-    weak var drag:DragProtocol!
-    weak var state:DragStateChangerProtocol!
+    weak var event:DragEventProtocol!
+    weak var changer:DragStateChangerProtocol!
+    weak var mapEditor:MapEditorProtocol!
     
     required init() { }
     
     func update() {
-        if self.drag.position.isMoving {
+        if self.event.position.isMoving {
             self.startMoving()
         }
     }
@@ -17,9 +18,9 @@ class DragStateDynamic:DragStateProtocol {
     }
     
     private func startMoving() {
-        self.drag.view.bringToFront()
-        self.drag.mapItem.detach()
-        self.drag.view.animateChanges()
-        self.state.change(stateType:DragStateMoving.self)
+        self.event.viewItem.bringToFront()
+        self.event.mapItem.detach()
+        self.event.viewItem.animateChanges()
+        self.changer.change(stateType:DragStateMoving.self)
     }
 }

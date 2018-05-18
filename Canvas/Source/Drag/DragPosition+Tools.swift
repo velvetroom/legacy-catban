@@ -18,7 +18,7 @@ extension DragPosition {
     
     var isMoving:Bool {
         get {
-            return self.touchVector > DragConstants.deltaForMovement
+            return self.touchVector > Constants.Drag.deltaForMovement
         }
     }
     

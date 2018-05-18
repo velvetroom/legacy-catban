@@ -1,19 +1,20 @@
 import Foundation
 
 class DragStateMoving:DragStateProtocol {
-    weak var drag:DragProtocol!
-    weak var state:DragStateChangerProtocol!
+    weak var event:DragEventProtocol!
+    weak var changer:DragStateChangerProtocol!
+    weak var mapEditor:MapEditorProtocol!
     
     required init() { }
     
     func update() {
-        self.drag.position.update(item:self.drag.mapItem)
-        self.drag.view.animateChanges()
+        self.event.position.update(item:self.event.mapItem)
+        self.event.viewItem.animateChanges()
     }
     
     func end() {
-        self.drag.map.add(item:self.drag.mapItem)
-        self.drag.view.animateChanges()
+        self.mapEditor.add(item:self.event.mapItem)
+        self.event.viewItem.animateChanges()
         self.finishDrag()
     }
 }
