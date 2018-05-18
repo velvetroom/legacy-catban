@@ -14,7 +14,9 @@ class View:UIScrollView, MapDelegateProtocol {
     
     override var frame:CGRect {
         didSet {
-            self.updateContentSize()
+            if self.content != nil {
+                self.updateContentSize()
+            }
         }
     }
     
@@ -60,6 +62,7 @@ class View:UIScrollView, MapDelegateProtocol {
     }
     
     private func configureScroll() {
+        self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.backgroundColor = UIColor.Shared.gray
         self.alwaysBounceVertical = true

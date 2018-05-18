@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA034AE920AF49D5001E461F /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AE820AF49D5001E461F /* Canvas.framework */; };
+		DA034AFD20AF4B7F001E461F /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AE820AF49D5001E461F /* Canvas.framework */; };
 		DA0BF78220AC04A3003CFD50 /* TestPresenter_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BF78120AC04A3003CFD50 /* TestPresenter_Map.swift */; };
 		DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B4209F383500AD4425 /* TestViewScroll.swift */; };
 		DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B6209F386300AD4425 /* ViewScroll.swift */; };
@@ -138,6 +140,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA034AE820AF49D5001E461F /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0BF78120AC04A3003CFD50 /* TestPresenter_Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Map.swift; sourceTree = "<group>"; };
 		DA0E58B4209F383500AD4425 /* TestViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewScroll.swift; sourceTree = "<group>"; };
 		DA0E58B6209F386300AD4425 /* ViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScroll.swift; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA034AE920AF49D5001E461F /* Canvas.framework in Frameworks */,
 				DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */,
 				DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */,
 			);
@@ -272,6 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA034AFD20AF4B7F001E461F /* Canvas.framework in Frameworks */,
 				DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */,
 				DA978FB920A1A81C002461E6 /* Shared.framework in Frameworks */,
 				DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */,
@@ -302,6 +307,7 @@
 		DA58BD7B209B3AE10013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA034AE820AF49D5001E461F /* Canvas.framework */,
 				DA978FBA20A1A838002461E6 /* Board.framework */,
 				DA58BD7C209B3AE10013DBF0 /* Shared.framework */,
 			);

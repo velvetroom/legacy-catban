@@ -25,7 +25,7 @@ class Canvas:CanvasProtocol, CanvasEditorProtocol {
     }
     
     func refresh() {
-        
+        self.presenter.refresh()
     }
     
     func editCardWith(identifier: String) {

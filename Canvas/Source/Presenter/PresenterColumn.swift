@@ -17,9 +17,9 @@ class PresenterColumn:PresenterColumnProtocol {
     }
     
     func load() {
+        self.configureView()
         self.loadItems()
         self.loadNewCard()
-        self.configureView()
         self.mapEditor.add(column:self.mapColumn)
     }
     

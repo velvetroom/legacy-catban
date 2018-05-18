@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA034AFB20AF4B3B001E461F /* Canvas.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA034AFC20AF4B60001E461F /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; };
 		DA063621209B64390037D22F /* Load.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA06361F209B62D30037D22F /* Load.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7F209B3B4A0013DBF0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA0E58BB209F3CB300AD4425 /* TestNavigation_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */; };
@@ -60,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DA034AFB20AF4B3B001E461F /* Canvas.framework in Embed Frameworks */,
 				DA063621209B64390037D22F /* Load.framework in Embed Frameworks */,
 				DA063622209B64390037D22F /* Shared.framework in Embed Frameworks */,
 				DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */,
@@ -74,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA034AF820AF4B36001E461F /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA06361F209B62D30037D22F /* Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Load.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0E58BA209F3CB300AD4425 /* TestNavigation_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation_Animation.swift; sourceTree = "<group>"; };
 		DA347D1C20A16DF400009316 /* Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA034AFC20AF4B60001E461F /* Canvas.framework in Frameworks */,
 				DA7E00B720A584C000AD4A74 /* Board.framework in Frameworks */,
 				DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */,
 				DA7E00BA20A584C600AD4A74 /* Shared.framework in Frameworks */,
@@ -134,6 +139,7 @@
 		DA58BD7E209B3B4A0013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA034AF820AF4B36001E461F /* Canvas.framework */,
 				DABDB03320A38B5C001B7D47 /* Card.framework */,
 				DA347D1C20A16DF400009316 /* Template.framework */,
 				DAFD2FD0209CC4120005F5D2 /* Home.framework */,

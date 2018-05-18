@@ -29,7 +29,7 @@ class ViewNewCard:ViewItem {
     override func factoryOutlets() {
         super.factoryOutlets()
         let image:UIImageView = UIImageView()
-        image.image = UIImage(name:Constants.NewCard.icon, in:type(of:self))
+//        image.image = UIImage(name:Constants.NewCard.icon, in:type(of:self))
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
         image.contentMode = UIViewContentMode.center

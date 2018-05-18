@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA034AE720AF42E4001E461F /* CanvasEditorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */; };
+		DA034AFE20AF4B93001E461F /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
+		DA034B0020AF4BDC001E461F /* CanvasFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA034AFF20AF4BDC001E461F /* CanvasFactory.swift */; };
 		DA535F3120AF0991000FB3FD /* CanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */; };
 		DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */; };
 		DA61312620AF10A2002563BA /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
@@ -106,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEditorProtocol.swift; sourceTree = "<group>"; };
+		DA034AFF20AF4BDC001E461F /* CanvasFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasFactory.swift; sourceTree = "<group>"; };
 		DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
 		DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
 		DA61312520AF10A2002563BA /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA034AFE20AF4B93001E461F /* Board.framework in Frameworks */,
 				DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				DA535F3020AF0991000FB3FD /* CanvasProtocol.swift */,
+				DA034AFF20AF4BDC001E461F /* CanvasFactory.swift */,
 				DA034AE620AF42E4001E461F /* CanvasEditorProtocol.swift */,
 				DA61312920AF1153002563BA /* CanvasDelegateProtocol.swift */,
 				DA61312720AF1109002563BA /* Canvas.swift */,
@@ -544,6 +549,7 @@
 			files = (
 				DAB5E5F920AF080A00F860B3 /* MapCard.swift in Sources */,
 				DA61313920AF2637002563BA /* ModelProtocol.swift in Sources */,
+				DA034B0020AF4BDC001E461F /* CanvasFactory.swift in Sources */,
 				DAB5E5FD20AF080A00F860B3 /* MapNewCard.swift in Sources */,
 				DAB5E61C20AF080A00F860B3 /* ViewItem.swift in Sources */,
 				DAB5E5ED20AF080A00F860B3 /* DragStateNone.swift in Sources */,

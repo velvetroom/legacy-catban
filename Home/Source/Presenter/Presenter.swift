@@ -1,16 +1,19 @@
 import Foundation
 import Shared
 import Board
+import Canvas
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Home.View.self
+//    var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
     var updaters:[PresenterUpdaterProtocol.Type]
     var map:MapProtocol
+    var canvas:CanvasProtocol
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
+        self.canvas = CanvasFactory.makeCanvas()
         self.outlets = PresenterOutlets()
         self.map = Map()
         self.updaters = [
@@ -31,15 +34,22 @@ class Presenter:PresenterProtocol {
     }
     
     func didLoad(view:Shared.View) {
-        self.loadOutlets(view:view)
+        view.view.addSubview(self.canvas.view)
+        self.canvas.view.topAnchor.constraint(equalTo:view.view.topAnchor).isActive = true
+        self.canvas.view.bottomAnchor.constraint(equalTo:view.view.bottomAnchor).isActive = true
+        self.canvas.view.leftAnchor.constraint(equalTo:view.view.leftAnchor).isActive = true
+        self.canvas.view.rightAnchor.constraint(equalTo:view.view.rightAnchor).isActive = true
+//        self.loadOutlets(view:view)
         self.delegate.didLoadPresenter()
     }
     
     func shouldUpdate() {
-        let builder:ViewModelBuilder = ViewModelBuilder()
-        builder.project = self.controller.project
-        self.map.clear()
-        self.updateWith(viewModel:builder.buildViewModel())
+//        let builder:ViewModelBuilder = ViewModelBuilder()
+//        builder.project = self.controller.project
+//        self.map.clear()
+//        self.updateWith(viewModel:builder.buildViewModel())
+        self.canvas.project = self.controller.project
+        self.canvas.refresh()
     }
     
     private func loadOutlets(view:Shared.View) {
