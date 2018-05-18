@@ -21,4 +21,9 @@ class TestPresenterUpdaterBoard:XCTestCase {
         self.presenter.update()
         XCTAssertNotNil(self.view.drag.map, "Failed to update")
     }
+    
+    func testNotRetainingMap() {
+        self.presenter.map = MockMapProtocol()
+        XCTAssertNil(self.presenter.map, "Retains")
+    }
 }

@@ -23,4 +23,9 @@ class TestPresenterUpdaterView:XCTestCase {
         self.presenter.update()
         XCTAssertEqual(self.view.title, Constants.title, "Not updated")
     }
+    
+    func testNotRetainingMap() {
+        self.presenter.map = MockMapProtocol()
+        XCTAssertNil(self.presenter.map, "Retains")
+    }
 }

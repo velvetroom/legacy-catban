@@ -21,4 +21,9 @@ class TestPresenterUpdaterScroll:XCTestCase {
         self.presenter.update()
         XCTAssertNotNil(self.map.viewScroll, "Failed to update")
     }
+    
+    func testNotRetainingMap() {
+        self.presenter.map = MockMapProtocol()
+        XCTAssertNil(self.presenter.map, "Retains")
+    }
 }
