@@ -2,9 +2,18 @@ import UIKit
 import Board
 
 class Canvas:CanvasProtocol {
-    weak var project:ProjectProtocol!
     weak var delegate:CanvasDelegateProtocol!
     var presenter:PresenterProtocol
+    
+    var project:ProjectProtocol! {
+        get {
+            return self.presenter.project
+        }
+        set(newProject) {
+            self.presenter.project = newProject
+        }
+    }
+    
     var view:UIView {
         get {
             return self.presenter.view
