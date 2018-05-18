@@ -1,9 +1,9 @@
 import Foundation
 
 class PresenterUpdaterNewCard:PresenterUpdaterBoardItemProtocol {
-    var viewBoard:ViewBoard!
+    weak var viewBoard:ViewBoard!
+    weak var column:MapColumn!
     var viewModel:ViewModelBoardItemProtocol!
-    var column:MapColumn!
     let viewItem:ViewBoardItem
     let mapItem:MapItemProtocol
     

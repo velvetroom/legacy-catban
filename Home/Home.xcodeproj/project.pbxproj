@@ -52,6 +52,10 @@
 		DA6C102E20AEA17D007F9A91 /* MockViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */; };
 		DA6C103020AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */; };
 		DA6C103420AEAEA1007F9A91 /* PresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */; };
+		DA6C103620AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */; };
+		DA6C103820AEB33C007F9A91 /* TestPresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */; };
+		DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */; };
+		DA6C103C20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */; };
 		DA6D001320A2F6EC00E50F0A /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D001220A2F6EC00E50F0A /* assets.xcassets */; };
 		DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001420A2FC1C00E50F0A /* ViewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
@@ -178,6 +182,10 @@
 		DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewBoard.swift; sourceTree = "<group>"; };
 		DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
 		DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterFactory.swift; sourceTree = "<group>"; };
+		DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterFactory.swift; sourceTree = "<group>"; };
+		DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterCard.swift; sourceTree = "<group>"; };
+		DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumn.swift; sourceTree = "<group>"; };
+		DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterNewCard.swift; sourceTree = "<group>"; };
 		DA6D001220A2F6EC00E50F0A /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA6D001420A2FC1C00E50F0A /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
@@ -310,6 +318,7 @@
 			children = (
 				DA613A4B20AC06910088A29B /* TestMap.swift */,
 				DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */,
+				DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -447,6 +456,9 @@
 				DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */,
 				DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */,
 				DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */,
+				DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */,
+				DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */,
+				DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */,
 				DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */,
 				DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
@@ -717,6 +729,7 @@
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
 				DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
+				DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA613A5820AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift in Sources */,
 				DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */,
@@ -738,11 +751,13 @@
 				DA6C102E20AEA17D007F9A91 /* MockViewBoard.swift in Sources */,
 				DA6D002120A31F0800E50F0A /* TestViewModelBuilderTextContent.swift in Sources */,
 				DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */,
+				DA6C103620AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
 				DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */,
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
 				DA613A4C20AC06910088A29B /* TestMap.swift in Sources */,
+				DA6C103C20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift in Sources */,
 				DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */,
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,
@@ -750,6 +765,7 @@
 				DA417C5820AAC73400D2BB8E /* MockViewCard.swift in Sources */,
 				DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */,
 				DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */,
+				DA6C103820AEB33C007F9A91 /* TestPresenterUpdaterCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
