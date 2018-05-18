@@ -45,7 +45,7 @@ class PresenterUpdaterColumnsItem {
     }
     
     private func add(item:ViewModelBoardItemProtocol) {
-        let updater:PresenterUpdaterColumnsItemChild = PresenterUpdaterColumnsItemChild()
+        var updater:PresenterUpdaterBoardItemProtocol = PresenterUpdaterFactory.makeFor(viewModel:item)
         updater.viewBoard = self.viewBoard
         updater.column = self.mapColumn
         updater.viewModel = item

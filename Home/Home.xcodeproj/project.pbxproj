@@ -36,7 +36,6 @@
 		DA613A6A20AC49F90088A29B /* MapNodeProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */; };
 		DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6B20AC50890088A29B /* ViewBoardElement.swift */; };
 		DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */; };
-		DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */; };
 		DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
@@ -52,6 +51,7 @@
 		DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */; };
 		DA6C102E20AEA17D007F9A91 /* MockViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */; };
 		DA6C103020AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */; };
+		DA6C103420AEAEA1007F9A91 /* PresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */; };
 		DA6D001320A2F6EC00E50F0A /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D001220A2F6EC00E50F0A /* assets.xcassets */; };
 		DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001420A2FC1C00E50F0A /* ViewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
@@ -162,7 +162,6 @@
 		DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapNodeProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA613A6B20AC50890088A29B /* ViewBoardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardElement.swift; sourceTree = "<group>"; };
 		DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
-		DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItemChild.swift; sourceTree = "<group>"; };
 		DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresenterUpdaterBoardItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
@@ -178,6 +177,7 @@
 		DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumns.swift; sourceTree = "<group>"; };
 		DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewBoard.swift; sourceTree = "<group>"; };
 		DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
+		DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterFactory.swift; sourceTree = "<group>"; };
 		DA6D001220A2F6EC00E50F0A /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA6D001420A2FC1C00E50F0A /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
@@ -423,9 +423,9 @@
 				DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */,
 				DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */,
 				DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */,
-				DA613A7520AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift */,
 				DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */,
 				DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */,
+				DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */,
 				DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */,
 				DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */,
 			);
@@ -660,6 +660,7 @@
 				DAB7665A20AD597F0090B7CA /* DragPosition.swift in Sources */,
 				DAB7666220AD5E920090B7CA /* DragStateProtocol.swift in Sources */,
 				DAB7667420AD9B9A0090B7CA /* PresenterUpdaterBoard.swift in Sources */,
+				DA6C103420AEAEA1007F9A91 /* PresenterUpdaterFactory.swift in Sources */,
 				DAB7665620AD55940090B7CA /* Drag.swift in Sources */,
 				DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */,
 				DAF84E6720A8688E0000BF06 /* PresenterUpdaterCard.swift in Sources */,
@@ -678,7 +679,6 @@
 				DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */,
 				DA978FB420A1A3F5002461E6 /* PresenterOutlets.swift in Sources */,
 				DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */,
-				DA613A7620AC6C5F0088A29B /* PresenterUpdaterColumnsItemChild.swift in Sources */,
 				DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
