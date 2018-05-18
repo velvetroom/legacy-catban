@@ -1,6 +1,6 @@
 import Foundation
 
-extension PresenterUpdaterBoardItemProtocol {
+extension PresenterItemProtocol {
     func update() {
         self.configureView()
         self.column.append(item:self.mapItem)

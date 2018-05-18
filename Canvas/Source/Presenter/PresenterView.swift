@@ -1,6 +1,6 @@
 import Foundation
 
-class PresenterUpdaterScroll:PresenterUpdaterProtocol {
+class PresenterView:PresenterProtocol {
     weak var map:MapProtocol!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
@@ -8,6 +8,6 @@ class PresenterUpdaterScroll:PresenterUpdaterProtocol {
     required init() { }
     
     func update() {
-        self.map.viewScroll = self.outlets.viewScroll
+        self.outlets.viewBoard?.drag.map = self.map
     }
 }

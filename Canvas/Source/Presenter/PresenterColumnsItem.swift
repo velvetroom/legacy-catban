@@ -1,6 +1,6 @@
 import Foundation
 
-class PresenterUpdaterColumnsItem {
+class PresenterColumnsItem {
     weak var map:MapProtocol!
     weak var viewBoard:ViewBoard!
     var viewModel:ViewModelColumn!
@@ -39,13 +39,13 @@ class PresenterUpdaterColumnsItem {
     }
     
     private func updateItems() {
-        for item:ViewModelBoardItemProtocol in self.viewModel.items {
+        for item:ViewModelProtocol in self.viewModel.items {
             self.add(item:item)
         }
     }
     
-    private func add(item:ViewModelBoardItemProtocol) {
-        var updater:PresenterUpdaterBoardItemProtocol = PresenterUpdaterFactory.makeFor(viewModel:item)
+    private func add(item:ViewModelProtocol) {
+        var updater:PresenterItemProtocol = PresenterFactory.makeFor(viewModel:item)
         updater.viewBoard = self.viewBoard
         updater.column = self.mapColumn
         updater.viewModel = item

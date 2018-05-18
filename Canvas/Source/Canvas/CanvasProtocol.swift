@@ -1,5 +1,5 @@
 import Foundation
 
-protocol CanvasProtocol {
+protocol CanvasProtocol:class {
     
 }

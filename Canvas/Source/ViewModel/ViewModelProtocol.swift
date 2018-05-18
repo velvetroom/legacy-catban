@@ -1,5 +1,5 @@
 import UIKit
 
-protocol ViewModelBoardItemProtocol {
+protocol ViewModelProtocol {
     var height:CGFloat { get set }
 }

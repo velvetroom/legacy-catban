@@ -1,6 +1,6 @@
 import UIKit
 
-class PresenterUpdaterColumns:PresenterUpdaterProtocol {
+class PresenterColumns:PresenterProtocol {
     weak var map:MapProtocol!
     weak var viewBoard:ViewBoard!
     var outlets:PresenterOutlets!
@@ -21,7 +21,7 @@ class PresenterUpdaterColumns:PresenterUpdaterProtocol {
     }
     
     private func add(column:ViewModelColumn) {
-        let updater:PresenterUpdaterColumnsItem = PresenterUpdaterColumnsItem()
+        let updater:PresenterColumnsItem = PresenterColumnsItem()
         updater.viewModel = column
         updater.map = map
         updater.viewBoard = self.viewBoard

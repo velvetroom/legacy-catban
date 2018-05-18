@@ -1,8 +1,8 @@
 import UIKit
 
 protocol DragProtocol:class {
+    var controller:CanvasProtocol! { get set }
     var map:MapProtocol! { get set }
-    var controller:Controller! { get set }
     var position:DragPosition { get set }
     var view:ViewBoardItem! { get }
     var mapItem:MapItemProtocol! { get }

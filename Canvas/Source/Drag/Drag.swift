@@ -1,8 +1,8 @@
 import UIKit
 
 class Drag:DragProtocol, DragStateChangerProtocol {
+    weak var controller:CanvasProtocol!
     weak var map:MapProtocol!
-    weak var controller:Controller!
     weak var view:ViewBoardItem!
     var mapItem:MapItemProtocol!
     var position:DragPosition

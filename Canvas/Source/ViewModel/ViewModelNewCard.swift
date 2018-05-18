@@ -1,6 +1,6 @@
 import UIKit
 
-struct ViewModelNewCard:ViewModelBoardItemProtocol {
+struct ViewModelNewCard:ViewModelProtocol {
     var height:CGFloat
     
     init() {
