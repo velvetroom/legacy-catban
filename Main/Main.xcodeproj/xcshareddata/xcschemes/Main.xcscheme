@@ -108,6 +108,16 @@
                ReferencedContainer = "container:../Card/Card.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAB5E5A120AF047400F860B3"
+               BuildableName = "TestsCanvas.xctest"
+               BlueprintName = "TestsCanvas"
+               ReferencedContainer = "container:../Canvas/Canvas.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
