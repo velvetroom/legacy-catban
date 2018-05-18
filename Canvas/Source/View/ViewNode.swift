@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewBoardElement:UIView {
+class ViewNode:UIView {
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutWidth:NSLayoutConstraint!

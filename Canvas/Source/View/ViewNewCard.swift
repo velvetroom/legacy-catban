@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewNewCard:ViewBoardItem {
+class ViewNewCard:ViewItem {
     override init() {
         super.init()
         self.dragState = DragStateFixed.self

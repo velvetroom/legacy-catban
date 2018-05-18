@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewColumn:ViewBoardElement {
+class ViewColumn:ViewNode {
     private(set) weak var labelName:UILabel!
     
     init() {

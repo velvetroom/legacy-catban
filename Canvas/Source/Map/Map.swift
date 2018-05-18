@@ -1,7 +1,7 @@
 import UIKit
 
 class Map:MapProtocol {
-    weak var viewScroll:ViewScroll!
+    weak var viewScroll:View!
     var columns:[MapColumn]
     
     var maxContentHeight:CGFloat {

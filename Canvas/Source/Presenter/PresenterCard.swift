@@ -1,10 +1,10 @@
 import Foundation
 
 class PresenterCard:PresenterItemProtocol {
-    weak var viewBoard:ViewBoard!
+    weak var viewBoard:ViewContainer!
     weak var column:MapColumn!
     var viewModel:ViewModelProtocol!
-    let viewItem:ViewBoardItem
+    let viewItem:ViewItem
     let mapItem:MapItemProtocol
     
     required init() {

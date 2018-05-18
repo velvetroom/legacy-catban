@@ -3,7 +3,7 @@ import UIKit
 class Drag:DragProtocol, DragStateChangerProtocol {
     weak var controller:CanvasProtocol!
     weak var map:MapProtocol!
-    weak var view:ViewBoardItem!
+    weak var view:ViewItem!
     var mapItem:MapItemProtocol!
     var position:DragPosition
     var state:DragStateProtocol
@@ -13,7 +13,7 @@ class Drag:DragProtocol, DragStateChangerProtocol {
         self.state = DragStateNone()
     }
     
-    func beginWith(view:ViewBoardItem, and touch:CGPoint) {
+    func beginWith(view:ViewItem, and touch:CGPoint) {
         self.view = view
         self.mapItem = view.mapItem
         self.position.restartWith(item:self.mapItem, and:touch)

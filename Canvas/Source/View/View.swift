@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewScroll:UIScrollView {
+class View:UIScrollView {
     override var frame:CGRect {
         didSet {
             self.updateContentSize()

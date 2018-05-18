@@ -2,7 +2,7 @@ import UIKit
 
 class PresenterColumns:PresenterProtocol {
     weak var map:MapProtocol!
-    weak var viewBoard:ViewBoard!
+    weak var viewBoard:ViewContainer!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
     
@@ -10,7 +10,7 @@ class PresenterColumns:PresenterProtocol {
     
     func update() {
         guard
-            let viewBoard:ViewBoard = self.outlets.viewBoard
+            let viewBoard:ViewContainer = self.outlets.viewBoard
         else { return }
         self.viewBoard = viewBoard
         self.outlets.viewBoard?.removeSubviews()

@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewBoard:UIView {
+class ViewContainer:UIView {
     var drag:DragProtocol
     
     init() {
@@ -22,7 +22,7 @@ class ViewBoard:UIView {
     override func touchesBegan(_ touches:Set<UITouch>, with:UIEvent?) {
         guard
             let touch:UITouch = touches.first,
-            let view:ViewBoardItem = touch.view as? ViewBoardItem
+            let view:ViewItem = touch.view as? ViewItem
         else { return }
         let position:CGPoint = touch.location(in:self)
         self.drag.beginWith(view:view, and:position)

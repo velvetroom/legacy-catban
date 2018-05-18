@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewBoardItem:ViewBoardElement {
+class ViewItem:ViewNode {
     weak var mapItem:MapItemProtocol!
     var dragState:DragStateProtocol.Type!
     
