@@ -4,36 +4,28 @@ import Board
 
 class TestPresenter_Map:XCTestCase {
     private var presenter:Presenter!
+    private var map:MockMapProtocol!
     private var controller:Controller!
     private var project:ProjectManagedProtocol!
-    private var viewScroll:ViewScroll!
-    private var viewBoard:ViewBoard!
-    private var viewColumn:ViewColumn!
-    private var layoutLeft:NSLayoutConstraint!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
+        self.map = MockMapProtocol()
         self.controller = Controller()
         self.project = MockProjectManagedProtocol()
-        self.viewScroll = ViewScroll()
-        self.viewBoard = ViewBoard()
-        self.viewColumn = ViewColumn()
-        self.layoutLeft = NSLayoutConstraint()
-        self.viewColumn.layoutLeft = self.layoutLeft
+        self.presenter.map = self.map
         self.controller.project = self.project
         self.presenter.controller = self.controller
-        self.presenter.outlets.viewBoard = self.viewBoard
-        self.presenter.outlets.viewScroll = self.viewScroll
     }
     
-    func testRestartsMapOnUpdate() {
-        var column:MapColumn? = MapColumn()
-        column?.view = self.viewColumn
-        self.presenter.map.add(column:column!)
-        column = nil
+    func testClearsMapOnUpdate() {
+        var called:Bool = false
+        self.map.onClear = {
+            called = true
+        }
         
         self.presenter.shouldUpdate()
-        XCTAssertNil(column, "Column not released")
+        XCTAssertTrue(called, "Not cleared")
     }
 }

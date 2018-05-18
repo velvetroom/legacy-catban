@@ -6,7 +6,7 @@ class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var outlets:PresenterOutlets
     var updaters:[PresenterUpdaterProtocol.Type]
-    let map:MapProtocol
+    var map:MapProtocol
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     

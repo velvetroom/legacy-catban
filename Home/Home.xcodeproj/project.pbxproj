@@ -45,6 +45,11 @@
 		DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */; };
 		DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */; };
 		DA683E2B20A71567006D15CE /* PresenterUpdaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2A20A71567006D15CE /* PresenterUpdaterProtocol.swift */; };
+		DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */; };
+		DA6C102620AE9C05007F9A91 /* TestPresenterUpdaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */; };
+		DA6C102820AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */; };
+		DA6C102A20AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */; };
+		DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */; };
 		DA6D001320A2F6EC00E50F0A /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6D001220A2F6EC00E50F0A /* assets.xcassets */; };
 		DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001420A2FC1C00E50F0A /* ViewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
@@ -164,6 +169,11 @@
 		DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewCard.swift; sourceTree = "<group>"; };
 		DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DA683E2A20A71567006D15CE /* PresenterUpdaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterProtocol.swift; sourceTree = "<group>"; };
+		DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapProtocol.swift; sourceTree = "<group>"; };
+		DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterView.swift; sourceTree = "<group>"; };
+		DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterScroll.swift; sourceTree = "<group>"; };
+		DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterBoard.swift; sourceTree = "<group>"; };
+		DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumns.swift; sourceTree = "<group>"; };
 		DA6D001220A2F6EC00E50F0A /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA6D001420A2FC1C00E50F0A /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
@@ -287,9 +297,17 @@
 		DA613A4A20AC06770088A29B /* Drag */ = {
 			isa = PBXGroup;
 			children = (
-				DA613A4B20AC06910088A29B /* TestMap.swift */,
 			);
 			path = Drag;
+			sourceTree = "<group>";
+		};
+		DA6C102220AE99DC007F9A91 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DA613A4B20AC06910088A29B /* TestMap.swift */,
+				DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		DA6D001120A2F6D200E50F0A /* Assets */ = {
@@ -419,6 +437,10 @@
 				DA6D001E20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift */,
 				DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */,
 				DA0BF78120AC04A3003CFD50 /* TestPresenter_Map.swift */,
+				DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */,
+				DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */,
+				DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */,
+				DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */,
 				DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */,
 				DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
@@ -469,6 +491,7 @@
 				DAF7E65E209B063800B8A39A /* Presenter */,
 				DADB5EC2209B11F800CFFC9A /* View */,
 				DA978FC120A1B43E002461E6 /* ViewModel */,
+				DA6C102220AE99DC007F9A91 /* Map */,
 				DA613A4A20AC06770088A29B /* Drag */,
 			);
 			path = Tests;
@@ -676,6 +699,7 @@
 			files = (
 				DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */,
 				DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */,
+				DA6C102820AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift in Sources */,
 				DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
@@ -693,21 +717,25 @@
 				DAF84E6320A85E160000BF06 /* TestViewModelBuilder_NewCard.swift in Sources */,
 				DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */,
 				DA0BF78220AC04A3003CFD50 /* TestPresenter_Map.swift in Sources */,
+				DA6C102620AE9C05007F9A91 /* TestPresenterUpdaterView.swift in Sources */,
 				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
 				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DA613A5620AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */,
+				DA6C102A20AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift in Sources */,
 				DA6FDEF120A7179E00D148DD /* MockPresenterUpdaterProtocol.swift in Sources */,
 				DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */,
 				DA6FDEEF20A7178B00D148DD /* TestPresenter_Updaters.swift in Sources */,
 				DA6D002120A31F0800E50F0A /* TestViewModelBuilderTextContent.swift in Sources */,
 				DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
+				DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */,
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
 				DA613A4C20AC06910088A29B /* TestMap.swift in Sources */,
+				DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */,
 				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,
 				DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */,

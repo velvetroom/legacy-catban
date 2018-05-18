@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewBoard:UIView {
-    let drag:DragProtocol
+    var drag:DragProtocol
     
     init() {
         self.drag = Drag()
