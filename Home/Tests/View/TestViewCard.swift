@@ -12,18 +12,6 @@ class TestViewCard:XCTestCase {
         self.controller = MockController()
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.view, "Failed to load view")
-    }
-    
-    func testProperties() {
-        XCTAssertNotNil(self.view.labelContent, "Failed to load property")
-        XCTAssertNil(self.view.layoutLeft, "Property not found")
-        XCTAssertNil(self.view.layoutTop, "Property not found")
-        XCTAssertNil(self.view.layoutHeight, "Property not found")
-        XCTAssertNil(self.view.layoutWidth, "Property not found")
-    }
-    
     func testSucceded() {
         var called:Bool = false
         self.controller.onEditCardWith = { (identifier:String) in
@@ -32,5 +20,10 @@ class TestViewCard:XCTestCase {
         
         self.view.triggerAction(controller:self.controller)
         XCTAssertTrue(called, "Failed to call")
+    }
+    
+    func testDragState() {
+        let state:DragStateDynamic.Type? = self.view.dragState as? DragStateDynamic.Type
+        XCTAssertNotNil(state, "Invalid state")
     }
 }

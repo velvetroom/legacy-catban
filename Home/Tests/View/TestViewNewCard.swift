@@ -26,4 +26,9 @@ class TestViewNewCard:XCTestCase {
         self.view.triggerAction(controller:self.controller)
         XCTAssertTrue(called, "Failed to call")
     }
+    
+    func testDragState() {
+        let state:DragStateFixed.Type? = self.view.dragState as? DragStateFixed.Type
+        XCTAssertNotNil(state, "Invalid state")
+    }
 }
