@@ -89,6 +89,7 @@
 		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
 		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
 		DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */; };
+		DAB5E58820AEF9A300F860B3 /* MockDragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */; };
 		DAB6A40120AD532200C1B8D6 /* MapItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6A40020AD532200C1B8D6 /* MapItemProtocol.swift */; };
 		DAB7665620AD55940090B7CA /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7665520AD55940090B7CA /* Drag.swift */; };
 		DAB7665A20AD597F0090B7CA /* DragPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7665920AD597F0090B7CA /* DragPosition.swift */; };
@@ -217,6 +218,7 @@
 		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
 		DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_CreateCard.swift; sourceTree = "<group>"; };
+		DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragProtocol.swift; sourceTree = "<group>"; };
 		DAB6A40020AD532200C1B8D6 /* MapItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemProtocol.swift; sourceTree = "<group>"; };
 		DAB7665520AD55940090B7CA /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
 		DAB7665920AD597F0090B7CA /* DragPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragPosition.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		DA613A4A20AC06770088A29B /* Drag */ = {
 			isa = PBXGroup;
 			children = (
+				DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */,
 			);
 			path = Drag;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DA613A5620AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift in Sources */,
+				DAB5E58820AEF9A300F860B3 /* MockDragProtocol.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */,
 				DA6C102A20AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift in Sources */,
