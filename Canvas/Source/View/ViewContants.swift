@@ -5,6 +5,17 @@ struct ViewConstants {
         static let animationDuration:TimeInterval = 0.3
     }
     
+    struct Board {
+        static let paddingHorizontal:CGFloat = 20
+        static let horizontalSpacing:CGFloat = 15
+        static let verticalSpacing:CGFloat = 4
+    }
+    
+    struct Column {
+        static let width:CGFloat = 200
+        static let paddingBottom:CGFloat = 20
+    }
+    
     struct ColumnTitle {
         static let iconImage:String = "assetColumnIcon"
         static let height:CGFloat = 70
@@ -26,7 +37,10 @@ struct ViewConstants {
     }
     
     struct Card {
+        static let contentPadding:CGFloat = 15
         static let fontSize:CGFloat = 16
+        static let minContentHeight:CGFloat = 15
+        static let maxHeight:CGFloat = 1000
         static let cornerRadius:CGFloat = 4
     }
 }

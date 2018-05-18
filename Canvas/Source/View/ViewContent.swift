@@ -1,10 +1,9 @@
 import UIKit
 
-class ViewContainer:UIView {
-    var drag:DragProtocol
+class ViewContent:UIView {
+    weak var drag:DragProtocol!
     
     init() {
-        self.drag = Drag()
         super.init(frame:CGRect.zero)
         self.configureView()
     }
@@ -13,7 +12,7 @@ class ViewContainer:UIView {
         return nil
     }
     
-    func removeSubviews() {
+    func clear() {
         for subview:UIView in self.subviews {
             subview.removeFromSuperview()
         }

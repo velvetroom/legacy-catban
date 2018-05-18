@@ -1,6 +1,17 @@
 import UIKit
 
 class View:UIScrollView {
+    private weak var content:ViewContent!
+    
+    var drag:DragProtocol {
+        get {
+            return self.content.drag
+        }
+        set(newValue) {
+            self.content.drag = newValue
+        }
+    }
+    
     override var frame:CGRect {
         didSet {
             self.updateContentSize()
@@ -16,6 +27,10 @@ class View:UIScrollView {
         return nil
     }
     
+    func clear() {
+        self.content.clear()
+    }
+    
     func updateContentSize() {
         self.updateContent(size:self.contentSize)
     }
@@ -27,14 +42,20 @@ class View:UIScrollView {
         self.updateSubview()
     }
     
+    override func addSubview(_ view:UIView) {
+        self.content.addSubview(view)
+    }
+    
     private func updateSubview() {
-        guard
-            let subview:UIView = self.subviews.first
-        else { return }
-        subview.frame = CGRect(origin:CGPoint.zero, size:self.contentSize)
+        self.content.frame = CGRect(origin:CGPoint.zero, size:self.contentSize)
     }
     
     private func configureView() {
+        self.configureScroll()
+        self.configureContainer()
+    }
+    
+    private func configureScroll() {
         self.clipsToBounds = true
         self.backgroundColor = UIColor.Shared.gray
         self.alwaysBounceVertical = true
@@ -43,5 +64,11 @@ class View:UIScrollView {
         self.showsHorizontalScrollIndicator = false
         self.decelerationRate = UIScrollViewDecelerationRateFast
         self.canCancelContentTouches = false
+    }
+    
+    private func configureContainer() {
+        let content:ViewContent = ViewContent()
+        self.content = content
+        super.addSubview(content)
     }
 }

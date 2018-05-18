@@ -1,10 +1,6 @@
-import Foundation
+import UIKit
 
-protocol MapProtocol:class {
-    var viewScroll:View! { get set }
-    
-    func add(column:MapColumn)
-    func add(item:MapItemProtocol)
-    func updateContentSize()
-    func clear()
+protocol MapProtocol:MapEditorProtocol {
+    var mapDelegate:MapDelegateProtocol! { get set }
+    var size:CGSize { get }
 }

@@ -1,17 +1,16 @@
-import Foundation
+import UIKit
 
 class PresenterNewCard:PresenterItemProtocol {
-    weak var viewBoard:ViewContainer!
-    weak var column:MapColumn!
-    var viewModel:ViewModelProtocol!
-    let viewItem:ViewItem
-    let mapItem:MapItemProtocol
+    weak var view:View!
+    weak var mapColumn:MapColumn!
+    var viewItem:ViewItem
+    var mapItem:MapItemProtocol
+    var height:CGFloat
     
     required init() {
         self.viewItem = ViewNewCard()
         self.mapItem = MapNewCard()
-        self.mapItem.view = self.viewItem
-        self.viewItem.mapItem = self.mapItem
+        self.height = ViewConstants.NewCard.height
     }
     
     func configureContent() { }

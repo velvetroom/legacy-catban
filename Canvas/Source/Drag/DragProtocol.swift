@@ -1,13 +1,9 @@
 import UIKit
 
 protocol DragProtocol:class {
-    var controller:CanvasProtocol! { get set }
-    var map:MapProtocol! { get set }
-    var position:DragPosition { get set }
-    var view:ViewItem! { get }
-    var mapItem:MapItemProtocol! { get }
+    var lastTouch:CGPoint { get set }
     
-    func beginWith(view:ViewItem, and touch:CGPoint)
-    func update()
-    func end()
+    func dragBegin()
+    func dragUpdate()
+    func dragEnd()
 }

@@ -1,11 +1,11 @@
-import Foundation
+import UIKit
 
 protocol PresenterItemProtocol {
-    var viewBoard:ViewContainer! { get set }
-    var viewModel:ViewModelProtocol! { get set }
-    var column:MapColumn! { get set }
+    var view:View! { get set }
+    var mapColumn:MapColumn! { get set }
     var viewItem:ViewItem { get }
     var mapItem:MapItemProtocol { get }
+    var height:CGFloat { get }
     
     init()
     func configureContent()
