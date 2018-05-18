@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		DAB5E59320AEFCCA00F860B3 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCanvas.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB5E5AF20AF04D300F860B3 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,10 @@
 		DAB5E58920AEFCCA00F860B3 = {
 			isa = PBXGroup;
 			children = (
+				DAB5E5AD20AF04C200F860B3 /* Source */,
+				DAB5E5AE20AF04CC00F860B3 /* Tests */,
 				DAB5E59420AEFCCA00F860B3 /* Products */,
+				DAB5E5AF20AF04D300F860B3 /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +62,20 @@
 				DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DAB5E5AD20AF04C200F860B3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DAB5E5AE20AF04CC00F860B3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
