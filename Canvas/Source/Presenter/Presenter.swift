@@ -9,12 +9,17 @@ class Presenter:PresenterProtocol {
     init() {
         self.view = View()
         self.model = Model()
-        self.view.drag = self.model
+        self.assignReferences()
     }
     
     func refresh() {
         self.clear()
         self.load()
+    }
+    
+    private func assignReferences() {
+        self.view.drag = self.model
+        self.model.mapDelegate = self.view
     }
     
     private func clear() {

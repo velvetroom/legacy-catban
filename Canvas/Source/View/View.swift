@@ -1,6 +1,6 @@
 import UIKit
 
-class View:UIScrollView {
+class View:UIScrollView, MapDelegateProtocol {
     private weak var content:ViewContent!
     
     var drag:DragProtocol {
@@ -29,6 +29,10 @@ class View:UIScrollView {
     
     func clear() {
         self.content.clear()
+    }
+    
+    func mapChanged(size:CGSize) {
+        self.updateContent(size:size)
     }
     
     func updateContentSize() {

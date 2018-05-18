@@ -1,16 +1,13 @@
 import UIKit
 
-class Model:
-    ModelProtocol,
-    DragEventProtocol,
-    DragStateChangerProtocol {
+class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     weak var canvas:CanvasEditorProtocol!
     weak var mapDelegate:MapDelegateProtocol!
     weak var viewItem:ViewItem!
+    var columns:[MapColumn]
     var mapItem:MapItemProtocol!
     var position:DragPosition
     var state:DragStateProtocol
-    var columns:[MapColumn]
     var latestTouch:CGPoint
     
     init() {
@@ -90,6 +87,7 @@ class Model:
     }
     
     private func updateSize() {
-        //self.size = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
+        let size:CGSize = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
+        self.mapDelegate.mapChanged(size:size)
     }
 }
