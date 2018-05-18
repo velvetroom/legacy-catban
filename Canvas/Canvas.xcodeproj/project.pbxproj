@@ -12,6 +12,8 @@
 		DA61312620AF10A2002563BA /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
 		DA61312820AF1109002563BA /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61312720AF1109002563BA /* Canvas.swift */; };
 		DA61312A20AF1153002563BA /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61312920AF1153002563BA /* CanvasDelegateProtocol.swift */; };
+		DA61312C20AF1296002563BA /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61312B20AF1296002563BA /* Presenter.swift */; };
+		DA61312E20AF12EA002563BA /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61312D20AF12EA002563BA /* PresenterProtocol.swift */; };
 		DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB5E59320AEFCCA00F860B3 /* Canvas.framework */; };
 		DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */; };
 		DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */; };
@@ -43,7 +45,7 @@
 		DAB5E60D20AF080A00F860B3 /* PresenterItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5D720AF080A00F860B3 /* PresenterItemProtocol+Default.swift */; };
 		DAB5E60E20AF080A00F860B3 /* PresenterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */; };
 		DAB5E60F20AF080A00F860B3 /* PresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5D920AF080A00F860B3 /* PresenterFactory.swift */; };
-		DAB5E61020AF080A00F860B3 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DA20AF080A00F860B3 /* PresenterProtocol.swift */; };
+		DAB5E61020AF080A00F860B3 /* PresenterBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DA20AF080A00F860B3 /* PresenterBuilderProtocol.swift */; };
 		DAB5E61120AF080A00F860B3 /* PresenterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */; };
 		DAB5E61220AF080A00F860B3 /* PresenterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DC20AF080A00F860B3 /* PresenterColumnsItem.swift */; };
 		DAB5E61320AF080A00F860B3 /* PresenterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DD20AF080A00F860B3 /* PresenterColumns.swift */; };
@@ -110,6 +112,8 @@
 		DA61312520AF10A2002563BA /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61312720AF1109002563BA /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		DA61312920AF1153002563BA /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
+		DA61312B20AF1296002563BA /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DA61312D20AF12EA002563BA /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DAB5E59320AEFCCA00F860B3 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCanvas.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5AF20AF04D300F860B3 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -143,7 +147,7 @@
 		DAB5E5D720AF080A00F860B3 /* PresenterItemProtocol+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PresenterItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterNewCard.swift; sourceTree = "<group>"; };
 		DAB5E5D920AF080A00F860B3 /* PresenterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterFactory.swift; sourceTree = "<group>"; };
-		DAB5E5DA20AF080A00F860B3 /* PresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
+		DAB5E5DA20AF080A00F860B3 /* PresenterBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterBuilderProtocol.swift; sourceTree = "<group>"; };
 		DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterCard.swift; sourceTree = "<group>"; };
 		DAB5E5DC20AF080A00F860B3 /* PresenterColumnsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterColumnsItem.swift; sourceTree = "<group>"; };
 		DAB5E5DD20AF080A00F860B3 /* PresenterColumns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterColumns.swift; sourceTree = "<group>"; };
@@ -336,11 +340,13 @@
 		DAB5E5D520AF080A00F860B3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DA61312D20AF12EA002563BA /* PresenterProtocol.swift */,
+				DA61312B20AF1296002563BA /* Presenter.swift */,
 				DAB5E5D620AF080A00F860B3 /* PresenterItemProtocol.swift */,
 				DAB5E5D720AF080A00F860B3 /* PresenterItemProtocol+Default.swift */,
 				DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */,
 				DAB5E5D920AF080A00F860B3 /* PresenterFactory.swift */,
-				DAB5E5DA20AF080A00F860B3 /* PresenterProtocol.swift */,
+				DAB5E5DA20AF080A00F860B3 /* PresenterBuilderProtocol.swift */,
 				DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */,
 				DAB5E5DC20AF080A00F860B3 /* PresenterColumnsItem.swift */,
 				DAB5E5DD20AF080A00F860B3 /* PresenterColumns.swift */,
@@ -560,6 +566,7 @@
 				DAB5E61920AF080A00F860B3 /* ViewCard.swift in Sources */,
 				DAB5E5F320AF080A00F860B3 /* DragStateFixed.swift in Sources */,
 				DAB5E60B20AF080A00F860B3 /* ViewModelNewCard.swift in Sources */,
+				DA61312C20AF1296002563BA /* Presenter.swift in Sources */,
 				DAB5E61820AF080A00F860B3 /* ViewNewCard.swift in Sources */,
 				DAB5E5FA20AF080A00F860B3 /* MapParentProtocol.swift in Sources */,
 				DA535F3120AF0991000FB3FD /* CanvasProtocol.swift in Sources */,
@@ -567,7 +574,7 @@
 				DAB5E61A20AF080A00F860B3 /* View.swift in Sources */,
 				DAB5E60D20AF080A00F860B3 /* PresenterItemProtocol+Default.swift in Sources */,
 				DAB5E5F820AF080A00F860B3 /* MapColumn.swift in Sources */,
-				DAB5E61020AF080A00F860B3 /* PresenterProtocol.swift in Sources */,
+				DAB5E61020AF080A00F860B3 /* PresenterBuilderProtocol.swift in Sources */,
 				DA61312A20AF1153002563BA /* CanvasDelegateProtocol.swift in Sources */,
 				DAB5E5F720AF080A00F860B3 /* MapItemProtocol.swift in Sources */,
 				DAB5E5FC20AF080A00F860B3 /* MapItemProtocol+Default.swift in Sources */,
@@ -589,6 +596,7 @@
 				DAB5E5FB20AF080A00F860B3 /* MapParentProtocol+Default.swift in Sources */,
 				DAB5E5EF20AF080A00F860B3 /* DragProtocol.swift in Sources */,
 				DAB5E60F20AF080A00F860B3 /* PresenterFactory.swift in Sources */,
+				DA61312E20AF12EA002563BA /* PresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

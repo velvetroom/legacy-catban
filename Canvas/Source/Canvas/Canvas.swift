@@ -4,10 +4,15 @@ import Board
 class Canvas:CanvasProtocol {
     weak var project:ProjectProtocol!
     weak var delegate:CanvasDelegateProtocol!
-    var view:UIView
+    var presenter:PresenterProtocol
+    var view:UIView {
+        get {
+            return self.presenter.view
+        }
+    }
     
     init() {
-        self.view = View()
+        self.presenter = Presenter()
     }
     
     func refresh() {

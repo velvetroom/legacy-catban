@@ -1,6 +1,6 @@
 import Foundation
 
-class PresenterScroll:PresenterProtocol {
+class PresenterScroll:PresenterBuilderProtocol {
     weak var map:MapProtocol!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!

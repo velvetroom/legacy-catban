@@ -1,6 +1,6 @@
 import UIKit
 
-class PresenterColumns:PresenterProtocol {
+class PresenterColumns:PresenterBuilderProtocol {
     weak var map:MapProtocol!
     weak var viewBoard:ViewContainer!
     var outlets:PresenterOutlets!

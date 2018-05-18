@@ -1,6 +1,6 @@
 import Foundation
 
-class PresenterView:PresenterProtocol {
+class PresenterView:PresenterBuilderProtocol {
     weak var map:MapProtocol!
     var outlets:PresenterOutlets!
     var viewModel:ViewModel!
