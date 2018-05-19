@@ -54,7 +54,7 @@ class PresenterColumn:PresenterColumnProtocol {
         }
     }
     
-    private func loadNewCard() {
+    func loadNewCard() {
         if self.first {
             self.loadWith(loader:PresenterFactory.makeNewCardLoader())
         }

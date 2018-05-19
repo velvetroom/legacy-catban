@@ -19,5 +19,6 @@ class PresenterCard:PresenterCardProtocol {
         let viewItem:ViewCard = self.viewItem as! ViewCard
         viewItem.identifier = self.card.identifier
         viewItem.labelContent.text = self.card.content
+        self.height = PresenterCardHeight.heightFor(content:self.card.content)
     }
 }

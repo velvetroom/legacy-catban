@@ -29,6 +29,7 @@
 		DAA7315520B01FF4009A6C36 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA7315420B01FF4009A6C36 /* assets.xcassets */; };
 		DAA7315720B0201E009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
 		DAA7315820B02029009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
+		DAA7315A20B02286009A6C36 /* PresenterCardHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315920B02286009A6C36 /* PresenterCardHeight.swift */; };
 		DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB5E59320AEFCCA00F860B3 /* Canvas.framework */; };
 		DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */; };
 		DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */; };
@@ -130,6 +131,7 @@
 		DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterItemProtocol.swift; sourceTree = "<group>"; };
 		DAA7315420B01FF4009A6C36 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAA7315620B0201E009A6C36 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA7315920B02286009A6C36 /* PresenterCardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterCardHeight.swift; sourceTree = "<group>"; };
 		DAB5E59320AEFCCA00F860B3 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCanvas.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5AF20AF04D300F860B3 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				DAB5E5D720AF080A00F860B3 /* PresenterItemProtocol+Default.swift */,
 				DA61314220AF3821002563BA /* PresenterCardProtocol.swift */,
 				DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */,
+				DAA7315920B02286009A6C36 /* PresenterCardHeight.swift */,
 				DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */,
 			);
 			path = Presenter;
@@ -379,10 +382,10 @@
 				DAB5E5E520AF080A00F860B3 /* View.swift */,
 				DAB5E5E620AF080A00F860B3 /* ViewContent.swift */,
 				DAB5E5E220AF080A00F860B3 /* ViewNode.swift */,
-				DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */,
-				DAB5E5E420AF080A00F860B3 /* ViewCard.swift */,
-				DAB5E5E720AF080A00F860B3 /* ViewItem.swift */,
 				DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */,
+				DAB5E5E720AF080A00F860B3 /* ViewItem.swift */,
+				DAB5E5E420AF080A00F860B3 /* ViewCard.swift */,
+				DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				DA61314120AF3753002563BA /* PresenterColumnProtocol.swift in Sources */,
 				DAB5E61A20AF080A00F860B3 /* View.swift in Sources */,
 				DAB5E60D20AF080A00F860B3 /* PresenterItemProtocol+Default.swift in Sources */,
+				DAA7315A20B02286009A6C36 /* PresenterCardHeight.swift in Sources */,
 				DAB5E5F820AF080A00F860B3 /* MapColumn.swift in Sources */,
 				DA61312A20AF1153002563BA /* CanvasDelegateProtocol.swift in Sources */,
 				DAB5E5F720AF080A00F860B3 /* MapItemProtocol.swift in Sources */,

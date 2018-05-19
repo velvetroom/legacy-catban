@@ -14,9 +14,9 @@ extension PresenterItemProtocol {
     
     private func configureView() {
         self.view.addSubview(self.viewItem)
+        self.configureContent()
         self.configureConstraints()
         self.activateConstraints()
-        self.configureContent()
     }
     
     private func configureConstraints() {
