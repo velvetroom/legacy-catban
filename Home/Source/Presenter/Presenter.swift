@@ -20,10 +20,8 @@ class Presenter:PresenterProtocol {
     }
     
     func shouldUpdate() {
-        let project:ProjectManagedProtocol = self.controller.project
-        self.view?.title = project.name
-        self.canvas.project = project
-        self.canvas.refresh()
+        self.updateView()
+        self.updateCanvas()
     }
     
     private func loadCanvasOn(view:UIView) {
@@ -33,5 +31,15 @@ class Presenter:PresenterProtocol {
         canvas.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
         canvas.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
         canvas.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
+    }
+    
+    private func updateView() {
+        self.view?.title = self.controller.project.name
+    }
+    
+    private func updateCanvas() {
+        self.canvas.project = self.controller.project
+        self.canvas.delegate = self.controller
+        self.canvas.refresh()
     }
 }

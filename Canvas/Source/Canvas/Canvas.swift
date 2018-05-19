@@ -31,10 +31,10 @@ public class Canvas:CanvasProtocol, CanvasEditorProtocol {
     }
     
     func editCardWith(identifier:String) {
-        
+        self.delegate.editCardWith(identifier:identifier)
     }
     
     func createNewCard() {
-        
+        self.delegate.createNewCard()
     }
 }
