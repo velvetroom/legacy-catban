@@ -66,6 +66,13 @@
 		DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95E920B0463000D8BB8F /* TestCanvas.swift */; };
 		DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95EB20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift */; };
 		DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */; };
+		DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */; };
+		DADC95F420B049B200D8BB8F /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95F320B049B200D8BB8F /* TestModel.swift */; };
+		DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */; };
+		DADC95F920B04A7A00D8BB8F /* MockViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */; };
+		DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */; };
+		DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */; };
+		DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +145,13 @@
 		DADC95E920B0463000D8BB8F /* TestCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCanvas.swift; sourceTree = "<group>"; };
 		DADC95EB20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
+		DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModelProtocol.swift; sourceTree = "<group>"; };
+		DADC95F320B049B200D8BB8F /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapDelegateProtocol.swift; sourceTree = "<group>"; };
+		DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewItem.swift; sourceTree = "<group>"; };
+		DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Columns.swift; sourceTree = "<group>"; };
+		DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Items.swift; sourceTree = "<group>"; };
+		DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_AddItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,9 +262,11 @@
 			isa = PBXGroup;
 			children = (
 				DA535F3220AF09A1000FB3FD /* Canvas */,
+				DADC95F020B048CE00D8BB8F /* Model */,
 				DADC95ED20B046EA00D8BB8F /* Presenter */,
 				DAB5E64120AF081600F860B3 /* Drag */,
 				DAB5E64320AF081600F860B3 /* Map */,
+				DADC95F720B04A6A00D8BB8F /* View */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -336,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB5E64420AF081600F860B3 /* MockMapColumn.swift */,
+				DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -346,6 +363,26 @@
 				DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DADC95F020B048CE00D8BB8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DADC95F320B049B200D8BB8F /* TestModel.swift */,
+				DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */,
+				DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */,
+				DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */,
+				DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DADC95F720B04A6A00D8BB8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,12 +547,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
+				DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */,
 				DADC95E820B045A100D8BB8F /* MockCanvasEditorProtocol.swift in Sources */,
 				DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */,
+				DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */,
+				DADC95F420B049B200D8BB8F /* TestModel.swift in Sources */,
 				DAB5E66620AF081600F860B3 /* MockDragProtocol.swift in Sources */,
 				DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */,
+				DADC95F920B04A7A00D8BB8F /* MockViewItem.swift in Sources */,
 				DAB5E66720AF081600F860B3 /* MockMapColumn.swift in Sources */,
+				DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */,
 				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
+				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
+				DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

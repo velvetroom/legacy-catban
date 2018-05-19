@@ -31,8 +31,8 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     func add(item:MapItemProtocol) {
         var parentColumn:MapColumn? = self.columns.first
         for column:MapColumn in self.columns {
+            parentColumn = column
             if column.maxX > item.midX {
-                parentColumn = column
                 break
             }
         }

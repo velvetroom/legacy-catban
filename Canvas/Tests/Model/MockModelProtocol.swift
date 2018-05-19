@@ -1,0 +1,43 @@
+import UIKit
+@testable import Canvas
+
+class MockModelProtocol:ModelProtocol {
+    var onClear:(() -> Void)?
+    var onDragBegin:(() -> Void)?
+    var onDragUpdate:(() -> Void)?
+    var onDragEnd:(() -> Void)?
+    var onAddColumns:(() -> Void)?
+    var onAddItem:(() -> Void)?
+    var canvas:CanvasEditorProtocol!
+    var viewItem:ViewItem!
+    var mapDelegate:MapDelegateProtocol!
+    var latestTouch:CGPoint
+    
+    init() {
+        self.latestTouch = CGPoint.zero
+    }
+    
+    func clear() {
+        self.onClear?()
+    }
+    
+    func dragBegin() {
+        self.onDragBegin?()
+    }
+    
+    func dragUpdate() {
+        self.onDragUpdate?()
+    }
+    
+    func dragEnd() {
+        self.onDragEnd?()
+    }
+    
+    func add(columns:[MapColumn]) {
+        self.onAddColumns?()
+    }
+    
+    func add(item:MapItemProtocol) {
+        self.onAddItem?()
+    }
+}
