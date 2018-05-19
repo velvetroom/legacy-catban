@@ -6,5 +6,6 @@ public protocol CanvasProtocol:class {
     var delegate:CanvasDelegateProtocol! { get set }
     var view:UIView { get }
     
+    init()
     func refresh()
 }

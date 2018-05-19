@@ -1,7 +1,6 @@
 import Foundation
 import Shared
 import Board
-import Canvas
 
 class Presenter:PresenterProtocol {
 //    var viewType:Shared.View.Type = Home.View.self
@@ -13,7 +12,7 @@ class Presenter:PresenterProtocol {
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
-        self.canvas = CanvasFactory.makeCanvas()
+        self.canvas = Configuration.canvasType.init()
         self.outlets = PresenterOutlets()
         self.map = Map()
         self.updaters = [

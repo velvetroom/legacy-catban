@@ -1,5 +1,6 @@
 import UIKit
 import Board
+import Shared
 
 class Canvas:CanvasProtocol, CanvasEditorProtocol {
     weak var delegate:CanvasDelegateProtocol!
@@ -20,7 +21,7 @@ class Canvas:CanvasProtocol, CanvasEditorProtocol {
         }
     }
     
-    init() {
+    required init() {
         self.presenter = Presenter()
         self.presenter.canvas = self
     }
