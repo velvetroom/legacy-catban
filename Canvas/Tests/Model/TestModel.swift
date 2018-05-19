@@ -34,4 +34,9 @@ class TestModel:XCTestCase {
         self.model.clear()
         XCTAssertTrue(self.model.columns.isEmpty, "Not clearing")
     }
+    
+    func testRetainsMapItem() {
+        self.model.mapItem = MapCard()
+        XCTAssertNotNil(self.model.mapItem, "Not retaining")
+    }
 }

@@ -4,8 +4,8 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     weak var canvas:CanvasEditorProtocol!
     weak var mapDelegate:MapDelegateProtocol!
     weak var viewItem:ViewItem!
-    var columns:[MapColumn]
     var mapItem:MapItemProtocol!
+    var columns:[MapColumn]
     var position:DragPosition
     var state:DragStateProtocol
     var latestTouch:CGPoint

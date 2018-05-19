@@ -73,6 +73,8 @@
 		DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */; };
 		DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */; };
 		DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */; };
+		DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */; };
+		DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,8 @@
 		DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Columns.swift; sourceTree = "<group>"; };
 		DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Items.swift; sourceTree = "<group>"; };
 		DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_AddItem.swift; sourceTree = "<group>"; };
+		DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Drag.swift; sourceTree = "<group>"; };
+		DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,13 +282,13 @@
 				DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */,
 				DA61313520AF248A002563BA /* DragEventProtocol.swift */,
 				DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */,
+				DAB5E5B920AF080A00F860B3 /* DragPosition.swift */,
 				DAB5E5B720AF080A00F860B3 /* DragStateProtocol.swift */,
 				DAB5E5B820AF080A00F860B3 /* DragStateProtocol+Default.swift */,
 				DAB5E5B420AF080A00F860B3 /* DragStateNone.swift */,
 				DAB5E5B520AF080A00F860B3 /* DragStateDynamic.swift */,
 				DAB5E5BA20AF080A00F860B3 /* DragStateFixed.swift */,
 				DAB5E5BB20AF080A00F860B3 /* DragStateMoving.swift */,
-				DAB5E5B920AF080A00F860B3 /* DragPosition.swift */,
 			);
 			path = Drag;
 			sourceTree = "<group>";
@@ -344,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB5E64220AF081600F860B3 /* MockDragProtocol.swift */,
+				DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */,
 			);
 			path = Drag;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */,
 				DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */,
 				DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */,
+				DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */,
 				DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */,
 			);
 			path = Model;
@@ -547,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
+				DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */,
 				DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */,
 				DADC95E820B045A100D8BB8F /* MockCanvasEditorProtocol.swift in Sources */,
 				DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */,
@@ -558,6 +565,7 @@
 				DAB5E66720AF081600F860B3 /* MockMapColumn.swift in Sources */,
 				DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */,
 				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
+				DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */,
 				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
 				DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */,
 			);
