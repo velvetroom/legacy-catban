@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		DA0BF78220AC04A3003CFD50 /* TestPresenter_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BF78120AC04A3003CFD50 /* TestPresenter_Map.swift */; };
 		DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B4209F383500AD4425 /* TestViewScroll.swift */; };
-		DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B6209F386300AD4425 /* ViewScroll.swift */; };
 		DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */; };
 		DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451420A4691F00CCC59D /* TestController_Transition.swift */; };
 		DA15451720A46DAD00CCC59D /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockController.swift */; };
 		DA417C5820AAC73400D2BB8E /* MockViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5720AAC73400D2BB8E /* MockViewCard.swift */; };
 		DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */; };
-		DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8020A2C27800E89334 /* ViewColumn.swift */; };
 		DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */; };
 		DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8420A2C33500E89334 /* ViewModelView.swift */; };
 		DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */; };
@@ -34,10 +32,7 @@
 		DA613A6620AC45E20088A29B /* MapParentProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6520AC45E20088A29B /* MapParentProtocol+Default.swift */; };
 		DA613A6820AC47AD0088A29B /* MapNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */; };
 		DA613A6A20AC49F90088A29B /* MapNodeProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */; };
-		DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6B20AC50890088A29B /* ViewBoardElement.swift */; };
-		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
-		DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */; };
 		DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */; };
 		DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */; };
 		DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */; };
@@ -52,7 +47,6 @@
 		DA6C103820AEB33C007F9A91 /* TestPresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */; };
 		DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */; };
 		DA6C103C20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */; };
-		DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001420A2FC1C00E50F0A /* ViewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
 		DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001A20A310C400E50F0A /* TestViewModelCard.swift */; };
 		DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001C20A3126200E50F0A /* ViewModelCard.swift */; };
@@ -66,9 +60,7 @@
 		DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */; };
 		DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */; };
 		DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70B20A83C8E000756C3 /* ViewModelBuilderColumns.swift */; };
-		DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAB20A199AC002461E6 /* ViewContants.swift */; };
 		DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAD20A19B13002461E6 /* TestViewBoard.swift */; };
-		DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAF20A19EFD002461E6 /* ViewBoard.swift */; };
 		DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */; };
 		DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */; };
 		DA978FB920A1A81C002461E6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
@@ -126,13 +118,11 @@
 /* Begin PBXFileReference section */
 		DA0BF78120AC04A3003CFD50 /* TestPresenter_Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Map.swift; sourceTree = "<group>"; };
 		DA0E58B4209F383500AD4425 /* TestViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewScroll.swift; sourceTree = "<group>"; };
-		DA0E58B6209F386300AD4425 /* ViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScroll.swift; sourceTree = "<group>"; };
 		DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA15451420A4691F00CCC59D /* TestController_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Transition.swift; sourceTree = "<group>"; };
 		DA15451620A46DAD00CCC59D /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA417C5720AAC73400D2BB8E /* MockViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewCard.swift; sourceTree = "<group>"; };
 		DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
-		DA47FB8020A2C27800E89334 /* ViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
 		DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelView.swift; sourceTree = "<group>"; };
 		DA47FB8420A2C33500E89334 /* ViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelView.swift; sourceTree = "<group>"; };
 		DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
@@ -151,10 +141,7 @@
 		DA613A6520AC45E20088A29B /* MapParentProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapParentProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeProtocol.swift; sourceTree = "<group>"; };
 		DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapNodeProtocol+Default.swift"; sourceTree = "<group>"; };
-		DA613A6B20AC50890088A29B /* ViewBoardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardElement.swift; sourceTree = "<group>"; };
-		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
-		DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardItem.swift; sourceTree = "<group>"; };
 		DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoardItem.swift; sourceTree = "<group>"; };
 		DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewCard.swift; sourceTree = "<group>"; };
 		DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoardItemProtocol.swift; sourceTree = "<group>"; };
@@ -169,7 +156,6 @@
 		DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterCard.swift; sourceTree = "<group>"; };
 		DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumn.swift; sourceTree = "<group>"; };
 		DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterNewCard.swift; sourceTree = "<group>"; };
-		DA6D001420A2FC1C00E50F0A /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
 		DA6D001A20A310C400E50F0A /* TestViewModelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelCard.swift; sourceTree = "<group>"; };
 		DA6D001C20A3126200E50F0A /* ViewModelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCard.swift; sourceTree = "<group>"; };
@@ -183,9 +169,7 @@
 		DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_Builders.swift; sourceTree = "<group>"; };
 		DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA75B70B20A83C8E000756C3 /* ViewModelBuilderColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderColumns.swift; sourceTree = "<group>"; };
-		DA978FAB20A199AC002461E6 /* ViewContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContants.swift; sourceTree = "<group>"; };
 		DA978FAD20A19B13002461E6 /* TestViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoard.swift; sourceTree = "<group>"; };
-		DA978FAF20A19EFD002461E6 /* ViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoard.swift; sourceTree = "<group>"; };
 		DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Outlets.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,14 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				DADB5EC5209B124700CFFC9A /* View.swift */,
-				DA978FAB20A199AC002461E6 /* ViewContants.swift */,
-				DA0E58B6209F386300AD4425 /* ViewScroll.swift */,
-				DA978FAF20A19EFD002461E6 /* ViewBoard.swift */,
-				DA613A6B20AC50890088A29B /* ViewBoardElement.swift */,
-				DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */,
-				DA47FB8020A2C27800E89334 /* ViewColumn.swift */,
-				DA6D001420A2FC1C00E50F0A /* ViewCard.swift */,
-				DA683E1A20A7067F006D15CE /* ViewNewCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,16 +594,13 @@
 				DAB7666C20AD5FC60090B7CA /* DragConstants.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
-				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
 				DAB7666E20AD61620090B7CA /* DragStateDynamic.swift in Sources */,
 				DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */,
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
-				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
 				DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */,
 				DAB7665A20AD597F0090B7CA /* DragPosition.swift in Sources */,
 				DAB7666220AD5E920090B7CA /* DragStateProtocol.swift in Sources */,
 				DAB7665620AD55940090B7CA /* Drag.swift in Sources */,
-				DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */,
 				DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */,
 				DA613A6620AC45E20088A29B /* MapParentProtocol+Default.swift in Sources */,
 				DAB7667020AD633F0090B7CA /* DragStateProtocol+Default.swift in Sources */,
@@ -637,16 +610,12 @@
 				DA5876C420ABFFD100E9A6B7 /* MapNewCard.swift in Sources */,
 				DAB7666620AD5EEB0090B7CA /* DragStateMoving.swift in Sources */,
 				DA613A6820AC47AD0088A29B /* MapNodeProtocol.swift in Sources */,
-				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */,
 				DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */,
-				DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */,
 				DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
-				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
 				DA5876BB20ABFE8500E9A6B7 /* Map.swift in Sources */,
-				DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */,
 				DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */,
 				DA5876BD20ABFE9E00E9A6B7 /* MapColumn.swift in Sources */,
 				DAB7667620ADCB000090B7CA /* MapProtocol.swift in Sources */,
@@ -654,7 +623,6 @@
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DAB7666A20AD5F730090B7CA /* DragPosition+Tools.swift in Sources */,
 				DAB7666820AD5EFF0090B7CA /* DragStateNone.swift in Sources */,
-				DA978FAC20A199AC002461E6 /* ViewContants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
