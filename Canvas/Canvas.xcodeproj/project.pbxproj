@@ -27,6 +27,8 @@
 		DA61314520AF3956002563BA /* PresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314420AF3956002563BA /* PresenterFactory.swift */; };
 		DA61314720AF3C9E002563BA /* PresenterItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */; };
 		DAA7315520B01FF4009A6C36 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA7315420B01FF4009A6C36 /* assets.xcassets */; };
+		DAA7315720B0201E009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
+		DAA7315820B02029009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
 		DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB5E59320AEFCCA00F860B3 /* Canvas.framework */; };
 		DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */; };
 		DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */; };
@@ -127,6 +129,7 @@
 		DA61314420AF3956002563BA /* PresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFactory.swift; sourceTree = "<group>"; };
 		DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterItemProtocol.swift; sourceTree = "<group>"; };
 		DAA7315420B01FF4009A6C36 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		DAA7315620B0201E009A6C36 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E59320AEFCCA00F860B3 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCanvas.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5AF20AF04D300F860B3 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA7315720B0201E009A6C36 /* Shared.framework in Frameworks */,
 				DA61312620AF10A2002563BA /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +218,7 @@
 			files = (
 				DA034AFE20AF4B93001E461F /* Board.framework in Frameworks */,
 				DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */,
+				DAA7315820B02029009A6C36 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +249,7 @@
 		DA61312420AF10A2002563BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAA7315620B0201E009A6C36 /* Shared.framework */,
 				DA61312520AF10A2002563BA /* Board.framework */,
 			);
 			name = Frameworks;
@@ -269,9 +275,9 @@
 		DAB5E58920AEFCCA00F860B3 = {
 			isa = PBXGroup;
 			children = (
-				DAA7315320B01FC5009A6C36 /* Assets */,
 				DAB5E5AD20AF04C200F860B3 /* Source */,
 				DAB5E5AE20AF04CC00F860B3 /* Tests */,
+				DAA7315320B01FC5009A6C36 /* Assets */,
 				DAB5E59420AEFCCA00F860B3 /* Products */,
 				DA61312420AF10A2002563BA /* Frameworks */,
 				DAB5E5AF20AF04D300F860B3 /* Configuration */,
