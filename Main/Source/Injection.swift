@@ -4,6 +4,7 @@ import Repository
 import Load
 import Home
 import Card
+import Canvas
 
 class Injection {
     func load() {
@@ -12,5 +13,6 @@ class Injection {
         Configuration.controllerLoadType = Load.Controller.self
         Configuration.controllerHomeType = Home.Controller.self
         Configuration.controllerCardType = Card.Controller.self
+        Configuration.canvasType = Canvas.self
     }
 }

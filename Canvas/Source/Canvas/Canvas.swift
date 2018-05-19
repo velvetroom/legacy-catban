@@ -2,11 +2,11 @@ import UIKit
 import Board
 import Shared
 
-class Canvas:CanvasProtocol, CanvasEditorProtocol {
-    weak var delegate:CanvasDelegateProtocol!
+public class Canvas:CanvasProtocol, CanvasEditorProtocol {
+    public weak var delegate:CanvasDelegateProtocol!
     var presenter:PresenterProtocol
     
-    var project:ProjectProtocol! {
+    public var project:ProjectProtocol! {
         get {
             return self.presenter.project
         }
@@ -15,18 +15,18 @@ class Canvas:CanvasProtocol, CanvasEditorProtocol {
         }
     }
     
-    var view:UIView {
+    public var view:UIView {
         get {
             return self.presenter.view
         }
     }
     
-    required init() {
+    public required init() {
         self.presenter = Presenter()
         self.presenter.canvas = self
     }
     
-    func refresh() {
+    public func refresh() {
         self.presenter.refresh()
     }
     
