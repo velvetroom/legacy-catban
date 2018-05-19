@@ -7,18 +7,22 @@ class Presenter:PresenterProtocol {
     var canvas:CanvasProtocol
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
+    weak var view:Shared.View?
     
     init() {
         self.canvas = Configuration.canvasType.init()
     }
     
     func didLoad(view:Shared.View) {
+        self.view = view
         self.loadCanvasOn(view:view.view)
         self.delegate.didLoadPresenter()
     }
     
     func shouldUpdate() {
-        self.canvas.project = self.controller.project
+        let project:ProjectManagedProtocol = self.controller.project
+        self.view?.title = project.name
+        self.canvas.project = project
         self.canvas.refresh()
     }
     
