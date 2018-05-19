@@ -1,15 +1,15 @@
 import Foundation
-@testable import Home
+@testable import Canvas
 
 class MockMapColumn:MapColumn {
-    var onAppendItem:((MapItemProtocol) -> Void)?
-    var onAddItem:((MapItemProtocol) -> Void)?
+    var onAppendItem:(() -> Void)?
+    var onAddItem:(() -> Void)?
     
     override func append(item:MapItemProtocol) {
-        self.onAppendItem?(item)
+        self.onAppendItem?()
     }
     
     override func add(item:MapItemProtocol) {
-        self.onAddItem?(item)
+        self.onAddItem?()
     }
 }

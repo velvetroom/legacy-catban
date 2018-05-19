@@ -1,26 +1,26 @@
 import UIKit
-@testable import Home
+@testable import Canvas
 
 class MockDragProtocol:DragProtocol {
-    var map:MapProtocol!
-    var controller:Controller!
-    var view:ViewBoardItem!
-    var mapItem:MapItemProtocol!
-    var position:DragPosition
+    var onDragBegin:(() -> Void)?
+    var onDragUpdate:(() -> Void)?
+    var onDragEnd:(() -> Void)?
+    var latestTouch:CGPoint
+    var viewItem:ViewItem!
     
     init() {
-        self.position = DragPosition()
+        self.latestTouch = CGPoint.zero
     }
     
-    func beginWith(view:ViewBoardItem, and touch:CGPoint) {
-        
+    func dragBegin() {
+        self.onDragBegin?()
     }
     
-    func update() {
-        
+    func dragUpdate() {
+        self.onDragUpdate?()
     }
     
-    func end() {
-        
+    func dragEnd() {
+        self.onDragEnd?()
     }
 }
