@@ -26,6 +26,7 @@
 		DA61314320AF3821002563BA /* PresenterCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314220AF3821002563BA /* PresenterCardProtocol.swift */; };
 		DA61314520AF3956002563BA /* PresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314420AF3956002563BA /* PresenterFactory.swift */; };
 		DA61314720AF3C9E002563BA /* PresenterItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */; };
+		DAA7315520B01FF4009A6C36 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA7315420B01FF4009A6C36 /* assets.xcassets */; };
 		DAB5E5A720AF047400F860B3 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB5E59320AEFCCA00F860B3 /* Canvas.framework */; };
 		DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B120AF080A00F860B3 /* DragStateChangerProtocol.swift */; };
 		DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5B220AF080A00F860B3 /* DragPosition+Tools.swift */; };
@@ -125,6 +126,7 @@
 		DA61314220AF3821002563BA /* PresenterCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterCardProtocol.swift; sourceTree = "<group>"; };
 		DA61314420AF3956002563BA /* PresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFactory.swift; sourceTree = "<group>"; };
 		DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterItemProtocol.swift; sourceTree = "<group>"; };
+		DAA7315420B01FF4009A6C36 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAB5E59320AEFCCA00F860B3 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5A220AF047400F860B3 /* TestsCanvas.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCanvas.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB5E5AF20AF04D300F860B3 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -256,9 +258,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DAA7315320B01FC5009A6C36 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DAA7315420B01FF4009A6C36 /* assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		DAB5E58920AEFCCA00F860B3 = {
 			isa = PBXGroup;
 			children = (
+				DAA7315320B01FC5009A6C36 /* Assets */,
 				DAB5E5AD20AF04C200F860B3 /* Source */,
 				DAB5E5AE20AF04CC00F860B3 /* Tests */,
 				DAB5E59420AEFCCA00F860B3 /* Products */,
@@ -530,6 +541,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA7315520B01FF4009A6C36 /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
