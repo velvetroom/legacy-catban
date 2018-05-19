@@ -7,7 +7,7 @@ class Presenter:PresenterProtocol {
     var model:ModelProtocol
     private var columnIndex:Int
     
-    var canvas: CanvasEditorProtocol {
+    var canvas:CanvasEditorProtocol {
         get {
             return self.model.canvas
         }

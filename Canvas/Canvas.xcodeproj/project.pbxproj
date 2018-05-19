@@ -62,6 +62,10 @@
 		DAB5E61E20AF080A00F860B3 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */; };
 		DAB5E66620AF081600F860B3 /* MockDragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E64220AF081600F860B3 /* MockDragProtocol.swift */; };
 		DAB5E66720AF081600F860B3 /* MockMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E64420AF081600F860B3 /* MockMapColumn.swift */; };
+		DADC95E820B045A100D8BB8F /* MockCanvasEditorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95E720B045A100D8BB8F /* MockCanvasEditorProtocol.swift */; };
+		DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95E920B0463000D8BB8F /* TestCanvas.swift */; };
+		DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95EB20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift */; };
+		DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
 		DAB5E64220AF081600F860B3 /* MockDragProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDragProtocol.swift; sourceTree = "<group>"; };
 		DAB5E64420AF081600F860B3 /* MockMapColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMapColumn.swift; sourceTree = "<group>"; };
+		DADC95E720B045A100D8BB8F /* MockCanvasEditorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasEditorProtocol.swift; sourceTree = "<group>"; };
+		DADC95E920B0463000D8BB8F /* TestCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCanvas.swift; sourceTree = "<group>"; };
+		DADC95EB20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasDelegateProtocol.swift; sourceTree = "<group>"; };
+		DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +176,10 @@
 		DA535F3220AF09A1000FB3FD /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
+				DADC95E920B0463000D8BB8F /* TestCanvas.swift */,
 				DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */,
+				DADC95E720B045A100D8BB8F /* MockCanvasEditorProtocol.swift */,
+				DADC95EB20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				DA535F3220AF09A1000FB3FD /* Canvas */,
+				DADC95ED20B046EA00D8BB8F /* Presenter */,
 				DAB5E64120AF081600F860B3 /* Drag */,
 				DAB5E64320AF081600F860B3 /* Map */,
 			);
@@ -326,6 +338,14 @@
 				DAB5E64420AF081600F860B3 /* MockMapColumn.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		DADC95ED20B046EA00D8BB8F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,9 +509,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
+				DADC95E820B045A100D8BB8F /* MockCanvasEditorProtocol.swift in Sources */,
+				DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */,
 				DAB5E66620AF081600F860B3 /* MockDragProtocol.swift in Sources */,
 				DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */,
 				DAB5E66720AF081600F860B3 /* MockMapColumn.swift in Sources */,
+				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
