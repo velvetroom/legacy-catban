@@ -21,9 +21,10 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.columns = []
     }
     
-    func add(column:MapColumn) {
-        column.minX = self.maxContentWidth
-        self.columns.append(column)
+    func add(columns:[MapColumn]) {
+        for column:MapColumn in columns {
+            self.add(column:column)
+        }
         self.updateSize()
     }
     
@@ -60,6 +61,11 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.state.event = self
         self.state.changer = self
         self.state.mapEditor = self
+    }
+    
+    private func add(column:MapColumn) {
+        column.minX = self.maxContentWidth
+        self.columns.append(column)
     }
     
     private var maxContentHeight:CGFloat {

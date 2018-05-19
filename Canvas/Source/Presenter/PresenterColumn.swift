@@ -2,25 +2,24 @@ import Foundation
 import Board
 
 class PresenterColumn:PresenterColumnProtocol {
-    weak var mapEditor:MapEditorProtocol!
     weak var view:View!
     weak var column:ColumnProtocol!
     var viewColumn:ViewColumn
     var mapColumn:MapColumn
-    var first:Bool
     
     required init() {
         self.viewColumn = ViewColumn()
         self.mapColumn = MapColumn()
         self.mapColumn.view = self.viewColumn
-        self.first = false
     }
     
     func load() {
         self.configureView()
         self.loadItems()
-        self.loadNewCard()
-        self.mapEditor.add(column:self.mapColumn)
+    }
+    
+    func loadNewCard() {
+        self.loadWith(loader:PresenterFactory.makeNewCardLoader())
     }
     
     private func configureView() {
@@ -51,12 +50,6 @@ class PresenterColumn:PresenterColumnProtocol {
             var loader:PresenterCardProtocol = PresenterFactory.makeCardLoader()
             loader.card = card
             self.loadWith(loader:loader)
-        }
-    }
-    
-    func loadNewCard() {
-        if self.first {
-            self.loadWith(loader:PresenterFactory.makeNewCardLoader())
         }
     }
     
