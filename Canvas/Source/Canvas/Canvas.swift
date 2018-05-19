@@ -22,13 +22,14 @@ class Canvas:CanvasProtocol, CanvasEditorProtocol {
     
     init() {
         self.presenter = Presenter()
+        self.presenter.canvas = self
     }
     
     func refresh() {
         self.presenter.refresh()
     }
     
-    func editCardWith(identifier: String) {
+    func editCardWith(identifier:String) {
         
     }
     

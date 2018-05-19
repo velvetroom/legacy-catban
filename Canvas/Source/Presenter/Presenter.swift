@@ -7,10 +7,19 @@ class Presenter:PresenterProtocol {
     var model:ModelProtocol
     private var columnIndex:Int
     
+    var canvas: CanvasEditorProtocol {
+        get {
+            return self.model.canvas
+        }
+        set(newCanvas) {
+            self.model.canvas = newCanvas
+        }
+    }
+    
     init() {
+        self.columnIndex = 0
         self.view = View()
         self.model = Model()
-        self.columnIndex = 0
         self.assignReferences()
     }
     
