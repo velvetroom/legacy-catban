@@ -35,15 +35,12 @@
 		DA613A6820AC47AD0088A29B /* MapNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */; };
 		DA613A6A20AC49F90088A29B /* MapNodeProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */; };
 		DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A6B20AC50890088A29B /* ViewBoardElement.swift */; };
-		DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */; };
-		DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */; };
 		DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1A20A7067F006D15CE /* ViewNewCard.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
 		DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */; };
 		DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */; };
 		DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */; };
 		DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */; };
-		DA683E2B20A71567006D15CE /* PresenterUpdaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2A20A71567006D15CE /* PresenterUpdaterProtocol.swift */; };
 		DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */; };
 		DA6C102620AE9C05007F9A91 /* TestPresenterUpdaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */; };
 		DA6C102820AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */; };
@@ -51,7 +48,6 @@
 		DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */; };
 		DA6C102E20AEA17D007F9A91 /* MockViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */; };
 		DA6C103020AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */; };
-		DA6C103420AEAEA1007F9A91 /* PresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */; };
 		DA6C103620AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */; };
 		DA6C103820AEB33C007F9A91 /* TestPresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */; };
 		DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */; };
@@ -65,9 +61,6 @@
 		DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D002220A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift */; };
 		DA6FDEEF20A7178B00D148DD /* TestPresenter_Updaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */; };
 		DA6FDEF120A7179E00D148DD /* MockPresenterUpdaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */; };
-		DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF220A71BB800D148DD /* PresenterUpdaterView.swift */; };
-		DA6FDEF720A71C5E00D148DD /* PresenterUpdaterScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */; };
-		DA6FDEFD20A71CFD00D148DD /* PresenterUpdaterColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */; };
 		DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70320A834EE000756C3 /* ViewModelBuilderProtocol.swift */; };
 		DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */; };
 		DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */; };
@@ -77,13 +70,11 @@
 		DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAD20A19B13002461E6 /* TestViewBoard.swift */; };
 		DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAF20A19EFD002461E6 /* ViewBoard.swift */; };
 		DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */; };
-		DA978FB420A1A3F5002461E6 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB320A1A3F5002461E6 /* PresenterOutlets.swift */; };
 		DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */; };
 		DA978FB920A1A81C002461E6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBE20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */; };
-		DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FBF20A1AB6D002461E6 /* PresenterOutletsLoader.swift */; };
 		DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC320A1B467002461E6 /* ViewModel.swift */; };
 		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
 		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
@@ -101,7 +92,6 @@
 		DAB7666E20AD61620090B7CA /* DragStateDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666D20AD61620090B7CA /* DragStateDynamic.swift */; };
 		DAB7667020AD633F0090B7CA /* DragStateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */; };
 		DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */; };
-		DAB7667420AD9B9A0090B7CA /* PresenterUpdaterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */; };
 		DAB7667620ADCB000090B7CA /* MapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667520ADCB000090B7CA /* MapProtocol.swift */; };
 		DAB7667820ADCF0A0090B7CA /* DragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667720ADCF0A0090B7CA /* DragProtocol.swift */; };
 		DAB7667A20ADD08D0090B7CA /* DragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7667920ADD08D0090B7CA /* DragStateChangerProtocol.swift */; };
@@ -115,9 +105,6 @@
 		DAF84E6120A85DBC0000BF06 /* ViewModelConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6020A85DBC0000BF06 /* ViewModelConstants.swift */; };
 		DAF84E6320A85E160000BF06 /* TestViewModelBuilder_NewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */; };
 		DAF84E6520A861460000BF06 /* ViewModelBuilderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6420A861460000BF06 /* ViewModelBuilderItems.swift */; };
-		DAF84E6720A8688E0000BF06 /* PresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */; };
-		DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */; };
-		DAF84E6B20A870C50000BF06 /* PresenterUpdaterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */; };
 		DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC0209CA9E30005F5D2 /* MockViewDelegateProtocol.swift */; };
 		DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */; };
 		DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */; };
@@ -165,15 +152,12 @@
 		DA613A6720AC47AD0088A29B /* MapNodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeProtocol.swift; sourceTree = "<group>"; };
 		DA613A6920AC49F90088A29B /* MapNodeProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapNodeProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA613A6B20AC50890088A29B /* ViewBoardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardElement.swift; sourceTree = "<group>"; };
-		DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
-		DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresenterUpdaterBoardItemProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA683E1A20A7067F006D15CE /* ViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E1E20A70C4C006D15CE /* ViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardItem.swift; sourceTree = "<group>"; };
 		DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoardItem.swift; sourceTree = "<group>"; };
 		DA683E2420A70E64006D15CE /* ViewModelNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewCard.swift; sourceTree = "<group>"; };
 		DA683E2620A70E71006D15CE /* ViewModelBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBoardItemProtocol.swift; sourceTree = "<group>"; };
-		DA683E2A20A71567006D15CE /* PresenterUpdaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterProtocol.swift; sourceTree = "<group>"; };
 		DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapProtocol.swift; sourceTree = "<group>"; };
 		DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterView.swift; sourceTree = "<group>"; };
 		DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterScroll.swift; sourceTree = "<group>"; };
@@ -181,7 +165,6 @@
 		DA6C102B20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumns.swift; sourceTree = "<group>"; };
 		DA6C102D20AEA17D007F9A91 /* MockViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewBoard.swift; sourceTree = "<group>"; };
 		DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
-		DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterFactory.swift; sourceTree = "<group>"; };
 		DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterFactory.swift; sourceTree = "<group>"; };
 		DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterCard.swift; sourceTree = "<group>"; };
 		DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumn.swift; sourceTree = "<group>"; };
@@ -195,9 +178,6 @@
 		DA6D002220A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderColumnsTextContent.swift; sourceTree = "<group>"; };
 		DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Updaters.swift; sourceTree = "<group>"; };
 		DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterUpdaterProtocol.swift; sourceTree = "<group>"; };
-		DA6FDEF220A71BB800D148DD /* PresenterUpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterView.swift; sourceTree = "<group>"; };
-		DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterScroll.swift; sourceTree = "<group>"; };
-		DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterColumns.swift; sourceTree = "<group>"; };
 		DA75B70320A834EE000756C3 /* ViewModelBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderProtocol.swift; sourceTree = "<group>"; };
 		DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelBuilderProtocol.swift; sourceTree = "<group>"; };
 		DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_Builders.swift; sourceTree = "<group>"; };
@@ -207,11 +187,9 @@
 		DA978FAD20A19B13002461E6 /* TestViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoard.swift; sourceTree = "<group>"; };
 		DA978FAF20A19EFD002461E6 /* ViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoard.swift; sourceTree = "<group>"; };
 		DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
-		DA978FB320A1A3F5002461E6 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
 		DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Outlets.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutletsLoader.swift; sourceTree = "<group>"; };
-		DA978FBF20A1AB6D002461E6 /* PresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutletsLoader.swift; sourceTree = "<group>"; };
 		DA978FC320A1B467002461E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
@@ -229,7 +207,6 @@
 		DAB7666D20AD61620090B7CA /* DragStateDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragStateDynamic.swift; sourceTree = "<group>"; };
 		DAB7666F20AD633F0090B7CA /* DragStateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DragStateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAB7667120AD7B7D0090B7CA /* MapItemProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapItemProtocol+Default.swift"; sourceTree = "<group>"; };
-		DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterBoard.swift; sourceTree = "<group>"; };
 		DAB7667520ADCB000090B7CA /* MapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProtocol.swift; sourceTree = "<group>"; };
 		DAB7667720ADCF0A0090B7CA /* DragProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragProtocol.swift; sourceTree = "<group>"; };
 		DAB7667920ADD08D0090B7CA /* DragStateChangerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragStateChangerProtocol.swift; sourceTree = "<group>"; };
@@ -243,9 +220,6 @@
 		DAF84E6020A85DBC0000BF06 /* ViewModelConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelConstants.swift; sourceTree = "<group>"; };
 		DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_NewCard.swift; sourceTree = "<group>"; };
 		DAF84E6420A861460000BF06 /* ViewModelBuilderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderItems.swift; sourceTree = "<group>"; };
-		DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterCard.swift; sourceTree = "<group>"; };
-		DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterBoardItemProtocol.swift; sourceTree = "<group>"; };
-		DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterUpdaterNewCard.swift; sourceTree = "<group>"; };
 		DAFD2FC0209CA9E30005F5D2 /* MockViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockControllerProtocol.swift; sourceTree = "<group>"; };
@@ -424,19 +398,6 @@
 			isa = PBXGroup;
 			children = (
 				DAF7E65C209B063300B8A39A /* Presenter.swift */,
-				DA978FB320A1A3F5002461E6 /* PresenterOutlets.swift */,
-				DA978FBF20A1AB6D002461E6 /* PresenterOutletsLoader.swift */,
-				DA683E2A20A71567006D15CE /* PresenterUpdaterProtocol.swift */,
-				DA6FDEF220A71BB800D148DD /* PresenterUpdaterView.swift */,
-				DA6FDEF620A71C5E00D148DD /* PresenterUpdaterScroll.swift */,
-				DAB7667320AD9B9A0090B7CA /* PresenterUpdaterBoard.swift */,
-				DA6FDEFC20A71CFD00D148DD /* PresenterUpdaterColumns.swift */,
-				DA613A7320AC65790088A29B /* PresenterUpdaterColumnsItem.swift */,
-				DAF84E6820A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift */,
-				DA613A7920AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift */,
-				DA6C103320AEAEA1007F9A91 /* PresenterUpdaterFactory.swift */,
-				DAF84E6620A8688E0000BF06 /* PresenterUpdaterCard.swift */,
-				DAF84E6A20A870C50000BF06 /* PresenterUpdaterNewCard.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -647,9 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA683E2B20A71567006D15CE /* PresenterUpdaterProtocol.swift in Sources */,
 				DA5876C120ABFEE200E9A6B7 /* MapCard.swift in Sources */,
-				DAF84E6B20A870C50000BF06 /* PresenterUpdaterNewCard.swift in Sources */,
 				DAB7667820ADCF0A0090B7CA /* DragProtocol.swift in Sources */,
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DA683E2520A70E64006D15CE /* ViewModelNewCard.swift in Sources */,
@@ -658,23 +617,17 @@
 				DAB7666420AD5ED40090B7CA /* DragStateFixed.swift in Sources */,
 				DAB7666C20AD5FC60090B7CA /* DragConstants.swift in Sources */,
 				DA683E2720A70E71006D15CE /* ViewModelBoardItemProtocol.swift in Sources */,
-				DA613A7420AC65790088A29B /* PresenterUpdaterColumnsItem.swift in Sources */,
 				DAF84E5520A84F960000BF06 /* ViewModelBuilderView.swift in Sources */,
 				DA47FB8120A2C27800E89334 /* ViewColumn.swift in Sources */,
-				DA6FDEFD20A71CFD00D148DD /* PresenterUpdaterColumns.swift in Sources */,
 				DAB7666E20AD61620090B7CA /* DragStateDynamic.swift in Sources */,
 				DA75B70420A834EE000756C3 /* ViewModelBuilderProtocol.swift in Sources */,
 				DA978FC420A1B467002461E6 /* ViewModel.swift in Sources */,
-				DA6FDEF720A71C5E00D148DD /* PresenterUpdaterScroll.swift in Sources */,
 				DA0E58B7209F386300AD4425 /* ViewScroll.swift in Sources */,
 				DA47FB9320A2C7C100E89334 /* ViewModelColumn.swift in Sources */,
 				DAB7665A20AD597F0090B7CA /* DragPosition.swift in Sources */,
 				DAB7666220AD5E920090B7CA /* DragStateProtocol.swift in Sources */,
-				DAB7667420AD9B9A0090B7CA /* PresenterUpdaterBoard.swift in Sources */,
-				DA6C103420AEAEA1007F9A91 /* PresenterUpdaterFactory.swift in Sources */,
 				DAB7665620AD55940090B7CA /* Drag.swift in Sources */,
 				DA683E1B20A7067F006D15CE /* ViewNewCard.swift in Sources */,
-				DAF84E6720A8688E0000BF06 /* PresenterUpdaterCard.swift in Sources */,
 				DAEE4AA620A1F1A1002D1419 /* ViewModelBuilder.swift in Sources */,
 				DA613A6620AC45E20088A29B /* MapParentProtocol+Default.swift in Sources */,
 				DAB7667020AD633F0090B7CA /* DragStateProtocol+Default.swift in Sources */,
@@ -683,17 +636,14 @@
 				DAB6A40120AD532200C1B8D6 /* MapItemProtocol.swift in Sources */,
 				DA5876C420ABFFD100E9A6B7 /* MapNewCard.swift in Sources */,
 				DAB7666620AD5EEB0090B7CA /* DragStateMoving.swift in Sources */,
-				DA613A7A20AC74BF0088A29B /* PresenterUpdaterBoardItemProtocol+Default.swift in Sources */,
 				DA613A6820AC47AD0088A29B /* MapNodeProtocol.swift in Sources */,
 				DA978FB020A19EFD002461E6 /* ViewBoard.swift in Sources */,
 				DA75B70C20A83C8E000756C3 /* ViewModelBuilderColumns.swift in Sources */,
 				DA6D002320A3202400E50F0A /* ViewModelBuilderColumnsTextContent.swift in Sources */,
-				DA978FB420A1A3F5002461E6 /* PresenterOutlets.swift in Sources */,
 				DA613A6C20AC50890088A29B /* ViewBoardElement.swift in Sources */,
 				DAB7667220AD7B7D0090B7CA /* MapItemProtocol+Default.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 				DA47FB8520A2C33500E89334 /* ViewModelView.swift in Sources */,
-				DA978FC020A1AB6D002461E6 /* PresenterOutletsLoader.swift in Sources */,
 				DA683E1F20A70C4C006D15CE /* ViewBoardItem.swift in Sources */,
 				DA5876BB20ABFE8500E9A6B7 /* Map.swift in Sources */,
 				DA6D001520A2FC1C00E50F0A /* ViewCard.swift in Sources */,
@@ -701,8 +651,6 @@
 				DA5876BD20ABFE9E00E9A6B7 /* MapColumn.swift in Sources */,
 				DAB7667620ADCB000090B7CA /* MapProtocol.swift in Sources */,
 				DA613A6220AC30330088A29B /* MapParentProtocol.swift in Sources */,
-				DAF84E6920A868C80000BF06 /* PresenterUpdaterBoardItemProtocol.swift in Sources */,
-				DA6FDEF520A71C2F00D148DD /* PresenterUpdaterView.swift in Sources */,
 				DA6D001D20A3126200E50F0A /* ViewModelCard.swift in Sources */,
 				DAB7666A20AD5F730090B7CA /* DragPosition+Tools.swift in Sources */,
 				DAB7666820AD5EFF0090B7CA /* DragStateNone.swift in Sources */,
