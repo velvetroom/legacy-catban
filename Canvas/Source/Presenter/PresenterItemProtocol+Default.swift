@@ -21,7 +21,7 @@ extension PresenterItemProtocol {
     
     private func configureConstraints() {
         self.viewItem.layoutTop = self.viewItem.topAnchor.constraint(equalTo:self.view.topAnchor)
-        self.viewItem.layoutLeft = self.viewItem.leftAnchor.constraint(equalTo:self.viewItem.leftAnchor)
+        self.viewItem.layoutLeft = self.viewItem.leftAnchor.constraint(equalTo:self.view.leftAnchor)
         self.viewItem.layoutHeight = self.viewItem.heightAnchor.constraint(equalToConstant:self.height)
         self.viewItem.layoutWidth = self.viewItem.widthAnchor.constraint(equalToConstant:Constants.Column.width)
     }
