@@ -39,28 +39,28 @@ class TestModel_AddItem:XCTestCase {
     func testAddItemWidthLeftOffset() {
         self.layoutLeftItem.constant = 0
         
-        self.model.add(item:self.item)
+        self.model.order(item:self.item)
         XCTAssertNotNil(self.columnA.childItem, "Item not added")
     }
     
     func testAddItemWidthRightOffset() {
         self.layoutLeftItem.constant = 2000
         
-        self.model.add(item:self.item)
+        self.model.order(item:self.item)
         XCTAssertNotNil(self.columnB.childItem, "Item not added")
     }
     
     func testAddItemToFirstColumn() {
         self.layoutLeftItem.constant = Constants.columnALeft + 10
         
-        self.model.add(item:self.item)
+        self.model.order(item:self.item)
         XCTAssertNotNil(self.columnA.childItem, "Item not added")
     }
     
     func testAddItemToSecondColumn() {
         self.layoutLeftItem.constant = Constants.columnBLeft + 10
         
-        self.model.add(item:self.item)
+        self.model.order(item:self.item)
         XCTAssertNotNil(self.columnB.childItem, "Item not added")
     }
     

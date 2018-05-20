@@ -37,7 +37,7 @@ class MockModelProtocol:ModelProtocol {
         self.onAddColumns?()
     }
     
-    func add(item:MapItemProtocol) {
+    func order(item:MapItemProtocol) {
         self.onAddItem?()
     }
 }

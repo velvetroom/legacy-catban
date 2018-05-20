@@ -4,12 +4,12 @@ class MapColumn:MapColumnProtocol {
     weak var view:ViewNode!
     var childItem:MapItemProtocol?
     
-    func add(item:MapItemProtocol) {
+    func order(item:MapItemProtocol) {
         let parent:MapParentProtocol = self.parentFor(item:item)
         parent.replaceChild(item:item)
     }
     
-    func append(item:MapItemProtocol) {
+    func add(item:MapItemProtocol) {
         self.lastParent.replaceChild(item:item)
     }
     
@@ -48,7 +48,7 @@ class MapColumn:MapColumnProtocol {
         }
     }
     
-    private func parentFor(item:MapItemProtocol) -> MapParentProtocol {
+    func parentFor(item:MapItemProtocol) -> MapParentProtocol {
         var parent:MapParentProtocol = self.lastParent
         while parent.minY > item.minY {
             guard

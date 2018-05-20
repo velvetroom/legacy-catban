@@ -4,7 +4,7 @@ extension PresenterItemProtocol {
     func load() {
         self.assignReferences()
         self.configureView()
-        self.mapColumn.append(item:self.mapItem)
+        self.mapColumn.add(item:self.mapItem)
     }
     
     private func assignReferences() {

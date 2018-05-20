@@ -5,11 +5,11 @@ class MockMapColumn:MapColumn {
     var onAppendItem:(() -> Void)?
     var onAddItem:(() -> Void)?
     
-    override func append(item:MapItemProtocol) {
+    override func add(item:MapItemProtocol) {
         self.onAppendItem?()
     }
     
-    override func add(item:MapItemProtocol) {
+    override func order(item:MapItemProtocol) {
         self.onAddItem?()
     }
 }

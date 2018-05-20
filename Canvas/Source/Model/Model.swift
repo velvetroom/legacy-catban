@@ -28,7 +28,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.updateSize()
     }
     
-    func add(item:MapItemProtocol) {
+    func order(item:MapItemProtocol) {
         var parentColumn:MapColumnProtocol? = self.columns.first
         for column:MapColumnProtocol in self.columns {
             parentColumn = column
@@ -36,7 +36,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
                 break
             }
         }
-        parentColumn?.add(item:item)
+        parentColumn?.order(item:item)
         self.updateSize()
     }
     

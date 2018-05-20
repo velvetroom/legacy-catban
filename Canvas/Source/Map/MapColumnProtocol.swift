@@ -4,5 +4,5 @@ protocol MapColumnProtocol:MapParentProtocol {
     var height:CGFloat { get }
     
     func add(item:MapItemProtocol)
-    func append(item:MapItemProtocol)
+    func order(item:MapItemProtocol)
 }
