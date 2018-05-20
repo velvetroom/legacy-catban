@@ -33,7 +33,8 @@ class TestDragStateProtocol:XCTestCase {
     
     func testTriggerActionChangesState() {
         var called:Bool = false
-        self.changer.onChange = {
+        self.changer.onChange = { (stateType:DragStateProtocol.Type) in
+            XCTAssertTrue(stateType == DragStateNone.self, "Invalid type")
             called = true
         }
         
@@ -53,7 +54,8 @@ class TestDragStateProtocol:XCTestCase {
     
     func testFinishDragChangesState() {
         var called:Bool = false
-        self.changer.onChange = {
+        self.changer.onChange = { (stateType:DragStateProtocol.Type) in
+            XCTAssertTrue(stateType == DragStateNone.self, "Invalid type")
             called = true
         }
         

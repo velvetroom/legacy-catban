@@ -19,14 +19,14 @@ class ViewItem:ViewNode {
     func stateNormal() { }
     func triggerAction(canvas:CanvasEditorProtocol) { }
     
-    final func bringToFront() {
+    func bringToFront() {
         guard
             let superView:UIView = self.superview
         else { return }
         superView.bringSubview(toFront:self)
     }
     
-    final func animateChanges() {
+    func animateChanges() {
         UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
             self?.superview?.layoutIfNeeded()
         }
