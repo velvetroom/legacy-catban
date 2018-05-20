@@ -1,6 +1,6 @@
 import Foundation
 
-class MapCard:MapItemProtocol, MapParentProtocol {
+class MapCard:MapCardProtocol {
     weak var view:ViewNode!
     weak var parent:MapParentProtocol!
     var childItem:MapItemProtocol?
