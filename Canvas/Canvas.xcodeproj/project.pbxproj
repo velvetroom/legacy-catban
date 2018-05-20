@@ -86,6 +86,9 @@
 		DAF85E9620B1AA400053B995 /* MockDragStateChangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9520B1AA400053B995 /* MockDragStateChangerProtocol.swift */; };
 		DAF85E9820B1ACAD0053B995 /* TestDragStateDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9720B1ACAD0053B995 /* TestDragStateDynamic.swift */; };
 		DAF85E9A20B1AF5C0053B995 /* MockMapParentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9920B1AF5C0053B995 /* MockMapParentProtocol.swift */; };
+		DAF85E9C20B1BCEC0053B995 /* TestDragStateNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9B20B1BCEC0053B995 /* TestDragStateNone.swift */; };
+		DAF85E9E20B1BE160053B995 /* MockMapEditorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9D20B1BE160053B995 /* MockMapEditorProtocol.swift */; };
+		DAF85EA020B1BEB00053B995 /* TestDragStateFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E9F20B1BEB00053B995 /* TestDragStateFixed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +181,9 @@
 		DAF85E9520B1AA400053B995 /* MockDragStateChangerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateChangerProtocol.swift; sourceTree = "<group>"; };
 		DAF85E9720B1ACAD0053B995 /* TestDragStateDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDragStateDynamic.swift; sourceTree = "<group>"; };
 		DAF85E9920B1AF5C0053B995 /* MockMapParentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapParentProtocol.swift; sourceTree = "<group>"; };
+		DAF85E9B20B1BCEC0053B995 /* TestDragStateNone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDragStateNone.swift; sourceTree = "<group>"; };
+		DAF85E9D20B1BE160053B995 /* MockMapEditorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapEditorProtocol.swift; sourceTree = "<group>"; };
+		DAF85E9F20B1BEB00053B995 /* TestDragStateFixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDragStateFixed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,7 +379,9 @@
 				DAF85E8D20B18C520053B995 /* TestDragPosition.swift */,
 				DAF85E8B20B1896F0053B995 /* TestDragPosition_Moving.swift */,
 				DAF85E9120B1911C0053B995 /* TestDragStateProtocol.swift */,
+				DAF85E9B20B1BCEC0053B995 /* TestDragStateNone.swift */,
 				DAF85E9720B1ACAD0053B995 /* TestDragStateDynamic.swift */,
+				DAF85E9F20B1BEB00053B995 /* TestDragStateFixed.swift */,
 				DAF85E9320B192760053B995 /* MockDragEventProtocol.swift */,
 				DAB5E64220AF081600F860B3 /* MockDragProtocol.swift */,
 				DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */,
@@ -390,6 +398,7 @@
 				DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */,
 				DAF85E8F20B18CEC0053B995 /* MockMapItemProtocol.swift */,
 				DAF85E9920B1AF5C0053B995 /* MockMapParentProtocol.swift */,
+				DAF85E9D20B1BE160053B995 /* MockMapEditorProtocol.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -589,6 +598,7 @@
 				DAF85E9620B1AA400053B995 /* MockDragStateChangerProtocol.swift in Sources */,
 				DAF85E9820B1ACAD0053B995 /* TestDragStateDynamic.swift in Sources */,
 				DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */,
+				DAF85E9E20B1BE160053B995 /* MockMapEditorProtocol.swift in Sources */,
 				DAF85E9020B18CEC0053B995 /* MockMapItemProtocol.swift in Sources */,
 				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
 				DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */,
@@ -596,11 +606,13 @@
 				DAF85E8E20B18C520053B995 /* TestDragPosition.swift in Sources */,
 				DAF85E8C20B1896F0053B995 /* TestDragPosition_Moving.swift in Sources */,
 				DAF85E9220B1911C0053B995 /* TestDragStateProtocol.swift in Sources */,
+				DAF85EA020B1BEB00053B995 /* TestDragStateFixed.swift in Sources */,
 				DADC95E820B045A100D8BB8F /* MockCanvasEditorProtocol.swift in Sources */,
 				DAF85E9420B192760053B995 /* MockDragEventProtocol.swift in Sources */,
 				DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */,
 				DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */,
 				DADC95F420B049B200D8BB8F /* TestModel.swift in Sources */,
+				DAF85E9C20B1BCEC0053B995 /* TestDragStateNone.swift in Sources */,
 				DAB5E66620AF081600F860B3 /* MockDragProtocol.swift in Sources */,
 				DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */,
 				DADC95F920B04A7A00D8BB8F /* MockViewItem.swift in Sources */,
