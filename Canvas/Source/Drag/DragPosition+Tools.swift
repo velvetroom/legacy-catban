@@ -1,21 +1,6 @@
 import UIKit
 
 extension DragPosition {
-    var deltaTouch:CGPoint {
-        get {
-            let deltaX:CGFloat = self.initialTouch.x - self.latestTouch.x
-            let deltaY:CGFloat = self.initialTouch.y - self.latestTouch.y
-            return CGPoint(x:deltaX, y:deltaY)
-        }
-    }
-    
-    var touchVector:CGFloat {
-        get {
-            let delta:CGPoint = self.deltaTouch
-            return abs(delta.x) + abs(delta.y)
-        }
-    }
-    
     var isMoving:Bool {
         get {
             return self.touchVector > Constants.Drag.deltaForMovement
@@ -32,5 +17,20 @@ extension DragPosition {
         let deltaTouch:CGPoint = self.deltaTouch
         item.minX = self.initialItem.x - deltaTouch.x
         item.minY = self.initialItem.y - deltaTouch.y
+    }
+    
+    private var deltaTouch:CGPoint {
+        get {
+            let deltaX:CGFloat = self.initialTouch.x - self.latestTouch.x
+            let deltaY:CGFloat = self.initialTouch.y - self.latestTouch.y
+            return CGPoint(x:deltaX, y:deltaY)
+        }
+    }
+    
+    private var touchVector:CGFloat {
+        get {
+            let delta:CGPoint = self.deltaTouch
+            return abs(delta.x) + abs(delta.y)
+        }
     }
 }
