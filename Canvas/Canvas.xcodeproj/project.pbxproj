@@ -96,6 +96,7 @@
 		DAF85EAA20B1C3B40053B995 /* MockViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EA920B1C3B40053B995 /* MockViewNode.swift */; };
 		DAF85EAC20B1C5390053B995 /* MapCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAB20B1C5390053B995 /* MapCardProtocol.swift */; };
 		DAF85EAE20B1C5E00053B995 /* MockMapCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAD20B1C5E00053B995 /* MockMapCardProtocol.swift */; };
+		DAF85EB020B1CDA60053B995 /* TestMapColumn_Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAF20B1CDA60053B995 /* TestMapColumn_Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +199,7 @@
 		DAF85EA920B1C3B40053B995 /* MockViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewNode.swift; sourceTree = "<group>"; };
 		DAF85EAB20B1C5390053B995 /* MapCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCardProtocol.swift; sourceTree = "<group>"; };
 		DAF85EAD20B1C5E00053B995 /* MockMapCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapCardProtocol.swift; sourceTree = "<group>"; };
+		DAF85EAF20B1CDA60053B995 /* TestMapColumn_Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapColumn_Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF85EA720B1C2750053B995 /* TestMapColumn.swift */,
+				DAF85EAF20B1CDA60053B995 /* TestMapColumn_Order.swift */,
 				DAB5E64420AF081600F860B3 /* MockMapColumn.swift */,
 				DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */,
 				DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */,
@@ -624,6 +627,7 @@
 				DAF85E9020B18CEC0053B995 /* MockMapItemProtocol.swift in Sources */,
 				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
 				DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */,
+				DAF85EB020B1CDA60053B995 /* TestMapColumn_Order.swift in Sources */,
 				DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */,
 				DAF85E8E20B18C520053B995 /* TestDragPosition.swift in Sources */,
 				DAF85E8C20B1896F0053B995 /* TestDragPosition_Moving.swift in Sources */,
