@@ -2,14 +2,14 @@ import Foundation
 @testable import Canvas
 
 class MockMapColumn:MapColumn {
-    var onAppendItem:(() -> Void)?
     var onAddItem:(() -> Void)?
+    var onOrderItem:(() -> Void)?
     
     override func add(item:MapItemProtocol) {
-        self.onAppendItem?()
+        self.onAddItem?()
     }
     
     override func order(item:MapItemProtocol) {
-        self.onAddItem?()
+        self.onOrderItem?()
     }
 }

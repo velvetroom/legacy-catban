@@ -7,7 +7,7 @@ class MockModelProtocol:ModelProtocol {
     var onDragUpdate:(() -> Void)?
     var onDragEnd:(() -> Void)?
     var onAddColumns:(() -> Void)?
-    var onAddItem:(() -> Void)?
+    var onOrderItem:(() -> Void)?
     var canvas:CanvasEditorProtocol!
     var viewItem:ViewItem!
     var mapDelegate:MapDelegateProtocol!
@@ -38,6 +38,6 @@ class MockModelProtocol:ModelProtocol {
     }
     
     func order(item:MapItemProtocol) {
-        self.onAddItem?()
+        self.onOrderItem?()
     }
 }

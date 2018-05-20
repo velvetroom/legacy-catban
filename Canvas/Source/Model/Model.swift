@@ -63,12 +63,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.state.mapEditor = self
     }
     
-    private func add(column:MapColumnProtocol) {
-        column.minX = self.maxContentWidth
-        self.columns.append(column)
-    }
-    
-    private var maxContentHeight:CGFloat {
+    var contentHeight:CGFloat {
         get {
             var maxHeight:CGFloat = 0
             for column:MapColumnProtocol in self.columns {
@@ -81,7 +76,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         }
     }
     
-    private var maxContentWidth:CGFloat {
+    var contentWidth:CGFloat {
         get {
             var width:CGFloat = Constants.Board.paddingHorizontal
             if let lastColumn:MapColumnProtocol = self.columns.last {
@@ -91,8 +86,13 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         }
     }
     
+    private func add(column:MapColumnProtocol) {
+        column.minX = self.contentWidth
+        self.columns.append(column)
+    }
+    
     private func updateSize() {
-        let size:CGSize = CGSize(width:self.maxContentWidth, height:self.maxContentHeight)
+        let size:CGSize = CGSize(width:self.contentWidth, height:self.contentHeight)
         self.mapDelegate.mapChanged(size:size)
     }
 }

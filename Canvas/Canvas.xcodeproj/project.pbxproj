@@ -77,6 +77,7 @@
 		DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */; };
 		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
 		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
+		DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
 		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
+		DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumnProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 			children = (
 				DAB5E64420AF081600F860B3 /* MockMapColumn.swift */,
 				DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */,
+				DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */,
 				DADC95EC20B0467800D8BB8F /* MockCanvasDelegateProtocol.swift in Sources */,
 				DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */,
 				DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */,
