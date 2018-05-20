@@ -57,4 +57,24 @@ class TestPresenterCard:XCTestCase {
         let viewCard:ViewCard? = self.presenter.viewItem as? ViewCard
         XCTAssertEqual(viewCard?.labelContent.text, content, "Not assigned")
     }
+    
+    func testLoadAssignsHeight() {
+        let content:String = "hello world"
+        let card:MockCardProtocol = MockCardProtocol()
+        card.content = content
+        self.presenter.card = card
+        
+        self.presenter.load()
+        XCTAssertGreaterThan(self.presenter.height, 0, "Height not assigned")
+    }
+    
+    func testLoadActivatesConstraints() {
+        let card:MockCardProtocol = MockCardProtocol()
+        self.presenter.card = card
+        self.presenter.load()
+        XCTAssertTrue(self.presenter.viewItem.layoutTop.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewItem.layoutLeft.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewItem.layoutWidth.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewItem.layoutHeight.isActive, "Not active")
+    }
 }

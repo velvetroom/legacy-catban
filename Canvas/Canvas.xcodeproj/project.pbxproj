@@ -106,6 +106,7 @@
 		DAF85EBE20B1D9950053B995 /* MockCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EBD20B1D9950053B995 /* MockCardProtocol.swift */; };
 		DAF85EC020B1DB9B0053B995 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EBF20B1DB9B0053B995 /* MockView.swift */; };
 		DAF85EC220B1DCD40053B995 /* TestPresenterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EC120B1DCD40053B995 /* TestPresenterCard.swift */; };
+		DAF85EC420B1E1100053B995 /* TestPresenterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		DAF85EBD20B1D9950053B995 /* MockCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCardProtocol.swift; sourceTree = "<group>"; };
 		DAF85EBF20B1DB9B0053B995 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		DAF85EC120B1DCD40053B995 /* TestPresenterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterCard.swift; sourceTree = "<group>"; };
+		DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterNewCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +454,7 @@
 				DAF85EB520B1D26E0053B995 /* TestPresenter.swift */,
 				DAF85EBB20B1D84F0053B995 /* TestPresenterColumn.swift */,
 				DAF85EC120B1DCD40053B995 /* TestPresenterCard.swift */,
+				DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */,
 				DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */,
 				DAF85EB720B1D2BC0053B995 /* MockProjectProtocol.swift */,
 				DAF85EB920B1D3B70053B995 /* MockColumnProtocol.swift */,
@@ -686,6 +689,7 @@
 				DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */,
 				DAF85EBA20B1D3B70053B995 /* MockColumnProtocol.swift in Sources */,
 				DAF85E9A20B1AF5C0053B995 /* MockMapParentProtocol.swift in Sources */,
+				DAF85EC420B1E1100053B995 /* TestPresenterNewCard.swift in Sources */,
 				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
 				DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */,
 				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
