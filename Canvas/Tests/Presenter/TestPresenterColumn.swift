@@ -55,4 +55,15 @@ class TestPresenterColumn:XCTestCase {
         let newCard:MapNewCard? = self.presenter.mapColumn.childItem as? MapNewCard
         XCTAssertNotNil(newCard, "Not loaded")
     }
+    
+    func testLoadActivateConstraints() {
+        let column:MockColumnProtocol = MockColumnProtocol()
+        self.presenter.column = column
+        self.presenter.load()
+        
+        XCTAssertTrue(self.presenter.viewColumn.layoutTop.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewColumn.layoutLeft.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewColumn.layoutWidth.isActive, "Not active")
+        XCTAssertTrue(self.presenter.viewColumn.layoutHeight.isActive, "Not active")
+    }
 }
