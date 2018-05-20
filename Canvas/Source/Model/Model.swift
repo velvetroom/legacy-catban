@@ -75,7 +75,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
                 guard
                     let columnMaxY:CGFloat = column.lastItem?.maxY,
                     columnMaxY > maxHeight
-                    else { continue }
+                else { continue }
                 maxHeight = columnMaxY
             }
             return maxHeight

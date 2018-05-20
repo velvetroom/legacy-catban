@@ -39,4 +39,13 @@ class TestModel:XCTestCase {
         self.model.mapItem = MapCard()
         XCTAssertNotNil(self.model.mapItem, "Not retaining")
     }
+    
+    func testChangeState() {
+        self.model.change(stateType:MockDragStateProtocol.self)
+        let state:MockDragStateProtocol? = self.model.state as? MockDragStateProtocol
+        XCTAssertNotNil(state, "State not changed")
+        XCTAssertNotNil(state?.event, "Not set")
+        XCTAssertNotNil(state?.changer, "Not set")
+        XCTAssertNotNil(state?.mapEditor, "Not set")
+    }
 }
