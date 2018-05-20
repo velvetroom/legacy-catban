@@ -52,4 +52,33 @@ class TestModel_Drag:XCTestCase {
         self.model.dragBegin()
         XCTAssertTrue(called, "Not highlighted")
     }
+    
+    func testDragUpdateRefreshTouch() {
+        let touch:CGPoint = CGPoint(x:98, y:97)
+        self.model.latestTouch = touch
+        self.model.dragUpdate()
+        XCTAssertEqual(self.model.position.latestTouch, touch, "Not updated")
+    }
+    
+    func testDragUpdateCallsState() {
+        var called:Bool = false
+        self.model.state = self.state
+        self.state.onUpdate = {
+            called = true
+        }
+        
+        self.model.dragUpdate()
+        XCTAssertTrue(called, "Not called")
+    }
+    
+    func testDragEndsCallsState() {
+        var called:Bool = false
+        self.model.state = self.state
+        self.state.onEnd = {
+            called = true
+        }
+        
+        self.model.dragEnd()
+        XCTAssertTrue(called, "Not called")
+    }
 }
