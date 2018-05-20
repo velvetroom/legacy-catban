@@ -40,7 +40,7 @@ class Presenter:PresenterProtocol {
     }
     
     private func load() {
-        var columns:[MapColumn] = []
+        var columns:[MapColumnProtocol] = []
         self.project.iterate { (column:ColumnProtocol) in
             columns.append(self.makeMapColumnWith(column:column))
             self.columnIndex += 1
@@ -48,7 +48,7 @@ class Presenter:PresenterProtocol {
         self.model.add(columns:columns)
     }
     
-    private func makeMapColumnWith(column:ColumnProtocol) -> MapColumn {
+    private func makeMapColumnWith(column:ColumnProtocol) -> MapColumnProtocol {
         var loader:PresenterColumnProtocol = PresenterFactory.makeColumnLoader()
         loader.view = self.view
         loader.column = column

@@ -1,8 +1,27 @@
 import UIKit
 
-class MapColumn:MapNodeProtocol, MapParentProtocol {
+class MapColumn:MapColumnProtocol {
     weak var view:ViewNode!
     var childItem:MapItemProtocol?
+    
+    func add(item:MapItemProtocol) {
+        let parent:MapParentProtocol = self.parentFor(item:item)
+        parent.replaceChild(item:item)
+    }
+    
+    func append(item:MapItemProtocol) {
+        self.lastParent.replaceChild(item:item)
+    }
+    
+    var height:CGFloat {
+        get {
+            var bottom:CGFloat = Constants.ColumnTitle.height
+            if let lastItem:MapItemProtocol = self.lastItem {
+                bottom = lastItem.maxY
+            }
+            return bottom + Constants.Column.paddingBottom
+        }
+    }
     
     var lastParent:MapParentProtocol {
         get {
@@ -26,25 +45,6 @@ class MapColumn:MapNodeProtocol, MapParentProtocol {
                 childItem = nextItem
             }
             return childItem
-        }
-    }
-    
-    func add(item:MapItemProtocol) {
-        let parent:MapParentProtocol = self.parentFor(item:item)
-        parent.replaceChild(item:item)
-    }
-    
-    func append(item:MapItemProtocol) {
-        self.lastParent.replaceChild(item:item)
-    }
-    
-    private var contentBottom:CGFloat {
-        get {
-            var bottom:CGFloat = Constants.ColumnTitle.height
-            if let lastItem:MapItemProtocol = self.lastItem {
-                bottom = lastItem.maxY
-            }
-            return bottom + Constants.Column.paddingBottom
         }
     }
     

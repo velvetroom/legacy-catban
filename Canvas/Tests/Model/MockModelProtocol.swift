@@ -33,7 +33,7 @@ class MockModelProtocol:ModelProtocol {
         self.onDragEnd?()
     }
     
-    func add(columns:[MapColumn]) {
+    func add(columns:[MapColumnProtocol]) {
         self.onAddColumns?()
     }
     

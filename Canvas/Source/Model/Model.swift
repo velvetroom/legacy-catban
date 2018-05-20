@@ -5,7 +5,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     weak var mapDelegate:MapDelegateProtocol!
     weak var viewItem:ViewItem!
     var mapItem:MapItemProtocol!
-    var columns:[MapColumn]
+    var columns:[MapColumnProtocol]
     var position:DragPosition
     var state:DragStateProtocol
     var latestTouch:CGPoint
@@ -21,16 +21,16 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.columns = []
     }
     
-    func add(columns:[MapColumn]) {
-        for column:MapColumn in columns {
+    func add(columns:[MapColumnProtocol]) {
+        for column:MapColumnProtocol in columns {
             self.add(column:column)
         }
         self.updateSize()
     }
     
     func add(item:MapItemProtocol) {
-        var parentColumn:MapColumn? = self.columns.first
-        for column:MapColumn in self.columns {
+        var parentColumn:MapColumnProtocol? = self.columns.first
+        for column:MapColumnProtocol in self.columns {
             parentColumn = column
             if column.maxX > item.midX {
                 break
@@ -63,7 +63,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.state.mapEditor = self
     }
     
-    private func add(column:MapColumn) {
+    private func add(column:MapColumnProtocol) {
         column.minX = self.maxContentWidth
         self.columns.append(column)
     }
@@ -71,12 +71,11 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     private var maxContentHeight:CGFloat {
         get {
             var maxHeight:CGFloat = 0
-            for column:MapColumn in self.columns {
-                guard
-                    let columnMaxY:CGFloat = column.lastItem?.maxY,
-                    columnMaxY > maxHeight
-                else { continue }
-                maxHeight = columnMaxY
+            for column:MapColumnProtocol in self.columns {
+                let height:CGFloat = column.height
+                if height > maxHeight {
+                    maxHeight = height
+                }
             }
             return maxHeight
         }
@@ -85,7 +84,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     private var maxContentWidth:CGFloat {
         get {
             var width:CGFloat = Constants.Board.paddingHorizontal
-            if let lastColumn:MapColumn = self.columns.last {
+            if let lastColumn:MapColumnProtocol = self.columns.last {
                 width += lastColumn.maxX
             }
             return width

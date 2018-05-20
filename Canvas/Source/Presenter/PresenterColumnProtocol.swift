@@ -4,7 +4,7 @@ import Board
 protocol PresenterColumnProtocol {
     var view:View! { get set }
     var column:ColumnProtocol! { get set }
-    var mapColumn:MapColumn { get }
+    var mapColumn:MapColumnProtocol { get }
     
     init()
     func load()

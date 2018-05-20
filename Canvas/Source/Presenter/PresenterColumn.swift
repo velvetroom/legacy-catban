@@ -5,7 +5,7 @@ class PresenterColumn:PresenterColumnProtocol {
     weak var view:View!
     weak var column:ColumnProtocol!
     var viewColumn:ViewColumn
-    var mapColumn:MapColumn
+    var mapColumn:MapColumnProtocol
     
     required init() {
         self.viewColumn = ViewColumn()

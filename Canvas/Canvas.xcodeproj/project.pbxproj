@@ -75,6 +75,8 @@
 		DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */; };
 		DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */; };
 		DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */; };
+		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
+		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_AddItem.swift; sourceTree = "<group>"; };
 		DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Drag.swift; sourceTree = "<group>"; };
 		DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateProtocol.swift; sourceTree = "<group>"; };
+		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
+		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,15 +303,16 @@
 				DAB5E5C620AF080A00F860B3 /* MapProtocol.swift */,
 				DA61313C20AF35FB002563BA /* MapEditorProtocol.swift */,
 				DAB5E5BE20AF080A00F860B3 /* MapNodeProtocol.swift */,
+				DAB5E5C720AF080A00F860B3 /* MapNodeProtocol+Default.swift */,
 				DAB5E5BF20AF080A00F860B3 /* MapItemProtocol.swift */,
-				DAB5E5C020AF080A00F860B3 /* MapColumn.swift */,
-				DAB5E5C120AF080A00F860B3 /* MapCard.swift */,
+				DAB5E5C420AF080A00F860B3 /* MapItemProtocol+Default.swift */,
 				DAB5E5C220AF080A00F860B3 /* MapParentProtocol.swift */,
 				DAB5E5C320AF080A00F860B3 /* MapParentProtocol+Default.swift */,
-				DAB5E5C420AF080A00F860B3 /* MapItemProtocol+Default.swift */,
-				DAB5E5C520AF080A00F860B3 /* MapNewCard.swift */,
-				DAB5E5C720AF080A00F860B3 /* MapNodeProtocol+Default.swift */,
 				DA61313320AF2176002563BA /* MapDelegateProtocol.swift */,
+				DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */,
+				DAB5E5C020AF080A00F860B3 /* MapColumn.swift */,
+				DAB5E5C120AF080A00F860B3 /* MapCard.swift */,
+				DAB5E5C520AF080A00F860B3 /* MapNewCard.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */,
 				DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */,
 				DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */,
+				DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */,
 				DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */,
 			);
 			path = Model;
@@ -531,6 +537,7 @@
 				DAB5E5F720AF080A00F860B3 /* MapItemProtocol.swift in Sources */,
 				DAB5E5FC20AF080A00F860B3 /* MapItemProtocol+Default.swift in Sources */,
 				DAB5E5F420AF080A00F860B3 /* DragStateMoving.swift in Sources */,
+				DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */,
 				DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */,
 				DA61313620AF248A002563BA /* DragEventProtocol.swift in Sources */,
 				DAB5E61220AF080A00F860B3 /* PresenterColumn.swift in Sources */,
@@ -567,6 +574,7 @@
 				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
 				DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */,
 				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
+				DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */,
 				DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

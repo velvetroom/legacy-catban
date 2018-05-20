@@ -1,6 +1,6 @@
 import UIKit
 
 protocol MapEditorProtocol:class {
-    func add(columns:[MapColumn])
+    func add(columns:[MapColumnProtocol])
     func add(item:MapItemProtocol)
 }
