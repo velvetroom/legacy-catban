@@ -1,7 +1,7 @@
 import UIKit
 
 class View:UIScrollView, MapDelegateProtocol {
-    private weak var content:ViewContent!
+    weak var content:ViewContent!
     
     var drag:DragProtocol {
         get {
@@ -58,7 +58,7 @@ class View:UIScrollView, MapDelegateProtocol {
     
     private func configureView() {
         self.configureScroll()
-        self.configureContainer()
+        self.configureContent()
     }
     
     private func configureScroll() {
@@ -73,7 +73,7 @@ class View:UIScrollView, MapDelegateProtocol {
         self.canCancelContentTouches = false
     }
     
-    private func configureContainer() {
+    private func configureContent() {
         let content:ViewContent = ViewContent()
         self.content = content
         super.addSubview(content)
