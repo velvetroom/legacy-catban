@@ -43,6 +43,7 @@ class TestDragStateFixed:XCTestCase {
             XCTAssertTrue(stateType == DragStateNone.self, "Invalid type")
             called = true
         }
+        
         self.model.update()
         XCTAssertTrue(called, "Not called")
     }
@@ -53,6 +54,7 @@ class TestDragStateFixed:XCTestCase {
         self.view.onStateNormal = {
             called = true
         }
+        
         self.model.update()
         XCTAssertTrue(called, "Not called")
     }
