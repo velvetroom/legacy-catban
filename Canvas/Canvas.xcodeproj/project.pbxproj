@@ -109,6 +109,12 @@
 		DAF85EC420B1E1100053B995 /* TestPresenterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */; };
 		DAF85EC620B1E2280053B995 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EC520B1E2280053B995 /* TestView.swift */; };
 		DAF85ECA20B1E3250053B995 /* MockViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EC920B1E3250053B995 /* MockViewContent.swift */; };
+		DAF85ECC20B1E4340053B995 /* TestViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ECB20B1E4340053B995 /* TestViewContent.swift */; };
+		DAF85ECE20B1E5970053B995 /* MockTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ECD20B1E5970053B995 /* MockTouch.swift */; };
+		DAF85ED020B1E6410053B995 /* TestViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ECF20B1E6410053B995 /* TestViewItem.swift */; };
+		DAF85ED220B1E7B00053B995 /* MockUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ED120B1E7B00053B995 /* MockUIView.swift */; };
+		DAF85ED420B1E7E10053B995 /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ED320B1E7E10053B995 /* TestViewCard.swift */; };
+		DAF85ED620B1E8410053B995 /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85ED520B1E8410053B995 /* TestViewNewCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +230,12 @@
 		DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterNewCard.swift; sourceTree = "<group>"; };
 		DAF85EC520B1E2280053B995 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DAF85EC920B1E3250053B995 /* MockViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewContent.swift; sourceTree = "<group>"; };
+		DAF85ECB20B1E4340053B995 /* TestViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewContent.swift; sourceTree = "<group>"; };
+		DAF85ECD20B1E5970053B995 /* MockTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTouch.swift; sourceTree = "<group>"; };
+		DAF85ECF20B1E6410053B995 /* TestViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewItem.swift; sourceTree = "<group>"; };
+		DAF85ED120B1E7B00053B995 /* MockUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUIView.swift; sourceTree = "<group>"; };
+		DAF85ED320B1E7E10053B995 /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
+		DAF85ED520B1E8410053B995 /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,10 +497,16 @@
 			isa = PBXGroup;
 			children = (
 				DAF85EC520B1E2280053B995 /* TestView.swift */,
+				DAF85ECB20B1E4340053B995 /* TestViewContent.swift */,
+				DAF85ECF20B1E6410053B995 /* TestViewItem.swift */,
+				DAF85ED320B1E7E10053B995 /* TestViewCard.swift */,
+				DAF85ED520B1E8410053B995 /* TestViewNewCard.swift */,
 				DAF85EBF20B1DB9B0053B995 /* MockView.swift */,
+				DAF85ED120B1E7B00053B995 /* MockUIView.swift */,
 				DAF85EC920B1E3250053B995 /* MockViewContent.swift */,
 				DAF85EA920B1C3B40053B995 /* MockViewNode.swift */,
 				DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */,
+				DAF85ECD20B1E5970053B995 /* MockTouch.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -658,6 +676,7 @@
 			files = (
 				DAF85E9620B1AA400053B995 /* MockDragStateChangerProtocol.swift in Sources */,
 				DAF85E9820B1ACAD0053B995 /* TestDragStateDynamic.swift in Sources */,
+				DAF85ECC20B1E4340053B995 /* TestViewContent.swift in Sources */,
 				DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */,
 				DAF85E9E20B1BE160053B995 /* MockMapEditorProtocol.swift in Sources */,
 				DAF85E9020B18CEC0053B995 /* MockMapItemProtocol.swift in Sources */,
@@ -670,6 +689,7 @@
 				DAF85EC220B1DCD40053B995 /* TestPresenterCard.swift in Sources */,
 				DAF85E8C20B1896F0053B995 /* TestDragPosition_Moving.swift in Sources */,
 				DAF85EB420B1D1850053B995 /* TestMapNewCard.swift in Sources */,
+				DAF85ECE20B1E5970053B995 /* MockTouch.swift in Sources */,
 				DAF85E9220B1911C0053B995 /* TestDragStateProtocol.swift in Sources */,
 				DAF85EA220B1BFEA0053B995 /* TestDragStateMoving.swift in Sources */,
 				DAF85ECA20B1E3250053B995 /* MockViewContent.swift in Sources */,
@@ -692,6 +712,7 @@
 				DAF85EB620B1D26E0053B995 /* TestPresenter.swift in Sources */,
 				DAB5E66720AF081600F860B3 /* MockMapColumn.swift in Sources */,
 				DAF85EB820B1D2BC0053B995 /* MockProjectProtocol.swift in Sources */,
+				DAF85ED220B1E7B00053B995 /* MockUIView.swift in Sources */,
 				DAF85EBE20B1D9950053B995 /* MockCardProtocol.swift in Sources */,
 				DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */,
 				DAF85EBA20B1D3B70053B995 /* MockColumnProtocol.swift in Sources */,
@@ -703,7 +724,10 @@
 				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
 				DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */,
 				DAF85EA820B1C2750053B995 /* TestMapColumn.swift in Sources */,
+				DAF85ED020B1E6410053B995 /* TestViewItem.swift in Sources */,
 				DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */,
+				DAF85ED420B1E7E10053B995 /* TestViewCard.swift in Sources */,
+				DAF85ED620B1E8410053B995 /* TestViewNewCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

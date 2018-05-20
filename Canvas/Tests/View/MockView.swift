@@ -1,6 +1,4 @@
 import Foundation
 @testable import Canvas
 
-class MockView:View {
-    
-}
+class MockView:View { }
