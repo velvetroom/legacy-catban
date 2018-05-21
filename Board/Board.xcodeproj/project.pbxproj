@@ -23,6 +23,9 @@
 		DA567B37209C70D5005D74EE /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B36209C70D5005D74EE /* TestProject.swift */; };
 		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
 		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
+		DA8F5EFB20B2C499009DA097 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5EFA20B2C499009DA097 /* Order.swift */; };
+		DA8F5EFD20B2C4AD009DA097 /* OrderColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5EFC20B2C4AD009DA097 /* OrderColumn.swift */; };
+		DA8F5EFF20B2C4C4009DA097 /* OrderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5EFE20B2C4C4009DA097 /* OrderCard.swift */; };
 		DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */; };
 		DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551D20A5608100813E95 /* ContainedProtocol.swift */; };
 		DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */; };
@@ -81,6 +84,9 @@
 		DA567B36209C70D5005D74EE /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		DA8F5EFA20B2C499009DA097 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		DA8F5EFC20B2C4AD009DA097 /* OrderColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderColumn.swift; sourceTree = "<group>"; };
+		DA8F5EFE20B2C4C4009DA097 /* OrderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCard.swift; sourceTree = "<group>"; };
 		DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 		DAB7551D20A5608100813E95 /* ContainedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedProtocol.swift; sourceTree = "<group>"; };
 		DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_CardsManager.swift; sourceTree = "<group>"; };
@@ -198,6 +204,16 @@
 			path = Project;
 			sourceTree = "<group>";
 		};
+		DA8F5EF920B2C41C009DA097 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F5EFA20B2C499009DA097 /* Order.swift */,
+				DA8F5EFC20B2C4AD009DA097 /* OrderColumn.swift */,
+				DA8F5EFE20B2C4C4009DA097 /* OrderCard.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		DAE3E7D0209F52BC00F8240C /* Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +295,7 @@
 				DA567B34209C70BA005D74EE /* Project */,
 				DA0E58D6209F527B00AD4425 /* Column */,
 				DA0E58D7209F528300AD4425 /* Card */,
+				DA8F5EF920B2C41C009DA097 /* Order */,
 				DA0E58CF209F4AC400AD4425 /* Extensions */,
 			);
 			path = Source;
@@ -415,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8F5EFD20B2C4AD009DA097 /* OrderColumn.swift in Sources */,
 				DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */,
 				DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */,
 				DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */,
@@ -425,6 +443,7 @@
 				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
 				DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */,
+				DA8F5EFB20B2C499009DA097 /* Order.swift in Sources */,
 				DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */,
 				DAE3E7DF209F53DC00F8240C /* Card.swift in Sources */,
 				DAE3E7E2209F542C00F8240C /* IdentifierProtocol.swift in Sources */,
@@ -437,6 +456,7 @@
 				DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */,
 				DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */,
 				DAC6800920A036C700791B6A /* ProjectManagedFactory.swift in Sources */,
+				DA8F5EFF20B2C4C4009DA097 /* OrderCard.swift in Sources */,
 				DAE3E7E4209F545000F8240C /* IdentifierProtocol+Default.swift in Sources */,
 				DA567B3B209C7147005D74EE /* Project.swift in Sources */,
 				DAFEF30E209AEC7700740A88 /* Board.swift in Sources */,
