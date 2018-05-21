@@ -11,10 +11,22 @@ extension Project {
         }
     }
     
+    var mapCards:[String:CardProtocol] {
+        get {
+            var map:[String:CardProtocol] = [:]
+            self.columns.forEach { (column:ColumnProtocol) in
+                column.iterate { (card:CardProtocol) in
+                    map[card.identifier] = card
+                }
+            }
+            return map
+        }
+    }
+    
     func add(card:CardProtocol) {
         guard
             let column:ColumnProtocol = self.columns.first
-            else { return }
+        else { return }
         column.add(card:card)
     }
     

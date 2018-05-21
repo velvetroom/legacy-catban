@@ -6,4 +6,5 @@ public protocol ColumnProtocol:
     ContainerProtocol,
     ContainedProtocol,
     ColumnCardsProtocol,
-    CardManagerProtocol { }
+    CardManagerProtocol,
+    ColumnOrderProtocol { }

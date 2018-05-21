@@ -7,10 +7,20 @@ extension Project {
         }
     }
     
+    var mapColumns:[String:ColumnProtocol] {
+        get {
+            var map:[String:ColumnProtocol] = [:]
+            self.columns.forEach { (column:ColumnProtocol) in
+                map[column.identifier] = column
+            }
+            return map
+        }
+    }
+    
     func add(column:ColumnProtocol) {
         guard
             column.identifier.isEmpty == false
-            else { return }
+        else { return }
         var column:ColumnProtocol = column
         self.columns.append(column)
         column.container = self
