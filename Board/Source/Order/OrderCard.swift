@@ -1,9 +1,9 @@
 import Foundation
 
 public struct OrderCard {
-    var identifier:String
+    public var identifier:String
     
-    init() {
+    public init() {
         self.identifier = String()
     }
 }

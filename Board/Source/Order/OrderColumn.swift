@@ -1,10 +1,10 @@
 import Foundation
 
 public struct OrderColumn {
-    var identifier:String
-    var cards:[OrderCard]
+    public var identifier:String
+    public var cards:[OrderCard]
     
-    init() {
+    public init() {
         self.identifier = String()
         self.cards = []
     }

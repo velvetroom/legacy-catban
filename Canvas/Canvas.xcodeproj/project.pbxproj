@@ -79,6 +79,8 @@
 		DAF817DE20B2E039001AA940 /* Model+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817DD20B2E039001AA940 /* Model+Content.swift */; };
 		DAF817E020B2E102001AA940 /* Model+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817DF20B2E102001AA940 /* Model+Order.swift */; };
 		DAF817E220B2E132001AA940 /* Model+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E120B2E132001AA940 /* Model+Columns.swift */; };
+		DAF817E420B2E760001AA940 /* MapColumn+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E320B2E760001AA940 /* MapColumn+Order.swift */; };
+		DAF817E620B2E7D6001AA940 /* MapColumn+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */; };
 		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
 		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
 		DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */; };
@@ -204,6 +206,8 @@
 		DAF817DD20B2E039001AA940 /* Model+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Content.swift"; sourceTree = "<group>"; };
 		DAF817DF20B2E102001AA940 /* Model+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Order.swift"; sourceTree = "<group>"; };
 		DAF817E120B2E132001AA940 /* Model+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Columns.swift"; sourceTree = "<group>"; };
+		DAF817E320B2E760001AA940 /* MapColumn+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapColumn+Order.swift"; sourceTree = "<group>"; };
+		DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapColumn+Children.swift"; sourceTree = "<group>"; };
 		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
 		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumnProtocol.swift; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 				DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */,
 				DAF85EAB20B1C5390053B995 /* MapCardProtocol.swift */,
 				DAB5E5C020AF080A00F860B3 /* MapColumn.swift */,
+				DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */,
+				DAF817E320B2E760001AA940 /* MapColumn+Order.swift */,
 				DAB5E5C120AF080A00F860B3 /* MapCard.swift */,
 				DAB5E5C520AF080A00F860B3 /* MapNewCard.swift */,
 			);
@@ -648,6 +654,7 @@
 				DAB5E5FE20AF080A00F860B3 /* MapProtocol.swift in Sources */,
 				DA61313B20AF2641002563BA /* Model.swift in Sources */,
 				DA61312820AF1109002563BA /* Canvas.swift in Sources */,
+				DAF817E620B2E7D6001AA940 /* MapColumn+Children.swift in Sources */,
 				DAB5E5EE20AF080A00F860B3 /* DragStateDynamic.swift in Sources */,
 				DAB5E61920AF080A00F860B3 /* ViewCard.swift in Sources */,
 				DAB5E5F320AF080A00F860B3 /* DragStateFixed.swift in Sources */,
@@ -665,6 +672,7 @@
 				DAB5E5FC20AF080A00F860B3 /* MapItemProtocol+Default.swift in Sources */,
 				DAB5E5F420AF080A00F860B3 /* DragStateMoving.swift in Sources */,
 				DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */,
+				DAF817E420B2E760001AA940 /* MapColumn+Order.swift in Sources */,
 				DAB5E5EB20AF080A00F860B3 /* DragPosition+Tools.swift in Sources */,
 				DA61313620AF248A002563BA /* DragEventProtocol.swift in Sources */,
 				DAB5E61220AF080A00F860B3 /* PresenterColumn.swift in Sources */,

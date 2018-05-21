@@ -1,4 +1,5 @@
 import UIKit
+import Board
 @testable import Canvas
 
 class MockMapColumnProtocol:MapColumnProtocol {
@@ -8,10 +9,12 @@ class MockMapColumnProtocol:MapColumnProtocol {
     var childItem:MapItemProtocol?
     var view:ViewNode!
     var maxX:CGFloat
+    var order:OrderColumn
     
     init() {
         self.height = 0
         self.maxX = 0
+        self.order = OrderColumn()
     }
     
     func add(item:MapItemProtocol) {

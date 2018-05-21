@@ -4,15 +4,6 @@ class MapColumn:MapColumnProtocol {
     weak var view:ViewNode!
     var childItem:MapItemProtocol?
     
-    func order(item:MapItemProtocol) {
-        let parent:MapParentProtocol = self.parentFor(item:item)
-        parent.replaceChild(item:item)
-    }
-    
-    func add(item:MapItemProtocol) {
-        self.lastParent.replaceChild(item:item)
-    }
-    
     var height:CGFloat {
         get {
             var bottom:CGFloat = Constants.ColumnTitle.height
@@ -23,39 +14,12 @@ class MapColumn:MapColumnProtocol {
         }
     }
     
-    var lastParent:MapParentProtocol {
-        get {
-            if let lastItem:MapItemProtocol = self.lastItem {
-                if let parent:MapParentProtocol = lastItem as? MapParentProtocol {
-                    return parent
-                }
-                return lastItem.parent
-            }
-            return self
-        }
+    func order(item:MapItemProtocol) {
+        let parent:MapParentProtocol = self.parentFor(item:item)
+        parent.replaceChild(item:item)
     }
     
-    var lastItem:MapItemProtocol? {
-        get {
-            var childItem:MapItemProtocol? = self.childItem
-            while let parentItem:MapParentProtocol = childItem as? MapParentProtocol {
-                guard
-                    let nextItem:MapItemProtocol = parentItem.childItem
-                else { break }
-                childItem = nextItem
-            }
-            return childItem
-        }
-    }
-    
-    func parentFor(item:MapItemProtocol) -> MapParentProtocol {
-        var parent:MapParentProtocol = self.lastParent
-        while parent.minY > item.minY {
-            guard
-                let item:MapItemProtocol = parent as? MapItemProtocol
-            else { break }
-            parent = item.parent
-        }
-        return parent
+    func add(item:MapItemProtocol) {
+        self.lastParent.replaceChild(item:item)
     }
 }

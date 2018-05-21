@@ -1,9 +1,9 @@
 import Foundation
 
 public struct Order {
-    var columns:[OrderColumn]
+    public var columns:[OrderColumn]
     
-    init() {
+    public init() {
         self.columns = []
     }
 }

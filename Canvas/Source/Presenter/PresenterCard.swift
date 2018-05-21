@@ -17,8 +17,10 @@ class PresenterCard:PresenterCardProtocol {
     
     func configureContent() {
         let viewItem:ViewCard = self.viewItem as! ViewCard
+        let mapItem:MapCard = self.mapItem as! MapCard
         viewItem.identifier = self.card.identifier
         viewItem.labelContent.text = self.card.content
+        mapItem.identifier = self.card.identifier
         self.height = PresenterCardHeight.heightFor(content:self.card.content)
     }
 }

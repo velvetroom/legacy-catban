@@ -36,7 +36,7 @@ class TestPresenterCard:XCTestCase {
         XCTAssertNotNil(viewCard, "View item is not card")
     }
     
-    func testLoadAssignsIdentifier() {
+    func testLoadAssignsIdentifierToView() {
         let identifier:String = "lorem ipsum"
         let card:MockCardProtocol = MockCardProtocol()
         card.identifier = identifier
@@ -45,6 +45,17 @@ class TestPresenterCard:XCTestCase {
         self.presenter.load()
         let viewCard:ViewCard? = self.presenter.viewItem as? ViewCard
         XCTAssertEqual(viewCard?.identifier, identifier, "Not assigned")
+    }
+    
+    func testLoadAssignsIdentifierToMap() {
+        let identifier:String = "lorem ipsum"
+        let card:MockCardProtocol = MockCardProtocol()
+        card.identifier = identifier
+        self.presenter.card = card
+        
+        self.presenter.load()
+        let mapCard:MapCard? = self.presenter.mapItem as? MapCard
+        XCTAssertEqual(mapCard?.identifier, identifier, "Not assigned")
     }
     
     func testLoadAssignsContent() {
