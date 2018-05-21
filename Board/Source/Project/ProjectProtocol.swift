@@ -5,7 +5,8 @@ public protocol ProjectProtocol:
     CreatedProtocol,
     ContainerProtocol,
     ProjectColumnsProtocol,
-    CardManagerProtocol {
+    CardManagerProtocol,
+    ProjectOrderProtocol {
     
     func copy(project:ProjectProtocol)
 }
