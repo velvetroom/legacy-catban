@@ -3,6 +3,11 @@ import UIKit
 class MapColumn:MapColumnProtocol {
     weak var view:ViewNode!
     var childItem:MapItemProtocol?
+    var identifier:String
+    
+    init() {
+        self.identifier = String()
+    }
     
     var height:CGFloat {
         get {

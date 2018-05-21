@@ -1,5 +1,3 @@
 import Foundation
 
-protocol MapCardProtocol:MapItemProtocol, MapParentProtocol {
-    var identifier:String { get set }
-}
+protocol MapCardProtocol:MapItemProtocol, MapParentProtocol, MapBoardItemProtocol { }

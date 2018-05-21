@@ -1,7 +1,7 @@
 import UIKit
 import Board
 
-protocol MapColumnProtocol:MapParentProtocol {
+protocol MapColumnProtocol:MapParentProtocol, MapBoardItemProtocol {
     var height:CGFloat { get }
     var order:OrderColumn { get }
     

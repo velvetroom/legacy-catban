@@ -10,11 +10,13 @@ class MockMapColumnProtocol:MapColumnProtocol {
     var view:ViewNode!
     var maxX:CGFloat
     var order:OrderColumn
+    var identifier:String
     
     init() {
         self.height = 0
         self.maxX = 0
         self.order = OrderColumn()
+        self.identifier = String()
     }
     
     func add(item:MapItemProtocol) {

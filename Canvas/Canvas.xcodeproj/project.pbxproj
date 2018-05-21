@@ -81,6 +81,8 @@
 		DAF817E220B2E132001AA940 /* Model+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E120B2E132001AA940 /* Model+Columns.swift */; };
 		DAF817E420B2E760001AA940 /* MapColumn+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E320B2E760001AA940 /* MapColumn+Order.swift */; };
 		DAF817E620B2E7D6001AA940 /* MapColumn+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */; };
+		DAF817E820B2F81E001AA940 /* MapBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E720B2F81E001AA940 /* MapBoardItemProtocol.swift */; };
+		DAF817EA20B2F843001AA940 /* MockMapBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E920B2F843001AA940 /* MockMapBoardItemProtocol.swift */; };
 		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
 		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
 		DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */; };
@@ -208,6 +210,8 @@
 		DAF817E120B2E132001AA940 /* Model+Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Columns.swift"; sourceTree = "<group>"; };
 		DAF817E320B2E760001AA940 /* MapColumn+Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapColumn+Order.swift"; sourceTree = "<group>"; };
 		DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapColumn+Children.swift"; sourceTree = "<group>"; };
+		DAF817E720B2F81E001AA940 /* MapBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoardItemProtocol.swift; sourceTree = "<group>"; };
+		DAF817E920B2F843001AA940 /* MockMapBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
 		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumnProtocol.swift; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 				DAB5E5C720AF080A00F860B3 /* MapNodeProtocol+Default.swift */,
 				DAB5E5BF20AF080A00F860B3 /* MapItemProtocol.swift */,
 				DAB5E5C420AF080A00F860B3 /* MapItemProtocol+Default.swift */,
+				DAF817E720B2F81E001AA940 /* MapBoardItemProtocol.swift */,
 				DAB5E5C220AF080A00F860B3 /* MapParentProtocol.swift */,
 				DAB5E5C320AF080A00F860B3 /* MapParentProtocol+Default.swift */,
 				DA61313320AF2176002563BA /* MapDelegateProtocol.swift */,
@@ -478,6 +483,7 @@
 				DAF85EA320B1C1D80053B995 /* MockMapProtocol.swift */,
 				DAF85EA520B1C22A0053B995 /* MockMapNodeProtocol.swift */,
 				DAF85EAD20B1C5E00053B995 /* MockMapCardProtocol.swift */,
+				DAF817E920B2F843001AA940 /* MockMapBoardItemProtocol.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -639,6 +645,7 @@
 			files = (
 				DAB5E5F920AF080A00F860B3 /* MapCard.swift in Sources */,
 				DA61313920AF2637002563BA /* ModelProtocol.swift in Sources */,
+				DAF817EA20B2F843001AA940 /* MockMapBoardItemProtocol.swift in Sources */,
 				DAB5E5FD20AF080A00F860B3 /* MapNewCard.swift in Sources */,
 				DAB5E61C20AF080A00F860B3 /* ViewItem.swift in Sources */,
 				DAB5E5ED20AF080A00F860B3 /* DragStateNone.swift in Sources */,
@@ -664,6 +671,7 @@
 				DA61314720AF3C9E002563BA /* PresenterItemProtocol.swift in Sources */,
 				DA61314320AF3821002563BA /* PresenterCardProtocol.swift in Sources */,
 				DA61314120AF3753002563BA /* PresenterColumnProtocol.swift in Sources */,
+				DAF817E820B2F81E001AA940 /* MapBoardItemProtocol.swift in Sources */,
 				DAB5E61A20AF080A00F860B3 /* View.swift in Sources */,
 				DAB5E60D20AF080A00F860B3 /* PresenterItemProtocol+Default.swift in Sources */,
 				DAA7315A20B02286009A6C36 /* PresenterCardHeight.swift in Sources */,
