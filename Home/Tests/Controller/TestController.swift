@@ -1,4 +1,6 @@
 import XCTest
+import Shared
+import Canvas
 @testable import Home
 
 class TestController:XCTestCase {
@@ -6,6 +8,7 @@ class TestController:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.controller = Controller()
     }
     

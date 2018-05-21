@@ -1,4 +1,6 @@
 import XCTest
+import Shared
+import Canvas
 @testable import Home
 @testable import Board
 
@@ -9,6 +11,7 @@ class TestController_Presenter:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.controller = Controller()
         self.presenter = MockPresenterProtocol()
         self.controller.presenter = self.presenter
@@ -17,12 +20,6 @@ class TestController_Presenter:XCTestCase {
         let managed:ProjectManagedProtocol = board.manage(project:project)
         self.project = managed
         self.controller.project = self.project
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.presenter, "Failed to load presenter")
-        XCTAssertNotNil(self.project, "Failed to load project")
     }
     
     func testOnLoadUpdatePresenter() {

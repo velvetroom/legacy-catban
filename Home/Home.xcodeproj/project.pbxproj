@@ -10,6 +10,8 @@
 		DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */; };
 		DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451420A4691F00CCC59D /* TestController_Transition.swift */; };
 		DA15451720A46DAD00CCC59D /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockController.swift */; };
+		DA50AEFD20B2BEE100126526 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */; };
+		DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */; };
 		DA978FB920A1A81C002461E6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
@@ -42,6 +44,8 @@
 		DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA15451420A4691F00CCC59D /* TestController_Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Transition.swift; sourceTree = "<group>"; };
 		DA15451620A46DAD00CCC59D /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
+		DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
+		DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF7E65C209B063300B8A39A /* Presenter.swift */,
+				DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF7E65F209B064700B8A39A /* TestPresenter.swift */,
+				DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
 			);
 			path = Presenter;
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
+				DA50AEFD20B2BEE100126526 /* PresenterOutlets.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 			);
@@ -320,6 +327,7 @@
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
 				DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */,
+				DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,

@@ -5,16 +5,17 @@ import Shared
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
     var canvas:CanvasProtocol
+    var outlets:PresenterOutlets
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
-    weak var view:Shared.View?
     
     init() {
         self.canvas = Configuration.canvasType.init()
+        self.outlets = PresenterOutlets()
     }
     
     func didLoad(view:Shared.View) {
-        self.view = view
+        self.outlets.view = view
         self.loadCanvasOn(view:view.view)
         self.delegate.didLoadPresenter()
     }
@@ -34,7 +35,7 @@ class Presenter:PresenterProtocol {
     }
     
     private func updateView() {
-        self.view?.title = self.controller.project.name
+        self.outlets.view?.title = self.controller.project.name
     }
     
     private func updateCanvas() {

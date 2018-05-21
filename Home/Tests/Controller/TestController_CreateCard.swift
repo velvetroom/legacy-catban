@@ -1,5 +1,7 @@
 import XCTest
 import Board
+import Shared
+import Canvas
 @testable import Home
 
 class TestController_CreateCard:XCTestCase {
@@ -9,6 +11,7 @@ class TestController_CreateCard:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.controller = Controller()
         self.project = MockProjectManagedProtocol()
         self.transition = MockTransitionProtocol()

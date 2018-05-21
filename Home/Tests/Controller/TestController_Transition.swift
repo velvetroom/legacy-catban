@@ -1,4 +1,6 @@
 import XCTest
+import Shared
+import Canvas
 @testable import Home
 @testable import Board
 
@@ -12,6 +14,7 @@ class TestController_Transition:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
         var card:CardProtocol = CardFactory.newCard()
@@ -25,12 +28,6 @@ class TestController_Transition:XCTestCase {
         self.project = managed
         self.controller.project = self.project
         self.controller.transiton = self.transition
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.controller, "Not loading")
-        XCTAssertNotNil(self.transition, "Not loading")
-        XCTAssertNotNil(self.project, "Not loading")
     }
     
     func testEditCardTransitionsToCard() {

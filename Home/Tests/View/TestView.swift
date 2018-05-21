@@ -8,8 +8,4 @@ class TestView:XCTestCase {
         super.setUp()
         self.view = View()
     }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.view, "Failed to load view")
-    }
 }

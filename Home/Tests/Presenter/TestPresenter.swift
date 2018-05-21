@@ -57,4 +57,21 @@ class TestPresenter:XCTestCase {
         self.presenter.controller = Controller()
         XCTAssertNil(self.presenter.controller, "Strong retained controller")
     }
+    
+    func testDidLoadAssignsViewToOutlets() {
+        let view:Shared.View = Shared.View()
+        self.presenter.didLoad(view:view)
+        XCTAssertNotNil(self.presenter.outlets.view, "Not assigned")
+    }
+    
+    func testUpdateProjectTitle() {
+        self.presenter.outlets.view = self.view
+        self.presenter.shouldUpdate()
+        XCTAssertEqual(self.view.title, Constants.projectName, "Not updated")
+    }
+    
+    func testInjectsProjectInCanvas() {
+        self.presenter.shouldUpdate()
+        XCTAssertNotNil(self.presenter.canvas.project, "Not injected")
+    }
 }
