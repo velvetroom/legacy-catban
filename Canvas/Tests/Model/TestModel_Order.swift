@@ -10,6 +10,7 @@ class TestModel_Order:XCTestCase {
         static let identifierA:String = "asd"
         static let identifierB:String = "lorem ipsum"
         static let identifierC:String = "hello world"
+        static let cardIdentifier:String = "fox"
     }
     
     override func setUp() {
@@ -25,6 +26,9 @@ class TestModel_Order:XCTestCase {
         columnB.identifier = inConstants.identifierB
         let columnC:MapColumn = MapColumn()
         columnC.identifier = inConstants.identifierC
+        let card:MapCard = MapCard()
+        card.identifier = inConstants.cardIdentifier
+        columnC.childItem = card
         self.model.columns = [columnA, columnB, columnC]
     }
     
@@ -33,6 +37,16 @@ class TestModel_Order:XCTestCase {
         XCTAssertEqual(order.columns[0].identifier, inConstants.identifierA, "Wrong order")
         XCTAssertEqual(order.columns[1].identifier, inConstants.identifierB, "Wrong order")
         XCTAssertEqual(order.columns[2].identifier, inConstants.identifierC, "Wrong order")
+    }
+    
+    func testNumberOfColumns() {
+        let order:Order = self.model.order
+        XCTAssertEqual(order.columns.count, self.model.columns.count, "Invalid number of columns")
+    }
+    
+    func testColumnsHaveCards() {
+        let order:Order = self.model.order
+        XCTAssertEqual(order.columns[2].cards[0].identifier, inConstants.cardIdentifier, "Wrong order")
     }
     
     func testArrangeItemReordersProject() {

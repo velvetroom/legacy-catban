@@ -27,6 +27,7 @@ class TestMapColumn_Order:XCTestCase {
         self.model.childItem = cardA
         
         let order:OrderColumn = self.model.order
+        XCTAssertEqual(order.cards.count, 2, "Invalid number of cards")
         XCTAssertEqual(order.cards[0].identifier, cardAIdentifier, "Wrong order")
         XCTAssertEqual(order.cards[1].identifier, cardBIdentifier, "Wrong order")
     }
