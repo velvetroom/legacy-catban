@@ -1,9 +1,10 @@
 import XCTest
 @testable import Canvas
 
-class TestModel_AddItem:XCTestCase {
+class TestModel_ArrangeItem:XCTestCase {
     private var model:Model!
     private var mapDelegate:MapDelegateProtocol!
+    private var projectOrder:MockProjectOrderProtocol!
     private var columnA:MapColumn!
     private var columnB:MapColumn!
     private var item:MapCard!
@@ -67,7 +68,9 @@ class TestModel_AddItem:XCTestCase {
     private func configureModel() {
         self.model = Model()
         self.mapDelegate = MockMapDelegateProtocol()
+        self.projectOrder = MockProjectOrderProtocol()
         self.model.mapDelegate = self.mapDelegate
+        self.model.projectOrder = self.projectOrder
         self.model.columns = [self.columnA, self.columnB]
     }
     

@@ -2,7 +2,7 @@ import Foundation
 import Board
 
 extension Model {
-    private var order:Order {
+    var order:Order {
         get {
             var order:Order = Order()
             self.columns.forEach { (column:MapColumnProtocol) in
@@ -13,6 +13,6 @@ extension Model {
     }
     
     func updateProject() {
-        
+        self.projectOrder.orderWith(order:self.order)
     }
 }

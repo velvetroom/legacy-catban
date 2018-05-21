@@ -60,12 +60,10 @@ class TestController:XCTestCase {
     }
     
     func testDeleteRemovesCard() {
-        var removed:Bool = false
-        project.onRemoveCard = {
-            removed = true
-        }
-        
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        column.add(card:self.card)
+        self.project.add(column:column)
         self.controller.delete()
-        XCTAssertTrue(removed, "Not removed")
+        XCTAssertEqual(column.countCards, 0, "Not removed")
     }
 }

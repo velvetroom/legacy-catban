@@ -73,7 +73,7 @@
 		DADC95F920B04A7A00D8BB8F /* MockViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */; };
 		DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */; };
 		DADC95FD20B0506000D8BB8F /* TestModel_Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */; };
-		DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */; };
+		DADC95FF20B0514500D8BB8F /* TestModel_ArrangeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_ArrangeItem.swift */; };
 		DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */; };
 		DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */; };
 		DAF817DE20B2E039001AA940 /* Model+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817DD20B2E039001AA940 /* Model+Content.swift */; };
@@ -83,6 +83,9 @@
 		DAF817E620B2E7D6001AA940 /* MapColumn+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */; };
 		DAF817E820B2F81E001AA940 /* MapBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E720B2F81E001AA940 /* MapBoardItemProtocol.swift */; };
 		DAF817EA20B2F843001AA940 /* MockMapBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817E920B2F843001AA940 /* MockMapBoardItemProtocol.swift */; };
+		DAF817EC20B30438001AA940 /* TestMapColumn_Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817EB20B30438001AA940 /* TestMapColumn_Order.swift */; };
+		DAF817EE20B30A5A001AA940 /* TestModel_Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817ED20B30A5A001AA940 /* TestModel_Order.swift */; };
+		DAF817F020B312A3001AA940 /* MockProjectOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817EF20B312A3001AA940 /* MockProjectOrderProtocol.swift */; };
 		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
 		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
 		DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */; };
@@ -202,7 +205,7 @@
 		DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewItem.swift; sourceTree = "<group>"; };
 		DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Columns.swift; sourceTree = "<group>"; };
 		DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Items.swift; sourceTree = "<group>"; };
-		DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_AddItem.swift; sourceTree = "<group>"; };
+		DADC95FE20B0514500D8BB8F /* TestModel_ArrangeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ArrangeItem.swift; sourceTree = "<group>"; };
 		DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Drag.swift; sourceTree = "<group>"; };
 		DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateProtocol.swift; sourceTree = "<group>"; };
 		DAF817DD20B2E039001AA940 /* Model+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Content.swift"; sourceTree = "<group>"; };
@@ -212,6 +215,9 @@
 		DAF817E520B2E7D6001AA940 /* MapColumn+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapColumn+Children.swift"; sourceTree = "<group>"; };
 		DAF817E720B2F81E001AA940 /* MapBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DAF817E920B2F843001AA940 /* MockMapBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapBoardItemProtocol.swift; sourceTree = "<group>"; };
+		DAF817EB20B30438001AA940 /* TestMapColumn_Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapColumn_Order.swift; sourceTree = "<group>"; };
+		DAF817ED20B30A5A001AA940 /* TestModel_Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Order.swift; sourceTree = "<group>"; };
+		DAF817EF20B312A3001AA940 /* MockProjectOrderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectOrderProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
 		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumnProtocol.swift; sourceTree = "<group>"; };
@@ -471,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF85EA720B1C2750053B995 /* TestMapColumn.swift */,
+				DAF817EB20B30438001AA940 /* TestMapColumn_Order.swift */,
 				DAF85EAF20B1CDA60053B995 /* TestMapColumn_Arrange.swift */,
 				DAF85EB120B1D0F80053B995 /* TestMapCard.swift */,
 				DAF85EB320B1D1850053B995 /* TestMapNewCard.swift */,
@@ -497,6 +504,7 @@
 				DAF85EC320B1E1100053B995 /* TestPresenterNewCard.swift */,
 				DADC95EE20B046FC00D8BB8F /* MockPresenterProtocol.swift */,
 				DAF85EB720B1D2BC0053B995 /* MockProjectProtocol.swift */,
+				DAF817EF20B312A3001AA940 /* MockProjectOrderProtocol.swift */,
 				DAF85EB920B1D3B70053B995 /* MockColumnProtocol.swift */,
 				DAF85EBD20B1D9950053B995 /* MockCardProtocol.swift */,
 			);
@@ -509,9 +517,10 @@
 				DADC95F320B049B200D8BB8F /* TestModel.swift */,
 				DADC95FA20B04FF600D8BB8F /* TestModel_Columns.swift */,
 				DADC95FC20B0506000D8BB8F /* TestModel_Items.swift */,
-				DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */,
+				DADC95FE20B0514500D8BB8F /* TestModel_ArrangeItem.swift */,
 				DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */,
 				DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */,
+				DAF817ED20B30A5A001AA940 /* TestModel_Order.swift */,
 				DADC95F120B048E100D8BB8F /* MockModelProtocol.swift */,
 			);
 			path = Model;
@@ -718,6 +727,7 @@
 				DADC95F620B04A1A00D8BB8F /* MockMapDelegateProtocol.swift in Sources */,
 				DAF85E8E20B18C520053B995 /* TestDragPosition.swift in Sources */,
 				DAF85EBC20B1D84F0053B995 /* TestPresenterColumn.swift in Sources */,
+				DAF817EE20B30A5A001AA940 /* TestModel_Order.swift in Sources */,
 				DAF85EC220B1DCD40053B995 /* TestPresenterCard.swift in Sources */,
 				DAF85E8C20B1896F0053B995 /* TestDragPosition_Moving.swift in Sources */,
 				DAF85EB420B1D1850053B995 /* TestMapNewCard.swift in Sources */,
@@ -746,13 +756,15 @@
 				DAF85EB820B1D2BC0053B995 /* MockProjectProtocol.swift in Sources */,
 				DAF85ED220B1E7B00053B995 /* MockUIView.swift in Sources */,
 				DAF85EBE20B1D9950053B995 /* MockCardProtocol.swift in Sources */,
-				DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */,
+				DAF817F020B312A3001AA940 /* MockProjectOrderProtocol.swift in Sources */,
+				DADC95FF20B0514500D8BB8F /* TestModel_ArrangeItem.swift in Sources */,
 				DAF85EBA20B1D3B70053B995 /* MockColumnProtocol.swift in Sources */,
 				DAF85EC620B1E2280053B995 /* TestView.swift in Sources */,
 				DAF85E9A20B1AF5C0053B995 /* MockMapParentProtocol.swift in Sources */,
 				DAF85EC420B1E1100053B995 /* TestPresenterNewCard.swift in Sources */,
 				DADC95EF20B046FC00D8BB8F /* MockPresenterProtocol.swift in Sources */,
 				DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */,
+				DAF817EC20B30438001AA940 /* TestMapColumn_Order.swift in Sources */,
 				DADC95F220B048E100D8BB8F /* MockModelProtocol.swift in Sources */,
 				DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */,
 				DAF85EA820B1C2750053B995 /* TestMapColumn.swift in Sources */,
