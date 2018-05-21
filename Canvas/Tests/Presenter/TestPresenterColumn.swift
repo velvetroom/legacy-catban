@@ -27,7 +27,7 @@ class TestPresenterColumn:XCTestCase {
         XCTAssertNotNil(self.presenter.mapColumn.view, "Not assigning")
     }
     
-    func testLoadAssignName() {
+    func testLoadAssignsName() {
         let name:String = "lorem ipsum"
         let column:MockColumnProtocol = MockColumnProtocol()
         column.name = name
@@ -35,6 +35,16 @@ class TestPresenterColumn:XCTestCase {
         
         self.presenter.load()
         XCTAssertEqual(self.presenter.viewColumn.labelName.text, name, "Not assigned")
+    }
+    
+    func testLoadAssignsIdentifier() {
+        let identifier:String = "hello world"
+        let column:MockColumnProtocol = MockColumnProtocol()
+        column.identifier = identifier
+        self.presenter.column = column
+        
+        self.presenter.load()
+        XCTAssertEqual(self.presenter.mapColumn.identifier, identifier, "Not assigned")
     }
     
     func testLoadAddsChildren() {

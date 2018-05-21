@@ -4,14 +4,14 @@ import Board
 
 class MockMapEditorProtocol:MapEditorProtocol {
     var onAddColumns:(() -> Void)?
-    var onOrder:(() -> Void)?
+    var onArrange:(() -> Void)?
     var projectOrder:ProjectOrderProtocol!
     
     func add(columns:[MapColumnProtocol]) {
         self.onAddColumns?()
     }
     
-    func order(item:MapItemProtocol) {
-        self.onOrder?()
+    func arrange(item:MapItemProtocol) {
+        self.onArrange?()
     }
 }

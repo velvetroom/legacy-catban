@@ -19,7 +19,7 @@ class MapColumn:MapColumnProtocol {
         }
     }
     
-    func order(item:MapItemProtocol) {
+    func arrange(item:MapItemProtocol) {
         let parent:MapParentProtocol = self.parentFor(item:item)
         parent.replaceChild(item:item)
     }

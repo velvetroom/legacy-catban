@@ -23,7 +23,7 @@ class MockMapColumnProtocol:MapColumnProtocol {
         self.onAddItem?()
     }
     
-    func order(item:MapItemProtocol) {
+    func arrange(item:MapItemProtocol) {
         self.onOrderItem?()
     }
 }

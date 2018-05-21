@@ -14,12 +14,17 @@ class PresenterColumn:PresenterColumnProtocol {
     }
     
     func load() {
+        self.configureItem()
         self.configureView()
         self.loadItems()
     }
     
     func loadNewCard() {
         self.loadWith(loader:PresenterFactory.makeNewCardLoader())
+    }
+    
+    private func configureItem() {
+        self.mapColumn.identifier = self.column.identifier
     }
     
     private func configureView() {

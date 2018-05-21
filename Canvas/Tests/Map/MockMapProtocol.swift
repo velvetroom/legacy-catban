@@ -4,7 +4,7 @@ import Board
 
 class MockMapProtocol:MapProtocol {
     var onAddColumns:(() -> Void)?
-    var onOrder:(() -> Void)?
+    var onArrange:(() -> Void)?
     var mapDelegate:MapDelegateProtocol!
     var projectOrder:ProjectOrderProtocol!
     
@@ -12,7 +12,7 @@ class MockMapProtocol:MapProtocol {
         self.onAddColumns?()
     }
     
-    func order(item:MapItemProtocol) {
-        self.onOrder?()
+    func arrange(item:MapItemProtocol) {
+        self.onArrange?()
     }
 }

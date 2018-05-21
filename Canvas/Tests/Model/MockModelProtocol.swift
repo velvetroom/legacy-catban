@@ -8,7 +8,7 @@ class MockModelProtocol:ModelProtocol {
     var onDragUpdate:(() -> Void)?
     var onDragEnd:(() -> Void)?
     var onAddColumns:(() -> Void)?
-    var onOrderItem:(() -> Void)?
+    var onArrangeItem:(() -> Void)?
     var projectOrder:ProjectOrderProtocol!
     var canvas:CanvasEditorProtocol!
     var viewItem:ViewItem!
@@ -39,7 +39,7 @@ class MockModelProtocol:ModelProtocol {
         self.onAddColumns?()
     }
     
-    func order(item:MapItemProtocol) {
-        self.onOrderItem?()
+    func arrange(item:MapItemProtocol) {
+        self.onArrangeItem?()
     }
 }

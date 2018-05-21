@@ -13,7 +13,7 @@ class DragStateMoving:DragStateProtocol {
     }
     
     func end() {
-        self.mapEditor.order(item:self.event.mapItem)
+        self.mapEditor.arrange(item:self.event.mapItem)
         self.event.viewItem.animateChanges()
         self.finishDrag()
     }

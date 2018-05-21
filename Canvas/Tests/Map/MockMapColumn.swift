@@ -9,7 +9,7 @@ class MockMapColumn:MapColumn {
         self.onAddItem?()
     }
     
-    override func order(item:MapItemProtocol) {
+    override func arrange(item:MapItemProtocol) {
         self.onOrderItem?()
     }
 }

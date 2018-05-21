@@ -6,5 +6,5 @@ protocol MapColumnProtocol:MapParentProtocol, MapBoardItemProtocol {
     var order:OrderColumn { get }
     
     func add(item:MapItemProtocol)
-    func order(item:MapItemProtocol)
+    func arrange(item:MapItemProtocol)
 }

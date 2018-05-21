@@ -18,7 +18,7 @@ class TestModel_Items:XCTestCase {
             updates = true
         }
         
-        self.model.order(item:MapNewCard())
+        self.model.arrange(item:MapNewCard())
         XCTAssertTrue(updates, "Not updated")
     }
 }

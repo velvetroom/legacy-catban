@@ -1,7 +1,7 @@
 import XCTest
 @testable import Canvas
 
-class TestMapColumn_Order:XCTestCase {
+class TestMapColumn_Arrange:XCTestCase {
     private var model:MapColumn!
     private var view:MockViewNode!
     private var item:MockMapCardProtocol!
@@ -21,7 +21,7 @@ class TestMapColumn_Order:XCTestCase {
     }
     
     func testOrderNoItems() {
-        self.model.order(item:self.item)
+        self.model.arrange(item:self.item)
         XCTAssertNotNil(self.model.childItem, "Not added")
     }
     
@@ -31,7 +31,7 @@ class TestMapColumn_Order:XCTestCase {
         self.item.minY = 100
         self.model.childItem = child
         child.parent = self.model
-        self.model.order(item:self.item)
+        self.model.arrange(item:self.item)
         XCTAssertTrue(self.item.childItem === child, "Not pushing")
     }
     
@@ -41,7 +41,7 @@ class TestMapColumn_Order:XCTestCase {
         self.item.minY = 200
         self.model.childItem = child
         child.parent = self.model
-        self.model.order(item:self.item)
+        self.model.arrange(item:self.item)
         XCTAssertTrue(child.childItem === self.item, "Not appending")
     }
 }

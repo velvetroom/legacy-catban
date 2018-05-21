@@ -57,9 +57,9 @@ class TestDragStateMoving:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
-    func testEndOrdersItem() {
+    func testEndArrangesItem() {
         var called:Bool = false
-        self.editor.onOrder = {
+        self.editor.onArrange = {
             called = true
         }
         
