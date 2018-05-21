@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol DragEventProtocol:class {
     var position:DragPosition { get }

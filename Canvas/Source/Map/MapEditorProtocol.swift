@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol MapEditorProtocol:class {
     func add(columns:[MapColumnProtocol])

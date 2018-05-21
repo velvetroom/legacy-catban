@@ -41,6 +41,8 @@ class TestModel:XCTestCase {
     }
     
     func testChangeState() {
+        let delegate:MockMapDelegateProtocol = MockMapDelegateProtocol()
+        self.model.mapDelegate = delegate
         self.model.change(stateType:MockDragStateProtocol.self)
         let state:MockDragStateProtocol? = self.model.state as? MockDragStateProtocol
         XCTAssertNotNil(state, "State not changed")

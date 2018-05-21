@@ -40,59 +40,8 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
         self.updateSize()
     }
     
-    func dragBegin() {
-        self.mapItem = self.viewItem.mapItem
-        self.position.restartWith(item:self.mapItem, and:self.latestTouch)
-        self.change(stateType:self.viewItem.dragState)
-        self.viewItem.stateHighlighted()
-    }
-    
-    func dragUpdate() {
-        self.position.latestTouch = self.latestTouch
-        self.state.update()
-    }
-    
-    func dragEnd() {
-        self.state.end()
-    }
-    
-    func change(stateType:DragStateProtocol.Type) {
-        self.state = stateType.init()
-        self.state.event = self
-        self.state.changer = self
-        self.state.mapEditor = self
-    }
-    
-    var contentHeight:CGFloat {
-        get {
-            var maxHeight:CGFloat = 0
-            for column:MapColumnProtocol in self.columns {
-                let height:CGFloat = column.height
-                if height > maxHeight {
-                    maxHeight = height
-                }
-            }
-            return maxHeight
-        }
-    }
-    
-    var contentWidth:CGFloat {
-        get {
-            var width:CGFloat = Constants.Board.paddingHorizontal
-            if let lastColumn:MapColumnProtocol = self.columns.last {
-                width += lastColumn.maxX
-            }
-            return width
-        }
-    }
-    
     private func add(column:MapColumnProtocol) {
         column.minX = self.contentWidth
         self.columns.append(column)
-    }
-    
-    private func updateSize() {
-        let size:CGSize = CGSize(width:self.contentWidth, height:self.contentHeight)
-        self.mapDelegate.mapChanged(size:size)
     }
 }

@@ -23,6 +23,7 @@
 		DA61314320AF3821002563BA /* PresenterCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314220AF3821002563BA /* PresenterCardProtocol.swift */; };
 		DA61314520AF3956002563BA /* PresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314420AF3956002563BA /* PresenterFactory.swift */; };
 		DA61314720AF3C9E002563BA /* PresenterItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */; };
+		DA8F5F1920B2DCFE009DA097 /* Model+Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F5F1820B2DCFE009DA097 /* Model+Drag.swift */; };
 		DAA7315520B01FF4009A6C36 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA7315420B01FF4009A6C36 /* assets.xcassets */; };
 		DAA7315720B0201E009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
 		DAA7315820B02029009A6C36 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7315620B0201E009A6C36 /* Shared.framework */; };
@@ -75,6 +76,7 @@
 		DADC95FF20B0514500D8BB8F /* TestModel_AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */; };
 		DADC960120B05D0400D8BB8F /* TestModel_Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */; };
 		DADC960320B0605600D8BB8F /* MockDragStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */; };
+		DAF817DE20B2E039001AA940 /* Model+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF817DD20B2E039001AA940 /* Model+Content.swift */; };
 		DAF85E8420B17A670053B995 /* TestModel_ContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */; };
 		DAF85E8620B17C340053B995 /* MapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */; };
 		DAF85E8A20B182660053B995 /* MockMapColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */; };
@@ -143,6 +145,7 @@
 		DA61314220AF3821002563BA /* PresenterCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterCardProtocol.swift; sourceTree = "<group>"; };
 		DA61314420AF3956002563BA /* PresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFactory.swift; sourceTree = "<group>"; };
 		DA61314620AF3C9E002563BA /* PresenterItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterItemProtocol.swift; sourceTree = "<group>"; };
+		DA8F5F1820B2DCFE009DA097 /* Model+Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Drag.swift"; sourceTree = "<group>"; };
 		DAA7315420B01FF4009A6C36 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAA7315620B0201E009A6C36 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA7315920B02286009A6C36 /* PresenterCardHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterCardHeight.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		DADC95FE20B0514500D8BB8F /* TestModel_AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_AddItem.swift; sourceTree = "<group>"; };
 		DADC960020B05D0400D8BB8F /* TestModel_Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_Drag.swift; sourceTree = "<group>"; };
 		DADC960220B0605600D8BB8F /* MockDragStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragStateProtocol.swift; sourceTree = "<group>"; };
+		DAF817DD20B2E039001AA940 /* Model+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Content.swift"; sourceTree = "<group>"; };
 		DAF85E8320B17A670053B995 /* TestModel_ContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel_ContentSize.swift; sourceTree = "<group>"; };
 		DAF85E8520B17C340053B995 /* MapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapColumnProtocol.swift; sourceTree = "<group>"; };
 		DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumnProtocol.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 			children = (
 				DA61313820AF2637002563BA /* ModelProtocol.swift */,
 				DA61313A20AF2641002563BA /* Model.swift */,
+				DAF817DD20B2E039001AA940 /* Model+Content.swift */,
+				DA8F5F1820B2DCFE009DA097 /* Model+Drag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				DA61313620AF248A002563BA /* DragEventProtocol.swift in Sources */,
 				DAB5E61220AF080A00F860B3 /* PresenterColumn.swift in Sources */,
 				DAB5E61120AF080A00F860B3 /* PresenterCard.swift in Sources */,
+				DAF817DE20B2E039001AA940 /* Model+Content.swift in Sources */,
 				DAB5E61B20AF080A00F860B3 /* ViewContent.swift in Sources */,
 				DA61313420AF2176002563BA /* MapDelegateProtocol.swift in Sources */,
 				DAB5E5EA20AF080A00F860B3 /* DragStateChangerProtocol.swift in Sources */,
@@ -664,6 +671,7 @@
 				DAF85EAC20B1C5390053B995 /* MapCardProtocol.swift in Sources */,
 				DAB5E5F620AF080A00F860B3 /* MapNodeProtocol.swift in Sources */,
 				DAB5E5FB20AF080A00F860B3 /* MapParentProtocol+Default.swift in Sources */,
+				DA8F5F1920B2DCFE009DA097 /* Model+Drag.swift in Sources */,
 				DAB5E5EF20AF080A00F860B3 /* DragProtocol.swift in Sources */,
 				DA034AE720AF42E4001E461F /* CanvasEditorProtocol.swift in Sources */,
 				DA61312E20AF12EA002563BA /* PresenterProtocol.swift in Sources */,
