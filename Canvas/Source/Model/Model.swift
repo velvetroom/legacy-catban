@@ -1,9 +1,11 @@
 import UIKit
+import Board
 
 class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     weak var canvas:CanvasEditorProtocol!
     weak var mapDelegate:MapDelegateProtocol!
     weak var viewItem:ViewItem!
+    weak var projectOrder:ProjectOrderProtocol!
     var mapItem:MapItemProtocol!
     var columns:[MapColumnProtocol]
     var position:DragPosition

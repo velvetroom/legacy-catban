@@ -1,5 +1,5 @@
 import Foundation
 
-public protocol ProjectOrderProtocol {
+public protocol ProjectOrderProtocol:class {
     func orderWith(order:Order)
 }

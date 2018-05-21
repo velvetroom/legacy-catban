@@ -26,6 +26,7 @@ class Presenter:PresenterProtocol {
     func refresh() {
         self.clear()
         self.load()
+        self.updateReferences()
     }
     
     private func assignReferences() {
@@ -46,6 +47,10 @@ class Presenter:PresenterProtocol {
             self.columnIndex += 1
         }
         self.model.add(columns:columns)
+    }
+    
+    private func updateReferences() {
+        self.model.projectOrder = self.project
     }
     
     private func makeMapColumnWith(column:ColumnProtocol) -> MapColumnProtocol {

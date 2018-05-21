@@ -31,4 +31,11 @@ class TestPresenter:XCTestCase {
         self.presenter.refresh()
         XCTAssertFalse(model.columns.isEmpty, "Not loaded")
     }
+    
+    func testRefreshAssignsProjectOrder() {
+        let project:MockProjectProtocol = MockProjectProtocol()
+        self.presenter.project = project
+        self.presenter.refresh()
+        XCTAssertNotNil(self.presenter.model.projectOrder, "Not assigned")
+    }
 }

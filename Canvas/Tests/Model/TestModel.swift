@@ -9,6 +9,11 @@ class TestModel:XCTestCase {
         self.model = Model()
     }
     
+    func testNotRetainingOrder() {
+        self.model.projectOrder = MockProjectProtocol()
+        XCTAssertNil(self.model.projectOrder, "Retaining")
+    }
+    
     func testNotRetainingCanvas() {
         self.model.canvas = MockCanvasEditorProtocol()
         XCTAssertNil(self.model.canvas, "Retains")

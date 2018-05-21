@@ -1,4 +1,5 @@
 import UIKit
+import Board
 @testable import Canvas
 
 class MockModelProtocol:ModelProtocol {
@@ -8,6 +9,7 @@ class MockModelProtocol:ModelProtocol {
     var onDragEnd:(() -> Void)?
     var onAddColumns:(() -> Void)?
     var onOrderItem:(() -> Void)?
+    var projectOrder:ProjectOrderProtocol!
     var canvas:CanvasEditorProtocol!
     var viewItem:ViewItem!
     var mapDelegate:MapDelegateProtocol!
