@@ -14,17 +14,12 @@
 		DA15451720A46DAD00CCC59D /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockController.swift */; };
 		DA417C5820AAC73400D2BB8E /* MockViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA417C5720AAC73400D2BB8E /* MockViewCard.swift */; };
 		DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */; };
-		DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */; };
 		DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */; };
-		DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */; };
 		DA47FB9520A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
-		DA613A4C20AC06910088A29B /* TestMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A4B20AC06910088A29B /* TestMap.swift */; };
 		DA613A5620AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A5520AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift */; };
-		DA613A5820AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA613A5720AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift */; };
 		DA683E1D20A7094C006D15CE /* TestViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */; };
 		DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */; };
-		DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */; };
 		DA6C102620AE9C05007F9A91 /* TestPresenterUpdaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */; };
 		DA6C102820AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */; };
 		DA6C102A20AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */; };
@@ -33,16 +28,11 @@
 		DA6C103020AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */; };
 		DA6C103620AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */; };
 		DA6C103820AEB33C007F9A91 /* TestPresenterUpdaterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */; };
-		DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */; };
 		DA6C103C20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */; };
 		DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001620A2FC3400E50F0A /* TestViewCard.swift */; };
-		DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001A20A310C400E50F0A /* TestViewModelCard.swift */; };
 		DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D001E20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift */; };
-		DA6D002120A31F0800E50F0A /* TestViewModelBuilderTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D002020A31F0800E50F0A /* TestViewModelBuilderTextContent.swift */; };
 		DA6FDEEF20A7178B00D148DD /* TestPresenter_Updaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */; };
 		DA6FDEF120A7179E00D148DD /* MockPresenterUpdaterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */; };
-		DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */; };
-		DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */; };
 		DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */; };
 		DA978FAE20A19B13002461E6 /* TestViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FAD20A19B13002461E6 /* TestViewBoard.swift */; };
 		DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */; };
@@ -51,16 +41,12 @@
 		DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBE20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */; };
-		DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FC520A1B476002461E6 /* TestViewModel.swift */; };
 		DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */; };
 		DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */; };
-		DAB5E58820AEF9A300F860B3 /* MockDragProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
-		DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE4AA720A1F1B0002D1419 /* TestViewModelBuilder.swift */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
-		DAF84E6320A85E160000BF06 /* TestViewModelBuilder_NewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */; };
 		DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC0209CA9E30005F5D2 /* MockViewDelegateProtocol.swift */; };
 		DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */; };
 		DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */; };
@@ -87,17 +73,12 @@
 		DA15451620A46DAD00CCC59D /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA417C5720AAC73400D2BB8E /* MockViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewCard.swift; sourceTree = "<group>"; };
 		DA47FB7E20A2BB0800E89334 /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
-		DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelView.swift; sourceTree = "<group>"; };
 		DA47FB8E20A2C5C400E89334 /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
-		DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelColumn.swift; sourceTree = "<group>"; };
 		DA47FB9420A2D11100E89334 /* TestPresenter_ViewModel_Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel_Columns.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA613A4B20AC06910088A29B /* TestMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMap.swift; sourceTree = "<group>"; };
 		DA613A5520AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterUpdaterBoardItemProtocol.swift; sourceTree = "<group>"; };
-		DA613A5720AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DA683E1C20A7094C006D15CE /* TestViewNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewCard.swift; sourceTree = "<group>"; };
 		DA683E2020A70C5E006D15CE /* TestViewBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoardItem.swift; sourceTree = "<group>"; };
-		DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapProtocol.swift; sourceTree = "<group>"; };
 		DA6C102520AE9C05007F9A91 /* TestPresenterUpdaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterView.swift; sourceTree = "<group>"; };
 		DA6C102720AE9D78007F9A91 /* TestPresenterUpdaterScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterScroll.swift; sourceTree = "<group>"; };
 		DA6C102920AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterBoard.swift; sourceTree = "<group>"; };
@@ -106,32 +87,23 @@
 		DA6C102F20AEA712007F9A91 /* TestPresenterUpdaterColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterColumnsItem.swift; sourceTree = "<group>"; };
 		DA6C103520AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterFactory.swift; sourceTree = "<group>"; };
 		DA6C103720AEB33C007F9A91 /* TestPresenterUpdaterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterCard.swift; sourceTree = "<group>"; };
-		DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapColumn.swift; sourceTree = "<group>"; };
 		DA6C103B20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterUpdaterNewCard.swift; sourceTree = "<group>"; };
 		DA6D001620A2FC3400E50F0A /* TestViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCard.swift; sourceTree = "<group>"; };
-		DA6D001A20A310C400E50F0A /* TestViewModelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelCard.swift; sourceTree = "<group>"; };
 		DA6D001E20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel_Cards.swift; sourceTree = "<group>"; };
-		DA6D002020A31F0800E50F0A /* TestViewModelBuilderTextContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilderTextContent.swift; sourceTree = "<group>"; };
 		DA6FDEEE20A7178B00D148DD /* TestPresenter_Updaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Updaters.swift; sourceTree = "<group>"; };
 		DA6FDEF020A7179E00D148DD /* MockPresenterUpdaterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterUpdaterProtocol.swift; sourceTree = "<group>"; };
-		DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelBuilderProtocol.swift; sourceTree = "<group>"; };
-		DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_Builders.swift; sourceTree = "<group>"; };
 		DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA978FAD20A19B13002461E6 /* TestViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBoard.swift; sourceTree = "<group>"; };
 		DA978FB120A1A216002461E6 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA978FB720A1A6AC002461E6 /* TestPresenter_Outlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Outlets.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA978FBD20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutletsLoader.swift; sourceTree = "<group>"; };
-		DA978FC520A1B476002461E6 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DA978FCE20A1C29B002461E6 /* TestController_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_Presenter.swift; sourceTree = "<group>"; };
 		DAAF5E6220A9653800354B08 /* TestController_CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_CreateCard.swift; sourceTree = "<group>"; };
-		DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDragProtocol.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		DAEE4AA720A1F1B0002D1419 /* TestViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder.swift; sourceTree = "<group>"; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
-		DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelBuilder_NewCard.swift; sourceTree = "<group>"; };
 		DAFD2FC0209CA9E30005F5D2 /* MockViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FC4209CA9EE0005F5D2 /* MockControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockControllerProtocol.swift; sourceTree = "<group>"; };
@@ -174,46 +146,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA613A4A20AC06770088A29B /* Drag */ = {
-			isa = PBXGroup;
-			children = (
-				DAB5E58720AEF9A300F860B3 /* MockDragProtocol.swift */,
-			);
-			path = Drag;
-			sourceTree = "<group>";
-		};
-		DA6C102220AE99DC007F9A91 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				DA613A4B20AC06910088A29B /* TestMap.swift */,
-				DA6C102320AE9A47007F9A91 /* MockMapProtocol.swift */,
-				DA6C103920AEB41B007F9A91 /* MockMapColumn.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
 		DA6D001120A2F6D200E50F0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		DA978FC120A1B43E002461E6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DA978FC520A1B476002461E6 /* TestViewModel.swift */,
-				DAEE4AA720A1F1B0002D1419 /* TestViewModelBuilder.swift */,
-				DA75B70720A8368F000756C3 /* TestViewModelBuilder_Builders.swift */,
-				DAF84E6220A85E160000BF06 /* TestViewModelBuilder_NewCard.swift */,
-				DA6D002020A31F0800E50F0A /* TestViewModelBuilderTextContent.swift */,
-				DA47FB8220A2C2B200E89334 /* TestViewModelView.swift */,
-				DA47FB9020A2C6B200E89334 /* TestViewModelColumn.swift */,
-				DA6D001A20A310C400E50F0A /* TestViewModelCard.swift */,
-				DA75B70520A835B5000756C3 /* MockViewModelBuilderProtocol.swift */,
-				DA613A5720AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DADB5EC1209B11E200CFFC9A /* View */ = {
@@ -313,9 +250,6 @@
 				DAFEF366209AF8B800740A88 /* Controller */,
 				DAF7E65E209B063800B8A39A /* Presenter */,
 				DADB5EC2209B11F800CFFC9A /* View */,
-				DA978FC120A1B43E002461E6 /* ViewModel */,
-				DA6C102220AE99DC007F9A91 /* Map */,
-				DA613A4A20AC06770088A29B /* Drag */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -472,42 +406,28 @@
 				DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */,
 				DA978FBE20A1A8EE002461E6 /* TestPresenterOutletsLoader.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
-				DA978FC620A1B476002461E6 /* TestViewModel.swift in Sources */,
 				DA978FB820A1A6AC002461E6 /* TestPresenter_Outlets.swift in Sources */,
-				DA6D001B20A310C400E50F0A /* TestViewModelCard.swift in Sources */,
 				DAFD2FC1209CA9E30005F5D2 /* MockViewDelegateProtocol.swift in Sources */,
-				DA6C103A20AEB41B007F9A91 /* MockMapColumn.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
-				DA613A5820AC1EF20088A29B /* MockViewModelBoardItemProtocol.swift in Sources */,
-				DA75B70620A835B5000756C3 /* MockViewModelBuilderProtocol.swift in Sources */,
-				DA47FB8320A2C2B200E89334 /* TestViewModelView.swift in Sources */,
-				DAF84E6320A85E160000BF06 /* TestViewModelBuilder_NewCard.swift in Sources */,
 				DA683E2120A70C5E006D15CE /* TestViewBoardItem.swift in Sources */,
 				DA0BF78220AC04A3003CFD50 /* TestPresenter_Map.swift in Sources */,
 				DA6C102620AE9C05007F9A91 /* TestPresenterUpdaterView.swift in Sources */,
-				DA47FB9120A2C6B200E89334 /* TestViewModelColumn.swift in Sources */,
 				DA47FB8F20A2C5C400E89334 /* TestViewColumn.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DA613A5620AC1C840088A29B /* MockPresenterUpdaterBoardItemProtocol.swift in Sources */,
-				DAB5E58820AEF9A300F860B3 /* MockDragProtocol.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
-				DA75B70820A8368F000756C3 /* TestViewModelBuilder_Builders.swift in Sources */,
 				DA6C102A20AE9E14007F9A91 /* TestPresenterUpdaterBoard.swift in Sources */,
 				DA6FDEF120A7179E00D148DD /* MockPresenterUpdaterProtocol.swift in Sources */,
 				DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */,
 				DA6FDEEF20A7178B00D148DD /* TestPresenter_Updaters.swift in Sources */,
 				DA6C102E20AEA17D007F9A91 /* MockViewBoard.swift in Sources */,
-				DA6D002120A31F0800E50F0A /* TestViewModelBuilderTextContent.swift in Sources */,
 				DA6D001F20A3180200E50F0A /* TestPresenter_ViewModel_Cards.swift in Sources */,
 				DA6C103620AEB17A007F9A91 /* TestPresenterUpdaterFactory.swift in Sources */,
 				DA0E58B5209F383500AD4425 /* TestViewScroll.swift in Sources */,
 				DA6C102C20AE9ED0007F9A91 /* TestPresenterUpdaterColumns.swift in Sources */,
 				DA978FB220A1A216002461E6 /* TestPresenterOutlets.swift in Sources */,
 				DA47FB7F20A2BB0800E89334 /* TestPresenter_ViewModel.swift in Sources */,
-				DA613A4C20AC06910088A29B /* TestMap.swift in Sources */,
 				DA6C103C20AEB73B007F9A91 /* TestPresenterUpdaterNewCard.swift in Sources */,
-				DA6C102420AE9A47007F9A91 /* MockMapProtocol.swift in Sources */,
-				DAEE4AA820A1F1B0002D1419 /* TestViewModelBuilder.swift in Sources */,
 				DA6D001720A2FC3400E50F0A /* TestViewCard.swift in Sources */,
 				DAAF5E6320A9653800354B08 /* TestController_CreateCard.swift in Sources */,
 				DA417C5820AAC73400D2BB8E /* MockViewCard.swift in Sources */,
