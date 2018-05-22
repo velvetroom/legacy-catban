@@ -13,7 +13,7 @@ class ViewNewColumn:ViewItem {
     
     override func triggerAction(canvas:CanvasEditorProtocol) {
         super.triggerAction(canvas:canvas)
-        canvas.createNewCard()
+        canvas.createNewColumn()
     }
     
     override func stateHighlighted() {

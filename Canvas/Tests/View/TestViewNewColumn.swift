@@ -18,7 +18,7 @@ class TestViewNewColumn:XCTestCase {
     func testTriggerAction() {
         var called:Bool = false
         let canvas:MockCanvasEditorProtocol = MockCanvasEditorProtocol()
-        canvas.onCreateNewCard = {
+        canvas.onCreateNewColumn = {
             called = true
         }
         
