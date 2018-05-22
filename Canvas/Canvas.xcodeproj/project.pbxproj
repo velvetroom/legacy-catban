@@ -57,7 +57,6 @@
 		DAB5E60E20AF080A00F860B3 /* PresenterNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */; };
 		DAB5E61120AF080A00F860B3 /* PresenterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */; };
 		DAB5E61220AF080A00F860B3 /* PresenterColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5DC20AF080A00F860B3 /* PresenterColumn.swift */; };
-		DAB5E61720AF080A00F860B3 /* ViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E220AF080A00F860B3 /* ViewNode.swift */; };
 		DAB5E61820AF080A00F860B3 /* ViewNewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */; };
 		DAB5E61920AF080A00F860B3 /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E420AF080A00F860B3 /* ViewCard.swift */; };
 		DAB5E61A20AF080A00F860B3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5E5E520AF080A00F860B3 /* View.swift */; };
@@ -108,7 +107,6 @@
 		DAF85EA420B1C1D80053B995 /* MockMapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EA320B1C1D80053B995 /* MockMapProtocol.swift */; };
 		DAF85EA620B1C22A0053B995 /* MockMapNodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EA520B1C22A0053B995 /* MockMapNodeProtocol.swift */; };
 		DAF85EA820B1C2750053B995 /* TestMapColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EA720B1C2750053B995 /* TestMapColumn.swift */; };
-		DAF85EAA20B1C3B40053B995 /* MockViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EA920B1C3B40053B995 /* MockViewNode.swift */; };
 		DAF85EAC20B1C5390053B995 /* MapCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAB20B1C5390053B995 /* MapCardProtocol.swift */; };
 		DAF85EAE20B1C5E00053B995 /* MockMapCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAD20B1C5E00053B995 /* MockMapCardProtocol.swift */; };
 		DAF85EB020B1CDA60053B995 /* TestMapColumn_Arrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF85EAF20B1CDA60053B995 /* TestMapColumn_Arrange.swift */; };
@@ -193,7 +191,6 @@
 		DAB5E5D820AF080A00F860B3 /* PresenterNewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterNewCard.swift; sourceTree = "<group>"; };
 		DAB5E5DB20AF080A00F860B3 /* PresenterCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterCard.swift; sourceTree = "<group>"; };
 		DAB5E5DC20AF080A00F860B3 /* PresenterColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterColumn.swift; sourceTree = "<group>"; };
-		DAB5E5E220AF080A00F860B3 /* ViewNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewNode.swift; sourceTree = "<group>"; };
 		DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewNewCard.swift; sourceTree = "<group>"; };
 		DAB5E5E420AF080A00F860B3 /* ViewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
 		DAB5E5E520AF080A00F860B3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -244,7 +241,6 @@
 		DAF85EA320B1C1D80053B995 /* MockMapProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapProtocol.swift; sourceTree = "<group>"; };
 		DAF85EA520B1C22A0053B995 /* MockMapNodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapNodeProtocol.swift; sourceTree = "<group>"; };
 		DAF85EA720B1C2750053B995 /* TestMapColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapColumn.swift; sourceTree = "<group>"; };
-		DAF85EA920B1C3B40053B995 /* MockViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewNode.swift; sourceTree = "<group>"; };
 		DAF85EAB20B1C5390053B995 /* MapCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCardProtocol.swift; sourceTree = "<group>"; };
 		DAF85EAD20B1C5E00053B995 /* MockMapCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapCardProtocol.swift; sourceTree = "<group>"; };
 		DAF85EAF20B1CDA60053B995 /* TestMapColumn_Arrange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapColumn_Arrange.swift; sourceTree = "<group>"; };
@@ -454,10 +450,9 @@
 			children = (
 				DAB5E5E520AF080A00F860B3 /* View.swift */,
 				DAB5E5E620AF080A00F860B3 /* ViewContent.swift */,
-				DAB5E5E220AF080A00F860B3 /* ViewNode.swift */,
-				DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */,
 				DAB5E5E720AF080A00F860B3 /* ViewItem.swift */,
 				DA48B92320B3E20B000EAE8F /* ViewItemMapable.swift */,
+				DAB5E5E920AF080A00F860B3 /* ViewColumn.swift */,
 				DAB5E5E420AF080A00F860B3 /* ViewCard.swift */,
 				DAB5E5E320AF080A00F860B3 /* ViewNewCard.swift */,
 			);
@@ -548,7 +543,6 @@
 				DAF85EBF20B1DB9B0053B995 /* MockView.swift */,
 				DAF85ED120B1E7B00053B995 /* MockUIView.swift */,
 				DAF85EC920B1E3250053B995 /* MockViewContent.swift */,
-				DAF85EA920B1C3B40053B995 /* MockViewNode.swift */,
 				DADC95F820B04A7A00D8BB8F /* MockViewItem.swift */,
 				DA48B92720B3EF49000EAE8F /* MockViewItemMapable.swift */,
 				DAF85ECD20B1E5970053B995 /* MockTouch.swift */,
@@ -713,7 +707,6 @@
 				DAB5E61D20AF080A00F860B3 /* Constants.swift in Sources */,
 				DAF817E220B2E132001AA940 /* Model+Columns.swift in Sources */,
 				DA48B92420B3E20B000EAE8F /* ViewItemMapable.swift in Sources */,
-				DAB5E61720AF080A00F860B3 /* ViewNode.swift in Sources */,
 				DAF85EAC20B1C5390053B995 /* MapCardProtocol.swift in Sources */,
 				DAB5E5F620AF080A00F860B3 /* MapNodeProtocol.swift in Sources */,
 				DAB5E5FB20AF080A00F860B3 /* MapParentProtocol+Default.swift in Sources */,
@@ -756,7 +749,6 @@
 				DADC95EA20B0463000D8BB8F /* TestCanvas.swift in Sources */,
 				DAF85EA420B1C1D80053B995 /* MockMapProtocol.swift in Sources */,
 				DADC95FB20B04FF600D8BB8F /* TestModel_Columns.swift in Sources */,
-				DAF85EAA20B1C3B40053B995 /* MockViewNode.swift in Sources */,
 				DADC95F420B049B200D8BB8F /* TestModel.swift in Sources */,
 				DAF85EAE20B1C5E00053B995 /* MockMapCardProtocol.swift in Sources */,
 				DAF85E9C20B1BCEC0053B995 /* TestDragStateNone.swift in Sources */,

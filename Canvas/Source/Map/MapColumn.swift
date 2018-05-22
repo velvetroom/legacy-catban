@@ -1,7 +1,7 @@
 import UIKit
 
 class MapColumn:MapColumnProtocol {
-    weak var view:ViewNode!
+    weak var view:ViewItem!
     var childItem:MapItemProtocol?
     var identifier:String
     

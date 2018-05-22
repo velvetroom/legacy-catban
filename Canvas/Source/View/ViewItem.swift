@@ -1,15 +1,35 @@
 import UIKit
 
-class ViewItem:ViewNode {
+class ViewItem:UIView {
     var dragState:DragStateProtocol.Type!
+    weak var layoutLeft:NSLayoutConstraint!
+    weak var layoutTop:NSLayoutConstraint!
+    weak var layoutWidth:NSLayoutConstraint!
+    weak var layoutHeight:NSLayoutConstraint!
     
-    override init() {
-        super.init()
+    var position:CGPoint {
+        get {
+            return CGPoint(x:self.layoutLeft.constant, y:self.layoutTop.constant)
+        }
+    }
+    
+    init() {
+        super.init(frame:CGRect.zero)
+        self.configureView()
+        self.factoryOutlets()
         self.stateNormal()
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    func factoryOutlets() { }
+    
+    private func configureView() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = true
+        self.isUserInteractionEnabled = true
     }
     
     func stateHighlighted() { }

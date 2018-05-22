@@ -7,7 +7,7 @@ class MockMapColumnProtocol:MapColumnProtocol {
     var onOrderItem:(() -> Void)?
     var height:CGFloat
     var childItem:MapItemProtocol?
-    var view:ViewNode!
+    var view:ViewItem!
     var maxX:CGFloat
     var order:OrderColumn
     var identifier:String

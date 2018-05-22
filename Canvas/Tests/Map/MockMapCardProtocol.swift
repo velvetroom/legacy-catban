@@ -5,7 +5,7 @@ class MockMapCardProtocol:MapCardProtocol {
     var parent:MapParentProtocol!
     var childItem:MapItemProtocol?
     var identifier:String
-    var view:ViewNode!
+    var view:ViewItem!
     var minY:CGFloat
     var maxY:CGFloat
     var minX:CGFloat

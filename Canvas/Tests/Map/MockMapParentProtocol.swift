@@ -3,5 +3,5 @@ import Foundation
 
 class MockMapParentProtocol:MapParentProtocol {
     var childItem:MapItemProtocol?
-    var view:ViewNode!
+    var view:ViewItem!
 }

@@ -3,7 +3,7 @@ import XCTest
 
 class TestMapColumn_Arrange:XCTestCase {
     private var model:MapColumn!
-    private var view:MockViewNode!
+    private var view:MockViewItem!
     private var item:MockMapCardProtocol!
     private var layout:NSLayoutConstraint!
     
@@ -11,7 +11,7 @@ class TestMapColumn_Arrange:XCTestCase {
         super.setUp()
         self.model = MapColumn()
         self.item = MockMapCardProtocol()
-        self.view = MockViewNode()
+        self.view = MockViewItem()
         self.layout = NSLayoutConstraint()
         self.model.view = self.view
         self.view.layoutTop = self.layout

@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewColumn:ViewNode {
+class ViewColumn:ViewItem {
     private(set) weak var labelName:UILabel!
     
     override func factoryOutlets() {

@@ -10,7 +10,7 @@ class TestMapNewCard:XCTestCase {
     }
     
     func testNotRetainingView() {
-        self.model.view = MockViewNode()
+        self.model.view = MockViewItem()
         XCTAssertNil(self.model.view, "Retains")
     }
     

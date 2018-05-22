@@ -8,9 +8,9 @@ class TestModel_ArrangeItem:XCTestCase {
     private var columnA:MapColumn!
     private var columnB:MapColumn!
     private var item:MapCard!
-    private var viewColumnA:ViewNode!
-    private var viewColumnB:ViewNode!
-    private var viewItem:ViewNode!
+    private var viewColumnA:ViewItem!
+    private var viewColumnB:ViewItem!
+    private var viewItem:ViewItem!
     private var layoutLeftColumnA:NSLayoutConstraint!
     private var layoutWidthColumnA:NSLayoutConstraint!
     private var layoutTopColumnA:NSLayoutConstraint!
@@ -81,7 +81,7 @@ class TestModel_ArrangeItem:XCTestCase {
     
     private func configureItem() {
         self.item = MapCard()
-        self.viewItem = ViewNode()
+        self.viewItem = ViewItem()
         self.layoutTopItem = NSLayoutConstraint()
         self.layoutLeftItem = NSLayoutConstraint()
         self.layoutWidthItem = NSLayoutConstraint()
@@ -96,7 +96,7 @@ class TestModel_ArrangeItem:XCTestCase {
     
     private func configureColumnA() {
         self.columnA = MapColumn()
-        self.viewColumnA = ViewNode()
+        self.viewColumnA = ViewItem()
         self.layoutTopColumnA = NSLayoutConstraint()
         self.layoutLeftColumnA = NSLayoutConstraint()
         self.layoutWidthColumnA = NSLayoutConstraint()
@@ -112,7 +112,7 @@ class TestModel_ArrangeItem:XCTestCase {
     
     private func configureColumnB() {
         self.columnB = MapColumn()
-        self.viewColumnB = ViewNode()
+        self.viewColumnB = ViewItem()
         self.layoutTopColumnB = NSLayoutConstraint()
         self.layoutLeftColumnB = NSLayoutConstraint()
         self.layoutWidthColumnB = NSLayoutConstraint()

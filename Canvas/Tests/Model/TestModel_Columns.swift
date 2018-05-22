@@ -22,7 +22,7 @@ class TestModel_Columns:XCTestCase {
         let columnA:MapColumn = MapColumn()
         let columnB:MapColumn = MapColumn()
         let layout:NSLayoutConstraint = NSLayoutConstraint()
-        let view:ViewNode = ViewNode()
+        let view:ViewItem = ViewItem()
         view.layoutTop = layout
         view.layoutHeight = layout
         view.layoutLeft = layout

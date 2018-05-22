@@ -3,7 +3,7 @@ import UIKit
 
 class MockMapItemProtocol:MapItemProtocol {
     var parent:MapParentProtocol!
-    var view:ViewNode!
+    var view:ViewItem!
     var minX:CGFloat
     var minY:CGFloat
     var maxX:CGFloat

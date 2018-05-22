@@ -3,13 +3,13 @@ import XCTest
 
 class TestMapColumn:XCTestCase {
     private var model:MapColumn!
-    private var view:MockViewNode!
+    private var view:MockViewItem!
     private var layout:NSLayoutConstraint!
     
     override func setUp() {
         super.setUp()
         self.model = MapColumn()
-        self.view = MockViewNode()
+        self.view = MockViewItem()
         self.layout = NSLayoutConstraint()
         self.model.view = self.view
         self.view.layoutTop = self.layout
@@ -19,7 +19,7 @@ class TestMapColumn:XCTestCase {
     }
     
     func testNotRetainingView() {
-        self.model.view = MockViewNode()
+        self.model.view = MockViewItem()
         XCTAssertNil(self.model.view, "Retains")
     }
     
