@@ -21,7 +21,7 @@ struct Constants {
     }
     
     struct ColumnTitle {
-        static let iconImage:String = "assetColumnIcon"
+        static let icon:String = "assetColumnIcon"
         static let height:CGFloat = 70
         static let fontSize:CGFloat = 14
         static let labelTop:CGFloat = 30

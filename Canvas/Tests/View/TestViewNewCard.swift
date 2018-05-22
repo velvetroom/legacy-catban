@@ -1,4 +1,5 @@
 import XCTest
+import Shared
 @testable import Canvas
 
 class TestViewNewCard:XCTestCase {
@@ -23,5 +24,10 @@ class TestViewNewCard:XCTestCase {
         
         self.view.triggerAction(canvas:canvas)
         XCTAssertTrue(called, "Not called")
+    }
+    
+    func testImage() {
+        let image:UIImage? = UIImage(name:Constants.NewCard.icon, in:ViewNewCard.self)
+        XCTAssertNotNil(image, "Image not found")
     }
 }

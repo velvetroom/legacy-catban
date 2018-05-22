@@ -31,7 +31,7 @@ class ViewColumn:ViewNode {
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.contentMode = UIViewContentMode.center
         icon.clipsToBounds = true
-        icon.image = UIImage(name:Constants.ColumnTitle.iconImage, in:type(of:self))
+        icon.image = UIImage(name:Constants.ColumnTitle.icon, in:type(of:self))
         
         self.addSubview(icon)
         
