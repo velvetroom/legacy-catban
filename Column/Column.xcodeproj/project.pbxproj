@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA039F5A20B45380000CE027 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA039F5920B45380000CE027 /* TestPresenter.swift */; };
 		DA039F5C20B456B6000CE027 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA039F5B20B456B6000CE027 /* MockTransitionProtocol.swift */; };
+		DA039F5F20B45A3E000CE027 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA039F5E20B45A3E000CE027 /* View.swift */; };
+		DA039F6120B45AB0000CE027 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA039F6020B45AB0000CE027 /* ViewConstants.swift */; };
+		DA039F6320B46101000CE027 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA039F6220B46101000CE027 /* ViewBase.swift */; };
 		DA1F31C220B443380076ECAF /* Column.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31AE20B4427E0076ECAF /* Column.framework */; };
 		DA1F31D020B445060076ECAF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31CF20B445060076ECAF /* Controller.swift */; };
 		DA1F31D520B445730076ECAF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31D420B445730076ECAF /* TestController.swift */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		DA039F5920B45380000CE027 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DA039F5B20B456B6000CE027 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
+		DA039F5E20B45A3E000CE027 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA039F6020B45AB0000CE027 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		DA039F6220B46101000CE027 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		DA1F31AE20B4427E0076ECAF /* Column.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Column.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31BD20B443380076ECAF /* TestsColumn.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsColumn.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31C820B444800076ECAF /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -73,6 +79,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		DA039F5D20B45A27000CE027 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA1F31A420B4427E0076ECAF = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 			children = (
 				DA1F31D320B445630076ECAF /* Controller */,
 				DA039F5820B45370000CE027 /* Presenter */,
+				DA039F5D20B45A27000CE027 /* View */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -132,6 +146,9 @@
 		DA1F31CD20B444EA0076ECAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA039F5E20B45A3E000CE027 /* View.swift */,
+				DA039F6020B45AB0000CE027 /* ViewConstants.swift */,
+				DA039F6220B46101000CE027 /* ViewBase.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,7 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1F31E320B448270076ECAF /* Presenter.swift in Sources */,
+				DA039F6320B46101000CE027 /* ViewBase.swift in Sources */,
 				DA1F31D020B445060076ECAF /* Controller.swift in Sources */,
+				DA039F6120B45AB0000CE027 /* ViewConstants.swift in Sources */,
+				DA039F5F20B45A3E000CE027 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

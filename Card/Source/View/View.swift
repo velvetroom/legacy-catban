@@ -13,7 +13,7 @@ class View:Shared.View, UITextViewDelegate {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
                                                          target:self,
                                                          action:#selector(self.selectorDone(sender:)))
-        let deleteIcon:UIImage = UIImage(name:ViewConstants.View.iconTrash, in:type(of:self))
+        let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconTrash, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
                                                            action:#selector(self.selectorDelete(sender:)))

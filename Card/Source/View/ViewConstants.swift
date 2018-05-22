@@ -1,7 +1,7 @@
 import UIKit
 
 struct ViewConstants {
-    struct View {
+    struct Navigation {
         static let iconTrash:String = "assetTrash"
     }
     
