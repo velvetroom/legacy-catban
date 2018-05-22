@@ -17,6 +17,7 @@ class TestInjection:XCTestCase {
         XCTAssertNotNil(Configuration.controllerLoadType, "Failed to inject controller load")
         XCTAssertNotNil(Configuration.controllerHomeType, "Failed to inject controller home")
         XCTAssertNotNil(Configuration.controllerCardType, "Failed to inject controller card")
+        XCTAssertNotNil(Configuration.controllerColumnType, "Failed to inject controller column")
         XCTAssertNotNil(Configuration.canvasType, "Failed to inject canvas")
     }
 }
