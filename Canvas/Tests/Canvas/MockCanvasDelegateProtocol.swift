@@ -4,6 +4,7 @@ import Foundation
 class MockCanvasDelegateProtocol:CanvasDelegateProtocol {
     var onEditCardWithIdentifier:(() -> Void)?
     var onCreateNewCard:(() -> Void)?
+    var onCreateNewColumn:(() -> Void)?
     
     func editCardWith(identifier:String) {
         self.onEditCardWithIdentifier?()
@@ -11,5 +12,9 @@ class MockCanvasDelegateProtocol:CanvasDelegateProtocol {
     
     func createNewCard() {
         self.onCreateNewCard?()
+    }
+    
+    func createNewColumn() {
+        self.onCreateNewColumn?()
     }
 }

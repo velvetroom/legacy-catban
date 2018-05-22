@@ -37,4 +37,8 @@ public class Canvas:CanvasProtocol, CanvasEditorProtocol {
     func createNewCard() {
         self.delegate.createNewCard()
     }
+    
+    func createNewColumn() {
+        self.delegate.createNewColumn()
+    }
 }
