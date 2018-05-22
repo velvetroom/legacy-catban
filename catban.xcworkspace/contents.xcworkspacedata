@@ -32,6 +32,9 @@
       location = "group:Card/Card.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Column/Column.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Design">
    </FileRef>
    <FileRef
