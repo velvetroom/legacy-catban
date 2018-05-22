@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol ColumnProtocol:
+public protocol ColumnProtocol:class,
     IdentifierProtocol,
     CreatedProtocol,
     ContainerProtocol,

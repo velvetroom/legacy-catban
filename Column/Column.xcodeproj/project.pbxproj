@@ -14,6 +14,7 @@
 		DA1F31DA20B4463E0076ECAF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D920B4463E0076ECAF /* Shared.framework */; };
 		DA1F31DB20B446560076ECAF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D920B4463E0076ECAF /* Shared.framework */; };
 		DA1F31DC20B446580076ECAF /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D720B446380076ECAF /* Board.framework */; };
+		DA1F31E320B448270076ECAF /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31E220B448270076ECAF /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		DA1F31D420B445730076ECAF /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DA1F31D720B446380076ECAF /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31D920B4463E0076ECAF /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1F31E220B448270076ECAF /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		DA1F31CC20B444E10076ECAF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DA1F31E220B448270076ECAF /* Presenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1F31E320B448270076ECAF /* Presenter.swift in Sources */,
 				DA1F31D020B445060076ECAF /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
