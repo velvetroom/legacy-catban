@@ -12,8 +12,9 @@ public class Controller:ControllerProtocol {
     public required init() {
         self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:ControllerConstants.queueIdentifier)
         self.repository = Configuration.repositoryBoardType.init()
-        self.presenter = Presenter()
-        self.presenter.delegate = self
+        let presenter:Presenter = Presenter()
+        self.presenter = presenter
+        presenter.delegate = self
     }
     
     public func didLoadPresenter() {

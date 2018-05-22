@@ -1,27 +1,34 @@
 import XCTest
+import Board
+@testable import Column
 
-class TestController: XCTestCase {
+class TestController:XCTestCase {
+    private var controller:Controller!
+    private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.controller = Controller()
+        self.transition = MockTransitionProtocol()
+        self.controller.transiton = self.transition
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testNotRetainingColumn() {
+        self.controller.column = ColumnFactory.newColumn()
+        XCTAssertNil(self.controller.column, "Retains")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNotRetainingTransition() {
+        self.controller.transiton = MockTransitionProtocol()
+        XCTAssertNil(self.controller.transiton, "Retains")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInjectsDelegate() {
+        XCTAssertNotNil(self.controller.presenter.delegate, "Not injected")
     }
     
+    func testInjectsController() {
+        let presenter:Column.Presenter = self.controller.presenter as! Column.Presenter
+        XCTAssertNotNil(presenter.controller, "Not injected")
+    }
 }

@@ -10,7 +10,7 @@ public class Controller:ControllerProjectProtocol, CanvasDelegateProtocol {
     public required init() {
         let presenter:Presenter = Presenter()
         self.presenter = presenter
-        self.presenter.delegate = self
+        presenter.delegate = self
         presenter.controller = self
     }
     

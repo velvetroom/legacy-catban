@@ -11,7 +11,7 @@ public class Controller:ControllerColumnProtocol {
     public required init() {
         let presenter:Presenter = Presenter()
         self.presenter = presenter
-        self.presenter.delegate = self
+        presenter.delegate = self
         presenter.controller = self
     }
 }
