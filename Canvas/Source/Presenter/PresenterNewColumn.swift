@@ -7,7 +7,7 @@ class PresenterNewColumn:PresenterNewColumnProtocol {
     
     required init() {
         self.viewNewColumn = ViewNewColumn()
-        self.mapColumn = MapColumn()
+        self.mapColumn = MapNewColumn()
         self.mapColumn.view = self.viewNewColumn
         self.viewNewColumn.mapNode = self.mapColumn
     }
@@ -26,7 +26,7 @@ class PresenterNewColumn:PresenterNewColumnProtocol {
         self.viewNewColumn.layoutTop = self.viewNewColumn.topAnchor.constraint(equalTo:self.view.topAnchor)
         self.viewNewColumn.layoutLeft = self.viewNewColumn.leftAnchor.constraint(equalTo:self.view.leftAnchor)
         self.viewNewColumn.layoutHeight = self.viewNewColumn.heightAnchor.constraint(
-            equalToConstant:Constants.NewColumn.height)
+            equalToConstant:Constants.ColumnTitle.height)
         self.viewNewColumn.layoutWidth = self.viewNewColumn.widthAnchor.constraint(
             equalToConstant:Constants.Column.width)
     }

@@ -19,8 +19,8 @@ class TestMapCard:XCTestCase {
         XCTAssertNil(self.model.parent, "Retains")
     }
     
-    func testRetainsChild() {
+    func testNotRetainingChild() {
         self.model.childItem = MockMapItemProtocol()
-        XCTAssertNotNil(self.model.childItem, "Not retaining")
+        XCTAssertNil(self.model.childItem, "Retains")
     }
 }

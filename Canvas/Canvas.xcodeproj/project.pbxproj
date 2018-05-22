@@ -18,6 +18,7 @@
 		DA1F319D20B432F00076ECAF /* PresenterNewColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319C20B432F00076ECAF /* PresenterNewColumnProtocol.swift */; };
 		DA1F319F20B4331D0076ECAF /* PresenterNewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319E20B4331D0076ECAF /* PresenterNewColumn.swift */; };
 		DA1F31A120B435840076ECAF /* TestPresenterNewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31A020B435840076ECAF /* TestPresenterNewColumn.swift */; };
+		DA1F31A320B43A280076ECAF /* MapNewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31A220B43A280076ECAF /* MapNewColumn.swift */; };
 		DA48B92220B3E05C000EAE8F /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48B92120B3E05C000EAE8F /* TestViewColumn.swift */; };
 		DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */; };
 		DA61312620AF10A2002563BA /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
@@ -156,6 +157,7 @@
 		DA1F319C20B432F00076ECAF /* PresenterNewColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNewColumnProtocol.swift; sourceTree = "<group>"; };
 		DA1F319E20B4331D0076ECAF /* PresenterNewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNewColumn.swift; sourceTree = "<group>"; };
 		DA1F31A020B435840076ECAF /* TestPresenterNewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterNewColumn.swift; sourceTree = "<group>"; };
+		DA1F31A220B43A280076ECAF /* MapNewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNewColumn.swift; sourceTree = "<group>"; };
 		DA48B92120B3E05C000EAE8F /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
 		DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
 		DA61312520AF10A2002563BA /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,6 +436,7 @@
 				DAF817E320B2E760001AA940 /* MapColumn+Order.swift */,
 				DAB5E5C120AF080A00F860B3 /* MapCard.swift */,
 				DAB5E5C520AF080A00F860B3 /* MapNewCard.swift */,
+				DA1F31A220B43A280076ECAF /* MapNewColumn.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				DAB5E5F020AF080A00F860B3 /* DragStateProtocol.swift in Sources */,
 				DAB5E5F220AF080A00F860B3 /* DragPosition.swift in Sources */,
 				DAB5E60E20AF080A00F860B3 /* PresenterNewCard.swift in Sources */,
+				DA1F31A320B43A280076ECAF /* MapNewColumn.swift in Sources */,
 				DA61313D20AF35FB002563BA /* MapEditorProtocol.swift in Sources */,
 				DAB5E5FF20AF080A00F860B3 /* MapNodeProtocol+Default.swift in Sources */,
 				DAB5E5F120AF080A00F860B3 /* DragStateProtocol+Default.swift in Sources */,

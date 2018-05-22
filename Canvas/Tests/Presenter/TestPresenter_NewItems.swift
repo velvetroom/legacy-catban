@@ -58,7 +58,9 @@ class TestPresenter_NewItems:XCTestCase {
         var count:Int = 0
         let model:Model = self.presenter.model as! Model
         for column:MapColumnProtocol in model.columns {
-            let column:MapColumn = column as! MapColumn
+            guard
+                let column:MapColumn = column as? MapColumn
+            else { continue }
             for child:MapItemProtocol in column.children {
                 if let _:MapType = child as? MapType {
                     count += 1

@@ -23,13 +23,14 @@ class TestMapColumn:XCTestCase {
         XCTAssertNil(self.model.view, "Retains")
     }
     
-    func testRetainsChild() {
+    func testNotRetainingChild() {
         self.model.childItem = MockMapItemProtocol()
-        XCTAssertNotNil(self.model.childItem, "Not retaining")
+        XCTAssertNil(self.model.childItem, "Retains")
     }
     
     func testAddItemWithNoChilds() {
-        self.model.add(item:MockMapItemProtocol())
+        let item:MockMapItemProtocol = MockMapItemProtocol()
+        self.model.add(item:item)
         XCTAssertNotNil(self.model.childItem, "Not added")
     }
     

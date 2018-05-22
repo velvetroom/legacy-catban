@@ -6,6 +6,7 @@ class TestModel_Order:XCTestCase {
     private var model:Model!
     private var project:MockProjectOrderProtocol!
     private var mapDelegate:MockMapDelegateProtocol!
+    private var card:MapCard!
     private struct inConstants {
         static let identifierA:String = "asd"
         static let identifierB:String = "lorem ipsum"
@@ -26,7 +27,7 @@ class TestModel_Order:XCTestCase {
         columnB.identifier = inConstants.identifierB
         let columnC:MapColumn = MapColumn()
         columnC.identifier = inConstants.identifierC
-        let card:MapCard = MapCard()
+        self.card = MapCard()
         card.identifier = inConstants.cardIdentifier
         columnC.childItem = card
         self.model.columns = [columnA, columnB, columnC]

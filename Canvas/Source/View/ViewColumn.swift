@@ -1,10 +1,8 @@
 import UIKit
-import Shared
 
 class ViewColumn:ViewItem {
     var identifier:String
     private(set) weak var labelName:UILabel!
-    private weak var icon:UIImageView!
     
     override init() {
         self.identifier = String()
@@ -38,7 +36,6 @@ class ViewColumn:ViewItem {
         icon.contentMode = UIViewContentMode.center
         icon.clipsToBounds = true
         icon.image = UIImage(name:Constants.ColumnTitle.icon, in:type(of:self))
-        self.icon = icon
         
         self.addSubview(icon)
         

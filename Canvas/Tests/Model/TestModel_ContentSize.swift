@@ -26,9 +26,9 @@ class TestModel_ContentSize:XCTestCase {
     }
     
     private func configureColumns() {
-        let columnA:MockMapColumnProtocol = MockMapColumnProtocol()
-        let columnB:MockMapColumnProtocol = MockMapColumnProtocol()
-        let columnC:MockMapColumnProtocol = MockMapColumnProtocol()
+        let columnA:MockMapNestableColumnProtocol = MockMapNestableColumnProtocol()
+        let columnB:MockMapNestableColumnProtocol = MockMapNestableColumnProtocol()
+        let columnC:MockMapNestableColumnProtocol = MockMapNestableColumnProtocol()
         columnA.height = inConstants.columnHeightA
         columnB.height = inConstants.columnHeightB
         columnC.height = inConstants.columnHeightC

@@ -18,18 +18,18 @@ class ViewNewColumn:ViewItem {
     
     override func stateHighlighted() {
         super.stateHighlighted()
-        self.alpha = Constants.NewCard.alphaOn
+        self.alpha = Constants.NewColumn.alphaOn
     }
     
     override func stateNormal() {
         super.stateNormal()
-        self.alpha = Constants.NewCard.alphaOff
+        self.alpha = Constants.NewColumn.alphaOff
     }
     
     override func factoryOutlets() {
         super.factoryOutlets()
         let image:UIImageView = UIImageView()
-        image.image = UIImage(name:Constants.NewCard.icon, in:type(of:self))
+        image.image = UIImage(name:Constants.NewColumn.icon, in:type(of:self))
         image.isUserInteractionEnabled = false
         image.clipsToBounds = true
         image.contentMode = UIViewContentMode.center

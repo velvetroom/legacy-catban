@@ -2,7 +2,7 @@ import UIKit
 
 class ViewItem:UIView {
     var dragState:DragStateProtocol.Type!
-    weak var mapNode:MapNodeProtocol!
+    var mapNode:MapNodeProtocol!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutWidth:NSLayoutConstraint!

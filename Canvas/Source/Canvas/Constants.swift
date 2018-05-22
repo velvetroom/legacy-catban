@@ -44,7 +44,6 @@ struct Constants {
     
     struct NewColumn {
         static let icon:String = "assetColumnNew"
-        static let height:CGFloat = 50
         static let alphaOn:CGFloat = 0.3
         static let alphaOff:CGFloat = 1
     }

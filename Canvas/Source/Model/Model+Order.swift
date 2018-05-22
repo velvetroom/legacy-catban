@@ -5,10 +5,9 @@ extension Model {
     var order:Order {
         get {
             var order:Order = Order()
-            self.columns.forEach { (column:MapColumnProtocol) in
-                if let nestableColumn:MapNestableColumnProtocol = column as? MapNestableColumnProtocol {
-                    order.columns.append(nestableColumn.order)
-                }
+            let columns:[MapNestableColumnProtocol] = self.nestableColumns
+            columns.forEach { (column:MapNestableColumnProtocol) in
+                order.columns.append(column.order)
             }
             return order
         }

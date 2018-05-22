@@ -2,7 +2,7 @@ import UIKit
 
 class MapColumn:MapNestableColumnProtocol {
     weak var view:ViewItem!
-    var childItem:MapItemProtocol?
+    weak var childItem:MapItemProtocol?
     var identifier:String
     
     init() {

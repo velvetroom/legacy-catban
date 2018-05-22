@@ -15,9 +15,9 @@ class TestViewItem:XCTestCase {
         self.mapItem.parent = self.parent
     }
     
-    func testNotRetainingMapNode() {
+    func testRetainsMapNode() {
         self.view.mapNode = MockMapItemProtocol()
-        XCTAssertNil(self.view.mapNode, "Retaining")
+        XCTAssertNotNil(self.view.mapNode, "Not retaining")
     }
     
     func testBringToFrontCallsSuperView() {
