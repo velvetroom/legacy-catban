@@ -13,6 +13,7 @@
 		DA1F319220B3FD2A0076ECAF /* TestViewNewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319120B3FD2A0076ECAF /* TestViewNewColumn.swift */; };
 		DA1F319420B3FE000076ECAF /* TestPresenter_NewItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319320B3FE000076ECAF /* TestPresenter_NewItems.swift */; };
 		DA1F319620B425F10076ECAF /* MapNestableColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319520B425F10076ECAF /* MapNestableColumnProtocol.swift */; };
+		DA1F319820B42D480076ECAF /* MockMapNestableColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F319720B42D480076ECAF /* MockMapNestableColumnProtocol.swift */; };
 		DA48B92220B3E05C000EAE8F /* TestViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48B92120B3E05C000EAE8F /* TestViewColumn.swift */; };
 		DA535F3620AF09CC000FB3FD /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */; };
 		DA61312620AF10A2002563BA /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA61312520AF10A2002563BA /* Board.framework */; };
@@ -147,6 +148,7 @@
 		DA1F319120B3FD2A0076ECAF /* TestViewNewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewNewColumn.swift; sourceTree = "<group>"; };
 		DA1F319320B3FE000076ECAF /* TestPresenter_NewItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_NewItems.swift; sourceTree = "<group>"; };
 		DA1F319520B425F10076ECAF /* MapNestableColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNestableColumnProtocol.swift; sourceTree = "<group>"; };
+		DA1F319720B42D480076ECAF /* MockMapNestableColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapNestableColumnProtocol.swift; sourceTree = "<group>"; };
 		DA48B92120B3E05C000EAE8F /* TestViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewColumn.swift; sourceTree = "<group>"; };
 		DA535F3520AF09CC000FB3FD /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
 		DA61312520AF10A2002563BA /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -491,6 +493,7 @@
 				DAB5E64420AF081600F860B3 /* MockMapColumn.swift */,
 				DADC95F520B04A1A00D8BB8F /* MockMapDelegateProtocol.swift */,
 				DAF85E8920B182660053B995 /* MockMapColumnProtocol.swift */,
+				DA1F319720B42D480076ECAF /* MockMapNestableColumnProtocol.swift */,
 				DAF85E8F20B18CEC0053B995 /* MockMapItemProtocol.swift */,
 				DAF85E9920B1AF5C0053B995 /* MockMapParentProtocol.swift */,
 				DAF85E9D20B1BE160053B995 /* MockMapEditorProtocol.swift */,
@@ -757,6 +760,7 @@
 				DA1F319220B3FD2A0076ECAF /* TestViewNewColumn.swift in Sources */,
 				DAF85EAE20B1C5E00053B995 /* MockMapCardProtocol.swift in Sources */,
 				DAF85E9C20B1BCEC0053B995 /* TestDragStateNone.swift in Sources */,
+				DA1F319820B42D480076ECAF /* MockMapNestableColumnProtocol.swift in Sources */,
 				DAF85EA620B1C22A0053B995 /* MockMapNodeProtocol.swift in Sources */,
 				DAF85EC020B1DB9B0053B995 /* MockView.swift in Sources */,
 				DAF85EB220B1D0F80053B995 /* TestMapCard.swift in Sources */,

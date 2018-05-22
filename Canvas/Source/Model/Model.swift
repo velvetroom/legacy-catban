@@ -23,14 +23,7 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     }
     
     func arrange(item:MapItemProtocol) {
-        var parentColumn:MapColumnProtocol? = self.columns.first
-        for column:MapColumnProtocol in self.columns {
-            parentColumn = column
-            if column.maxX > item.midX {
-                break
-            }
-        }
-        parentColumn?.arrange(item:item)
+        self.arrengeInColumns(item:item)
         self.afterArrange()
     }
     

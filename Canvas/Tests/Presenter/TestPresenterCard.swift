@@ -5,13 +5,13 @@ import XCTest
 class TestPresenterCard:XCTestCase {
     private var presenter:PresenterCard!
     private var view:MockView!
-    private var mapColumn:MockMapColumnProtocol!
+    private var mapColumn:MockMapNestableColumnProtocol!
     
     override func setUp() {
         super.setUp()
         self.presenter = PresenterCard()
         self.view = MockView()
-        self.mapColumn = MockMapColumnProtocol()
+        self.mapColumn = MockMapNestableColumnProtocol()
         self.presenter.view = self.view
         self.presenter.mapColumn = self.mapColumn
     }
@@ -22,7 +22,7 @@ class TestPresenterCard:XCTestCase {
     }
     
     func testNotRetainingColumn() {
-        self.presenter.mapColumn = MockMapColumnProtocol()
+        self.presenter.mapColumn = MockMapNestableColumnProtocol()
         XCTAssertNil(self.presenter.mapColumn, "Retains")
     }
     

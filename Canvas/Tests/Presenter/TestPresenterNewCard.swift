@@ -15,7 +15,7 @@ class TestPresenterNewCard:XCTestCase {
     }
     
     func testNotRetainingColumn() {
-        self.presenter.mapColumn = MockMapColumnProtocol()
+        self.presenter.mapColumn = MockMapNestableColumnProtocol()
         XCTAssertNil(self.presenter.mapColumn, "Retaining")
     }
     

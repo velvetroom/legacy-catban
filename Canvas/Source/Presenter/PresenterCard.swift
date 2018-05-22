@@ -3,7 +3,7 @@ import Board
 
 class PresenterCard:PresenterCardProtocol {
     weak var view:View!
-    weak var mapColumn:MapColumnProtocol!
+    weak var mapColumn:MapNestableColumnProtocol!
     weak var card:CardProtocol!
     var viewItem:ViewItem
     var mapItem:MapItemProtocol

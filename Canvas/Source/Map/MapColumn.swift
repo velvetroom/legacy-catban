@@ -1,6 +1,6 @@
 import UIKit
 
-class MapColumn:MapColumnProtocol {
+class MapColumn:MapNestableColumnProtocol {
     weak var view:ViewItem!
     var childItem:MapItemProtocol?
     var identifier:String

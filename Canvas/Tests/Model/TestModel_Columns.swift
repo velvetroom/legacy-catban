@@ -44,4 +44,9 @@ class TestModel_Columns:XCTestCase {
         self.model.add(columns:[])
         XCTAssertTrue(updates, "Not updated")
     }
+    
+    func testNestableColumns() {
+        self.model.columns = [MockMapColumn(), MockMapColumnProtocol(), MockMapColumnProtocol(), MockMapColumn()]
+        XCTAssertEqual(self.model.nestableColumns.count, 2, "Invalid number of columns")
+    }
 }

@@ -1,5 +1,5 @@
 import UIKit
 
-protocol MapColumnProtocol:MapBoardItemProtocol {
+protocol MapColumnProtocol:MapNodeProtocol {
     var height:CGFloat { get }
 }
