@@ -10,6 +10,10 @@
 		DA1F31C220B443380076ECAF /* Column.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31AE20B4427E0076ECAF /* Column.framework */; };
 		DA1F31D020B445060076ECAF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31CF20B445060076ECAF /* Controller.swift */; };
 		DA1F31D520B445730076ECAF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31D420B445730076ECAF /* TestController.swift */; };
+		DA1F31D820B446380076ECAF /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D720B446380076ECAF /* Board.framework */; };
+		DA1F31DA20B4463E0076ECAF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D920B4463E0076ECAF /* Shared.framework */; };
+		DA1F31DB20B446560076ECAF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D920B4463E0076ECAF /* Shared.framework */; };
+		DA1F31DC20B446580076ECAF /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D720B446380076ECAF /* Board.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,8 @@
 		DA1F31C820B444800076ECAF /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA1F31CF20B445060076ECAF /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA1F31D420B445730076ECAF /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		DA1F31D720B446380076ECAF /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1F31D920B4463E0076ECAF /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1F31DA20B4463E0076ECAF /* Shared.framework in Frameworks */,
+				DA1F31D820B446380076ECAF /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +51,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1F31C220B443380076ECAF /* Column.framework in Frameworks */,
+				DA1F31DB20B446560076ECAF /* Shared.framework in Frameworks */,
+				DA1F31DC20B446580076ECAF /* Board.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +65,7 @@
 				DA1F31C920B4448D0076ECAF /* Source */,
 				DA1F31CA20B444920076ECAF /* Tests */,
 				DA1F31AF20B4427E0076ECAF /* Products */,
+				DA1F31D620B446380076ECAF /* Frameworks */,
 				DA1F31C820B444800076ECAF /* Configuration */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +133,15 @@
 				DA1F31D420B445730076ECAF /* TestController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA1F31D620B446380076ECAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1F31D920B4463E0076ECAF /* Shared.framework */,
+				DA1F31D720B446380076ECAF /* Board.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

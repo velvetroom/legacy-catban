@@ -118,6 +118,16 @@
                ReferencedContainer = "container:../Canvas/Canvas.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DA1F31BC20B443380076ECAF"
+               BuildableName = "TestsColumn.xctest"
+               BlueprintName = "TestsColumn"
+               ReferencedContainer = "container:../Column/Column.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
