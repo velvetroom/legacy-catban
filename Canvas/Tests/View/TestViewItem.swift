@@ -8,16 +8,4 @@ class TestViewItem:XCTestCase {
         super.setUp()
         self.view = ViewItem()
     }
-    
-    func testBringToFrontCallsSuperView() {
-        let superView:MockUIView = MockUIView()
-        superView.addSubview(self.view)
-        var called:Bool = false
-        superView.onBringSubviewToFront = {
-            called = true
-        }
-        
-        self.view.bringToFront()
-        XCTAssertTrue(called, "Not called")
-    }
 }

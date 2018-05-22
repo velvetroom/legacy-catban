@@ -3,7 +3,7 @@ import XCTest
 
 class TestModel_Drag:XCTestCase {
     private var model:Model!
-    private var viewItem:MockViewItem!
+    private var viewItem:MockViewItemMapable!
     private var mapItem:MapItemProtocol!
     private var layout:NSLayoutConstraint!
     private var state:MockDragStateProtocol!
@@ -11,7 +11,7 @@ class TestModel_Drag:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Model()
-        self.viewItem = MockViewItem()
+        self.viewItem = MockViewItemMapable()
         self.mapItem = MapCard()
         self.layout = NSLayoutConstraint()
         self.state = MockDragStateProtocol()
@@ -23,11 +23,6 @@ class TestModel_Drag:XCTestCase {
         self.viewItem.layoutHeight = self.layout
         self.viewItem.layoutLeft = self.layout
         self.viewItem.layoutTop = self.layout
-    }
-    
-    func testDragBeginLoadsMapItem() {
-        self.model.dragBegin()
-        XCTAssertNotNil(self.model.mapItem, "Failed to assign map item")
     }
     
     func testDragBeginRestartsPosition() {
@@ -80,5 +75,17 @@ class TestModel_Drag:XCTestCase {
         
         self.model.dragEnd()
         XCTAssertTrue(called, "Not called")
+    }
+    
+    func testRestart() {
+        let itemPosition:CGPoint = CGPoint(x:10, y:10)
+        let latestTouch:CGPoint = CGPoint(x:345, y:678)
+        self.layout.constant = itemPosition.x
+        self.model.latestTouch = latestTouch
+        
+        self.model.dragBegin()
+        XCTAssertEqual(self.model.position.initialItem, itemPosition, "Not updated")
+        XCTAssertEqual(self.model.position.initialTouch, latestTouch, "Not updated")
+        XCTAssertEqual(self.model.position.latestTouch, latestTouch, "Not updated")
     }
 }

@@ -1,12 +1,13 @@
 import UIKit
 @testable import Canvas
 
-class MockViewItem:ViewItem {
+class MockViewItemMapable:ViewItemMapable {
     var onStateHighlighted:(() -> Void)?
     var onStateNormal:(() -> Void)?
-    var onStateMoving:(() -> Void)?
     var onTriggerAction:(() -> Void)?
+    var onStateMoving:(() -> Void)?
     var onUpdatePosition:(() -> Void)?
+    var onEndMoving:(() -> Void)?
     
     override func stateHighlighted() {
         self.onStateHighlighted?()
@@ -14,10 +15,16 @@ class MockViewItem:ViewItem {
     
     override func stateNormal() {
         self.onStateNormal?()
+        super.stateNormal()
     }
     
     override func stateMoving() {
         self.onStateMoving?()
+        super.stateMoving()
+    }
+    
+    override func endMoving() {
+        self.onEndMoving?()
     }
     
     override func triggerAction(canvas:CanvasEditorProtocol) {

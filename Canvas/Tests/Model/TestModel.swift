@@ -40,11 +40,6 @@ class TestModel:XCTestCase {
         XCTAssertTrue(self.model.columns.isEmpty, "Not clearing")
     }
     
-    func testRetainsMapItem() {
-        self.model.mapItem = MapCard()
-        XCTAssertNotNil(self.model.mapItem, "Not retaining")
-    }
-    
     func testChangeState() {
         let delegate:MockMapDelegateProtocol = MockMapDelegateProtocol()
         self.model.mapDelegate = delegate

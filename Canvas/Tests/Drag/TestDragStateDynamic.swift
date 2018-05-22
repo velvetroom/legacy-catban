@@ -6,7 +6,7 @@ class TestDragStateDynamic:XCTestCase {
     private var changer:MockDragStateChangerProtocol!
     private var event:MockDragEventProtocol!
     private var mapItem:MockMapItemProtocol!
-    private var view:MockViewItem!
+    private var view:MockViewItemMapable!
     private var parent:MockMapParentProtocol!
     private var canvas:CanvasEditorProtocol!
     
@@ -15,7 +15,7 @@ class TestDragStateDynamic:XCTestCase {
         self.model = DragStateDynamic()
         self.changer = MockDragStateChangerProtocol()
         self.event = MockDragEventProtocol()
-        self.view = MockViewItem()
+        self.view = MockViewItemMapable()
         self.mapItem = MockMapItemProtocol()
         self.parent = MockMapParentProtocol()
         self.canvas = MockCanvasEditorProtocol()
@@ -26,6 +26,7 @@ class TestDragStateDynamic:XCTestCase {
         self.mapItem.parent = self.parent
         self.parent.childItem = self.mapItem
         self.event.canvas = self.canvas
+        self.view.mapItem = self.mapItem
     }
     
     func testNotRetainingEvent() {
@@ -54,10 +55,10 @@ class TestDragStateDynamic:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
-    func testStartMovingBringsViewToFront() {
+    func testStartMovingCallsView() {
         var called:Bool = false
         self.event.position.latestTouch = CGPoint(x:100, y:100)
-        self.view.onBringToFront = {
+        self.view.onStateMoving = {
             called = true
         }
         
@@ -70,17 +71,6 @@ class TestDragStateDynamic:XCTestCase {
         self.model.update()
         XCTAssertNil(self.mapItem.parent, "Not detached")
         XCTAssertNil(self.parent.childItem, "Not detached")
-    }
-    
-    func testStartMovingAnimatesChanges() {
-        var called:Bool = false
-        self.event.position.latestTouch = CGPoint(x:100, y:100)
-        self.view.onAnimateChanges = {
-            called = true
-        }
-        
-        self.model.update()
-        XCTAssertTrue(called, "Not called")
     }
     
     func testEndTriggersAction() {

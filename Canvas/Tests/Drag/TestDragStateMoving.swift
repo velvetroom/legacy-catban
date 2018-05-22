@@ -6,7 +6,7 @@ class TestDragStateMoving:XCTestCase {
     private var changer:MockDragStateChangerProtocol!
     private var event:MockDragEventProtocol!
     private var mapItem:MockMapItemProtocol!
-    private var view:MockViewItem!
+    private var view:MockViewItemMapable!
     private var editor:MockMapEditorProtocol!
     
     override func setUp() {
@@ -14,7 +14,7 @@ class TestDragStateMoving:XCTestCase {
         self.model = DragStateMoving()
         self.changer = MockDragStateChangerProtocol()
         self.event = MockDragEventProtocol()
-        self.view = MockViewItem()
+        self.view = MockViewItemMapable()
         self.mapItem = MockMapItemProtocol()
         self.editor = MockMapEditorProtocol()
         self.model.event = self.event
@@ -22,6 +22,7 @@ class TestDragStateMoving:XCTestCase {
         self.event.viewItem = self.view
         self.event.mapItem = self.mapItem
         self.model.mapEditor = self.editor
+        self.view.mapItem = self.mapItem
     }
     
     func testNotRetainingEvent() {
@@ -40,16 +41,19 @@ class TestDragStateMoving:XCTestCase {
     }
     
     func testUpdateInjectsItemPosition() {
-        let position:CGPoint = CGPoint(x:100, y:200)
-        self.event.position.latestTouch = position
+        var injected:Bool = false
+        self.event.position.latestTouch = CGPoint(x:100, y:200)
+        self.view.onUpdatePosition = {
+            injected = true
+        }
         self.model.update()
-        XCTAssertEqual(self.mapItem.minX, position.x, "Not updated")
-        XCTAssertEqual(self.mapItem.minY, position.y, "Not updated")
+        
+        XCTAssertTrue(injected, "Not injected")
     }
     
-    func testUpdateAnimatesChanges() {
+    func testUpdateCallsView() {
         var called:Bool = false
-        self.view.onAnimateChanges = {
+        self.view.onUpdatePosition = {
             called = true
         }
         
@@ -67,9 +71,9 @@ class TestDragStateMoving:XCTestCase {
         XCTAssertTrue(called, "Not ordered")
     }
     
-    func testEndAnimatesChanges() {
+    func testEndUpdatesView() {
         var called:Bool = false
-        self.view.onAnimateChanges = {
+        self.view.onEndMoving = {
             called = true
         }
         
