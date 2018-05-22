@@ -1,10 +1,5 @@
 import UIKit
-import Board
 
-protocol MapColumnProtocol:MapParentProtocol, MapBoardItemProtocol {
+protocol MapColumnProtocol:MapBoardItemProtocol {
     var height:CGFloat { get }
-    var order:OrderColumn { get }
-    
-    func add(item:MapItemProtocol)
-    func arrange(item:MapItemProtocol)
 }
