@@ -5,12 +5,15 @@ import XCTest
 class TestPresenterColumn:XCTestCase {
     private var presenter:PresenterColumn!
     private var view:MockView!
+    private var column:MockColumnProtocol!
     
     override func setUp() {
         super.setUp()
         self.presenter = PresenterColumn()
         self.view = MockView()
+        self.column = MockColumnProtocol()
         self.presenter.view = self.view
+        self.column.identifier = "lorem ipsum"
     }
     
     func testNotRetainingView() {
@@ -75,5 +78,15 @@ class TestPresenterColumn:XCTestCase {
         XCTAssertTrue(self.presenter.viewColumn.layoutLeft.isActive, "Not active")
         XCTAssertTrue(self.presenter.viewColumn.layoutWidth.isActive, "Not active")
         XCTAssertTrue(self.presenter.viewColumn.layoutHeight.isActive, "Not active")
+    }
+    
+    func testAssignsMapItemToView() {
+        XCTAssertNotNil(self.presenter.viewColumn.mapNode, "Not assigned")
+    }
+    
+    func testInjectsIdentifier() {
+        self.presenter.column = self.column
+        self.presenter.load()
+        XCTAssertEqual(self.presenter.viewColumn.identifier, self.column.identifier, "Not injected")
     }
 }

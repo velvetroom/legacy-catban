@@ -11,6 +11,7 @@ class PresenterColumn:PresenterColumnProtocol {
         self.viewColumn = ViewColumn()
         self.mapColumn = MapColumn()
         self.mapColumn.view = self.viewColumn
+        self.viewColumn.mapNode = self.mapColumn
     }
     
     func load() {
@@ -28,6 +29,7 @@ class PresenterColumn:PresenterColumnProtocol {
     }
     
     private func configureView() {
+        self.viewColumn.identifier = self.column.identifier
         self.viewColumn.labelName.text = self.column.name
         self.view.addSubview(self.viewColumn)
         self.configureConstraints()

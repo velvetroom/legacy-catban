@@ -2,7 +2,7 @@ import UIKit
 
 class ViewItem:UIView {
     var dragState:DragStateProtocol.Type!
-    weak var mapItem:MapItemProtocol!
+    weak var mapNode:MapNodeProtocol!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutWidth:NSLayoutConstraint!
@@ -30,10 +30,11 @@ class ViewItem:UIView {
     func stateNormal() { }
     func triggerAction(canvas:CanvasEditorProtocol) { }
     
-    
     func stateMoving() {
         self.bringToFront()
-        self.mapItem.detach()
+        if let mapItem:MapItemProtocol = self.mapNode as? MapItemProtocol {
+            mapItem.detach()
+        }
         self.animateChanges()
     }
     
@@ -42,8 +43,8 @@ class ViewItem:UIView {
     }
     
     func update(position:CGPoint) {
-        self.mapItem.minX = position.x
-        self.mapItem.minY = position.y
+        self.mapNode.minX = position.x
+        self.mapNode.minY = position.y
         self.animateChanges()
     }
     

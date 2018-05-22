@@ -16,7 +16,7 @@ class TestModel_Drag:XCTestCase {
         self.layout = NSLayoutConstraint()
         self.state = MockDragStateProtocol()
         self.viewItem.dragState = MockDragStateProtocol.self
-        self.viewItem.mapItem = self.mapItem
+        self.viewItem.mapNode = self.mapItem
         self.mapItem.view = self.viewItem
         self.model.viewItem = self.viewItem
         self.viewItem.layoutWidth = self.layout

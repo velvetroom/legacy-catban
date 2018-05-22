@@ -22,7 +22,7 @@ class TestDragStateMoving:XCTestCase {
         self.event.viewItem = self.view
         self.event.mapItem = self.mapItem
         self.model.mapEditor = self.editor
-        self.view.mapItem = self.mapItem
+        self.view.mapNode = self.mapItem
     }
     
     func testNotRetainingEvent() {

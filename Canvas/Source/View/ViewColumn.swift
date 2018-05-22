@@ -2,10 +2,12 @@ import UIKit
 import Shared
 
 class ViewColumn:ViewItem {
+    var identifier:String
     private(set) weak var labelName:UILabel!
     private weak var icon:UIImageView!
     
     override init() {
+        self.identifier = String()
         super.init()
         self.dragState = DragStateFixed.self
     }

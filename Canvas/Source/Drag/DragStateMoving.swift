@@ -12,7 +12,9 @@ class DragStateMoving:DragStateProtocol {
     }
     
     func end() {
-        self.mapEditor.arrange(item:self.event.viewItem.mapItem)
+        if let mapItem:MapItemProtocol = self.event.viewItem.mapNode as? MapItemProtocol {
+            self.mapEditor.arrange(item:mapItem)
+        }
         self.event.viewItem.endMoving()
         self.finishDrag()
     }

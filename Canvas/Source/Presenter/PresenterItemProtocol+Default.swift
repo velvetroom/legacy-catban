@@ -9,7 +9,7 @@ extension PresenterItemProtocol {
     
     private func assignReferences() {
         self.mapItem.view = self.viewItem
-        self.viewItem.mapItem = self.mapItem
+        self.viewItem.mapNode = self.mapItem
     }
     
     private func configureView() {

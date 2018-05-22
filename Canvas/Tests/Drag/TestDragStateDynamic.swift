@@ -26,7 +26,7 @@ class TestDragStateDynamic:XCTestCase {
         self.mapItem.parent = self.parent
         self.parent.childItem = self.mapItem
         self.event.canvas = self.canvas
-        self.view.mapItem = self.mapItem
+        self.view.mapNode = self.mapItem
     }
     
     func testNotRetainingEvent() {
