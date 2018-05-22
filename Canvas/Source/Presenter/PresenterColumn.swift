@@ -21,7 +21,7 @@ class PresenterColumn:PresenterColumnProtocol {
     }
     
     func loadNewCard() {
-        self.loadWith(loader:PresenterFactory.makeNewCardLoader())
+        self.loadWith(loader:PresenterNewCard())
     }
     
     private func configureItem() {
@@ -54,7 +54,7 @@ class PresenterColumn:PresenterColumnProtocol {
     
     private func loadItems() {
         self.column.iterate { (card:CardProtocol) in
-            var loader:PresenterCardProtocol = PresenterFactory.makeCardLoader()
+            var loader:PresenterCardProtocol = PresenterCard()
             loader.card = card
             self.loadWith(loader:loader)
         }

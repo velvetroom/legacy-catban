@@ -38,4 +38,13 @@ class TestPresenter:XCTestCase {
         self.presenter.refresh()
         XCTAssertNotNil(self.presenter.model.projectOrder, "Not assigned")
     }
+    
+    func testProjectColumns() {
+        let project:MockProjectProtocol = MockProjectProtocol()
+        project.add(column:MockColumnProtocol())
+        project.add(column:MockColumnProtocol())
+        project.add(column:MockColumnProtocol())
+        self.presenter.project = project
+        XCTAssertEqual(self.presenter.projectColumns.count, project.countColumns, "Failed to create columns")
+    }
 }

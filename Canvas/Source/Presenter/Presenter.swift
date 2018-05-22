@@ -5,7 +5,6 @@ class Presenter:PresenterProtocol {
     weak var project:ProjectProtocol!
     var view:View
     var model:ModelProtocol
-    private var columnIndex:Int
     
     var canvas:CanvasEditorProtocol {
         get {
@@ -17,7 +16,6 @@ class Presenter:PresenterProtocol {
     }
     
     init() {
-        self.columnIndex = 0
         self.view = View()
         self.model = Model()
         self.assignReferences()
@@ -34,33 +32,12 @@ class Presenter:PresenterProtocol {
         self.model.mapDelegate = self.view
     }
     
-    private func clear() {
-        self.columnIndex = 0
-        self.model.clear()
-        self.view.clear()
-    }
-    
-    private func load() {
-        var columns:[MapColumnProtocol] = []
-        self.project.iterate { (column:ColumnProtocol) in
-            columns.append(self.makeMapColumnWith(column:column))
-            self.columnIndex += 1
-        }
-        self.model.add(columns:columns)
-    }
-    
     private func updateReferences() {
         self.model.projectOrder = self.project
     }
     
-    private func makeMapColumnWith(column:ColumnProtocol) -> MapColumnProtocol {
-        var loader:PresenterColumnProtocol = PresenterFactory.makeColumnLoader()
-        loader.view = self.view
-        loader.column = column
-        loader.load()
-        if self.columnIndex == 0 {
-            loader.loadNewCard()
-        }
-        return loader.mapColumn
+    private func clear() {
+        self.model.clear()
+        self.view.clear()
     }
 }
