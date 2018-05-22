@@ -7,16 +7,13 @@ extension DragPosition {
         }
     }
     
-    mutating func restartWith(item:MapItemProtocol, and touch:CGPoint) {
-        self.initialItem = CGPoint(x:item.minX, y:item.minY)
-        self.initialTouch = touch
-        self.latestTouch = touch
-    }
-    
-    func update(item:MapItemProtocol) {
-        let deltaTouch:CGPoint = self.deltaTouch
-        item.minX = self.initialItem.x - deltaTouch.x
-        item.minY = self.initialItem.y - deltaTouch.y
+    var updatedPosition:CGPoint {
+        get {
+            let deltaTouch:CGPoint = self.deltaTouch
+            let updatedX:CGFloat = self.initialItem.x - deltaTouch.x
+            let updatedY:CGFloat = self.initialItem.y - deltaTouch.y
+            return CGPoint(x:updatedX, y:updatedY)
+        }
     }
     
     private var deltaTouch:CGPoint {

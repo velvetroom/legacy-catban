@@ -9,11 +9,6 @@ class TestViewItem:XCTestCase {
         self.view = ViewItem()
     }
     
-    func testNotRetainingMapItem() {
-        self.view.mapItem = MockMapItemProtocol()
-        XCTAssertNil(self.view.mapItem, "Retaining")
-    }
-    
     func testBringToFrontCallsSuperView() {
         let superView:MockUIView = MockUIView()
         superView.addSubview(self.view)

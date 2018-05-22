@@ -1,39 +1,21 @@
 import UIKit
 
 class ViewItem:ViewNode {
-    weak var mapItem:MapItemProtocol!
     var dragState:DragStateProtocol.Type!
     
-    init() {
-        super.init(frame:CGRect.zero)
-        self.configureView()
-        self.factoryOutlets()
+    override init() {
+        super.init()
+        self.stateNormal()
     }
     
     required init?(coder:NSCoder) {
         return nil
     }
     
-    func factoryOutlets() { }
     func stateHighlighted() { }
     func stateNormal() { }
+    func stateMoving() { }
+    func endMoving() { }
+    func update(position:CGPoint) { }
     func triggerAction(canvas:CanvasEditorProtocol) { }
-    
-    func bringToFront() {
-        guard
-            let superView:UIView = self.superview
-        else { return }
-        superView.bringSubview(toFront:self)
-    }
-    
-    func animateChanges() {
-        UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
-            self?.superview?.layoutIfNeeded()
-        }
-    }
-    
-    private func configureView() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
-    }
 }

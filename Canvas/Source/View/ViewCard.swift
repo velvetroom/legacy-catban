@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewCard:ViewItem {
+class ViewCard:ViewItemMapable {
     var identifier:String
     private(set) weak var labelContent:UILabel!
     
@@ -64,6 +64,5 @@ class ViewCard:ViewItem {
     
     private func configureView() {
         self.layer.cornerRadius = Constants.Card.cornerRadius
-        self.stateNormal()
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 class PresenterNewCard:PresenterItemProtocol {
     weak var view:View!
     weak var mapColumn:MapColumnProtocol!
-    var viewItem:ViewItem
+    var viewItem:ViewItemMapable
     var mapItem:MapItemProtocol
     var height:CGFloat
     

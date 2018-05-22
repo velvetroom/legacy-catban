@@ -4,23 +4,7 @@ import Shared
 class ViewColumn:ViewNode {
     private(set) weak var labelName:UILabel!
     
-    init() {
-        super.init(frame:CGRect.zero)
-        self.configureViews()
-        self.factoryOutlets()
-    }
-    
-    required init?(coder:NSCoder) {
-        return nil
-    }
-    
-    private func configureViews() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
-        self.isUserInteractionEnabled = false
-    }
-    
-    private func factoryOutlets() {
+    override func factoryOutlets() {
         self.factoryIcon()
         self.factoryLabelName()
     }
