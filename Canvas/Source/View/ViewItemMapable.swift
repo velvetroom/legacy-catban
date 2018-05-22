@@ -4,16 +4,19 @@ class ViewItemMapable:ViewItem {
     weak var mapItem:MapItemProtocol!
 
     override func stateMoving() {
+        super.stateMoving()
         self.bringToFront()
         self.mapItem.detach()
         self.animateChanges()
     }
     
     override func endMoving() {
+        super.endMoving()
         self.animateChanges()
     }
     
     override func update(position:CGPoint) {
+        super.update(position:position)
         self.mapItem.minX = position.x
         self.mapItem.minY = position.y
         self.animateChanges()

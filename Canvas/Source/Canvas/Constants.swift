@@ -27,8 +27,9 @@ struct Constants {
         static let labelTop:CGFloat = 30
         static let labelHeight:CGFloat = 20
         static let labelLeft:CGFloat = 14
-        static let labelAlpha:CGFloat = 0.3
+        static let normalAlpha:CGFloat = 0.3
         static let iconTop:CGFloat = 30
+        static let iconLeft:CGFloat = -4
         static let iconHeight:CGFloat = 22
         static let iconWidth:CGFloat = 14
     }
