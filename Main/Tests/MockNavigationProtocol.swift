@@ -25,7 +25,9 @@ class MockNavigationProtocol:NavigationProtocol {
         self.onTransitionToHome?(project)
     }
     
-    func transitionToCard(card:CardProtocol, in project:ProjectManagedProtocol) {
+    func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
         self.onTransitionToCard?(card, project)
     }
+    
+    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
 }
