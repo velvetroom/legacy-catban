@@ -21,12 +21,12 @@ class ViewColumn:ViewItem {
     
     override func stateNormal() {
         super.stateNormal()
-        self.alpha = Constants.ColumnTitle.normalAlpha
+        self.alpha = Constants.ColumnTitle.alphaOff
     }
     
     override func stateHighlighted() {
         super.stateHighlighted()
-        self.alpha = 1
+        self.alpha = Constants.ColumnTitle.alphaOn
     }
     
     private func factoryIcon() {

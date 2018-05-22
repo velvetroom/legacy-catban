@@ -27,16 +27,24 @@ struct Constants {
         static let labelTop:CGFloat = 30
         static let labelHeight:CGFloat = 20
         static let labelLeft:CGFloat = 14
-        static let normalAlpha:CGFloat = 0.3
         static let iconTop:CGFloat = 30
         static let iconLeft:CGFloat = -4
         static let iconHeight:CGFloat = 22
         static let iconWidth:CGFloat = 14
+        static let alphaOff:CGFloat = 0.3
+        static let alphaOn:CGFloat = 1
     }
     
     struct NewCard {
         static let icon:String = "assetNewCard"
         static let height:CGFloat = 70
+        static let alphaOn:CGFloat = 0.3
+        static let alphaOff:CGFloat = 1
+    }
+    
+    struct NewColumn {
+        static let icon:String = "assetColumnNew"
+        static let height:CGFloat = 50
         static let alphaOn:CGFloat = 0.3
         static let alphaOff:CGFloat = 1
     }
