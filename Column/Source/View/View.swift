@@ -10,11 +10,17 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     override func loadView() {
-        self.view = ViewBase()
+        self.view = self.configureView()
     }
     
     private func configureNavigationItem() {
         self.navigationController?.setNavigationBarHidden(true, animated:true)
+    }
+    
+    private func configureView() -> ViewBase {
+        let viewBase:ViewBase = ViewBase()
+        
+        return viewBase
     }
     
     @objc func selectorDone(sender button:UIBarButtonItem) {
