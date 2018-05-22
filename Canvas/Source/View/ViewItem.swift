@@ -2,6 +2,7 @@ import UIKit
 
 class ViewItem:UIView {
     var dragState:DragStateProtocol.Type!
+    weak var mapItem:MapItemProtocol!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutWidth:NSLayoutConstraint!
@@ -25,6 +26,26 @@ class ViewItem:UIView {
     }
     
     func factoryOutlets() { }
+    func stateHighlighted() { }
+    func stateNormal() { }
+    func triggerAction(canvas:CanvasEditorProtocol) { }
+    
+    
+    func stateMoving() {
+        self.bringToFront()
+        self.mapItem.detach()
+        self.animateChanges()
+    }
+    
+    func endMoving() {
+        self.animateChanges()
+    }
+    
+    func update(position:CGPoint) {
+        self.mapItem.minX = position.x
+        self.mapItem.minY = position.y
+        self.animateChanges()
+    }
     
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -32,10 +53,16 @@ class ViewItem:UIView {
         self.isUserInteractionEnabled = true
     }
     
-    func stateHighlighted() { }
-    func stateNormal() { }
-    func stateMoving() { }
-    func endMoving() { }
-    func update(position:CGPoint) { }
-    func triggerAction(canvas:CanvasEditorProtocol) { }
+    private func bringToFront() {
+        guard
+            let superView:UIView = self.superview
+        else { return }
+        superView.bringSubview(toFront:self)
+    }
+    
+    private func animateChanges() {
+        UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
+            self?.superview?.layoutIfNeeded()
+        }
+    }
 }

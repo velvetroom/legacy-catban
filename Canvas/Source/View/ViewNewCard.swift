@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewNewCard:ViewItemMapable {
+class ViewNewCard:ViewItem {
     override init() {
         super.init()
         self.dragState = DragStateFixed.self

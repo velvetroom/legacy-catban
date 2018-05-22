@@ -6,7 +6,7 @@ class TestDragStateMoving:XCTestCase {
     private var changer:MockDragStateChangerProtocol!
     private var event:MockDragEventProtocol!
     private var mapItem:MockMapItemProtocol!
-    private var view:MockViewItemMapable!
+    private var view:MockViewItem!
     private var editor:MockMapEditorProtocol!
     
     override func setUp() {
@@ -14,7 +14,7 @@ class TestDragStateMoving:XCTestCase {
         self.model = DragStateMoving()
         self.changer = MockDragStateChangerProtocol()
         self.event = MockDragEventProtocol()
-        self.view = MockViewItemMapable()
+        self.view = MockViewItem()
         self.mapItem = MockMapItemProtocol()
         self.editor = MockMapEditorProtocol()
         self.model.event = self.event

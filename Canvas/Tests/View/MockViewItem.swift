@@ -7,6 +7,7 @@ class MockViewItem:ViewItem {
     var onStateMoving:(() -> Void)?
     var onTriggerAction:(() -> Void)?
     var onUpdatePosition:(() -> Void)?
+    var onEndMoving:(() -> Void)?
     
     override func stateHighlighted() {
         self.onStateHighlighted?()
@@ -18,6 +19,7 @@ class MockViewItem:ViewItem {
     
     override func stateMoving() {
         self.onStateMoving?()
+        super.stateMoving()
     }
     
     override func triggerAction(canvas:CanvasEditorProtocol) {
@@ -26,5 +28,9 @@ class MockViewItem:ViewItem {
     
     override func update(position:CGPoint) {
         self.onUpdatePosition?()
+    }
+    
+    override func endMoving() {
+        self.onEndMoving?()
     }
 }

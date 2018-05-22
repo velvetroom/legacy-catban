@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewNewColumn:ViewItemMapable {
+class ViewNewColumn:ViewItem {
     override init() {
         super.init()
         self.dragState = DragStateFixed.self

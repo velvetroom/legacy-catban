@@ -41,6 +41,19 @@ class TestPresenter_NewItems:XCTestCase {
         XCTAssertEqual(self.totalMapItemsOfType(mapType:MapNewCard.self), 1, "Should be 1 new cards")
     }
     
+    func testNewColumn() {
+        self.presenter.refresh()
+        XCTAssertEqual(self.totalViewsOfType(viewType:ViewNewColumn.self), 1, "Should be 1 new column")
+    }
+    
+    func testNewColumnOnManyColumns() {
+        self.project.columns.append(MockColumnProtocol())
+        self.project.columns.append(MockColumnProtocol())
+        self.project.columns.append(MockColumnProtocol())
+        self.presenter.refresh()
+        XCTAssertEqual(self.totalViewsOfType(viewType:ViewNewColumn.self), 1, "Should be 1 new column")
+    }
+    
     private func totalMapItemsOfType<MapType:MapItemProtocol>(mapType:MapType.Type) -> Int {
         var count:Int = 0
         let model:Model = self.presenter.model as! Model

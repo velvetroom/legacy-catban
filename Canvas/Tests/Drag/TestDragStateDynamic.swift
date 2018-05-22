@@ -6,7 +6,7 @@ class TestDragStateDynamic:XCTestCase {
     private var changer:MockDragStateChangerProtocol!
     private var event:MockDragEventProtocol!
     private var mapItem:MockMapItemProtocol!
-    private var view:MockViewItemMapable!
+    private var view:MockViewItem!
     private var parent:MockMapParentProtocol!
     private var canvas:CanvasEditorProtocol!
     
@@ -15,7 +15,7 @@ class TestDragStateDynamic:XCTestCase {
         self.model = DragStateDynamic()
         self.changer = MockDragStateChangerProtocol()
         self.event = MockDragEventProtocol()
-        self.view = MockViewItemMapable()
+        self.view = MockViewItem()
         self.mapItem = MockMapItemProtocol()
         self.parent = MockMapParentProtocol()
         self.canvas = MockCanvasEditorProtocol()

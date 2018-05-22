@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewCard:ViewItemMapable {
+class ViewCard:ViewItem {
     var identifier:String
     private(set) weak var labelContent:UILabel!
     

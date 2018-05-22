@@ -3,7 +3,7 @@ import XCTest
 
 class TestModel_Drag:XCTestCase {
     private var model:Model!
-    private var viewItem:MockViewItemMapable!
+    private var viewItem:MockViewItem!
     private var mapItem:MapItemProtocol!
     private var layout:NSLayoutConstraint!
     private var state:MockDragStateProtocol!
@@ -11,7 +11,7 @@ class TestModel_Drag:XCTestCase {
     override func setUp() {
         super.setUp()
         self.model = Model()
-        self.viewItem = MockViewItemMapable()
+        self.viewItem = MockViewItem()
         self.mapItem = MapCard()
         self.layout = NSLayoutConstraint()
         self.state = MockDragStateProtocol()
