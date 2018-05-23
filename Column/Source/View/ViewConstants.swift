@@ -1,8 +1,11 @@
 import UIKit
 
 struct ViewConstants {
-    struct Base {
+    struct Icon {
         static let icon:String = "assetColumnIcon"
+        static let top:CGFloat = 100
+        static let width:CGFloat = 100
+        static let height:CGFloat = 100
     }
     
     struct Bar {

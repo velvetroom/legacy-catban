@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 class ViewBase:UIView {
     private(set) weak var viewBar:ViewBar!
@@ -32,5 +33,21 @@ class ViewBase:UIView {
         viewBar.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         viewBar.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         viewBar.heightAnchor.constraint(equalToConstant:ViewConstants.Bar.height).isActive = true
+    }
+    
+    private func factoryIcon() {
+        let icon:UIImageView = UIImageView()
+        icon.isUserInteractionEnabled = false
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.clipsToBounds = true
+        icon.contentMode = UIViewContentMode.center
+        icon.image = UIImage(name:ViewConstants.Icon.icon, in:type(of:self))
+        
+        self.addSubview(icon)
+        
+        icon.topAnchor.constraint(equalTo:self.topAnchor, constant:ViewConstants.Icon.top).isActive = true
+        icon.heightAnchor.constraint(equalToConstant:ViewConstants.Icon.height).isActive = true
+        icon.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+        icon.widthAnchor.constraint(equalToConstant:ViewConstants.Icon.width).isActive = true
     }
 }
