@@ -1,8 +1,8 @@
 import UIKit
 
 struct ViewConstants {
-    struct Navigation {
-        static let iconDelete:String = ""
+    struct Base {
+        static let icon:String = "assetColumnIcon"
     }
     
     struct Bar {
