@@ -27,9 +27,21 @@ struct ViewConstants {
         static let width:CGFloat = 200
     }
     
+    struct Subtitle {
+        static let top:CGFloat = 20
+        static let fontSize:CGFloat = 14
+        static let height:CGFloat = 18
+        static let width:CGFloat = 200
+    }
+    
     struct Line {
         static let top:CGFloat = 120
         static let height:CGFloat = 2
+        static let width:CGFloat = 206
+    }
+    
+    struct Field {
+        static let height:CGFloat = 40
         static let width:CGFloat = 206
     }
 }

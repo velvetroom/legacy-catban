@@ -1,6 +1,8 @@
 import UIKit
 
 class ViewInput:UIView {
+    private(set) weak var field:UITextField!
+    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
@@ -19,6 +21,8 @@ class ViewInput:UIView {
     private func factoryOutlets() {
         self.factoryTitle()
         self.factoryLine()
+        self.factoryField()
+        self.factorySubtitle()
     }
     
     private func factoryTitle() {
@@ -26,6 +30,7 @@ class ViewInput:UIView {
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
+        label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize:ViewConstants.Title.fontSize, weight:UIFont.Weight.medium)
         label.text = String.localized(key:"ViewInput_titleLabel", in:type(of:self))
         
@@ -49,5 +54,32 @@ class ViewInput:UIView {
         line.heightAnchor.constraint(equalToConstant:ViewConstants.Line.height).isActive = true
         line.widthAnchor.constraint(equalToConstant:ViewConstants.Line.width).isActive = true
         line.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+    }
+    
+    private func factoryField() {
+        let field:UITextField = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.backgroundColor = UIColor.clear
+        self.field = field
+        
+        self.addSubview(field)
+    }
+    
+    private func factorySubtitle() {
+        let label:UILabel = UILabel()
+        label.isUserInteractionEnabled = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor.clear
+        label.textColor = UIColor(white:0.7, alpha:1)
+        label.font = UIFont.systemFont(ofSize:ViewConstants.Subtitle.fontSize, weight:UIFont.Weight.regular)
+        label.text = String.localized(key:"ViewInput_subtitleLabel", in:type(of:self))
+        
+        self.addSubview(label)
+        
+        label.topAnchor.constraint(
+            equalTo:self.field.bottomAnchor, constant:ViewConstants.Subtitle.top).isActive = true
+        label.heightAnchor.constraint(equalToConstant:ViewConstants.Subtitle.height).isActive = true
+        label.widthAnchor.constraint(equalToConstant:ViewConstants.Subtitle.width).isActive = true
+        label.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
     }
 }
