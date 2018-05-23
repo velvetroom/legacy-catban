@@ -28,9 +28,8 @@ struct ViewConstants {
     }
     
     struct Subtitle {
-        static let top:CGFloat = 10
+        static let top:CGFloat = 15
         static let fontSize:CGFloat = 14
-        static let height:CGFloat = 20
         static let width:CGFloat = 202
     }
     

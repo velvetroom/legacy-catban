@@ -61,8 +61,18 @@ class ViewInput:UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         field.backgroundColor = UIColor.clear
         field.font = UIFont.systemFont(ofSize:ViewConstants.Field.fontSize, weight:UIFont.Weight.regular)
-        field.text = "hello world"
         field.textColor = UIColor(white:0.4, alpha:1)
+        field.tintColor = UIColor.black
+        field.autocapitalizationType = UITextAutocapitalizationType.words
+        field.autocorrectionType = UITextAutocorrectionType.no
+        field.returnKeyType = UIReturnKeyType.done
+        field.spellCheckingType = UITextSpellCheckingType.no
+        field.borderStyle = UITextBorderStyle.none
+        field.clearButtonMode = UITextFieldViewMode.never
+        field.clearsOnBeginEditing = false
+        field.clearsOnInsertion = false
+        field.keyboardAppearance = UIKeyboardAppearance.light
+        field.keyboardType = UIKeyboardType.alphabet
         self.field = field
         
         self.addSubview(field)
@@ -86,7 +96,7 @@ class ViewInput:UIView {
         
         label.topAnchor.constraint(
             equalTo:self.field.bottomAnchor, constant:ViewConstants.Subtitle.top).isActive = true
-        label.heightAnchor.constraint(equalToConstant:ViewConstants.Subtitle.height).isActive = true
+        label.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         label.widthAnchor.constraint(equalToConstant:ViewConstants.Subtitle.width).isActive = true
         label.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
     }
