@@ -11,9 +11,13 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
-    func didLoad(view:View) {
+    func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.delegate.didLoadPresenter()
+    }
+    
+    func shouldUpdate() {
+        self.outlets.viewField?.text = self.controller.column.name
     }
     
     func done() {

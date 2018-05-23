@@ -1,4 +1,5 @@
 import XCTest
+import Board
 @testable import Shared
 @testable import Column
 
@@ -6,14 +7,24 @@ class TestPresenter:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockPresenterDelegateProtocol!
     private var view:Column.View!
+    private var column:ColumnProtocol!
+    private var controller:Controller!
+    private struct Constants {
+        static let name:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
         self.delegate = MockPresenterDelegateProtocol()
-        self.presenter.delegate = self.delegate
+        self.column = ColumnFactory.newColumn()
+        self.controller = Controller()
         self.view = Column.View()
+        self.controller.column = self.column
+        self.presenter.delegate = self.delegate
+        self.presenter.controller = self.controller
         XCTAssertNotNil(self.view.view)
+        self.column.name = Constants.name
     }
     
     func testViewType() {
@@ -50,5 +61,11 @@ class TestPresenter:XCTestCase {
         
         self.presenter.didLoad(view:self.view)
         XCTAssertTrue(called, "Not called")
+    }
+    
+    func testUpdateFieldWithColumnName() {
+        self.presenter.didLoad(view:self.view)
+        self.presenter.shouldUpdate()
+        XCTAssertEqual(self.presenter.outlets.viewField?.text, Constants.name, "Not updated")
     }
 }
