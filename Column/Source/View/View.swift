@@ -14,6 +14,10 @@ class View:Shared.View, UITextFieldDelegate {
         self.view = self.configureView()
     }
     
+    func showNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
+    
     private func configureNavigationItem() {
         self.navigationController?.setNavigationBarHidden(true, animated:true)
     }

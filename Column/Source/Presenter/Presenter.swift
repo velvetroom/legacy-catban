@@ -23,13 +23,17 @@ class Presenter:PresenterProtocol {
     
     func done() {
         self.outlets.viewField?.resignFirstResponder()
-        self.showNavigationBar()
+        self.outlets.view?.showNavigationBar()
         self.updateColumn()
         self.controller.done()
     }
     
     func delete() {
         self.outlets.viewField?.resignFirstResponder()
+        let presenter:PresenterDelete = PresenterDelete()
+        presenter.controller = self.controller
+        presenter.view = self.outlets.view
+        presenter.askConfirmation()
     }
     
     private func configure(view:Shared.View) {
@@ -43,10 +47,6 @@ class Presenter:PresenterProtocol {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.view = view
         self.outlets = loader.loadOutlets()
-    }
-    
-    private func showNavigationBar() {
-        self.outlets.view?.navigationController?.setNavigationBarHidden(false, animated:true)
     }
     
     private func updateColumn() {

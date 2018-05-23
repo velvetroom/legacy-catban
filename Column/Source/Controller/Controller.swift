@@ -20,6 +20,7 @@ public class Controller:ControllerColumnProtocol {
     }
     
     func delete() {
-        
+        self.project.remove(column:self.column)
+        self.transiton.transitionToHome(project:self.project)
     }
 }

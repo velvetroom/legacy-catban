@@ -37,6 +37,7 @@
 		DA636E7E20B543270048BF41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA636E7C20B543270048BF41 /* Localizable.strings */; };
 		DAAE5D3D20B5AF6200879BBC /* TestPresenter+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D3C20B5AF6200879BBC /* TestPresenter+Actions.swift */; };
 		DAAE5D3F20B5B52C00879BBC /* MockProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D3E20B5B52C00879BBC /* MockProject.swift */; };
+		DAAE5D4120B5B89D00879BBC /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4020B5B89D00879BBC /* PresenterDelete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		DA636E7D20B543270048BF41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAAE5D3C20B5AF6200879BBC /* TestPresenter+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestPresenter+Actions.swift"; sourceTree = "<group>"; };
 		DAAE5D3E20B5B52C00879BBC /* MockProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProject.swift; sourceTree = "<group>"; };
+		DAAE5D4020B5B89D00879BBC /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				DA1F31E220B448270076ECAF /* Presenter.swift */,
 				DA2ACC8020B59D7F008CD9F4 /* PresenterOutlets.swift */,
 				DA2ACC8220B59DE3008CD9F4 /* PresenterOutletsLoader.swift */,
+				DAAE5D4020B5B89D00879BBC /* PresenterDelete.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2ACC8320B59DE3008CD9F4 /* PresenterOutletsLoader.swift in Sources */,
+				DAAE5D4120B5B89D00879BBC /* PresenterDelete.swift in Sources */,
 				DA2ACC8120B59D7F008CD9F4 /* PresenterOutlets.swift in Sources */,
 				DA039F6520B462B3000CE027 /* ViewBar.swift in Sources */,
 				DA1F31E320B448270076ECAF /* Presenter.swift in Sources */,
