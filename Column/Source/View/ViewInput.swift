@@ -60,9 +60,17 @@ class ViewInput:UIView {
         let field:UITextField = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.backgroundColor = UIColor.clear
+        field.font = UIFont.systemFont(ofSize:ViewConstants.Field.fontSize, weight:UIFont.Weight.regular)
+        field.text = "hello world"
+        field.textColor = UIColor(white:0.4, alpha:1)
         self.field = field
         
         self.addSubview(field)
+        
+        field.topAnchor.constraint(equalTo:self.topAnchor, constant:ViewConstants.Field.top).isActive = true
+        field.widthAnchor.constraint(equalToConstant:ViewConstants.Field.width).isActive = true
+        field.heightAnchor.constraint(equalToConstant:ViewConstants.Field.height).isActive = true
+        field.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
     }
     
     private func factorySubtitle() {

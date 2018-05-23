@@ -24,8 +24,11 @@ class ViewBar:UIView {
         let deleteButton:UIButton = UIButton()
         deleteButton.translatesAutoresizingMaskIntoConstraints = false
         deleteButton.setImage(icon, for:UIControlState.normal)
+        deleteButton.setImage(
+            icon.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for:UIControlState.highlighted)
         deleteButton.imageView!.clipsToBounds = true
         deleteButton.imageView!.contentMode = UIViewContentMode.center
+        deleteButton.imageView!.tintColor = UIColor(white:0, alpha:0.2)
         self.deleteButton = deleteButton
         
         self.addSubview(deleteButton)
