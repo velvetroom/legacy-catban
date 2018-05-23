@@ -62,9 +62,9 @@ class TestPresenter:XCTestCase {
         XCTAssertEqual(self.view.title, Constants.columnName, "Failed to update")
     }
     
-    func testLoadSetControllerOnView() {
+    func testLoadSetsSelfOnView() {
         let view:Card.View = Card.View()
         self.presenter.didLoad(view:view)
-        XCTAssertNotNil(view.presenter, "Not setting controller")
+        XCTAssertNotNil(view.presenter, "Not set")
     }
 }

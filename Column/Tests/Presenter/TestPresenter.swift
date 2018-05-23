@@ -68,4 +68,9 @@ class TestPresenter:XCTestCase {
         self.presenter.shouldUpdate()
         XCTAssertEqual(self.presenter.outlets.viewField?.text, Constants.name, "Not updated")
     }
+    
+    func testLoadSetsSelfOnView() {
+        self.presenter.didLoad(view:self.view)
+        XCTAssertNotNil(view.presenter, "Not set")
+    }
 }

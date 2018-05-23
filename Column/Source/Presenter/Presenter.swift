@@ -12,6 +12,7 @@ class Presenter:PresenterProtocol {
     }
     
     func didLoad(view:Shared.View) {
+        self.configure(view:view)
         self.loadOutlets(view:view)
         self.delegate.didLoadPresenter()
     }
@@ -22,6 +23,7 @@ class Presenter:PresenterProtocol {
     
     func done() {
         self.outlets.viewField?.resignFirstResponder()
+        self.showNavigationBar()
         self.updateColumn()
         self.controller.done()
     }
@@ -30,10 +32,21 @@ class Presenter:PresenterProtocol {
         self.outlets.viewField?.resignFirstResponder()
     }
     
+    private func configure(view:Shared.View) {
+        guard
+            let view:Column.View = view as? Column.View
+        else { return }
+        view.presenter = self
+    }
+    
     private func loadOutlets(view:Shared.View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.view = view
         self.outlets = loader.loadOutlets()
+    }
+    
+    private func showNavigationBar() {
+        self.outlets.view?.navigationController?.setNavigationBarHidden(false, animated:true)
     }
     
     private func updateColumn() {
