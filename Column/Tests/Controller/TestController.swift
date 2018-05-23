@@ -5,12 +5,15 @@ import Board
 class TestController:XCTestCase {
     private var controller:Controller!
     private var transition:MockTransitionProtocol!
+    private var project:MockProject!
     
     override func setUp() {
         super.setUp()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
+        self.project = MockProject()
         self.controller.transiton = self.transition
+        self.controller.project = self.project
     }
     
     func testNotRetainingColumn() {
@@ -30,5 +33,15 @@ class TestController:XCTestCase {
     func testInjectsController() {
         let presenter:Column.Presenter = self.controller.presenter as! Column.Presenter
         XCTAssertNotNil(presenter.controller, "Not injected")
+    }
+    
+    func testDoneTransitionsToHome() {
+        var transition:Bool = false
+        self.transition.onTransitionToHome = {
+            transition = true
+        }
+        
+        self.controller.done()
+        XCTAssertTrue(transition, "Not transitioned")
     }
 }

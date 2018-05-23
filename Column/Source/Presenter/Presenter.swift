@@ -22,6 +22,8 @@ class Presenter:PresenterProtocol {
     
     func done() {
         self.outlets.viewField?.resignFirstResponder()
+        self.updateColumn()
+        self.controller.done()
     }
     
     func delete() {
@@ -32,5 +34,12 @@ class Presenter:PresenterProtocol {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.view = view
         self.outlets = loader.loadOutlets()
+    }
+    
+    private func updateColumn() {
+        guard
+            let name:String = self.outlets.viewField?.text
+        else { return }
+        self.controller.column.name = name
     }
 }
