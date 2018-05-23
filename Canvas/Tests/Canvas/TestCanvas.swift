@@ -42,6 +42,18 @@ class TestCanvas:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
+    func testEditColumnCallsDelegate() {
+        var called:Bool = false
+        let delegate:MockCanvasDelegateProtocol = MockCanvasDelegateProtocol()
+        self.model.delegate = delegate
+        delegate.onEditColumnWithIdentifier = {
+            called = true
+        }
+        
+        self.model.editColumnWith(identifier:String())
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testCreateNewCardCallsDelegate() {
         var called:Bool = false
         let delegate:MockCanvasDelegateProtocol = MockCanvasDelegateProtocol()

@@ -34,6 +34,10 @@ public class Canvas:CanvasProtocol, CanvasEditorProtocol {
         self.delegate.editCardWith(identifier:identifier)
     }
     
+    func editColumnWith(identifier:String) {
+        self.delegate.editColumnWith(identifier:identifier)
+    }
+    
     func createNewCard() {
         self.delegate.createNewCard()
     }

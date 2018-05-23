@@ -14,6 +14,11 @@ class ViewColumn:ViewItem {
         return nil
     }
     
+    override func triggerAction(canvas:CanvasEditorProtocol) {
+        super.triggerAction(canvas:canvas)
+        canvas.editColumnWith(identifier:self.identifier)
+    }
+    
     override func factoryOutlets() {
         self.factoryIcon()
         self.factoryLabelName()

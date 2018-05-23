@@ -30,6 +30,16 @@ class TestController_Transition:XCTestCase {
         self.controller.transiton = self.transition
     }
     
+    func testCreateCardTransitionsToCard() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
+            transitioned = true
+        }
+        
+        self.controller.createNewCard()
+        XCTAssertTrue(transitioned, "Failed to transition")
+    }
+    
     func testEditCardTransitionsToCard() {
         var transitioned:Bool = false
         self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
@@ -40,13 +50,26 @@ class TestController_Transition:XCTestCase {
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     
-    func testCreateCardTransitionsToCard() {
+    func testCreateColumnTransitionsToColumn() {
         var transitioned:Bool = false
-        self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
+        self.transition.onTransitionToColumn = {
             transitioned = true
         }
         
-        self.controller.createNewCard()
+        self.controller.createNewColumn()
+        XCTAssertTrue(transitioned, "Failed to transition")
+    }
+    
+    func testEditColumnTransitionsToColumn() {
+        var transitioned:Bool = false
+        var column:ColumnProtocol = ColumnFactory.newColumn()
+        column.identifier = Constants.identifier
+        self.project.add(column:column)
+        self.transition.onTransitionToColumn = {
+            transitioned = true
+        }
+
+        self.controller.editColumnWith(identifier:Constants.identifier)
         XCTAssertTrue(transitioned, "Failed to transition")
     }
 }

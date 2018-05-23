@@ -15,6 +15,17 @@ class TestViewColumn:XCTestCase {
         XCTAssertNotNil(stateType, "Invalid state type")
     }
     
+    func testTriggerAction() {
+        var called:Bool = false
+        let canvas:MockCanvasEditorProtocol = MockCanvasEditorProtocol()
+        canvas.onEditColumnWithIdentifier = {
+            called = true
+        }
+        
+        self.view.triggerAction(canvas:canvas)
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testImage() {
         let image:UIImage? = UIImage(name:Constants.ColumnTitle.icon, in:ViewColumn.self)
         XCTAssertNotNil(image, "Image not found")

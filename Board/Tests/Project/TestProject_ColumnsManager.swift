@@ -9,10 +9,6 @@ class TestProject_ColumnsManager:XCTestCase {
         self.model = Project()
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-    }
-    
     func testCountColumns() {
         XCTAssertEqual(self.model.countColumns, 0, "There should be no columns")
     }
@@ -80,5 +76,17 @@ class TestProject_ColumnsManager:XCTestCase {
         let column:ColumnProtocol = ColumnFactory.newColumn()
         self.model.add(column:column)
         XCTAssertNotNil(column.container, "Not assigned")
+    }
+    
+    func testColumnWithIdentifier() {
+        let identifier:String = "lorem ipsum"
+        let column:Column = ColumnFactory.newColumn() as! Column
+        column.identifier = identifier
+        self.model.add(column:ColumnFactory.newColumn())
+        self.model.add(column:column)
+        self.model.add(column:ColumnFactory.newColumn())
+        
+        let retrieved:Column = self.model.columnWith(identifier:identifier) as! Column
+        XCTAssertEqual(retrieved, column, "Failed to retrieve")
     }
 }

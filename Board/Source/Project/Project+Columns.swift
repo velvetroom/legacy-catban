@@ -48,4 +48,15 @@ extension Project {
         }
         return columns
     }
+    
+    func columnWith(identifier:String) -> ColumnProtocol {
+        var found:ColumnProtocol!
+        for column:ColumnProtocol in self.columns {
+            if column.identifier == identifier {
+                found = column
+                break
+            }
+        }
+        return found
+    }
 }

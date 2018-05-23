@@ -19,6 +19,11 @@ public class Controller:ControllerProjectProtocol, CanvasDelegateProtocol {
         self.transiton.transitionTo(card:card, in:self.project)
     }
     
+    public func editColumnWith(identifier:String) {
+        let column:ColumnProtocol = self.project.columnWith(identifier:identifier)
+        self.transiton.transitionTo(column:column, in:self.project)
+    }
+    
     public func createNewCard() {
         let card:CardProtocol = CardFactory.newCard()
         self.project.add(card:card)
