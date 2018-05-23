@@ -1,2 +1,3 @@
 ViewInput_titleLabel="Column";
 ViewInput_subtitleLabel="How this column will be shown on the board";
+ViewInput_doneButton="DONE";

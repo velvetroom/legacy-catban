@@ -47,8 +47,9 @@ struct ViewConstants {
     }
     
     struct Done {
-        static let width:CGFloat = 250
-        static let height:CGFloat = 34
-        static let fontSize:CGFloat = 20
+        static let top:CGFloat = 100
+        static let width:CGFloat = 140
+        static let height:CGFloat = 40
+        static let fontSize:CGFloat = 14
     }
 }

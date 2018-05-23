@@ -2,6 +2,7 @@ import UIKit
 
 class ViewInput:UIView {
     private(set) weak var field:ViewInputField!
+    private(set) weak var doneButton:UIButton!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -23,6 +24,7 @@ class ViewInput:UIView {
         self.factoryLine()
         self.factoryField()
         self.factorySubtitle()
+        self.factoryDone()
     }
     
     private func factoryTitle() {
@@ -85,5 +87,26 @@ class ViewInput:UIView {
         label.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         label.widthAnchor.constraint(equalToConstant:ViewConstants.Subtitle.width).isActive = true
         label.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+    }
+    
+    private func factoryDone() {
+        let doneButton:UIButton = UIButton()
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.clipsToBounds = true
+        doneButton.backgroundColor = UIColor.Shared.blue
+        doneButton.layer.cornerRadius = ViewConstants.Done.height / 2.0
+        doneButton.setTitle(
+            String.localized(key:"ViewInput_doneButton", in:type(of:self)), for:UIControlState())
+        doneButton.setTitleColor(UIColor.white, for:UIControlState.normal)
+        doneButton.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
+        self.doneButton = doneButton
+        
+        self.addSubview(doneButton)
+        
+        doneButton.topAnchor.constraint(
+            equalTo:self.field.bottomAnchor, constant:ViewConstants.Done.top).isActive = true
+        doneButton.widthAnchor.constraint(equalToConstant:ViewConstants.Done.width).isActive = true
+        doneButton.heightAnchor.constraint(equalToConstant:ViewConstants.Done.height).isActive = true
+        doneButton.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
     }
 }
