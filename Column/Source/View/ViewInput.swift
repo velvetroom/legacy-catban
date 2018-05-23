@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewInput:UIView {
-    private(set) weak var field:UITextField!
+    private(set) weak var field:ViewInputField!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -57,22 +57,7 @@ class ViewInput:UIView {
     }
     
     private func factoryField() {
-        let field:UITextField = UITextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = UIColor.clear
-        field.font = UIFont.systemFont(ofSize:ViewConstants.Field.fontSize, weight:UIFont.Weight.regular)
-        field.textColor = UIColor(white:0.4, alpha:1)
-        field.tintColor = UIColor.black
-        field.autocapitalizationType = UITextAutocapitalizationType.words
-        field.autocorrectionType = UITextAutocorrectionType.no
-        field.returnKeyType = UIReturnKeyType.done
-        field.spellCheckingType = UITextSpellCheckingType.no
-        field.borderStyle = UITextBorderStyle.none
-        field.clearButtonMode = UITextFieldViewMode.never
-        field.clearsOnBeginEditing = false
-        field.clearsOnInsertion = false
-        field.keyboardAppearance = UIKeyboardAppearance.light
-        field.keyboardType = UIKeyboardType.alphabet
+        let field:ViewInputField = ViewInputField()
         self.field = field
         
         self.addSubview(field)
@@ -91,6 +76,7 @@ class ViewInput:UIView {
         label.textColor = UIColor(white:0.7, alpha:1)
         label.font = UIFont.systemFont(ofSize:ViewConstants.Subtitle.fontSize, weight:UIFont.Weight.regular)
         label.text = String.localized(key:"ViewInput_subtitleLabel", in:type(of:self))
+        label.numberOfLines = 0
         
         self.addSubview(label)
         

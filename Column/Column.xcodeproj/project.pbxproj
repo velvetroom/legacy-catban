@@ -23,6 +23,7 @@
 		DA1F31DB20B446560076ECAF /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D920B4463E0076ECAF /* Shared.framework */; };
 		DA1F31DC20B446580076ECAF /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D720B446380076ECAF /* Board.framework */; };
 		DA1F31E320B448270076ECAF /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31E220B448270076ECAF /* Presenter.swift */; };
+		DA2ACC7920B58F20008CD9F4 /* ViewInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2ACC7820B58F20008CD9F4 /* ViewInputField.swift */; };
 		DA636E7820B538000048BF41 /* TestViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7720B538000048BF41 /* TestViewBase.swift */; };
 		DA636E7A20B53FDE0048BF41 /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7920B53FDE0048BF41 /* ViewInput.swift */; };
 		DA636E7E20B543270048BF41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA636E7C20B543270048BF41 /* Localizable.strings */; };
@@ -55,6 +56,7 @@
 		DA1F31D720B446380076ECAF /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31D920B4463E0076ECAF /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31E220B448270076ECAF /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DA2ACC7820B58F20008CD9F4 /* ViewInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInputField.swift; sourceTree = "<group>"; };
 		DA636E7720B538000048BF41 /* TestViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBase.swift; sourceTree = "<group>"; };
 		DA636E7920B53FDE0048BF41 /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
 		DA636E7D20B543270048BF41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -136,7 +138,6 @@
 				DA1F31CB20B444D90076ECAF /* Controller */,
 				DA1F31CC20B444E10076ECAF /* Presenter */,
 				DA1F31CD20B444EA0076ECAF /* View */,
-				DA1F31CE20B444F00076ECAF /* ViewModel */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -175,15 +176,9 @@
 				DA039F6220B46101000CE027 /* ViewBase.swift */,
 				DA039F6420B462B3000CE027 /* ViewBar.swift */,
 				DA636E7920B53FDE0048BF41 /* ViewInput.swift */,
+				DA2ACC7820B58F20008CD9F4 /* ViewInputField.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DA1F31CE20B444F00076ECAF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DA1F31D320B445630076ECAF /* Controller */ = {
@@ -329,6 +324,7 @@
 				DA039F6320B46101000CE027 /* ViewBase.swift in Sources */,
 				DA1F31D020B445060076ECAF /* Controller.swift in Sources */,
 				DA039F6120B45AB0000CE027 /* ViewConstants.swift in Sources */,
+				DA2ACC7920B58F20008CD9F4 /* ViewInputField.swift in Sources */,
 				DA039F5F20B45A3E000CE027 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
