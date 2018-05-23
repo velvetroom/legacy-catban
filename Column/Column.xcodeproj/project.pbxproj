@@ -24,6 +24,8 @@
 		DA1F31DC20B446580076ECAF /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1F31D720B446380076ECAF /* Board.framework */; };
 		DA1F31E320B448270076ECAF /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31E220B448270076ECAF /* Presenter.swift */; };
 		DA636E7820B538000048BF41 /* TestViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7720B538000048BF41 /* TestViewBase.swift */; };
+		DA636E7A20B53FDE0048BF41 /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7920B53FDE0048BF41 /* ViewInput.swift */; };
+		DA636E7E20B543270048BF41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA636E7C20B543270048BF41 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		DA1F31D920B4463E0076ECAF /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1F31E220B448270076ECAF /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA636E7720B538000048BF41 /* TestViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBase.swift; sourceTree = "<group>"; };
+		DA636E7920B53FDE0048BF41 /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
+		DA636E7D20B543270048BF41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			children = (
 				DA1F31C920B4448D0076ECAF /* Source */,
 				DA1F31CA20B444920076ECAF /* Tests */,
+				DA636E7B20B543090048BF41 /* Resources */,
 				DA039F6620B465BD000CE027 /* Assets */,
 				DA1F31AF20B4427E0076ECAF /* Products */,
 				DA1F31D620B446380076ECAF /* Frameworks */,
@@ -169,6 +174,7 @@
 				DA039F6020B45AB0000CE027 /* ViewConstants.swift */,
 				DA039F6220B46101000CE027 /* ViewBase.swift */,
 				DA039F6420B462B3000CE027 /* ViewBar.swift */,
+				DA636E7920B53FDE0048BF41 /* ViewInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				DA1F31D720B446380076ECAF /* Board.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA636E7B20B543090048BF41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA636E7C20B543270048BF41 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA039F6820B46710000CE027 /* assets.xcassets in Resources */,
+				DA636E7E20B543270048BF41 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +325,7 @@
 			files = (
 				DA039F6520B462B3000CE027 /* ViewBar.swift in Sources */,
 				DA1F31E320B448270076ECAF /* Presenter.swift in Sources */,
+				DA636E7A20B53FDE0048BF41 /* ViewInput.swift in Sources */,
 				DA039F6320B46101000CE027 /* ViewBase.swift in Sources */,
 				DA1F31D020B445060076ECAF /* Controller.swift in Sources */,
 				DA039F6120B45AB0000CE027 /* ViewConstants.swift in Sources */,
@@ -338,6 +354,17 @@
 			targetProxy = DA1F31C320B443380076ECAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA636E7C20B543270048BF41 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA636E7D20B543270048BF41 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA1F31B420B4427E0076ECAF /* Debug */ = {
