@@ -21,6 +21,7 @@ class ViewBase:UIView {
     
     private func factoryOutlets() {
         self.factoryBar()
+        self.factoryIcon()
     }
     
     private func factoryBar() {
@@ -29,9 +30,9 @@ class ViewBase:UIView {
         
         self.addSubview(viewBar)
         
-        viewBar.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        viewBar.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        viewBar.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        viewBar.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
+        viewBar.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        viewBar.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
         viewBar.heightAnchor.constraint(equalToConstant:ViewConstants.Bar.height).isActive = true
     }
     
@@ -45,7 +46,7 @@ class ViewBase:UIView {
         
         self.addSubview(icon)
         
-        icon.topAnchor.constraint(equalTo:self.topAnchor, constant:ViewConstants.Icon.top).isActive = true
+        icon.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor, constant:ViewConstants.Icon.top).isActive = true
         icon.heightAnchor.constraint(equalToConstant:ViewConstants.Icon.height).isActive = true
         icon.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
         icon.widthAnchor.constraint(equalToConstant:ViewConstants.Icon.width).isActive = true
