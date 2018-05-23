@@ -38,6 +38,9 @@
 		DAAE5D3D20B5AF6200879BBC /* TestPresenter+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D3C20B5AF6200879BBC /* TestPresenter+Actions.swift */; };
 		DAAE5D3F20B5B52C00879BBC /* MockProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D3E20B5B52C00879BBC /* MockProject.swift */; };
 		DAAE5D4120B5B89D00879BBC /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4020B5B89D00879BBC /* PresenterDelete.swift */; };
+		DAAE5D4320B5BADD00879BBC /* TestPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4220B5BADD00879BBC /* TestPresenterDelete.swift */; };
+		DAAE5D4520B5BB0700879BBC /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4420B5BB0700879BBC /* MockView.swift */; };
+		DAAE5D4720B5BBF900879BBC /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		DAAE5D3C20B5AF6200879BBC /* TestPresenter+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestPresenter+Actions.swift"; sourceTree = "<group>"; };
 		DAAE5D3E20B5B52C00879BBC /* MockProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProject.swift; sourceTree = "<group>"; };
 		DAAE5D4020B5B89D00879BBC /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
+		DAAE5D4220B5BADD00879BBC /* TestPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDelete.swift; sourceTree = "<group>"; };
+		DAAE5D4420B5BB0700879BBC /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
+		DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 				DA039F5920B45380000CE027 /* TestPresenter.swift */,
 				DAAE5D3C20B5AF6200879BBC /* TestPresenter+Actions.swift */,
 				DA2ACC8620B5A662008CD9F4 /* TestPresenterOutlets.swift */,
+				DAAE5D4220B5BADD00879BBC /* TestPresenterDelete.swift */,
 				DA2ACC8820B5A971008CD9F4 /* MockPresenter.swift */,
 				DA2ACC8420B5A611008CD9F4 /* MockPresenterDelegateProtocol.swift */,
 			);
@@ -126,6 +133,7 @@
 				DA039F6920B46828000CE027 /* TestViewBar.swift */,
 				DA636E7720B538000048BF41 /* TestViewBase.swift */,
 				DA2ACC7A20B592D0008CD9F4 /* TestViewInput.swift */,
+				DAAE5D4420B5BB0700879BBC /* MockView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 				DA039F5B20B456B6000CE027 /* MockTransitionProtocol.swift */,
 				DA2ACC7E20B5999A008CD9F4 /* MockController.swift */,
 				DAAE5D3E20B5B52C00879BBC /* MockProject.swift */,
+				DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,13 +384,16 @@
 				DA039F5C20B456B6000CE027 /* MockTransitionProtocol.swift in Sources */,
 				DA039F5A20B45380000CE027 /* TestPresenter.swift in Sources */,
 				DAAE5D3F20B5B52C00879BBC /* MockProject.swift in Sources */,
+				DAAE5D4720B5BBF900879BBC /* MockProjectManagedProtocol.swift in Sources */,
 				DA2ACC8520B5A611008CD9F4 /* MockPresenterDelegateProtocol.swift in Sources */,
 				DA2ACC7F20B5999A008CD9F4 /* MockController.swift in Sources */,
+				DAAE5D4520B5BB0700879BBC /* MockView.swift in Sources */,
 				DA636E7820B538000048BF41 /* TestViewBase.swift in Sources */,
 				DA2ACC8920B5A971008CD9F4 /* MockPresenter.swift in Sources */,
 				DA1F31D520B445730076ECAF /* TestController.swift in Sources */,
 				DAAE5D3D20B5AF6200879BBC /* TestPresenter+Actions.swift in Sources */,
 				DA2ACC8720B5A662008CD9F4 /* TestPresenterOutlets.swift in Sources */,
+				DAAE5D4320B5BADD00879BBC /* TestPresenterDelete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

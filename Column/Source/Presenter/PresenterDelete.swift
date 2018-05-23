@@ -12,6 +12,11 @@ class PresenterDelete {
         self.view.present(alert, animated:true, completion:nil)
     }
     
+    func confirmed() {
+        self.view.showNavigationBar()
+        self.controller.delete()
+    }
+    
     private func factoryAlert() -> UIAlertController {
         let alert:UIAlertController = UIAlertController(title:
             String.localized(key:"PresenterDelete_alert_title", in:type(of:self)), message:nil, preferredStyle:UIAlertControllerStyle.actionSheet)
@@ -32,13 +37,10 @@ class PresenterDelete {
     }
     
     private func factoryConfirmAction() -> UIAlertAction {
-        weak var controller:Controller? = self.controller
-        weak var view:View? = self.view
         let action:UIAlertAction = UIAlertAction(
             title:String.localized(key:"PresenterDelete_alert_confirm", in:type(of:self)),
             style:UIAlertActionStyle.destructive) { (action:UIAlertAction) in
-                view?.showNavigationBar()
-                controller?.delete()
+                self.confirmed()
         }
         return action
     }

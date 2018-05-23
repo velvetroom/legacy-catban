@@ -5,15 +5,18 @@ import Board
 class TestController:XCTestCase {
     private var controller:Controller!
     private var transition:MockTransitionProtocol!
-    private var project:MockProject!
+    private var project:MockProjectManagedProtocol!
+    private var column:ColumnProtocol!
     
     override func setUp() {
         super.setUp()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
-        self.project = MockProject()
+        self.project = MockProjectManagedProtocol()
+        self.column = ColumnFactory.newColumn()
         self.controller.transiton = self.transition
         self.controller.project = self.project
+        self.controller.column = self.column
     }
     
     func testNotRetainingColumn() {
@@ -42,6 +45,26 @@ class TestController:XCTestCase {
         }
         
         self.controller.done()
+        XCTAssertTrue(transition, "Not transitioned")
+    }
+    
+    func testDeleteColumn() {
+        var transition:Bool = false
+        self.project.onRemoveColumn = {
+            transition = true
+        }
+        
+        self.controller.delete()
+        XCTAssertTrue(transition, "Not deleted")
+    }
+    
+    func testDeleteTransitionsToHome() {
+        var transition:Bool = false
+        self.transition.onTransitionToHome = {
+            transition = true
+        }
+        
+        self.controller.delete()
         XCTAssertTrue(transition, "Not transitioned")
     }
 }
