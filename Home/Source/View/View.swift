@@ -8,13 +8,13 @@ class View:Shared.View {
     }
     
     private func configureNavigationItem() {
-        let buttonMore:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.add,
-                                                         target:self,
-                                                         action:#selector(self.selectorDone(sender:)))
-        self.navigationItem.rightBarButtonItems = [buttonMore]
+        let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
+        let buttonMenu:UIBarButtonItem = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
+                                                         target:self, action:#selector(self.selectorMenu(sender:)))
+        self.navigationItem.rightBarButtonItem = buttonMenu
     }
     
-    @objc func selectorDone(sender button:UIBarButtonItem) {
+    @objc func selectorMenu(sender button:UIBarButtonItem) {
         
     }
 }
