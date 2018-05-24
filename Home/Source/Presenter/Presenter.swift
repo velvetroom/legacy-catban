@@ -14,10 +14,9 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
-    func didLoad(view:Shared.View) {
+    func presenterDidLoadWith(view:Shared.View) {
         self.outlets.view = view
         self.loadCanvasOn(view:view.view)
-        self.delegate.didLoadPresenter()
     }
     
     func shouldUpdate() {

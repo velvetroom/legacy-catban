@@ -16,8 +16,10 @@ public extension PresenterProtocol {
     }
     
     func didLoad(view:Shared.View) {
+        self.presenterDidLoadWith(view:view)
         self.delegate.didLoadPresenter()
     }
     
+    func presenterDidLoadWith(view:View) { }
     func shouldUpdate() { }
 }

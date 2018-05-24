@@ -34,10 +34,9 @@ class Presenter:PresenterProtocol {
         self.controller.update(content:content)
     }
     
-    func didLoad(view:Shared.View) {
+    func presenterDidLoadWith(view:Shared.View) {
         self.loadOutlets(view:view)
         self.configureController(view:view)
-        self.delegate.didLoadPresenter()
     }
     
     func didAppear(view:Shared.View) {

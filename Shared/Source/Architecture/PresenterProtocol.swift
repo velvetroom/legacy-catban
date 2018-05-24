@@ -5,5 +5,6 @@ public protocol PresenterProtocol:ViewDelegateProtocol {
     var view:View { get }
     var delegate:PresenterDelegateProtocol! { get set }
     
+    func presenterDidLoadWith(view:View)
     func shouldUpdate()
 }
