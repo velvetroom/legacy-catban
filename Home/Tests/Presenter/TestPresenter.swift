@@ -79,4 +79,13 @@ class TestPresenter:XCTestCase {
         self.presenter.didLoad(view:self.view)
         XCTAssertNotNil(self.view.presenter, "Not injected")
     }
+    
+    func testShowMenuLoadsMenu() {
+        self.presenter.outlets.view = self.view
+        self.presenter.menuType = MockPresenterMenu.self
+        self.presenter.showMenu()
+        XCTAssertNotNil(MockPresenterMenu.presenter, "Not loaded")
+        XCTAssertNotNil(MockPresenterMenu.presenter?.view, "Not injected")
+        XCTAssertNotNil(MockPresenterMenu.presenter?.controller, "Not injected")
+    }
 }

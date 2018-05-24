@@ -17,6 +17,7 @@
 		DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */; };
 		DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */; };
 		DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894920B69E5000B67ED5 /* MockPresenter.swift */; };
+		DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */; };
 		DA50AEFD20B2BEE100126526 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */; };
 		DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
@@ -58,6 +59,7 @@
 		DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterMenu.swift; sourceTree = "<group>"; };
 		DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterMenu.swift; sourceTree = "<group>"; };
 		DA4B894920B69E5000B67ED5 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterMenu.swift; sourceTree = "<group>"; };
 		DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
 		DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 				DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
 				DA4B894920B69E5000B67ED5 /* MockPresenter.swift */,
+				DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */,
 				DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
+				DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,

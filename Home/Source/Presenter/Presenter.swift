@@ -17,7 +17,10 @@ class Presenter:PresenterProtocol {
     }
     
     func showMenu() {
-        
+        let menu:PresenterMenu = self.menuType.init()
+        menu.controller = self.controller
+        menu.view = self.outlets.view
+        menu.show()
     }
     
     func presenterDidLoadWith(view:Shared.View) {
