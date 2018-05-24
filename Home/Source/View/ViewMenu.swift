@@ -22,6 +22,11 @@ class ViewMenu:UIViewController {
         self.presenter.close()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to:size, with:coordinator)
+        self.view.frame = CGRect(origin:CGPoint.zero, size:size)
+    }
+    
     override func loadView() {
         self.view = self.configureViewBase()
     }
