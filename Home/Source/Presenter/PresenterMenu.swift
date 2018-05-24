@@ -8,6 +8,7 @@ class PresenterMenu {
     required init() { }
     
     func show() {
-        
+        let menu:ViewMenu = ViewMenu()
+        self.view.present(menu, animated:true, completion:nil)
     }
 }
