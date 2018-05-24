@@ -3,12 +3,14 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Column.View.self
+    var deleteType:PresenterDelete.Type
     var outlets:PresenterOutlets
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
+        self.deleteType = PresenterDelete.self
     }
     
     func presenterDidLoadWith(view:Shared.View) {
@@ -29,7 +31,7 @@ class Presenter:PresenterProtocol {
     
     func delete() {
         self.outlets.viewField?.resignFirstResponder()
-        let presenter:PresenterDelete = PresenterDelete()
+        let presenter:PresenterDelete = self.deleteType.init()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.askConfirmation()

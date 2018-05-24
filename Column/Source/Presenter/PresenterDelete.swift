@@ -5,6 +5,8 @@ class PresenterDelete {
     weak var view:View!
     weak var controller:Controller!
     
+    required init() { }
+    
     func askConfirmation() {
         let alert:UIAlertController = self.factoryAlert()
         alert.addAction(self.factoryConfirmAction())
