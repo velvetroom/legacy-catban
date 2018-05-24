@@ -7,6 +7,8 @@ class PresenterDelete {
     weak var card:CardProtocol!
     weak var controller:Controller!
     
+    required init() { }
+    
     func askConfirmation() {
         let alert:UIAlertController = self.factoryAlert()
         alert.addAction(self.factoryConfirmAction())

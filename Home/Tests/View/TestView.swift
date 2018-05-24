@@ -4,10 +4,13 @@ import Shared
 
 class TestView:XCTestCase {
     private var view:Home.View!
+    private var presenter:MockPresenter!
     
     override func setUp() {
         super.setUp()
         self.view = View()
+        self.presenter = MockPresenter()
+        self.view.presenter = self.presenter
     }
     
     func testNotRetainingPresenter() {
@@ -20,7 +23,13 @@ class TestView:XCTestCase {
         XCTAssertNotNil(image, "Failed to load image")
     }
     
-    func testCallShowMenu() {
+    func testMenuButtonCallsPresenter() {
+        var called:Bool = false
+        self.presenter.onShowMenu = {
+            called = true
+        }
         
+        self.view.selectorMenu(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
     }
 }

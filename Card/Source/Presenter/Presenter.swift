@@ -3,12 +3,14 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Card.View.self
+    var deleteType:PresenterDelete.Type
     var outlets:PresenterOutlets
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
+        self.deleteType = PresenterDelete.self
         self.registerForNotifications()
     }
     
@@ -23,7 +25,7 @@ class Presenter:PresenterProtocol {
     
     func delete() {
         self.outlets.viewText?.resignFirstResponder()
-        let presenter:PresenterDelete = PresenterDelete()
+        let presenter:PresenterDelete = self.deleteType.init()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.card = self.controller.card

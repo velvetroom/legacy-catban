@@ -67,4 +67,13 @@ class TestPresenter:XCTestCase {
         self.presenter.didLoad(view:view)
         XCTAssertNotNil(view.presenter, "Not set")
     }
+    
+    func testDeleteCallsPresenter() {
+        self.presenter.deleteType = MockPresenterDelete.self
+        self.presenter.delete()
+        XCTAssertNotNil(MockPresenterDelete.presenter, "Not loaded")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.controller, "Not injected")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.view, "Not injected")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.card, "Not injected")
+    }
 }

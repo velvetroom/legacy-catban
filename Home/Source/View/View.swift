@@ -17,6 +17,6 @@ class View:Shared.View {
     }
     
     @objc func selectorMenu(button:UIBarButtonItem) {
-        
+        self.presenter.showMenu()
     }
 }

@@ -4,6 +4,7 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Home.View.self
+    var menuType:PresenterMenu.Type
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
     weak var controller:Controller!
@@ -12,6 +13,7 @@ class Presenter:PresenterProtocol {
     init() {
         self.canvas = Configuration.canvasType.init()
         self.outlets = PresenterOutlets()
+        self.menuType = PresenterMenu.self
     }
     
     func showMenu() {
