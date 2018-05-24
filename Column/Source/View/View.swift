@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 class View:Shared.View, UITextFieldDelegate {
-    weak var presenter:Presenter!
+    weak var presenter:Presenter?
     private(set) weak var viewBase:ViewBase!
     
     override func didLoad() {
@@ -34,15 +34,15 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     @objc func selectorDelete(button:UIButton) {
-        self.presenter.delete()
+        self.presenter?.delete()
     }
     
     @objc func selectorDone(button:UIButton) {
-        self.presenter.done()
+        self.presenter?.done()
     }
     
     func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        self.presenter.done()
+        self.presenter?.done()
         return true
     }
 }

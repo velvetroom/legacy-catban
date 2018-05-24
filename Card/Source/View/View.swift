@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 class View:Shared.View, UITextViewDelegate {
-    weak var presenter:Presenter!
+    weak var presenter:Presenter?
     
     override func didLoad() {
         super.didLoad()
@@ -20,14 +20,14 @@ class View:Shared.View, UITextViewDelegate {
     }
     
     @objc func selectorDone(button:UIBarButtonItem) {
-        self.presenter.done()
+        self.presenter?.done()
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
-        self.presenter.delete()
+        self.presenter?.delete()
     }
     
     func textViewDidChange(_ textView:UITextView) {
-        self.presenter.update(content:textView.text)
+        self.presenter?.update(content:textView.text)
     }
 }

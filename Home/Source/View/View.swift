@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 class View:Shared.View {
-    weak var presenter:Presenter!
+    weak var presenter:Presenter?
     
     override func didLoad() {
         super.didLoad()
@@ -17,6 +17,6 @@ class View:Shared.View {
     }
     
     @objc func selectorMenu(button:UIBarButtonItem) {
-        self.presenter.showMenu()
+        self.presenter?.showMenu()
     }
 }
