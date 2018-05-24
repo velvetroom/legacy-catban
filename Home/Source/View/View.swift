@@ -16,7 +16,14 @@ class View:Shared.View {
         self.navigationItem.rightBarButtonItem = buttonMenu
     }
     
+    override func dismiss(animated:Bool, completion:(() -> Void)? = nil) {
+        super.dismiss(animated:animated) { [weak self] in
+            self?.configureNavigationItem()
+        }
+    }
+    
     @objc func selectorMenu(button:UIBarButtonItem) {
+        self.navigationItem.rightBarButtonItem = nil
         self.presenter?.showMenu()
     }
 }

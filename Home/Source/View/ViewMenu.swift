@@ -1,7 +1,8 @@
 import UIKit
 
 class ViewMenu:UIViewController {
-    private(set) weak var viewBase:ViewMenuBase!
+    var presenter:PresenterMenu!
+    weak var viewBase:ViewMenuBase!
     
     init() {
         super.init(nibName:nil, bundle:nil)
@@ -13,28 +14,28 @@ class ViewMenu:UIViewController {
         return nil
     }
     
+    func animateClose() {
+        self.viewBase.animateClose()
+    }
+    
+    @objc func selectorClose(button:UIButton) {
+        self.presenter.close()
+    }
+    
     override func loadView() {
         self.view = self.configureViewBase()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.animateOpen()
+        self.viewBase.animateOpen()
     }
     
     private func configureViewBase() -> ViewMenuBase {
         let viewBase:ViewMenuBase = ViewMenuBase()
+        viewBase.viewClose.addTarget(
+            self, action:#selector(self.selectorClose(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase = viewBase
         return viewBase
-    }
-    
-    private func animateOpen() {
-        self.viewBase.viewClose.animateOpen()
-        self.viewBase.viewBackground.animateOpen()
-    }
-    
-    private func animateClose() {
-        self.viewBase.viewClose.animateClose()
-        self.viewBase.viewBackground.animateClose()
     }
 }

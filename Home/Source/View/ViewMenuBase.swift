@@ -14,6 +14,18 @@ class ViewMenuBase:UIView {
         return nil
     }
     
+    func animateOpen() {
+        self.animateTranslationOpen()
+        self.viewClose.animateOpen()
+        self.viewBackground.animateOpen()
+    }
+    
+    func animateClose() {
+        self.animateTranslationClose()
+        self.viewClose.animateClose()
+        self.viewBackground.animateClose()
+    }
+    
     private func configureView() {
         self.backgroundColor = UIColor.clear
     }
@@ -41,9 +53,27 @@ class ViewMenuBase:UIView {
         
         self.addSubview(viewClose)
         
+        viewClose.layoutAlignRight = viewClose.rightAnchor.constraint(equalTo:self.rightAnchor)
+        viewClose.layoutCentre = viewClose.centerXAnchor.constraint(equalTo:self.centerXAnchor)
         viewClose.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        viewClose.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         viewClose.heightAnchor.constraint(equalToConstant:82).isActive = true
         viewClose.widthAnchor.constraint(equalToConstant:62).isActive = true
+        viewClose.layoutAlignRight.isActive = true
+    }
+    
+    private func animateTranslationOpen() {
+        self.viewClose.layoutAlignRight.isActive = false
+        self.viewClose.layoutCentre.isActive = true
+        UIView.animate(withDuration:ViewConstants.Base.translationClose) { [weak self] in
+            self?.layoutIfNeeded()
+        }
+    }
+    
+    private func animateTranslationClose() {
+        self.viewClose.layoutCentre.isActive = false
+        self.viewClose.layoutAlignRight.isActive = true
+        UIView.animate(withDuration:ViewConstants.Base.translationClose) { [weak self] in
+            self?.layoutIfNeeded()
+        }
     }
 }

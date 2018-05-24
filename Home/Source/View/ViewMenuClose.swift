@@ -2,9 +2,9 @@ import UIKit
 import Shared
 
 class ViewMenuClose:UIButton {
-    weak var layoutAlignRight:NSLayoutConstraint!
-    weak var layoutCentre:NSLayoutConstraint!
-    private(set) weak var icon:UIImageView!
+    var layoutAlignRight:NSLayoutConstraint!
+    var layoutCentre:NSLayoutConstraint!
+    weak var icon:UIImageView!
     private let iconsOpen:[UIImage]
     private let iconsClose:[UIImage]
     
@@ -21,12 +21,15 @@ class ViewMenuClose:UIButton {
     }
     
     func animateOpen() {
+        self.icon.image = self.iconsOpen.last
         self.icon.animationImages = self.iconsOpen
         self.icon.startAnimating()
     }
     
     func animateClose() {
-        
+        self.icon.image = self.iconsClose.last
+        self.icon.animationImages = self.iconsClose
+        self.icon.startAnimating()
     }
     
     private func configureView() {
@@ -39,7 +42,6 @@ class ViewMenuClose:UIButton {
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.isUserInteractionEnabled = false
         icon.clipsToBounds = true
-        icon.image = self.iconsClose.first
         icon.contentMode = UIViewContentMode.center
         icon.animationRepeatCount = ViewConstants.Close.animationRepeat
         icon.animationDuration = ViewConstants.Close.animationDuration

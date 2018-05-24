@@ -23,7 +23,7 @@ class ViewMenuBackground:UIView {
         self.isUserInteractionEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.alpha = 0
+        self.alpha = ViewConstants.Background.alphaClose
     }
     
     private func factoryBlur() {
