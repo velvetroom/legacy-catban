@@ -44,7 +44,7 @@ class TestView:XCTestCase {
             calledController = true
         }
         
-        self.view.selectorDone(sender:UIBarButtonItem())
+        self.view.selectorDone(button:UIBarButtonItem())
         XCTAssertTrue(calledController, "Not called")
     }
     
@@ -54,7 +54,7 @@ class TestView:XCTestCase {
             calledPresenter = true
         }
         
-        self.view.selectorDelete(sender:UIBarButtonItem())
+        self.view.selectorDelete(button:UIBarButtonItem())
         XCTAssertTrue(calledPresenter, "Not called")
     }
     

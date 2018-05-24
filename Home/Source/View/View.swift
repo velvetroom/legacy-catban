@@ -10,11 +10,11 @@ class View:Shared.View {
     private func configureNavigationItem() {
         let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
         let buttonMenu:UIBarButtonItem = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
-                                                         target:self, action:#selector(self.selectorMenu(sender:)))
+                                                         target:self, action:#selector(self.selectorMenu(button:)))
         self.navigationItem.rightBarButtonItem = buttonMenu
     }
     
-    @objc func selectorMenu(sender button:UIBarButtonItem) {
+    @objc func selectorMenu(button:UIBarButtonItem) {
         
     }
 }

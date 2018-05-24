@@ -11,19 +11,19 @@ class View:Shared.View, UITextViewDelegate {
     
     private func configureNavigationItem() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(sender:)))
+                                                         target:self, action:#selector(self.selectorDone(button:)))
         let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconTrash, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
-                                                           action:#selector(self.selectorDelete(sender:)))
+                                                           action:#selector(self.selectorDelete(button:)))
         self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
     }
     
-    @objc func selectorDone(sender button:UIBarButtonItem) {
+    @objc func selectorDone(button:UIBarButtonItem) {
         self.presenter.done()
     }
     
-    @objc func selectorDelete(sender button:UIBarButtonItem) {
+    @objc func selectorDelete(button:UIBarButtonItem) {
         self.presenter.delete()
     }
     

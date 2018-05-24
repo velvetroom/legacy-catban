@@ -62,7 +62,8 @@ class Presenter:PresenterProtocol {
     }
     
     private func registerForNotifications() {
-        NotificationCenter.default.addObserver(self, selector:#selector(self.notifiedKeyboardChanged(sender:)),
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(self.notifiedKeyboardChanged(notification:)),
                                                name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
     }
     
@@ -85,7 +86,7 @@ class Presenter:PresenterProtocol {
         self.outlets.viewText?.text = viewModel.content
     }
     
-    @objc private func notifiedKeyboardChanged(sender notification:Notification) {
+    @objc private func notifiedKeyboardChanged(notification:Notification) {
         let keyboard:PresenterKeyboard = PresenterKeyboard()
         keyboard.outlets = self.outlets
         keyboard.notification = notification

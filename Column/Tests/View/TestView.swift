@@ -28,7 +28,7 @@ class TestView:XCTestCase {
             called = true
         }
         
-        self.view.selectorDone(sender:UIButton())
+        self.view.selectorDone(button:UIButton())
         XCTAssertTrue(called, "Not called")
     }
     
@@ -38,7 +38,7 @@ class TestView:XCTestCase {
             called = true
         }
         
-        self.view.selectorDelete(sender:UIButton())
+        self.view.selectorDelete(button:UIButton())
         XCTAssertTrue(called, "Not called")
     }
 }
