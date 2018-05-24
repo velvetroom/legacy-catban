@@ -1,6 +1,9 @@
 import UIKit
 
 class ViewMenuBase:UIView {
+    private(set) weak var viewBackground:ViewMenuBackground!
+    private(set) weak var viewClose:ViewMenuClose!
+    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
@@ -17,20 +20,30 @@ class ViewMenuBase:UIView {
     
     private func factoryViews() {
         self.factoryBackground()
+        self.factoryClose()
     }
     
     private func factoryBackground() {
-        let effect:UIVisualEffect = UIBlurEffect(style:UIBlurEffectStyle.light)
-        let blur:UIVisualEffectView = UIVisualEffectView(effect:effect)
-        blur.translatesAutoresizingMaskIntoConstraints = false
-        blur.isUserInteractionEnabled = false
-        blur.clipsToBounds = true
+        let viewBackground:ViewMenuBackground = ViewMenuBackground()
+        self.viewBackground = viewBackground
         
-        self.addSubview(blur)
+        self.addSubview(viewBackground)
+
+        viewBackground.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        viewBackground.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        viewBackground.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        viewBackground.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    }
+    
+    private func factoryClose() {
+        let viewClose:ViewMenuClose = ViewMenuClose()
+        self.viewClose = viewClose
         
-        blur.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        blur.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        blur.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        blur.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        self.addSubview(viewClose)
+        
+        viewClose.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        viewClose.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        viewClose.heightAnchor.constraint(equalToConstant:82).isActive = true
+        viewClose.widthAnchor.constraint(equalToConstant:62).isActive = true
     }
 }
