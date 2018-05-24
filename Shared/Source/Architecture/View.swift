@@ -14,6 +14,7 @@ open class View:UIViewController, ViewProtocol {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        self.didLoad()
         self.delegate?.didLoad(view:self)
     }
     
@@ -21,6 +22,8 @@ open class View:UIViewController, ViewProtocol {
         super.viewDidAppear(animated)
         self.delegate?.didAppear(view:self)
     }
+    
+    open func didLoad() { }
     
     private func configureView() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always

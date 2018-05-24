@@ -4,8 +4,8 @@ import Shared
 class View:Shared.View, UITextViewDelegate {
     weak var presenter:Presenter!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func didLoad() {
+        super.didLoad()
         self.configureNavigationItem()
     }
     

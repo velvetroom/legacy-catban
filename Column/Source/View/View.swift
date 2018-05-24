@@ -5,8 +5,8 @@ class View:Shared.View, UITextFieldDelegate {
     weak var presenter:Presenter!
     private(set) weak var viewBase:ViewBase!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func didLoad() {
+        super.didLoad()
         self.configureNavigationItem()
     }
     
