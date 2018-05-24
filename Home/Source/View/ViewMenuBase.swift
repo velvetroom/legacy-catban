@@ -1,8 +1,9 @@
 import UIKit
 
 class ViewMenuBase:UIView {
-    private(set) weak var viewBackground:ViewMenuBackground!
-    private(set) weak var viewClose:ViewMenuClose!
+    weak var viewBackground:ViewMenuBackground!
+    weak var viewClose:ViewMenuClose!
+    weak var viewOptions:ViewMenuOptions!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -32,6 +33,7 @@ class ViewMenuBase:UIView {
     
     private func factoryViews() {
         self.factoryBackground()
+        self.factoryOptions()
         self.factoryClose()
     }
     
@@ -59,6 +61,18 @@ class ViewMenuBase:UIView {
         viewClose.heightAnchor.constraint(equalToConstant:82).isActive = true
         viewClose.widthAnchor.constraint(equalToConstant:62).isActive = true
         viewClose.layoutAlignRight.isActive = true
+    }
+    
+    private func factoryOptions() {
+        let viewOptions:ViewMenuOptions = ViewMenuOptions()
+        self.viewOptions = viewOptions
+        
+        self.addSubview(viewOptions)
+        
+        viewOptions.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        viewOptions.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        viewOptions.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        viewOptions.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func animateTranslationOpen() {

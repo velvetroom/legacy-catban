@@ -22,4 +22,14 @@ struct ViewConstants {
         static let animationRepeat:Int = 1
         static let totalImages:Int = 11
     }
+    
+    struct Options {
+        static let alphaOpen:CGFloat = 1
+        static let alphaClose:CGFloat = 0
+        static let animationDuration:CGFloat = 0.4
+    }
+    
+    struct Option {
+        static let size:CGFloat = 60
+    }
 }

@@ -22,7 +22,7 @@ class ViewMenu:UIViewController {
         self.presenter.close()
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
     }
@@ -31,7 +31,7 @@ class ViewMenu:UIViewController {
         self.view = self.configureViewBase()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
         self.viewBase.animateOpen()
     }

@@ -24,7 +24,7 @@ struct ViewConstants {
     struct Title {
         static let fontSize:CGFloat = 40
         static let height:CGFloat = 50
-        static let width:CGFloat = 208
+        static let width:CGFloat = 204
     }
     
     struct Subtitle {

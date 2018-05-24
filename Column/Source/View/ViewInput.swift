@@ -75,7 +75,7 @@ class ViewInput:UIView {
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
-        label.textColor = UIColor(white:0.7, alpha:1)
+        label.textColor = UIColor(white:0.8, alpha:1)
         label.font = UIFont.systemFont(ofSize:ViewConstants.Subtitle.fontSize, weight:UIFont.Weight.regular)
         label.text = String.localized(key:"ViewInput_subtitleLabel", in:type(of:self))
         label.numberOfLines = 0
@@ -99,6 +99,8 @@ class ViewInput:UIView {
             String.localized(key:"ViewInput_doneButton", in:type(of:self)), for:UIControlState())
         doneButton.setTitleColor(UIColor.white, for:UIControlState.normal)
         doneButton.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
+        doneButton.titleLabel!.font = UIFont.systemFont(
+            ofSize:ViewConstants.Done.fontSize, weight:UIFont.Weight.medium)
         self.doneButton = doneButton
         
         self.addSubview(doneButton)

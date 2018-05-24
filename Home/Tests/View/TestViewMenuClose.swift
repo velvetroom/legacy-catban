@@ -23,4 +23,9 @@ class TestViewMenuClose:XCTestCase {
         self.view.icon = UIImageView()
         XCTAssertNil(self.view.icon, "Retains")
     }
+    
+    func testImageFactory() {
+        XCTAssertNotNil(ViewMenuCloseFactory.makeOpenAnimation(), "Factory failed")
+        XCTAssertNotNil(ViewMenuCloseFactory.makeCloseAnimation(), "Factory failed")
+    }
 }
