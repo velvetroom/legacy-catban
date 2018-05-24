@@ -14,14 +14,25 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
     }
     
+    func showMenu() {
+        
+    }
+    
     func presenterDidLoadWith(view:Shared.View) {
-        self.outlets.view = view
+        self.configure(view:view)
         self.loadCanvasOn(view:view.view)
     }
     
     func shouldUpdate() {
         self.updateView()
         self.updateCanvas()
+    }
+    
+    private func configure(view:Shared.View) {
+        self.outlets.view = view
+        if let view:View = view as? View {
+            view.presenter = self
+        }
     }
     
     private func loadCanvasOn(view:UIView) {

@@ -14,6 +14,9 @@
 		DA4B893E20B68B8600B67ED5 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4B893D20B68B8600B67ED5 /* assets.xcassets */; };
 		DA4B894020B68F9700B67ED5 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B893F20B68F9700B67ED5 /* ViewConstants.swift */; };
 		DA4B894420B6912200B67ED5 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B894120B690FF00B67ED5 /* Canvas.framework */; };
+		DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */; };
+		DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */; };
+		DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894920B69E5000B67ED5 /* MockPresenter.swift */; };
 		DA50AEFD20B2BEE100126526 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */; };
 		DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
@@ -52,6 +55,9 @@
 		DA4B893D20B68B8600B67ED5 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA4B893F20B68F9700B67ED5 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		DA4B894120B690FF00B67ED5 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterMenu.swift; sourceTree = "<group>"; };
+		DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterMenu.swift; sourceTree = "<group>"; };
+		DA4B894920B69E5000B67ED5 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
 		DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 			children = (
 				DAF7E65C209B063300B8A39A /* Presenter.swift */,
 				DA50AEFC20B2BEE100126526 /* PresenterOutlets.swift */,
+				DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -145,7 +152,9 @@
 			children = (
 				DAF7E65F209B064700B8A39A /* TestPresenter.swift */,
 				DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */,
+				DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */,
 				DAFD2FC2209CA9E90005F5D2 /* MockPresenterProtocol.swift */,
+				DA4B894920B69E5000B67ED5 /* MockPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 				DA4B894020B68F9700B67ED5 /* ViewConstants.swift in Sources */,
 				DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */,
 				DA50AEFD20B2BEE100126526 /* PresenterOutlets.swift in Sources */,
+				DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Controller.swift in Sources */,
 				DADB5EC6209B124700CFFC9A /* View.swift in Sources */,
 			);
@@ -342,10 +352,12 @@
 				DA1F31E720B44B660076ECAF /* TestController_CreateColumn.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestController.swift in Sources */,
+				DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */,
 				DA15451520A4691F00CCC59D /* TestController_Transition.swift in Sources */,
 				DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */,
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
+				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DAFD2FC3209CA9E90005F5D2 /* MockPresenterProtocol.swift in Sources */,
 				DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */,

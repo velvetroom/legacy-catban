@@ -74,4 +74,9 @@ class TestPresenter:XCTestCase {
         self.presenter.shouldUpdate()
         XCTAssertNotNil(self.presenter.canvas.project, "Not injected")
     }
+    
+    func testInjectsItselfInView() {
+        self.presenter.didLoad(view:self.view)
+        XCTAssertNotNil(self.view.presenter, "Not injected")
+    }
 }

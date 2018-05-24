@@ -2,6 +2,8 @@ import UIKit
 import Shared
 
 class View:Shared.View {
+    weak var presenter:Presenter!
+    
     override func didLoad() {
         super.didLoad()
         self.configureNavigationItem()
