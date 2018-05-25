@@ -12,6 +12,7 @@
 		DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */; };
 		DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */; };
 		DA1F31D220B445400076ECAF /* ControllerColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31D120B445400076ECAF /* ControllerColumnProtocol.swift */; };
+		DA204FF320B84D6500A41DB0 /* ControllerBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA204FF220B84D6500A41DB0 /* ControllerBoardProtocol.swift */; };
 		DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */; };
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
@@ -59,6 +60,7 @@
 		DA0E58B2209F267A00AD4425 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Shared.swift"; sourceTree = "<group>"; };
 		DA1F31D120B445400076ECAF /* ControllerColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerColumnProtocol.swift; sourceTree = "<group>"; };
+		DA204FF220B84D6500A41DB0 /* ControllerBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBoardProtocol.swift; sourceTree = "<group>"; };
 		DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF99209C347200B736CD /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */,
 				DA055AFF20A38FCB002854F9 /* ControllerCardProtocol.swift */,
 				DA1F31D120B445400076ECAF /* ControllerColumnProtocol.swift */,
+				DA204FF220B84D6500A41DB0 /* ControllerBoardProtocol.swift */,
 				DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* PresenterProtocol+Default.swift */,
 				DA0E58B0209F250000AD4425 /* PresenterDelegateProtocol.swift */,
@@ -366,6 +369,7 @@
 				DA055B0020A38FCB002854F9 /* ControllerCardProtocol.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
 				DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */,
+				DA204FF320B84D6500A41DB0 /* ControllerBoardProtocol.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
