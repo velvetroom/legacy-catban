@@ -15,6 +15,18 @@ class ViewMenuOptions:UIView {
         return nil
     }
     
+    func animateOpen() {
+        let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Background.animationDuration
+        DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
+            self?.animateAfterDelay()
+        }
+    }
+    
+    func animateClose() {
+        self.layoutRootTop.constant = ViewConstants.Options.rootTopClose
+        self.animateWith(alpha:ViewConstants.Options.alphaClose)
+    }
+    
     private func configureView() {
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -47,5 +59,17 @@ class ViewMenuOptions:UIView {
         self.addSubview(option)
         option.layoutSize()
         return option
+    }
+    
+    private func animateAfterDelay() {
+        self.layoutRootTop.constant = ViewConstants.Options.rootTopOpen
+        self.animateWith(alpha:ViewConstants.Options.alphaOpen)
+    }
+    
+    private func animateWith(alpha:CGFloat) {
+        UIView.animate(withDuration:ViewConstants.Options.animationDuration) { [weak self] in
+            self?.alpha = alpha
+            self?.layoutIfNeeded()
+        }
     }
 }

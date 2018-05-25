@@ -26,13 +26,13 @@ struct ViewConstants {
     struct Options {
         static let alphaOpen:CGFloat = 1
         static let alphaClose:CGFloat = 0
-        static let animationDuration:CGFloat = 0.4
-        static let rootTopOpen:CGFloat = 200
-        static let rootTopClose:CGFloat = 100
+        static let animationDuration:TimeInterval = 0.3
+        static let rootTopOpen:CGFloat = 100
+        static let rootTopClose:CGFloat = 40
     }
     
     struct Option {
-        static let size:CGFloat = 60
+        static let size:CGFloat = 80
     }
     
     struct Projects {

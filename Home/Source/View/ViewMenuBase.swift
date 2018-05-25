@@ -19,12 +19,14 @@ class ViewMenuBase:UIView {
         self.animateTranslationOpen()
         self.viewClose.animateOpen()
         self.viewBackground.animateOpen()
+        self.viewOptions.animateOpen()
     }
     
     func animateClose() {
         self.animateTranslationClose()
         self.viewClose.animateClose()
         self.viewBackground.animateClose()
+        self.viewOptions.animateClose()
     }
     
     private func configureView() {
