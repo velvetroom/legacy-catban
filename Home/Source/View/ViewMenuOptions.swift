@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 class ViewMenuOptions:UIView {
     weak var optionProjects:ViewMenuOption!
@@ -39,7 +40,8 @@ class ViewMenuOptions:UIView {
     }
     
     private func factoryProjects() {
-        self.optionProjects = self.factoryOptionWith(icon:ViewConstants.Projects.icon)
+        self.optionProjects = self.factoryOptionWith(
+            icon:ViewConstants.Projects.icon, name:String.localized(key:"ViewMenuOption_Projects", in:type(of:self)))
         self.optionProjects.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
         self.layoutRootTop = self.optionProjects.topAnchor.constraint(
             equalTo:self.topAnchor, constant:ViewConstants.Options.rootTopClose)
@@ -47,15 +49,18 @@ class ViewMenuOptions:UIView {
     }
     
     private func factoryAbout() {
-        self.optionAbout = self.factoryOptionWith(icon:ViewConstants.About.icon)
+        
+        self.optionAbout = self.factoryOptionWith(
+            icon:ViewConstants.About.icon, name:String.localized(key:"ViewMenuOption_About", in:type(of:self)))
         self.optionAbout.centerXAnchor.constraint(equalTo:self.optionProjects.centerXAnchor).isActive = true
         self.optionAbout.topAnchor.constraint(
             equalTo:self.optionProjects.bottomAnchor, constant:ViewConstants.About.top).isActive = true
     }
     
-    private func factoryOptionWith(icon:String) -> ViewMenuOption {
+    private func factoryOptionWith(icon:String, name:String) -> ViewMenuOption {
         let option:ViewMenuOption = ViewMenuOption()
-        option.loadIcon(name:icon)
+        option.load(icon:icon)
+        option.nameLabel.text = name
         self.addSubview(option)
         option.layoutSize()
         return option

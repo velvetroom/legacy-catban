@@ -22,6 +22,8 @@
 		DA50AEFF20B2BF3700126526 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA5A452320B7E23800F88DE4 /* TestViewMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A452220B7E23800F88DE4 /* TestViewMenuOptions.swift */; };
+		DA5A452520B7EBCB00F88DE4 /* TestViewMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A452420B7EBCB00F88DE4 /* TestViewMenuOption.swift */; };
+		DA5A452920B7EE0E00F88DE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5A452720B7EE0E00F88DE4 /* Localizable.strings */; };
 		DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */; };
 		DA914C7E20B6BA040025AE49 /* ViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA914C7D20B6BA040025AE49 /* ViewMenu.swift */; };
 		DA914C8020B6BC5F0025AE49 /* ViewMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA914C7F20B6BC5F0025AE49 /* ViewMenuBase.swift */; };
@@ -75,6 +77,8 @@
 		DA50AEFE20B2BF3700126526 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5A452220B7E23800F88DE4 /* TestViewMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuOptions.swift; sourceTree = "<group>"; };
+		DA5A452420B7EBCB00F88DE4 /* TestViewMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuOption.swift; sourceTree = "<group>"; };
+		DA5A452820B7EE0E00F88DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA914C7D20B6BA040025AE49 /* ViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenu.swift; sourceTree = "<group>"; };
 		DA914C7F20B6BC5F0025AE49 /* ViewMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuBase.swift; sourceTree = "<group>"; };
@@ -136,6 +140,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA5A452620B7EDEC00F88DE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A452720B7EE0E00F88DE4 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DA6D001120A2F6D200E50F0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +180,7 @@
 				DA914C9120B706EE0025AE49 /* TestViewMenuBase.swift */,
 				DA914C8920B6E7280025AE49 /* TestViewMenuClose.swift */,
 				DA5A452220B7E23800F88DE4 /* TestViewMenuOptions.swift */,
+				DA5A452420B7EBCB00F88DE4 /* TestViewMenuOption.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			children = (
 				DAFEF363209AF88400740A88 /* Source */,
 				DAFEF364209AF88D00740A88 /* Tests */,
+				DA5A452620B7EDEC00F88DE4 /* Resources */,
 				DA6D001120A2F6D200E50F0A /* Assets */,
 				DAFEF349209AF7D800740A88 /* Products */,
 				DA58BD7B209B3AE10013DBF0 /* Frameworks */,
@@ -353,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4B893E20B68B8600B67ED5 /* assets.xcassets in Resources */,
+				DA5A452920B7EE0E00F88DE4 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +419,7 @@
 				DAFD2FC5209CA9EE0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockController.swift in Sources */,
+				DA5A452520B7EBCB00F88DE4 /* TestViewMenuOption.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA978FCF20A1C29B002461E6 /* TestController_Presenter.swift in Sources */,
 				DA914C8A20B6E7280025AE49 /* TestViewMenuClose.swift in Sources */,
@@ -422,6 +438,17 @@
 			targetProxy = DAFEF35D209AF82B00740A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA5A452720B7EE0E00F88DE4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5A452820B7EE0E00F88DE4 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DAFEF34E209AF7D800740A88 /* Debug */ = {
