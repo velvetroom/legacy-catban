@@ -1,6 +1,6 @@
 import Foundation
 import Board
 
-public protocol ControllerBoardProtocol:ControllerProjectProtocol {
+public protocol ControllerBoardProtocol:ControllerProtocol {
     var board:BoardProjectsProtocol! { get set }
 }

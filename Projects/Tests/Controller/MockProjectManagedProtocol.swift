@@ -8,7 +8,6 @@ class MockProjectManagedProtocol:ProjectManagedProtocol {
     var name:String
     var countColumns:Int
     var countCards:Int
-    var onRemoveColumn:(() -> Void)?
     
     init() {
         self.manager = BoardFactory.newBoard()
@@ -25,6 +24,7 @@ class MockProjectManagedProtocol:ProjectManagedProtocol {
     func iterate(columns:((ColumnProtocol) -> Void)) { }
     func add(card:CardProtocol) { }
     func remove(card:CardProtocol) { }
+    func remove(column:ColumnProtocol) { }
     
     func cardWith(identifier:String) -> CardProtocol {
         return CardFactory.newCard()
@@ -32,9 +32,5 @@ class MockProjectManagedProtocol:ProjectManagedProtocol {
     
     func columnWith(identifier:String) -> ColumnProtocol {
         return ColumnFactory.newColumn()
-    }
-    
-    func remove(column:ColumnProtocol) {
-        self.onRemoveColumn?()
     }
 }
