@@ -22,6 +22,14 @@ class ViewMenu:UIViewController {
         self.presenter.close()
     }
     
+    @objc func selectorProjects(button:UIButton) {
+        self.presenter.openProjects()
+    }
+    
+    @objc func selectorAbout(button:UIButton) {
+        self.presenter.openAbout()
+    }
+    
     override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
@@ -38,9 +46,17 @@ class ViewMenu:UIViewController {
     
     private func configureViewBase() -> ViewMenuBase {
         let viewBase:ViewMenuBase = ViewMenuBase()
-        viewBase.viewClose.addTarget(
-            self, action:#selector(self.selectorClose(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase = viewBase
+        self.linkSelectors()
         return viewBase
+    }
+    
+    private func linkSelectors() {
+        self.viewBase.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
+                                          for:UIControlEvents.touchUpInside)
+        self.viewBase.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
+                                                           for:UIControlEvents.touchUpInside)
+        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
+                                                        for:UIControlEvents.touchUpInside)
     }
 }

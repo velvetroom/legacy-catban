@@ -16,10 +16,27 @@ class PresenterMenu {
     }
     
     func close() {
+        self.closeWith(completion:nil)
+    }
+    
+    func openProjects() {
+        self.closeWith { [weak self] in
+            self?.controller.createNewCard()
+        }
+    }
+    
+    func openAbout() {
+        self.closeWith { [weak self] in
+            self?.controller.createNewCard()
+        }
+    }
+    
+    private func closeWith(completion:(() -> Void)?) {
         self.viewMenu?.animateClose()
         let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
         DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
             self?.view.dismiss(animated:false, completion:nil)
+            completion?()
         }
     }
 }
