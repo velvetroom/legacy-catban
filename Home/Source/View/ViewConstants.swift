@@ -27,9 +27,20 @@ struct ViewConstants {
         static let alphaOpen:CGFloat = 1
         static let alphaClose:CGFloat = 0
         static let animationDuration:CGFloat = 0.4
+        static let rootTopOpen:CGFloat = 200
+        static let rootTopClose:CGFloat = 100
     }
     
     struct Option {
         static let size:CGFloat = 60
+    }
+    
+    struct Projects {
+        static let icon:String = "assetMenuProjects"
+    }
+    
+    struct About {
+        static let top:CGFloat = 50
+        static let icon:String = "assetMenuAbout"
     }
 }

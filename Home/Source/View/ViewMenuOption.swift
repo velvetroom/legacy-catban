@@ -2,9 +2,6 @@ import UIKit
 import Shared
 
 class ViewMenuOption:UIButton {
-    weak var layoutTop:NSLayoutConstraint!
-    weak var layoutLeft:NSLayoutConstraint!
-    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
