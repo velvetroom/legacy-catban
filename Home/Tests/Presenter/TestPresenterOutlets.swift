@@ -9,9 +9,4 @@ class TestPresenterOutlets:XCTestCase {
         super.setUp()
         self.presenter = PresenterOutlets()
     }
-    
-    func testNotRetainingView() {
-        self.presenter.view = Shared.View()
-        XCTAssertNil(self.presenter.view, "Retains")
-    }
 }
