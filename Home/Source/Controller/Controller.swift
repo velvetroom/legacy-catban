@@ -35,4 +35,10 @@ public class Controller:ControllerProjectProtocol, CanvasDelegateProtocol {
         self.project.add(column:column)
         self.transiton.transitionTo(column:column, in:self.project)
     }
+    
+    func openProjects() {
+        let board:BoardProjectsProtocol = self.project.manager
+        board.unmanage(project:project)
+        self.transiton.transitionToProjects(board:board)
+    }
 }

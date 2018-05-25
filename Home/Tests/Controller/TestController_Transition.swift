@@ -72,4 +72,18 @@ class TestController_Transition:XCTestCase {
         self.controller.editColumnWith(identifier:Constants.identifier)
         XCTAssertTrue(transitioned, "Failed to transition")
     }
+    
+    func testOpenProjectTransitions() {
+        var transitioned:Bool = false
+        var column:ColumnProtocol = ColumnFactory.newColumn()
+        column.identifier = Constants.identifier
+        self.project.add(column:column)
+        self.transition.onTransitionToProjects = { (board:BoardProjectsProtocol) in
+            XCTAssertEqual(board.countProjects, 1, "Failed to unmanage project before transition")
+            transitioned = true
+        }
+        
+        self.controller.openProjects()
+        XCTAssertTrue(transitioned, "Failed to transition")
+    }
 }

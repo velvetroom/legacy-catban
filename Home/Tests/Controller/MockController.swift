@@ -5,6 +5,7 @@ import Foundation
 class MockController:Controller {
     var onEditCardWith:((String) -> Void)?
     var onCreateNewCard:(() -> Void)?
+    var onOpenProjects:(() -> Void)?
     
     override func editCardWith(identifier:String) {
         self.onEditCardWith?(identifier)
@@ -12,5 +13,9 @@ class MockController:Controller {
     
     override func createNewCard() {
         self.onCreateNewCard?()
+    }
+    
+    override func openProjects() {
+        self.onOpenProjects?()
     }
 }

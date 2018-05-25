@@ -7,5 +7,6 @@ public struct Configuration {
     public static var controllerHomeType:ControllerProjectProtocol.Type!
     public static var controllerCardType:ControllerCardProtocol.Type!
     public static var controllerColumnType:ControllerColumnProtocol.Type!
+    public static var controllerProjectsType:ControllerBoardProtocol.Type!
     public static var canvasType:CanvasProtocol.Type!
 }

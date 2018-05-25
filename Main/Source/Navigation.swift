@@ -30,6 +30,12 @@ class Navigation:NavigationProtocol {
         self.transitionTo(controller:controller)
     }
     
+    func transitionToProjects(board:BoardProjectsProtocol) {
+        let controller:ControllerBoardProtocol = Configuration.controllerProjectsType.init()
+        controller.board = board
+        self.transitionTo(controller:controller)
+    }
+    
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
         let controller:ControllerCardProtocol = Configuration.controllerCardType.init()
         controller.project = project

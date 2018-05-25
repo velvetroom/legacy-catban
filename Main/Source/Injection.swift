@@ -1,11 +1,12 @@
 import Foundation
 import Shared
 import Repository
+import Canvas
 import Load
 import Home
 import Card
-import Canvas
 import Column
+import Projects
 
 class Injection {
     func load() {
@@ -15,6 +16,7 @@ class Injection {
         Configuration.controllerHomeType = Home.Controller.self
         Configuration.controllerCardType = Card.Controller.self
         Configuration.controllerColumnType = Column.Controller.self
+        Configuration.controllerProjectsType = Projects.Controller.self
         Configuration.canvasType = Canvas.self
     }
 }

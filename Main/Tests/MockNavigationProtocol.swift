@@ -12,6 +12,9 @@ class MockNavigationProtocol:NavigationProtocol {
     
     required init() { }
     
+    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
+    func transitionToProjects(board:BoardProjectsProtocol) { }
+    
     func launch() -> UIWindow {
         self.onLaunch?()
         return UIApplication.shared.keyWindow!
@@ -28,6 +31,4 @@ class MockNavigationProtocol:NavigationProtocol {
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
         self.onTransitionToCard?(card, project)
     }
-    
-    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
 }

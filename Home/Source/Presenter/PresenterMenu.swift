@@ -21,7 +21,7 @@ class PresenterMenu {
     
     func openProjects() {
         self.closeWith { [weak self] in
-            self?.controller.createNewCard()
+            self?.controller.openProjects()
         }
     }
     
