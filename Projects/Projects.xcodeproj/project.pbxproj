@@ -15,6 +15,7 @@
 		DA04DEB920B9730900228ABB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA04DEB720B9730900228ABB /* Localizable.strings */; };
 		DA04DEBB20B9734400228ABB /* TestViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBA20B9734400228ABB /* TestViewBar.swift */; };
 		DA04DEBD20B9751400228ABB /* TestViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBC20B9751400228ABB /* TestViewBase.swift */; };
+		DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBE20B9834E00228ABB /* ViewList.swift */; };
 		DA204FF020B8494700A41DB0 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
 		DA204FF120B8494900A41DB0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
 		DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA204FF720B8924F00A41DB0 /* Presenter.swift */; };
@@ -49,6 +50,7 @@
 		DA04DEB820B9730900228ABB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA04DEBA20B9734400228ABB /* TestViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBar.swift; sourceTree = "<group>"; };
 		DA04DEBC20B9751400228ABB /* TestViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBase.swift; sourceTree = "<group>"; };
+		DA04DEBE20B9834E00228ABB /* ViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewList.swift; sourceTree = "<group>"; };
 		DA204FF720B8924F00A41DB0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA204FFB20B8927A00A41DB0 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DA204FFE20B8984600A41DB0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				DA04DEB120B9722500228ABB /* ViewConstants.swift */,
 				DA04DEAA20B9652500228ABB /* ViewBase.swift */,
 				DA04DEAF20B971E300228ABB /* ViewBar.swift */,
+				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
 				DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */,
+				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Controller.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
 				DA04DEAB20B9652500228ABB /* ViewBase.swift in Sources */,
