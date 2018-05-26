@@ -1,0 +1,16 @@
+import XCTest
+@testable import Projects
+
+class TestViewBase:XCTestCase {
+    private var view:ViewBase!
+    
+    override func setUp() {
+        super.setUp()
+        self.view = ViewBase()
+    }
+    
+    func testNotRetainingBar() {
+        self.view.viewBar = ViewBar()
+        XCTAssertNil(self.view.viewBar, "Retains")
+    }
+}

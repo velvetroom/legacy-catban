@@ -24,4 +24,10 @@ class TestPresenter:XCTestCase {
         let viewType:Projects.View.Type? = self.presenter.viewType as? Projects.View.Type
         XCTAssertNotNil(viewType, "Invalid view type")
     }
+    
+    func testInjectsSelfOnView() {
+        let view:Projects.View = Projects.View()
+        self.presenter.presenterDidLoadWith(view:view)
+        XCTAssertNotNil(view.presenter, "Not injected")
+    }
 }
