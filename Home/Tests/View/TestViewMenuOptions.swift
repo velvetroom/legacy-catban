@@ -29,4 +29,9 @@ class TestViewMenuOptions:XCTestCase {
         self.view.layoutRootTop = NSLayoutConstraint()
         XCTAssertNil(self.view.layoutRootTop, "Retains")
     }
+    
+    func testNotRetainingCloseButton() {
+        self.view.closeButton = UIButton()
+        XCTAssertNil(self.view.closeButton, "Retains")
+    }
 }

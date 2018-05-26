@@ -2,6 +2,7 @@ import UIKit
 import Shared
 
 class ViewMenuOptions:UIView {
+    weak var closeButton:UIButton!
     weak var optionProjects:ViewMenuOption!
     weak var optionAbout:ViewMenuOption!
     weak var layoutRootTop:NSLayoutConstraint!
@@ -35,8 +36,21 @@ class ViewMenuOptions:UIView {
     }
     
     private func factoryViews() {
+        self.factoryCloseButton()
         self.factoryProjects()
         self.factoryAbout()
+    }
+    
+    private func factoryCloseButton() {
+        let closeButton:UIButton = UIButton()
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        self.closeButton = closeButton
+        self.addSubview(closeButton)
+        
+        closeButton.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        closeButton.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        closeButton.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        closeButton.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func factoryProjects() {

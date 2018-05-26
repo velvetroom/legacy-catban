@@ -54,6 +54,8 @@ class ViewMenu:UIViewController {
     private func linkSelectors() {
         self.viewBase.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
                                           for:UIControlEvents.touchUpInside)
+        self.viewBase.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
+                                          for:UIControlEvents.touchUpInside)
         self.viewBase.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
                                                            for:UIControlEvents.touchUpInside)
         self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
