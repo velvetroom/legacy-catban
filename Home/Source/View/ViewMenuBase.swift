@@ -16,7 +16,6 @@ class ViewMenuBase:UIView {
     }
     
     func animateOpen() {
-        self.layoutIfNeeded()
         self.animateTranslationOpen()
         self.viewClose.animateOpen()
         self.viewBackground.animateOpen()
