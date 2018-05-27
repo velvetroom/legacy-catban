@@ -1,9 +1,11 @@
 import UIKit
+import Shared
 
 class ViewBase:UIView {
-    private(set) weak var viewBar:ViewBar!
-    private(set) weak var viewList:ViewList!
-    private(set) weak var viewMenu:ViewMenu!
+    weak var viewBar:ViewBar!
+    weak var viewList:ViewList!
+    weak var viewMenu:ViewMenu!
+    weak var buttonAdd:UIButton!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -24,6 +26,7 @@ class ViewBase:UIView {
         self.factoryBar()
         self.factoryMenu()
         self.factoryList()
+        self.factoryAdd()
     }
     
     private func factoryBar() {
@@ -57,5 +60,23 @@ class ViewBase:UIView {
         viewMenu.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
         viewMenu.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
         viewMenu.heightAnchor.constraint(equalToConstant:ViewConstants.Menu.height).isActive = true
+    }
+    
+    private func factoryAdd() {
+        let iconOff:UIImage = UIImage(name:ViewConstants.Add.imageOff, in:type(of:self))
+        let iconOn:UIImage = UIImage(name:ViewConstants.Add.imageOn, in:type(of:self))
+        let buttonAdd:UIButton = UIButton()
+        buttonAdd.translatesAutoresizingMaskIntoConstraints = false
+        buttonAdd.setImage(iconOff, for:UIControlState.normal)
+        buttonAdd.setImage(iconOn, for:UIControlState.highlighted)
+        buttonAdd.imageView!.clipsToBounds = true
+        buttonAdd.imageView!.contentMode = UIViewContentMode.center
+        self.buttonAdd = buttonAdd
+        self.addSubview(buttonAdd)
+        
+        buttonAdd.centerYAnchor.constraint(equalTo:self.viewBar.bottomAnchor).isActive = true
+        buttonAdd.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+        buttonAdd.widthAnchor.constraint(equalToConstant:ViewConstants.Add.size).isActive = true
+        buttonAdd.heightAnchor.constraint(equalToConstant:ViewConstants.Add.size).isActive = true
     }
 }

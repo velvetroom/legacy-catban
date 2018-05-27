@@ -6,8 +6,9 @@ struct ViewConstants {
         static let borderWidth:CGFloat = 0.5
     }
     
-    struct BarIcon {
-        static let image:String = "assetIcon"
+    struct Add {
+        static let imageOn:String = "assetAddOn"
+        static let imageOff:String = "assetAddOff"
         static let size:CGFloat = 68
     }
     
@@ -18,7 +19,7 @@ struct ViewConstants {
     }
     
     struct Menu {
-        static let height:CGFloat = 60
+        static let height:CGFloat = 80
         static let borderWidth:CGFloat = 1
         static let borderMargin:CGFloat = 20
     }

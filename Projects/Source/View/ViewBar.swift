@@ -20,22 +20,6 @@ class ViewBar:UIView {
     private func factoryViews() {
         self.factoryBorder()
         self.factoryTitle()
-        self.factoryIcon()
-    }
-    
-    private func factoryIcon() {
-        let icon:UIImageView = UIImageView()
-        icon.isUserInteractionEnabled = false
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.clipsToBounds = true
-        icon.contentMode = UIViewContentMode.center
-        icon.image = UIImage(name:ViewConstants.BarIcon.image, in:type(of:self))
-        self.addSubview(icon)
-        
-        icon.centerYAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        icon.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
-        icon.heightAnchor.constraint(equalToConstant:ViewConstants.BarIcon.size).isActive = true
-        icon.widthAnchor.constraint(equalToConstant:ViewConstants.BarIcon.size).isActive = true
     }
     
     private func factoryTitle() {

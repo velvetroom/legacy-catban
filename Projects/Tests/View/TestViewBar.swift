@@ -9,9 +9,4 @@ class TestViewBar:XCTestCase {
         super.setUp()
         self.view = ViewBar()
     }
-    
-    func testLoadIcon() {
-        let image:UIImage? = UIImage(name:ViewConstants.Bar.iconImage, in:type(of:ViewBar.self))
-        XCTAssertNotNil(image, "Failed to load image")
-    }
 }
