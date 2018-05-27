@@ -25,4 +25,11 @@ struct ViewConstants {
         static let alphaOn:CGFloat = 1
         static let alphaOff:CGFloat = 0.3
     }
+    
+    struct Empty {
+        static let icon:String = "assetEmpty"
+        static let iconSize:CGFloat = 92
+        static let iconBottom:CGFloat = -30
+        static let fontSize:CGFloat = 16
+    }
 }

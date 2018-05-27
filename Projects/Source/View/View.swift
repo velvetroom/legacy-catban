@@ -3,6 +3,7 @@ import Shared
 
 class View:Shared.View {
     weak var presenter:Presenter!
+    weak var viewBase:ViewBase!
     
     override func didLoad() {
         super.didLoad()
@@ -23,7 +24,7 @@ class View:Shared.View {
     
     private func configureView() -> ViewBase {
         let viewBase:ViewBase = ViewBase()
-        
+        self.viewBase = viewBase
         return viewBase
     }
 }

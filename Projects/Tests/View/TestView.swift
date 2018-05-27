@@ -13,4 +13,9 @@ class TestView:XCTestCase {
         self.view.presenter = Presenter()
         XCTAssertNil(self.view.presenter, "Retains")
     }
+    
+    func testNotRetainingBase() {
+        self.view.viewBase = ViewBase()
+        XCTAssertNil(self.view.viewBase, "Retains")
+    }
 }

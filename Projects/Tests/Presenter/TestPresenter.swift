@@ -4,10 +4,12 @@ import Shared
 
 class TestPresenter:XCTestCase {
     private var presenter:Presenter!
+    private var view:Projects.View!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
+        self.view = Projects.View()
     }
     
     func testNotRetainingController() {
@@ -26,8 +28,14 @@ class TestPresenter:XCTestCase {
     }
     
     func testInjectsSelfOnView() {
-        let view:Projects.View = Projects.View()
-        self.presenter.presenterDidLoadWith(view:view)
-        XCTAssertNotNil(view.presenter, "Not injected")
+        self.presenter.presenterDidLoadWith(view:self.view)
+        XCTAssertNotNil(self.view.presenter, "Not injected")
+    }
+    
+    func testLoadOutlets() {
+        self.presenter.presenterDidLoadWith(view:self.view)
+        XCTAssertNotNil(self.presenter.outlets.list, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.menu, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.empty, "Not loaded")
     }
 }

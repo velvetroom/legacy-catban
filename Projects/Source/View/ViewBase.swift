@@ -5,6 +5,7 @@ class ViewBase:UIView {
     weak var viewBar:ViewBar!
     weak var viewList:ViewList!
     weak var viewMenu:ViewMenu!
+    weak var viewEmpty:ViewEmpty!
     weak var buttonAdd:UIButton!
     
     init() {
@@ -26,6 +27,7 @@ class ViewBase:UIView {
         self.factoryBar()
         self.factoryMenu()
         self.factoryList()
+        self.factoryEmpty()
         self.factoryAdd()
     }
     
@@ -49,6 +51,17 @@ class ViewBase:UIView {
         viewList.bottomAnchor.constraint(equalTo:self.viewMenu.topAnchor).isActive = true
         viewList.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         viewList.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    }
+    
+    private func factoryEmpty() {
+        let viewEmpty:ViewEmpty = ViewEmpty()
+        self.viewEmpty = viewEmpty
+        self.addSubview(viewEmpty)
+        
+        viewEmpty.topAnchor.constraint(equalTo:self.viewList.topAnchor).isActive = true
+        viewEmpty.bottomAnchor.constraint(equalTo:self.viewList.bottomAnchor).isActive = true
+        viewEmpty.leftAnchor.constraint(equalTo:self.viewList.leftAnchor).isActive = true
+        viewEmpty.rightAnchor.constraint(equalTo:self.viewList.rightAnchor).isActive = true
     }
     
     private func factoryMenu() {
