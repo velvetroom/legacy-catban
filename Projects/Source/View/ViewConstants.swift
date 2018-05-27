@@ -22,5 +22,7 @@ struct ViewConstants {
         static let height:CGFloat = 80
         static let borderWidth:CGFloat = 1
         static let borderMargin:CGFloat = 20
+        static let alphaOn:CGFloat = 1
+        static let alphaOff:CGFloat = 0.3
     }
 }
