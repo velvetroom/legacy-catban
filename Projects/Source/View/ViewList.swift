@@ -15,10 +15,20 @@ class ViewList:UICollectionView {
         return nil
     }
     
+    deinit {
+        print("deinit list")
+    }
+    
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.backgroundColor = UIColor.clear
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+        self.alwaysBounceVertical = true
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
+        self.delegate = self.presenter
+        self.dataSource = self.presenter
     }
     
     private func factoryViews() {

@@ -4,14 +4,20 @@ import XCTest
 class TestPresenterList:XCTestCase {
     private var presenter:PresenterList!
     private var view:ViewList!
+    private struct Constants {
+        static let name:String = "lorem ipsum"
+    }
     
     override func setUp() {
         super.setUp()
         self.presenter = PresenterList()
         self.view = ViewList()
-        self.presenter.items = [ViewModelListItem(), ViewModelListItem()]
         self.view.delegate = self.presenter
         self.view.dataSource = self.presenter
+        var itemA:ViewModelListItem = ViewModelListItem()
+        itemA.name = Constants.name
+        let itemB:ViewModelListItem = ViewModelListItem()
+        self.presenter.items = [itemA, itemB]
     }
     
     func testNumberOfItems() {
@@ -25,5 +31,12 @@ class TestPresenterList:XCTestCase {
         
         let listcell:ViewListCell? = cellview as? ViewListCell
         XCTAssertNotNil(listcell, "Invalid type")
+    }
+    
+    func testConfigureCell() {
+        let indexPath:IndexPath = IndexPath(item:0, section:0)
+        let listcell:ViewListCell = self.presenter.collectionView(
+            self.view, cellForItemAt:indexPath) as! ViewListCell
+        XCTAssertEqual(listcell.labelName.text, Constants.name, "Not updated")
     }
 }
