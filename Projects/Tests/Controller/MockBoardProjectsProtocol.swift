@@ -16,7 +16,10 @@ class MockBoardProjectsProtocol:BoardProjectsProtocol {
     func unmanage(project:ProjectManagedProtocol) { }
     func add(project:ProjectProtocol) { }
     func remove(project:ProjectProtocol) { }
-    func iterate(projects:((ProjectProtocol) -> Void)) { }
+    
+    func iterate(projects:((ProjectProtocol) -> Void)) {
+        self.projects.forEach(projects)
+    }
     
     func manage(project:ProjectProtocol) -> ProjectManagedProtocol {
         return MockProjectManagedProtocol()

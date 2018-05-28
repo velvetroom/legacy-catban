@@ -12,9 +12,9 @@ class PresenterViewModelLoader {
     func load() {
         let items:[ViewModelListItem] = self.loadItems()
         if items.isEmpty {
-            self.createListWith(items:items)
-        } else {
             self.createEmpty()
+        } else {
+            self.createListWith(items:items)
         }
     }
     

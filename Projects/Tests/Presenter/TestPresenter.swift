@@ -10,6 +10,7 @@ class TestPresenter:XCTestCase {
         super.setUp()
         self.presenter = Presenter()
         self.view = Projects.View()
+        XCTAssertNotNil(self.view.view, "Failed loading view")
     }
     
     func testNotRetainingController() {
