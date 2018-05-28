@@ -1,3 +1,3 @@
 import Foundation
 
-public protocol BoardProtocol:class, IdentifierProtocol, BoardProjectsProtocol { }
+public protocol BoardProtocol:IdentifierProtocol, BoardProjectsProtocol { }

@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol BoardProjectsProtocol {
+public protocol BoardProjectsProtocol:class {
     var countProjects:Int { get }
     
     func manage(project:ProjectProtocol) -> ProjectManagedProtocol

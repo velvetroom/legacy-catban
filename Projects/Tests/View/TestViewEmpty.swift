@@ -1,35 +1,17 @@
-//
-//  TestViewEmpty.swift
-//  TestsProjects
-//
-//  Created by zero on 27.05.18.
-//  Copyright © 2018 iturbide. All rights reserved.
-//
-
 import XCTest
+import Shared
+@testable import Projects
 
-class TestViewEmpty: XCTestCase {
+class TestViewEmpty:XCTestCase {
+    private var view:ViewEmpty!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.view = ViewEmpty()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testLoadImage() {
+        let image:UIImage? = UIImage(name:ViewConstants.Empty.icon, in:ViewEmpty.self)
+        XCTAssertNotNil(image, "Failed to load image")
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

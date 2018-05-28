@@ -2,10 +2,15 @@ import Foundation
 import Board
 
 class MockBoardProjectsProtocol:BoardProjectsProtocol {
-    var countProjects:Int
+    var projects:[ProjectProtocol]
+    var countProjects:Int {
+        get {
+            return self.projects.count
+        }
+    }
     
     init() {
-        self.countProjects = 0
+        self.projects = []
     }
     
     func unmanage(project:ProjectManagedProtocol) { }

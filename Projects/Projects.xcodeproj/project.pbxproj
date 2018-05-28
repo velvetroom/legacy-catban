@@ -37,6 +37,8 @@
 		DA9313A020B83016008EDA07 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139F20B83016008EDA07 /* Controller.swift */; };
 		DACE508D20B848F200276D5A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
 		DACE508F20B848FB00276D5A /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
+		DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */; };
+		DAD5F07120BBCBD300CEC10A /* TestPresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */; };
 		DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */; };
 		DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */; };
 		DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */; };
@@ -83,6 +85,8 @@
 		DA93139F20B83016008EDA07 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DACE508C20B848F200276D5A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE508E20B848FB00276D5A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewModelLoader.swift; sourceTree = "<group>"; };
+		DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewModelLoader.swift; sourceTree = "<group>"; };
 		DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProjectsProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				DA204FF720B8924F00A41DB0 /* Presenter.swift */,
 				DA435A7E20BAC766000C2E56 /* PresenterOutlets.swift */,
 				DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */,
+				DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				DA204FFB20B8927A00A41DB0 /* TestPresenter.swift */,
 				DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */,
+				DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				DA435A7020BAA07E000C2E56 /* ViewListCell.swift in Sources */,
 				DA435A7B20BAC58F000C2E56 /* ViewModelList.swift in Sources */,
 				DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */,
+				DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Controller.swift in Sources */,
 				DA435A7F20BAC766000C2E56 /* PresenterOutlets.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
@@ -389,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA04DEAE20B9717A00228ABB /* TestView.swift in Sources */,
+				DAD5F07120BBCBD300CEC10A /* TestPresenterViewModelLoader.swift in Sources */,
 				DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */,
 				DA435A8520BAD1EF000C2E56 /* TestViewEmpty.swift in Sources */,
 				DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */,
