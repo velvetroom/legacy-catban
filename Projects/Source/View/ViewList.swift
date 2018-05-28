@@ -18,6 +18,7 @@ class ViewList:UICollectionView {
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
     }
     
     private func factoryViews() {

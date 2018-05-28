@@ -32,4 +32,8 @@ struct ViewConstants {
         static let iconBottom:CGFloat = -30
         static let fontSize:CGFloat = 16
     }
+    
+    struct ListItem {
+        static let identifier:String = String(ObjectIdentifier(ViewListCell.self).hashValue)
+    }
 }

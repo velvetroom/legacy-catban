@@ -1,9 +1,21 @@
-import Foundation
+import UIKit
 
-class PresenterList {
+class PresenterList:NSObject,
+UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var items:[ViewModelListItem]
     
-    init() {
+    override init() {
         self.items = []
+        super.init()
+    }
+    
+    func collectionView(_:UICollectionView, numberOfItemsInSection:Int) -> Int {
+        return self.items.count
+    }
+    
+    func collectionView(_ view:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
+        let cell:ViewListCell = view.dequeueReusableCell(
+            withReuseIdentifier:ViewConstants.ListItem.identifier, for:index) as!ViewListCell
+        return cell
     }
 }
