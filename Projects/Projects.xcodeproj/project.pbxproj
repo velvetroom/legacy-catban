@@ -44,6 +44,7 @@
 		DAD5F07720BBDA0300CEC10A /* TestPresenterViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */; };
 		DAD5F07920BBE18E00CEC10A /* PresenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07820BBE18E00CEC10A /* PresenterList.swift */; };
 		DAD5F07B20BBE1B200CEC10A /* TestPresenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07A20BBE1B200CEC10A /* TestPresenterList.swift */; };
+		DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */; };
 		DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */; };
 		DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */; };
 		DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */; };
@@ -97,6 +98,7 @@
 		DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewUpdater.swift; sourceTree = "<group>"; };
 		DAD5F07820BBE18E00CEC10A /* PresenterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterList.swift; sourceTree = "<group>"; };
 		DAD5F07A20BBE1B200CEC10A /* TestPresenterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterList.swift; sourceTree = "<group>"; };
+		DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewListFlow.swift; sourceTree = "<group>"; };
 		DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProjectsProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				DA04DEAA20B9652500228ABB /* ViewBase.swift */,
 				DA04DEAF20B971E300228ABB /* ViewBar.swift */,
 				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
+				DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */,
 				DA435A6F20BAA07E000C2E56 /* ViewListCell.swift */,
 				DA435A7620BABD91000C2E56 /* ViewEmpty.swift */,
 				DA435A7120BAA100000C2E56 /* ViewMenu.swift */,
@@ -390,6 +393,7 @@
 				DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */,
 				DA435A7220BAA100000C2E56 /* ViewMenu.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
+				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
 				DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */,

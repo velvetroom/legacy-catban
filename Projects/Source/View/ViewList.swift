@@ -1,11 +1,12 @@
 import UIKit
 
-class ViewList:UIView {
+class ViewList:UICollectionView {
     var presenter:PresenterList
     
     init() {
         self.presenter = PresenterList()
-        super.init(frame:CGRect.zero)
+        let flow:ViewListFlow = ViewListFlow()
+        super.init(frame:CGRect.zero, collectionViewLayout:flow)
         self.configureView()
         self.factoryViews()
     }
