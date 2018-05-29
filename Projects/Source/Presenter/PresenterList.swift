@@ -9,11 +9,15 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         super.init()
     }
     
-    func collectionView(_ view:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
+    func collectionView(
+        _ view:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
+        let viewHeight:CGFloat = view.bounds.height - ViewConstants.ListItem.height
+        let margin:CGFloat = viewHeight / 2.0
+        return UIEdgeInsets(top:margin, left:0, bottom:margin, right:0)
     }
     
-    func collectionView(_ view:UICollectionView, layout:UICollectionViewLayout, sizeForItemAt:IndexPath) -> CGSize {
+    func collectionView(
+        _ view:UICollectionView, layout:UICollectionViewLayout, sizeForItemAt:IndexPath) -> CGSize {
         return CGSize(width:view.bounds.width, height:ViewConstants.ListItem.height)
     }
     

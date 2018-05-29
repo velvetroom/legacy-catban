@@ -6,7 +6,7 @@ class TestPresenterList:XCTestCase {
     private var view:ViewList!
     private struct Constants {
         static let name:String = "lorem ipsum"
-        static let frame:CGRect = CGRect(x:10, y:20, width:30, height:40)
+        static let frame:CGRect = CGRect(x:10, y:20, width:30, height:400)
     }
     
     override func setUp() {
@@ -47,5 +47,11 @@ class TestPresenterList:XCTestCase {
             self.view, layout:UICollectionViewLayout(), sizeForItemAt:IndexPath(item:0, section:0))
         XCTAssertEqual(size.width, Constants.frame.width, "Invalid width")
         XCTAssertEqual(size.height, ViewConstants.ListItem.height, "Invalid height")
+    }
+    
+    func testEdgeInsets() {
+        let insets:UIEdgeInsets = self.presenter.collectionView(
+            self.view, layout:UICollectionViewLayout(), insetForSectionAt:0)
+        XCTAssertNotEqual(insets, UIEdgeInsets.zero, "Invalid insets")
     }
 }
