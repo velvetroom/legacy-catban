@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 import Shared
 
 class View:Shared.View {
@@ -7,6 +7,7 @@ class View:Shared.View {
     
     override func didLoad() {
         super.didLoad()
+        self.hookSelectors()
         self.configureNavigationItem()
     }
     
@@ -18,6 +19,10 @@ class View:Shared.View {
         self.navigationController?.setNavigationBarHidden(false, animated:true)
     }
     
+    @objc func selectorOpen(button:ViewMenuItem) {
+        self.presenter.openProject()
+    }
+    
     private func configureNavigationItem() {
         self.navigationController?.setNavigationBarHidden(true, animated:true)
     }
@@ -26,5 +31,10 @@ class View:Shared.View {
         let viewBase:ViewBase = ViewBase()
         self.viewBase = viewBase
         return viewBase
+    }
+    
+    private func hookSelectors() {
+        self.viewBase.viewMenu.buttonOpen.addTarget(
+            self, action:#selector(self.selectorOpen(button:)), for: UIControlEvents.touchUpInside)
     }
 }

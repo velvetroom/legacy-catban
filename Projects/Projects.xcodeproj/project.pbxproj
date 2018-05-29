@@ -36,6 +36,7 @@
 		DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813220BD26080080B1D2 /* ViewMenuItem.swift */; };
 		DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */; };
 		DA53813720BD2B0C0080B1D2 /* TestViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */; };
+		DA53813A20BD407C0080B1D2 /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813820BD40540080B1D2 /* MockController.swift */; };
 		DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA93139E20B83009008EDA07 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139D20B83009008EDA07 /* TestController.swift */; };
@@ -93,6 +94,7 @@
 		DA53813220BD26080080B1D2 /* ViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuItem.swift; sourceTree = "<group>"; };
 		DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuItem.swift; sourceTree = "<group>"; };
 		DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenu.swift; sourceTree = "<group>"; };
+		DA53813820BD40540080B1D2 /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewListCell.swift; sourceTree = "<group>"; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93138F20B82F84008EDA07 /* TestsProjects.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsProjects.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */,
 				DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */,
 				DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */,
+				DA53813820BD40540080B1D2 /* MockController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				DA204FFC20B8927A00A41DB0 /* TestPresenter.swift in Sources */,
 				DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */,
 				DA53813720BD2B0C0080B1D2 /* TestViewMenu.swift in Sources */,
+				DA53813A20BD407C0080B1D2 /* MockController.swift in Sources */,
 				DAD5F07B20BBE1B200CEC10A /* TestPresenterList.swift in Sources */,
 				DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */,
 				DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */,

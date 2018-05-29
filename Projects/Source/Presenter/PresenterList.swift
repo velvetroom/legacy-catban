@@ -3,9 +3,11 @@ import UIKit
 class PresenterList:NSObject,
 UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var items:[ViewModelListItem]
+    var selectedIdentifier:String
     
     override init() {
         self.items = []
+        self.selectedIdentifier = String()
         super.init()
     }
     

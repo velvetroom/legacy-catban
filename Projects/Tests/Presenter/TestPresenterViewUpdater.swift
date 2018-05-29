@@ -3,6 +3,7 @@ import XCTest
 
 class TestPresenterViewUpdater:XCTestCase {
     private var presenter:PresenterViewUpdater!
+    private var parentPresenter:Presenter!
     private var outlets:PresenterOutlets!
     private var viewList:ViewList!
     private var viewEmpty:ViewEmpty!
@@ -20,16 +21,24 @@ class TestPresenterViewUpdater:XCTestCase {
         self.viewEmpty = ViewEmpty()
         self.viewMenu = ViewMenu()
         self.viewModel = ViewModelList()
+        self.parentPresenter = Presenter()
         self.outlets.empty = self.viewEmpty
         self.outlets.list = self.viewList
         self.outlets.menu = self.viewMenu
-        self.presenter.outlets = self.outlets
+        self.parentPresenter.outlets = self.outlets
+        self.presenter.presenter = self.parentPresenter
     }
     
     func testUpdateViews() {
         self.updateViewModel()
         self.presenter.update()
         self.validateViews()
+        self.validateList()
+    }
+    
+    func testNotRetainingPresenter() {
+        self.presenter.presenter = Presenter()
+        XCTAssertNil(self.presenter.presenter, "Retains")
     }
 
     private func updateViewModel() {
@@ -39,8 +48,10 @@ class TestPresenterViewUpdater:XCTestCase {
     
     private func makeItems() -> [ViewModelListItem] {
         var items:[ViewModelListItem] = []
-        for _:Int in 0 ..< Constants.itemsCount {
-            items.append(ViewModelListItem())
+        for index:Int in 0 ..< Constants.itemsCount {
+            var item:ViewModelListItem = ViewModelListItem()
+            item.identifier = String(index)
+            items.append(item)
         }
         return items
     }
@@ -50,6 +61,10 @@ class TestPresenterViewUpdater:XCTestCase {
         XCTAssertEqual(self.viewEmpty.isHidden, self.viewModel.emptyHidden, "Failed")
         XCTAssertEqual(self.viewMenu.isUserInteractionEnabled, self.viewModel.menuEnabled, "Failed")
         XCTAssertEqual(self.viewMenu.alpha, self.viewModel.menuAlpha, "Failed")
-        XCTAssertEqual(self.viewList.presenter.items.count, Constants.itemsCount, "Failed")
+        XCTAssertEqual(self.parentPresenter.list.items.count, Constants.itemsCount, "Failed")
+    }
+    
+    private func validateList() {
+        XCTAssertEqual(self.parentPresenter.list.selectedIdentifier, "0", "Selected id not set")
     }
 }

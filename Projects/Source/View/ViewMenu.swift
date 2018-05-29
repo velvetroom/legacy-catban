@@ -51,7 +51,7 @@ class ViewMenu:UIView {
         buttonDelete.topAnchor.constraint(
             equalTo:self.topAnchor, constant:ViewConstants.Menu.itemMargin).isActive = true
         buttonDelete.leftAnchor.constraint(
-            equalTo:self.leftAnchor, constant:ViewConstants.Menu.itemMargin).isActive = true
+            equalTo:self.leftAnchor, constant:ViewConstants.Menu.itemMargin * 2).isActive = true
         buttonDelete.widthAnchor.constraint(equalToConstant:ViewConstants.MenuItem.size).isActive = true
         buttonDelete.heightAnchor.constraint(equalToConstant:ViewConstants.MenuItem.size).isActive = true
     }

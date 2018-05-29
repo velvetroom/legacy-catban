@@ -8,9 +8,4 @@ class TestViewList:XCTestCase {
         super.setUp()
         self.view = ViewList()
     }
-    
-    func testAssignsDelegate() {
-        XCTAssertNotNil(self.view.delegate, "Not set")
-        XCTAssertNotNil(self.view.dataSource, "Not set")
-    }
 }

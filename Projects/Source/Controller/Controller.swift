@@ -13,4 +13,10 @@ public class Controller:ControllerBoardProtocol {
         presenter.delegate = self
         presenter.controller = self
     }
+    
+    func openProjectWith(identifier:String) {
+        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
+        let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
+        self.transiton.transitionToHome(project:projectManaged)
+    }
 }

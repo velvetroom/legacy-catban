@@ -3,6 +3,7 @@ import Board
 
 class MockBoardProjectsProtocol:BoardProjectsProtocol {
     var projects:[ProjectProtocol]
+    var project:ProjectProtocol?
     var countProjects:Int {
         get {
             return self.projects.count
@@ -16,6 +17,10 @@ class MockBoardProjectsProtocol:BoardProjectsProtocol {
     func unmanage(project:ProjectManagedProtocol) { }
     func add(project:ProjectProtocol) { }
     func remove(project:ProjectProtocol) { }
+    
+    func projectWith(identifier:String) -> ProjectProtocol {
+        return self.project!
+    }
     
     func iterate(projects:((ProjectProtocol) -> Void)) {
         self.projects.forEach(projects)

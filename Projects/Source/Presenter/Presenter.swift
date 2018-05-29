@@ -4,11 +4,13 @@ import Shared
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Projects.View.self
     var outlets:PresenterOutlets
+    var list:PresenterList
     weak var delegate:PresenterDelegateProtocol!
     weak var controller:Controller!
     
     init() {
         self.outlets = PresenterOutlets()
+        self.list = PresenterList()
     }
     
     func presenterDidLoadWith(view:Shared.View) {
@@ -22,6 +24,11 @@ class Presenter:PresenterProtocol {
     func shouldUpdate() {
         let viewModel:ViewModelProtocol = self.makeViewModel()
         self.updateWith(viewModel:viewModel)
+    }
+    
+    func openProject() {
+        let identifier:String = self.list.selectedIdentifier
+        self.controller.openProjectWith(identifier:identifier)
     }
     
     private func configure(view:View) {
@@ -44,7 +51,7 @@ class Presenter:PresenterProtocol {
     
     private func updateWith(viewModel:ViewModelProtocol) {
         let updater:PresenterViewUpdater = PresenterViewUpdater()
-        updater.outlets = self.outlets
+        updater.presenter = self
         updater.viewModel = viewModel
         updater.update()
     }
