@@ -20,6 +20,7 @@ class View:Shared.View {
     }
     
     @objc func selectorOpen(button:ViewMenuItem) {
+        self.showNavigationBar()
         self.presenter.openProject()
     }
     
