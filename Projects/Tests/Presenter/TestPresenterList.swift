@@ -6,6 +6,7 @@ class TestPresenterList:XCTestCase {
     private var view:ViewList!
     private struct Constants {
         static let name:String = "lorem ipsum"
+        static let frame:CGRect = CGRect(x:10, y:20, width:30, height:40)
     }
     
     override func setUp() {
@@ -18,6 +19,7 @@ class TestPresenterList:XCTestCase {
         itemA.name = Constants.name
         let itemB:ViewModelListItem = ViewModelListItem()
         self.presenter.items = [itemA, itemB]
+        self.view.frame = Constants.frame
     }
     
     func testNumberOfItems() {
@@ -38,5 +40,12 @@ class TestPresenterList:XCTestCase {
         let listcell:ViewListCell = self.presenter.collectionView(
             self.view, cellForItemAt:indexPath) as! ViewListCell
         XCTAssertEqual(listcell.labelName.text, Constants.name, "Not updated")
+    }
+    
+    func testSizeForItem() {
+        let size:CGSize = self.presenter.collectionView(
+            self.view, layout:UICollectionViewLayout(), sizeForItemAt:IndexPath(item:0, section:0))
+        XCTAssertEqual(size.width, Constants.frame.width, "Invalid width")
+        XCTAssertEqual(size.height, ViewConstants.ListItem.height, "Invalid height")
     }
 }

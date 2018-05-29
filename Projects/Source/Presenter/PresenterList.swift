@@ -9,6 +9,14 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         super.init()
     }
     
+    func collectionView(_ view:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ view:UICollectionView, layout:UICollectionViewLayout, sizeForItemAt:IndexPath) -> CGSize {
+        return CGSize(width:view.bounds.width, height:ViewConstants.ListItem.height)
+    }
+    
     func collectionView(_:UICollectionView, numberOfItemsInSection:Int) -> Int {
         return self.items.count
     }
