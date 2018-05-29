@@ -3,6 +3,13 @@ import Foundation
 class Board:BoardProtocol, Equatable {
     var identifier:String
     var projects:[ProjectProtocol]
+    
+    var firstProject:ProjectProtocol? {
+        get {
+            return self.projects.first
+        }
+    }
+    
     var countProjects:Int {
         get {
             return self.projects.count

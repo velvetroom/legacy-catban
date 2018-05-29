@@ -72,4 +72,11 @@ class TestBoard_ProjectManager:XCTestCase {
         XCTAssertTrue(foundA, "Failed to iterate project A")
         XCTAssertTrue(foundB, "Failed to iterate project B")
     }
+    
+    func testFirstProject() {
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+        self.model.add(project:projectA)
+        self.model.add(project:ProjectFactory.newProject())
+        XCTAssertEqual(self.model.firstProject?.identifier, projectA.identifier, "Failed")
+    }
 }
