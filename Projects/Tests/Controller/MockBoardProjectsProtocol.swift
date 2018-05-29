@@ -4,6 +4,13 @@ import Board
 class MockBoardProjectsProtocol:BoardProjectsProtocol {
     var projects:[ProjectProtocol]
     var project:ProjectProtocol?
+    
+    var firstProject:ProjectProtocol? {
+        get {
+            return nil
+        }
+    }
+    
     var countProjects:Int {
         get {
             return self.projects.count

@@ -41,9 +41,9 @@ public class Controller:ControllerProtocol {
     
     private func boardLoaded(board:BoardProtocol) {
         guard
-            board.countProjects > 0
+            board.countProjects > 0,
+            let project:ProjectProtocol = board.firstProject
         else { return }
-        let project:ProjectProtocol = board.projectAt(index:0)
         let managed:ProjectManagedProtocol = board.manage(project:project)
         self.projectLoaded(project:managed)
     }
