@@ -41,6 +41,7 @@
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA93139E20B83009008EDA07 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139D20B83009008EDA07 /* TestController.swift */; };
 		DA9313A020B83016008EDA07 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139F20B83016008EDA07 /* Controller.swift */; };
+		DAB0EFF720BD6FF20027FF56 /* ViewListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0EFF620BD6FF20027FF56 /* ViewListSelector.swift */; };
 		DACE508D20B848F200276D5A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
 		DACE508F20B848FB00276D5A /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
 		DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */; };
@@ -101,6 +102,7 @@
 		DA93139A20B82FBA008EDA07 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA93139D20B83009008EDA07 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DA93139F20B83016008EDA07 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DAB0EFF620BD6FF20027FF56 /* ViewListSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewListSelector.swift; sourceTree = "<group>"; };
 		DACE508C20B848F200276D5A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE508E20B848FB00276D5A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewModelLoader.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
 				DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */,
 				DA435A6F20BAA07E000C2E56 /* ViewListCell.swift */,
+				DAB0EFF620BD6FF20027FF56 /* ViewListSelector.swift */,
 				DA435A7620BABD91000C2E56 /* ViewEmpty.swift */,
 				DA435A7120BAA100000C2E56 /* ViewMenu.swift */,
 				DA53813220BD26080080B1D2 /* ViewMenuItem.swift */,
@@ -418,6 +421,7 @@
 				DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */,
 				DAD5F07520BBD9F400CEC10A /* PresenterViewUpdater.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
+				DAB0EFF720BD6FF20027FF56 /* ViewListSelector.swift in Sources */,
 				DA435A7D20BAC5B4000C2E56 /* ViewModelListItem.swift in Sources */,
 				DAD5F07920BBE18E00CEC10A /* PresenterList.swift in Sources */,
 				DA435A7020BAA07E000C2E56 /* ViewListCell.swift in Sources */,
