@@ -42,8 +42,15 @@ class Board:BoardProtocol, Equatable {
         }
     }
     
-    func projectAt(index:Int) -> ProjectProtocol {
-        return self.projects[index]
+    func projectWith(identifier:String) -> ProjectProtocol {
+        var found:ProjectProtocol!
+        for project:ProjectProtocol in self.projects {
+            if project.identifier == identifier {
+                found = project
+                break
+            }
+        }
+        return found
     }
     
     func iterate(projects:((ProjectProtocol) -> Void)) {
