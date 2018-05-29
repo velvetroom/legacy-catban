@@ -33,6 +33,8 @@
 		DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */; };
 		DA435A8320BACA08000C2E56 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */; };
 		DA435A8520BAD1EF000C2E56 /* TestViewEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */; };
+		DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813220BD26080080B1D2 /* ViewMenuItem.swift */; };
+		DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */; };
 		DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA93139E20B83009008EDA07 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139D20B83009008EDA07 /* TestController.swift */; };
@@ -87,6 +89,8 @@
 		DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutletsLoader.swift; sourceTree = "<group>"; };
 		DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewEmpty.swift; sourceTree = "<group>"; };
+		DA53813220BD26080080B1D2 /* ViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuItem.swift; sourceTree = "<group>"; };
+		DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuItem.swift; sourceTree = "<group>"; };
 		DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewListCell.swift; sourceTree = "<group>"; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93138F20B82F84008EDA07 /* TestsProjects.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsProjects.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +144,7 @@
 				DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */,
 				DA1D02E920BC47B4003F6137 /* TestViewList.swift */,
 				DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */,
+				DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				DA435A6F20BAA07E000C2E56 /* ViewListCell.swift */,
 				DA435A7620BABD91000C2E56 /* ViewEmpty.swift */,
 				DA435A7120BAA100000C2E56 /* ViewMenu.swift */,
+				DA53813220BD26080080B1D2 /* ViewMenuItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */,
 				DA435A7220BAA100000C2E56 /* ViewMenu.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
+				DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
@@ -432,6 +439,7 @@
 				DA204FFC20B8927A00A41DB0 /* TestPresenter.swift in Sources */,
 				DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */,
 				DAD5F07B20BBE1B200CEC10A /* TestPresenterList.swift in Sources */,
+				DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */,
 				DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */,
 				DA93139E20B83009008EDA07 /* TestController.swift in Sources */,
 				DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */,

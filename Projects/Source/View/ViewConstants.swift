@@ -26,6 +26,14 @@ struct ViewConstants {
         static let alphaOff:CGFloat = 0.3
     }
     
+    struct MenuItem {
+        static let alphaOn:CGFloat = 0.3
+        static let alphaOff:CGFloat = 1
+        static let iconDelete:String = "assetDelete"
+        static let iconRename:String = "assetRename"
+        static let iconOpen:String = "assetOpen"
+    }
+    
     struct Empty {
         static let icon:String = "assetEmpty"
         static let iconSize:CGFloat = 92
