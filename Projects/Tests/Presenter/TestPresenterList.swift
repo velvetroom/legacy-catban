@@ -54,4 +54,21 @@ class TestPresenterList:XCTestCase {
             self.view, layout:UICollectionViewLayout(), insetForSectionAt:0)
         XCTAssertNotEqual(insets, UIEdgeInsets.zero, "Invalid insets")
     }
+    
+    func testNotRetaining() {
+        self.presenter.view = ViewList()
+        XCTAssertNil(self.presenter.view, "Retains")
+    }
+    
+    func testCenterPoint() {
+        let width:CGFloat = 100
+        let height:CGFloat = 200
+        let frame:CGRect = CGRect(x:99, y:88, width:width, height:height)
+        let expected:CGPoint = CGPoint(x:width / 2.0, y:height / 2.0)
+        let view:ViewList = ViewList()
+        view.frame = frame
+        self.presenter.view = view
+        
+        XCTAssertEqual(view.centerPoint, expected, "Invalid point")
+    }
 }

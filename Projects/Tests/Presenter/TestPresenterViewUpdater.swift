@@ -66,5 +66,6 @@ class TestPresenterViewUpdater:XCTestCase {
     
     private func validateList() {
         XCTAssertEqual(self.parentPresenter.list.selectedIdentifier, "0", "Selected id not set")
+        XCTAssertNotNil(self.parentPresenter.list.view, "Not injected")
     }
 }

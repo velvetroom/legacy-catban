@@ -15,7 +15,7 @@ class PresenterViewUpdater {
         self.presenter.outlets.list?.isHidden = self.viewModel.listHidden
         self.presenter.outlets.list?.delegate = self.presenter.list
         self.presenter.outlets.list?.dataSource = self.presenter.list
-        
+        self.presenter.list.view = self.presenter.outlets.list
     }
     
     private func updateListItems() {
