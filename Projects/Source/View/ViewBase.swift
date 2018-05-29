@@ -27,6 +27,7 @@ class ViewBase:UIView {
         self.factoryBar()
         self.factoryMenu()
         self.factoryList()
+        self.factorySelector()
         self.factoryEmpty()
         self.factoryAdd()
     }
@@ -91,5 +92,16 @@ class ViewBase:UIView {
         buttonAdd.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
         buttonAdd.widthAnchor.constraint(equalToConstant:ViewConstants.Add.size).isActive = true
         buttonAdd.heightAnchor.constraint(equalToConstant:ViewConstants.Add.size).isActive = true
+    }
+    
+    private func factorySelector() {
+        let viewSelector:ViewListSelector = ViewListSelector()
+        self.insertSubview(viewSelector, belowSubview:self.viewList)
+        
+        self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(equalTo:self.viewList.topAnchor)
+        self.viewList.layoutSelectorY.isActive = true
+        viewSelector.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        viewSelector.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        viewSelector.heightAnchor.constraint(equalToConstant:ViewConstants.ListSelector.height).isActive = true
     }
 }

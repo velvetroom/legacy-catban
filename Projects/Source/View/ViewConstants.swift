@@ -49,4 +49,8 @@ struct ViewConstants {
         static let fontSize:CGFloat = 20
         static let height:CGFloat = 26
     }
+    
+    struct ListSelector {
+        static let height:CGFloat = 30
+    }
 }

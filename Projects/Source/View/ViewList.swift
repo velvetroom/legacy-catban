@@ -1,11 +1,12 @@
 import UIKit
 
 class ViewList:UICollectionView {
+    weak var layoutSelectorY:NSLayoutConstraint!
+    
     init() {
         let flow:ViewListFlow = ViewListFlow()
         super.init(frame:CGRect.zero, collectionViewLayout:flow)
         self.configureView()
-        self.factoryViews()
     }
     
     required init?(coder:NSCoder) {
@@ -20,9 +21,5 @@ class ViewList:UICollectionView {
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
-    }
-    
-    private func factoryViews() {
-        
     }
 }

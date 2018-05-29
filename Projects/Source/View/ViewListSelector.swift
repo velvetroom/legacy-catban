@@ -13,7 +13,7 @@ class ViewListSelector:UIView {
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.contentMode = UIViewContentMode.center
         self.isUserInteractionEnabled = false
+        self.backgroundColor = UIColor.black
     }
 }
