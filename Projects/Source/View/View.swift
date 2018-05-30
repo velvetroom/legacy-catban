@@ -15,8 +15,20 @@ class View:Shared.View {
         self.configureNavigationItem()
     }
     
+    override func viewWillAppear(_ animated:Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async { [weak self] in
+            self?.viewBase.viewList.updateIndicator()
+        }
+    }
+    
     override func loadView() {
         self.view = self.configureView()
+    }
+    
+    override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to:size, with:coordinator)
+        self.viewBase.viewList.updateLayout()
     }
     
     @objc func selectorOpen(button:ViewMenuItem) {

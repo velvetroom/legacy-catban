@@ -13,4 +13,12 @@ class ViewListFlow:UICollectionViewFlowLayout {
     required init?(coder:NSCoder) {
         return nil
     }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds:CGRect) -> Bool {
+        return false
+    }
+    
+    override func shouldInvalidateLayout(forPreferredLayoutAttributes preferredAttributes: UICollectionViewLayoutAttributes, withOriginalAttributes originalAttributes: UICollectionViewLayoutAttributes) -> Bool {
+        return false
+    }
 }

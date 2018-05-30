@@ -13,10 +13,15 @@ class ViewList:UICollectionView {
         return nil
     }
     
-    override func layoutSubviews() {
+    func updateLayout() {
         self.collectionViewLayout.invalidateLayout()
+        DispatchQueue.main.async { [weak self] in
+            self?.updateIndicator()
+        }
+    }
+    
+    func updateIndicator() {
         self.delegate?.scrollViewDidScroll?(self)
-        super.layoutSubviews()
     }
     
     private func configureView() {
@@ -26,6 +31,7 @@ class ViewList:UICollectionView {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
     }
 }
