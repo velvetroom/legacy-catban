@@ -8,9 +8,4 @@ class TestViewList:XCTestCase {
         super.setUp()
         self.view = ViewList()
     }
-    
-    func testNotRetainingLayout() {
-        self.view.layoutSelectorY = NSLayoutConstraint()
-        XCTAssertNotNil(self.view.layoutSelectorY, "Retains")
-    }
 }
