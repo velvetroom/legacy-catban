@@ -5,9 +5,27 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     var items:[ViewModelListItem]
     var selectedIdentifier:String
     weak var view:ViewList!
+    
     private var centerPoint:CGPoint {
         get {
-            return CGPoint(x:self.view.bounds.width / 2.0, y:self.view.bounds.height / 2.0)
+            let halfHeight:CGFloat = self.view.bounds.height / 2.0
+            let y:CGFloat = halfHeight + self.view.contentOffset.y
+            return CGPoint(x:0, y:y)
+        }
+    }
+    
+    private var centerIndexPath:IndexPath? {
+        get {
+            return self.view.indexPathForItem(at:self.centerPoint)
+        }
+    }
+    
+    private var centerCell:UICollectionViewCell? {
+        get {
+            guard
+                let indexPath:IndexPath = self.centerIndexPath
+            else { return nil }
+            return self.view.cellForItem(at:indexPath)
         }
     }
     
@@ -19,16 +37,13 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func updateSelector() {
         guard
-            let cell:UICollectionViewCell = self.cellAtCenter()
+            let cell:UICollectionViewCell = self.centerCell
         else { return }
         self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
     }
     
     func scrollViewDidScroll(_:UIScrollView) {
-        guard
-            let cell:UICollectionViewCell = self.cellAtCenter()
-        else { return }
-        self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
+        self.updateSelector()
     }
     
     func collectionView(_:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
@@ -54,12 +69,6 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     
     private func configure(view:ViewListCell, with item:ViewModelListItem) {
         view.labelName.text = item.name
-    }
-    
-    private func cellAtCenter() -> UICollectionViewCell? {
-        guard
-            let indexPath:IndexPath = self.view.indexPathForItem(at:self.centerPoint)
-        else { return nil }
-        return self.view.cellForItem(at:indexPath)
+        view.updateState()
     }
 }

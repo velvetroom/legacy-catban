@@ -46,12 +46,13 @@ struct ViewConstants {
     struct ListItem {
         static let identifier:String = String(ObjectIdentifier(ViewListCell.self).hashValue)
         static let nameLeft:CGFloat = 20
-        static let fontSize:CGFloat = 20
-        static let height:CGFloat = 26
+        static let fontSizeOn:CGFloat = 30
+        static let fontSizeOff:CGFloat = 18
+        static let height:CGFloat = 35
     }
     
     struct ListSelector {
-        static let height:CGFloat = 30
+        static let height:CGFloat = 42
         static let borderWidth:CGFloat = 1
     }
 }

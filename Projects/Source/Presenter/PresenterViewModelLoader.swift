@@ -23,6 +23,49 @@ class PresenterViewModelLoader {
         self.board.iterate { (project:ProjectProtocol) in
             items.append(self.createItemWith(project:project))
         }
+        var item:ViewModelListItem = ViewModelListItem()
+        item.name = "Abc"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "JjkgGL"
+        items.append(item)
+        item.name = "0131312"
+        items.append(item)
+        item.name = "0131312"
+        items.append(item)
+        item.name = "0131312"
+        items.append(item)
+        item.name = "0131312"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
+        item.name = "Abc"
+        items.append(item)
         return items
     }
     

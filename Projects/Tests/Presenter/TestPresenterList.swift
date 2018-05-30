@@ -20,6 +20,7 @@ class TestPresenterList:XCTestCase {
         let itemB:ViewModelListItem = ViewModelListItem()
         self.presenter.items = [itemA, itemB]
         self.view.frame = Constants.frame
+        self.presenter.view = self.view
     }
     
     func testNumberOfItems() {
@@ -40,6 +41,13 @@ class TestPresenterList:XCTestCase {
         let listcell:ViewListCell = self.presenter.collectionView(
             self.view, cellForItemAt:indexPath) as! ViewListCell
         XCTAssertEqual(listcell.labelName.text, Constants.name, "Not updated")
+    }
+    
+    func testUpdatesCellState() {
+        let indexPath:IndexPath = IndexPath(item:0, section:0)
+        self.view.register(MockViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
+        let _:UICollectionViewCell = self.presenter.collectionView(self.view, cellForItemAt:indexPath)
+        XCTAssertNotNil(MockViewListCell.cell, "Not updated")
     }
     
     func testSizeForItem() {

@@ -13,8 +13,28 @@ class ViewListCell:UICollectionViewCell {
         return nil
     }
     
+    override var isSelected:Bool {
+        didSet {
+            self.updateState()
+        }
+    }
+    
+    override var isHighlighted:Bool {
+        didSet {
+            self.updateState()
+        }
+    }
+    
+    func updateState() {
+        if self.isSelected || self.isHighlighted {
+            self.showOn()
+        } else {
+            self.showOff()
+        }
+    }
+    
     private func configureView() {
-        self.clipsToBounds = true
+        self.clipsToBounds = false
         self.backgroundColor = UIColor.clear
     }
     
@@ -23,16 +43,26 @@ class ViewListCell:UICollectionViewCell {
         labelName.translatesAutoresizingMaskIntoConstraints = false
         labelName.backgroundColor = UIColor.clear
         labelName.isUserInteractionEnabled = false
-        labelName.textColor = UIColor.black
-        labelName.font = UIFont.monospacedDigitSystemFont(
-            ofSize:ViewConstants.ListItem.fontSize, weight:UIFont.Weight.medium)
+        labelName.clipsToBounds = false
         self.labelName = labelName
         self.addSubview(labelName)
         
-        labelName.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        labelName.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        labelName.centerYAnchor.constraint(equalTo:self.centerYAnchor).isActive = true
         labelName.leftAnchor.constraint(
             equalTo:self.leftAnchor, constant:ViewConstants.ListItem.nameLeft).isActive = true
         labelName.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+        labelName.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+    }
+    
+    private func showOn() {
+        labelName.textColor = UIColor.black
+        labelName.font = UIFont.monospacedDigitSystemFont(
+            ofSize:ViewConstants.ListItem.fontSizeOn, weight:UIFont.Weight.medium)
+    }
+    
+    private func showOff() {
+        labelName.textColor = UIColor(white:0, alpha:0.25)
+        labelName.font = UIFont.monospacedDigitSystemFont(
+            ofSize:ViewConstants.ListItem.fontSizeOff, weight:UIFont.Weight.regular)
     }
 }
