@@ -48,11 +48,11 @@ struct ViewConstants {
         static let nameLeft:CGFloat = 20
         static let fontSizeOn:CGFloat = 30
         static let fontSizeOff:CGFloat = 18
-        static let height:CGFloat = 35
+        static let height:CGFloat = 38
     }
     
     struct ListSelector {
-        static let height:CGFloat = 42
+        static let height:CGFloat = 45
         static let borderWidth:CGFloat = 1
     }
 }

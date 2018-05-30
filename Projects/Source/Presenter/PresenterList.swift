@@ -5,6 +5,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     var items:[ViewModelListItem]
     var selectedIdentifier:String
     weak var view:ViewList!
+    private var shouldUpdateSelected:Bool
     
     private var centerPoint:CGPoint {
         get {
@@ -32,6 +33,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     override init() {
         self.items = []
         self.selectedIdentifier = String()
+        self.shouldUpdateSelected = true
         super.init()
     }
     
@@ -42,8 +44,23 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
     }
     
+    func selectCentreCell() {
+        guard
+            let indexPath:IndexPath = self.centerIndexPath
+        else { return }
+        self.view.selectItem(
+            at:indexPath, animated:true, scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+    }
+    
+    func scrollViewWillBeginDragging(_:UIScrollView) {
+        self.shouldUpdateSelected = true
+    }
+    
     func scrollViewDidScroll(_:UIScrollView) {
         self.updateSelector()
+        if self.shouldUpdateSelected {
+            self.selectCentreCell()
+        }
     }
     
     func collectionView(_:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
@@ -65,6 +82,11 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
             withReuseIdentifier:ViewConstants.ListItem.identifier, for:index) as! ViewListCell
         self.configure(view:cell, with:self.items[index.item])
         return cell
+    }
+    
+    func collectionView(_:UICollectionView, didSelectItemAt index:IndexPath) {
+        self.shouldUpdateSelected = false
+        self.view.scrollToItem(at:index, at:UICollectionViewScrollPosition.centeredVertically, animated:true)
     }
     
     private func configure(view:ViewListCell, with item:ViewModelListItem) {
