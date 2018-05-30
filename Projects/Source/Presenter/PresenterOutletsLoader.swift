@@ -13,5 +13,6 @@ class PresenterOutletsLoader {
         self.outlets.list = viewBase.viewList
         self.outlets.menu = viewBase.viewMenu
         self.outlets.empty = viewBase.viewEmpty
+        self.outlets.renamer = viewBase.viewRenamer
     }
 }

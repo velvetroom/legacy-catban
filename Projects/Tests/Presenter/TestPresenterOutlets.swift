@@ -23,4 +23,9 @@ class TestPresenterOutlets:XCTestCase {
         self.presenter.empty = ViewEmpty()
         XCTAssertNil(self.presenter.empty, "Retains")
     }
+    
+    func testNotRetainingRenamer() {
+        self.presenter.renamer = ViewRenamer()
+        XCTAssertNil(self.presenter.renamer, "Retains")
+    }
 }

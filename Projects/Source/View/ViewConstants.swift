@@ -56,8 +56,9 @@ struct ViewConstants {
         static let borderWidth:CGFloat = 1
     }
     
-    struct Renamer {
+    struct RenamerInput {
         static let height:CGFloat = 50
+        static let cornerRadius:CGFloat = 4
     }
     
     struct RenamerButton {

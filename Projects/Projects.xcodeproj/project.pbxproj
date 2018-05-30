@@ -21,6 +21,7 @@
 		DA106C4C20BE99BF00A4AED5 /* ViewRenamerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4B20BE99BF00A4AED5 /* ViewRenamerField.swift */; };
 		DA106C4E20BE9A6600A4AED5 /* ViewRenamerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4D20BE9A6600A4AED5 /* ViewRenamerInput.swift */; };
 		DA106C5020BEA65500A4AED5 /* TestViewRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4F20BEA65500A4AED5 /* TestViewRenamer.swift */; };
+		DA106C5220BEA95E00A4AED5 /* ViewBase+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5120BEA95E00A4AED5 /* ViewBase+Factory.swift */; };
 		DA1D02EA20BC47B4003F6137 /* TestViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D02E920BC47B4003F6137 /* TestViewList.swift */; };
 		DA204FF020B8494700A41DB0 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
 		DA204FF120B8494900A41DB0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
@@ -87,6 +88,7 @@
 		DA106C4B20BE99BF00A4AED5 /* ViewRenamerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRenamerField.swift; sourceTree = "<group>"; };
 		DA106C4D20BE9A6600A4AED5 /* ViewRenamerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRenamerInput.swift; sourceTree = "<group>"; };
 		DA106C4F20BEA65500A4AED5 /* TestViewRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewRenamer.swift; sourceTree = "<group>"; };
+		DA106C5120BEA95E00A4AED5 /* ViewBase+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewBase+Factory.swift"; sourceTree = "<group>"; };
 		DA1D02E920BC47B4003F6137 /* TestViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewList.swift; sourceTree = "<group>"; };
 		DA204FF720B8924F00A41DB0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA204FFB20B8927A00A41DB0 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				DA204FFE20B8984600A41DB0 /* View.swift */,
 				DA04DEB120B9722500228ABB /* ViewConstants.swift */,
 				DA04DEAA20B9652500228ABB /* ViewBase.swift */,
+				DA106C5120BEA95E00A4AED5 /* ViewBase+Factory.swift */,
 				DA04DEAF20B971E300228ABB /* ViewBar.swift */,
 				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
 				DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */,
@@ -447,6 +450,7 @@
 				DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */,
 				DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Controller.swift in Sources */,
+				DA106C5220BEA95E00A4AED5 /* ViewBase+Factory.swift in Sources */,
 				DA435A7F20BAC766000C2E56 /* PresenterOutlets.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
 				DA04DEAB20B9652500228ABB /* ViewBase.swift in Sources */,

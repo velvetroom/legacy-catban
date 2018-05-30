@@ -44,6 +44,7 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets.list, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.menu, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.empty, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.renamer, "Not loaded")
     }
     
     func testInjectsDelegates() {
