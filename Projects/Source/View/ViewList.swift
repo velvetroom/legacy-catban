@@ -14,13 +14,9 @@ class ViewList:UICollectionView {
     }
     
     override func layoutSubviews() {
-        self.didLayoutSubviews()
-        super.layoutSubviews()
-    }
-    
-    func didLayoutSubviews() {
         self.collectionViewLayout.invalidateLayout()
         self.delegate?.scrollViewDidScroll?(self)
+        super.layoutSubviews()
     }
     
     private func configureView() {

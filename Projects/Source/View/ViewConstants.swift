@@ -52,5 +52,6 @@ struct ViewConstants {
     
     struct ListSelector {
         static let height:CGFloat = 30
+        static let borderWidth:CGFloat = 1
     }
 }
