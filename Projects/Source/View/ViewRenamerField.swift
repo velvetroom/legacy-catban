@@ -13,7 +13,7 @@ class ViewRenamerField:UITextField {
     
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = UIColor.red
+        self.backgroundColor = UIColor.clear
         self.placeholder = String.localized(key:"ViewRenamerField_placeholder", in:type(of:self))
         self.font = UIFont.systemFont(ofSize:ViewConstants.RenamerField.fontSize, weight:UIFont.Weight.regular)
         self.textColor = UIColor.black

@@ -9,6 +9,7 @@ class PresenterViewUpdater {
         self.updateListItems()
         self.updateEmpty()
         self.updateMenu()
+        self.updateRenamer()
     }
     
     private func updateList() {
@@ -33,6 +34,11 @@ class PresenterViewUpdater {
     private func updateMenu() {
         self.presenter.outlets.menu?.isUserInteractionEnabled = self.viewModel.menuEnabled
         self.presenter.outlets.menu?.alpha = self.viewModel.menuAlpha
+    }
+    
+    private func updateRenamer() {
+        self.presenter.outlets.renamer?.viewInput.viewField.delegate = self.presenter.renamer
+        self.presenter.renamer.viewRenamer = self.presenter.outlets.renamer
     }
     
     private func listItems() -> [ViewModelListItem] {

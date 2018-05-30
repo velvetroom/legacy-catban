@@ -3,6 +3,7 @@ import UIKit
 class ViewRenamer:UIView {
     weak var doneButton:UIButton!
     weak var viewInput:ViewRenamerInput!
+    weak var layoutBottom:NSLayoutConstraint!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -40,7 +41,8 @@ class ViewRenamer:UIView {
         self.viewInput = viewInput
         self.addSubview(viewInput)
         
-        viewInput.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        self.layoutBottom = viewInput.bottomAnchor.constraint(equalTo:self.bottomAnchor)
+        self.layoutBottom.isActive = true
         viewInput.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         viewInput.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         viewInput.heightAnchor.constraint(equalToConstant:ViewConstants.RenamerInput.height).isActive = true

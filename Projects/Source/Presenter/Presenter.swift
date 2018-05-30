@@ -5,12 +5,14 @@ class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Projects.View.self
     var outlets:PresenterOutlets
     var list:PresenterList
+    var renamer:PresenterRenamer
     weak var delegate:PresenterDelegateProtocol!
     weak var controller:Controller!
     
     init() {
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
+        self.renamer = PresenterRenamer()
     }
     
     func presenterDidLoadWith(view:Shared.View) {

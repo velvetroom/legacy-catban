@@ -57,7 +57,7 @@ struct ViewConstants {
     }
     
     struct RenamerInput {
-        static let height:CGFloat = 50
+        static let height:CGFloat = 48
         static let cornerRadius:CGFloat = 4
     }
     
@@ -68,6 +68,6 @@ struct ViewConstants {
     
     struct RenamerField {
         static let fontSize:CGFloat = 16
-        static let margin:CGFloat = 4
+        static let margin:CGFloat = 8
     }
 }

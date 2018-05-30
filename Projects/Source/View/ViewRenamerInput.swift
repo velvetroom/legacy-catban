@@ -54,11 +54,11 @@ class ViewRenamerInput:UIView {
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         doneButton.setTitle(
             String.localized(key:"ViewRenamerInput_doneButton", in:type(of:self)), for:UIControlState())
-        doneButton.titleLabel!.font = UIFont.systemFont(
-            ofSize:ViewConstants.RenamerButton.fontSize, weight:UIFont.Weight.bold)
         doneButton.setTitleColor(UIColor.white, for:UIControlState.normal)
         doneButton.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
         doneButton.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.selected)
+        doneButton.titleLabel!.font = UIFont.systemFont(
+            ofSize:ViewConstants.RenamerButton.fontSize, weight:UIFont.Weight.bold)
         self.doneButton = doneButton
         self.addSubview(doneButton)
         

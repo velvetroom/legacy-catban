@@ -53,4 +53,11 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets.list?.delegate, "Not injected")
         XCTAssertNotNil(self.presenter.outlets.list?.dataSource, "Not injected")
     }
+    
+    func testInjectsRenamer() {
+        self.presenter.presenterDidLoadWith(view:self.view)
+        self.presenter.shouldUpdate()
+        XCTAssertNotNil(self.presenter.outlets.renamer?.viewInput.viewField.delegate, "Not set")
+        XCTAssertNotNil(self.presenter.renamer.viewRenamer, "Not set")
+    }
 }
