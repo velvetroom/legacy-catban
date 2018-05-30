@@ -55,4 +55,18 @@ struct ViewConstants {
         static let height:CGFloat = 45
         static let borderWidth:CGFloat = 1
     }
+    
+    struct Renamer {
+        static let height:CGFloat = 50
+    }
+    
+    struct RenamerButton {
+        static let fontSize:CGFloat = 16
+        static let width:CGFloat = 60
+    }
+    
+    struct RenamerField {
+        static let fontSize:CGFloat = 16
+        static let margin:CGFloat = 4
+    }
 }
