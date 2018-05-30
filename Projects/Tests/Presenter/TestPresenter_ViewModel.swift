@@ -17,6 +17,7 @@ class TestPresenter_ViewModel:XCTestCase {
         self.controller.board = self.board
         self.presenter.controller = self.controller
         self.presenter.outlets.list = self.viewList
+        self.presenter.list.view = self.viewList
     }
     
     func testShouldUpdateRefreshesViewModelWithNoProjects() {

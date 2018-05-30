@@ -21,6 +21,7 @@ class Presenter:PresenterProtocol {
         else { return }
         self.configure(view:view)
         self.loadOutlets(view:view)
+        self.injectDelegates(view:view)
     }
     
     func shouldUpdate() {
@@ -53,6 +54,12 @@ class Presenter:PresenterProtocol {
         loader.view = view
         loader.load()
         self.outlets = loader.outlets
+    }
+    
+    private func injectDelegates(view:View) {
+        let delegater:PresenterDelegater = PresenterDelegater()
+        delegater.presenter = self
+        delegater.inject()
     }
     
     private func makeViewModel() -> ViewModelProtocol {

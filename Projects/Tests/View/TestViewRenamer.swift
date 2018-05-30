@@ -9,7 +9,7 @@ class TestViewRenamer:XCTestCase {
         self.view = ViewRenamer()
     }
     
-    func testInitiallyHidden() {
+    func testInitiallyNotEnabled() {
         XCTAssertFalse(self.view.isUserInteractionEnabled, "Should be disabled")
         XCTAssertEqual(self.view.alpha, ViewConstants.Renamer.alphaOff, "Invalid alpha")
     }

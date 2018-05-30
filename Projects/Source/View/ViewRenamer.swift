@@ -18,7 +18,7 @@ class ViewRenamer:UIView {
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.isUserInteractionEnabled = true
+        self.isUserInteractionEnabled = false
         self.alpha = ViewConstants.Renamer.alphaOff
     }
     
