@@ -1,10 +1,9 @@
 import UIKit
 
-class PresenterRenamer:NSObject, UITextFieldDelegate {
-    weak var viewRenamer:ViewRenamer!
+class PresenterRenamer {
+    weak var view:ViewRenamer!
     
-    override init() {
-        super.init()
+    init() {
         self.registerForNotifications()
     }
     
@@ -13,22 +12,13 @@ class PresenterRenamer:NSObject, UITextFieldDelegate {
     }
     
     func showRenamerWith(name:String) {
-        self.viewRenamer.isUserInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
         self.animateView(alpha:ViewConstants.Renamer.alphaOn)
-        self.viewRenamer.viewInput.viewField.becomeFirstResponder()
+        self.view.viewInput.viewField.becomeFirstResponder()
     }
     
-    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.hideRenamer()
-    }
-    
-    private func hideRenamer() {
-        self.viewRenamer.isUserInteractionEnabled = false
+    func hideRenamer() {
+        self.view.isUserInteractionEnabled = false
         self.animateView(alpha:ViewConstants.Renamer.alphaOff)
     }
     
@@ -45,7 +35,7 @@ class PresenterRenamer:NSObject, UITextFieldDelegate {
     
     private func keyboardHeightFrom(notification:Notification) -> CGFloat {
         let rect:CGRect = self.keyboardRectFrom(notification:notification)
-        let height:CGFloat = self.viewRenamer.bounds.height
+        let height:CGFloat = self.view.bounds.height
         if rect.minY < height {
             return -(height - rect.minY)
         }
@@ -69,15 +59,15 @@ class PresenterRenamer:NSObject, UITextFieldDelegate {
     }
     
     private func animateText(keyboardHeight:CGFloat, duration:TimeInterval) {
-        self.viewRenamer.layoutBottom.constant = keyboardHeight
+        self.view.layoutBottom.constant = keyboardHeight
         UIView.animate(withDuration:duration) { [weak self] in
-            self?.viewRenamer.layoutIfNeeded()
+            self?.view.layoutIfNeeded()
         }
     }
     
     private func animateView(alpha:CGFloat) {
         UIView.animate(withDuration:ViewConstants.Renamer.animateDuration) { [weak self] in
-            self?.viewRenamer.alpha = alpha
+            self?.view.alpha = alpha
         }
     }
 }

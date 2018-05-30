@@ -25,6 +25,7 @@ class PresenterViewUpdater {
         if let selected:ViewModelListItem = items.first {
             self.presenter.list.selected = selected
         }
+        self.presenter.list.reloadAndSelectCentreCell()
     }
     
     private func updateEmpty() {
@@ -37,8 +38,7 @@ class PresenterViewUpdater {
     }
     
     private func updateRenamer() {
-        self.presenter.outlets.renamer?.viewInput.viewField.delegate = self.presenter.renamer
-        self.presenter.renamer.viewRenamer = self.presenter.outlets.renamer
+        self.presenter.renamer.view = self.presenter.outlets.renamer
     }
     
     private func listItems() -> [ViewModelListItem] {

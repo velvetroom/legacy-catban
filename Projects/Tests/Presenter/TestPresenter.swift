@@ -57,7 +57,6 @@ class TestPresenter:XCTestCase {
     func testInjectsRenamer() {
         self.presenter.presenterDidLoadWith(view:self.view)
         self.presenter.shouldUpdate()
-        XCTAssertNotNil(self.presenter.outlets.renamer?.viewInput.viewField.delegate, "Not set")
-        XCTAssertNotNil(self.presenter.renamer.viewRenamer, "Not set")
+        XCTAssertNotNil(self.presenter.renamer.view, "Not set")
     }
 }

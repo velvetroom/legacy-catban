@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class View:Shared.View {
+class View:Shared.View, UITextFieldDelegate {
     weak var presenter:Presenter!
     weak var viewBase:ViewBase!
     
@@ -31,6 +31,18 @@ class View:Shared.View {
         self.viewBase.viewList.updateLayout()
     }
     
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField:UITextField) {
+        guard
+            let name:String = textField.text
+        else { return }
+        self.presenter.updateProject(name:name)
+    }
+    
     @objc func selectorOpen(button:ViewMenuItem) {
         self.showNavigationBar()
         self.presenter.openProject()
@@ -50,6 +62,7 @@ class View:Shared.View {
     
     private func configureView() -> ViewBase {
         let viewBase:ViewBase = ViewBase()
+        viewBase.viewRenamer.viewInput.viewField.delegate = self
         self.viewBase = viewBase
         return viewBase
     }

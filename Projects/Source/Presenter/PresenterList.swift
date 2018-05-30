@@ -37,6 +37,11 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         super.init()
     }
     
+    func reloadAndSelectCentreCell() {
+        self.view.reloadData()
+        self.selectCentreCell()
+    }
+    
     func updateSelector() {
         guard
             let cell:UICollectionViewCell = self.centerCell

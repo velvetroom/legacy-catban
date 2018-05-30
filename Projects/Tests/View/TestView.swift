@@ -29,4 +29,9 @@ class TestView:XCTestCase {
         self.view.selectorOpen(button:ViewMenuItem())
         XCTAssertTrue(called, "Failed")
     }
+    
+    func testInjectsRenamerDelegate() {
+        XCTAssertNotNil(self.view.view, "Loaded view")
+        XCTAssertNotNil(self.view.viewBase.viewRenamer.viewInput.viewField.delegate, "Not injected")
+    }
 }

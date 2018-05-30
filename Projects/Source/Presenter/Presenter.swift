@@ -38,6 +38,12 @@ class Presenter:PresenterProtocol {
         self.renamer.showRenamerWith(name:name)
     }
     
+    func updateProject(name:String) {
+        self.renamer.hideRenamer()
+        let identifier:String = self.list.selected.identifier
+        self.controller.update(project:identifier, with:name)
+    }
+    
     private func configure(view:View) {
         view.presenter = self
     }
