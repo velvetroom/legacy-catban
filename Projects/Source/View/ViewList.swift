@@ -13,6 +13,16 @@ class ViewList:UICollectionView {
         return nil
     }
     
+    override func layoutSubviews() {
+        self.didLayoutSubviews()
+        super.layoutSubviews()
+    }
+    
+    func didLayoutSubviews() {
+        self.collectionViewLayout.invalidateLayout()
+        self.delegate?.scrollViewDidScroll?(self)
+    }
+    
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true

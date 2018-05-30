@@ -5,6 +5,10 @@ class View:Shared.View {
     weak var presenter:Presenter!
     weak var viewBase:ViewBase!
     
+    func showNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
+    
     override func didLoad() {
         super.didLoad()
         self.hookSelectors()
@@ -13,10 +17,6 @@ class View:Shared.View {
     
     override func loadView() {
         self.view = self.configureView()
-    }
-    
-    func showNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(false, animated:true)
     }
     
     @objc func selectorOpen(button:ViewMenuItem) {

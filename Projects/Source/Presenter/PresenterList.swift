@@ -5,8 +5,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     var items:[ViewModelListItem]
     var selectedIdentifier:String
     weak var view:ViewList!
-    
-    var centerPoint:CGPoint {
+    private var centerPoint:CGPoint {
         get {
             return CGPoint(x:self.view.bounds.width / 2.0, y:self.view.bounds.height / 2.0)
         }
@@ -18,9 +17,18 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         super.init()
     }
     
+    func updateSelector() {
+        guard
+            let cell:UICollectionViewCell = self.cellAtCenter()
+        else { return }
+        self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
+    }
+    
     func scrollViewDidScroll(_:UIScrollView) {
-        let position:CGFloat = self.selectedCellPosition()
-        self.view.layoutSelectorY.constant = position
+        guard
+            let cell:UICollectionViewCell = self.cellAtCenter()
+        else { return }
+        self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
     }
     
     func collectionView(_:UICollectionView, layout:UICollectionViewLayout, insetForSectionAt:Int) -> UIEdgeInsets {
@@ -46,13 +54,6 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     
     private func configure(view:ViewListCell, with item:ViewModelListItem) {
         view.labelName.text = item.name
-    }
-    
-    private func selectedCellPosition() -> CGFloat {
-        guard
-            let cell:UICollectionViewCell = self.cellAtCenter()
-        else { return 0 }
-        return cell.center.y - self.view.contentOffset.y
     }
     
     private func cellAtCenter() -> UICollectionViewCell? {
