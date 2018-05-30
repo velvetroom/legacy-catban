@@ -56,6 +56,12 @@ struct ViewConstants {
         static let borderWidth:CGFloat = 1
     }
     
+    struct Renamer {
+        static let alphaOn:CGFloat = 1
+        static let alphaOff:CGFloat = 0
+        static let animateDuration:TimeInterval = 0.3
+    }
+    
     struct RenamerInput {
         static let height:CGFloat = 48
         static let cornerRadius:CGFloat = 4

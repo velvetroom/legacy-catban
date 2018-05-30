@@ -29,8 +29,13 @@ class Presenter:PresenterProtocol {
     }
     
     func openProject() {
-        let identifier:String = self.list.selectedIdentifier
+        let identifier:String = self.list.selected.identifier
         self.controller.openProjectWith(identifier:identifier)
+    }
+    
+    func renameProject() {
+        let name:String = self.list.selected.name
+        self.renamer.showRenamerWith(name:name)
     }
     
     private func configure(view:View) {

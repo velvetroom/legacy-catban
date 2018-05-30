@@ -18,10 +18,29 @@ class ViewRenamer:UIView {
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.isUserInteractionEnabled = true
+        self.alpha = ViewConstants.Renamer.alphaOff
     }
     
     private func factoryViews() {
+        self.factoryBlur()
+        self.factoryCancelButton()
         self.factoryInput()
+    }
+    
+    private func factoryBlur() {
+        let effect:UIBlurEffect = UIBlurEffect(style:UIBlurEffectStyle.light)
+        let blur:UIVisualEffectView = UIVisualEffectView(effect:effect)
+        blur.isUserInteractionEnabled = false
+        blur.translatesAutoresizingMaskIntoConstraints = false
+        blur.clipsToBounds = true
+        
+        self.addSubview(blur)
+        
+        blur.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        blur.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        blur.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        blur.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func factoryCancelButton() {

@@ -36,6 +36,14 @@ class View:Shared.View {
         self.presenter.openProject()
     }
     
+    @objc func selectorRename(button:ViewMenuItem) {
+        self.presenter.renameProject()
+    }
+    
+    @objc func selectorRenamingDone(button:UIButton) {
+        self.viewBase.viewRenamer.viewInput.viewField.resignFirstResponder()
+    }
+    
     private func configureNavigationItem() {
         self.navigationController?.setNavigationBarHidden(true, animated:true)
     }
@@ -49,5 +57,11 @@ class View:Shared.View {
     private func hookSelectors() {
         self.viewBase.viewMenu.buttonOpen.addTarget(
             self, action:#selector(self.selectorOpen(button:)), for: UIControlEvents.touchUpInside)
+        self.viewBase.viewMenu.buttonRename.addTarget(
+            self, action:#selector(self.selectorRename(button:)), for: UIControlEvents.touchUpInside)
+        self.viewBase.viewRenamer.viewInput.doneButton.addTarget(
+            self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
+        self.viewBase.viewRenamer.doneButton.addTarget(
+            self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
     }
 }

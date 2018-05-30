@@ -12,9 +12,24 @@ class PresenterRenamer:NSObject, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
+    func showRenamerWith(name:String) {
+        self.viewRenamer.isUserInteractionEnabled = true
+        self.animateView(alpha:ViewConstants.Renamer.alphaOn)
+        self.viewRenamer.viewInput.viewField.becomeFirstResponder()
+    }
+    
     func textFieldShouldReturn(_ textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.hideRenamer()
+    }
+    
+    private func hideRenamer() {
+        self.viewRenamer.isUserInteractionEnabled = false
+        self.animateView(alpha:ViewConstants.Renamer.alphaOff)
     }
     
     private func registerForNotifications() {
@@ -57,6 +72,12 @@ class PresenterRenamer:NSObject, UITextFieldDelegate {
         self.viewRenamer.layoutBottom.constant = keyboardHeight
         UIView.animate(withDuration:duration) { [weak self] in
             self?.viewRenamer.layoutIfNeeded()
+        }
+    }
+    
+    private func animateView(alpha:CGFloat) {
+        UIView.animate(withDuration:ViewConstants.Renamer.animateDuration) { [weak self] in
+            self?.viewRenamer.alpha = alpha
         }
     }
 }

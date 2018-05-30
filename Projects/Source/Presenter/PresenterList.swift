@@ -3,7 +3,7 @@ import UIKit
 class PresenterList:NSObject,
 UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var items:[ViewModelListItem]
-    var selectedIdentifier:String
+    var selected:ViewModelListItem
     weak var view:ViewList!
     private var shouldUpdateSelected:Bool
     
@@ -32,7 +32,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     
     override init() {
         self.items = []
-        self.selectedIdentifier = String()
+        self.selected = ViewModelListItem()
         self.shouldUpdateSelected = true
         super.init()
     }

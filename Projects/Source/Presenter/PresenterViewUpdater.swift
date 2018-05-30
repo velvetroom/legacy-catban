@@ -22,8 +22,8 @@ class PresenterViewUpdater {
     private func updateListItems() {
         let items:[ViewModelListItem] = self.listItems()
         self.presenter.list.items = items
-        if let selectedIdentifier:String = items.first?.identifier {
-            self.presenter.list.selectedIdentifier = selectedIdentifier
+        if let selected:ViewModelListItem = items.first {
+            self.presenter.list.selected = selected
         }
     }
     
