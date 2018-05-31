@@ -14,6 +14,7 @@ class PresenterRenamer {
     func showRenamerWith(name:String) {
         self.view.isUserInteractionEnabled = true
         self.animateView(alpha:ViewConstants.Renamer.alphaOn)
+        self.view.viewInput.viewField.text = name
         self.view.viewInput.viewField.becomeFirstResponder()
     }
     
