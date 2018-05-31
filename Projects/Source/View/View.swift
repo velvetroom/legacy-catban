@@ -44,7 +44,6 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     @objc func selectorOpen(button:ViewMenuItem) {
-        self.showNavigationBar()
         self.presenter.openProject()
     }
     
@@ -58,6 +57,10 @@ class View:Shared.View, UITextFieldDelegate {
     
     @objc func selectorRenamingDone(button:UIButton) {
         self.viewBase.viewRenamer.viewInput.viewField.resignFirstResponder()
+    }
+    
+    @objc func selectorDelete(button:UIButton) {
+        self.presenter.delete()
     }
     
     private func configureNavigationItem() {
@@ -75,9 +78,11 @@ class View:Shared.View, UITextFieldDelegate {
         self.viewBase.buttonAdd.addTarget(
             self, action:#selector(self.selectorAddProject(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonOpen.addTarget(
-            self, action:#selector(self.selectorOpen(button:)), for: UIControlEvents.touchUpInside)
+            self, action:#selector(self.selectorOpen(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonRename.addTarget(
-            self, action:#selector(self.selectorRename(button:)), for: UIControlEvents.touchUpInside)
+            self, action:#selector(self.selectorRename(button:)), for:UIControlEvents.touchUpInside)
+        self.viewBase.viewMenu.buttonDelete.addTarget(
+            self, action:#selector(self.selectorDelete(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewRenamer.viewInput.doneButton.addTarget(
             self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewRenamer.doneButton.addTarget(

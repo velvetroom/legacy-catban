@@ -4,6 +4,7 @@ import Shared
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Projects.View.self
+    var deleteType:PresenterDelete.Type
     var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
@@ -14,6 +15,7 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
+        self.deleteType = PresenterDelete.self
     }
     
     func presenterDidLoadWith(view:Shared.View) {
@@ -38,18 +40,26 @@ class Presenter:PresenterProtocol {
     
     func openProject() {
         let identifier:String = self.list.selected.identifier
+        self.outlets.view?.showNavigationBar()
         self.controller.openProjectWith(identifier:identifier)
     }
     
     func renameProject() {
-        let name:String = self.list.selected.name
-        self.renamer.showRenamerWith(name:name)
+        self.renamer.item = self.list.selected
+        self.renamer.showRenamer()
     }
     
     func updateProject(name:String) {
         self.renamer.hideRenamer()
-        let identifier:String = self.list.selected.identifier
-        self.controller.update(project:identifier, with:name)
+        self.controller.update(project:self.renamer.item.identifier, with:name)
+    }
+    
+    func delete() {
+        let presenter:PresenterDelete = self.deleteType.init()
+        presenter.controller = self.controller
+        presenter.view = self.outlets.view
+        presenter.item = self.list.selected
+        presenter.askConfirmation()
     }
     
     private func configure(view:View) {

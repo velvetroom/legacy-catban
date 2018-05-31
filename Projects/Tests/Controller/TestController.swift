@@ -49,4 +49,24 @@ class TestController:XCTestCase {
         self.controller.update(project:String(), with:String())
         XCTAssertTrue(updated, "Not updated")
     }
+    
+    func testDeleteRemovesProject() {
+        var removed:Bool = false
+        self.board.onRemoveProject = {
+            removed = true
+        }
+        
+        self.controller.deleteProjectWith(identifier:String())
+        XCTAssertTrue(removed, "Not removed")
+    }
+    
+    func testDeleteProjectReloadsPresenter() {
+        var updated:Bool = false
+        self.presenter.onShouldUpdate = {
+            updated = true
+        }
+        
+        self.controller.deleteProjectWith(identifier:String())
+        XCTAssertTrue(updated, "Not updated")
+    }
 }

@@ -6,16 +6,24 @@ class TestPresenter:XCTestCase {
     private var presenter:Presenter!
     private var controller:Controller!
     private var board:MockBoardProjectsProtocol!
-    private var view:Projects.View!
+    private var project:MockProjectManagedProtocol!
+    private var view:MockView!
+    private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
-        self.view = Projects.View()
+        self.view = MockView()
         self.controller = Controller()
         self.board = MockBoardProjectsProtocol()
+        self.project = MockProjectManagedProtocol()
+        self.transition = MockTransitionProtocol()
         self.controller.board = self.board
         self.presenter.controller = self.controller
+        self.controller.presenter = self.presenter
+        self.controller.transiton = self.transition
+        self.board.project = self.project
+        self.presenter.outlets.view = self.view
         XCTAssertNotNil(self.view.view, "Failed loading view")
     }
     
@@ -45,6 +53,7 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(self.presenter.outlets.menu, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.empty, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.renamer, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.view, "Not loaded")
     }
     
     func testInjectsDelegates() {
@@ -58,5 +67,25 @@ class TestPresenter:XCTestCase {
         self.presenter.presenterDidLoadWith(view:self.view)
         self.presenter.shouldUpdate()
         XCTAssertNotNil(self.presenter.renamer.view, "Not set")
+    }
+    
+    func testPresenterCallsDelete() {
+        self.presenter.outlets.view = self.view
+        self.presenter.deleteType = MockPresenterDelete.self
+        self.presenter.delete()
+        XCTAssertNotNil(MockPresenterDelete.presenter, "Not called")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.controller, "Not injected")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.view, "Not injected")
+        XCTAssertNotNil(MockPresenterDelete.presenter?.item, "Not injected")
+    }
+    
+    func testShowNavigationBarOnOpen() {
+        var showed:Bool = false
+        self.view.onShowNavigationBar = {
+            showed = true
+        }
+        
+        self.presenter.openProject()
+        XCTAssertTrue(showed, "Not showed")
     }
 }

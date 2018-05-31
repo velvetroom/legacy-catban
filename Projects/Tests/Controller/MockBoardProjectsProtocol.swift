@@ -5,6 +5,7 @@ class MockBoardProjectsProtocol:BoardProjectsProtocol {
     var projects:[ProjectProtocol]
     var project:ProjectProtocol?
     var onAddProject:((ProjectProtocol) -> Void)?
+    var onRemoveProject:(() -> Void)?
     
     var firstProject:ProjectProtocol? {
         get {
@@ -23,7 +24,10 @@ class MockBoardProjectsProtocol:BoardProjectsProtocol {
     }
     
     func unmanage(project:ProjectManagedProtocol) { }
-    func remove(project:ProjectProtocol) { }
+    
+    func remove(project:ProjectProtocol) {
+        self.onRemoveProject?()
+    }
     
     func projectWith(identifier:String) -> ProjectProtocol {
         return self.project!

@@ -31,4 +31,10 @@ public class Controller:ControllerBoardProtocol {
         project.name = name
         self.presenter.shouldUpdate()
     }
+    
+    func deleteProjectWith(identifier:String) {
+        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
+        self.board.remove(project:project)
+        self.presenter.shouldUpdate()
+    }
 }

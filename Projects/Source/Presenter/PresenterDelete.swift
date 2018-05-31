@@ -5,6 +5,7 @@ import Board
 class PresenterDelete {
     weak var view:View!
     weak var controller:Controller!
+    var item:ViewModelListItem!
     
     required init() { }
     
@@ -16,8 +17,7 @@ class PresenterDelete {
     }
     
     func confirmed() {
-        self.view.showNavigationBar()
-        self.controller.delete()
+        self.controller.deleteProjectWith(identifier:self.item.identifier)
     }
     
     private func factoryAlert() -> UIAlertController {

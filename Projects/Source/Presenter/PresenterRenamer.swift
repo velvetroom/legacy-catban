@@ -2,6 +2,7 @@ import UIKit
 
 class PresenterRenamer {
     weak var view:ViewRenamer!
+    var item:ViewModelListItem!
     
     init() {
         self.registerForNotifications()
@@ -11,10 +12,10 @@ class PresenterRenamer {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func showRenamerWith(name:String) {
+    func showRenamer() {
         self.view.isUserInteractionEnabled = true
         self.animateView(alpha:ViewConstants.Renamer.alphaOn)
-        self.view.viewInput.viewField.text = name
+        self.view.viewInput.viewField.text = self.item.name
         self.view.viewInput.viewField.becomeFirstResponder()
     }
     
