@@ -37,11 +37,17 @@ class TestPresenter_Renamer:XCTestCase {
         self.viewField.delegate = self.view
         self.presenter.renamer.view = self.viewRenamer
         self.presenter.list.view = self.viewList
+        self.presenter.renamer.item = ViewModelListItem()
     }
     
     func testRenameProjectShowsCurrentName() {
         self.presenter.renameProject()
         XCTAssertEqual(self.viewField.text, Constants.originalName, "Not showing")
+    }
+    
+    func testRenamerInjectsViewModel() {
+        self.presenter.renameProject()
+        XCTAssertNotNil(self.presenter.renamer.item, "Failed to inject")
     }
     
     func testUpdateProjectSetsNewName() {
