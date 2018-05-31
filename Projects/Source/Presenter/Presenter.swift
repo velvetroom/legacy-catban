@@ -1,4 +1,5 @@
 import Foundation
+import Board
 import Shared
 
 class Presenter:PresenterProtocol {
@@ -27,6 +28,12 @@ class Presenter:PresenterProtocol {
     func shouldUpdate() {
         let viewModel:ViewModelProtocol = self.makeViewModel()
         self.updateWith(viewModel:viewModel)
+    }
+    
+    func addProject() {
+        let project:ProjectProtocol = self.controller.addProject()
+        self.list.selected = ViewModelListItemFactory.makeWith(project:project)
+        self.renameProject()
     }
     
     func openProject() {

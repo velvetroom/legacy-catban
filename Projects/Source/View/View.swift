@@ -48,6 +48,10 @@ class View:Shared.View, UITextFieldDelegate {
         self.presenter.openProject()
     }
     
+    @objc func selectorAddProject(button:UIButton) {
+        self.presenter.addProject()
+    }
+    
     @objc func selectorRename(button:ViewMenuItem) {
         self.presenter.renameProject()
     }
@@ -68,6 +72,8 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func hookSelectors() {
+        self.viewBase.buttonAdd.addTarget(
+            self, action:#selector(self.selectorAddProject(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonOpen.addTarget(
             self, action:#selector(self.selectorOpen(button:)), for: UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonRename.addTarget(

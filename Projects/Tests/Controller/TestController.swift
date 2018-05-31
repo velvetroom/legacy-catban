@@ -5,13 +5,16 @@ import Board
 class TestController:XCTestCase {
     private var controller:Controller!
     private var transition:MockTransitionProtocol!
+    private var presenter:MockPresenter!
     private var board:MockBoardProjectsProtocol!
     
     override func setUp() {
         super.setUp()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
+        self.presenter = MockPresenter()
         self.board = MockBoardProjectsProtocol()
+        self.controller.presenter = self.presenter
         self.controller.transiton = self.transition
         self.controller.board = self.board
         self.board.project = ProjectFactory.newProject()
@@ -35,5 +38,15 @@ class TestController:XCTestCase {
         
         self.controller.openProjectWith(identifier:String())
         XCTAssertTrue(transitioned, "Failed")
+    }
+    
+    func testUpdateProjectReloadsPresenter() {
+        var updated:Bool = false
+        self.presenter.onShouldUpdate = {
+            updated = true
+        }
+        
+        self.controller.update(project:String(), with:String())
+        XCTAssertTrue(updated, "Not updated")
     }
 }

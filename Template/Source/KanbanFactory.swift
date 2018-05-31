@@ -48,4 +48,6 @@ public class KanbanFactory {
         card.content = String.localized(key:"KanbanFactory_checkStatsCard_content", in:self)
         return card
     }
+    
+    private init() { }
 }

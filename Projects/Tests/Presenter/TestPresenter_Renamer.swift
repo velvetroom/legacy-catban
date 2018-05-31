@@ -49,4 +49,10 @@ class TestPresenter_Renamer:XCTestCase {
         self.viewField.delegate?.textFieldDidEndEditing?(self.viewField)
         XCTAssertEqual(self.project.name, Constants.updatedName, "Not updating")
     }
+    
+    func testAddProjectStartsEditingIt() {
+        self.viewField.text = "lorem ipsum"
+        self.presenter.addProject()
+        XCTAssertEqual(self.viewField.text, String(), "Not editing")
+    }
 }

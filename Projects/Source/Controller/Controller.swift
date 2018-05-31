@@ -14,6 +14,12 @@ public class Controller:ControllerBoardProtocol {
         presenter.controller = self
     }
     
+    func addProject() -> ProjectProtocol {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        self.board.add(project:project)
+        return project
+    }
+    
     func openProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
