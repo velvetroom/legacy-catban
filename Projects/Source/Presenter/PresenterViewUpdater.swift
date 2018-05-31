@@ -21,7 +21,8 @@ class PresenterViewUpdater {
         if let selected:ViewModelListItem = items.first {
             self.presenter.list.selected = selected
         }
-        self.presenter.list.reloadAndSelectCentreCell()
+        self.presenter.list.view.reloadData()
+        self.presenter.list.selectCentreCell()
     }
     
     private func updateEmpty() {

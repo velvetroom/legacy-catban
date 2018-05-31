@@ -37,11 +37,6 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         super.init()
     }
     
-    func reloadAndSelectCentreCell() {
-        self.view.reloadData()
-        self.selectCentreCell()
-    }
-    
     func updateSelector() {
         guard
             let cell:UICollectionViewCell = self.centerCell
@@ -55,6 +50,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         else { return }
         self.view.selectItem(
             at:indexPath, animated:true, scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        self.select(indexPath:indexPath)
     }
     
     func scrollViewWillBeginDragging(_:UIScrollView) {
@@ -92,10 +88,15 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_:UICollectionView, didSelectItemAt index:IndexPath) {
         self.shouldUpdateSelected = false
         self.view.scrollToItem(at:index, at:UICollectionViewScrollPosition.centeredVertically, animated:true)
+        self.select(indexPath:index)
     }
     
     private func configure(view:ViewListCell, with item:ViewModelListItem) {
         view.labelName.text = item.name
         view.updateState()
+    }
+    
+    private func select(indexPath:IndexPath) {
+        self.selected = self.items[indexPath.item]
     }
 }
