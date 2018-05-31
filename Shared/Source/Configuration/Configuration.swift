@@ -9,4 +9,5 @@ public struct Configuration {
     public static var controllerColumnType:ControllerColumnProtocol.Type!
     public static var controllerProjectsType:ControllerBoardProtocol.Type!
     public static var canvasType:CanvasProtocol.Type!
+    public static var directoryRoot:String!
 }
