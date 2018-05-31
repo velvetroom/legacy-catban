@@ -38,7 +38,7 @@ class ViewMenuOptions:UIView {
     private func factoryViews() {
         self.factoryCloseButton()
         self.factoryProjects()
-        self.factoryAbout()
+//        self.factoryAbout()
     }
     
     private func factoryCloseButton() {

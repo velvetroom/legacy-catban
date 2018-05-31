@@ -58,7 +58,7 @@ class ViewMenu:UIViewController {
                                           for:UIControlEvents.touchUpInside)
         self.viewBase.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
                                                            for:UIControlEvents.touchUpInside)
-        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
-                                                        for:UIControlEvents.touchUpInside)
+//        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
+//                                                        for:UIControlEvents.touchUpInside)
     }
 }
