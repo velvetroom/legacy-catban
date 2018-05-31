@@ -11,4 +11,6 @@ public class CardFactory {
     public class func blankCard() -> CardProtocol {
         return Card()
     }
+    
+    private init() { }
 }

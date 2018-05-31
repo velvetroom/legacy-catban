@@ -11,4 +11,6 @@ public class ColumnFactory {
     public class func blankColumn() -> ColumnProtocol {
         return Column()
     }
+    
+    private init() { }
 }

@@ -17,4 +17,6 @@ public class ProjectFactory {
         unmanaged.copy(project:project)
         return unmanaged
     }
+    
+    private init() { }
 }

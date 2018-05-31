@@ -22,4 +22,6 @@ class ViewMenuCloseFactory {
         iconName += String(index)
         return UIImage(name:iconName, in:self)
     }
+    
+    private init() { }
 }

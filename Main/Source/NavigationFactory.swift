@@ -12,4 +12,6 @@ class NavigationFactory {
         window.makeKeyAndVisible()
         return window
     }
+    
+    private init() { }
 }

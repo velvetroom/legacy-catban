@@ -10,4 +10,6 @@ public class BoardFactory {
     public class func blankBoard() -> BoardProtocol {
         return Board()
     }
+    
+    private init() { }
 }

@@ -11,4 +11,6 @@ class ProjectManagedFactory {
     class func blankProjectManaged() -> ProjectManagedProtocol {
         return ProjectManaged()
     }
+    
+    private init() { }
 }
