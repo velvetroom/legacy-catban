@@ -51,4 +51,17 @@ class TestRepositoryFile:XCTestCase {
         let projects:[Data] = self.model.projectsData()
         XCTAssertTrue(projects.isEmpty, "Should be no projects")
     }
+    
+    func testSaveBoard() {
+        XCTAssertNoThrow(try self.model.writeBoard(data:Data()), "Error saving board")
+        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.url.boardUrl.path), "Failed to save")
+    }
+    
+    func testSaveProject() {
+        let identifier:String = "test"
+        XCTAssertNoThrow(try self.model.writeProject(data:Data(), with:identifier), "Failed to write")
+        let url:URL = self.model.url.projectsUrl.appendingPathComponent(identifier).appendingPathExtension(
+            RepositoryConstants.Url.fileExtension)
+        XCTAssertTrue(FileManager.default.fileExists(atPath:url.path), "Failed to save")
+    }
 }

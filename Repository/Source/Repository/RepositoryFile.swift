@@ -21,6 +21,16 @@ class RepositoryFile {
         return self.projectsDataWith(fileNames:fileNames)
     }
     
+    func writeBoard(data:Data) throws {
+        try data.write(to:self.url.boardUrl, options:Data.WritingOptions.atomic)
+    }
+    
+    func writeProject(data:Data, with identifier:String) throws {
+        let url:URL = self.url.projectsUrl.appendingPathComponent(identifier).appendingPathExtension(
+            RepositoryConstants.Url.fileExtension)
+        try data.write(to:url, options:Data.WritingOptions.atomic)
+    }
+    
     func delete() {
         do { try FileManager.default.removeItem(at:self.url.directoryUrl) } catch { }
     }
