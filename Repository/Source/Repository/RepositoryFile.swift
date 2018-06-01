@@ -16,8 +16,28 @@ class RepositoryFile {
         return try self.dataAt(url:self.url.boardUrl)
     }
     
+    func projectsData() -> [Data] {
+        let fileNames:[String] = self.projectFileNames()
+        return self.projectsDataWith(fileNames:fileNames)
+    }
+    
     func delete() {
         do { try FileManager.default.removeItem(at:self.url.directoryUrl) } catch { }
+    }
+    
+    private func projectsDataWith(fileNames:[String]) -> [Data] {
+        var projectsData:[Data] = []
+        for fileName:String in fileNames {
+            let fileUrl:URL = self.url.projectsUrl.appendingPathComponent(fileName)
+            let data:Data
+            do {
+                data = try self.dataAt(url:fileUrl)
+            } catch {
+                continue
+            }
+            projectsData.append(data)
+        }
+        return projectsData
     }
     
     private func makeDirectory(url:URL) throws {
@@ -42,36 +62,9 @@ class RepositoryFile {
         return try Data(contentsOf:url)
     }
     
-    
-    
-    /*
-    
-    func loadProjects() throws -> [Data] {
-        let urls:[URL] = try self.projectUrls()
-        guard
-            urls.isEmpty == false
-            else { throw ErrorRepository.noProjectsFound }
-        return try self.projectsWith(urls:urls)
+    private func projectFileNames() -> [String] {
+        var strings:[String] = []
+        do { strings = try FileManager.default.contentsOfDirectory(atPath:self.url.projectsUrl.path) } catch { }
+        return strings
     }
-    
-    
-    
-    private func projectUrls() throws -> [URL] {
-        var urls:[URL] = []
-        let strings:[String] = try FileManager.default.contentsOfDirectory(atPath:self.projects.path)
-        for string:String in strings {
-            let url:URL = self.projects.appendingPathComponent(string)
-            urls.append(url)
-        }
-        return urls
-    }
-    
-    private func projectsWith(urls:[URL]) throws -> [Data] {
-        var projects:[Data] = []
-        for url:URL in urls {
-            let project:Data = try self.loadFileAt(url:url)
-            projects.append(project)
-        }
-        return projects
-    }*/
 }

@@ -24,7 +24,7 @@ class TestRepositoryFile:XCTestCase {
                       "Failed to create")
     }
     
-    func testBoardDataFound() {
+    func testBoardData() {
         let data:Data = Data()
         XCTAssertNoThrow(try data.write(to:self.model.url.boardUrl), "Failed to write")
         
@@ -35,6 +35,21 @@ class TestRepositoryFile:XCTestCase {
     
     func testBoardDataNotFound() {
         XCTAssertThrowsError(try self.model.boardData(), "Data should not be found")
+    }
+    
+    func testLoadProjects() {
+        let fileName:String = "test.catban"
+        let data:Data = Data()
+        let url:URL = self.model.url.projectsUrl.appendingPathComponent(fileName)
+        XCTAssertNoThrow(try data.write(to:url), "Failed to write")
+        
+        let projects:[Data] = self.model.projectsData()
+        XCTAssertEqual(projects.count, 1, "Failed to load projects")
+    }
+    
+    func testLoadProjectsNotFound() {
+        let projects:[Data] = self.model.projectsData()
+        XCTAssertTrue(projects.isEmpty, "Should be no projects")
     }
 }
 

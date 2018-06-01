@@ -18,6 +18,6 @@ class Injection {
         Configuration.controllerColumnType = Column.Controller.self
         Configuration.controllerProjectsType = Projects.Controller.self
         Configuration.canvasType = Canvas.self
-        Configuration.directoryRoot = RepositoryConstants.directoryRoot
+        Configuration.directoryRoot = RepositoryConstants.Url.directoryRoot
     }
 }
