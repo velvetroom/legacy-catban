@@ -13,9 +13,9 @@ class TestRepositoryFile:XCTestCase {
     
     func testBuildDirectoryStructure() {
         XCTAssertNoThrow(try self.model.buildStructure(), "Exception building folders")
-        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.directoryUrl.path),
+        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.url.directoryUrl.path),
                       "Failed to create")
-        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.projectsUrl.path),
+        XCTAssertTrue(FileManager.default.fileExists(atPath:self.model.url.projectsUrl.path),
                       "Failed to create")
     }
 }

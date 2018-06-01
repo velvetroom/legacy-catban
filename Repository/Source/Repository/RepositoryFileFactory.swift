@@ -2,20 +2,32 @@ import Foundation
 import Shared
 
 class RepositoryFileFactory {
-    class func makeDirectoryUrl() -> URL {
-        return userDirectory.appendingPathComponent(Configuration.directoryRoot)
+    class func makeUrl() -> RepositoryFileUrl {
+        var url:RepositoryFileUrl = RepositoryFileUrl()
+        let user:URL = makeUser()
+        url.directoryUrl = makeDirectoryWith(user:user)
+        url.projectsUrl = makeProjectsWith(directoryUrl:url.directoryUrl)
+        url.boardUrl = makeBoardWith(directoryUrl:url.directoryUrl)
+        return url
     }
     
-    class func makeProjectsWith(url:URL) -> URL {
-        return url.appendingPathComponent(RepositoryConstants.directoryProjects)
+    private class func makeUser() -> URL {
+        return FileManager.default.urls(
+            for:FileManager.SearchPathDirectory.documentDirectory,
+            in:FileManager.SearchPathDomainMask.userDomainMask).last!
     }
     
-    private static var userDirectory:URL {
-        get {
-            return FileManager.default.urls(
-                for:FileManager.SearchPathDirectory.documentDirectory,
-                in:FileManager.SearchPathDomainMask.userDomainMask).last!
-        }
+    private class func makeDirectoryWith(user:URL) -> URL {
+        return user.appendingPathComponent(Configuration.directoryRoot)
+    }
+    
+    private class func makeProjectsWith(directoryUrl:URL) -> URL {
+        return directoryUrl.appendingPathComponent(RepositoryConstants.directoryProjects)
+    }
+    
+    private class func makeBoardWith(directoryUrl:URL) -> URL {
+        let file:URL = directoryUrl.appendingPathComponent(RepositoryConstants.boardName)
+        return file.appendingPathExtension(RepositoryConstants.fileExtension)
     }
     
     private init() { }

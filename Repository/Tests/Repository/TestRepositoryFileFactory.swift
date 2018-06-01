@@ -3,30 +3,52 @@ import Shared
 @testable import Repository
 
 class TestRepositoryFileFactory:XCTestCase {
+    private var url:RepositoryFileUrl!
+    
     override func setUp() {
         super.setUp()
         Configuration.directoryRoot = "test"
+        self.url = RepositoryFileFactory.makeUrl()
     }
     
-    func testRootDirectoryHasRootName() {
-        let url:String = RepositoryFileFactory.makeDirectoryUrl().path
-        self.validateRootNameFor(url:url)
+    func testDirectory() {
+        self.validateUserDirectoryFor(url:self.url.directoryUrl)
+        self.validateRootNameFor(url:self.url.directoryUrl)
     }
     
-    func testProjectsHasFullPath() {
-        let base:URL = RepositoryFileFactory.makeDirectoryUrl()
-        let url:String = RepositoryFileFactory.makeProjectsWith(url:base).path
-        self.validateRootNameFor(url:url)
-        self.validateProjectsNameFor(url:url)
+    func testProjects() {
+        self.validateUserDirectoryFor(url:self.url.projectsUrl)
+        self.validateRootNameFor(url:self.url.projectsUrl)
+        self.validateProjectsNameFor(url:self.url.projectsUrl)
     }
     
-    private func validateRootNameFor(url:String) {
+    func testBoard() {
+        self.validateUserDirectoryFor(url:self.url.boardUrl)
+        self.validateRootNameFor(url:self.url.boardUrl)
+        self.validateProjectsNameFor(url:self.url.projectsUrl)
+    }
+    
+    private func validateUserDirectoryFor(url:URL) {
+        let containedString:String = FileManager.default.urls(
+            for:FileManager.SearchPathDirectory.documentDirectory,
+            in:FileManager.SearchPathDomainMask.userDomainMask).last!.path
+        XCTAssertTrue(url.path.contains(containedString), "Invalid directory")
+    }
+    
+    private func validateRootNameFor(url:URL) {
         let containedString:String = "/" + Configuration.directoryRoot
-        XCTAssertTrue(url.contains(containedString), "Invalid directory")
+        XCTAssertTrue(url.path.contains(containedString), "Invalid directory")
     }
     
-    private func validateProjectsNameFor(url:String) {
+    private func validateProjectsNameFor(url:URL) {
         let containedString:String = "/" + RepositoryConstants.directoryProjects
-        XCTAssertTrue(url.contains(containedString), "Invalid directory")
+        XCTAssertTrue(url.path.contains(containedString), "Invalid directory")
+    }
+    
+    private func validateBoardNameFor(url:URL) {
+        let containedStringA:String = "/" + RepositoryConstants.boardName
+        let containedStringB:String = "." + RepositoryConstants.fileExtension
+        XCTAssertTrue(url.path.contains(containedStringA), "Invalid url")
+        XCTAssertTrue(url.path.contains(containedStringB), "Invalid url")
     }
 }

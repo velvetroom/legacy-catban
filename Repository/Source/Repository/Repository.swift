@@ -3,9 +3,14 @@ import Shared
 import Board
 
 public class Repository:RepositoryProtocol {
-    public required init() { }
+    var file:RepositoryFile
+    
+    public required init() {
+        self.file = RepositoryFile()
+    }
     
     public func loadBoard() throws -> BoardProtocol {
+        try self.file.buildStructure()
         throw ErrorRepository.boardNotFound
     }
     

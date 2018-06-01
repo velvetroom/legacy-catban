@@ -1,4 +1,5 @@
 import XCTest
+import Shared
 @testable import Repository
 
 class TestRepository:XCTestCase {
@@ -6,6 +7,7 @@ class TestRepository:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.directoryRoot = "test"
         self.model = Repository()
     }
     
