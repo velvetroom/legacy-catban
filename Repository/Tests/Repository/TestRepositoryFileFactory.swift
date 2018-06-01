@@ -41,13 +41,13 @@ class TestRepositoryFileFactory:XCTestCase {
     }
     
     private func validateProjectsNameFor(url:URL) {
-        let containedString:String = "/" + RepositoryConstants.directoryProjects
+        let containedString:String = "/" + RepositoryConstants.Url.directoryProjects
         XCTAssertTrue(url.path.contains(containedString), "Invalid directory")
     }
     
     private func validateBoardNameFor(url:URL) {
-        let containedStringA:String = "/" + RepositoryConstants.boardName
-        let containedStringB:String = "." + RepositoryConstants.fileExtension
+        let containedStringA:String = "/" + RepositoryConstants.Url.boardName
+        let containedStringB:String = "." + RepositoryConstants.Url.fileExtension
         XCTAssertTrue(url.path.contains(containedStringA), "Invalid url")
         XCTAssertTrue(url.path.contains(containedStringB), "Invalid url")
     }

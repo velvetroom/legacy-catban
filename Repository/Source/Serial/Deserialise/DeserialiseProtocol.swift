@@ -2,5 +2,7 @@ import Foundation
 import Board
 
 protocol DeserialiseProtocol {
-    func deserialise(board:Data) throws -> BoardProtocol
+    var data:Data! { get set }
+    
+    func makeBoard() throws -> BoardProtocol
 }

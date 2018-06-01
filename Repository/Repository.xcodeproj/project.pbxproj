@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DA2AF74520C11A7400BF94D1 /* RepositoryFileUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74420C11A7400BF94D1 /* RepositoryFileUrl.swift */; };
+		DA2AF74820C15FB300BF94D1 /* Board.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74720C15FB300BF94D1 /* Board.catban */; };
+		DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74920C1602500BF94D1 /* FileLoader.swift */; };
+		DA2AF74C20C1610A00BF94D1 /* TestFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */; };
+		DA2AF74E20C1652F00BF94D1 /* EmptyObject.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */; };
+		DA2AF75020C1655400BF94D1 /* EmptyFile.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */; };
 		DA3ADFBF209C387800B736CD /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFA9209C36E100B736CD /* Repository.framework */; };
 		DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */; };
 		DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC8209C3A3500B736CD /* Repository.swift */; };
@@ -30,9 +35,7 @@
 		DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */; };
 		DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */; };
 		DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */; };
-		DAAFF3AA209C9F6C003EE7D8 /* ErrorSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */; };
 		DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */; };
-		DAAFF3AF209CA0B3003EE7D8 /* TestErrorSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 
 /* Begin PBXFileReference section */
 		DA2AF74420C11A7400BF94D1 /* RepositoryFileUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFileUrl.swift; sourceTree = "<group>"; };
+		DA2AF74720C15FB300BF94D1 /* Board.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = Board.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		DA2AF74920C1602500BF94D1 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFileLoader.swift; sourceTree = "<group>"; };
+		DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmptyObject.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmptyFile.catban; sourceTree = "<group>"; };
 		DA3ADFA9209C36E100B736CD /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADFBA209C387800B736CD /* TestsRepository.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsRepository.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADFC5209C394F00B736CD /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -69,9 +77,7 @@
 		DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserialiseProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialise.swift; sourceTree = "<group>"; };
 		DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialise.swift; sourceTree = "<group>"; };
-		DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSerial.swift; sourceTree = "<group>"; };
 		DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorRepository.swift; sourceTree = "<group>"; };
-		DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA2AF74620C15F6D00BF94D1 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA2AF74920C1602500BF94D1 /* FileLoader.swift */,
+				DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */,
+				DA2AF74720C15FB300BF94D1 /* Board.catban */,
+				DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */,
+				DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		DA3ADF9F209C36E000B736CD = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +149,7 @@
 		DA3ADFB5209C385E00B736CD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DA2AF74620C15F6D00BF94D1 /* Files */,
 				DA567B4E209C78F7005D74EE /* Repository */,
 				DAAFF398209C9CA7003EE7D8 /* Serial */,
 				DAAFF3AB209C9FD1003EE7D8 /* Error */,
@@ -164,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				DA567B4C209C78E5005D74EE /* ErrorRepository.swift */,
-				DAAFF3A9209C9F6C003EE7D8 /* ErrorSerial.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -244,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */,
-				DAAFF3AE209CA0B3003EE7D8 /* TestErrorSerial.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -349,6 +366,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2AF74820C15FB300BF94D1 /* Board.catban in Resources */,
+				DA2AF74E20C1652F00BF94D1 /* EmptyObject.catban in Resources */,
+				DA2AF75020C1655400BF94D1 /* EmptyFile.catban in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +388,6 @@
 				DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */,
 				DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */,
 				DA8C60D320C037A100F852A6 /* RepositoryConstants.swift in Sources */,
-				DAAFF3AA209C9F6C003EE7D8 /* ErrorSerial.swift in Sources */,
 				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
 				DA8C60D720C03AEC00F852A6 /* RepositoryFileFactory.swift in Sources */,
 			);
@@ -379,11 +398,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8C60D520C0383200F852A6 /* TestRepositoryConstants.swift in Sources */,
-				DAAFF3AF209CA0B3003EE7D8 /* TestErrorSerial.swift in Sources */,
 				DA8C60D920C03FC900F852A6 /* TestRepositoryFileFactory.swift in Sources */,
+				DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */,
 				DA8C60D120C0365C00F852A6 /* TestRepositoryFile.swift in Sources */,
 				DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */,
 				DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */,
+				DA2AF74C20C1610A00BF94D1 /* TestFileLoader.swift in Sources */,
 				DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */,
 				DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */,
 			);

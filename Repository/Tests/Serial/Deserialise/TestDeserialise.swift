@@ -1,35 +1,41 @@
-//
-//  TestDeserialise.swift
-//  TestsRepository
-//
-//  Created by zero on 04.05.18.
-//  Copyright © 2018 iturbide. All rights reserved.
-//
-
 import XCTest
+import Board
+@testable import Repository
 
-class TestDeserialise: XCTestCase {
+class TestDeserialise:XCTestCase {
+    private var model:Deserialise!
+    private var data:Data!
+    private var emptyObject:Data!
+    private var emptyFile:Data!
+    private struct Constants {
+        static let data:String = "Board"
+        static let emptyObject:String = "EmptyObject"
+        static let emptyFile:String = "EmptyFile"
+    }
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.model = Deserialise()
+        self.data = FileLoader.load(fileNamed:Constants.data)
+        self.emptyObject = FileLoader.load(fileNamed:Constants.emptyObject)
+        self.emptyFile = FileLoader.load(fileNamed:Constants.emptyFile)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testMakeBoard() {
+        self.model.data = self.data
+        var board:BoardProtocol!
+        XCTAssertNoThrow(board = try self.model.makeBoard(), "Error making board")
+        XCTAssertNotNil(board, "Board not found")
+        XCTAssertFalse(board.identifier.isEmpty, "Invalid identifier")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMakeBoardEmptyObject() {
+        self.model.data = self.emptyObject
+        XCTAssertThrowsError(try self.model.makeBoard(), "Should throw an error")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testMakeBoardEmptyFile() {
+        self.model.data = self.emptyFile
+        XCTAssertThrowsError(try self.model.makeBoard(), "Should throw an error")
     }
-    
 }

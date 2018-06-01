@@ -3,6 +3,6 @@ import Board
 
 class Serialise:SerialiseProtocol {
     func serialise(board:BoardProtocol) throws -> Data {
-        throw ErrorSerial.corruptedData
+        throw ErrorRepository.corruptedData
     }
 }

@@ -22,12 +22,12 @@ class RepositoryFileFactory {
     }
     
     private class func makeProjectsWith(directoryUrl:URL) -> URL {
-        return directoryUrl.appendingPathComponent(RepositoryConstants.directoryProjects)
+        return directoryUrl.appendingPathComponent(RepositoryConstants.Url.directoryProjects)
     }
     
     private class func makeBoardWith(directoryUrl:URL) -> URL {
-        let file:URL = directoryUrl.appendingPathComponent(RepositoryConstants.boardName)
-        return file.appendingPathExtension(RepositoryConstants.fileExtension)
+        let file:URL = directoryUrl.appendingPathComponent(RepositoryConstants.Url.boardName)
+        return file.appendingPathExtension(RepositoryConstants.Url.fileExtension)
     }
     
     private init() { }

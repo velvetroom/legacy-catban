@@ -12,6 +12,7 @@ class TestDeserialiser:XCTestCase {
         super.setUp()
         self.model = Deserialiser()
         self.data = Constants.content.data(using:String.Encoding.utf8)
+        
     }
     
     func testLoad() {
