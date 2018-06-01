@@ -12,6 +12,14 @@ class Deserialise:DeserialiseProtocol {
         return board
     }
     
+    func makeProject() throws -> ProjectProtocol {
+        try self.makeDictionary()
+        var project:ProjectProtocol = ProjectFactory.blankProject()
+        project.identifier = try self.getIdentifier()
+        project.name = try self.valueWith(key:RepositoryConstants.Keys.Project.name)
+        return project
+    }
+    
     private func getIdentifier() throws -> String {
         return try self.valueWith(key:RepositoryConstants.Keys.Shared.identifier)
     }

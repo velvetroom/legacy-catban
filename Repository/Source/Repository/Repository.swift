@@ -15,7 +15,7 @@ public class Repository:RepositoryProtocol {
         try self.file.buildStructure()
         self.deserialise.data = try self.file.boardData()
         let board:BoardProtocol = try self.deserialise.makeBoard()
-        try self.loadProjectsOn(board:board)
+        self.loadProjectsOn(board:board)
         return board
     }
     
@@ -31,7 +31,17 @@ public class Repository:RepositoryProtocol {
         throw ErrorRepository.boardNotFound
     }
     
-    private func loadProjectsOn(board:BoardProtocol) throws {
-        
+    private func loadProjectsOn(board:BoardProtocol) {
+        let projectsData:[Data] = self.file.projectsData()
+        for data:Data in projectsData {
+            self.deserialise.data = data
+            let project:ProjectProtocol
+            do {
+                try project = self.deserialise.makeProject()
+            } catch {
+                continue
+            }
+            board.add(project:project)
+        }
     }
 }

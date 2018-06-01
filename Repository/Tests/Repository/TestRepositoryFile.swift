@@ -52,5 +52,3 @@ class TestRepositoryFile:XCTestCase {
         XCTAssertTrue(projects.isEmpty, "Should be no projects")
     }
 }
-
-

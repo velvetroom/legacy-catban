@@ -13,6 +13,7 @@
 		DA2AF74C20C1610A00BF94D1 /* TestFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */; };
 		DA2AF74E20C1652F00BF94D1 /* EmptyObject.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */; };
 		DA2AF75020C1655400BF94D1 /* EmptyFile.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */; };
+		DA2AF75220C1760A00BF94D1 /* Project.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF75120C1760A00BF94D1 /* Project.catban */; };
 		DA3ADFBF209C387800B736CD /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFA9209C36E100B736CD /* Repository.framework */; };
 		DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */; };
 		DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC8209C3A3500B736CD /* Repository.swift */; };
@@ -55,6 +56,7 @@
 		DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFileLoader.swift; sourceTree = "<group>"; };
 		DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmptyObject.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmptyFile.catban; sourceTree = "<group>"; };
+		DA2AF75120C1760A00BF94D1 /* Project.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = Project.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA3ADFA9209C36E100B736CD /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADFBA209C387800B736CD /* TestsRepository.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsRepository.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADFC5209C394F00B736CD /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				DA2AF74920C1602500BF94D1 /* FileLoader.swift */,
 				DA2AF74B20C1610A00BF94D1 /* TestFileLoader.swift */,
 				DA2AF74720C15FB300BF94D1 /* Board.catban */,
+				DA2AF75120C1760A00BF94D1 /* Project.catban */,
 				DA2AF74D20C1652F00BF94D1 /* EmptyObject.catban */,
 				DA2AF74F20C1655400BF94D1 /* EmptyFile.catban */,
 			);
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2AF75220C1760A00BF94D1 /* Project.catban in Resources */,
 				DA2AF74820C15FB300BF94D1 /* Board.catban in Resources */,
 				DA2AF74E20C1652F00BF94D1 /* EmptyObject.catban in Resources */,
 				DA2AF75020C1655400BF94D1 /* EmptyFile.catban in Resources */,
