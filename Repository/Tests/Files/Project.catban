@@ -5,26 +5,31 @@
     [
      {
      "identifier": "dssafr23r",
+     "created": 1343,
      "name": "dasda32412",
      "cards": []
      },
      {
      "identifier": "fdsf34",
+     "created": 45676,
      "name": "312423234jdas",
      "cards":
      [
       {
       "identifier": "fdsfghrtfr54",
-      "title": "hello world"
+      "created": 7875,
+      "content": "hello world"
       },
       {
       "identifier": "afdsfaer",
-      "title": "lorem ipsum"
+      "created": 357,
+      "content": "lorem ipsum"
       }
       ]
      },
      {
      "identifier": "czdwqew",
+     "created": 876575,
      "name": "09429213jkhgh",
      "cards": []
      }

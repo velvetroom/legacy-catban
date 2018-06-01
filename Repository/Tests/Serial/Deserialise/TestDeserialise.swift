@@ -47,7 +47,37 @@ class TestDeserialise:XCTestCase {
         var project:ProjectProtocol!
         XCTAssertNoThrow(project = try self.model.makeProject(), "Error making project")
         XCTAssertNotNil(project, "Project not found")
+        self.projectLoaded(project:project)
+    }
+    
+    private func projectLoaded(project:ProjectProtocol) {
+        self.validate(project:project)
+        var totalCards:Int = 0
+        project.iterate { (column:ColumnProtocol) in
+            self.validate(column:column)
+            column.iterate { (card:CardProtocol) in
+                self.validate(card:card)
+                totalCards += 1
+            }
+        }
+        XCTAssertEqual(project.countColumns, 3, "Invalid")
+        XCTAssertEqual(totalCards, 2, "Invalid")
+    }
+    
+    private func validate(project:ProjectProtocol) {
         XCTAssertFalse(project.identifier.isEmpty, "Invalid")
         XCTAssertEqual(project.name, "test project", "Invalid")
+    }
+    
+    private func validate(column:ColumnProtocol) {
+        XCTAssertFalse(column.identifier.isEmpty, "Invalid")
+        XCTAssertFalse(column.name.isEmpty, "Invalid")
+        XCTAssertGreaterThan(column.created, 0, "Invalid")
+    }
+    
+    private func validate(card:CardProtocol) {
+        XCTAssertFalse(card.identifier.isEmpty, "Invalid")
+        XCTAssertFalse(card.content.isEmpty, "Invalid")
+        XCTAssertGreaterThan(card.created, 0, "Invalid")
     }
 }

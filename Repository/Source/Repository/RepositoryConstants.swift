@@ -21,10 +21,12 @@ public struct RepositoryConstants {
         struct Column {
             static let name:String = "name"
             static let cards:String = "cards"
+            static let created:String = "created"
         }
         
         struct Card {
-            static let title:String = "title"
+            static let content:String = "content"
+            static let created:String = "created"
         }
     }
 }
