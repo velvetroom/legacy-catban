@@ -2,8 +2,12 @@ import Foundation
 import Shared
 
 class RepositoryFileFactory {
-    class func makeDirectoryURL() -> URL {
+    class func makeDirectoryUrl() -> URL {
         return userDirectory.appendingPathComponent(Configuration.directoryRoot)
+    }
+    
+    class func makeProjectsWith(url:URL) -> URL {
+        return url.appendingPathComponent(RepositoryConstants.directoryProjects)
     }
     
     private static var userDirectory:URL {

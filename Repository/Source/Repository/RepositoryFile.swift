@@ -1,42 +1,23 @@
 import Foundation
 
 class RepositoryFile {
-    
-    /*
-    
-    var directory:URL
-    
-    var projects:URL {
-        get {
-            return self.directory.appendingPathComponent(Constants.projectsFolder)
-        }
-    }
-    
-    var user:URL {
-        get {
-            let file:URL = self.directory.appendingPathComponent(Constants.userFile)
-            return file.appendingPathExtension(Constants.fileExtension)
-        }
-    }
+    let directoryUrl:URL
+    let projectsUrl:URL
     
     init() {
-        self.directory = File.factoryDirectory()
-        do { try self.createDirectories() } catch { }
+        self.directoryUrl = RepositoryFileFactory.makeDirectoryUrl()
+        self.projectsUrl = RepositoryFileFactory.makeProjectsWith(url:self.directoryUrl)
     }
     
-    func createDirectories() throws {
-        try self.createDirectory(url:self.directory)
-        try self.createDirectory(url:self.projects)
+    func buildStructure() throws {
+        try self.makeDirectory(url:self.directoryUrl)
+        try self.makeDirectory(url:self.projectsUrl)
     }
     
-    func urlForProject(identifier:String) -> URL {
-        return self.projects.appendingPathComponent(identifier).appendingPathExtension(Constants.fileExtension)
-    }
-    
-    private func createDirectory(url:URL) throws {
+    private func makeDirectory(url:URL) throws {
         guard
             FileManager.default.fileExists(atPath:url.path) == false
-            else { return }
+        else { return }
         try FileManager.default.createDirectory(at:url, withIntermediateDirectories:true, attributes:nil)
         try self.excludeFromBackup(url:url)
     }
@@ -46,5 +27,5 @@ class RepositoryFile {
         var resourceValues:URLResourceValues = URLResourceValues()
         resourceValues.isExcludedFromBackup = true
         try url.setResourceValues(resourceValues)
-    }*/
+    }
 }
