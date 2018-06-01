@@ -11,6 +11,7 @@ public struct RepositoryConstants {
     struct Keys {
         struct Shared {
             static let identifier:String = "identifier"
+            static let created:String = "created"
         }
         
         struct Project {
@@ -21,12 +22,10 @@ public struct RepositoryConstants {
         struct Column {
             static let name:String = "name"
             static let cards:String = "cards"
-            static let created:String = "created"
         }
         
         struct Card {
             static let content:String = "content"
-            static let created:String = "created"
         }
     }
 }

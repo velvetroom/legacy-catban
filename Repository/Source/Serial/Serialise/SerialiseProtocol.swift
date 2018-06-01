@@ -2,5 +2,6 @@ import Foundation
 import Board
 
 protocol SerialiseProtocol {
-    func serialise(board:BoardProtocol) throws -> Data
+    func makeDataFrom(board:BoardProtocol) throws -> Data
+    func makeDataFrom(project:ProjectProtocol) throws -> Data
 }

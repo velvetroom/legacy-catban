@@ -67,6 +67,7 @@ class TestDeserialise:XCTestCase {
     private func validate(project:ProjectProtocol) {
         XCTAssertFalse(project.identifier.isEmpty, "Invalid")
         XCTAssertEqual(project.name, "test project", "Invalid")
+        XCTAssertGreaterThan(project.created, 0, "Invalid")
     }
     
     private func validate(column:ColumnProtocol) {

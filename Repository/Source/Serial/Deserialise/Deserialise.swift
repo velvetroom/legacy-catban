@@ -17,6 +17,7 @@ class Deserialise:DeserialiseProtocol {
         var project:ProjectProtocol = ProjectFactory.blankProject()
         project.identifier = try self.getIdentifier()
         project.name = try self.valueWith(key:RepositoryConstants.Keys.Project.name)
+        project.created = try self.valueWith(key:RepositoryConstants.Keys.Shared.created)
         try self.makeColumnsFor(project:project)
         return project
     }
@@ -33,7 +34,7 @@ class Deserialise:DeserialiseProtocol {
         var column:ColumnProtocol = ColumnFactory.blankColumn()
         column.identifier = try self.getIdentifier()
         column.name = try self.valueWith(key:RepositoryConstants.Keys.Column.name)
-        column.created = try self.valueWith(key:RepositoryConstants.Keys.Column.created)
+        column.created = try self.valueWith(key:RepositoryConstants.Keys.Shared.created)
         try self.makeCardsFor(column:column)
         return column
     }
@@ -50,7 +51,7 @@ class Deserialise:DeserialiseProtocol {
         var card:CardProtocol = CardFactory.blankCard()
         card.identifier = try self.getIdentifier()
         card.content = try self.valueWith(key:RepositoryConstants.Keys.Card.content)
-        card.created = try self.valueWith(key:RepositoryConstants.Keys.Card.created)
+        card.created = try self.valueWith(key:RepositoryConstants.Keys.Shared.created)
         return card
     }
     
