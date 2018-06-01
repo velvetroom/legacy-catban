@@ -1,7 +1,7 @@
 import Foundation
 
 class RepositoryFile {
-    let url:RepositoryFileUrl
+    var url:RepositoryFileUrl
     
     init() {
         self.url = RepositoryFileFactory.makeUrl()
@@ -11,10 +11,14 @@ class RepositoryFile {
         try self.makeDirectory(url:self.url.directoryUrl)
         try self.makeDirectory(url:self.url.projectsUrl)
     }
-    /*
+    
     func boardData() throws -> Data {
-        return try self.dataAtUrl(url:self.user)
-    }*/
+        return try self.dataAt(url:self.url.boardUrl)
+    }
+    
+    func delete() {
+        do { try FileManager.default.removeItem(at:self.url.directoryUrl) } catch { }
+    }
     
     private func makeDirectory(url:URL) throws {
         guard
@@ -29,7 +33,18 @@ class RepositoryFile {
         var resourceValues:URLResourceValues = URLResourceValues()
         resourceValues.isExcludedFromBackup = true
         try url.setResourceValues(resourceValues)
-    }/*
+    }
+    
+    private func dataAt(url:URL) throws -> Data {
+        guard
+            FileManager.default.fileExists(atPath:url.path)
+        else { throw ErrorRepository.fileNotFound }
+        return try Data(contentsOf:url)
+    }
+    
+    
+    
+    /*
     
     func loadProjects() throws -> [Data] {
         let urls:[URL] = try self.projectUrls()
@@ -39,12 +54,7 @@ class RepositoryFile {
         return try self.projectsWith(urls:urls)
     }
     
-    private func loadFileAt(url:URL) throws -> Data {
-        guard
-            FileManager.default.fileExists(atPath:url.path)
-            else { throw ErrorRepository.fileNotFound }
-        return try Data(contentsOf:url)
-    }
+    
     
     private func projectUrls() throws -> [URL] {
         var urls:[URL] = []

@@ -1,2 +1,3 @@
-ErrorRepository_boardNotFound="Error loading: Board not found";
-ErrorSerial_corruptedData="Error loading: Corrupted data";
+ErrorRepository_FileNotFound="Error repository: File not found";
+ErrorRepository_boardNotFound="Error repository: Board not found";
+ErrorSerial_corruptedData="Error repository: Corrupted data";

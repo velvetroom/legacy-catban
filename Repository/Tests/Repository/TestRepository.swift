@@ -11,6 +11,11 @@ class TestRepository:XCTestCase {
         self.model = Repository()
     }
     
+    override func tearDown() {
+        super.tearDown()
+        self.model.file.delete()
+    }
+    
     func testLoad() {
         XCTAssertNotNil(self.model, "Failed to load model")
     }

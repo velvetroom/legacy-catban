@@ -10,7 +10,7 @@ class TestRepositoryFileFactory:XCTestCase {
         Configuration.directoryRoot = "test"
         self.url = RepositoryFileFactory.makeUrl()
     }
-    
+
     func testDirectory() {
         self.validateUserDirectoryFor(url:self.url.directoryUrl)
         self.validateRootNameFor(url:self.url.directoryUrl)
