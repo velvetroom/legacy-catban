@@ -14,7 +14,7 @@ class ViewInputField:UITextField {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = UIColor.clear
         self.font = UIFont.systemFont(ofSize:ViewConstants.Field.fontSize, weight:UIFont.Weight.regular)
-        self.textColor = UIColor(white:0.4, alpha:1)
+        self.textColor = UIColor(white:0, alpha:0.4)
         self.tintColor = UIColor.black
         self.autocapitalizationType = UITextAutocapitalizationType.words
         self.autocorrectionType = UITextAutocorrectionType.no

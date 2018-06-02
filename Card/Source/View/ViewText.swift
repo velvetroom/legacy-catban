@@ -8,7 +8,7 @@ class ViewText:UITextView {
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = UIColor.clear
-        self.textColor = UIColor.black
+        self.textColor = UIColor(white:0, alpha:0.4)
         self.tintColor = UIColor.black
         self.bounces = true
         self.alwaysBounceVertical = true
