@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450A20A45EE300CCC59D /* Presenter.swift */; };
 		DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450E20A45F0000CCC59D /* TestPresenter.swift */; };
+		DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315720A4864800070042 /* MockTransitionProtocol.swift */; };
 		DA4B894E20B6A47800B67ED5 /* MockPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */; };
 		DA7E009120A562AC00AD4A74 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009020A562AC00AD4A74 /* View.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		DA15450A20A45EE300CCC59D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA15450E20A45F0000CCC59D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA46315720A4864800070042 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDelete.swift; sourceTree = "<group>"; };
 		DA7E009020A562AC00AD4A74 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				DA7E009A20A565D500AD4A74 /* MockControllerProtocol.swift */,
 				DAA0B95C20A5C3640084C753 /* MockController.swift */,
 				DAD9184020A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift */,
+				DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				DAD9184120A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift in Sources */,
 				DA7E009920A5638200AD4A74 /* TestViewText.swift in Sources */,
 				DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */,
+				DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DABC3CAA20A5D456009600BB /* MockPresenter.swift in Sources */,
 				DA7E009B20A565D500AD4A74 /* MockControllerProtocol.swift in Sources */,
 				DA7E00A520A5706B00AD4A74 /* TestPresenterKeyboard.swift in Sources */,

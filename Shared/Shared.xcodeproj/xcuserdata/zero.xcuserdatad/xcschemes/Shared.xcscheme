@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-               BuildableName = "Home.framework"
-               BlueprintName = "Home"
-               ReferencedContainer = "container:Home.xcodeproj">
+               BlueprintIdentifier = "DAFEF374209AFC6900740A88"
+               BuildableName = "Shared.framework"
+               BlueprintName = "Shared"
+               ReferencedContainer = "container:Shared.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAFEF356209AF82B00740A88"
-               BuildableName = "TestsHome.xctest"
-               BlueprintName = "TestsHome"
-               ReferencedContainer = "container:Home.xcodeproj">
+               BlueprintIdentifier = "DAF7E664209B077E00B8A39A"
+               BuildableName = "TestsShared.xctest"
+               BlueprintName = "TestsShared"
+               ReferencedContainer = "container:Shared.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DAFEF374209AFC6900740A88"
+            BuildableName = "Shared.framework"
+            BlueprintName = "Shared"
+            ReferencedContainer = "container:Shared.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DAFEF374209AFC6900740A88"
+            BuildableName = "Shared.framework"
+            BlueprintName = "Shared"
+            ReferencedContainer = "container:Shared.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DAFEF374209AFC6900740A88"
+            BuildableName = "Shared.framework"
+            BlueprintName = "Shared"
+            ReferencedContainer = "container:Shared.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

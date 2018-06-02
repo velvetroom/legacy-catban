@@ -1,4 +1,5 @@
 import XCTest
+import Shared
 @testable import Card
 @testable import Board
 
@@ -10,6 +11,7 @@ class TestController:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.card = CardFactory.newCard()
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
@@ -65,5 +67,28 @@ class TestController:XCTestCase {
         self.project.add(column:column)
         self.controller.delete()
         XCTAssertEqual(column.countCards, 0, "Not removed")
+    }
+    
+    func testDeleteSavesProject() {
+        var called:Bool = false
+        let column:ColumnProtocol = ColumnFactory.newColumn()
+        column.add(card:self.card)
+        self.project.add(column:column)
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+    
+        self.controller.delete()
+        XCTAssertTrue(called, "Failed to save")
+    }
+    
+    func testDoneSavesProject() {
+        var called:Bool = false
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        self.controller.done()
+        XCTAssertTrue(called, "Failed to save")
     }
 }

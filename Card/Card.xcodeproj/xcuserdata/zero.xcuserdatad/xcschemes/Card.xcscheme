@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-               BuildableName = "Home.framework"
-               BlueprintName = "Home"
-               ReferencedContainer = "container:Home.xcodeproj">
+               BlueprintIdentifier = "DABDB01120A387B6001B7D47"
+               BuildableName = "Card.framework"
+               BlueprintName = "Card"
+               ReferencedContainer = "container:Card.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAFEF356209AF82B00740A88"
-               BuildableName = "TestsHome.xctest"
-               BlueprintName = "TestsHome"
-               ReferencedContainer = "container:Home.xcodeproj">
+               BlueprintIdentifier = "DABDB02020A38840001B7D47"
+               BuildableName = "TestsCard.xctest"
+               BlueprintName = "TestsCard"
+               ReferencedContainer = "container:Card.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DABDB01120A387B6001B7D47"
+            BuildableName = "Card.framework"
+            BlueprintName = "Card"
+            ReferencedContainer = "container:Card.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DABDB01120A387B6001B7D47"
+            BuildableName = "Card.framework"
+            BlueprintName = "Card"
+            ReferencedContainer = "container:Card.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAFEF347209AF7D800740A88"
-            BuildableName = "Home.framework"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintIdentifier = "DABDB01120A387B6001B7D47"
+            BuildableName = "Card.framework"
+            BlueprintName = "Card"
+            ReferencedContainer = "container:Card.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

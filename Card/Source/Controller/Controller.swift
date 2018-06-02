@@ -16,15 +16,22 @@ public class Controller:ControllerCardProtocol {
     }
     
     func done() {
+        self.save()
         self.transiton.transitionToHome(project:self.project)
     }
     
     func delete() {
         self.project.remove(card:self.card)
+        self.save()
         self.transiton.transitionToHome(project:self.project)
     }
     
     func update(content:String) {
         self.card.content = content
+    }
+    
+    private func save() {
+        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
+        repository.save(project:self.project)
     }
 }
