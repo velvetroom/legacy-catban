@@ -34,7 +34,6 @@ class TestRepository_Save:XCTestCase {
         
         waitForExpectations(timeout:0.4) { [weak self] (error:Error?) in
             self?.validateBoard()
-            self?.validateProject()
         }
     }
     
