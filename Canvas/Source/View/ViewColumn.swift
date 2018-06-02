@@ -58,7 +58,7 @@ class ViewColumn:ViewItem {
         labelName.translatesAutoresizingMaskIntoConstraints = false
         labelName.backgroundColor = UIColor.clear
         labelName.textColor = UIColor.black
-        labelName.font = UIFont.systemFont(ofSize:Constants.ColumnTitle.fontSize, weight:UIFont.Weight.bold)
+        labelName.font = UIFont.systemFont(ofSize:Constants.ColumnTitle.fontSize, weight:UIFont.Weight.medium)
         self.labelName = labelName
         
         self.addSubview(labelName)
