@@ -9,23 +9,40 @@ class Serialise:SerialiseProtocol {
     }
     
     func makeDataFrom(board:BoardProtocol) throws -> Data {
-        try self.makeDictionaryFrom(board:board)
+        self.makeDictionaryFrom(board:board)
         return try self.makeData()
     }
     
     func makeDataFrom(project:ProjectProtocol) throws -> Data {
-        try self.makeDictionaryFrom(project:project)
+        self.makeDictionaryFrom(project:project)
         return try self.makeData()
     }
     
-    private func makeDictionaryFrom(board:BoardProtocol) throws {
+    private func makeDictionaryFrom(board:BoardProtocol) {
         self.dictionary[RepositoryConstants.Keys.Shared.identifier] = board.identifier
     }
     
-    private func makeDictionaryFrom(project:ProjectProtocol) throws {
+    private func makeDictionaryFrom(project:ProjectProtocol) {
         self.dictionary[RepositoryConstants.Keys.Shared.identifier] = project.identifier
         self.dictionary[RepositoryConstants.Keys.Shared.created] = project.created
         self.dictionary[RepositoryConstants.Keys.Project.name] = project.name
+        self.dictionary[RepositoryConstants.Keys.Project.columns] = self.makeColumnArrayFrom(project:project)
+    }
+    
+    private func makeColumnArrayFrom(project:ProjectProtocol) -> [[String:Any]] {
+        var array:[[String:Any]] = []
+        project.iterate { (column:ColumnProtocol) in
+            array.append(self.makeDictionaryFrom(column:column))
+        }
+        return array
+    }
+    
+    private func makeDictionaryFrom(column:ColumnProtocol) -> [String:Any] {
+        var dictionary:[String:Any] = [:]
+        dictionary[RepositoryConstants.Keys.Shared.identifier] = column.identifier
+        dictionary[RepositoryConstants.Keys.Shared.created] = column.created
+        dictionary[RepositoryConstants.Keys.Column.name] = column.name
+        return dictionary
     }
     
     private func makeData() throws -> Data {
