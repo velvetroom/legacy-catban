@@ -12,6 +12,7 @@ class PresenterOutletsLoader {
         let viewBase:ViewBase = self.view.viewBase
         self.outlets.view = self.view
         self.outlets.list = viewBase.viewList
+        self.outlets.selector = viewBase.viewSelector
         self.outlets.menu = viewBase.viewMenu
         self.outlets.empty = viewBase.viewEmpty
         self.outlets.renamer = viewBase.viewRenamer

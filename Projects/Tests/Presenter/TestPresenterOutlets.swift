@@ -33,4 +33,9 @@ class TestPresenterOutlets:XCTestCase {
         self.presenter.view = View()
         XCTAssertNil(self.presenter.view, "Retains")
     }
+    
+    func testNotRetainingSelector() {
+        self.presenter.selector = ViewListSelector()
+        XCTAssertNil(self.presenter.selector, "Retains")
+    }
 }

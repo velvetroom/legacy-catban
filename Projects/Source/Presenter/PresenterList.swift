@@ -38,10 +38,13 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func updateSelector() {
-        guard
-            let cell:UICollectionViewCell = self.centerCell
-        else { return }
-        self.view.layoutSelectorY.constant = cell.center.y - self.view.contentOffset.y
+        var centreY:CGFloat
+        if let cell:UICollectionViewCell = self.centerCell {
+            centreY = cell.center.y
+        } else {
+            centreY = self.view.bounds.midY
+        }
+        self.view.layoutSelectorY.constant = centreY - self.view.contentOffset.y
     }
     
     func selectCentreCell() {

@@ -65,6 +65,7 @@ extension ViewBase {
     
     func factorySelector() {
         let viewSelector:ViewListSelector = ViewListSelector()
+        self.viewSelector = viewSelector
         self.insertSubview(viewSelector, belowSubview:self.viewList)
         
         self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(equalTo:self.viewList.topAnchor)

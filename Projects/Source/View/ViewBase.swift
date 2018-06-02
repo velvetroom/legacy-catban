@@ -4,6 +4,7 @@ import Shared
 class ViewBase:UIView {
     weak var viewBar:ViewBar!
     weak var viewList:ViewList!
+    weak var viewSelector:ViewListSelector!
     weak var viewMenu:ViewMenu!
     weak var viewEmpty:ViewEmpty!
     weak var viewRenamer:ViewRenamer!

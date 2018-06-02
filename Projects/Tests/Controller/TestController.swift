@@ -90,6 +90,17 @@ class TestController:XCTestCase {
         }
         
         self.controller.update(project:String(), with:String())
-        XCTAssertTrue(called, "Failed to delete")
+        XCTAssertTrue(called, "Failed to save")
+    }
+    
+    func testAddSavesProject() {
+        var called:Bool = false
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        let _:ProjectProtocol = self.controller.addProject()
+        XCTAssertTrue(called, "Failed to save")
     }
 }

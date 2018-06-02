@@ -50,6 +50,7 @@ class TestPresenter:XCTestCase {
     func testLoadOutlets() {
         self.presenter.presenterDidLoadWith(view:self.view)
         XCTAssertNotNil(self.presenter.outlets.list, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.selector, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.menu, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.empty, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.renamer, "Not loaded")

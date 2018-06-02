@@ -2,6 +2,7 @@ import UIKit
 
 struct ViewModelList:ViewModelProtocol {
     var items:[ViewModelListItem]
+    let selectorHidden:Bool
     let listHidden:Bool
     let emptyHidden:Bool
     let menuEnabled:Bool
@@ -9,6 +10,7 @@ struct ViewModelList:ViewModelProtocol {
     
     init() {
         self.items = []
+        self.selectorHidden = false
         self.listHidden = false
         self.emptyHidden = true
         self.menuEnabled = true
