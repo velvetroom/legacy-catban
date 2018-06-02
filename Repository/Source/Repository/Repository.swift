@@ -35,7 +35,9 @@ public class Repository:RepositoryProtocol {
     }
     
     public func delete(project:ProjectProtocol) {
-        
+        self.dispatchQueue.async {
+            self.backgroundDelete(project:project)
+        }
     }
     
     private func loadProjectsOn(board:BoardProtocol) {
@@ -73,5 +75,9 @@ public class Repository:RepositoryProtocol {
         } catch {
             return
         }
+    }
+    
+    private func backgroundDelete(project:ProjectProtocol) {
+        do { try self.file.deleteProjectWith(identifier:project.identifier) } catch { }
     }
 }

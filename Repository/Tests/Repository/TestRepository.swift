@@ -46,6 +46,19 @@ class TestRepository:XCTestCase {
         XCTAssertFalse(board.firstProject!.identifier.isEmpty, "Invalid identifier")
     }
     
+    func testDeleteProject() {
+        let expect:XCTestExpectation = expectation(description:"Waiting for delete")
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let file:MockRepositoryFile = MockRepositoryFile()
+        file.onDeleteProject = { (identifier:String) in
+            XCTAssertEqual(project.identifier, identifier, "Invalid identifier")
+            expect.fulfill()
+        }
+        
+        self.performDelete(project:project, file:file)
+        waitForExpectations(timeout:0.3) { (error:Error?) in }
+    }
+    
     private func saveMockBoard() {
         let data:Data = FileLoader.load(fileNamed:Constants.fileBoard)
         self.write(data:data, to:self.model.file.url.boardUrl)
@@ -55,6 +68,12 @@ class TestRepository:XCTestCase {
         let data:Data = FileLoader.load(fileNamed:Constants.fileProject)
         let url:URL = self.model.file.url.projectsUrl.appendingPathComponent(Constants.projectFileName)
         self.write(data:data, to:url)
+    }
+    
+    private func performDelete(project:ProjectProtocol, file:RepositoryFile) {
+        let model:Repository = Repository()
+        model.file = file
+        model.delete(project:project)
     }
     
     private func write(data:Data, to url:URL) {
