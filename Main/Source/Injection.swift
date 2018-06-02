@@ -7,6 +7,7 @@ import Home
 import Card
 import Column
 import Projects
+import Template
 
 class Injection {
     func load() {
@@ -18,6 +19,7 @@ class Injection {
         Configuration.controllerColumnType = Column.Controller.self
         Configuration.controllerProjectsType = Projects.Controller.self
         Configuration.canvasType = Canvas.self
+        Configuration.templateFactory = KanbanFactory.self
         Configuration.directoryRoot = RepositoryConstants.Url.directoryRoot
     }
 }

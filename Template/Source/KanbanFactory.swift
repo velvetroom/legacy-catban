@@ -2,7 +2,7 @@ import Foundation
 import Board
 import Shared
 
-public class KanbanFactory {
+public class KanbanFactory:TemplateFactoryProtocol {
     public class func newProject() -> ProjectProtocol {
         let project:ProjectProtocol = kanbanProject()
         project.add(column:backlogColumn())

@@ -20,6 +20,7 @@
 		DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */; };
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */; };
+		DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */; };
 		DA978FA920A19852002461E6 /* ControllerProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */; };
@@ -68,6 +69,7 @@
 		DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBoardProtocol.swift; sourceTree = "<group>"; };
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFactoryProtocol.swift; sourceTree = "<group>"; };
 		DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProjectProtocol.swift; sourceTree = "<group>"; };
 		DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */,
 				DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */,
 				DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */,
+				DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
 				DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
+				DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */,
 				DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */,
 				DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,

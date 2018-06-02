@@ -20,6 +20,7 @@ class TestInjection:XCTestCase {
         XCTAssertNotNil(Configuration.controllerColumnType, "Failed to inject controller column")
         XCTAssertNotNil(Configuration.controllerProjectsType, "Failed to inject controller projects")
         XCTAssertNotNil(Configuration.canvasType, "Failed to inject canvas")
+        XCTAssertNotNil(Configuration.templateFactory, "Failed to inject template factory")
         XCTAssertNotNil(Configuration.directoryRoot, "Failed to inject directory root")
     }
 }

@@ -11,6 +11,7 @@ class TestController:XCTestCase {
     override func setUp() {
         super.setUp()
         Configuration.repositoryBoardType = MockRepositoryBoardProtocol.self
+        Configuration.templateFactory = MockTemplateFactory.self
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
         self.repository = self.controller.repository as? MockRepositoryBoardProtocol
@@ -36,17 +37,15 @@ class TestController:XCTestCase {
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
-    func testFactoredBoardNonEmpty() {
+    func testFactoredBoardFromTemplate() {
         let expect:XCTestExpectation = expectation(description:"Waiting for save board")
         self.repository.error = NSError(domain:String(), code:0)
-        self.repository.onSaveBoard = { (board:BoardProtocol) in
-            XCTAssertGreaterThan(board.countProjects, 0, "Board has not projects")
-            board.iterate { (project:ProjectProtocol) in
-                XCTAssertGreaterThan(project.countColumns, 0, "Project has no columns")
-            }
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.3) {
+            XCTAssertTrue(MockTemplateFactory.templateCalled, "Template factory not used")
             expect.fulfill()
         }
         
+        MockTemplateFactory.templateCalled = false
         self.controller.didLoadPresenter()
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
