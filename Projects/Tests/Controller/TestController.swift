@@ -1,5 +1,6 @@
 import XCTest
 import Board
+import Shared
 @testable import Projects
 
 class TestController:XCTestCase {
@@ -68,5 +69,27 @@ class TestController:XCTestCase {
         
         self.controller.deleteProjectWith(identifier:String())
         XCTAssertTrue(updated, "Not updated")
+    }
+    
+    func testDeleteCallsRepository() {
+        var called:Bool = false
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
+        MockRepositoryProjectProtocol.onDelete = {
+            called = true
+        }
+        
+        self.controller.deleteProjectWith(identifier:String())
+        XCTAssertTrue(called, "Failed to delete")
+    }
+    
+    func testUpdateSavesProject() {
+        var called:Bool = false
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        self.controller.update(project:String(), with:String())
+        XCTAssertTrue(called, "Failed to delete")
     }
 }
