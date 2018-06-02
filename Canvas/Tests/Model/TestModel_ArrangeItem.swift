@@ -5,6 +5,7 @@ class TestModel_ArrangeItem:XCTestCase {
     private var model:Model!
     private var mapDelegate:MapDelegateProtocol!
     private var projectOrder:MockProjectOrderProtocol!
+    private var editor:MockCanvasEditorProtocol!
     private var columnA:MapColumn!
     private var columnB:MapColumn!
     private var item:MapCard!
@@ -65,12 +66,25 @@ class TestModel_ArrangeItem:XCTestCase {
         XCTAssertNotNil(self.columnB.childItem, "Item not added")
     }
     
+    func testArrangeSavesProject() {
+        var called:Bool = false
+        self.model.canvas = editor
+        self.editor.onSave = {
+            called = true
+        }
+        
+        self.model.arrange(item:self.item)
+        XCTAssertTrue(called, "Not saved")
+    }
+    
     private func configureModel() {
         self.model = Model()
         self.mapDelegate = MockMapDelegateProtocol()
         self.projectOrder = MockProjectOrderProtocol()
+        self.editor = MockCanvasEditorProtocol()
         self.model.mapDelegate = self.mapDelegate
         self.model.projectOrder = self.projectOrder
+        self.model.canvas = self.editor
         self.model.columns = [self.columnA, self.columnB]
     }
     

@@ -30,5 +30,6 @@ class Model:ModelProtocol, DragEventProtocol, DragStateChangerProtocol {
     private func afterArrange() {
         self.updateSize()
         self.updateProject()
+        self.canvas.saveProject()
     }
 }

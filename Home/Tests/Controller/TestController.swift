@@ -1,6 +1,7 @@
 import XCTest
 import Shared
 import Canvas
+import Board
 @testable import Home
 
 class TestController:XCTestCase {
@@ -9,6 +10,7 @@ class TestController:XCTestCase {
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.controller = Controller()
     }
     
@@ -24,5 +26,16 @@ class TestController:XCTestCase {
     func testTransitionIsNotRetained() {
         self.controller.transiton = MockTransitionProtocol()
         XCTAssertNil(self.controller.transiton, "Strong retained")
+    }
+    
+    func testSavesProject() {
+        var called:Bool = false
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        self.controller.project = MockProjectManagedProtocol()
+        self.controller.saveProject()
+        XCTAssertTrue(called, "Failed to save")
     }
 }

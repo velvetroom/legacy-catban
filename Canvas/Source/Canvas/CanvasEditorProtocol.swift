@@ -5,4 +5,5 @@ protocol CanvasEditorProtocol:class {
     func editColumnWith(identifier:String)
     func createNewCard()
     func createNewColumn()
+    func saveProject()
 }

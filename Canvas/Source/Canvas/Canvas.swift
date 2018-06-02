@@ -45,4 +45,8 @@ public class Canvas:CanvasProtocol, CanvasEditorProtocol {
     func createNewColumn() {
         self.delegate.createNewColumn()
     }
+    
+    func saveProject() {
+        self.delegate.saveProject()
+    }
 }

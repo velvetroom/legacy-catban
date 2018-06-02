@@ -41,4 +41,9 @@ public class Controller:ControllerProjectProtocol, CanvasDelegateProtocol {
         board.unmanage(project:project)
         self.transiton.transitionToProjects(board:board)
     }
+    
+    public func saveProject() {
+        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
+        repository.save(project:self.project)
+    }
 }

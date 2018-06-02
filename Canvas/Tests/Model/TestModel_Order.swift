@@ -7,6 +7,7 @@ class TestModel_Order:XCTestCase {
     private var project:MockProjectOrderProtocol!
     private var mapDelegate:MockMapDelegateProtocol!
     private var card:MapCard!
+    private var editor:MockCanvasEditorProtocol!
     private struct inConstants {
         static let identifierA:String = "asd"
         static let identifierB:String = "lorem ipsum"
@@ -19,8 +20,10 @@ class TestModel_Order:XCTestCase {
         self.model = Model()
         self.project = MockProjectOrderProtocol()
         self.mapDelegate = MockMapDelegateProtocol()
+        self.editor = MockCanvasEditorProtocol()
         self.model.projectOrder = self.project
         self.model.mapDelegate = self.mapDelegate
+        self.model.canvas = self.editor
         let columnA:MapColumn = MapColumn()
         columnA.identifier = inConstants.identifierA
         let columnB:MapColumn = MapColumn()

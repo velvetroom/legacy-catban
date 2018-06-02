@@ -6,6 +6,7 @@ class MockCanvasDelegateProtocol:CanvasDelegateProtocol {
     var onEditColumnWithIdentifier:(() -> Void)?
     var onCreateNewCard:(() -> Void)?
     var onCreateNewColumn:(() -> Void)?
+    var onSave:(() -> Void)?
     
     func editCardWith(identifier:String) {
         self.onEditCardWithIdentifier?()
@@ -21,5 +22,9 @@ class MockCanvasDelegateProtocol:CanvasDelegateProtocol {
     
     func createNewColumn() {
         self.onCreateNewColumn?()
+    }
+    
+    func saveProject() {
+        self.onSave?()
     }
 }

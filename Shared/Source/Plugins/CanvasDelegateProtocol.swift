@@ -5,4 +5,5 @@ public protocol CanvasDelegateProtocol:class {
     func editColumnWith(identifier:String)
     func createNewCard()
     func createNewColumn()
+    func saveProject()
 }
