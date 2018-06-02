@@ -1,5 +1,6 @@
 import XCTest
 import Board
+import Shared
 @testable import Column
 
 class TestController:XCTestCase {
@@ -10,6 +11,7 @@ class TestController:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
         self.project = MockProjectManagedProtocol()
@@ -66,5 +68,25 @@ class TestController:XCTestCase {
         
         self.controller.delete()
         XCTAssertTrue(transition, "Not transitioned")
+    }
+    
+    func testDoneSavesProject() {
+        var called:Bool = false
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        self.controller.done()
+        XCTAssertTrue(called, "Failed to save")
+    }
+    
+    func testDeleteSavesProject() {
+        var called:Bool = false
+        MockRepositoryProjectProtocol.onSave = {
+            called = true
+        }
+        
+        self.controller.delete()
+        XCTAssertTrue(called, "Failed to save")
     }
 }
