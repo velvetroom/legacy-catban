@@ -26,13 +26,18 @@ class RepositoryFile {
     }
     
     func writeProject(data:Data, with identifier:String) throws {
-        let url:URL = self.url.projectsUrl.appendingPathComponent(identifier).appendingPathExtension(
-            RepositoryConstants.Url.fileExtension)
-        try data.write(to:url, options:Data.WritingOptions.atomic)
+        try data.write(to:self.projectUrlFor(identifier:identifier), options:Data.WritingOptions.atomic)
     }
     
     func delete() {
         do { try FileManager.default.removeItem(at:self.url.directoryUrl) } catch { }
+    }
+    
+    func deleteProjectWith(identifier:String) throws {
+        let url:URL = self.projectUrlFor(identifier:identifier)
+        if FileManager.default.fileExists(atPath:url.path) {
+            try FileManager.default.removeItem(at:url)
+        }
     }
     
     private func projectsDataWith(fileNames:[String]) -> [Data] {
@@ -76,5 +81,10 @@ class RepositoryFile {
         var strings:[String] = []
         do { strings = try FileManager.default.contentsOfDirectory(atPath:self.url.projectsUrl.path) } catch { }
         return strings
+    }
+    
+    private func projectUrlFor(identifier:String) -> URL {
+        return self.url.projectsUrl.appendingPathComponent(identifier).appendingPathExtension(
+            RepositoryConstants.Url.fileExtension)
     }
 }

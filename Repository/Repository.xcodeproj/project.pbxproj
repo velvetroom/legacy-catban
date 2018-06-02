@@ -22,6 +22,7 @@
 		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
 		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
 		DA66D67520C26B57006D3905 /* TestRepository_Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66D67420C26B57006D3905 /* TestRepository_Save.swift */; };
+		DA66D67720C271FD006D3905 /* TestRepositoryFile_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66D67620C271FD006D3905 /* TestRepositoryFile_Delete.swift */; };
 		DA8C60CF20C0362D00F852A6 /* RepositoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C60CE20C0362D00F852A6 /* RepositoryFile.swift */; };
 		DA8C60D120C0365C00F852A6 /* TestRepositoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C60D020C0365C00F852A6 /* TestRepositoryFile.swift */; };
 		DA8C60D320C037A100F852A6 /* RepositoryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C60D220C037A100F852A6 /* RepositoryConstants.swift */; };
@@ -68,6 +69,7 @@
 		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA66D67420C26B57006D3905 /* TestRepository_Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_Save.swift; sourceTree = "<group>"; };
+		DA66D67620C271FD006D3905 /* TestRepositoryFile_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryFile_Delete.swift; sourceTree = "<group>"; };
 		DA8C60CE20C0362D00F852A6 /* RepositoryFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFile.swift; sourceTree = "<group>"; };
 		DA8C60D020C0365C00F852A6 /* TestRepositoryFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoryFile.swift; sourceTree = "<group>"; };
 		DA8C60D220C037A100F852A6 /* RepositoryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConstants.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */,
 				DA66D67420C26B57006D3905 /* TestRepository_Save.swift */,
 				DA8C60D020C0365C00F852A6 /* TestRepositoryFile.swift */,
+				DA66D67620C271FD006D3905 /* TestRepositoryFile_Delete.swift */,
 				DA8C60D820C03FC900F852A6 /* TestRepositoryFileFactory.swift */,
 				DA8C60D420C0383200F852A6 /* TestRepositoryConstants.swift */,
 			);
@@ -407,6 +410,7 @@
 				DA66D67520C26B57006D3905 /* TestRepository_Save.swift in Sources */,
 				DA8C60D520C0383200F852A6 /* TestRepositoryConstants.swift in Sources */,
 				DA8C60D920C03FC900F852A6 /* TestRepositoryFileFactory.swift in Sources */,
+				DA66D67720C271FD006D3905 /* TestRepositoryFile_Delete.swift in Sources */,
 				DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */,
 				DA8C60D120C0365C00F852A6 /* TestRepositoryFile.swift in Sources */,
 				DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */,
