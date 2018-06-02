@@ -28,4 +28,8 @@ public struct RepositoryConstants {
             static let content:String = "content"
         }
     }
+    
+    struct Shared {
+        static let queueIdentifier:String = "iturbide.catban.repository"
+    }
 }

@@ -32,11 +32,11 @@ class TestRepository:XCTestCase {
         XCTAssertEqual(board.countProjects, 0, "Should have no projects")
     }
     
-    func testBoardThrows() {
+    func testLoadBoardThrows() {
         XCTAssertThrowsError(try self.model.loadBoard(), "Should throw")
     }
     
-    func testBoardWithProjects() {
+    func testLoadBoardWithProjects() {
         self.saveMockBoard()
         self.saveProject()
         var board:BoardProtocol!

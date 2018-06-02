@@ -5,10 +5,13 @@ import Board
 public class Repository:RepositoryProtocol {
     var file:RepositoryFile
     var deserialise:DeserialiseProtocol
+    var dispatchQueue:DispatchQueue
     
     public required init() {
         self.file = RepositoryFile()
         self.deserialise = Deserialise()
+        self.dispatchQueue = DispatchQueue.privateBackgroundWith(
+            identifier:RepositoryConstants.Shared.queueIdentifier)
     }
     
     public func loadBoard() throws -> BoardProtocol {
@@ -19,16 +22,20 @@ public class Repository:RepositoryProtocol {
         return board
     }
     
-    public func save(board:BoardProtocol) throws {
-        throw ErrorRepository.boardNotFound
+    public func save(board:BoardProtocol) {
+        self.dispatchQueue.async {
+            self.backgroundSave(board:board)
+        }
     }
     
-    public func save(project:ProjectProtocol) throws {
-        throw ErrorRepository.boardNotFound
+    public func save(project:ProjectProtocol) {
+        self.dispatchQueue.async {
+            self.backgroundSave(project:project)
+        }
     }
     
-    public func delete(project:ProjectProtocol) throws {
-        throw ErrorRepository.boardNotFound
+    public func delete(project:ProjectProtocol) {
+        
     }
     
     private func loadProjectsOn(board:BoardProtocol) {
@@ -42,6 +49,29 @@ public class Repository:RepositoryProtocol {
                 continue
             }
             board.add(project:project)
+        }
+    }
+    
+    private func backgroundSave(board:BoardProtocol) {
+        let serialise:SerialiseProtocol = Serialise()
+        do {
+            let data:Data = try serialise.makeDataFrom(board:board)
+            try self.file.writeBoard(data:data)
+        } catch {
+            return
+        }
+        board.iterate { (project:ProjectProtocol) in
+            self.backgroundSave(project:project)
+        }
+    }
+    
+    private func backgroundSave(project:ProjectProtocol) {
+        let serialise:SerialiseProtocol = Serialise()
+        do {
+            let data:Data = try serialise.makeDataFrom(project:project)
+            try self.file.writeProject(data:data, with:project.identifier)
+        } catch {
+            return
         }
     }
 }
