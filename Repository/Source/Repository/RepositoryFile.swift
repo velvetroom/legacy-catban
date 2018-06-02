@@ -26,6 +26,7 @@ class RepositoryFile {
     }
     
     func writeProject(data:Data, with identifier:String) throws {
+        try self.deleteProjectWith(identifier:identifier)
         try data.write(to:self.projectUrlFor(identifier:identifier), options:Data.WritingOptions.atomic)
     }
     
