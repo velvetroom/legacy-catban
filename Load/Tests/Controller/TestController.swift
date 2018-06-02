@@ -5,23 +5,24 @@ import XCTest
 
 class TestController:XCTestCase {
     private var controller:Controller!
-    private var repository:MockRepositoryBoardProtocol!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.repositoryBoardType = MockRepositoryBoardProtocol.self
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         Configuration.templateFactory = MockTemplateFactory.self
+        MockRepositoryBoardProtocol.error = nil
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
-        self.repository = self.controller.repository as? MockRepositoryBoardProtocol
         self.controller.transiton = self.transition
     }
     
     func testLoadBoard() {
         let expect:XCTestExpectation = expectation(description:"Waiting for board loaded")
-        self.repository.onLoadBoard = {
+        MockRepositoryBoardProtocol.onLoadBoard = {
             XCTAssertFalse(Thread.isMainThread, "Should not be called on main thread")
+            MockRepositoryBoardProtocol.onLoadBoard = nil
             expect.fulfill()
         }
         
@@ -31,9 +32,10 @@ class TestController:XCTestCase {
     
     func testFactoredBoardFromTemplate() {
         let expect:XCTestExpectation = expectation(description:"Waiting for save board")
-        self.repository.error = NSError(domain:String(), code:0)
+        MockRepositoryBoardProtocol.error = NSError(domain:String(), code:0)
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 0.3) {
             XCTAssertTrue(MockTemplateFactory.templateCalled, "Template factory not used")
+            MockRepositoryBoardProtocol.error = nil
             expect.fulfill()
         }
         
@@ -44,8 +46,23 @@ class TestController:XCTestCase {
     
     func testSaveFactoredBoard() {
         let expect:XCTestExpectation = expectation(description:"Waiting for save board")
-        self.repository.error = NSError(domain:String(), code:0)
-        self.repository.onSaveBoard = { (board:BoardProtocol) in
+        MockRepositoryBoardProtocol.error = NSError(domain:String(), code:0)
+        MockRepositoryBoardProtocol.onSaveBoard = { (board:BoardProtocol) in
+            MockRepositoryBoardProtocol.onSaveBoard = nil
+            MockRepositoryBoardProtocol.error = nil
+            expect.fulfill()
+        }
+        
+        self.controller.didLoadPresenter()
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testSaveFactoredProject() {
+        let expect:XCTestExpectation = expectation(description:"Waiting for save board")
+        MockRepositoryBoardProtocol.error = NSError(domain:String(), code:0)
+        MockRepositoryProjectProtocol.onSave = {
+            MockRepositoryBoardProtocol.error = nil
+            MockRepositoryProjectProtocol.onSave = nil
             expect.fulfill()
         }
         

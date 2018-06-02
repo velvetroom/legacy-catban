@@ -4,16 +4,16 @@ import Foundation
 
 class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
     static var board:BoardProtocol = BoardFactory.newBoard()
-    var onLoadBoard:(() -> Void)?
-    var onSaveBoard:((BoardProtocol) -> Void)?
-    var error:Error?
+    static var onLoadBoard:(() -> Void)?
+    static var onSaveBoard:((BoardProtocol) -> Void)?
+    static var error:Error?
     
     required init() { }
     
     func loadBoard() throws -> BoardProtocol {
-        self.onLoadBoard?()
+        MockRepositoryBoardProtocol.onLoadBoard?()
         
-        if let error:Error = self.error {
+        if let error:Error = MockRepositoryBoardProtocol.error {
             throw error
         }
         
@@ -21,6 +21,6 @@ class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
     }
     
     func save(board:BoardProtocol) {
-        self.onSaveBoard?(board)
+        MockRepositoryBoardProtocol.onSaveBoard?(board)
     }
 }

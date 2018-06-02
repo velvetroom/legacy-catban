@@ -5,15 +5,14 @@ import XCTest
 
 class TestController_Transitions:XCTestCase {
     private var controller:Controller!
-    private var repository:MockRepositoryBoardProtocol!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.repositoryBoardType = MockRepositoryBoardProtocol.self
+        MockRepositoryBoardProtocol.error = nil
         self.controller = Controller()
         self.transition = MockTransitionProtocol()
-        self.repository = self.controller.repository as? MockRepositoryBoardProtocol
         self.controller.transiton = self.transition
     }
     

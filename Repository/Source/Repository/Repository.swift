@@ -62,9 +62,6 @@ public class Repository:RepositoryProtocol {
         } catch {
             return
         }
-        board.iterate { (project:ProjectProtocol) in
-            self.backgroundSave(project:project)
-        }
     }
     
     private func backgroundSave(project:ProjectProtocol) {

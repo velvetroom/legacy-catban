@@ -6,11 +6,9 @@ public class Controller:ControllerProtocol {
     public var presenter:PresenterProtocol
     public weak var transiton:TransitionProtocol!
     var dispatchQueue:DispatchQueue
-    var repository:RepositoryBoardProtocol
     
     public required init() {
         self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:ControllerConstants.queueIdentifier)
-        self.repository = Configuration.repositoryBoardType.init()
         let presenter:Presenter = Presenter()
         self.presenter = presenter
         presenter.delegate = self
@@ -35,11 +33,12 @@ public class Controller:ControllerProtocol {
     }
     
     private func loadBoard() {
+        let repository:RepositoryBoardProtocol = Configuration.repositoryBoardType.init()
         let board:BoardProtocol
         do {
-            board = try self.repository.loadBoard()
+            board = try repository.loadBoard()
         } catch {
-            board = self.newBoard()
+            board = self.firstTime()
         }
         self.boardLoaded(board:board)
     }
@@ -60,11 +59,32 @@ public class Controller:ControllerProtocol {
         self.open(project:managed)
     }
     
-    private func newBoard() -> BoardProtocol {
-        let kanbanProject:ProjectProtocol = Configuration.templateFactory.newProject()
-        let board:BoardProtocol = BoardFactory.newBoard()
-        board.add(project:kanbanProject)
-        self.repository.save(board:board)
+    private func firstTime() -> BoardProtocol {
+        let board:BoardProtocol = self.newBoard()
+        let project:ProjectProtocol = self.newProject()
+        board.add(project:project)
         return board
+    }
+    
+    private func newBoard() -> BoardProtocol {
+        let board:BoardProtocol = BoardFactory.newBoard()
+        self.save(board:board)
+        return board
+    }
+    
+    private func newProject() -> ProjectProtocol {
+        let project:ProjectProtocol = Configuration.templateFactory.newProject()
+        self.save(project:project)
+        return project
+    }
+    
+    private func save(board:BoardProtocol) {
+        let repository:RepositoryBoardProtocol = Configuration.repositoryBoardType.init()
+        repository.save(board:board)
+    }
+    
+    private func save(project:ProjectProtocol) {
+        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
+        repository.save(project:project)
     }
 }
