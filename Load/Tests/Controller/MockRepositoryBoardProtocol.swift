@@ -3,6 +3,7 @@ import Foundation
 @testable import Board
 
 class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
+    static var board:BoardProtocol = BoardFactory.newBoard()
     var onLoadBoard:(() -> Void)?
     var onSaveBoard:((BoardProtocol) -> Void)?
     var error:Error?
@@ -16,7 +17,7 @@ class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
             throw error
         }
         
-        return BoardFactory.newBoard()
+        return MockRepositoryBoardProtocol.board
     }
     
     func save(board:BoardProtocol) {

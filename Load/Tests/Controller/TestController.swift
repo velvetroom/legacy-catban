@@ -18,14 +18,6 @@ class TestController:XCTestCase {
         self.controller.transiton = self.transition
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.controller, "Failed to load controller")
-        XCTAssertNotNil(self.controller.presenter.delegate, "Failed to assign delegate")
-        XCTAssertNotNil(self.controller.dispatchQueue, "Failed to load dispatch queue")
-        XCTAssertNotNil(self.controller.repository, "Failed to load repository")
-        XCTAssertNotNil(self.transition, "Failed to load transition")
-    }
-    
     func testLoadBoard() {
         let expect:XCTestExpectation = expectation(description:"Waiting for board loaded")
         self.repository.onLoadBoard = {
@@ -58,22 +50,6 @@ class TestController:XCTestCase {
         }
         
         self.controller.didLoadPresenter()
-        self.waitForExpectations(timeout:0.3, handler:nil)
-    }
-    
-    func testBoardLoadedTransitionsToHome() {
-        let expect:XCTestExpectation = expectation(description:"Waiting transition")
-        self.transition.onTransitionToHome = { (project:ProjectManagedProtocol) in
-            XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
-            expect.fulfill()
-        }
-        
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
-            let board:BoardProtocol = BoardFactory.newBoard()
-            let project:ProjectProtocol = ProjectFactory.newProject()
-            let managed:ProjectManagedProtocol = board.manage(project:project)
-            self?.controller.projectLoaded(project:managed)
-        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     

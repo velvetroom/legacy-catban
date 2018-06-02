@@ -22,9 +22,15 @@ public class Controller:ControllerProtocol {
         }
     }
     
-    func projectLoaded(project:ProjectManagedProtocol) {
+    func open(project:ProjectManagedProtocol) {
         DispatchQueue.main.async { [weak self] in
             self?.transiton.transitionToHome(project:project)
+        }
+    }
+    
+    func open(board:BoardProjectsProtocol) {
+        DispatchQueue.main.async { [weak self] in
+            self?.transiton.transitionToProjects(board:board)
         }
     }
     
@@ -39,12 +45,19 @@ public class Controller:ControllerProtocol {
     }
     
     private func boardLoaded(board:BoardProtocol) {
+        if board.countProjects == 1 {
+            self.boardWithOneProject(board:board)
+        } else {
+            self.open(board:board)
+        }
+    }
+    
+    private func boardWithOneProject(board:BoardProtocol) {
         guard
-            board.countProjects > 0,
             let project:ProjectProtocol = board.firstProject
         else { return }
         let managed:ProjectManagedProtocol = board.manage(project:project)
-        self.projectLoaded(project:managed)
+        self.open(project:managed)
     }
     
     private func newBoard() -> BoardProtocol {
