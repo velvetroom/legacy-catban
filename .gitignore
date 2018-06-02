@@ -16,7 +16,7 @@
 .dSYM.zip
 .dSYM
 .swp
-*/UserInterfaceState.xcuserstate
+*.xcuserstate
 xcdebugger
 ~.nib/
 *~
