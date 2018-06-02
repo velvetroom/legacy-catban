@@ -1,0 +1,3 @@
+ErrorRepository_FileNotFound="Error repository: File not found";
+ErrorRepository_boardNotFound="Error repository: Board not found";
+ErrorRepository_corruptedData="Error repository: Corrupted data";

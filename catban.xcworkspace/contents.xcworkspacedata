@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Main/Main.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Shared/Shared.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Board/Board.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Repository/Repository.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Template/Template.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Canvas/Canvas.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Load/Load.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Home/Home.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Card/Card.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Column/Column.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Projects/Projects.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Design">
+   </FileRef>
+   <FileRef
+      location = "group:Scripts">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>

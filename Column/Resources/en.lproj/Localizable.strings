@@ -1,0 +1,6 @@
+ViewInput_titleLabel="Column";
+ViewInput_subtitleLabel="How this column will be shown on the board";
+ViewInput_doneButton="DONE";
+PresenterDelete_alert_title="Delete column?";
+PresenterDelete_alert_confirm="Delete";
+PresenterDelete_alert_cancel="Cancel";
