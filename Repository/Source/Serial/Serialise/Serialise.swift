@@ -42,6 +42,23 @@ class Serialise:SerialiseProtocol {
         dictionary[RepositoryConstants.Keys.Shared.identifier] = column.identifier
         dictionary[RepositoryConstants.Keys.Shared.created] = column.created
         dictionary[RepositoryConstants.Keys.Column.name] = column.name
+        dictionary[RepositoryConstants.Keys.Column.cards] = self.makeCardArrayFrom(column:column)
+        return dictionary
+    }
+    
+    private func makeCardArrayFrom(column:ColumnProtocol) -> [[String:Any]] {
+        var array:[[String:Any]] = []
+        column.iterate { (card:CardProtocol) in
+            array.append(self.makeDictionaryFrom(card:card))
+        }
+        return array
+    }
+    
+    private func makeDictionaryFrom(card:CardProtocol) -> [String:Any] {
+        var dictionary:[String:Any] = [:]
+        dictionary[RepositoryConstants.Keys.Shared.identifier] = card.identifier
+        dictionary[RepositoryConstants.Keys.Shared.created] = card.created
+        dictionary[RepositoryConstants.Keys.Card.content] = card.content
         return dictionary
     }
     
