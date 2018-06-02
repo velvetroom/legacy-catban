@@ -19,11 +19,7 @@ class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
         return BoardFactory.newBoard()
     }
     
-    func save(board:BoardProtocol) throws {
+    func save(board:BoardProtocol) {
         self.onSaveBoard?(board)
-        
-        if let error:Error = self.error {
-            throw error
-        }
     }
 }

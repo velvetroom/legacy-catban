@@ -52,7 +52,7 @@ public class Controller:ControllerProtocol {
         let kanbanProject:ProjectProtocol = KanbanFactory.newProject()
         let board:BoardProtocol = BoardFactory.newBoard()
         board.add(project:kanbanProject)
-        do { try self.repository.save(board:board) } catch { }
+        self.repository.save(board:board)
         return board
     }
 }
