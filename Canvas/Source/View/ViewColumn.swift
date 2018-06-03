@@ -49,6 +49,7 @@ class ViewColumn:ViewItem {
         labelName.leftAnchor.constraint(
             equalTo:self.leftAnchor, constant:Constants.ColumnTitle.labelLeft).isActive = true
         labelName.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+        labelName.rightAnchor.constraint(lessThanOrEqualTo:self.rightAnchor).isActive = true
         labelName.heightAnchor.constraint(equalToConstant:Constants.ColumnTitle.labelHeight).isActive = true
     }
 }
