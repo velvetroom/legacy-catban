@@ -1,0 +1,6 @@
+KanbanFactory_project_name="Catban";
+KanbanFactory_backlogColumn_name="Backlog";
+KanbanFactory_progressColumn_name="Progress";
+KanbanFactory_doneColumn_name="Done";
+KanbanFactory_kanbanIntro_content="This is the traditional Kanban arrangement of 3 columns: Backlog, Progress and Done.";
+KanbanFactory_editProject_content="Edit and play around with this project or create a new one.";

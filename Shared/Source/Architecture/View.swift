@@ -1,0 +1,31 @@
+import UIKit
+
+open class View:UIViewController, ViewProtocol {
+    open weak var delegate:ViewDelegateProtocol?
+    
+    public required init() {
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    public required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configureView()
+        self.didLoad()
+        self.delegate?.didLoad(view:self)
+    }
+    
+    open override func viewDidAppear(_ animated:Bool) {
+        super.viewDidAppear(animated)
+        self.delegate?.didAppear(view:self)
+    }
+    
+    open func didLoad() { }
+    
+    private func configureView() {
+        self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
+    }
+}

@@ -16,8 +16,9 @@
 .dSYM.zip
 .dSYM
 .swp
+*.xcuserstate
+xcdebugger
 ~.nib/
 *~
 timeline.xctimeline
 playground.xcworkspace
-xcuserdata/
