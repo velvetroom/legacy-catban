@@ -17,7 +17,7 @@ class View:Shared.View, UITextViewDelegate {
     private func configureNavigationItem() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
                                                          target:self, action:#selector(self.selectorDone(button:)))
-        let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconTrash, in:type(of:self))
+        let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
                                                            action:#selector(self.selectorDelete(button:)))

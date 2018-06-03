@@ -2,7 +2,7 @@ import UIKit
 
 struct ViewConstants {
     struct Navigation {
-        static let iconTrash:String = "assetTrash"
+        static let iconDelete:String = "assetDelete"
     }
     
     struct Text {

@@ -48,7 +48,7 @@ class ViewInput:UIView {
         let line:UIView = UIView()
         line.isUserInteractionEnabled = false
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.backgroundColor = UIColor(white:0.9, alpha:1)
+        line.backgroundColor = UIColor(white:0.8, alpha:1)
         
         self.addSubview(line)
         
@@ -75,7 +75,7 @@ class ViewInput:UIView {
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
-        label.textColor = UIColor(white:0.8, alpha:1)
+        label.textColor = UIColor(white:0.7, alpha:1)
         label.font = UIFont.systemFont(ofSize:ViewConstants.Subtitle.fontSize, weight:UIFont.Weight.regular)
         label.text = String.localized(key:"ViewInput_subtitleLabel", in:type(of:self))
         label.numberOfLines = 0

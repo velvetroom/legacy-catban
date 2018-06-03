@@ -64,9 +64,16 @@ class Presenter:PresenterProtocol {
     }
     
     private func registerForNotifications() {
-        NotificationCenter.default.addObserver(self,
-                                               selector:#selector(self.notifiedKeyboardChanged(notification:)),
-                                               name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
+        NotificationCenter.default.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
+            self?.keyboardChanged(notification:notification)
+        }
+    }
+    
+    private func keyboardChanged(notification:Notification) {
+        let keyboard:PresenterKeyboard = PresenterKeyboard()
+        keyboard.outlets = self.outlets
+        keyboard.notification = notification
+        keyboard.adjustOutlets()
     }
     
     private func updateViewModel() {
@@ -86,12 +93,5 @@ class Presenter:PresenterProtocol {
     
     private func updateTextWith(viewModel:ViewModelText) {
         self.outlets.viewText?.text = viewModel.content
-    }
-    
-    @objc private func notifiedKeyboardChanged(notification:Notification) {
-        let keyboard:PresenterKeyboard = PresenterKeyboard()
-        keyboard.outlets = self.outlets
-        keyboard.notification = notification
-        keyboard.adjustOutlets()
     }
 }

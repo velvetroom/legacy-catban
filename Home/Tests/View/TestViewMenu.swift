@@ -12,11 +12,6 @@ class TestViewMenu:XCTestCase {
         self.view.presenter = self.presenter
     }
     
-    func testNotRetainingBase() {
-        self.view.viewBase = ViewMenuBase()
-        XCTAssertNil(self.view.viewBase, "Retains")
-    }
-    
     func testRetainsPresenter() {
         self.view.presenter = PresenterMenu()
         XCTAssertNotNil(self.view.presenter, "Not retaining")

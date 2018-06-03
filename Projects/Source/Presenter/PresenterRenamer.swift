@@ -25,11 +25,12 @@ class PresenterRenamer {
     }
     
     private func registerForNotifications() {
-        NotificationCenter.default.addObserver(self,selector:#selector(self.notifiedKeyboardChanged(notification:)),
-                                               name:NSNotification.Name.UIKeyboardWillChangeFrame, object:nil)
+        NotificationCenter.default.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
+            self?.keyboardChanged(notification:notification)
+        }
     }
     
-    @objc private func notifiedKeyboardChanged(notification:Notification) {
+    private func keyboardChanged(notification:Notification) {
         let keyboardHeight:CGFloat = self.keyboardHeightFrom(notification:notification)
         let duration:TimeInterval = self.animationDurationFrom(notification:notification)
         self.animateText(keyboardHeight:keyboardHeight, duration:duration)

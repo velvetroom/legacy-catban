@@ -8,7 +8,7 @@ class ViewText:UITextView {
         self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = UIColor.clear
-        self.textColor = UIColor(white:0, alpha:0.4)
+        self.textColor = UIColor.black
         self.tintColor = UIColor.black
         self.bounces = true
         self.alwaysBounceVertical = true
@@ -23,7 +23,7 @@ class ViewText:UITextView {
         self.keyboardType = UIKeyboardType.alphabet
         self.contentInset = UIEdgeInsets.zero
         self.textAlignment = NSTextAlignment.left
-        self.font = UIFont.systemFont(ofSize:ViewConstants.Text.fontSize, weight:UIFont.Weight.regular)
+        self.font = UIFont.systemFont(ofSize:ViewConstants.Text.fontSize, weight:UIFont.Weight.light)
         self.textContainerInset = UIEdgeInsets(
             top:ViewConstants.Text.insets,
             left:ViewConstants.Text.insets,

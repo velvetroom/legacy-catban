@@ -35,7 +35,7 @@ struct ViewConstants {
     
     struct Line {
         static let top:CGFloat = 120
-        static let height:CGFloat = 2
+        static let height:CGFloat = 1
         static let width:CGFloat = 200
     }
     

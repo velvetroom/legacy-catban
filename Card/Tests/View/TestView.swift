@@ -29,7 +29,7 @@ class TestView:XCTestCase {
     }
     
     func testTrashImage() {
-        let image:UIImage = UIImage(name:ViewConstants.Navigation.iconTrash, in:View.self)
+        let image:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:View.self)
         XCTAssertNotNil(image)
     }
     
