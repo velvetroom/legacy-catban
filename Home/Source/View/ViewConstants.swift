@@ -32,9 +32,9 @@ struct ViewConstants {
     }
     
     struct Option {
-        static let size:CGFloat = 100
+        static let size:CGFloat = 75
         static let fontSize:CGFloat = 12
-        static let nameHeight:CGFloat = 14
+        static let nameHeight:CGFloat = 16
         static let alphaOn:CGFloat = 0.2
         static let alphaOff:CGFloat = 1
     }
