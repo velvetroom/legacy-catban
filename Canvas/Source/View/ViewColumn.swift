@@ -20,7 +20,6 @@ class ViewColumn:ViewItem {
     }
     
     override func factoryOutlets() {
-        self.factoryIcon()
         self.factoryLabelName()
     }
     
@@ -32,25 +31,6 @@ class ViewColumn:ViewItem {
     override func stateHighlighted() {
         super.stateHighlighted()
         self.alpha = Constants.ColumnTitle.alphaOn
-    }
-    
-    private func factoryIcon() {
-        let icon:UIImageView = UIImageView()
-        icon.isUserInteractionEnabled = false
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.contentMode = UIViewContentMode.center
-        icon.clipsToBounds = true
-        icon.isHidden = true
-        icon.image = UIImage(name:Constants.ColumnTitle.icon, in:type(of:self))
-        
-        self.addSubview(icon)
-        
-        icon.topAnchor.constraint(
-            equalTo:self.topAnchor, constant:Constants.ColumnTitle.iconTop).isActive = true
-        icon.leftAnchor.constraint(
-            equalTo:self.leftAnchor, constant:Constants.ColumnTitle.iconLeft).isActive = true
-        icon.widthAnchor.constraint(equalToConstant:Constants.ColumnTitle.iconWidth).isActive = true
-        icon.heightAnchor.constraint(equalToConstant:Constants.ColumnTitle.iconHeight).isActive = true
     }
     
     private func factoryLabelName() {

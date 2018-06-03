@@ -25,9 +25,4 @@ class TestViewColumn:XCTestCase {
         self.view.triggerAction(canvas:canvas)
         XCTAssertTrue(called, "Not called")
     }
-    
-    func testImage() {
-        let image:UIImage? = UIImage(name:Constants.ColumnTitle.icon, in:ViewColumn.self)
-        XCTAssertNotNil(image, "Image not found")
-    }
 }
