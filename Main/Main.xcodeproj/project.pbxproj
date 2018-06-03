@@ -32,6 +32,7 @@
 		DA7E00BA20A584C600AD4A74 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7F209B3B4A0013DBF0 /* Shared.framework */; };
 		DAA1DB74209C7EAE00509F4A /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB71209C7EA400509F4A /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F40420C3CD430000B067 /* assets.xcassets */; };
 		DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
@@ -99,6 +100,7 @@
 		DA58BD7F209B3B4A0013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA1DB71209C7EA400509F4A /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA1DB75209C7EDB00509F4A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB4F40420C3CD430000B067 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DABDB03320A38B5C001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				DADB5EFE209B1DD800CFFC9A /* brand.xcassets */,
+				DAB4F40420C3CD430000B067 /* assets.xcassets */,
 				DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
@@ -313,6 +316,7 @@
 			files = (
 				DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */,
 				DADB5EFF209B1DD800CFFC9A /* brand.xcassets in Resources */,
+				DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

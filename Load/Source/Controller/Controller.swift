@@ -16,7 +16,7 @@ public class Controller:ControllerProtocol {
     
     public func didLoadPresenter() {
         self.dispatchQueue.async { [weak self] in
-            self?.loadBoard()
+//            self?.loadBoard()
         }
     }
     

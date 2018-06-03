@@ -15,6 +15,7 @@ class NavigationView:UINavigationController {
         self.navigationBar.barTintColor = UIColor.white
         self.navigationBar.tintColor = UIColor.black
         self.navigationBar.prefersLargeTitles = true
+        self.navigationBar.isTranslucent = false
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
     }
 }
