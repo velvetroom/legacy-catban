@@ -20,7 +20,7 @@ struct ViewConstants {
         static let icons:String = "assetClose"
         static let animationDuration:TimeInterval = 0.5
         static let animationRepeat:Int = 1
-        static let totalImages:Int = 11
+        static let totalImages:Int = 28
     }
     
     struct Options {

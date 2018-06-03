@@ -20,6 +20,10 @@ class ViewMenuClose:UIButton {
         return nil
     }
     
+    deinit {
+        print("de init close")
+    }
+    
     func animateOpen() {
         self.icon.image = self.iconsOpen.last
         self.icon.animationImages = self.iconsOpen

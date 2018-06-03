@@ -47,6 +47,6 @@ struct Constants {
         static let fontSize:CGFloat = 14
         static let minContentHeight:CGFloat = 20
         static let maxHeight:CGFloat = 5000
-        static let cornerRadius:CGFloat = 4
+        static let cornerRadius:CGFloat = 5
     }
 }
