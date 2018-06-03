@@ -7,7 +7,7 @@ class TestModel_ContentSize:XCTestCase {
         static let columnHeightA:CGFloat = 145
         static let columnHeightB:CGFloat = 178
         static let columnHeightC:CGFloat = 146
-        static let columnMaxCC:CGFloat = 300
+        static let columnMaxC:CGFloat = 300
     }
     
     override func setUp() {
@@ -21,7 +21,7 @@ class TestModel_ContentSize:XCTestCase {
     }
     
     func testContentWidth() {
-        let expected:CGFloat = inConstants.columnMaxCC + Constants.Board.paddingHorizontal
+        let expected:CGFloat = inConstants.columnMaxC + Constants.Board.itemSpacing
         XCTAssertEqual(self.model.contentWidth, expected, "Invalid width")
     }
     
@@ -32,7 +32,7 @@ class TestModel_ContentSize:XCTestCase {
         columnA.height = inConstants.columnHeightA
         columnB.height = inConstants.columnHeightB
         columnC.height = inConstants.columnHeightC
-        columnC.maxX = inConstants.columnMaxCC
+        columnC.maxX = inConstants.columnMaxC
         self.model.columns = [columnA, columnB, columnC]
     }
 }

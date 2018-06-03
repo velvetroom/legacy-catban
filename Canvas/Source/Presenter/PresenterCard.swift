@@ -19,8 +19,8 @@ class PresenterCard:PresenterCardProtocol {
         let viewItem:ViewCard = self.viewItem as! ViewCard
         let mapItem:MapCard = self.mapItem as! MapCard
         viewItem.identifier = self.card.identifier
-        viewItem.labelContent.text = self.card.content
+        viewItem.labelContent.attributedText = PresenterCardContent.stringFor(content:self.card.content)
         mapItem.identifier = self.card.identifier
-        self.height = PresenterCardHeight.heightFor(content:self.card.content)
+        self.height = PresenterCardContent.heightFor(content:self.card.content)
     }
 }

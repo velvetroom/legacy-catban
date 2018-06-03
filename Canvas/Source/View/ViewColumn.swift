@@ -40,6 +40,7 @@ class ViewColumn:ViewItem {
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.contentMode = UIViewContentMode.center
         icon.clipsToBounds = true
+        icon.isHidden = true
         icon.image = UIImage(name:Constants.ColumnTitle.icon, in:type(of:self))
         
         self.addSubview(icon)
@@ -58,7 +59,7 @@ class ViewColumn:ViewItem {
         labelName.translatesAutoresizingMaskIntoConstraints = false
         labelName.backgroundColor = UIColor.clear
         labelName.textColor = UIColor.black
-        labelName.font = UIFont.systemFont(ofSize:Constants.ColumnTitle.fontSize, weight:UIFont.Weight.medium)
+        labelName.font = UIFont.systemFont(ofSize:Constants.ColumnTitle.fontSize, weight:UIFont.Weight.bold)
         self.labelName = labelName
         
         self.addSubview(labelName)

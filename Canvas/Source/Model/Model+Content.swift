@@ -16,9 +16,11 @@ extension Model {
     
     var contentWidth:CGFloat {
         get {
-            var width:CGFloat = Constants.Board.paddingHorizontal
+            var width:CGFloat = Constants.Board.itemSpacing
             if let lastColumn:MapColumnProtocol = self.columns.last {
                 width += lastColumn.maxX
+            } else {
+                width += Constants.Board.leftEdge
             }
             return width
         }

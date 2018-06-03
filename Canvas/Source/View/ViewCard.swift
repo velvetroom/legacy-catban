@@ -30,7 +30,7 @@ class ViewCard:ViewItem {
     override func stateNormal() {
         super.stateNormal()
         UIView.animate(withDuration:Constants.Generic.animationDuration) { [weak self] in
-            self?.backgroundColor = UIColor.white
+            self?.backgroundColor = UIColor.clear
             self?.labelContent.textColor = UIColor.black
         }
     }
@@ -47,7 +47,6 @@ class ViewCard:ViewItem {
         labelContent.translatesAutoresizingMaskIntoConstraints = false
         labelContent.backgroundColor = UIColor.clear
         labelContent.numberOfLines = 0
-        labelContent.font = UIFont.systemFont(ofSize:Constants.Card.fontSize, weight:UIFont.Weight.regular)
         self.labelContent = labelContent
         
         self.addSubview(labelContent)

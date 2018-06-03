@@ -1,4 +1,4 @@
-KanbanFactory_project_name="catban";
+KanbanFactory_project_name="Catban template";
 KanbanFactory_backlogColumn_name="Backlog";
 KanbanFactory_progressColumn_name="Progress";
 KanbanFactory_doneColumn_name="Done";

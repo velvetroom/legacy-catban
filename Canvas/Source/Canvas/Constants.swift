@@ -10,8 +10,8 @@ struct Constants {
     }
     
     struct Board {
-        static let paddingHorizontal:CGFloat = 4
-        static let verticalSpacing:CGFloat = 4
+        static let itemSpacing:CGFloat = 3
+        static let leftEdge:CGFloat = 6
     }
     
     struct Column {
@@ -22,10 +22,10 @@ struct Constants {
     struct ColumnTitle {
         static let icon:String = "assetColumnIcon"
         static let height:CGFloat = 40
-        static let fontSize:CGFloat = 16
+        static let fontSize:CGFloat = 14
         static let labelTop:CGFloat = 15
         static let labelHeight:CGFloat = 22
-        static let labelLeft:CGFloat = 14
+        static let labelLeft:CGFloat = 10
         static let iconTop:CGFloat = 15
         static let iconLeft:CGFloat = -4
         static let iconHeight:CGFloat = 22
@@ -48,8 +48,8 @@ struct Constants {
     }
     
     struct Card {
-        static let contentPadding:CGFloat = 12
-        static let fontSize:CGFloat = 12
+        static let contentPadding:CGFloat = 10
+        static let fontSize:CGFloat = 14
         static let minContentHeight:CGFloat = 20
         static let maxHeight:CGFloat = 5000
         static let cornerRadius:CGFloat = 4
