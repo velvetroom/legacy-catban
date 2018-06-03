@@ -19,6 +19,16 @@ class PresenterViewModelLoader {
     }
     
     private func loadItems() -> [ViewModelListItem] {
+        var items:[ViewModelListItem] = self.itemsFromBoard()
+        items.sort { (itemLeft:ViewModelListItem, itemRight:ViewModelListItem) -> Bool in
+            let comparison:ComparisonResult = itemLeft.name.compare(
+                itemRight.name, options:String.CompareOptions.caseInsensitive)
+            return comparison == ComparisonResult.orderedAscending
+        }
+        return items
+    }
+    
+    private func itemsFromBoard() -> [ViewModelListItem] {
         var items:[ViewModelListItem] = []
         self.board.iterate { (project:ProjectProtocol) in
             let item:ViewModelListItem = ViewModelListItemFactory.makeWith(project:project)

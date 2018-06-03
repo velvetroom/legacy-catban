@@ -26,8 +26,8 @@ class TestPresenterViewModelLoader:XCTestCase {
     }
     
     func testListItems() {
-        let nameA:String = "lorem ipsum"
-        let nameB:String = "hello world"
+        let nameA:String = "a lorem ipsum"
+        let nameB:String = "b hello world"
         let projectA:ProjectProtocol = ProjectFactory.newProject()
         projectA.name = nameA
         let projectB:ProjectProtocol = ProjectFactory.newProject()
@@ -47,5 +47,21 @@ class TestPresenterViewModelLoader:XCTestCase {
         self.presenter.load()
         let viewModel:ViewModelEmpty? = self.presenter.viewModel as? ViewModelEmpty
         XCTAssertNotNil(viewModel, "Invalid view model type")
+    }
+    
+    func testSortItems() {
+        let projectA:ProjectProtocol = ProjectFactory.newProject()
+        projectA.name = "A"
+        let projectB:ProjectProtocol = ProjectFactory.newProject()
+        projectB.name = "B"
+        let projectC:ProjectProtocol = ProjectFactory.newProject()
+        projectC.name = "C"
+        self.board.projects = [projectB, projectC, projectA]
+        
+        self.presenter.load()
+        let viewModel:ViewModelList = self.presenter.viewModel as! ViewModelList
+        XCTAssertEqual(viewModel.items[0].identifier, projectA.identifier, "Invalid order")
+        XCTAssertEqual(viewModel.items[1].identifier, projectB.identifier, "Invalid order")
+        XCTAssertEqual(viewModel.items[2].identifier, projectC.identifier, "Invalid order")
     }
 }
