@@ -8,6 +8,11 @@ class View:Shared.View {
         self.addLogo()
     }
     
+    override func viewDidAppear(_ animated:Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
+    
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
         self.view.backgroundColor = UIColor.white

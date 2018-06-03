@@ -40,7 +40,6 @@ class Presenter:PresenterProtocol {
     
     func openProject() {
         let identifier:String = self.list.selected.identifier
-        self.outlets.view?.showNavigationBar()
         self.controller.openProjectWith(identifier:identifier)
     }
     

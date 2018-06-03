@@ -33,6 +33,10 @@ class Presenter:PresenterProtocol {
         self.updateCanvas()
     }
     
+    func updateConstraints() {
+        self.canvas.refresh()
+    }
+    
     private func configure(view:Shared.View) {
         self.outlets.view = view
         if let view:View = view as? View {

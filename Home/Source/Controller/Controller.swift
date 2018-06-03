@@ -36,14 +36,14 @@ public class Controller:ControllerProjectProtocol, CanvasDelegateProtocol {
         self.transiton.transitionTo(column:column, in:self.project)
     }
     
+    public func saveProject() {
+        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
+        repository.save(project:self.project)
+    }
+    
     func openProjects() {
         let board:BoardProjectsProtocol = self.project.manager
         board.unmanage(project:project)
         self.transiton.transitionToProjects(board:board)
-    }
-    
-    public func saveProject() {
-        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:self.project)
     }
 }

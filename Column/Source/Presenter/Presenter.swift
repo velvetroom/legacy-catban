@@ -24,7 +24,6 @@ class Presenter:PresenterProtocol {
     
     func done() {
         self.outlets.viewField?.resignFirstResponder()
-        self.outlets.view?.showNavigationBar()
         self.updateColumn()
         self.controller.done()
     }

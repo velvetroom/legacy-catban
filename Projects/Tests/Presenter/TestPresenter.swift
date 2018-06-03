@@ -7,13 +7,13 @@ class TestPresenter:XCTestCase {
     private var controller:Controller!
     private var board:MockBoardProjectsProtocol!
     private var project:MockProjectManagedProtocol!
-    private var view:MockView!
+    private var view:Projects.View!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
-        self.view = MockView()
+        self.view = Projects.View()
         self.controller = Controller()
         self.board = MockBoardProjectsProtocol()
         self.project = MockProjectManagedProtocol()
@@ -78,15 +78,5 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(MockPresenterDelete.presenter?.controller, "Not injected")
         XCTAssertNotNil(MockPresenterDelete.presenter?.view, "Not injected")
         XCTAssertNotNil(MockPresenterDelete.presenter?.item, "Not injected")
-    }
-    
-    func testShowNavigationBarOnOpen() {
-        var showed:Bool = false
-        self.view.onShowNavigationBar = {
-            showed = true
-        }
-        
-        self.presenter.openProject()
-        XCTAssertTrue(showed, "Not showed")
     }
 }

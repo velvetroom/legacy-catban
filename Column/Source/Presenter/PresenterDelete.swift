@@ -16,7 +16,6 @@ class PresenterDelete {
     }
     
     func confirmed() {
-        self.view.showNavigationBar()
         self.controller.delete()
     }
     
