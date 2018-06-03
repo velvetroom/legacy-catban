@@ -18,6 +18,8 @@ struct ViewConstants {
     
     struct Close {
         static let icons:String = "assetClose"
+        static let width:CGFloat = 62
+        static let height:CGFloat = 42
         static let animationDuration:TimeInterval = 0.5
         static let animationRepeat:Int = 1
         static let totalImages:Int = 28

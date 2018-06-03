@@ -64,7 +64,7 @@ class ViewRenamerInput:UIView {
         
         doneButton.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
         doneButton.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        doneButton.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        doneButton.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
         doneButton.widthAnchor.constraint(equalToConstant:ViewConstants.RenamerButton.width).isActive = true
     }
     

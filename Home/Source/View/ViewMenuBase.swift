@@ -57,11 +57,11 @@ class ViewMenuBase:UIView {
         
         self.addSubview(viewClose)
         
-        viewClose.layoutAlignRight = viewClose.rightAnchor.constraint(equalTo:self.rightAnchor)
+        viewClose.layoutAlignRight = viewClose.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor)
         viewClose.layoutCentre = viewClose.centerXAnchor.constraint(equalTo:self.centerXAnchor)
-        viewClose.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        viewClose.heightAnchor.constraint(equalToConstant:82).isActive = true
-        viewClose.widthAnchor.constraint(equalToConstant:62).isActive = true
+        viewClose.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
+        viewClose.heightAnchor.constraint(equalToConstant:ViewConstants.Close.height).isActive = true
+        viewClose.widthAnchor.constraint(equalToConstant:ViewConstants.Close.width).isActive = true
         viewClose.layoutAlignRight.isActive = true
     }
     
