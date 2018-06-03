@@ -20,8 +20,8 @@ public class KanbanFactory:TemplateFactoryProtocol {
     private class func backlogColumn() -> ColumnProtocol {
         let column:ColumnProtocol = ColumnFactory.newColumn()
         column.name = String.localized(key:"KanbanFactory_backlogColumn_name", in:self)
+        column.add(card:kanbanIntroCard())
         column.add(card:editProjectCard())
-        column.add(card:checkStatsCard())
         return column
     }
     
@@ -37,15 +37,15 @@ public class KanbanFactory:TemplateFactoryProtocol {
         return column
     }
     
-    private class func editProjectCard() -> CardProtocol {
+    private class func kanbanIntroCard() -> CardProtocol {
         let card:CardProtocol = CardFactory.newCard()
-        card.content = String.localized(key:"KanbanFactory_editProjectCard_content", in:self)
+        card.content = String.localized(key:"KanbanFactory_kanbanIntro_content", in:self)
         return card
     }
     
-    private class func checkStatsCard() -> CardProtocol {
+    private class func editProjectCard() -> CardProtocol {
         let card:CardProtocol = CardFactory.newCard()
-        card.content = String.localized(key:"KanbanFactory_checkStatsCard_content", in:self)
+        card.content = String.localized(key:"KanbanFactory_editProject_content", in:self)
         return card
     }
     
