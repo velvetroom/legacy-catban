@@ -24,7 +24,6 @@
 		DA57282920C586FE006E1016 /* PresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282820C586FE006E1016 /* PresenterForKeyboard.swift */; };
 		DA57282C20C5873A006E1016 /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282B20C5873A006E1016 /* TestPresenterForKeyboard.swift */; };
 		DA57282E20C588D3006E1016 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282D20C588D3006E1016 /* MockNotificationCenter.swift */; };
-		DA57283120C5943F006E1016 /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */; };
 		DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */; };
 		DA978FA920A19852002461E6 /* ControllerProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
@@ -42,6 +41,7 @@
 		DAF7E65A209B051F00B8A39A /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E659209B051F00B8A39A /* PresenterProtocol.swift */; };
 		DAF7E66A209B077E00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF375209AFC6900740A88 /* Shared.framework */; };
 		DAF7E672209B07B300B8A39A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E671209B07B300B8A39A /* TestView.swift */; };
+		DAF84BB420C596F0009FDEBF /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */; };
 		DAFD2FAB209CA41E0005F5D2 /* MockControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAA209CA41E0005F5D2 /* MockControllerProtocol.swift */; };
 		DAFD2FAD209CA4560005F5D2 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAC209CA4560005F5D2 /* MockPresenterProtocol.swift */; };
 		DAFD2FAF209CA4A20005F5D2 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FAE209CA4A20005F5D2 /* TestController.swift */; };
@@ -405,7 +405,7 @@
 				DA055B0020A38FCB002854F9 /* ControllerCardProtocol.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
 				DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */,
-				DA57283120C5943F006E1016 /* PresenterForKeyboardFactory.swift in Sources */,
+				DAF84BB420C596F0009FDEBF /* PresenterForKeyboardFactory.swift in Sources */,
 				DA204FF320B84D6500A41DB0 /* ControllerBoardProtocol.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,

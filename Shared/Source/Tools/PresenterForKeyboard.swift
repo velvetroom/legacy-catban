@@ -27,7 +27,8 @@ class PresenterForKeyboard:PresenterForKeyboardProtocol {
     
     private func keyboardHeightFrom(notification:Notification) -> CGFloat {
         let rect:CGRect = self.keyboardRectFrom(notification:notification)
-        if let height:CGFloat = self.viewContainer?.bounds.height {
+        if let view:UIView = self.viewContainer {
+            let height:CGFloat = view.bounds.height
             if rect.minY < height {
                 return -(height - rect.minY)
             }

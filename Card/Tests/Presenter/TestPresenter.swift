@@ -49,6 +49,9 @@ class TestPresenter:XCTestCase {
     func testLoadOutlets() {
         self.presenter.didLoad(view:self.view)
         XCTAssertNotNil(self.presenter.outlets.viewText, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.view, "Not loaded")
+        XCTAssertNotNil(self.presenter.presenterForKeyboard.layoutBottom, "Not loaded")
+        XCTAssertNotNil(self.presenter.presenterForKeyboard.viewContainer, "Not loaded")
     }
     
     func testSetsTextDelegate() {

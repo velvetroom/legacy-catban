@@ -5,17 +5,14 @@ class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Card.View.self
     var deleteType:PresenterDelete.Type
     var outlets:PresenterOutlets
+    var presenterForKeyboard:PresenterForKeyboardProtocol
     weak var controller:Controller!
     weak var delegate:PresenterDelegateProtocol!
     
     init() {
         self.outlets = PresenterOutlets()
         self.deleteType = PresenterDelete.self
-        self.registerForNotifications()
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+        self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
     }
     
     func done() {
@@ -60,20 +57,8 @@ class Presenter:PresenterProtocol {
     private func loadOutlets(view:Shared.View) {
         let loader:PresenterOutletsLoader = PresenterOutletsLoader()
         loader.view = view
+        loader.presenter = self
         self.outlets = loader.loadOulets()
-    }
-    
-    private func registerForNotifications() {
-        NotificationCenter.default.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-            self?.keyboardChanged(notification:notification)
-        }
-    }
-    
-    private func keyboardChanged(notification:Notification) {
-        let keyboard:PresenterKeyboard = PresenterKeyboard()
-        keyboard.outlets = self.outlets
-        keyboard.notification = notification
-        keyboard.adjustOutlets()
     }
     
     private func updateViewModel() {

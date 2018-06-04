@@ -3,6 +3,7 @@ import Shared
 
 class PresenterOutletsLoader {
     weak var view:Shared.View!
+    weak var presenter:Presenter!
     private var outlets:PresenterOutlets
     private var safeArea:UILayoutGuide {
         get {
@@ -17,6 +18,7 @@ class PresenterOutletsLoader {
     func loadOulets() -> PresenterOutlets {
         self.loadView()
         self.loadText()
+        self.loadPresenterForKeyboard()
         return self.outlets
     }
     
@@ -35,5 +37,11 @@ class PresenterOutletsLoader {
         viewText.leftAnchor.constraint(equalTo:self.safeArea.leftAnchor).isActive = true
         viewText.rightAnchor.constraint(equalTo:self.safeArea.rightAnchor).isActive = true
         viewText.layoutBottom.isActive = true
+    }
+    
+    private func loadPresenterForKeyboard() {
+        self.presenter.presenterForKeyboard.layoutBottom = self.outlets.viewText?.layoutBottom
+        self.presenter.presenterForKeyboard.viewContainer = self.outlets.view?.view
+        self.presenter.presenterForKeyboard.startListening()
     }
 }
