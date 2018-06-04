@@ -45,8 +45,7 @@ class ViewRenamerInput:UIView {
             equalTo:self.bottomAnchor, constant:-ViewConstants.RenamerField.margin).isActive = true
         viewBase.leftAnchor.constraint(
             equalTo:self.leftAnchor, constant:ViewConstants.RenamerField.margin).isActive = true
-        viewBase.rightAnchor.constraint(
-            equalTo:self.doneButton.leftAnchor, constant:-ViewConstants.RenamerField.margin).isActive = true
+        viewBase.rightAnchor.constraint(equalTo:self.doneButton.leftAnchor).isActive = true
     }
     
     private func factoryButton() {

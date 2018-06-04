@@ -69,7 +69,7 @@ struct ViewConstants {
     
     struct RenamerButton {
         static let fontSize:CGFloat = 16
-        static let width:CGFloat = 60
+        static let width:CGFloat = 75
     }
     
     struct RenamerField {
