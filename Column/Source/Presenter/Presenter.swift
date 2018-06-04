@@ -16,6 +16,7 @@ class Presenter:PresenterProtocol {
     func presenterDidLoadWith(view:Shared.View) {
         self.configure(view:view)
         self.loadOutlets(view:view)
+        self.registerForNotifications()
     }
     
     func shouldUpdate() {
@@ -54,5 +55,11 @@ class Presenter:PresenterProtocol {
             let name:String = self.outlets.viewField?.text
         else { return }
         self.controller.column.name = name
+    }
+    
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
+//            self?.keyboardChanged(notification:notification)
+        }
     }
 }

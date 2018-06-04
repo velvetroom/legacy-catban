@@ -17,9 +17,9 @@ class TestView:XCTestCase {
         XCTAssertNil(self.view.presenter, "Retains")
     }
     
-    func testLoadBase() {
+    func testLoadScroll() {
         XCTAssertNotNil(self.view.view, "Loading view failed")
-        XCTAssertNotNil(self.view.viewBase, "Not loaded")
+        XCTAssertNotNil(self.view.viewScroll, "Not loaded")
     }
     
     func testCallsPresenterOnDone() {

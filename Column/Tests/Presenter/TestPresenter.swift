@@ -45,6 +45,7 @@ class TestPresenter:XCTestCase {
     func testLoadsOutlets() {
         self.presenter.didLoad(view:self.view)
         XCTAssertNotNil(self.presenter.outlets.view, "Not loaded")
+        XCTAssertNotNil(self.presenter.outlets.viewScroll, "Not loaded")
         XCTAssertNotNil(self.presenter.outlets.viewField, "Not loaded")
     }
     
