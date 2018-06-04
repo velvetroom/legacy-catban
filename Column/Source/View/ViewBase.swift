@@ -18,7 +18,6 @@ class ViewBase:UIView {
     
     private func configureView() {
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.white
     }
     
     private func factoryOutlets() {

@@ -3,7 +3,7 @@ import Shared
 
 class View:Shared.View, UITextFieldDelegate {
     weak var presenter:Presenter?
-    private(set) weak var viewBase:ViewBase!
+    private(set) weak var viewScroll:ViewScroll!
     
     override func didLoad() {
         super.didLoad()
@@ -18,15 +18,19 @@ class View:Shared.View, UITextFieldDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated:true)
     }
     
-    private func configureView() -> ViewBase {
-        let viewBase:ViewBase = ViewBase()
-        viewBase.viewBar.deleteButton.addTarget(
+    private func configureView() -> ViewScroll {
+        let viewScroll:ViewScroll = ViewScroll()
+        self.viewScroll = viewScroll
+        self.connectOutlets()
+        return viewScroll
+    }
+    
+    private func connectOutlets() {
+        self.viewScroll.viewBase?.viewBar.deleteButton.addTarget(
             self, action:#selector(self.selectorDelete(button:)), for:UIControlEvents.touchUpInside)
-        viewBase.viewInput.doneButton.addTarget(
+        self.viewScroll.viewBase?.viewInput.doneButton.addTarget(
             self, action:#selector(self.selectorDone(button:)), for:UIControlEvents.touchUpInside)
-        viewBase.viewInput.field.delegate = self
-        self.viewBase = viewBase
-        return viewBase
+        self.viewScroll.viewBase?.viewInput.field.delegate = self
     }
     
     @objc func selectorDelete(button:UIButton) {
