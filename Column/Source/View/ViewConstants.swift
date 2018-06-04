@@ -1,6 +1,10 @@
 import UIKit
 
 struct ViewConstants {
+    struct Base {
+        static let height:CGFloat = 480
+    }
+    
     struct Icon {
         static let icon:String = "assetColumnIcon"
         static let top:CGFloat = 0

@@ -25,6 +25,7 @@ class ViewScroll:UIScrollView {
         self.alwaysBounceHorizontal = true
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
     }
     
     private func factoryViews() {
@@ -34,10 +35,7 @@ class ViewScroll:UIScrollView {
     }
     
     private func updateContentSize() {
-        let width:CGFloat = self.frame.width - (self.safeAreaInsets.left + self.safeAreaInsets.right)
-        let height:CGFloat = self.frame.height - (self.safeAreaInsets.top + self.safeAreaInsets.bottom)
-        let maxHeight:CGFloat = max(width, height)
-        self.contentSize = CGSize(width:width, height:maxHeight)
+        self.contentSize = CGSize(width:self.frame.width, height:ViewConstants.Base.height)
         self.viewBase?.frame = CGRect(origin:CGPoint.zero, size:self.contentSize)
     }
 }
