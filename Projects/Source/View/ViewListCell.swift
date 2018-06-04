@@ -49,7 +49,9 @@ class ViewListCell:UICollectionViewCell {
         
         labelName.centerYAnchor.constraint(equalTo:self.centerYAnchor).isActive = true
         labelName.leftAnchor.constraint(
-            equalTo:self.leftAnchor, constant:ViewConstants.ListItem.nameLeft).isActive = true
+            equalTo:self.leftAnchor, constant:ViewConstants.ListItem.horizontalPadding).isActive = true
+        labelName.rightAnchor.constraint(
+            lessThanOrEqualTo:self.rightAnchor, constant:-ViewConstants.ListItem.horizontalPadding).isActive = true
         labelName.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
         labelName.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
     }
