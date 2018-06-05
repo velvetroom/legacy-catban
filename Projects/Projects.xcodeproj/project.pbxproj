@@ -52,6 +52,8 @@
 		DA4701CA20BFF74900989163 /* MockPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4701C920BFF74900989163 /* MockPresenterDelete.swift */; };
 		DA4701CC20BFF7EC00989163 /* TestPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4701CB20BFF7EC00989163 /* TestPresenterDelete.swift */; };
 		DA4777CD20C658A80069AB6C /* MockPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */; };
+		DA4777D120C6671F0069AB6C /* PresenterListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */; };
+		DA4777D320C6694C0069AB6C /* PresenterListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */; };
 		DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813220BD26080080B1D2 /* ViewMenuItem.swift */; };
 		DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */; };
 		DA53813720BD2B0C0080B1D2 /* TestViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */; };
@@ -130,6 +132,8 @@
 		DA4701C920BFF74900989163 /* MockPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDelete.swift; sourceTree = "<group>"; };
 		DA4701CB20BFF7EC00989163 /* TestPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDelete.swift; sourceTree = "<group>"; };
 		DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterForKeyboard.swift; sourceTree = "<group>"; };
+		DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterListDelegate.swift; sourceTree = "<group>"; };
+		DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterListDatasource.swift; sourceTree = "<group>"; };
 		DA53813220BD26080080B1D2 /* ViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuItem.swift; sourceTree = "<group>"; };
 		DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuItem.swift; sourceTree = "<group>"; };
 		DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenu.swift; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 				DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */,
 				DAD5F07420BBD9F400CEC10A /* PresenterViewUpdater.swift */,
 				DAD5F07820BBE18E00CEC10A /* PresenterList.swift */,
+				DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */,
+				DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */,
 				DA106C5520BED12D00A4AED5 /* PresenterRenamer.swift */,
 				DA106C5920BEED7100A4AED5 /* PresenterDelegater.swift */,
 				DA4701C720BFF37100989163 /* PresenterDelete.swift */,
@@ -472,6 +478,7 @@
 				DA106C4C20BE99BF00A4AED5 /* ViewRenamerField.swift in Sources */,
 				DA435A7220BAA100000C2E56 /* ViewMenu.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
+				DA4777D120C6671F0069AB6C /* PresenterListDelegate.swift in Sources */,
 				DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */,
@@ -489,6 +496,7 @@
 				DA106C5620BED12D00A4AED5 /* PresenterRenamer.swift in Sources */,
 				DAD5F07920BBE18E00CEC10A /* PresenterList.swift in Sources */,
 				DA435A7020BAA07E000C2E56 /* ViewListCell.swift in Sources */,
+				DA4777D320C6694C0069AB6C /* PresenterListDatasource.swift in Sources */,
 				DA435A7B20BAC58F000C2E56 /* ViewModelList.swift in Sources */,
 				DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */,
 				DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */,

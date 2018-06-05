@@ -16,6 +16,7 @@ class TestView:XCTestCase {
         self.controller = MockController()
         self.board = MockBoardProjectsProtocol()
         self.viewRenamer = ViewRenamer()
+        self.presenter.list.items = [ViewModelListItem()]
         self.view.presenter = self.presenter
         self.presenter.controller = self.controller
         self.controller.board = self.board
@@ -54,8 +55,8 @@ class TestView:XCTestCase {
     }
     
     func testAddProjectUpdatesSelectedItem() {
-        self.presenter.list.selected.identifier = String()
+        self.presenter.renamer.item.identifier = String()
         self.view.selectorAddProject(button:UIButton())
-        XCTAssertFalse(self.presenter.list.selected.identifier.isEmpty, "Selected not updated")
+        XCTAssertFalse(self.presenter.renamer.item.identifier.isEmpty, "Selected not updated")
     }
 }

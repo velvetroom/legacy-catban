@@ -36,8 +36,8 @@ class Presenter:PresenterProtocol {
     
     func addProject() {
         let project:ProjectProtocol = self.controller.addProject()
-        self.list.selected = ViewModelListItemFactory.makeWith(project:project)
-        self.renameProject()
+        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
+        self.renamer.show()
     }
     
     func openProject() {
@@ -47,11 +47,11 @@ class Presenter:PresenterProtocol {
     
     func renameProject() {
         self.renamer.item = self.list.selected
-        self.renamer.showRenamer()
+        self.renamer.show()
     }
     
     func updateProject(name:String) {
-        self.renamer.hideRenamer()
+        self.renamer.hide()
         self.controller.update(project:self.renamer.item.identifier, with:name)
     }
     

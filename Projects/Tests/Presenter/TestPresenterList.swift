@@ -13,8 +13,6 @@ class TestPresenterList:XCTestCase {
         super.setUp()
         self.presenter = PresenterList()
         self.view = ViewList()
-        self.view.delegate = self.presenter
-        self.view.dataSource = self.presenter
         var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name
         let itemB:ViewModelListItem = ViewModelListItem()
@@ -29,7 +27,8 @@ class TestPresenterList:XCTestCase {
     
     func testCellviewType() {
         let indexPath:IndexPath = IndexPath(item:0, section:0)
-        let cellview:UICollectionViewCell? = self.presenter.collectionView(self.view, cellForItemAt:indexPath)
+        let cellview:UICollectionViewCell? = self.presenter.datasource.collectionView(
+            self.view, cellForItemAt:indexPath)
         XCTAssertNotNil(cellview, "Failed to get cell")
         
         let listcell:ViewListCell? = cellview as? ViewListCell
@@ -38,7 +37,7 @@ class TestPresenterList:XCTestCase {
     
     func testConfigureCell() {
         let indexPath:IndexPath = IndexPath(item:0, section:0)
-        let listcell:ViewListCell = self.presenter.collectionView(
+        let listcell:ViewListCell = self.presenter.datasource.collectionView(
             self.view, cellForItemAt:indexPath) as! ViewListCell
         XCTAssertEqual(listcell.labelName.text, Constants.name, "Not updated")
     }
@@ -46,25 +45,20 @@ class TestPresenterList:XCTestCase {
     func testUpdatesCellState() {
         let indexPath:IndexPath = IndexPath(item:0, section:0)
         self.view.register(MockViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
-        let _:UICollectionViewCell = self.presenter.collectionView(self.view, cellForItemAt:indexPath)
+        let _:UICollectionViewCell = self.presenter.datasource.collectionView(self.view, cellForItemAt:indexPath)
         XCTAssertNotNil(MockViewListCell.cell, "Not updated")
     }
     
     func testSizeForItem() {
-        let size:CGSize = self.presenter.collectionView(
+        let size:CGSize = self.presenter.delegate.collectionView(
             self.view, layout:UICollectionViewLayout(), sizeForItemAt:IndexPath(item:0, section:0))
         XCTAssertEqual(size.width, Constants.frame.width, "Invalid width")
         XCTAssertEqual(size.height, ViewConstants.ListItem.height, "Invalid height")
     }
     
     func testEdgeInsets() {
-        let insets:UIEdgeInsets = self.presenter.collectionView(
+        let insets:UIEdgeInsets = self.presenter.delegate.collectionView(
             self.view, layout:UICollectionViewLayout(), insetForSectionAt:0)
         XCTAssertNotEqual(insets, UIEdgeInsets.zero, "Invalid insets")
-    }
-    
-    func testNotRetaining() {
-        self.presenter.view = ViewList()
-        XCTAssertNil(self.presenter.view, "Retains")
     }
 }

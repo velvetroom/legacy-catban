@@ -10,8 +10,6 @@ class PresenterDelegater {
     }
     
     private func updateList() {
-        self.presenter.outlets.list?.delegate = self.presenter.list
-        self.presenter.outlets.list?.dataSource = self.presenter.list
         self.presenter.list.view = self.presenter.outlets.list
     }
     

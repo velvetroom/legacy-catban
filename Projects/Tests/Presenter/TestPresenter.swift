@@ -9,6 +9,7 @@ class TestPresenter:XCTestCase {
     private var project:MockProjectManagedProtocol!
     private var view:Projects.View!
     private var transition:MockTransitionProtocol!
+    private var viewList:ViewList!
     
     override func setUp() {
         super.setUp()
@@ -18,12 +19,15 @@ class TestPresenter:XCTestCase {
         self.board = MockBoardProjectsProtocol()
         self.project = MockProjectManagedProtocol()
         self.transition = MockTransitionProtocol()
+        self.viewList = ViewList()
+        self.presenter.list.items = [ViewModelListItem()]
         self.controller.board = self.board
         self.presenter.controller = self.controller
         self.controller.presenter = self.presenter
         self.controller.transiton = self.transition
         self.board.project = self.project
         self.presenter.outlets.view = self.view
+        self.presenter.list.view = self.viewList
         XCTAssertNotNil(self.view.view, "Failed loading view")
     }
     

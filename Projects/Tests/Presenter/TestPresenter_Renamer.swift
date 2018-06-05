@@ -26,7 +26,6 @@ class TestPresenter_Renamer:XCTestCase {
         self.view = View()
         self.viewList = ViewList()
         self.viewField = self.viewRenamer.viewInput.viewField
-        self.presenter.list.selected.name = Constants.originalName
         self.board.project = self.project
         self.controller.board = self.board
         self.presenter.controller = self.controller
@@ -38,6 +37,9 @@ class TestPresenter_Renamer:XCTestCase {
         self.presenter.renamer.view = self.viewRenamer
         self.presenter.list.view = self.viewList
         self.presenter.renamer.item = ViewModelListItem()
+        var listItem:ViewModelListItem = ViewModelListItem()
+        listItem.name = Constants.originalName
+        self.presenter.list.items = [listItem]
     }
     
     func testRenameProjectShowsCurrentName() {
