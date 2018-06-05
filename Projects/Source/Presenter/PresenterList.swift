@@ -43,6 +43,19 @@ class PresenterList {
         self.selectAnimating()
     }
     
+    func selectItemWith(identifier:String) {
+        var itemIndex:Int = 0
+        let count:Int = self.items.count
+        for index:Int in 0 ..< count {
+            if self.items[index].identifier == identifier {
+                itemIndex = index
+                break
+            }
+        }
+        self.delegate.selected = IndexPath(item:itemIndex, section:0)
+        self.selectAnimating()
+    }
+    
     private func selectAnimating() {
         self.view.selectItem(at:self.delegate.selected, animated:true,
                              scrollPosition:UICollectionViewScrollPosition.centeredVertically)

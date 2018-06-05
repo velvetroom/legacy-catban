@@ -4,6 +4,7 @@ import XCTest
 class TestPresenterList:XCTestCase {
     private var presenter:PresenterList!
     private var view:ViewList!
+    private var layout:NSLayoutConstraint!
     private struct Constants {
         static let name:String = "lorem ipsum"
         static let frame:CGRect = CGRect(x:10, y:20, width:30, height:400)
@@ -13,6 +14,8 @@ class TestPresenterList:XCTestCase {
         super.setUp()
         self.presenter = PresenterList()
         self.view = ViewList()
+        self.layout = NSLayoutConstraint()
+        self.view.layoutSelectorY = self.layout
         var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name
         let itemB:ViewModelListItem = ViewModelListItem()
@@ -60,5 +63,16 @@ class TestPresenterList:XCTestCase {
         let insets:UIEdgeInsets = self.presenter.delegate.collectionView(
             self.view, layout:UICollectionViewLayout(), insetForSectionAt:0)
         XCTAssertNotEqual(insets, UIEdgeInsets.zero, "Invalid insets")
+    }
+    
+    func testSelectItemWithIdentifier() {
+        var itemA:ViewModelListItem = ViewModelListItem()
+        itemA.identifier = "lorem ipsum"
+        var itemB:ViewModelListItem = ViewModelListItem()
+        itemB.identifier = "hello world"
+        self.presenter.items = [itemA, itemB]
+        XCTAssertEqual(self.presenter.selected.identifier, itemA.identifier, "Invalid initial item")
+        self.presenter.selectItemWith(identifier:itemB.identifier)
+        XCTAssertEqual(self.presenter.selected.identifier, itemB.identifier, "Selection not updated")
     }
 }

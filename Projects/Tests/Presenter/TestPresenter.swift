@@ -10,6 +10,8 @@ class TestPresenter:XCTestCase {
     private var view:Projects.View!
     private var transition:MockTransitionProtocol!
     private var viewList:ViewList!
+    private var viewRenamer:ViewRenamer!
+    private var presenterList:MockPresenterList!
     
     override func setUp() {
         super.setUp()
@@ -20,7 +22,11 @@ class TestPresenter:XCTestCase {
         self.project = MockProjectManagedProtocol()
         self.transition = MockTransitionProtocol()
         self.viewList = ViewList()
-        self.presenter.list.items = [ViewModelListItem()]
+        self.viewRenamer = ViewRenamer()
+        self.presenterList = MockPresenterList()
+        self.presenter.renamer.view = self.viewRenamer
+        self.presenter.list = self.presenterList
+        self.presenterList.items = [ViewModelListItem()]
         self.controller.board = self.board
         self.presenter.controller = self.controller
         self.controller.presenter = self.presenter
@@ -82,5 +88,15 @@ class TestPresenter:XCTestCase {
         XCTAssertNotNil(MockPresenterDelete.presenter?.controller, "Not injected")
         XCTAssertNotNil(MockPresenterDelete.presenter?.view, "Not injected")
         XCTAssertNotNil(MockPresenterDelete.presenter?.item, "Not injected")
+    }
+    
+    func testUpdatesReturnsToSelectedItem() {
+        var returns:Bool = false
+        self.presenterList.onSelectItemWithIdentifier = {
+            returns = true
+        }
+        
+        self.presenter.updateProject(name:String())
+        XCTAssertTrue(returns, "Not returning")
     }
 }

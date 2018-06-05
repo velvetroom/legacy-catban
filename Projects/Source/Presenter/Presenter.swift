@@ -52,7 +52,9 @@ class Presenter:PresenterProtocol {
     
     func updateProject(name:String) {
         self.renamer.hide()
-        self.controller.update(project:self.renamer.item.identifier, with:name)
+        let identifier:String = self.renamer.item.identifier
+        self.controller.update(project:identifier, with:name)
+        self.list.selectItemWith(identifier:identifier)
     }
     
     func delete() {
