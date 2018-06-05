@@ -30,7 +30,7 @@ class PresenterForKeyboard:PresenterForKeyboardProtocol {
         if let view:UIView = self.viewContainer {
             let height:CGFloat = view.bounds.height
             if rect.minY < height {
-                return -(height - rect.minY)
+                return -rect.height
             }
         }
         return 0
