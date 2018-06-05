@@ -51,9 +51,17 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
         guard
             let indexPath:IndexPath = self.centerIndexPath
         else { return }
-        self.view.selectItem(
-            at:indexPath, animated:true, scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        self.view.selectItem(at:indexPath, animated:false, scrollPosition:UICollectionViewScrollPosition())
         self.select(indexPath:indexPath)
+    }
+    
+    func selectFirstItem() {
+        if let selected:ViewModelListItem = self.items.first {
+            self.selected = selected
+            let indexPath:IndexPath = IndexPath(item:0, section:0)
+            self.view.selectItem(
+                at:indexPath, animated:true, scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        }
     }
     
     func scrollViewWillBeginDragging(_:UIScrollView) {
