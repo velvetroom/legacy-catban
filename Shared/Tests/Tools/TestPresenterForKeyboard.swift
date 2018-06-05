@@ -50,7 +50,7 @@ class TestPresenterForKeyboard:XCTestCase {
     }
     
     func testAdjustOutlets() {
-        let expectedConstant:CGFloat = -(Constants.viewFrame.height - Constants.frame.minY)
+        let expectedConstant:CGFloat = -Constants.frame.height
         self.presenter.notificationCenter = NotificationCenter.default
         self.presenter.startListening()
         
