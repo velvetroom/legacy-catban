@@ -6,6 +6,7 @@ class TestPresenterDelegater:XCTestCase {
     private var parentPresenter:Presenter!
     private var viewList:ViewList!
     private var viewRenamer:ViewRenamer!
+    private var presenterForKeyboard:MockPresenterForKeyboard!
     
     override func setUp() {
         super.setUp()
@@ -13,9 +14,11 @@ class TestPresenterDelegater:XCTestCase {
         self.parentPresenter = Presenter()
         self.viewList = ViewList()
         self.viewRenamer = ViewRenamer()
+        self.presenterForKeyboard = MockPresenterForKeyboard()
         self.parentPresenter.outlets.list = self.viewList
         self.parentPresenter.outlets.renamer = self.viewRenamer
         self.presenter.presenter = self.parentPresenter
+        self.parentPresenter.presenterForKeyboard = self.presenterForKeyboard
         self.presenter.inject()
     }
     
@@ -32,5 +35,20 @@ class TestPresenterDelegater:XCTestCase {
     
     func testInjectsRenamer() {
         XCTAssertNotNil(self.parentPresenter.renamer.view, "Not injected")
+    }
+    
+    func testInjectsToPresenterForKeyboard() {
+        XCTAssertNotNil(self.parentPresenter.presenterForKeyboard.viewContainer, "Not set")
+        XCTAssertNotNil(self.parentPresenter.presenterForKeyboard.layoutBottom, "Not set")
+    }
+    
+    func testStartListeningForKeyboard() {
+        var started:Bool = false
+        self.presenterForKeyboard.onStartListening = {
+            started = true
+        }
+        
+        self.presenter.inject()
+        XCTAssertTrue(started, "Not started")
     }
 }

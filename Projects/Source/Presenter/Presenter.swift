@@ -8,6 +8,7 @@ class Presenter:PresenterProtocol {
     var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
+    var presenterForKeyboard:PresenterForKeyboardProtocol
     weak var delegate:PresenterDelegateProtocol!
     weak var controller:Controller!
     
@@ -15,6 +16,7 @@ class Presenter:PresenterProtocol {
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
+        self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
         self.deleteType = PresenterDelete.self
     }
     
