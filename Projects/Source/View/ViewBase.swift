@@ -2,13 +2,11 @@ import UIKit
 import Shared
 
 class ViewBase:UIView {
-    weak var viewBar:ViewBar!
     weak var viewList:ViewList!
     weak var viewSelector:ViewListSelector!
     weak var viewMenu:ViewMenu!
     weak var viewEmpty:ViewEmpty!
     weak var viewRenamer:ViewRenamer!
-    weak var buttonAdd:UIButton!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -26,12 +24,10 @@ class ViewBase:UIView {
     }
     
     private func factoryViews() {
-        self.factoryBar()
         self.factoryMenu()
         self.factoryList()
         self.factorySelector()
         self.factoryEmpty()
-        self.factoryAdd()
         self.factoryRenamer()
     }
 }

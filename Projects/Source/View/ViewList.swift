@@ -31,6 +31,7 @@ class ViewList:UICollectionView {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
+        self.canCancelContentTouches = false
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
     }

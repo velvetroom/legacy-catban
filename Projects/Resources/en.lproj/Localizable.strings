@@ -1,4 +1,4 @@
-ViewBar_title="Projects";
+View_title="Projects";
 ViewEmpty_label="You have no projects";
 ViewRenamerInput_doneButton="Done";
 ViewRenamerField_placeholder="Project name";

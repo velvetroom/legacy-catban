@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA04DEAB20B9652500228ABB /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEAA20B9652500228ABB /* ViewBase.swift */; };
 		DA04DEAE20B9717A00228ABB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEAD20B9717A00228ABB /* TestView.swift */; };
-		DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEAF20B971E300228ABB /* ViewBar.swift */; };
 		DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEB120B9722500228ABB /* ViewConstants.swift */; };
 		DA04DEB520B972E600228ABB /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA04DEB420B972E600228ABB /* assets.xcassets */; };
 		DA04DEB920B9730900228ABB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA04DEB720B9730900228ABB /* Localizable.strings */; };
@@ -92,7 +91,6 @@
 /* Begin PBXFileReference section */
 		DA04DEAA20B9652500228ABB /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		DA04DEAD20B9717A00228ABB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		DA04DEAF20B971E300228ABB /* ViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBar.swift; sourceTree = "<group>"; };
 		DA04DEB120B9722500228ABB /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		DA04DEB420B972E600228ABB /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA04DEB820B9730900228ABB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 				DA04DEB120B9722500228ABB /* ViewConstants.swift */,
 				DA04DEAA20B9652500228ABB /* ViewBase.swift */,
 				DA106C5120BEA95E00A4AED5 /* ViewBase+Factory.swift */,
-				DA04DEAF20B971E300228ABB /* ViewBar.swift */,
 				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
 				DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */,
 				DA435A6F20BAA07E000C2E56 /* ViewListCell.swift */,
@@ -484,7 +481,6 @@
 				DA4777D120C6671F0069AB6C /* PresenterListDelegate.swift in Sources */,
 				DA53813320BD26080080B1D2 /* ViewMenuItem.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
-				DA04DEB020B971E300228ABB /* ViewBar.swift in Sources */,
 				DA106C5A20BEED7100A4AED5 /* PresenterDelegater.swift in Sources */,
 				DA106C4A20BE977100A4AED5 /* ViewRenamer.swift in Sources */,
 				DA106C4E20BE9A6600A4AED5 /* ViewRenamerInput.swift in Sources */,

@@ -60,7 +60,7 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func configureNavigationItem() {
-        self.navigationController?.setNavigationBarHidden(true, animated:true)
+        self.title = String.localized(key:"View_title", in:type(of:self))
     }
     
     private func configureView() -> ViewBase {
@@ -71,8 +71,6 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func hookSelectors() {
-        self.viewBase.buttonAdd.addTarget(
-            self, action:#selector(self.selectorAddProject(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonOpen.addTarget(
             self, action:#selector(self.selectorOpen(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewMenu.buttonRename.addTarget(
