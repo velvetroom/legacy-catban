@@ -7,22 +7,10 @@ struct ViewConstants {
         static let size:CGFloat = 68
     }
     
-    struct Menu {
-        static let height:CGFloat = 80
-        static let borderWidth:CGFloat = 1
-        static let borderMargin:CGFloat = 20
-        static let alphaOn:CGFloat = 1
-        static let alphaOff:CGFloat = 0.3
-        static let itemMargin:CGFloat = 5
-    }
-    
     struct MenuItem {
-        static let alphaOn:CGFloat = 0.2
-        static let alphaOff:CGFloat = 1
         static let iconDelete:String = "assetDelete"
         static let iconRename:String = "assetRename"
         static let iconOpen:String = "assetOpen"
-        static let size:CGFloat = 60
     }
     
     struct Empty {
@@ -40,9 +28,9 @@ struct ViewConstants {
         static let height:CGFloat = 50
     }
     
-    struct ListSelector {
+    struct Selector {
         static let height:CGFloat = 48
-        static let borderWidth:CGFloat = 1
+        static let animateDuration:TimeInterval = 0.2
     }
     
     struct Renamer {

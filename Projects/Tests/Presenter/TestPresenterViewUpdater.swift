@@ -9,7 +9,7 @@ class TestPresenterViewUpdater:XCTestCase {
     private var viewEmpty:ViewEmpty!
     private var viewMenu:ViewMenu!
     private var viewModel:ViewModelList!
-    private var viewSelector:ViewListSelector!
+    private var viewSelector:ViewSelector!
     private struct Constants {
         static let itemsCount:Int = 3
     }
@@ -22,7 +22,7 @@ class TestPresenterViewUpdater:XCTestCase {
         self.viewEmpty = ViewEmpty()
         self.viewMenu = ViewMenu()
         self.viewModel = ViewModelList()
-        self.viewSelector = ViewListSelector()
+        self.viewSelector = ViewSelector()
         self.parentPresenter = Presenter()
         self.outlets.empty = self.viewEmpty
         self.outlets.list = self.viewList

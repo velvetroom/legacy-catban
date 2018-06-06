@@ -1,17 +1,16 @@
 import UIKit
-import Shared
 
 class ViewBase:UIView {
     weak var viewList:ViewList!
-    weak var viewSelector:ViewListSelector!
-    weak var viewMenu:ViewMenu!
+    weak var viewSelector:ViewSelector!
     weak var viewEmpty:ViewEmpty!
     weak var viewRenamer:ViewRenamer!
     
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryViews()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
     required init?(coder:NSCoder) {
@@ -23,11 +22,68 @@ class ViewBase:UIView {
         self.backgroundColor = UIColor.white
     }
     
-    private func factoryViews() {
-        self.factoryMenu()
-        self.factoryList()
-        self.factorySelector()
-        self.factoryEmpty()
-        self.factoryRenamer()
+    private func makeOutlets() {
+        self.makeList()
+        self.makeEmpty()
+        self.makeSelector()
+        self.makeRenamer()
+    }
+    
+    private func layoutOutlets() {
+        self.layoutList()
+        self.layoutEmpty()
+        self.layoutSelector()
+        self.layoutRenamer()
+    }
+    
+    private func makeList() {
+        let viewList:ViewList = ViewList()
+        self.viewList = viewList
+        self.addSubview(viewList)
+    }
+    
+    private func makeEmpty() {
+        let viewEmpty:ViewEmpty = ViewEmpty()
+        self.viewEmpty = viewEmpty
+        self.addSubview(viewEmpty)
+    }
+    
+    private func makeSelector() {
+        let viewSelector:ViewSelector = ViewSelector()
+        self.viewSelector = viewSelector
+        self.addSubview(viewSelector)
+    }
+    
+    private func makeRenamer() {
+        let viewRenamer:ViewRenamer = ViewRenamer()
+        self.viewRenamer = viewRenamer
+        self.addSubview(viewRenamer)
+    }
+    
+    private func layoutList() {
+        self.layoutAdjustEqual(view:self.viewList)
+    }
+    
+    private func layoutEmpty() {
+        self.layoutAdjustEqual(view:self.viewEmpty)
+    }
+    
+    private func layoutSelector() {
+        self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(equalTo:self.topAnchor)
+        self.viewList.layoutSelectorY.isActive = true
+        self.viewSelector.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.viewSelector.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        self.viewSelector.heightAnchor.constraint(equalToConstant:ViewConstants.Selector.height).isActive = true
+    }
+    
+    private func layoutRenamer() {
+        self.layoutAdjustEqual(view:self.viewRenamer)
+    }
+    
+    private func layoutAdjustEqual(view:UIView) {
+        view.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        view.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

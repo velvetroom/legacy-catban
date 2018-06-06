@@ -18,6 +18,11 @@ class View:Shared.View, UITextFieldDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated:Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
+    
     override func loadView() {
         self.view = self.configureView()
     }
@@ -39,7 +44,7 @@ class View:Shared.View, UITextFieldDelegate {
         self.presenter.updateProject(name:name)
     }
     
-    @objc func selectorOpen(button:ViewMenuItem) {
+    @objc func selectorOpen(button:UIButton) {
         self.presenter.openProject()
     }
     
@@ -47,7 +52,7 @@ class View:Shared.View, UITextFieldDelegate {
         self.presenter.addProject()
     }
     
-    @objc func selectorRename(button:ViewMenuItem) {
+    @objc func selectorRename(button:UIButton) {
         self.presenter.renameProject()
     }
     
@@ -61,6 +66,7 @@ class View:Shared.View, UITextFieldDelegate {
     
     private func configureNavigationItem() {
         self.title = String.localized(key:"View_title", in:type(of:self))
+        self.setToolbarItems([UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.add, target:nil, action:nil)], animated:true)
     }
     
     private func configureView() -> ViewBase {
@@ -71,12 +77,6 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func hookSelectors() {
-        self.viewBase.viewMenu.buttonOpen.addTarget(
-            self, action:#selector(self.selectorOpen(button:)), for:UIControlEvents.touchUpInside)
-        self.viewBase.viewMenu.buttonRename.addTarget(
-            self, action:#selector(self.selectorRename(button:)), for:UIControlEvents.touchUpInside)
-        self.viewBase.viewMenu.buttonDelete.addTarget(
-            self, action:#selector(self.selectorDelete(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewRenamer.viewInput.doneButton.addTarget(
             self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
         self.viewBase.viewRenamer.doneButton.addTarget(

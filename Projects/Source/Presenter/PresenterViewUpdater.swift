@@ -8,7 +8,7 @@ class PresenterViewUpdater {
         self.updateList()
         self.updateListItems()
         self.updateEmpty()
-        self.updateMenu()
+        self.updateToolbar()
     }
     
     private func updateList() {
@@ -27,9 +27,9 @@ class PresenterViewUpdater {
         self.presenter.outlets.empty?.isHidden = self.viewModel.emptyHidden
     }
     
-    private func updateMenu() {
-        self.presenter.outlets.menu?.isUserInteractionEnabled = self.viewModel.menuEnabled
-        self.presenter.outlets.menu?.alpha = self.viewModel.menuAlpha
+    private func updateToolbar() {
+        self.presenter.outlets.view?.navigationController?.setToolbarHidden(
+            self.viewModel.toolbarHidden, animated:true)
     }
     
     private func listItems() -> [ViewModelListItem] {

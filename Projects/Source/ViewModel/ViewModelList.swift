@@ -5,15 +5,13 @@ struct ViewModelList:ViewModelProtocol {
     let selectorHidden:Bool
     let listHidden:Bool
     let emptyHidden:Bool
-    let menuEnabled:Bool
-    let menuAlpha:CGFloat
+    let toolbarHidden:Bool
     
     init() {
         self.items = []
         self.selectorHidden = false
         self.listHidden = false
         self.emptyHidden = true
-        self.menuEnabled = true
-        self.menuAlpha = ViewConstants.Menu.alphaOn
+        self.toolbarHidden = false
     }
 }

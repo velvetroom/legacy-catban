@@ -42,6 +42,7 @@ class PresenterListDelegate:NSObject, UICollectionViewDelegate, UICollectionView
             centreY = self.view.bounds.midY
         }
         self.view.layoutSelectorY.constant = centreY - self.view.contentOffset.y
+        self.animateSelector()
     }
     
     func selectCentreCell() {
@@ -77,5 +78,11 @@ class PresenterListDelegate:NSObject, UICollectionViewDelegate, UICollectionView
         self.selected = index
         self.trackingScroll = false
         self.view.scrollToItem(at:index, at:UICollectionViewScrollPosition.centeredVertically, animated:true)
+    }
+    
+    private func animateSelector() {
+        UIView.animate(withDuration:ViewConstants.Selector.animateDuration) { [weak self] in
+            self?.view.superview?.layoutIfNeeded()
+        }
     }
 }

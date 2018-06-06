@@ -7,7 +7,7 @@ class TestPresenter_ViewModel:XCTestCase {
     private var board:MockBoardProjectsProtocol!
     private var controller:Controller!
     private var viewList:ViewList!
-    private var viewSelector:ViewListSelector!
+    private var viewSelector:ViewSelector!
     
     override func setUp() {
         super.setUp()
@@ -15,7 +15,7 @@ class TestPresenter_ViewModel:XCTestCase {
         self.board = MockBoardProjectsProtocol()
         self.controller = Controller()
         self.viewList = ViewList()
-        self.viewSelector = ViewListSelector()
+        self.viewSelector = ViewSelector()
         self.controller.board = self.board
         self.presenter.controller = self.controller
         self.presenter.outlets.list = self.viewList
