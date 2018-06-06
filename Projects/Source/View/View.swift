@@ -72,7 +72,7 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func configureToolbar() {
-        self.setToolbarItems(View.makeToolbarItems(), animated:true)
+        self.setToolbarItems(self.makeToolbarItems(), animated:true)
     }
     
     private func configureView() -> ViewBase {
