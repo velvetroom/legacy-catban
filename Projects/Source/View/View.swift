@@ -9,6 +9,7 @@ class View:Shared.View, UITextFieldDelegate {
         super.didLoad()
         self.hookSelectors()
         self.configureNavigationItem()
+        self.configureToolbar()
     }
     
     override func viewWillAppear(_ animated:Bool) {
@@ -44,15 +45,15 @@ class View:Shared.View, UITextFieldDelegate {
         self.presenter.updateProject(name:name)
     }
     
-    @objc func selectorOpen(button:UIButton) {
+    @objc func selectorOpen(button:UIBarButtonItem) {
         self.presenter.openProject()
     }
     
-    @objc func selectorAddProject(button:UIButton) {
+    @objc func selectorAddProject(button:UIBarButtonItem) {
         self.presenter.addProject()
     }
     
-    @objc func selectorRename(button:UIButton) {
+    @objc func selectorRename(button:UIBarButtonItem) {
         self.presenter.renameProject()
     }
     
@@ -60,13 +61,18 @@ class View:Shared.View, UITextFieldDelegate {
         self.viewBase.viewRenamer.viewInput.viewField.resignFirstResponder()
     }
     
-    @objc func selectorDelete(button:UIButton) {
+    @objc func selectorDelete(button:UIBarButtonItem) {
         self.presenter.delete()
     }
     
     private func configureNavigationItem() {
         self.title = String.localized(key:"View_title", in:type(of:self))
-        self.setToolbarItems([UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.add, target:nil, action:nil)], animated:true)
+        let buttonAdd:UIBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem:UIBarButtonSystemItem.add, target:nil, action:nil)
+    }
+    
+    private func configureToolbar() {
+        self.setToolbarItems(View.makeToolbarItems(), animated:true)
     }
     
     private func configureView() -> ViewBase {

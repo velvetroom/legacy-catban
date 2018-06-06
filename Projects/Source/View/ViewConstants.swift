@@ -53,4 +53,8 @@ struct ViewConstants {
         static let fontSize:CGFloat = 16
         static let margin:CGFloat = 8
     }
+    
+    struct Toolbar {
+        static let fixedSpace:CGFloat = 15
+    }
 }
