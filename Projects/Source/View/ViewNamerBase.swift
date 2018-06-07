@@ -64,7 +64,6 @@ class ViewNamerBase:UIView {
         labelError.font = UIFont.systemFont(ofSize:ViewConstants.NamerError.fontSize, weight:UIFont.Weight.regular)
         labelError.numberOfLines = 0
         labelError.textColor = UIColor(white:0, alpha:0.4)
-        labelError.text = "lorem ipsum lored danot somet hello world"
         self.labelError = labelError
         self.addSubview(labelError)
     }

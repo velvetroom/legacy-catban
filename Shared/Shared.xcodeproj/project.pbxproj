@@ -25,11 +25,18 @@
 		DA57282C20C5873A006E1016 /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282B20C5873A006E1016 /* TestPresenterForKeyboard.swift */; };
 		DA57282E20C588D3006E1016 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282D20C588D3006E1016 /* MockNotificationCenter.swift */; };
 		DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */; };
+		DA96DC8420C96FE100C9E69A /* NamingValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96DC8320C96FE100C9E69A /* NamingValidatorFactory.swift */; };
 		DA978FA920A19852002461E6 /* ControllerProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */; };
 		DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */; };
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
+		DAA78C7A20C9662000550150 /* NamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C7920C9662000550150 /* NamingValidatorComposite.swift */; };
+		DAA78C7C20C9665800550150 /* NamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C7B20C9665800550150 /* NamingValidatorProtocol.swift */; };
+		DAA78C7E20C96A3200550150 /* NamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C7D20C96A3200550150 /* NamingValidatorLength.swift */; };
+		DAA78C8320C96B3600550150 /* TestNamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C8220C96B3600550150 /* TestNamingValidatorComposite.swift */; };
+		DAA78C8520C96B4D00550150 /* MockNamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C8420C96B4D00550150 /* MockNamingValidatorProtocol.swift */; };
+		DAA78C8720C96B5F00550150 /* TestNamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C8620C96B5F00550150 /* TestNamingValidatorLength.swift */; };
 		DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */; };
 		DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */; };
 		DADB5EB8209B092100CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EB7209B092100CFFC9A /* View.swift */; };
@@ -80,10 +87,17 @@
 		DA57282D20C588D3006E1016 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
 		DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFactoryProtocol.swift; sourceTree = "<group>"; };
+		DA96DC8320C96FE100C9E69A /* NamingValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingValidatorFactory.swift; sourceTree = "<group>"; };
 		DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProjectProtocol.swift; sourceTree = "<group>"; };
 		DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
+		DAA78C7920C9662000550150 /* NamingValidatorComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingValidatorComposite.swift; sourceTree = "<group>"; };
+		DAA78C7B20C9665800550150 /* NamingValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingValidatorProtocol.swift; sourceTree = "<group>"; };
+		DAA78C7D20C96A3200550150 /* NamingValidatorLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingValidatorLength.swift; sourceTree = "<group>"; };
+		DAA78C8220C96B3600550150 /* TestNamingValidatorComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorComposite.swift; sourceTree = "<group>"; };
+		DAA78C8420C96B4D00550150 /* MockNamingValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNamingValidatorProtocol.swift; sourceTree = "<group>"; };
+		DAA78C8620C96B5F00550150 /* TestNamingValidatorLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorLength.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
 		DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDispatchQueue_Private.swift; sourceTree = "<group>"; };
 		DADB5EB7209B092100CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -212,9 +226,8 @@
 		DA57282520C58624006E1016 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				DA57282620C5864A006E1016 /* PresenterForKeyboardProtocol.swift */,
-				DA57282820C586FE006E1016 /* PresenterForKeyboard.swift */,
-				DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */,
+				DAA78C8820C96B7100550150 /* NamingValidator */,
+				DAA78C7F20C96AF900550150 /* PresenterForKeyboard */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -222,10 +235,50 @@
 		DA57282A20C5872A006E1016 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DAA78C8120C96B1C00550150 /* NamingValidator */,
+				DAA78C8020C96B1000550150 /* PresenterForKeyboard */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		DAA78C7F20C96AF900550150 /* PresenterForKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA57282620C5864A006E1016 /* PresenterForKeyboardProtocol.swift */,
+				DA57282820C586FE006E1016 /* PresenterForKeyboard.swift */,
+				DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */,
+			);
+			path = PresenterForKeyboard;
+			sourceTree = "<group>";
+		};
+		DAA78C8020C96B1000550150 /* PresenterForKeyboard */ = {
+			isa = PBXGroup;
+			children = (
 				DA57282B20C5873A006E1016 /* TestPresenterForKeyboard.swift */,
 				DA57282D20C588D3006E1016 /* MockNotificationCenter.swift */,
 			);
-			path = Tools;
+			path = PresenterForKeyboard;
+			sourceTree = "<group>";
+		};
+		DAA78C8120C96B1C00550150 /* NamingValidator */ = {
+			isa = PBXGroup;
+			children = (
+				DAA78C8220C96B3600550150 /* TestNamingValidatorComposite.swift */,
+				DAA78C8620C96B5F00550150 /* TestNamingValidatorLength.swift */,
+				DAA78C8420C96B4D00550150 /* MockNamingValidatorProtocol.swift */,
+			);
+			path = NamingValidator;
+			sourceTree = "<group>";
+		};
+		DAA78C8820C96B7100550150 /* NamingValidator */ = {
+			isa = PBXGroup;
+			children = (
+				DA96DC8320C96FE100C9E69A /* NamingValidatorFactory.swift */,
+				DAA78C7B20C9665800550150 /* NamingValidatorProtocol.swift */,
+				DAA78C7920C9662000550150 /* NamingValidatorComposite.swift */,
+				DAA78C7D20C96A3200550150 /* NamingValidatorLength.swift */,
+			);
+			path = NamingValidator;
 			sourceTree = "<group>";
 		};
 		DAF7E670209B079900B8A39A /* Tests */ = {
@@ -378,10 +431,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA78C8720C96B5F00550150 /* TestNamingValidatorLength.swift in Sources */,
+				DAA78C8520C96B4D00550150 /* MockNamingValidatorProtocol.swift in Sources */,
 				DAF7E672209B07B300B8A39A /* TestView.swift in Sources */,
 				DAEE4AA420A1EFC3002D1419 /* MockControllerProtocol_Default.swift in Sources */,
 				DADB5EBE209B0B8700CFFC9A /* MockViewDelegateProtocol.swift in Sources */,
 				DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */,
+				DAA78C8320C96B3600550150 /* TestNamingValidatorComposite.swift in Sources */,
 				DAFD2FAF209CA4A20005F5D2 /* TestController.swift in Sources */,
 				DAFD2FAB209CA41E0005F5D2 /* MockControllerProtocol.swift in Sources */,
 				DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */,
@@ -404,6 +460,7 @@
 				DAF7E65A209B051F00B8A39A /* PresenterProtocol.swift in Sources */,
 				DA055B0020A38FCB002854F9 /* ControllerCardProtocol.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
+				DAA78C7A20C9662000550150 /* NamingValidatorComposite.swift in Sources */,
 				DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */,
 				DAF84BB420C596F0009FDEBF /* PresenterForKeyboardFactory.swift in Sources */,
 				DA204FF320B84D6500A41DB0 /* ControllerBoardProtocol.swift in Sources */,
@@ -413,16 +470,19 @@
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
 				DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
+				DAA78C7E20C96A3200550150 /* NamingValidatorLength.swift in Sources */,
 				DA57282720C5864A006E1016 /* PresenterForKeyboardProtocol.swift in Sources */,
 				DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */,
 				DA0E58B3209F267A00AD4425 /* ViewDelegateProtocol+Default.swift in Sources */,
 				DADB5EBC209B0A5300CFFC9A /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
+				DA96DC8420C96FE100C9E69A /* NamingValidatorFactory.swift in Sources */,
 				DA978FA920A19852002461E6 /* ControllerProjectProtocol.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
 				DA0E58B1209F250000AD4425 /* PresenterDelegateProtocol.swift in Sources */,
+				DAA78C7C20C9665800550150 /* NamingValidatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
