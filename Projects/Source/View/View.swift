@@ -67,9 +67,9 @@ class View:Shared.View, UITextFieldDelegate {
     
     private func configureNavigationItem() {
         self.title = String.localized(key:"View_title", in:type(of:self))
-        self.navigationItem.prompt = String()
-        let buttonAdd:UIBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem:UIBarButtonSystemItem.add, target:nil, action:nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem:UIBarButtonSystemItem.add,
+            target:self, action:#selector(self.selectorAddProject(button:)))
     }
     
     private func configureToolbar() {
