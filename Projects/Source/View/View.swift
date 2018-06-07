@@ -19,11 +19,6 @@ class View:Shared.View, UITextFieldDelegate {
         }
     }
     
-    override func viewDidAppear(_ animated:Bool) {
-        super.viewDidAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated:true)
-    }
-    
     override func loadView() {
         self.view = self.configureView()
     }
@@ -67,12 +62,14 @@ class View:Shared.View, UITextFieldDelegate {
     
     private func configureNavigationItem() {
         self.title = String.localized(key:"View_title", in:type(of:self))
+        self.navigationbarHidden = false
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
             target:self, action:#selector(self.selectorAddProject(button:)))
     }
     
     private func configureToolbar() {
+        self.toolbarHidden = false
         self.setToolbarItems(self.makeToolbarItems(), animated:true)
     }
     
