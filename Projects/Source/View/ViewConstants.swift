@@ -48,6 +48,18 @@ struct ViewConstants {
         static let margin:CGFloat = 8
     }
     
+    struct NamerField {
+        static let fontSize:CGFloat = 26
+        static let width:CGFloat = 200
+        static let height:CGFloat = 40
+        static let top:CGFloat = 20
+        static let left:CGFloat = 20
+    }
+    
+    struct NamerBorder {
+        static let height:CGFloat = 1
+    }
+    
     struct Toolbar {
         static let fixedSpace:CGFloat = 15
         static let assetDelete:String = "assetDelete"

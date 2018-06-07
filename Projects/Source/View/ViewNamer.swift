@@ -10,14 +10,17 @@ class ViewNamer:Shared.View {
     
     override func didLoad() {
         super.didLoad()
-        self.toolbarHidden = false
-        self.navigationbarHidden = false
-        self.title = "Board name"
+        self.configureNavigationItem()
     }
     
     private func configureView() -> ViewNamerBase {
         let viewBase:ViewNamerBase = ViewNamerBase()
         self.viewBase = viewBase
         return viewBase
+    }
+    
+    private func configureNavigationItem() {
+        self.navigationbarHidden = false
+        self.title = String.localized(key:"ViewNamer_title", in:type(of:self))
     }
 }

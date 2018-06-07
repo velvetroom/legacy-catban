@@ -61,8 +61,8 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     private func configureNavigationItem() {
-        self.title = String.localized(key:"View_title", in:type(of:self))
         self.navigationbarHidden = false
+        self.title = String.localized(key:"View_title", in:type(of:self))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
             target:self, action:#selector(self.selectorAddProject(button:)))

@@ -56,6 +56,7 @@
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA93139E20B83009008EDA07 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139D20B83009008EDA07 /* TestController.swift */; };
 		DA9313A020B83016008EDA07 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139F20B83016008EDA07 /* Controller.swift */; };
+		DAA78C7120C953D900550150 /* ViewNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78C7020C953D900550150 /* ViewNameField.swift */; };
 		DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0EFF620BD6FF20027FF56 /* ViewSelector.swift */; };
 		DAB30EE120C67BF800AF3FB2 /* MockPresenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB30EE020C67BF800AF3FB2 /* MockPresenterList.swift */; };
 		DACE508D20B848F200276D5A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
@@ -135,6 +136,7 @@
 		DA93139A20B82FBA008EDA07 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA93139D20B83009008EDA07 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		DA93139F20B83016008EDA07 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DAA78C7020C953D900550150 /* ViewNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNameField.swift; sourceTree = "<group>"; };
 		DAB0EFF620BD6FF20027FF56 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSelector.swift; sourceTree = "<group>"; };
 		DAB30EE020C67BF800AF3FB2 /* MockPresenterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterList.swift; sourceTree = "<group>"; };
 		DACE508C20B848F200276D5A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 				DA435A7620BABD91000C2E56 /* ViewEmpty.swift */,
 				DA12564720C91649007FE155 /* ViewNamer.swift */,
 				DA12564920C91AFA007FE155 /* ViewNamerBase.swift */,
+				DAA78C7020C953D900550150 /* ViewNameField.swift */,
 				DA106C4920BE977100A4AED5 /* ViewRenamer.swift */,
 				DA106C4D20BE9A6600A4AED5 /* ViewRenamerInput.swift */,
 				DA106C4B20BE99BF00A4AED5 /* ViewRenamerField.swift */,
@@ -478,6 +481,7 @@
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */,
 				DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */,
+				DAA78C7120C953D900550150 /* ViewNameField.swift in Sources */,
 				DAD5F07520BBD9F400CEC10A /* PresenterViewUpdater.swift in Sources */,
 				DA4701C820BFF37100989163 /* PresenterDelete.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
