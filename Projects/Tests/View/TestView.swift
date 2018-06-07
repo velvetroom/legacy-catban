@@ -39,7 +39,7 @@ class TestView:XCTestCase {
     }
     
     func testInjectsRenamerDelegate() {
-        XCTAssertNotNil(self.view.view, "Loaded view")
+        XCTAssertNotNil(self.view.view, "Failed to load view")
         XCTAssertNotNil(self.view.viewBase.viewRenamer.viewInput.viewField.delegate, "Not injected")
     }
     

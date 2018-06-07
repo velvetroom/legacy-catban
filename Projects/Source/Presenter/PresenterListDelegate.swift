@@ -41,7 +41,7 @@ class PresenterListDelegate:NSObject, UICollectionViewDelegate, UICollectionView
         } else {
             centreY = self.view.bounds.midY
         }
-        self.view.layoutSelectorY.constant = centreY - self.view.contentOffset.y
+        self.view.viewSelector.layoutY.constant = centreY - self.view.contentOffset.y
         self.animateSelector()
     }
     
@@ -72,6 +72,10 @@ class PresenterListDelegate:NSObject, UICollectionViewDelegate, UICollectionView
     
     func collectionView(_:UICollectionView, layout:UICollectionViewLayout, sizeForItemAt:IndexPath) -> CGSize {
         return CGSize(width:self.view.bounds.width, height:ViewConstants.ListItem.height)
+    }
+    
+    func collectionView(_:UICollectionView, willDisplay cell:UICollectionViewCell, forItemAt:IndexPath) {
+        self.view.bringSubview(toFront:cell)
     }
     
     func collectionView(_:UICollectionView, didSelectItemAt index:IndexPath) {

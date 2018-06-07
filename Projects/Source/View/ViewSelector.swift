@@ -1,7 +1,8 @@
 import UIKit
-import Shared
 
 class ViewSelector:UIView {
+    weak var layoutY:NSLayoutConstraint!
+    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
@@ -12,7 +13,7 @@ class ViewSelector:UIView {
     }
     
     private func configureView() {
-        self.backgroundColor = UIColor(white:0.94, alpha:0.5)
+        self.backgroundColor = UIColor(white:0.96, alpha:1)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.isUserInteractionEnabled = false

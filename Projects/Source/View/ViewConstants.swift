@@ -24,7 +24,7 @@ struct ViewConstants {
     
     struct Selector {
         static let height:CGFloat = 48
-        static let animateDuration:TimeInterval = 0.2
+        static let animateDuration:TimeInterval = 0.3
     }
     
     struct Renamer {

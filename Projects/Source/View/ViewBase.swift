@@ -2,7 +2,6 @@ import UIKit
 
 class ViewBase:UIView {
     weak var viewList:ViewList!
-    weak var viewSelector:ViewSelector!
     weak var viewEmpty:ViewEmpty!
     weak var viewRenamer:ViewRenamer!
     
@@ -50,8 +49,8 @@ class ViewBase:UIView {
     
     private func makeSelector() {
         let viewSelector:ViewSelector = ViewSelector()
-        self.viewSelector = viewSelector
-        self.viewList.insertSubview(viewSelector, at:0)
+        self.viewList.addSubview(viewSelector)
+        self.viewList.viewSelector = viewSelector
     }
     
     private func makeRenamer() {
@@ -69,12 +68,15 @@ class ViewBase:UIView {
     }
     
     private func layoutSelector() {
-        self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(
+        self.viewList.viewSelector.layoutY = self.viewList.viewSelector.centerYAnchor.constraint(
             equalTo:self.safeAreaLayoutGuide.topAnchor)
-        self.viewList.layoutSelectorY.isActive = true
-        self.viewSelector.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
-        self.viewSelector.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
-        self.viewSelector.heightAnchor.constraint(equalToConstant:ViewConstants.Selector.height).isActive = true
+        self.viewList.viewSelector.layoutY.isActive = true
+        self.viewList.viewSelector.leftAnchor.constraint(
+            equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        self.viewList.viewSelector.rightAnchor.constraint(
+            equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
+        self.viewList.viewSelector.heightAnchor.constraint(
+            equalToConstant:ViewConstants.Selector.height).isActive = true
     }
     
     private func layoutRenamer() {

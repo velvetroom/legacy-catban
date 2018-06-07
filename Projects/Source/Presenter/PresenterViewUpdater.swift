@@ -13,7 +13,6 @@ class PresenterViewUpdater {
     
     private func updateList() {
         self.presenter.outlets.list?.isHidden = self.viewModel.listHidden
-        self.presenter.outlets.selector?.isHidden = self.viewModel.selectorHidden
     }
     
     private func updateListItems() {

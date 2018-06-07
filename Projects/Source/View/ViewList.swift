@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewList:UICollectionView {
-    weak var layoutSelectorY:NSLayoutConstraint!
+    weak var viewSelector:ViewSelector!
     
     init() {
         let flow:ViewListFlow = ViewListFlow()
