@@ -34,7 +34,7 @@ class TestView:XCTestCase {
             called = true
         }
         
-        self.view.selectorOpen(button:ViewMenuItem())
+        self.view.selectorOpen(button:UIBarButtonItem())
         XCTAssertTrue(called, "Failed")
     }
     
@@ -50,13 +50,28 @@ class TestView:XCTestCase {
             added = true
         }
         
-        self.view.selectorAddProject(button:UIButton())
+        self.view.selectorAddProject(button:UIBarButtonItem())
         XCTAssertTrue(added, "Not added")
     }
     
     func testAddProjectUpdatesSelectedItem() {
         self.presenter.renamer.item.identifier = String()
-        self.view.selectorAddProject(button:UIButton())
+        self.view.selectorAddProject(button:UIBarButtonItem())
         XCTAssertFalse(self.presenter.renamer.item.identifier.isEmpty, "Selected not updated")
+    }
+    
+    func testIconButtonDelete() {
+        let image:UIImage? = UIImage(name:ViewConstants.Toolbar.assetDelete, in:View.self)
+        XCTAssertNotNil(image, "Failed to load image")
+    }
+    
+    func testIconButtonRename() {
+        let image:UIImage? = UIImage(name:ViewConstants.Toolbar.assetRename, in:View.self)
+        XCTAssertNotNil(image, "Failed to load image")
+    }
+    
+    func testIconButtonColumns() {
+        let image:UIImage? = UIImage(name:ViewConstants.Toolbar.assetColumns, in:View.self)
+        XCTAssertNotNil(image, "Failed to load image")
     }
 }

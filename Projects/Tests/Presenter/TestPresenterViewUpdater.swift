@@ -7,7 +7,6 @@ class TestPresenterViewUpdater:XCTestCase {
     private var outlets:PresenterOutlets!
     private var viewList:ViewList!
     private var viewEmpty:ViewEmpty!
-    private var viewMenu:ViewMenu!
     private var viewModel:ViewModelList!
     private var viewSelector:ViewSelector!
     private struct Constants {
@@ -20,14 +19,11 @@ class TestPresenterViewUpdater:XCTestCase {
         self.outlets = PresenterOutlets()
         self.viewList = ViewList()
         self.viewEmpty = ViewEmpty()
-        self.viewMenu = ViewMenu()
         self.viewModel = ViewModelList()
         self.viewSelector = ViewSelector()
         self.parentPresenter = Presenter()
         self.outlets.empty = self.viewEmpty
         self.outlets.list = self.viewList
-        self.outlets.menu = self.viewMenu
-        self.outlets.selector = self.viewSelector
         self.parentPresenter.outlets = self.outlets
         self.presenter.presenter = self.parentPresenter
     }
@@ -62,10 +58,7 @@ class TestPresenterViewUpdater:XCTestCase {
     
     private func validateViews() {
         XCTAssertEqual(self.viewList.isHidden, self.viewModel.listHidden, "Failed")
-        XCTAssertEqual(self.viewSelector.isHidden, self.viewModel.selectorHidden, "Failed")
         XCTAssertEqual(self.viewEmpty.isHidden, self.viewModel.emptyHidden, "Failed")
-        XCTAssertEqual(self.viewMenu.isUserInteractionEnabled, self.viewModel.menuEnabled, "Failed")
-        XCTAssertEqual(self.viewMenu.alpha, self.viewModel.menuAlpha, "Failed")
         XCTAssertEqual(self.parentPresenter.list.items.count, Constants.itemsCount, "Failed")
     }
     

@@ -11,7 +11,6 @@
 		DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEB120B9722500228ABB /* ViewConstants.swift */; };
 		DA04DEB520B972E600228ABB /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA04DEB420B972E600228ABB /* assets.xcassets */; };
 		DA04DEB920B9730900228ABB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA04DEB720B9730900228ABB /* Localizable.strings */; };
-		DA04DEBB20B9734400228ABB /* TestViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBA20B9734400228ABB /* TestViewBar.swift */; };
 		DA04DEBD20B9751400228ABB /* TestViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBC20B9751400228ABB /* TestViewBase.swift */; };
 		DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04DEBE20B9834E00228ABB /* ViewList.swift */; };
 		DA106C4820BE884400A4AED5 /* MockViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4720BE884400A4AED5 /* MockViewListCell.swift */; };
@@ -50,8 +49,6 @@
 		DA4777CD20C658A80069AB6C /* MockPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */; };
 		DA4777D120C6671F0069AB6C /* PresenterListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */; };
 		DA4777D320C6694C0069AB6C /* PresenterListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */; };
-		DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */; };
-		DA53813720BD2B0C0080B1D2 /* TestViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */; };
 		DA53813A20BD407C0080B1D2 /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53813820BD40540080B1D2 /* MockController.swift */; };
 		DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
@@ -91,7 +88,6 @@
 		DA04DEB120B9722500228ABB /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		DA04DEB420B972E600228ABB /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA04DEB820B9730900228ABB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA04DEBA20B9734400228ABB /* TestViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBar.swift; sourceTree = "<group>"; };
 		DA04DEBC20B9751400228ABB /* TestViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBase.swift; sourceTree = "<group>"; };
 		DA04DEBE20B9834E00228ABB /* ViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewList.swift; sourceTree = "<group>"; };
 		DA106C4720BE884400A4AED5 /* MockViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewListCell.swift; sourceTree = "<group>"; };
@@ -128,8 +124,6 @@
 		DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterForKeyboard.swift; sourceTree = "<group>"; };
 		DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterListDelegate.swift; sourceTree = "<group>"; };
 		DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterListDatasource.swift; sourceTree = "<group>"; };
-		DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenuItem.swift; sourceTree = "<group>"; };
-		DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewMenu.swift; sourceTree = "<group>"; };
 		DA53813820BD40540080B1D2 /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewListCell.swift; sourceTree = "<group>"; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,12 +178,9 @@
 			children = (
 				DA04DEAD20B9717A00228ABB /* TestView.swift */,
 				DA04DEBC20B9751400228ABB /* TestViewBase.swift */,
-				DA04DEBA20B9734400228ABB /* TestViewBar.swift */,
 				DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */,
 				DA1D02E920BC47B4003F6137 /* TestViewList.swift */,
 				DA70AD0120BC4D8E00C250C3 /* TestViewListCell.swift */,
-				DA53813620BD2B0C0080B1D2 /* TestViewMenu.swift */,
-				DA53813420BD27070080B1D2 /* TestViewMenuItem.swift */,
 				DA106C4F20BEA65500A4AED5 /* TestViewRenamer.swift */,
 				DA4701C520BFE32C00989163 /* TestViewModelListItemFactory.swift */,
 				DA106C4720BE884400A4AED5 /* MockViewListCell.swift */,
@@ -515,11 +506,9 @@
 				DAB30EE120C67BF800AF3FB2 /* MockPresenterList.swift in Sources */,
 				DA70AD0220BC4D8E00C250C3 /* TestViewListCell.swift in Sources */,
 				DA106C5820BED87C00A4AED5 /* TestPresenterRenamer.swift in Sources */,
-				DA53813720BD2B0C0080B1D2 /* TestViewMenu.swift in Sources */,
 				DA53813A20BD407C0080B1D2 /* MockController.swift in Sources */,
 				DAD5F07B20BBE1B200CEC10A /* TestPresenterList.swift in Sources */,
 				DA3BA75220C2C383004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
-				DA53813520BD27070080B1D2 /* TestViewMenuItem.swift in Sources */,
 				DA4701C220BFD0C800989163 /* MockPresenter.swift in Sources */,
 				DA4777CD20C658A80069AB6C /* MockPresenterForKeyboard.swift in Sources */,
 				DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */,
@@ -528,7 +517,6 @@
 				DA106C5C20BEEDD900A4AED5 /* TestPresenterDelegater.swift in Sources */,
 				DA106C5020BEA65500A4AED5 /* TestViewRenamer.swift in Sources */,
 				DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */,
-				DA04DEBB20B9734400228ABB /* TestViewBar.swift in Sources */,
 				DA435A8320BACA08000C2E56 /* TestPresenterOutlets.swift in Sources */,
 				DA4701CA20BFF74900989163 /* MockPresenterDelete.swift in Sources */,
 				DA4701C620BFE32C00989163 /* TestViewModelListItemFactory.swift in Sources */,

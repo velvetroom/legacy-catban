@@ -4,6 +4,7 @@ import XCTest
 class TestPresenterList:XCTestCase {
     private var presenter:PresenterList!
     private var view:ViewList!
+    private var viewSelector:ViewSelector!
     private var layout:NSLayoutConstraint!
     private struct Constants {
         static let name:String = "lorem ipsum"
@@ -15,7 +16,9 @@ class TestPresenterList:XCTestCase {
         self.presenter = PresenterList()
         self.view = ViewList()
         self.layout = NSLayoutConstraint()
-        self.view.layoutSelectorY = self.layout
+        self.viewSelector = ViewSelector()
+        self.view.viewSelector = self.viewSelector
+        self.viewSelector.layoutY = self.layout
         var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name
         let itemB:ViewModelListItem = ViewModelListItem()
