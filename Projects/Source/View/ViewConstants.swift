@@ -7,12 +7,6 @@ struct ViewConstants {
         static let size:CGFloat = 68
     }
     
-    struct MenuItem {
-        static let iconDelete:String = "assetDelete"
-        static let iconRename:String = "assetRename"
-        static let iconOpen:String = "assetOpen"
-    }
-    
     struct Empty {
         static let icon:String = "assetEmpty"
         static let iconSize:CGFloat = 92
@@ -56,5 +50,8 @@ struct ViewConstants {
     
     struct Toolbar {
         static let fixedSpace:CGFloat = 15
+        static let assetDelete:String = "assetDelete"
+        static let assetRename:String = "assetRename"
+        static let assetColumns:String = "assetColumns"
     }
 }

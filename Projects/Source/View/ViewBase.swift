@@ -51,7 +51,7 @@ class ViewBase:UIView {
     private func makeSelector() {
         let viewSelector:ViewSelector = ViewSelector()
         self.viewSelector = viewSelector
-        self.addSubview(viewSelector)
+        self.viewList.insertSubview(viewSelector, at:0)
     }
     
     private func makeRenamer() {
@@ -69,10 +69,11 @@ class ViewBase:UIView {
     }
     
     private func layoutSelector() {
-        self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(equalTo:self.topAnchor)
+        self.viewList.layoutSelectorY = viewSelector.centerYAnchor.constraint(
+            equalTo:self.safeAreaLayoutGuide.topAnchor)
         self.viewList.layoutSelectorY.isActive = true
-        self.viewSelector.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        self.viewSelector.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        self.viewSelector.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        self.viewSelector.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
         self.viewSelector.heightAnchor.constraint(equalToConstant:ViewConstants.Selector.height).isActive = true
     }
     
@@ -81,9 +82,9 @@ class ViewBase:UIView {
     }
     
     private func layoutAdjustEqual(view:UIView) {
-        view.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        view.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+        view.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo:self.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        view.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
 }

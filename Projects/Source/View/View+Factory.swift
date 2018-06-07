@@ -1,27 +1,28 @@
 import UIKit
+import Shared
 
 extension View {
     func makeToolbarItems() -> [UIBarButtonItem] {
         return [makeButtonDelete(),
                 makeFixedSpace(),
                 makeButtonRename(),
-                makeFlexibleSpace(),
-                makeButtonOpen()]
+                makeFixedSpace(),
+                makeButtonColumns()]
     }
     
     private func makeButtonDelete() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.trash, target:self, action:
-            #selector(self.selectorDelete(button:)))
+        let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetDelete, in:type(of:self))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorDelete(button:)))
     }
     
     private func makeButtonRename() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.compose, target:self, action:
-            #selector(self.selectorRename(button:)))
+        let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetRename, in:type(of:self))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorRename(button:)))
     }
     
-    private func makeButtonOpen() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.play, target:self, action:
-            #selector(self.selectorOpen(button:)))
+    private func makeButtonColumns() -> UIBarButtonItem {
+        let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetColumns, in:type(of:self))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorOpen(button:)))
     }
     
     private func makeFixedSpace() -> UIBarButtonItem {
@@ -29,9 +30,5 @@ extension View {
             barButtonSystemItem:UIBarButtonSystemItem.fixedSpace, target:nil, action:nil)
         space.width = ViewConstants.Toolbar.fixedSpace
         return space
-    }
-    
-    private func makeFlexibleSpace() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.flexibleSpace, target:nil, action:nil)
     }
 }
