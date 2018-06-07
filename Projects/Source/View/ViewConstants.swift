@@ -60,6 +60,17 @@ struct ViewConstants {
         static let height:CGFloat = 1
     }
     
+    struct NamerStatus {
+        static let assetValid:String = "assetValid"
+        static let assetError:String = "assetError"
+        static let size:CGFloat = 70
+    }
+    
+    struct NamerError {
+        static let fontSize:CGFloat = 16
+        static let top:CGFloat = 5
+    }
+    
     struct Toolbar {
         static let fixedSpace:CGFloat = 15
         static let assetDelete:String = "assetDelete"
