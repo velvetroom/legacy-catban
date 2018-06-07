@@ -6,12 +6,17 @@ class View:Shared.View, UITextViewDelegate {
     
     override func didLoad() {
         super.didLoad()
+        self.configureView()
         self.configureNavigationItem()
     }
     
     override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated:true)
+    }
+    
+    private func configureView() {
+        self.view.backgroundColor = UIColor.white
     }
     
     private func configureNavigationItem() {

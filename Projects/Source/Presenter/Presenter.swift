@@ -47,7 +47,9 @@ class Presenter:PresenterProtocol {
     
     func renameProject() {
         self.renamer.item = self.list.selected
-        self.renamer.show()
+        self.outlets.view?.navigationController?.pushViewController(ViewNamer(), animated:true)
+//        self.outlets.view?.present(ViewNamer(), animated:true, completion:nil)
+//        self.renamer.show()
     }
     
     func updateProject(name:String) {

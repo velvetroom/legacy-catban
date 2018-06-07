@@ -24,7 +24,6 @@ class PresenterOutletsLoader {
     
     private func loadView() {
         self.outlets.view = self.view
-        self.view.view.backgroundColor = UIColor.white
     }
     
     private func loadText() {

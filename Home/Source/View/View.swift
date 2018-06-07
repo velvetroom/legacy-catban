@@ -10,6 +10,7 @@ class View:Shared.View {
     
     override func didLoad() {
         super.didLoad()
+        self.configureView()
         self.configureNavigationItem()
         NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
             self?.presenter?.updateConstraints()
@@ -30,6 +31,10 @@ class View:Shared.View {
     @objc func selectorMenu(button:UIBarButtonItem) {
         self.navigationItem.rightBarButtonItem = nil
         self.presenter?.showMenu()
+    }
+    
+    private func configureView() {
+        self.view.backgroundColor = UIColor.white
     }
     
     private func configureNavigationItem() {
