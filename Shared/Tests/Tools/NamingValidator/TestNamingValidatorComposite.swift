@@ -54,6 +54,7 @@ class TestNamingValidatorComposite:XCTestCase {
     }
     
     private func expectedValidators() -> [NamingValidatorProtocol.Type] {
-        return [NamingValidatorLength.self]
+        return [NamingValidatorLength.self,
+                NamingValidatorVisible.self]
     }
 }

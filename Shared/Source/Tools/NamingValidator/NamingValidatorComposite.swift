@@ -2,10 +2,10 @@ import Foundation
 
 class NamingValidatorComposite:NamingValidatorProtocol {
     var validators:[NamingValidatorProtocol.Type]
-    private var name:String!
     
     required init() {
-        self.validators = [NamingValidatorLength.self]
+        self.validators = [NamingValidatorLength.self,
+                           NamingValidatorVisible.self]
     }
     
     func validate(name:String) throws {

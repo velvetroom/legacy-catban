@@ -1,1 +1,2 @@
 ErrorNaming_length="The name seems to be empty, please define a name.";
+ErrorNaming_visible="This name seems to be invalid, please try to define it again.";
