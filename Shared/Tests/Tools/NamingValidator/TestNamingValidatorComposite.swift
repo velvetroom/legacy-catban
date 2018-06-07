@@ -9,6 +9,11 @@ class TestNamingValidatorComposite:XCTestCase {
         self.model = NamingValidatorComposite()
     }
     
+    override func tearDown() {
+        super.tearDown()
+        MockNamingValidatorProtocol.error = nil
+    }
+    
     func testCallValidators() {
         self.model.validators = [MockNamingValidatorProtocol.self]
         let string:String = "lorem ipsum"
@@ -35,6 +40,17 @@ class TestNamingValidatorComposite:XCTestCase {
     func testSameAmountOfValidators() {
         let expected:[NamingValidatorProtocol.Type] = self.expectedValidators()
         XCTAssertEqual(expected.count, self.model.validators.count, "Not the same amount of validators")
+    }
+    
+    func testErrorPassThrough() {
+        MockNamingValidatorProtocol.error = ErrorNaming.length
+        self.model.validators = [MockNamingValidatorProtocol.self]
+        XCTAssertThrowsError(try self.model.validate(name:String()), "Failed to propagate")
+    }
+    
+    func testNotThrowingError() {
+        self.model.validators = [MockNamingValidatorProtocol.self]
+        XCTAssertNoThrow(try self.model.validate(name:String()), "Should no throw")
     }
     
     private func expectedValidators() -> [NamingValidatorProtocol.Type] {

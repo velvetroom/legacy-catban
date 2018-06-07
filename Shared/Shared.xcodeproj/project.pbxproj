@@ -26,6 +26,8 @@
 		DA57282E20C588D3006E1016 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57282D20C588D3006E1016 /* MockNotificationCenter.swift */; };
 		DA8304A820C2AE47004E4012 /* TemplateFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */; };
 		DA96DC8420C96FE100C9E69A /* NamingValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96DC8320C96FE100C9E69A /* NamingValidatorFactory.swift */; };
+		DA96DC8820C9744A00C9E69A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA96DC8620C9744A00C9E69A /* Localizable.strings */; };
+		DA96DC8A20C9748B00C9E69A /* ErrorNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96DC8920C9748B00C9E69A /* ErrorNaming.swift */; };
 		DA978FA920A19852002461E6 /* ControllerProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA978FD320A1DAC2002461E6 /* ControllerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */; };
@@ -88,6 +90,8 @@
 		DA57282F20C5941E006E1016 /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
 		DA8304A720C2AE47004E4012 /* TemplateFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFactoryProtocol.swift; sourceTree = "<group>"; };
 		DA96DC8320C96FE100C9E69A /* NamingValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingValidatorFactory.swift; sourceTree = "<group>"; };
+		DA96DC8720C9744A00C9E69A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA96DC8920C9748B00C9E69A /* ErrorNaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorNaming.swift; sourceTree = "<group>"; };
 		DA978FA820A19852002461E6 /* ControllerProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProjectProtocol.swift; sourceTree = "<group>"; };
 		DA978FD220A1DAC2002461E6 /* ControllerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
@@ -241,6 +245,14 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		DA96DC8520C9742200C9E69A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA96DC8620C9744A00C9E69A /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DAA78C7F20C96AF900550150 /* PresenterForKeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +289,7 @@
 				DAA78C7B20C9665800550150 /* NamingValidatorProtocol.swift */,
 				DAA78C7920C9662000550150 /* NamingValidatorComposite.swift */,
 				DAA78C7D20C96A3200550150 /* NamingValidatorLength.swift */,
+				DA96DC8920C9748B00C9E69A /* ErrorNaming.swift */,
 			);
 			path = NamingValidator;
 			sourceTree = "<group>";
@@ -296,6 +309,7 @@
 			children = (
 				DAFEF381209AFD2000740A88 /* Source */,
 				DAF7E670209B079900B8A39A /* Tests */,
+				DA96DC8520C9742200C9E69A /* Resources */,
 				DAFEF376209AFC6900740A88 /* Products */,
 				DA567B31209C6F89005D74EE /* Frameworks */,
 				DAFEF380209AFCEF00740A88 /* Configuration */,
@@ -421,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA96DC8820C9744A00C9E69A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +483,7 @@
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
 				DA57282920C586FE006E1016 /* PresenterForKeyboard.swift in Sources */,
 				DAFEF383209AFD2D00740A88 /* ControllerProtocol.swift in Sources */,
+				DA96DC8A20C9748B00C9E69A /* ErrorNaming.swift in Sources */,
 				DADB5EBA209B0A0600CFFC9A /* ViewProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
 				DAA78C7E20C96A3200550150 /* NamingValidatorLength.swift in Sources */,
@@ -495,6 +511,17 @@
 			targetProxy = DAF7E66B209B077E00B8A39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA96DC8620C9744A00C9E69A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA96DC8720C9744A00C9E69A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DAF7E66E209B077E00B8A39A /* Debug */ = {
