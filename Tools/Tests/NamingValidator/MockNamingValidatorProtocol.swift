@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import Tools
 
 class MockNamingValidatorProtocol:NamingValidatorProtocol {
     static var validator:MockNamingValidatorProtocol?

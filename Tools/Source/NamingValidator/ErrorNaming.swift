@@ -1,4 +1,5 @@
 import Foundation
+import Shared
 
 struct ErrorNaming:LocalizedError {
     let errorDescription:String?

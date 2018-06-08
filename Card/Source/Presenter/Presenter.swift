@@ -1,5 +1,6 @@
 import Foundation
 import Shared
+import Tools
 
 class Presenter:PresenterProtocol {
     var viewType:Shared.View.Type = Card.View.self

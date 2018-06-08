@@ -12,6 +12,8 @@
 		DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315720A4864800070042 /* MockTransitionProtocol.swift */; };
 		DA4B894E20B6A47800B67ED5 /* MockPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */; };
+		DA4BD76120CA5413003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76020CA5413003257FA /* Tools.framework */; };
+		DA4BD76220CA541E003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76020CA5413003257FA /* Tools.framework */; };
 		DA7E009120A562AC00AD4A74 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009020A562AC00AD4A74 /* View.swift */; };
 		DA7E009320A562D800AD4A74 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009220A562D800AD4A74 /* TestView.swift */; };
 		DA7E009520A5630F00AD4A74 /* ViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E009420A5630F00AD4A74 /* ViewText.swift */; };
@@ -64,6 +66,7 @@
 		DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA46315720A4864800070042 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDelete.swift; sourceTree = "<group>"; };
+		DA4BD76020CA5413003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7E009020A562AC00AD4A74 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA7E009220A562D800AD4A74 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DA7E009420A5630F00AD4A74 /* ViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewText.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4BD76120CA5413003257FA /* Tools.framework in Frameworks */,
 				DABDB03B20A38B97001B7D47 /* Board.framework in Frameworks */,
 				DABDB03920A38B85001B7D47 /* Shared.framework in Frameworks */,
 			);
@@ -117,6 +121,7 @@
 				DABDB02620A38840001B7D47 /* Card.framework in Frameworks */,
 				DABDB03C20A38BB9001B7D47 /* Board.framework in Frameworks */,
 				DABDB03D20A38BBB001B7D47 /* Shared.framework in Frameworks */,
+				DA4BD76220CA541E003257FA /* Tools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +279,7 @@
 		DABDB03720A38B85001B7D47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA4BD76020CA5413003257FA /* Tools.framework */,
 				DABDB03A20A38B97001B7D47 /* Board.framework */,
 				DABDB03820A38B85001B7D47 /* Shared.framework */,
 			);

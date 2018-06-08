@@ -155,8 +155,8 @@
 		DA4BD74920CA4F33003257FA /* PresenterForKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */,
 				DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */,
+				DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */,
 			);
 			path = PresenterForKeyboard;
 			sourceTree = "<group>";
@@ -166,8 +166,8 @@
 			children = (
 				DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */,
 				DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */,
-				DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */,
 				DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */,
+				DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */,
 			);
 			path = NamingValidator;
 			sourceTree = "<group>";

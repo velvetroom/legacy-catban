@@ -1,5 +1,5 @@
 import XCTest
-@testable import Shared
+@testable import Tools
 
 class TestPresenterForKeyboard:XCTestCase {
     private var presenter:PresenterForKeyboard!

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Shared
+@testable import Tools
 
 class TestNamingValidatorVisible:XCTestCase {
     private var model:NamingValidatorVisible!
