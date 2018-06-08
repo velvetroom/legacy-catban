@@ -9,6 +9,7 @@ open class View:UIViewController {
         self.toolbarHidden = true
         self.navigationbarHidden = true
         super.init(nibName:nil, bundle:nil)
+        self.updateProperties()
     }
     
     public required init?(coder:NSCoder) {
@@ -21,6 +22,7 @@ open class View:UIViewController {
         self.didLoad()
     }
     
+    open func updateProperties() { }
     open func didLoad() { }
     
     private func configureView() {

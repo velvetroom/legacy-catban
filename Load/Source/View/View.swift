@@ -1,8 +1,13 @@
 import UIKit
 import Shared
 
-public class View:Shared.View {
+public class View:ViewGeneric<Presenter> {
     weak var imageLogo:UIImageView!
+    
+    public override func updateProperties() {
+        super.updateProperties()
+        self.navigationbarHidden = false
+    }
     
     public override func didLoad() {
         super.didLoad()
