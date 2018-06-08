@@ -4,28 +4,28 @@ import Shared
 import Tools
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Projects.View.self
-    var deleteType:PresenterDelete.Type
+    weak var controller:Controller!
     var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
     var presenterForKeyboard:PresenterForKeyboardProtocol
-    weak var delegate:PresenterDelegateProtocol!
-    weak var controller:Controller!
+    let interactor:InteractorProtocol
     
     init() {
+        let controller:Controller = Controller()
+        self.controller = controller
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
-        self.deleteType = PresenterDelete.self
+        self.interactor = controller
+        self.controller.presenter = self
     }
     
     func presenterDidLoadWith(view:Shared.View) {
         guard
             let view:View = view as? Projects.View
         else { return }
-        self.configure(view:view)
         self.loadOutlets(view:view)
         self.injectDelegates(view:view)
     }
@@ -58,15 +58,11 @@ class Presenter:PresenterProtocol {
     }
     
     func delete() {
-        let presenter:PresenterDelete = self.deleteType.init()
+        let presenter:PresenterDelete = PresenterDelete()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.item = self.list.selected
         presenter.askConfirmation()
-    }
-    
-    private func configure(view:View) {
-        view.presenter = self
     }
     
     private func loadOutlets(view:View) {

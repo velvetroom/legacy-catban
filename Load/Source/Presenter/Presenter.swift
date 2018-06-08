@@ -6,8 +6,9 @@ class Presenter:PresenterProtocol {
     let interactor:InteractorProtocol
     
     init() {
-        self.controller = Controller()
-        self.interactor = self.controller
+        let controller:Controller = Controller()
+        self.controller = controller
+        self.interactor = controller
         self.controller.presenter = self
     }
 }

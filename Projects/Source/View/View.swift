@@ -1,8 +1,7 @@
 import UIKit
 import Shared
 
-class View:Shared.View, UITextFieldDelegate {
-    weak var presenter:Presenter!
+class View:Shared.ViewBoard, UITextFieldDelegate {
     weak var viewBase:ViewBase!
     
     override func didLoad() {
@@ -37,19 +36,19 @@ class View:Shared.View, UITextFieldDelegate {
         guard
             let name:String = textField.text
         else { return }
-        self.presenter.updateProject(name:name)
+//        self.presenter.updateProject(name:name)
     }
     
     @objc func selectorOpen(button:UIBarButtonItem) {
-        self.presenter.openProject()
+//        self.presenter.openProject()
     }
     
     @objc func selectorAddProject(button:UIBarButtonItem) {
-        self.presenter.addProject()
+//        self.presenter.addProject()
     }
     
     @objc func selectorRename(button:UIBarButtonItem) {
-        self.presenter.renameProject()
+//        self.presenter.renameProject()
     }
     
     @objc func selectorRenamingDone(button:UIButton) {
@@ -57,7 +56,11 @@ class View:Shared.View, UITextFieldDelegate {
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
-        self.presenter.delete()
+//        self.presenter.delete()
+    }
+    
+    private func configurePresenter() {
+        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {

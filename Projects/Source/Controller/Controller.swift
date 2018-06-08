@@ -2,17 +2,9 @@ import Foundation
 import Shared
 import Board
 
-public class Controller:ControllerBoardProtocol {
-    public var presenter:PresenterProtocol
+public class Controller:InteractorProtocol {
+    public weak var presenter:PresenterProtocol?
     public var board:BoardProjectsProtocol!
-    public weak var transiton:TransitionProtocol!
-    
-    public required init() {
-        let presenter:Presenter = Presenter()
-        self.presenter = presenter
-        presenter.delegate = self
-        presenter.controller = self
-    }
     
     func addProject() -> ProjectProtocol {
         let project:ProjectProtocol = ProjectFactory.newProject()
@@ -24,7 +16,7 @@ public class Controller:ControllerBoardProtocol {
     func openProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
-        self.transiton.transitionToHome(project:projectManaged)
+//        self.transiton.transitionToHome(project:projectManaged)
     }
     
     func renameProjectWith(identifier:String) {
@@ -35,14 +27,14 @@ public class Controller:ControllerBoardProtocol {
         let project:ProjectProtocol = self.board.projectWith(identifier:project)
         project.name = name
         self.save(project:project)
-        self.presenter.shouldUpdate()
+//        self.presenter.shouldUpdate()
     }
     
     func deleteProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         self.board.remove(project:project)
         self.deleteFromRepository(project:project)
-        self.presenter.shouldUpdate()
+//        self.presenter.shouldUpdate()
     }
     
     private func deleteFromRepository(project:ProjectProtocol) {
