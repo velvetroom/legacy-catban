@@ -5,9 +5,7 @@ class PresenterMenu {
     weak var view:Shared.View!
     weak var controller:Controller!
     weak var viewMenu:ViewMenu?
-    
-    required init() { }
-    
+
     func show() {
         let viewMenu:ViewMenu = ViewMenu()
         viewMenu.presenter = self

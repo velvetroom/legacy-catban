@@ -5,7 +5,6 @@ import Template
 
 public class Controller:InteractorProtocol {
     public weak var presenter:PresenterProtocol?
-    public weak var transiton:TransitionProtocol!
     var dispatchQueue:DispatchQueue
     
     init() {

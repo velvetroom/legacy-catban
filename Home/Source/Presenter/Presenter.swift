@@ -3,28 +3,28 @@ import Board
 import Shared
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Home.View.self
-    var menuType:PresenterMenu.Type
+    weak var controller:Controller!
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
-    weak var controller:Controller!
-    weak var delegate:PresenterDelegateProtocol!
+    let interactor:InteractorProtocol
     
     init() {
+        self.controller = Controller()
+        self.interactor = self.controller
         self.canvas = Configuration.canvasType.init()
         self.outlets = PresenterOutlets()
-        self.menuType = PresenterMenu.self
+        self.controller.presenter = self
     }
     
     func showMenu() {
-        let menu:PresenterMenu = self.menuType.init()
+        let menu:PresenterMenu = PresenterMenu()
         menu.controller = self.controller
         menu.view = self.outlets.view
         menu.show()
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
-        self.configure(view:view)
+    func didLoad(view:Shared.View) {
+        self.outlets.view = view
         self.loadCanvasOn(view:view.view)
     }
     
@@ -33,15 +33,8 @@ class Presenter:PresenterProtocol {
         self.updateCanvas()
     }
     
-    func updateConstraints() {
+    func orientationChanged() {
         self.canvas.refresh()
-    }
-    
-    private func configure(view:Shared.View) {
-        self.outlets.view = view
-        if let view:View = view as? View {
-            view.presenter = self
-        }
     }
     
     private func loadCanvasOn(view:UIView) {

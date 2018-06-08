@@ -1,9 +1,7 @@
 import UIKit
 import Shared
 
-class View:Shared.View {
-    weak var presenter:Presenter?
-    
+class View:ViewProject {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -12,14 +10,7 @@ class View:Shared.View {
         super.didLoad()
         self.configureView()
         self.configureNavigationItem()
-        NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-            self?.presenter?.updateConstraints()
-        }
-    }
-    
-    override func viewDidAppear(_ animated:Bool) {
-        super.viewDidAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated:true)
+        self.listenForOrientationChange()
     }
     
     override func dismiss(animated:Bool, completion:(() -> Void)? = nil) {
@@ -30,11 +21,12 @@ class View:Shared.View {
     
     @objc func selectorMenu(button:UIBarButtonItem) {
         self.navigationItem.rightBarButtonItem = nil
-        self.presenter?.showMenu()
+//        self.presenter?.showMenu()
     }
     
     private func configureView() {
         self.view.backgroundColor = UIColor.white
+        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {
@@ -42,5 +34,11 @@ class View:Shared.View {
         let buttonMenu:UIBarButtonItem = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
                                                          target:self, action:#selector(self.selectorMenu(button:)))
         self.navigationItem.rightBarButtonItem = buttonMenu
+    }
+    
+    private func listenForOrientationChange() {
+        NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
+            self?.delegate.orientationChanged()
+        }
     }
 }

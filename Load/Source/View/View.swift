@@ -14,6 +14,7 @@ class View:Shared.View {
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
         self.view.backgroundColor = UIColor.white
+        self.delegate = Presenter()
     }
     
     private func makeLogo() {
@@ -28,9 +29,9 @@ class View:Shared.View {
     }
     
     private func layoutLogo() {
-        imageLogo.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        imageLogo.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        imageLogo.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        imageLogo.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        self.imageLogo.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        self.imageLogo.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        self.imageLogo.leftAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        self.imageLogo.rightAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
 }
