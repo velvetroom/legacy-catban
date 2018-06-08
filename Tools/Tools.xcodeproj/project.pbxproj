@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD71420CA4DFF003257FA /* Tools.framework */; };
+		DA4BD73220CA4F22003257FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4BD73020CA4F22003257FA /* Localizable.strings */; };
+		DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */; };
+		DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */; };
+		DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */; };
+		DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */; };
+		DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */; };
+		DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */; };
+		DA4BD74520CA4F29003257FA /* NamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */; };
+		DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */; };
+		DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */; };
+		DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */; };
+		DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */; };
+		DA4BD75320CA4F33003257FA /* TestNamingValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */; };
+		DA4BD75420CA4F33003257FA /* TestNamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */; };
+		DA4BD75520CA4F33003257FA /* MockNamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */; };
+		DA4BD75620CA4F33003257FA /* TestNamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +39,23 @@
 /* Begin PBXFileReference section */
 		DA4BD71420CA4DFF003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4BD72320CA4E5C003257FA /* TestTools.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTools.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4BD72E20CA4F0E003257FA /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
+		DA4BD73120CA4F22003257FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
+		DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboard.swift; sourceTree = "<group>"; };
+		DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardProtocol.swift; sourceTree = "<group>"; };
+		DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorProtocol.swift; sourceTree = "<group>"; };
+		DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorVisible.swift; sourceTree = "<group>"; };
+		DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorComposite.swift; sourceTree = "<group>"; };
+		DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorLength.swift; sourceTree = "<group>"; };
+		DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorFactory.swift; sourceTree = "<group>"; };
+		DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNaming.swift; sourceTree = "<group>"; };
+		DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterForKeyboard.swift; sourceTree = "<group>"; };
+		DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorVisible.swift; sourceTree = "<group>"; };
+		DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorComposite.swift; sourceTree = "<group>"; };
+		DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamingValidatorProtocol.swift; sourceTree = "<group>"; };
+		DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorLength.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +80,11 @@
 		DA4BD70A20CA4DFF003257FA = {
 			isa = PBXGroup;
 			children = (
+				DA4BD73320CA4F29003257FA /* Source */,
+				DA4BD74820CA4F33003257FA /* Tests */,
+				DA4BD72F20CA4F22003257FA /* Resources */,
 				DA4BD71520CA4DFF003257FA /* Products */,
+				DA4BD72E20CA4F0E003257FA /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +95,75 @@
 				DA4BD72320CA4E5C003257FA /* TestTools.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA4BD72F20CA4F22003257FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD73020CA4F22003257FA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA4BD73320CA4F29003257FA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
+				DA4BD73820CA4F29003257FA /* NamingValidator */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DA4BD73420CA4F29003257FA /* PresenterForKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */,
+				DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */,
+				DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */,
+			);
+			path = PresenterForKeyboard;
+			sourceTree = "<group>";
+		};
+		DA4BD73820CA4F29003257FA /* NamingValidator */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */,
+				DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */,
+				DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */,
+				DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */,
+				DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */,
+				DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */,
+			);
+			path = NamingValidator;
+			sourceTree = "<group>";
+		};
+		DA4BD74820CA4F33003257FA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
+				DA4BD74C20CA4F33003257FA /* NamingValidator */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DA4BD74920CA4F33003257FA /* PresenterForKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */,
+				DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */,
+			);
+			path = PresenterForKeyboard;
+			sourceTree = "<group>";
+		};
+		DA4BD74C20CA4F33003257FA /* NamingValidator */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */,
+				DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */,
+				DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */,
+				DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */,
+			);
+			path = NamingValidator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4BD73220CA4F22003257FA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */,
+				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
+				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
+				DA4BD74520CA4F29003257FA /* NamingValidatorLength.swift in Sources */,
+				DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */,
+				DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */,
+				DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */,
+				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
+				DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4BD75420CA4F33003257FA /* TestNamingValidatorComposite.swift in Sources */,
+				DA4BD75520CA4F33003257FA /* MockNamingValidatorProtocol.swift in Sources */,
+				DA4BD75320CA4F33003257FA /* TestNamingValidatorVisible.swift in Sources */,
+				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
+				DA4BD75620CA4F33003257FA /* TestNamingValidatorLength.swift in Sources */,
+				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +308,17 @@
 			targetProxy = DA4BD72920CA4E5C003257FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA4BD73020CA4F22003257FA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA4BD73120CA4F22003257FA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA4BD71A20CA4E00003257FA /* Debug */ = {
@@ -361,6 +494,7 @@
 		DA4BD72C20CA4E5C003257FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = TestTools/Info.plist;
@@ -379,6 +513,7 @@
 		DA4BD72D20CA4E5C003257FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = TestTools/Info.plist;
