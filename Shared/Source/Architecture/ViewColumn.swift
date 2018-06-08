@@ -2,5 +2,6 @@ import Foundation
 import Board
 
 open class ViewColumn:View {
-    var column:ColumnProtocol!
+    public var project:ProjectManagedProtocol!
+    public var column:ColumnProtocol!
 }

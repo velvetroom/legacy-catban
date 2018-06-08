@@ -1,8 +1,8 @@
 import UIKit
 import Shared
 
-class View:Shared.ViewCard, UITextViewDelegate {
-    override func didLoad() {
+public class View:Shared.ViewCard, UITextViewDelegate {
+    public override func didLoad() {
         super.didLoad()
         self.configureView()
         self.configureNavigationItem()
@@ -31,7 +31,7 @@ class View:Shared.ViewCard, UITextViewDelegate {
 //        self.presenter?.delete()
     }
     
-    func textViewDidChange(_ textView:UITextView) {
+    public func textViewDidChange(_ textView:UITextView) {
 //        self.presenter?.update(content:textView.text)
     }
 }

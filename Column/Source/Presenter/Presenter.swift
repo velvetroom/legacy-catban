@@ -2,14 +2,15 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    weak var interactor:InteractorProtocol!
+    weak var controller:Controller!
     var outlets:PresenterOutlets
-    let controller:Controller
+    let interactor:InteractorProtocol
     
     init() {
-        self.controller = Controller()
+        let controller:Controller = Controller()
         self.outlets = PresenterOutlets()
-        self.interactor = self.controller
+        self.controller = controller
+        self.interactor = controller
         self.controller.presenter = self
     }
     

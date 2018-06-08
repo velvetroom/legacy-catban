@@ -1,15 +1,15 @@
 import UIKit
 import Shared
 
-class View:Shared.ViewColumn, UITextFieldDelegate {
+public class View:Shared.ViewColumn, UITextFieldDelegate {
     weak var viewScroll:ViewScroll!
     
-    override func didLoad() {
+    public override func didLoad() {
         super.didLoad()
         self.configureDelegate()
     }
     
-    override func loadView() {
+    public override func loadView() {
         self.view = self.configureView()
     }
     
@@ -40,7 +40,7 @@ class View:Shared.ViewColumn, UITextFieldDelegate {
 //        self.presenter?.done()
     }
     
-    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
 //        self.presenter?.done()
         return true
     }

@@ -1,38 +1,38 @@
 import UIKit
 import Shared
 
-class View:Shared.ViewBoard, UITextFieldDelegate {
+public class View:Shared.ViewBoard, UITextFieldDelegate {
     weak var viewBase:ViewBase!
     
-    override func didLoad() {
+    public override func didLoad() {
         super.didLoad()
         self.hookSelectors()
         self.configureNavigationItem()
         self.configureToolbar()
     }
     
-    override func viewWillAppear(_ animated:Bool) {
+    public override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async { [weak self] in
             self?.viewBase.viewList.updateIndicator()
         }
     }
     
-    override func loadView() {
+    public override func loadView() {
         self.view = self.configureView()
     }
     
-    override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
+    public override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
         self.viewBase.viewList.updateLayout()
     }
     
-    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidEndEditing(_ textField:UITextField) {
+    public func textFieldDidEndEditing(_ textField:UITextField) {
         guard
             let name:String = textField.text
         else { return }

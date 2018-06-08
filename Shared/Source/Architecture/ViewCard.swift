@@ -2,5 +2,6 @@ import Foundation
 import Board
 
 open class ViewCard:View {
-    var card:CardProtocol!
+    public var project:ProjectManagedProtocol!
+    public var card:CardProtocol!
 }

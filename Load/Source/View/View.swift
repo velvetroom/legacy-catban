@@ -1,10 +1,10 @@
 import UIKit
 import Shared
 
-class View:Shared.View {
+public class View:Shared.View {
     weak var imageLogo:UIImageView!
     
-    override func didLoad() {
+    public override func didLoad() {
         super.didLoad()
         self.configureView()
         self.makeLogo()

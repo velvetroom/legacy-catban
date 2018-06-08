@@ -1,19 +1,19 @@
 import UIKit
 import Shared
 
-class View:ViewProject {
+public class View:ViewProject {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
-    override func didLoad() {
+    public override func didLoad() {
         super.didLoad()
         self.configureView()
         self.configureNavigationItem()
         self.listenForOrientationChange()
     }
     
-    override func dismiss(animated:Bool, completion:(() -> Void)? = nil) {
+    public override func dismiss(animated:Bool, completion:(() -> Void)? = nil) {
         super.dismiss(animated:animated) { [weak self] in
             self?.configureNavigationItem()
         }

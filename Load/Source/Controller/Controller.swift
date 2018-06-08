@@ -19,13 +19,13 @@ public class Controller:InteractorProtocol {
     
     func open(project:ProjectManagedProtocol) {
         DispatchQueue.main.async { [weak self] in
-            self?.transiton.transitionToHome(project:project)
+//            self?.transiton.transitionToHome(project:project)
         }
     }
     
     func open(board:BoardProjectsProtocol) {
         DispatchQueue.main.async { [weak self] in
-            self?.transiton.transitionToProjects(board:board)
+//            self?.transiton.transitionToProjects(board:board)
         }
     }
     
