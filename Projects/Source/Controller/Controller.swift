@@ -27,6 +27,10 @@ public class Controller:ControllerBoardProtocol {
         self.transiton.transitionToHome(project:projectManaged)
     }
     
+    func renameProjectWith(identifier:String) {
+        
+    }
+    
     func update(project:String, with name:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:project)
         project.name = name

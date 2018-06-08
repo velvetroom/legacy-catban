@@ -78,6 +78,7 @@
 		DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */; };
 		DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */; };
 		DAEABCA520C7BB0700025891 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCA420C7BB0700025891 /* ViewBase.swift */; };
+		DAFFF4E720CA56D000A50077 /* TestPresenter_Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E620CA56D000A50077 /* TestPresenter_Namer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProjectsProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DAEABCA420C7BB0700025891 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
+		DAFFF4E620CA56D000A50077 /* TestPresenter_Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Namer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 			children = (
 				DA204FFB20B8927A00A41DB0 /* TestPresenter.swift */,
 				DA106C5D20BEF37500A4AED5 /* TestPresenter_Renamer.swift */,
+				DAFFF4E620CA56D000A50077 /* TestPresenter_Namer.swift */,
 				DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */,
 				DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */,
 				DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */,
@@ -534,6 +537,7 @@
 				DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */,
 				DA435A8520BAD1EF000C2E56 /* TestViewEmpty.swift in Sources */,
 				DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */,
+				DAFFF4E720CA56D000A50077 /* TestPresenter_Namer.swift in Sources */,
 				DA04DEBD20B9751400228ABB /* TestViewBase.swift in Sources */,
 				DA106C5E20BEF37500A4AED5 /* TestPresenter_Renamer.swift in Sources */,
 				DA204FFC20B8927A00A41DB0 /* TestPresenter.swift in Sources */,

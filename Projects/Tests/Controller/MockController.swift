@@ -4,6 +4,7 @@ import Foundation
 class MockController:Controller {
     var onOpenProject:(() -> Void)?
     var onDelete:(() -> Void)?
+    var onRenameProject:(() -> Void)?
     
     override func openProjectWith(identifier:String) {
         self.onOpenProject?()
@@ -11,5 +12,9 @@ class MockController:Controller {
     
     override func deleteProjectWith(identifier:String) {
         self.onDelete?()
+    }
+    
+    override func renameProjectWith(identifier:String) {
+        self.onRenameProject?()
     }
 }
