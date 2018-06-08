@@ -24,6 +24,8 @@
 		DA4BD75420CA4F33003257FA /* TestNamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */; };
 		DA4BD75520CA4F33003257FA /* MockNamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */; };
 		DA4BD75620CA4F33003257FA /* TestNamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */; };
+		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
+		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 		DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorComposite.swift; sourceTree = "<group>"; };
 		DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamingValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorLength.swift; sourceTree = "<group>"; };
+		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */,
+				DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,7 @@
 				DA4BD72F20CA4F22003257FA /* Resources */,
 				DA4BD71520CA4DFF003257FA /* Products */,
 				DA4BD72E20CA4F0E003257FA /* Configuration */,
+				DA4BD75720CA525B003257FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +170,14 @@
 				DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */,
 			);
 			path = NamingValidator;
+			sourceTree = "<group>";
+		};
+		DA4BD75720CA525B003257FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA4BD75820CA525B003257FA /* Shared.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
