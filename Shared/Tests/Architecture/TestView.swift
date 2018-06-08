@@ -12,28 +12,19 @@ class TestView:XCTestCase {
         self.view.delegate = self.delegate
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.view, "Failed to load view")
-        XCTAssertNotNil(self.delegate, "Failed to load delegate")
+    func testCallsPresenterOnViewDidLoad() {
+        var called:Bool = false
+        self.delegate.onDidLoad = { called = true }
+        
+        self.view.viewDidLoad()
+        XCTAssertTrue(called, "Failed to call")
     }
     
-    func testViewDidLoad() {
-        var delegateCalled:Bool = false
-        self.delegate.onDidLoadView = { (view:View) in
-            XCTAssertEqual(view, self.view, "Invalid view received")
-            delegateCalled = true
-        }
-        XCTAssertNotNil(self.view.view, "Failed to load view")
-        XCTAssertTrue(delegateCalled, "Delegate is not called")
-    }
-    
-    func testViewDidAppear() {
-        var delegateCalled:Bool = false
-        self.delegate.onDidAppear = { (view:View) in
-            XCTAssertEqual(view, self.view, "Invalid view received")
-            delegateCalled = true
-        }
+    func testCallsPresenterOnViewDidAppear() {
+        var called:Bool = false
+        self.delegate.onDidAppear = { called = true }
+        
         self.view.viewDidAppear(false)
-        XCTAssertTrue(delegateCalled, "Delegate is not called")
+        XCTAssertTrue(called, "Failed to call")
     }
 }

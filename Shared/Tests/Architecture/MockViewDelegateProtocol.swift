@@ -2,14 +2,14 @@ import Foundation
 @testable import Shared
 
 class MockViewDelegateProtocol:ViewDelegateProtocol {
-    var onDidLoadView:((View) -> Void)?
-    var onDidAppear:((View) -> Void)?
+    var onDidLoad:(() -> Void)?
+    var onDidAppear:(() -> Void)?
     
     func didLoad(view:View) {
-        self.onDidLoadView?(view)
+        self.onDidLoad?()
     }
     
     func didAppear(view:View) {
-        self.onDidAppear?(view)
+        self.onDidAppear?()
     }
 }
