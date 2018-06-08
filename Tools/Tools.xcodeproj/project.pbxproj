@@ -89,8 +89,8 @@
 				DA4BD74820CA4F33003257FA /* Tests */,
 				DA4BD72F20CA4F22003257FA /* Resources */,
 				DA4BD71520CA4DFF003257FA /* Products */,
-				DA4BD72E20CA4F0E003257FA /* Configuration */,
 				DA4BD75720CA525B003257FA /* Frameworks */,
+				DA4BD72E20CA4F0E003257FA /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
