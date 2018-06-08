@@ -15,6 +15,7 @@
 		DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */; };
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */; };
+		DA5DE9E220CAB1F1009499E4 /* ViewGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DE9E120CAB1F1009499E4 /* ViewGeneric.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */; };
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
@@ -28,10 +29,10 @@
 		DAFFF4EA20CA5DE400A50077 /* ViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */; };
 		DAFFF4EB20CA5DE400A50077 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */; };
 		DAFFF4ED20CA639F00A50077 /* InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EC20CA639F00A50077 /* InteractorProtocol.swift */; };
-		DAFFF4EF20CA677300A50077 /* ViewProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EE20CA677300A50077 /* ViewProject.swift */; };
-		DAFFF4F120CA67B000A50077 /* ViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F020CA67B000A50077 /* ViewCard.swift */; };
-		DAFFF4F320CA67CE00A50077 /* ViewColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F220CA67CE00A50077 /* ViewColumn.swift */; };
-		DAFFF4F520CA67F400A50077 /* ViewBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F420CA67F400A50077 /* ViewBoard.swift */; };
+		DAFFF4EF20CA677300A50077 /* ViewProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EE20CA677300A50077 /* ViewProjectProtocol.swift */; };
+		DAFFF4F120CA67B000A50077 /* ViewCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F020CA67B000A50077 /* ViewCardProtocol.swift */; };
+		DAFFF4F320CA67CE00A50077 /* ViewColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F220CA67CE00A50077 /* ViewColumnProtocol.swift */; };
+		DAFFF4F520CA67F400A50077 /* ViewBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F420CA67F400A50077 /* ViewBoardProtocol.swift */; };
 		DAFFF4F720CA698700A50077 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F620CA698700A50077 /* TestView.swift */; };
 		DAFFF4F920CA6A0300A50077 /* MockViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F820CA6A0300A50077 /* MockViewDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBoardProtocol.swift; sourceTree = "<group>"; };
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DA5DE9E120CAB1F1009499E4 /* ViewGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGeneric.swift; sourceTree = "<group>"; };
 		DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
@@ -69,10 +71,10 @@
 		DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAFFF4EC20CA639F00A50077 /* InteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocol.swift; sourceTree = "<group>"; };
-		DAFFF4EE20CA677300A50077 /* ViewProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProject.swift; sourceTree = "<group>"; };
-		DAFFF4F020CA67B000A50077 /* ViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCard.swift; sourceTree = "<group>"; };
-		DAFFF4F220CA67CE00A50077 /* ViewColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumn.swift; sourceTree = "<group>"; };
-		DAFFF4F420CA67F400A50077 /* ViewBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoard.swift; sourceTree = "<group>"; };
+		DAFFF4EE20CA677300A50077 /* ViewProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F020CA67B000A50077 /* ViewCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCardProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F220CA67CE00A50077 /* ViewColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColumnProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F420CA67F400A50077 /* ViewBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBoardProtocol.swift; sourceTree = "<group>"; };
 		DAFFF4F620CA698700A50077 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DAFFF4F820CA6A0300A50077 /* MockViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,10 +109,11 @@
 				DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */,
 				DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
-				DAFFF4EE20CA677300A50077 /* ViewProject.swift */,
-				DAFFF4F020CA67B000A50077 /* ViewCard.swift */,
-				DAFFF4F220CA67CE00A50077 /* ViewColumn.swift */,
-				DAFFF4F420CA67F400A50077 /* ViewBoard.swift */,
+				DA5DE9E120CAB1F1009499E4 /* ViewGeneric.swift */,
+				DAFFF4EE20CA677300A50077 /* ViewProjectProtocol.swift */,
+				DAFFF4F020CA67B000A50077 /* ViewCardProtocol.swift */,
+				DAFFF4F220CA67CE00A50077 /* ViewColumnProtocol.swift */,
+				DAFFF4F420CA67F400A50077 /* ViewBoardProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -331,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFFF4F520CA67F400A50077 /* ViewBoard.swift in Sources */,
+				DAFFF4F520CA67F400A50077 /* ViewBoardProtocol.swift in Sources */,
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DAFFF4EB20CA5DE400A50077 /* ViewDelegateProtocol+Default.swift in Sources */,
@@ -343,14 +346,15 @@
 				DAFFF4EA20CA5DE400A50077 /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
-				DAFFF4F320CA67CE00A50077 /* ViewColumn.swift in Sources */,
+				DAFFF4F320CA67CE00A50077 /* ViewColumnProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
+				DA5DE9E220CAB1F1009499E4 /* ViewGeneric.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */,
-				DAFFF4EF20CA677300A50077 /* ViewProject.swift in Sources */,
+				DAFFF4EF20CA677300A50077 /* ViewProjectProtocol.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
-				DAFFF4F120CA67B000A50077 /* ViewCard.swift in Sources */,
+				DAFFF4F120CA67B000A50077 /* ViewCardProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

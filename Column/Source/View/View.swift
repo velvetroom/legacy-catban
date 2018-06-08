@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.ViewColumn, UITextFieldDelegate {
+public class View:Shared.ViewColumnProtocol, UITextFieldDelegate {
     weak var viewScroll:ViewScroll!
     
     public override func didLoad() {

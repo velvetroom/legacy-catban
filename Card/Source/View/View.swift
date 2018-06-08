@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.ViewCard, UITextViewDelegate {
+public class View:Shared.ViewCardProtocol, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()

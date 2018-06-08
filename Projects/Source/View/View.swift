@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.ViewBoard, UITextFieldDelegate {
+public class View:Shared.ViewBoardProtocol, UITextFieldDelegate {
     weak var viewBase:ViewBase!
     
     public override func didLoad() {

@@ -1,12 +1,25 @@
 import UIKit
+import Shared
 
 class NavigationView:UINavigationController {
+    private var animated:Bool {
+        get {
+            return self.viewControllers.count > 0
+        }
+    }
+    
     init() {
         super.init(nibName:nil, bundle:nil)
     }
     
     required init?(coder:NSCoder) {
         return nil
+    }
+    
+    func transitionTo(view:View) {
+        self.setViewControllers([view], animated:self.animated)
+        self.setNavigationBarHidden(view.navigationbarHidden, animated:true)
+        self.setToolbarHidden(view.toolbarHidden, animated:true)
     }
     
     override func viewDidLoad() {
