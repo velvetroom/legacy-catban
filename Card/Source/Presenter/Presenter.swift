@@ -3,17 +3,17 @@ import Shared
 import Tools
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Card.View.self
-    var deleteType:PresenterDelete.Type
+    weak var controller:Controller!
     var outlets:PresenterOutlets
     var presenterForKeyboard:PresenterForKeyboardProtocol
-    weak var controller:Controller!
-    weak var delegate:PresenterDelegateProtocol!
+    let interactor:InteractorProtocol
     
     init() {
+        self.controller = Controller()
+        self.interactor = self.controller
         self.outlets = PresenterOutlets()
-        self.deleteType = PresenterDelete.self
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
+        self.controller.presenter = self
     }
     
     func done() {
@@ -23,7 +23,7 @@ class Presenter:PresenterProtocol {
     
     func delete() {
         self.outlets.viewText?.resignFirstResponder()
-        let presenter:PresenterDelete = self.deleteType.init()
+        let presenter:PresenterDelete = PresenterDelete()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.card = self.controller.card
@@ -34,7 +34,7 @@ class Presenter:PresenterProtocol {
         self.controller.update(content:content)
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
+    func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.configureController(view:view)
     }
@@ -51,7 +51,6 @@ class Presenter:PresenterProtocol {
         guard
             let view:Card.View = view as? Card.View
         else { return }
-        view.presenter = self
         self.outlets.viewText?.delegate = view
     }
     

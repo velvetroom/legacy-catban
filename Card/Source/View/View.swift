@@ -1,22 +1,16 @@
 import UIKit
 import Shared
 
-class View:Shared.View, UITextViewDelegate {
-    weak var presenter:Presenter?
-    
+class View:Shared.ViewCard, UITextViewDelegate {
     override func didLoad() {
         super.didLoad()
         self.configureView()
         self.configureNavigationItem()
     }
     
-    override func viewDidAppear(_ animated:Bool) {
-        super.viewDidAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated:true)
-    }
-    
     private func configureView() {
         self.view.backgroundColor = UIColor.white
+        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {
@@ -30,14 +24,14 @@ class View:Shared.View, UITextViewDelegate {
     }
     
     @objc func selectorDone(button:UIBarButtonItem) {
-        self.presenter?.done()
+//        self.presenter?.done()
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
-        self.presenter?.delete()
+//        self.presenter?.delete()
     }
     
     func textViewDidChange(_ textView:UITextView) {
-        self.presenter?.update(content:textView.text)
+//        self.presenter?.update(content:textView.text)
     }
 }

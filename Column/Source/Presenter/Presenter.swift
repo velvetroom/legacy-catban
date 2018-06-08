@@ -2,21 +2,19 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Column.View.self
-    var deleteType:PresenterDelete.Type
-    var outlets:PresenterOutlets
     weak var controller:Controller!
-    weak var delegate:PresenterDelegateProtocol!
+    var outlets:PresenterOutlets
+    let interactor:InteractorProtocol
     
     init() {
+        self.controller = Controller()
         self.outlets = PresenterOutlets()
-        self.deleteType = PresenterDelete.self
+        self.interactor = self.controller
+        self.controller.presenter = self
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
-        self.configure(view:view)
+    func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
-        self.registerForNotifications()
     }
     
     func shouldUpdate() {
@@ -31,17 +29,10 @@ class Presenter:PresenterProtocol {
     
     func delete() {
         self.outlets.viewField?.resignFirstResponder()
-        let presenter:PresenterDelete = self.deleteType.init()
+        let presenter:PresenterDelete = PresenterDelete()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.askConfirmation()
-    }
-    
-    private func configure(view:Shared.View) {
-        guard
-            let view:Column.View = view as? Column.View
-        else { return }
-        view.presenter = self
     }
     
     private func loadOutlets(view:Shared.View) {
@@ -55,11 +46,5 @@ class Presenter:PresenterProtocol {
             let name:String = self.outlets.viewField?.text
         else { return }
         self.controller.column.name = name
-    }
-    
-    private func registerForNotifications() {
-        NotificationCenter.default.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-//            self?.keyboardChanged(notification:notification)
-        }
     }
 }
