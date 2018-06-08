@@ -1,17 +1,15 @@
 import Foundation
 import Board
 import Shared
+import Template
 
-public class Controller:ControllerProtocol {
-    public var presenter:PresenterProtocol
+public class Controller:InteractorProtocol {
+    public weak var presenter:PresenterProtocol?
     public weak var transiton:TransitionProtocol!
     var dispatchQueue:DispatchQueue
     
-    public required init() {
+    init() {
         self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:ControllerConstants.queueIdentifier)
-        let presenter:Presenter = Presenter()
-        self.presenter = presenter
-        presenter.delegate = self
     }
     
     public func didLoadPresenter() {
@@ -73,7 +71,7 @@ public class Controller:ControllerProtocol {
     }
     
     private func newProject() -> ProjectProtocol {
-        let project:ProjectProtocol = Configuration.templateFactory.newProject()
+        let project:ProjectProtocol = KanbanFactory.newProject()
         self.save(project:project)
         return project
     }

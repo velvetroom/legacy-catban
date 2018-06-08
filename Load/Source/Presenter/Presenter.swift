@@ -2,6 +2,12 @@ import Foundation
 import Shared
 
 class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = View.self
-    weak var delegate:PresenterDelegateProtocol!
+    let interactor:InteractorProtocol
+    weak var controller:Controller!
+    
+    init() {
+        self.controller = Controller()
+        self.interactor = self.controller
+        self.controller.presenter = self
+    }
 }
