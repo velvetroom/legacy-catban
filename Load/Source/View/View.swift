@@ -14,7 +14,6 @@ public class View:Shared.View {
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
         self.view.backgroundColor = UIColor.white
-        self.delegate = Presenter()
     }
     
     private func makeLogo() {

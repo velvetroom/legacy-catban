@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.ViewBoardProtocol, UITextFieldDelegate {
+public class View:Shared.View, UITextFieldDelegate {
     weak var viewBase:ViewBase!
     
     public override func didLoad() {
@@ -57,10 +57,6 @@ public class View:Shared.ViewBoardProtocol, UITextFieldDelegate {
     
     @objc func selectorDelete(button:UIBarButtonItem) {
 //        self.presenter.delete()
-    }
-    
-    private func configurePresenter() {
-        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {

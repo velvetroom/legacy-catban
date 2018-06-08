@@ -2,13 +2,13 @@ import UIKit
 import Board
 import Shared
 
-class Presenter:PresenterProtocol {
+public class Presenter:PresenterProtocol {
     weak var controller:Controller!
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
-    let interactor:InteractorProtocol
+    public let interactor:InteractorProtocol
     
-    init() {
+    public required init() {
         self.controller = Controller()
         self.interactor = self.controller
         self.canvas = Configuration.canvasType.init()
@@ -23,17 +23,17 @@ class Presenter:PresenterProtocol {
         menu.show()
     }
     
-    func didLoad(view:Shared.View) {
+    public func didLoad(view:Shared.View) {
         self.outlets.view = view
         self.loadCanvasOn(view:view.view)
     }
     
-    func shouldUpdate() {
+    public func shouldUpdate() {
         self.updateView()
         self.updateCanvas()
     }
     
-    func orientationChanged() {
+    public func orientationChanged() {
         self.canvas.refresh()
     }
     

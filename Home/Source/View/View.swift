@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:ViewProject {
+public class View:ViewGeneric<Home.Presenter> {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -26,7 +26,6 @@ public class View:ViewProject {
     
     private func configureView() {
         self.view.backgroundColor = UIColor.white
-        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {
@@ -38,7 +37,7 @@ public class View:ViewProject {
     
     private func listenForOrientationChange() {
         NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-            self?.delegate.orientationChanged()
+//            self?.delegate.orientationChanged()
         }
     }
 }

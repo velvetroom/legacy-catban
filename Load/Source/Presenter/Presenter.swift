@@ -5,7 +5,7 @@ class Presenter:PresenterProtocol {
     weak var controller:Controller!
     let interactor:InteractorProtocol
     
-    init() {
+    required init() {
         let controller:Controller = Controller()
         self.controller = controller
         self.interactor = controller

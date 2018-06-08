@@ -8,7 +8,7 @@ class Presenter:PresenterProtocol {
     var presenterForKeyboard:PresenterForKeyboardProtocol
     let interactor:InteractorProtocol
     
-    init() {
+    required init() {
         self.controller = Controller()
         self.interactor = self.controller
         self.outlets = PresenterOutlets()

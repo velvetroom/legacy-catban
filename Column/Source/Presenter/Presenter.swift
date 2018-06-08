@@ -6,7 +6,7 @@ class Presenter:PresenterProtocol {
     var outlets:PresenterOutlets
     let interactor:InteractorProtocol
     
-    init() {
+    required init() {
         let controller:Controller = Controller()
         self.outlets = PresenterOutlets()
         self.controller = controller

@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.ViewCardProtocol, UITextViewDelegate {
+public class View:Shared.View, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -10,7 +10,6 @@ public class View:Shared.ViewCardProtocol, UITextViewDelegate {
     
     private func configureView() {
         self.view.backgroundColor = UIColor.white
-        self.delegate = Presenter()
     }
     
     private func configureNavigationItem() {
