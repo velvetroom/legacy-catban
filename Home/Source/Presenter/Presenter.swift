@@ -2,30 +2,28 @@ import UIKit
 import Board
 import Shared
 
-public class Presenter:PresenterProtocol {
-    weak var controller:Controller!
+public class Presenter:PresenterViewProtocol {
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
-    public let interactor:InteractorProtocol
+    public weak var view:ViewProtocol!
+    public var interactor:Controller
     
     public required init() {
-        self.controller = Controller()
-        self.interactor = self.controller
+        self.interactor = Controller()
         self.canvas = Configuration.canvasType.init()
         self.outlets = PresenterOutlets()
-        self.controller.presenter = self
+        self.interactor.presenter = self
     }
     
     func showMenu() {
         let menu:PresenterMenu = PresenterMenu()
-        menu.controller = self.controller
+        menu.controller = self.interactor
         menu.view = self.outlets.view
         menu.show()
     }
     
-    public func didLoad(view:Shared.View) {
-        self.outlets.view = view
-        self.loadCanvasOn(view:view.view)
+    public func didLoad() {
+        self.loadCanvasOn(view:self.view.view)
     }
     
     public func shouldUpdate() {
@@ -47,12 +45,12 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateView() {
-        self.outlets.view?.title = self.controller.project.name
+        self.outlets.view?.title = self.interactor.project.name
     }
     
     private func updateCanvas() {
-        self.canvas.project = self.controller.project
-        self.canvas.delegate = self.controller
+        self.canvas.project = self.interactor.project
+        self.canvas.delegate = self.interactor
         self.canvas.refresh()
     }
 }

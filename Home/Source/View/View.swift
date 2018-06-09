@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:ViewGeneric<Home.Presenter> {
+public class View:Shared.View<Presenter, UIView> {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -25,7 +25,7 @@ public class View:ViewGeneric<Home.Presenter> {
     }
     
     private func configureView() {
-        self.view.backgroundColor = UIColor.white
+        self.content.backgroundColor = UIColor.white
     }
     
     private func configureNavigationItem() {

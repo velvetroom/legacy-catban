@@ -8,5 +8,4 @@ public protocol ViewDelegateProtocol {
     init()
     func didLoad()
     func didAppear()
-    func orientationChanged()
 }

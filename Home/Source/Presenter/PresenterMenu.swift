@@ -1,8 +1,7 @@
 import Foundation
-import Shared
 
 class PresenterMenu {
-    weak var view:Shared.View!
+    weak var view:View!
     weak var controller:Controller!
     weak var viewMenu:ViewMenu?
 

@@ -37,11 +37,6 @@ open class View<Delegate:PresenterViewProtocol, Content:UIView>:UIViewController
         self.delegate.didAppear()
     }
     
-    open override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to:size, with:coordinator)
-        self.delegate.orientationChanged()
-    }
-    
     open func initProperties() { }
     open func didLoad() { }
     open func viewModelUpdated() { }
