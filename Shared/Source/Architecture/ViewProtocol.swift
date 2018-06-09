@@ -1,5 +1,5 @@
 import Foundation
 
-public protocol ViewProtocol {
+public protocol ViewProtocol:class {
     func viewModelUpdated()
 }

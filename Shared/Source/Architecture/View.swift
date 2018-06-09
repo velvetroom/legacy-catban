@@ -1,19 +1,19 @@
 import UIKit
 
-open class View<PresenterType:PresenterProtocol, ContentType:UIView>:UIViewController, ViewProtocol {
+open class View<Delegate:PresenterProtocol & ViewDelegateProtocol, Content:UIView>:UIViewController, ViewProtocol {
     open weak var transition:TransitionProtocol!
-    open var presenter:PresenterType
-    open var content:ContentType
+    open var delegate:Delegate
+    open var content:Content
     open var toolbarHidden:Bool
     open var navigationbarHidden:Bool
     
     public required init() {
-        self.presenter = PresenterType.init()
-        self.content = ContentType.init()
+        self.delegate = Delegate.init()
+        self.content = Content.init()
         self.toolbarHidden = true
         self.navigationbarHidden = true
         super.init(nibName:nil, bundle:nil)
-        self.presenter.view = self
+        self.delegate.view = self
         self.initProperties()
     }
     
@@ -29,17 +29,17 @@ open class View<PresenterType:PresenterProtocol, ContentType:UIView>:UIViewContr
         super.viewDidLoad()
         self.configureView()
         self.didLoad()
-        self.presenter.didLoad()
+        self.delegate.didLoad()
     }
     
     open override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
-        self.presenter.didAppear()
+        self.delegate.didAppear()
     }
     
     open override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
-        self.presenter.orientationChanged()
+        self.delegate.orientationChanged()
     }
     
     open func initProperties() { }
