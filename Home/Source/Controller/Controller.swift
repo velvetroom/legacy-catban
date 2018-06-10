@@ -3,8 +3,10 @@ import Shared
 import Board
 
 public class Controller:InteractorProtocol, CanvasDelegateProtocol {
-    public weak var presenter:PresenterProtocol?
+    public weak var presenter:InteractorPresentationProtocol?
     public var project:ProjectManagedProtocol!
+    
+    public required init() { }
     
     public func editCardWith(identifier:String) {
 //        let card:CardProtocol = self.project.cardWith(identifier:identifier)

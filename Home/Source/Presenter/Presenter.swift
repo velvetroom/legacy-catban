@@ -5,14 +5,12 @@ import Shared
 public class Presenter:PresenterProtocol {
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
-    public weak var view:PresenterViewProtocol!
-    public var interactor:Controller
+    public weak var presenting:PresenterViewProtocol!
+    public var interactor:Controller!
     
     public required init() {
-        self.interactor = Controller()
         self.canvas = Configuration.canvasType.init()
         self.outlets = PresenterOutlets()
-        self.interactor.presenter = self
     }
     
     func showMenu() {
@@ -23,7 +21,7 @@ public class Presenter:PresenterProtocol {
     }
     
     public func didLoad() {
-        self.loadCanvasOn(view:self.view.view)
+        self.loadCanvasOn(view:self.presenting.view)
     }
     
     public func shouldUpdate() {

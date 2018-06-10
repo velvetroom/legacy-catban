@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Presenter, UIView> {
+public class View:Shared.View<Controller, Presenter, UIView> {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
