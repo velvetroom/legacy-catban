@@ -4,7 +4,7 @@ import Shared
 import Template
 
 public class Controller:InteractorProtocol {
-    public weak var presenter:PresenterProtocol?
+    public weak var presenter:InteractorPresentationProtocol?
     var dispatchQueue:DispatchQueue
     
     init() {

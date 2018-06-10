@@ -1,6 +1,7 @@
 import UIKit
 
-open class View<Delegate:ViewDelegateProtocol, Content:UIView>:UIViewController, PresenterViewProtocol {
+open class View<Interactor, Delegate:ViewDelegateProtocol, Content:UIView>:
+    UIViewController, PresenterViewProtocol where Interactor == Delegate.Interactor {
     open weak var transition:TransitionProtocol!
     open var delegate:Delegate
     open var content:Content
@@ -8,13 +9,15 @@ open class View<Delegate:ViewDelegateProtocol, Content:UIView>:UIViewController,
     open var navigationbarHidden:Bool
     
     public required init() {
-        self.delegate = Delegate.init()
-        self.content = Content.init()
+        let interactor:Interactor = Interactor()
+        self.delegate = Delegate()
+        self.content = Content()
         self.toolbarHidden = true
         self.navigationbarHidden = true
         super.init(nibName:nil, bundle:nil)
-        self.delegate.view = self
+        self.delegate.presenting = self
         self.initProperties()
+        self.delegate.interactor = interactor
     }
     
     public required init?(coder:NSCoder) {
