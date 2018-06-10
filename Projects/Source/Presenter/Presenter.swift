@@ -3,63 +3,59 @@ import Board
 import Shared
 import Tools
 
-class Presenter:PresenterProtocol {
-    weak var controller:Controller!
+public class Presenter:PresenterProtocol {
+    public weak var presenting:PresenterViewProtocol!
+    public var interactor:Controller!
     var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
     var presenterForKeyboard:PresenterForKeyboardProtocol
-    let interactor:InteractorProtocol
     
-    required init() {
-        let controller:Controller = Controller()
-        self.controller = controller
+    public required init() {
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
-        self.interactor = controller
-        self.controller.presenter = self
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
-        guard
-            let view:View = view as? Projects.View
-        else { return }
-        self.loadOutlets(view:view)
-        self.injectDelegates(view:view)
-    }
+//    func presenterDidLoadWith(view:Shared.View) {
+//        guard
+//            let view:View = view as? Projects.View
+//        else { return }
+//        self.loadOutlets(view:view)
+//        self.injectDelegates(view:view)
+//    }
     
-    func shouldUpdate() {
-        let viewModel:ViewModelProtocol = self.makeViewModel()
-        self.updateWith(viewModel:viewModel)
-    }
+//    func shouldUpdate() {
+//        let viewModel:ViewModelProtocol = self.makeViewModel()
+//        self.updateWith(viewModel:viewModel)
+//    }
     
     func addProject() {
-        let project:ProjectProtocol = self.controller.addProject()
-        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
-        self.renamer.show()
+//        let project:ProjectProtocol = self.controller.addProject()
+//        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
+//        self.renamer.show()
     }
     
     func openProject() {
         let identifier:String = self.list.selected.identifier
-        self.controller.openProjectWith(identifier:identifier)
+//        self.controller.openProjectWith(identifier:identifier)
     }
     
     func renameProject() {
-        self.controller.renameProjectWith(identifier:self.list.selected.identifier)
+//        self.controller.renameProjectWith(identifier:self.list.selected.identifier)
     }
     
     func updateProject(name:String) {
         self.renamer.hide()
         let identifier:String = self.renamer.item.identifier
-        self.controller.update(project:identifier, with:name)
+//        self.controller.update(project:identifier, with:name)
         self.list.selectItemWith(identifier:identifier)
     }
     
     func delete() {
         let presenter:PresenterDelete = PresenterDelete()
-        presenter.controller = self.controller
+//        presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.item = self.list.selected
         presenter.askConfirmation()
@@ -80,7 +76,7 @@ class Presenter:PresenterProtocol {
     
     private func makeViewModel() -> ViewModelProtocol {
         let loader:PresenterViewModelLoader = PresenterViewModelLoader()
-        loader.board = self.controller.board
+//        loader.board = self.controller.board
         loader.load()
         return loader.viewModel
     }

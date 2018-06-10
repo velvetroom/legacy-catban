@@ -1,7 +1,7 @@
 import Foundation
 import Shared
 
-class ViewNamer:Shared.View {
+class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase> {
     weak var viewBase:ViewNamerBase!
     
     override func loadView() {

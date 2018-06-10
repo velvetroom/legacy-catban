@@ -3,8 +3,10 @@ import Shared
 import Board
 
 public class Controller:InteractorProtocol {
-    public weak var presenter:PresenterProtocol?
+    public weak var presenter:InteractorPresentationProtocol?
     public var board:BoardProjectsProtocol!
+    
+    public required init() { }
     
     func addProject() -> ProjectProtocol {
         let project:ProjectProtocol = ProjectFactory.newProject()

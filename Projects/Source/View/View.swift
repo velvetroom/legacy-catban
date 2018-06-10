@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View, UITextFieldDelegate {
+public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDelegate {
     weak var viewBase:ViewBase!
     
     public override func didLoad() {

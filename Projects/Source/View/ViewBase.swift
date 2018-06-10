@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewBase:UIView {
+public class ViewBase:UIView {
     weak var viewList:ViewList!
     weak var viewEmpty:ViewEmpty!
     weak var viewRenamer:ViewRenamer!
@@ -12,7 +12,7 @@ class ViewBase:UIView {
         self.layoutOutlets()
     }
     
-    required init?(coder:NSCoder) {
+    public required init?(coder:NSCoder) {
         return nil
     }
     
