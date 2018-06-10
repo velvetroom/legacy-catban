@@ -7,7 +7,7 @@ public class Controller:InteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     var dispatchQueue:DispatchQueue
     
-    init() {
+    public required init() {
         self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:ControllerConstants.queueIdentifier)
     }
     
