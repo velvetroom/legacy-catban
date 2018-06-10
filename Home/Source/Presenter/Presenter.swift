@@ -3,7 +3,7 @@ import Board
 import Shared
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresenterViewProtocol!
+    public weak var presenting:PresentingViewProtocol!
     public var interactor:Controller!
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets

@@ -14,7 +14,7 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToLoad() {
-        let view:View = Configuration.viewLoadType.init()
+        let view:PresentingViewProtocol = Configuration.viewLoadType.init()
         self.transitionTo(view:view)
     }
     
@@ -44,7 +44,7 @@ class Navigation:NavigationProtocol {
 //        self.transitionTo(view:view)
     }
     
-    func transitionTo(view:View) {
+    func transitionTo(view:PresentingViewProtocol) {
         view.transition = self
         self.view.transitionTo(view:view)
     }

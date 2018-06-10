@@ -4,7 +4,7 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresenterViewProtocol!
+    public weak var presenting:PresentingViewProtocol!
     public var interactor:Controller!
     var outlets:PresenterOutlets
     var list:PresenterList

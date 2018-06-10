@@ -12,7 +12,7 @@
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
 		DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFCF209C3F4C00B736CD /* Configuration.swift */; };
-		DA48AC5D20CBB0C0005D7016 /* PresenterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC5C20CBB0C0005D7016 /* PresenterViewProtocol.swift */; };
+		DA48AC5D20CBB0C0005D7016 /* PresentingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */; };
 		DA48AC6120CBB86C005D7016 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */; };
 		DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */; };
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
@@ -54,7 +54,7 @@
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF99209C347200B736CD /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADFCF209C3F4C00B736CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		DA48AC5C20CBB0C0005D7016 /* PresenterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewProtocol.swift; sourceTree = "<group>"; };
+		DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewProtocol.swift; sourceTree = "<group>"; };
 		DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBoardProtocol.swift; sourceTree = "<group>"; };
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 				DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */,
 				DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
-				DA48AC5C20CBB0C0005D7016 /* PresenterViewProtocol.swift */,
+				DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DAFFF4EB20CA5DE400A50077 /* ViewDelegateProtocol+Default.swift in Sources */,
-				DA48AC5D20CBB0C0005D7016 /* PresenterViewProtocol.swift in Sources */,
+				DA48AC5D20CBB0C0005D7016 /* PresentingViewProtocol.swift in Sources */,
 				DAFFF4ED20CA639F00A50077 /* InteractorProtocol.swift in Sources */,
 				DAFD2FCB209CBDAC0005F5D2 /* TransitionProtocol.swift in Sources */,
 				DADB5EC0209B109B00CFFC9A /* InteractorPresentationProtocol+Default.swift in Sources */,

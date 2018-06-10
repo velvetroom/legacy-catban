@@ -16,8 +16,8 @@ class NavigationView:UINavigationController {
         return nil
     }
     
-    func transitionTo(view:View) {
-        self.setViewControllers([view], animated:self.animated)
+    func transitionTo(view:PresentingViewProtocol) {
+        self.setViewControllers([view as! UIViewController], animated:self.animated)
         self.setNavigationBarHidden(view.navigationbarHidden, animated:true)
         self.setToolbarHidden(view.toolbarHidden, animated:true)
     }

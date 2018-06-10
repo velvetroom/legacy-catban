@@ -1,7 +1,7 @@
 import UIKit
 
 open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:
-    UIViewController, PresenterViewProtocol where Interactor == Presenter.Interactor {
+    UIViewController, PresentingViewProtocol where Interactor == Presenter.Interactor {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
     open var content:Content
