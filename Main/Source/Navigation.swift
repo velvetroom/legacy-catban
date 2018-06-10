@@ -3,12 +3,13 @@ import Board
 import Shared
 
 class Navigation:NavigationProtocol {
-    var view:NavigationView!
+    weak var view:NavigationView!
     
     func launch() -> UIWindow {
-        self.view = NavigationView()
+        let view:NavigationView = NavigationView()
         let window:UIWindow = NavigationFactory.newWindow()
-        window.rootViewController = self.view
+        window.rootViewController = view
+        self.view = view
         self.transitionToLoad()
         return window
     }
