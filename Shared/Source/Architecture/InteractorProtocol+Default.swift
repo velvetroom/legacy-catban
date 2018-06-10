@@ -1,6 +1,6 @@
 import Foundation
 
-public extension ViewDelegateProtocol {
+public extension InteractorProtocol {
     func didLoad() { }
     func didAppear() { }
 }
