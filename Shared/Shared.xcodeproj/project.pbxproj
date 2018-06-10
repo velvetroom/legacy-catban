@@ -112,11 +112,11 @@
 				DAFFF4F420CA67F400A50077 /* InteractorBoardProtocol.swift */,
 				DAF7E659209B051F00B8A39A /* InteractorPresentationProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* InteractorPresentationProtocol+Default.swift */,
+				DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */,
+				DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */,
 				DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */,
 				DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */,
-				DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
-				DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
