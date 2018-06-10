@@ -1,6 +1,6 @@
 import Foundation
 import Board
 
-public protocol InteractingProjectProtocol {
+public protocol InteractorProjectProtocol:InteractorProtocol {
     var project:ProjectManagedProtocol! { get set }
 }

@@ -1,6 +1,6 @@
 import Foundation
 import Board
 
-public protocol InteractingCardProtocol {
+public protocol InteractorCardProtocol:InteractorProjectProtocol {
     var card:CardProtocol! { get set }
 }

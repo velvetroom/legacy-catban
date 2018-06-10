@@ -1,6 +1,6 @@
 import Foundation
 import Board
 
-public protocol InteractingColumnProtocol {
+public protocol InteractorColumnProtocol:InteractorProjectProtocol {
     var column:ColumnProtocol! { get set }
 }

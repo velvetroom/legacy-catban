@@ -30,10 +30,10 @@
 		DAFFF4EA20CA5DE400A50077 /* ViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */; };
 		DAFFF4EB20CA5DE400A50077 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */; };
 		DAFFF4ED20CA639F00A50077 /* InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EC20CA639F00A50077 /* InteractorProtocol.swift */; };
-		DAFFF4EF20CA677300A50077 /* InteractingProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EE20CA677300A50077 /* InteractingProjectProtocol.swift */; };
-		DAFFF4F120CA67B000A50077 /* InteractingCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F020CA67B000A50077 /* InteractingCardProtocol.swift */; };
-		DAFFF4F320CA67CE00A50077 /* InteractingColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F220CA67CE00A50077 /* InteractingColumnProtocol.swift */; };
-		DAFFF4F520CA67F400A50077 /* InteractingBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F420CA67F400A50077 /* InteractingBoardProtocol.swift */; };
+		DAFFF4EF20CA677300A50077 /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4EE20CA677300A50077 /* InteractorProjectProtocol.swift */; };
+		DAFFF4F120CA67B000A50077 /* InteractorCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F020CA67B000A50077 /* InteractorCardProtocol.swift */; };
+		DAFFF4F320CA67CE00A50077 /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F220CA67CE00A50077 /* InteractorColumnProtocol.swift */; };
+		DAFFF4F520CA67F400A50077 /* InteractorBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F420CA67F400A50077 /* InteractorBoardProtocol.swift */; };
 		DAFFF4F720CA698700A50077 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F620CA698700A50077 /* TestView.swift */; };
 		DAFFF4F920CA6A0300A50077 /* MockViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4F820CA6A0300A50077 /* MockViewDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -73,10 +73,10 @@
 		DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAFFF4E920CA5DE400A50077 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAFFF4EC20CA639F00A50077 /* InteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocol.swift; sourceTree = "<group>"; };
-		DAFFF4EE20CA677300A50077 /* InteractingProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractingProjectProtocol.swift; sourceTree = "<group>"; };
-		DAFFF4F020CA67B000A50077 /* InteractingCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractingCardProtocol.swift; sourceTree = "<group>"; };
-		DAFFF4F220CA67CE00A50077 /* InteractingColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractingColumnProtocol.swift; sourceTree = "<group>"; };
-		DAFFF4F420CA67F400A50077 /* InteractingBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractingBoardProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4EE20CA677300A50077 /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F020CA67B000A50077 /* InteractorCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorCardProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F220CA67CE00A50077 /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
+		DAFFF4F420CA67F400A50077 /* InteractorBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorBoardProtocol.swift; sourceTree = "<group>"; };
 		DAFFF4F620CA698700A50077 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DAFFF4F820CA6A0300A50077 /* MockViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				DAFFF4EC20CA639F00A50077 /* InteractorProtocol.swift */,
+				DAFFF4EE20CA677300A50077 /* InteractorProjectProtocol.swift */,
+				DAFFF4F020CA67B000A50077 /* InteractorCardProtocol.swift */,
+				DAFFF4F220CA67CE00A50077 /* InteractorColumnProtocol.swift */,
+				DAFFF4F420CA67F400A50077 /* InteractorBoardProtocol.swift */,
 				DAF7E659209B051F00B8A39A /* InteractorPresentationProtocol.swift */,
 				DADB5EBF209B109B00CFFC9A /* InteractorPresentationProtocol+Default.swift */,
 				DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */,
@@ -113,10 +117,6 @@
 				DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
 				DA48AC5C20CBB0C0005D7016 /* PresenterViewProtocol.swift */,
-				DAFFF4EE20CA677300A50077 /* InteractingProjectProtocol.swift */,
-				DAFFF4F020CA67B000A50077 /* InteractingCardProtocol.swift */,
-				DAFFF4F220CA67CE00A50077 /* InteractingColumnProtocol.swift */,
-				DAFFF4F420CA67F400A50077 /* InteractingBoardProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFFF4F520CA67F400A50077 /* InteractingBoardProtocol.swift in Sources */,
+				DAFFF4F520CA67F400A50077 /* InteractorBoardProtocol.swift in Sources */,
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DAFFF4EB20CA5DE400A50077 /* ViewDelegateProtocol+Default.swift in Sources */,
@@ -351,14 +351,14 @@
 				DAFFF4EA20CA5DE400A50077 /* ViewDelegateProtocol.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
-				DAFFF4F320CA67CE00A50077 /* InteractingColumnProtocol.swift in Sources */,
+				DAFFF4F320CA67CE00A50077 /* InteractorColumnProtocol.swift in Sources */,
 				DADB5EB8209B092100CFFC9A /* View.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */,
-				DAFFF4EF20CA677300A50077 /* InteractingProjectProtocol.swift in Sources */,
+				DAFFF4EF20CA677300A50077 /* InteractorProjectProtocol.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
-				DAFFF4F120CA67B000A50077 /* InteractingCardProtocol.swift in Sources */,
+				DAFFF4F120CA67B000A50077 /* InteractorCardProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
