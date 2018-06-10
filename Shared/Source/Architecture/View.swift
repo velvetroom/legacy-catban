@@ -1,23 +1,24 @@
 import UIKit
 
-open class View<Interactor, Delegate:ViewDelegateProtocol, Content:UIView>:
-    UIViewController, PresenterViewProtocol where Interactor == Delegate.Interactor {
+open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:
+    UIViewController, PresenterViewProtocol where Interactor == Presenter.Interactor {
     open weak var transition:TransitionProtocol!
-    open var delegate:Delegate
+    open var presenter:Presenter
     open var content:Content
     open var toolbarHidden:Bool
     open var navigationbarHidden:Bool
     
     public required init() {
-        let interactor:Interactor = Interactor()
-        self.delegate = Delegate()
+        var interactor:Interactor = Interactor()
+        self.presenter = Presenter()
         self.content = Content()
         self.toolbarHidden = true
         self.navigationbarHidden = true
         super.init(nibName:nil, bundle:nil)
-        self.delegate.presenting = self
+        self.presenter.presenting = self
         self.initProperties()
-        self.delegate.interactor = interactor
+        self.presenter.interactor = interactor
+        interactor.presenter = self.presenter
     }
     
     public required init?(coder:NSCoder) {
@@ -32,12 +33,12 @@ open class View<Interactor, Delegate:ViewDelegateProtocol, Content:UIView>:
         super.viewDidLoad()
         self.configureView()
         self.didLoad()
-        self.delegate.didLoad()
+        self.presenter.didLoad()
     }
     
     open override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
-        self.delegate.didAppear()
+        self.presenter.didAppear()
     }
     
     open func initProperties() { }
