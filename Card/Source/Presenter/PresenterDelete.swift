@@ -3,7 +3,7 @@ import Board
 import Shared
 
 class PresenterDelete {
-    weak var view:Shared.View!
+//    weak var view:Shared.View!
     weak var card:CardProtocol!
     weak var controller:Controller!
     
@@ -11,7 +11,7 @@ class PresenterDelete {
         let alert:UIAlertController = self.factoryAlert()
         alert.addAction(self.factoryConfirmAction())
         alert.addAction(self.factoryCancelAction())
-        self.view.present(alert, animated:true, completion:nil)
+//        self.view.present(alert, animated:true, completion:nil)
     }
     
     private func factoryAlert() -> UIAlertController {
@@ -23,7 +23,7 @@ class PresenterDelete {
     
     private func prepareForIpad(alert:UIAlertController) {
         if let popover:UIPopoverPresentationController = alert.popoverPresentationController {
-            popover.sourceView = view.view
+//            popover.sourceView = view.view
             popover.permittedArrowDirections = UIPopoverArrowDirection.any
             popover.sourceRect = CGRect(
                 x:0,

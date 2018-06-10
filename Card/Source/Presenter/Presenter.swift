@@ -2,38 +2,35 @@ import Foundation
 import Shared
 import Tools
 
-class Presenter:PresenterProtocol {
-    weak var controller:Controller!
+public class Presenter:PresenterProtocol {
     var outlets:PresenterOutlets
     var presenterForKeyboard:PresenterForKeyboardProtocol
-    let interactor:InteractorProtocol
+    public weak var presenting:PresenterViewProtocol!
+    public var interactor:Controller!
     
-    required init() {
-        self.controller = Controller()
-        self.interactor = self.controller
+    public required init() {
         self.outlets = PresenterOutlets()
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
-        self.controller.presenter = self
     }
     
     func done() {
         self.outlets.viewText?.resignFirstResponder()
-        self.controller.done()
+        self.interactor.done()
     }
     
-    func delete() {
+    func delete() {/*
         self.outlets.viewText?.resignFirstResponder()
         let presenter:PresenterDelete = PresenterDelete()
         presenter.controller = self.controller
         presenter.view = self.outlets.view
         presenter.card = self.controller.card
-        presenter.askConfirmation()
+        presenter.askConfirmation()*/
     }
     
     func update(content:String) {
-        self.controller.update(content:content)
+//        self.controller.update(content:content)
     }
-    
+    /*
     func didLoad(view:Shared.View) {
         self.loadOutlets(view:view)
         self.configureController(view:view)
@@ -41,12 +38,12 @@ class Presenter:PresenterProtocol {
     
     func didAppear(view:Shared.View) {
         self.outlets.viewText?.becomeFirstResponder()
-    }
+    }*/
     
-    func shouldUpdate() {
-        self.updateViewModel()
+    public func shouldUpdate() {
+//        self.updateViewModel()
     }
-    
+    /*
     private func configureController(view:Shared.View) {
         guard
             let view:Card.View = view as? Card.View
@@ -65,7 +62,7 @@ class Presenter:PresenterProtocol {
         let builder:ViewModelBuilder = ViewModelBuilder()
         builder.card = self.controller.card
         self.updateWith(viewModel:builder.buildViewModel())
-    }
+    }*/
     
     private func updateWith(viewModel:ViewModel) {
         self.updateViewWith(viewModel:viewModel.view)
@@ -73,7 +70,7 @@ class Presenter:PresenterProtocol {
     }
     
     private func updateViewWith(viewModel:ViewModelView) {
-        self.outlets.view?.title = viewModel.title
+//        self.outlets.view?.title = viewModel.title
     }
     
     private func updateTextWith(viewModel:ViewModelText) {

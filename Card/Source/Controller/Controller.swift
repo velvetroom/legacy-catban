@@ -3,10 +3,12 @@ import Shared
 import Board
 
 public class Controller:InteractorProtocol {
-    public weak var presenter:PresenterProtocol?
+    public weak var presenter:InteractorPresentationProtocol?
     public var project:ProjectManagedProtocol!
     public weak var card:CardProtocol!
 
+    public required init() { }
+    
     func done() {
 //        self.save()
 //        self.transiton.transitionToHome(project:self.project)
