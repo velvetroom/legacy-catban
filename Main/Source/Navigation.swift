@@ -26,9 +26,10 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
-//        let view:ViewBoardProtocol = Configuration.viewProjectsType.init()
-//        view.board = board
-//        self.transitionTo(view:view)
+        let view:PresentingViewProtocol = Configuration.viewProjectsType.init()
+        var interactor:InteractorBoardProtocol = view.interactor as! InteractorBoardProtocol
+        interactor.board = board
+        self.transitionTo(view:view)
     }
     
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {

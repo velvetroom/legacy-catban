@@ -1,12 +1,17 @@
 import UIKit
 
 open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:
-    UIViewController, PresentingViewProtocol where Interactor == Presenter.Interactor {
+UIViewController, PresentingViewProtocol where Interactor == Presenter.Interactor {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
     open var content:Content
     open var toolbarHidden:Bool
     open var navigationbarHidden:Bool
+    public var interactor:InteractorProtocol! {
+        get {
+            return self.presenter.interactor
+        }
+    }
     
     public required init() {
         var interactor:Interactor = Interactor()
