@@ -1,8 +1,8 @@
 import UIKit
 
-class ViewScroll:UIScrollView {
+public class ViewScroll:UIScrollView {
     private(set) weak var viewBase:ViewBase?
-    override var frame:CGRect {
+    public override var frame:CGRect {
         didSet {
             self.updateContentSize()
         }
@@ -14,7 +14,7 @@ class ViewScroll:UIScrollView {
         self.factoryViews()
     }
     
-    required init?(coder:NSCoder) {
+    public required init?(coder:NSCoder) {
         return nil
     }
     

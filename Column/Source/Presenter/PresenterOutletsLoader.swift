@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 class PresenterOutletsLoader {
-    weak var view:Shared.View!
+//    weak var view:Shared.View!
     private var outlets:PresenterOutlets
     
     init() {
@@ -10,10 +10,10 @@ class PresenterOutletsLoader {
     }
     
     func loadOutlets() -> PresenterOutlets {
-        let view:View = self.view as! View
-        outlets.view = view
-        outlets.viewScroll = view.viewScroll
-        outlets.viewField = outlets.viewScroll?.viewBase?.viewInput.field
+//        let view:View = self.view as! View
+//        outlets.view = view
+//        outlets.viewScroll = view.viewScroll
+//        outlets.viewField = outlets.viewScroll?.viewBase?.viewInput.field
         return self.outlets
     }
 }

@@ -3,10 +3,10 @@ import Board
 import Shared
 
 public class Presenter:PresenterProtocol {
-    var canvas:CanvasProtocol
-    var outlets:PresenterOutlets
     public weak var presenting:PresenterViewProtocol!
     public var interactor:Controller!
+    var canvas:CanvasProtocol
+    var outlets:PresenterOutlets
     
     public required init() {
         self.canvas = Configuration.canvasType.init()

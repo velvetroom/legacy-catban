@@ -3,9 +3,11 @@ import Shared
 import Board
 
 public class Controller:InteractorProtocol {
-    public weak var presenter:PresenterProtocol?
-    public var project:ProjectManagedProtocol!
+    public weak var presenter:InteractorPresentationProtocol?
     public weak var column:ColumnProtocol!
+    public var project:ProjectManagedProtocol!
+    
+    public required init() { }
     
     func done() {
 //        self.save()

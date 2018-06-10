@@ -3,10 +3,10 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    var outlets:PresenterOutlets
-    var presenterForKeyboard:PresenterForKeyboardProtocol
     public weak var presenting:PresenterViewProtocol!
     public var interactor:Controller!
+    var outlets:PresenterOutlets
+    var presenterForKeyboard:PresenterForKeyboardProtocol
     
     public required init() {
         self.outlets = PresenterOutlets()
