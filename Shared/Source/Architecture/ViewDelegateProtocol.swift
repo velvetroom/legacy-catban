@@ -2,7 +2,7 @@ import Foundation
 
 public protocol ViewDelegateProtocol {
     associatedtype Interactor:InteractorProtocol
-    var view:ViewProtocol! { get set }
+    var view:PresenterViewProtocol! { get set }
     var interactor:Interactor { get }
     
     init()

@@ -2,10 +2,10 @@ import UIKit
 import Board
 import Shared
 
-public class Presenter:PresenterViewProtocol {
+public class Presenter:PresenterProtocol {
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
-    public weak var view:ViewProtocol!
+    public weak var view:PresenterViewProtocol!
     public var interactor:Controller
     
     public required init() {

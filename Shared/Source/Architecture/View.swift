@@ -1,6 +1,6 @@
 import UIKit
 
-open class View<Delegate:PresenterViewProtocol, Content:UIView>:UIViewController, ViewProtocol {
+open class View<Delegate:ViewDelegateProtocol, Content:UIView>:UIViewController, PresenterViewProtocol {
     open weak var transition:TransitionProtocol!
     open var delegate:Delegate
     open var content:Content

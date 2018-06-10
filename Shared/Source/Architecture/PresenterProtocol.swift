@@ -1,5 +1,3 @@
 import Foundation
 
-public protocol PresenterProtocol:class {
-    func shouldUpdate()
-}
+public protocol PresenterProtocol:InteractorPresentationProtocol, ViewDelegateProtocol { }

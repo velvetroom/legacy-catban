@@ -1,3 +1,7 @@
-import Foundation
+import UIKit
 
-public protocol PresenterViewProtocol:PresenterProtocol, ViewDelegateProtocol { }
+public protocol PresenterViewProtocol:class {
+    var view:UIView! { get }
+    
+    func viewModelUpdated()
+}

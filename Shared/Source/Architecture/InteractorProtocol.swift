@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol InteractorProtocol {
-    var presenter:PresenterProtocol? { get set }
+    var presenter:InteractorPresentationProtocol? { get set }
 }

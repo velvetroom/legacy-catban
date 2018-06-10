@@ -1,9 +1,9 @@
 import Foundation
 import Shared
 
-public class Presenter:PresenterViewProtocol {
+public class Presenter:PresenterProtocol {
     public var interactor:Controller
-    public weak var view:ViewProtocol!
+    public weak var view:PresenterViewProtocol!
     
     public required init() {
         self.interactor = Controller()
