@@ -20,7 +20,6 @@
 		DA106C5020BEA65500A4AED5 /* TestViewRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4F20BEA65500A4AED5 /* TestViewRenamer.swift */; };
 		DA106C5620BED12D00A4AED5 /* PresenterRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5520BED12D00A4AED5 /* PresenterRenamer.swift */; };
 		DA106C5820BED87C00A4AED5 /* TestPresenterRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5720BED87C00A4AED5 /* TestPresenterRenamer.swift */; };
-		DA106C5A20BEED7100A4AED5 /* PresenterDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5920BEED7100A4AED5 /* PresenterDelegater.swift */; };
 		DA106C5C20BEEDD900A4AED5 /* TestPresenterDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5B20BEEDD900A4AED5 /* TestPresenterDelegater.swift */; };
 		DA106C5E20BEF37500A4AED5 /* TestPresenter_Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C5D20BEF37500A4AED5 /* TestPresenter_Renamer.swift */; };
 		DA12564820C91649007FE155 /* ViewNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12564720C91649007FE155 /* ViewNamer.swift */; };
@@ -38,8 +37,6 @@
 		DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A7820BABE48000C2E56 /* ViewModelProtocol.swift */; };
 		DA435A7B20BAC58F000C2E56 /* ViewModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A7A20BAC58F000C2E56 /* ViewModelList.swift */; };
 		DA435A7D20BAC5B4000C2E56 /* ViewModelListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A7C20BAC5B4000C2E56 /* ViewModelListItem.swift */; };
-		DA435A7F20BAC766000C2E56 /* PresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A7E20BAC766000C2E56 /* PresenterOutlets.swift */; };
-		DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */; };
 		DA435A8320BACA08000C2E56 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */; };
 		DA435A8520BAD1EF000C2E56 /* TestViewEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */; };
 		DA4701C220BFD0C800989163 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4701C120BFD0C800989163 /* MockPresenter.swift */; };
@@ -69,7 +66,6 @@
 		DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */; };
 		DAD5F07120BBCBD300CEC10A /* TestPresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */; };
 		DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */; };
-		DAD5F07520BBD9F400CEC10A /* PresenterViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07420BBD9F400CEC10A /* PresenterViewUpdater.swift */; };
 		DAD5F07720BBDA0300CEC10A /* TestPresenterViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */; };
 		DAD5F07920BBE18E00CEC10A /* PresenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07820BBE18E00CEC10A /* PresenterList.swift */; };
 		DAD5F07B20BBE1B200CEC10A /* TestPresenterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07A20BBE1B200CEC10A /* TestPresenterList.swift */; };
@@ -105,7 +101,6 @@
 		DA106C4F20BEA65500A4AED5 /* TestViewRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewRenamer.swift; sourceTree = "<group>"; };
 		DA106C5520BED12D00A4AED5 /* PresenterRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterRenamer.swift; sourceTree = "<group>"; };
 		DA106C5720BED87C00A4AED5 /* TestPresenterRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterRenamer.swift; sourceTree = "<group>"; };
-		DA106C5920BEED7100A4AED5 /* PresenterDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegater.swift; sourceTree = "<group>"; };
 		DA106C5B20BEEDD900A4AED5 /* TestPresenterDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterDelegater.swift; sourceTree = "<group>"; };
 		DA106C5D20BEF37500A4AED5 /* TestPresenter_Renamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Renamer.swift; sourceTree = "<group>"; };
 		DA12564720C91649007FE155 /* ViewNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNamer.swift; sourceTree = "<group>"; };
@@ -121,8 +116,6 @@
 		DA435A7820BABE48000C2E56 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		DA435A7A20BAC58F000C2E56 /* ViewModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelList.swift; sourceTree = "<group>"; };
 		DA435A7C20BAC5B4000C2E56 /* ViewModelListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelListItem.swift; sourceTree = "<group>"; };
-		DA435A7E20BAC766000C2E56 /* PresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutlets.swift; sourceTree = "<group>"; };
-		DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterOutletsLoader.swift; sourceTree = "<group>"; };
 		DA435A8220BACA08000C2E56 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA435A8420BAD1EF000C2E56 /* TestViewEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewEmpty.swift; sourceTree = "<group>"; };
 		DA4701C120BFD0C800989163 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
@@ -154,7 +147,6 @@
 		DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewModelLoader.swift; sourceTree = "<group>"; };
 		DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewModelLoader.swift; sourceTree = "<group>"; };
 		DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
-		DAD5F07420BBD9F400CEC10A /* PresenterViewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewUpdater.swift; sourceTree = "<group>"; };
 		DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewUpdater.swift; sourceTree = "<group>"; };
 		DAD5F07820BBE18E00CEC10A /* PresenterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterList.swift; sourceTree = "<group>"; };
 		DAD5F07A20BBE1B200CEC10A /* TestPresenterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterList.swift; sourceTree = "<group>"; };
@@ -234,15 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				DA204FF720B8924F00A41DB0 /* Presenter.swift */,
-				DA435A7E20BAC766000C2E56 /* PresenterOutlets.swift */,
-				DA435A8020BAC94A000C2E56 /* PresenterOutletsLoader.swift */,
 				DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */,
-				DAD5F07420BBD9F400CEC10A /* PresenterViewUpdater.swift */,
 				DAD5F07820BBE18E00CEC10A /* PresenterList.swift */,
 				DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */,
 				DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */,
 				DA106C5520BED12D00A4AED5 /* PresenterRenamer.swift */,
-				DA106C5920BEED7100A4AED5 /* PresenterDelegater.swift */,
 				DA4701C720BFF37100989163 /* PresenterDelete.swift */,
 			);
 			path = Presenter;
@@ -498,16 +486,13 @@
 				DA12564820C91649007FE155 /* ViewNamer.swift in Sources */,
 				DA4777D120C6671F0069AB6C /* PresenterListDelegate.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
-				DA106C5A20BEED7100A4AED5 /* PresenterDelegater.swift in Sources */,
 				DA106C4A20BE977100A4AED5 /* ViewRenamer.swift in Sources */,
 				DAA78C7620C95FD100550150 /* ViewNamerStatus.swift in Sources */,
 				DA106C4E20BE9A6600A4AED5 /* ViewRenamerInput.swift in Sources */,
 				DA4701C420BFDDD400989163 /* ViewModelListItemFactory.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */,
-				DA435A8120BAC94A000C2E56 /* PresenterOutletsLoader.swift in Sources */,
 				DAA78C7120C953D900550150 /* ViewNamerField.swift in Sources */,
-				DAD5F07520BBD9F400CEC10A /* PresenterViewUpdater.swift in Sources */,
 				DA4701C820BFF37100989163 /* PresenterDelete.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
 				DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */,
@@ -521,7 +506,6 @@
 				DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */,
 				DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Controller.swift in Sources */,
-				DA435A7F20BAC766000C2E56 /* PresenterOutlets.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
 				DA12564A20C91AFA007FE155 /* ViewNamerBase.swift in Sources */,
 			);

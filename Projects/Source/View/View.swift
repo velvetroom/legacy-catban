@@ -80,4 +80,10 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
         self.content.viewRenamer.doneButton.addTarget(
             self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
     }
+    
+    public override func viewModelUpdated() {
+        self.content.viewList.isHidden = self.presenter.viewModel.listHidden
+        self.content.viewEmpty.isHidden = self.presenter.viewModel.emptyHidden
+        self.navigationController?.setToolbarHidden(self.presenter.viewModel.toolbarHidden, animated:true)
+    }
 }

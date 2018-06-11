@@ -6,30 +6,25 @@ import Tools
 public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol!
     public var interactor:Controller!
-    var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
     var keyboard:PresenterForKeyboardProtocol
+    var viewModel:ViewModelProtocol
     
     public required init() {
-        self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
         self.keyboard = PresenterForKeyboardFactory.makePresenter()
+        self.viewModel = ViewModelEmpty()
     }
     
-//    func presenterDidLoadWith(view:Shared.View) {
-//        guard
-//            let view:View = view as? Projects.View
-//        else { return }
-//        self.loadOutlets(view:view)
-//        self.injectDelegates(view:view)
-//    }
+    public func didLoad() {
+        self.updateViewModel()
+    }
     
-//    func shouldUpdate() {
-//        let viewModel:ViewModelProtocol = self.makeViewModel()
-//        self.updateWith(viewModel:viewModel)
-//    }
+    public func shouldUpdate() {
+        self.updateViewModel()
+    }
     
     func addProject() {
 //        let project:ProjectProtocol = self.controller.addProject()
@@ -56,35 +51,17 @@ public class Presenter:PresenterProtocol {
     func delete() {
         let presenter:PresenterDelete = PresenterDelete()
 //        presenter.controller = self.controller
-        presenter.view = self.outlets.view
+//        presenter.view = self.outlets.view
         presenter.item = self.list.selected
         presenter.askConfirmation()
     }
     
-    private func loadOutlets(view:View) {
-        let loader:PresenterOutletsLoader = PresenterOutletsLoader()
-        loader.view = view
-        loader.load()
-        self.outlets = loader.outlets
-    }
-    
-    private func injectDelegates(view:View) {
-        let delegater:PresenterDelegater = PresenterDelegater()
-        delegater.presenter = self
-        delegater.inject()
-    }
-    
-    private func makeViewModel() -> ViewModelProtocol {
+    private func updateViewModel() {
         let loader:PresenterViewModelLoader = PresenterViewModelLoader()
-//        loader.board = self.controller.board
+        loader.board = self.interactor.board
         loader.load()
-        return loader.viewModel
-    }
-    
-    private func updateWith(viewModel:ViewModelProtocol) {
-        let updater:PresenterViewUpdater = PresenterViewUpdater()
-        updater.presenter = self
-        updater.viewModel = viewModel
-        updater.update()
+        self.viewModel = loader.viewModel
+        self.presenting.viewModelUpdated()
+        self.list.updateWith(viewModel:self.viewModel)
     }
 }

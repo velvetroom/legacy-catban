@@ -35,12 +35,14 @@ class PresenterList {
         self.datasource = PresenterListDatasource()
     }
     
-    func selectFirstItem() {
-        guard
-            self.items.isEmpty == false
-        else { return }
-        self.delegate.selected = IndexPath(item:0, section:0)
-        self.selectAnimating()
+    func updateWith(viewModel:ViewModelProtocol) {
+        if let viewModel:ViewModelList = viewModel as? ViewModelList {
+            self.items = viewModel.items
+        } else {
+            self.items = []
+        }
+        self.view.reloadData()
+        self.selectFirstItem()
     }
     
     func selectItemWith(identifier:String) {
@@ -53,6 +55,14 @@ class PresenterList {
             }
         }
         self.delegate.selected = IndexPath(item:itemIndex, section:0)
+        self.selectAnimating()
+    }
+    
+    private func selectFirstItem() {
+        guard
+            self.items.isEmpty == false
+            else { return }
+        self.delegate.selected = IndexPath(item:0, section:0)
         self.selectAnimating()
     }
     
