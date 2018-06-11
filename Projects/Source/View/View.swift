@@ -2,29 +2,28 @@ import UIKit
 import Shared
 
 public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDelegate {
-    weak var viewBase:ViewBase!
+    public override func initProperties() {
+        super.initProperties()
+        self.toolbarHidden = false
+    }
     
     public override func didLoad() {
         super.didLoad()
+        self.configureView()
+        self.hookDelegates()
         self.hookSelectors()
-        self.configureNavigationItem()
-        self.configureToolbar()
     }
     
     public override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async { [weak self] in
-            self?.viewBase.viewList.updateIndicator()
+            self?.content.viewList.updateIndicator()
         }
-    }
-    
-    public override func loadView() {
-        self.view = self.configureView()
     }
     
     public override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
-        self.viewBase.viewList.updateLayout()
+        self.content.viewList.updateLayout()
     }
     
     public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
@@ -52,37 +51,33 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
     }
     
     @objc func selectorRenamingDone(button:UIButton) {
-        self.viewBase.viewRenamer.viewInput.viewField.resignFirstResponder()
+        self.content.viewRenamer.viewInput.viewField.resignFirstResponder()
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
 //        self.presenter.delete()
     }
     
-    private func configureNavigationItem() {
-        self.navigationbarHidden = false
+    private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
+        self.setToolbarItems(self.makeToolbarItems(), animated:true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
             target:self, action:#selector(self.selectorAddProject(button:)))
+        self.content.viewRenamer.viewInput.viewField.delegate = self
     }
     
-    private func configureToolbar() {
-        self.toolbarHidden = false
-        self.setToolbarItems(self.makeToolbarItems(), animated:true)
-    }
-    
-    private func configureView() -> ViewBase {
-        let viewBase:ViewBase = ViewBase()
-        viewBase.viewRenamer.viewInput.viewField.delegate = self
-        self.viewBase = viewBase
-        return viewBase
+    private func hookDelegates() {
+        self.presenter.list.view = self.content.viewList
+        self.presenter.renamer.view = self.content.viewRenamer
+        self.presenter.keyboard.viewContainer = self.content.viewRenamer
+        self.presenter.keyboard.layoutBottom = self.content.viewRenamer.layoutBottom
     }
     
     private func hookSelectors() {
-        self.viewBase.viewRenamer.viewInput.doneButton.addTarget(
+        self.content.viewRenamer.viewInput.doneButton.addTarget(
             self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
-        self.viewBase.viewRenamer.doneButton.addTarget(
+        self.content.viewRenamer.doneButton.addTarget(
             self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
     }
 }

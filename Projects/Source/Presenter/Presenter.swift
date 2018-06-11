@@ -9,13 +9,13 @@ public class Presenter:PresenterProtocol {
     var outlets:PresenterOutlets
     var list:PresenterList
     var renamer:PresenterRenamer
-    var presenterForKeyboard:PresenterForKeyboardProtocol
+    var keyboard:PresenterForKeyboardProtocol
     
     public required init() {
         self.outlets = PresenterOutlets()
         self.list = PresenterList()
         self.renamer = PresenterRenamer()
-        self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
+        self.keyboard = PresenterForKeyboardFactory.makePresenter()
     }
     
 //    func presenterDidLoadWith(view:Shared.View) {

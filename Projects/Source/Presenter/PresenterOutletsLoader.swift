@@ -9,7 +9,7 @@ class PresenterOutletsLoader {
     }
     
     func load() {
-        let viewBase:ViewBase = self.view.viewBase
+        let viewBase:ViewBase = self.view.content
         self.outlets.view = self.view
         self.outlets.list = viewBase.viewList
         self.outlets.empty = viewBase.viewEmpty
