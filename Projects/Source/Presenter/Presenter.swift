@@ -3,7 +3,7 @@ import Board
 import Shared
 import Tools
 
-public class Presenter:PresenterProtocol {
+public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var list:PresenterList
@@ -53,11 +53,15 @@ public class Presenter:PresenterProtocol {
     }
     
     func delete() {
-        let presenter:PresenterDelete = PresenterDelete()
-//        presenter.controller = self.controller
-//        presenter.view = self.outlets.view
-        presenter.item = self.list.selected
+        var presenter:PresenterDeleteProtocol = PresenterDeleteFactory.makePresenter()
+        presenter.delegate = self
+        presenter.presentingView = self.presenting
+        presenter.itemName = self.list.selected.name
         presenter.askConfirmation()
+    }
+    
+    public func deleteConfirm() {
+        self.interactor.deleteProjectWith(identifier:self.list.selected.identifier)
     }
     
     private func updateViewModel() {

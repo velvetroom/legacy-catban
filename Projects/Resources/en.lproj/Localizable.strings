@@ -1,8 +1,3 @@
 View_title="Boards";
 ViewNamer_title="Board name";
 ViewEmpty_label="You have no projects";
-ViewRenamerInput_doneButton="Done";
-ViewRenamerField_placeholder="Project name";
-PresenterDelete_alert_title="Delete project?";
-PresenterDelete_alert_confirm="Delete";
-PresenterDelete_alert_cancel="Cancel";

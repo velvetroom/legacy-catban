@@ -3,7 +3,7 @@ import Shared
 
 class PresenterDelete:PresenterDeleteProtocol {
     weak var delegate:PresenterDeleteDelegateProtocol?
-    weak var presentingView:UIViewController?
+    weak var presentingView:PresentingViewProtocol!
     var itemName:String
     private var alert:UIAlertController {
         get {
@@ -35,7 +35,8 @@ class PresenterDelete:PresenterDeleteProtocol {
         alert.addAction(self.actionConfirm)
         alert.addAction(self.actionCancel)
         self.prepareForIpad(alert:alert)
-        self.presentingView?.present(alert, animated:true, completion:nil)
+        let viewController:UIViewController = self.presentingView as! UIViewController
+        viewController.present(alert, animated:true, completion:nil)
     }
     
     func confirmed() {
