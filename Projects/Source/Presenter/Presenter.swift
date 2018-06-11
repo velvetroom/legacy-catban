@@ -42,7 +42,8 @@ public class Presenter:PresenterProtocol {
     }
     
     func renameProject() {
-        self.interactor.renameProjectWith(identifier:self.list.selected.identifier)
+        let view:ViewNamer = ViewNamer(presenter:self)
+        self.transition?.pushTo(view:view)
     }
     
     func updateProject(name:String) {
