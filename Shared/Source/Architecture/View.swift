@@ -18,7 +18,7 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
         self.presenter = Presenter()
         self.content = Content()
         self.toolbarHidden = true
-        self.navigationbarHidden = true
+        self.navigationbarHidden = false
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self
         self.initProperties()
