@@ -2,22 +2,16 @@ import UIKit
 import Shared
 import Tools
 
-class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase>, UITextFieldDelegate {
-    private var viewModel:ViewModelListItem {
-        get {
-            let viewModel:ViewModelEdit = self.presenter.viewModel as! ViewModelEdit
-            return viewModel.item
-        }
-    }
-    
+class ViewNamer:Shared.View<Controller, PresenterNamer, ViewNamerBase>, UITextFieldDelegate {
     override func didLoad() {
         super.didLoad()
+        self.configureView()
         self.configureNavigationItem()
     }
     
     override func viewModelUpdated() {
         super.viewModelUpdated()
-        self.content.viewField.text = self.viewModel.name
+//        self.content.viewField.text = self.viewModel.name
     }
     
     override func didAppear() {
@@ -34,6 +28,7 @@ class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase>, UITextFieldDe
             let range:Range = Range(range, in:currentText)
         else { return true }
         let updatedText:String = currentText.replacingCharacters(in:range, with:string)
+        self.content.viewStatus.isHidden = false
         self.validate(name:updatedText)
         return true
     }
@@ -43,11 +38,19 @@ class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase>, UITextFieldDe
         return true
     }
     
-    private func configureNavigationItem() {
+    private func configureView() {
         self.title = String.localized(key:"ViewNamer_title", in:type(of:self))
+        self.content.viewStatus.isHidden = true
+    }
+    
+    private func configureNavigationItem() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem:UIBarButtonSystemItem.cancel, target:self,
+            action:#selector(self.selectorCancel(button:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
             action:#selector(self.selectorSave(button:)))
+        self.disableSave()
     }
     
     private func validate() {
@@ -66,19 +69,33 @@ class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase>, UITextFieldDe
     }
     
     private func nameValid() {
-        self.content.viewStatus.statusValid()
+        self.enableSave()
         self.content.labelError.text = nil
-        self.navigationItem.leftBarButtonItem?.isEnabled = true
+        self.content.viewStatus.statusValid()
     }
     
     private func nameInvalidWith(error:String) {
-        self.content.viewStatus.statusError()
+        self.disableSave()
         self.content.labelError.text = error
+        self.content.viewStatus.statusError()
+    }
+    
+    private func enableSave() {
+        self.navigationItem.leftBarButtonItem?.isEnabled = true
+    }
+    
+    private func disableSave() {
         self.navigationItem.leftBarButtonItem?.isEnabled = false
     }
     
-    @objc private func selectorSave(button:UIButton) {
-        self.presenter.updateProject(name:self.content.viewField.text!, for:self.viewModel.identifier)
+    @objc private func selectorSave(button:UIBarButtonItem) {
+        self.content.viewField.resignFirstResponder()
+//        self.presenter.updateProject(name:self.content.viewField.text!, for:self.viewModel.identifier)
+        self.transition.pop()
+    }
+    
+    @objc private func selectorCancel(button:UIBarButtonItem) {
+        self.content.viewField.resignFirstResponder()
         self.transition.pop()
     }
 }

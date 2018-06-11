@@ -20,9 +20,7 @@ public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     }
     
     public func didLoad() {
-        if self.viewModel == nil {
-            self.updateViewModel()
-        }
+        self.updateViewModel()
     }
     
     public func shouldUpdate() {
@@ -31,8 +29,10 @@ public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     
     func addProject() {
         let project:ProjectProtocol = self.interactor.addProject()
-//        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
-//        self.renamer.show()
+        var item:ViewModelListItem = ViewModelListItem()
+        item.identifier = project.identifier
+        self.startEditingWith(item:item)
+        self.showNamer()
     }
     
     func openProject() {
@@ -41,10 +41,8 @@ public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     }
     
     func renameProject() {
-        let view:ViewNamer = ViewNamer(presenter:self)
-        self.transition?.pushTo(view:view)
-        self.startEditingViewModel()
-        view.viewModelUpdated()
+        self.startEditingWithListItem()
+        self.showNamer()
     }
     
     func updateProject(name:String, for identifier:String) {
@@ -72,9 +70,21 @@ public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
         self.list.updateWith(viewModel:self.viewModel)
     }
     
-    private func startEditingViewModel() {
+    private func startEditingWithListItem() {
+        self.startEditingWith(item:self.list.selected)
+    }
+    
+    private func startEditingWith(item:ViewModelListItem) {
         var viewModel:ViewModelEdit = ViewModelEdit()
-        viewModel.item = self.list.selected
+        viewModel.item = item
         self.viewModel = viewModel
+    }
+    
+    private func showNamer() {
+        let presenter:PresenterNamer = PresenterNamer()
+        presenter.interactor = self.interactor
+        let view:ViewNamer = ViewNamer(presenter:presenter)
+        self.transition?.pushTo(view:view)
+        view.viewModelUpdated()
     }
 }

@@ -68,6 +68,7 @@
 		DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */; };
 		DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */; };
 		DAE21CB920B89E5C00ABDB55 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */; };
+		DAE5E50820CEC4CF005A8F34 /* PresenterNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50720CEC4CF005A8F34 /* PresenterNamer.swift */; };
 		DAEABCA520C7BB0700025891 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCA420C7BB0700025891 /* ViewBase.swift */; };
 		DAFFF4E720CA56D000A50077 /* TestPresenter_Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF4E620CA56D000A50077 /* TestPresenter_Namer.swift */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,7 @@
 		DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProjectsProtocol.swift; sourceTree = "<group>"; };
 		DAE21CB820B89E5C00ABDB55 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
+		DAE5E50720CEC4CF005A8F34 /* PresenterNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamer.swift; sourceTree = "<group>"; };
 		DAEABCA420C7BB0700025891 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		DAFFF4E620CA56D000A50077 /* TestPresenter_Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Namer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 				DAD5F07820BBE18E00CEC10A /* PresenterList.swift */,
 				DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */,
 				DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */,
+				DAE5E50720CEC4CF005A8F34 /* PresenterNamer.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE5E50820CEC4CF005A8F34 /* PresenterNamer.swift in Sources */,
 				DA435A7520BABCB7000C2E56 /* ViewModelEmpty.swift in Sources */,
 				DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
