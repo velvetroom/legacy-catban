@@ -33,7 +33,6 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
         self.navigationbarHidden = false
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
-        self.presenter.presenting = self
         self.initProperties()
     }
     
@@ -46,15 +45,32 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
         self.configureView()
         self.didLoad()
         self.presenter.didLoad()
+        self.presenter.interactor.didLoad()
+    }
+    
+    open override func viewWillAppear(_ animated:Bool) {
+        super.viewWillAppear(animated)
+        self.willAppear()
+        self.presenter.willAppear()
     }
     
     open override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
+        self.didAppear()
         self.presenter.didAppear()
+    }
+    
+    open override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to:size, with:coordinator)
+        self.orientationChanged()
+        self.presenter.orientationChanged()
     }
     
     open func initProperties() { }
     open func didLoad() { }
+    open func willAppear() { }
+    open func didAppear() { }
+    open func orientationChanged() { }
     open func viewModelUpdated() { }
     
     private class func makePresenter() -> Presenter {

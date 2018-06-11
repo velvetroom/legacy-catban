@@ -1,11 +1,12 @@
-import Foundation
+import UIKit
 import Shared
 
-class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase> {
-    weak var viewBase:ViewNamerBase!
-    
-    override func loadView() {
-        self.view = self.configureView()
+class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase>, UITextFieldDelegate {
+    private var viewModel:ViewModelListItem {
+        get {
+            let viewModel:ViewModelEdit = self.presenter.viewModel as! ViewModelEdit
+            return viewModel.item
+        }
     }
     
     override func didLoad() {
@@ -13,14 +14,29 @@ class ViewNamer:Shared.View<Controller, Presenter, ViewNamerBase> {
         self.configureNavigationItem()
     }
     
-    private func configureView() -> ViewNamerBase {
-        let viewBase:ViewNamerBase = ViewNamerBase()
-        self.viewBase = viewBase
-        return viewBase
+    override func viewModelUpdated() {
+        super.viewModelUpdated()
+        self.content.viewField.text = self.viewModel.name
+    }
+    
+    override func didAppear() {
+        super.didAppear()
+        self.content.viewField.delegate = self
+        self.content.viewField.becomeFirstResponder()
+    }
+    
+    public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        self.transition.pop()
+        return true
+    }
+    
+    public func textFieldDidEndEditing(_ textField:UITextField) {
+        if let name:String = textField.text {
+            self.presenter.updateProject(name:name, for:self.viewModel.identifier)
+        }
     }
     
     private func configureNavigationItem() {
-        self.navigationbarHidden = false
         self.title = String.localized(key:"ViewNamer_title", in:type(of:self))
     }
 }

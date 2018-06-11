@@ -26,6 +26,10 @@ class NavigationView:UINavigationController {
         self.pushViewController(view as! UIViewController, animated:true)
     }
     
+    func pop() {
+        self.popViewController(animated:true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationBar()

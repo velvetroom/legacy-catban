@@ -7,5 +7,7 @@ public protocol ViewDelegateProtocol {
     
     init()
     func didLoad()
+    func willAppear()
     func didAppear()
+    func orientationChanged()
 }

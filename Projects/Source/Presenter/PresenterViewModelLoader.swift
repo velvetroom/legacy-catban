@@ -31,7 +31,9 @@ class PresenterViewModelLoader {
     private func itemsFromBoard() -> [ViewModelListItem] {
         var items:[ViewModelListItem] = []
         self.board.iterate { (project:ProjectProtocol) in
-            let item:ViewModelListItem = ViewModelListItemFactory.makeWith(project:project)
+            var item:ViewModelListItem = ViewModelListItem()
+            item.identifier = project.identifier
+            item.name = project.name
             items.append(item)
         }
         return items

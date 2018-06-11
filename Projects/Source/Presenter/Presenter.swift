@@ -7,9 +7,8 @@ public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var list:PresenterList
-    var renamer:PresenterRenamer
     var keyboard:PresenterForKeyboardProtocol
-    var viewModel:ViewModelProtocol {
+    var viewModel:ViewModelProtocol! {
         didSet {
             self.presenting?.viewModelUpdated()
         }
@@ -17,13 +16,13 @@ public class Presenter:PresenterProtocol {
     
     public required init() {
         self.list = PresenterList()
-        self.renamer = PresenterRenamer()
         self.keyboard = PresenterForKeyboardFactory.makePresenter()
-        self.viewModel = ViewModelEmpty()
     }
     
     public func didLoad() {
-        self.updateViewModel()
+        if self.viewModel == nil {
+            self.updateViewModel()
+        }
     }
     
     public func shouldUpdate() {
@@ -32,8 +31,8 @@ public class Presenter:PresenterProtocol {
     
     func addProject() {
         let project:ProjectProtocol = self.interactor.addProject()
-        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
-        self.renamer.show()
+//        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
+//        self.renamer.show()
     }
     
     func openProject() {
@@ -44,11 +43,11 @@ public class Presenter:PresenterProtocol {
     func renameProject() {
         let view:ViewNamer = ViewNamer(presenter:self)
         self.transition?.pushTo(view:view)
+        self.startEditingViewModel()
+        view.viewModelUpdated()
     }
     
-    func updateProject(name:String) {
-        self.renamer.hide()
-        let identifier:String = self.renamer.item.identifier
+    func updateProject(name:String, for identifier:String) {
         self.interactor.update(project:identifier, with:name)
         self.list.selectItemWith(identifier:identifier)
     }
@@ -67,5 +66,11 @@ public class Presenter:PresenterProtocol {
         loader.load()
         self.viewModel = loader.viewModel
         self.list.updateWith(viewModel:self.viewModel)
+    }
+    
+    private func startEditingViewModel() {
+        var viewModel:ViewModelEdit = ViewModelEdit()
+        viewModel.item = self.list.selected
+        self.viewModel = viewModel
     }
 }

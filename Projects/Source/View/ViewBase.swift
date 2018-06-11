@@ -3,7 +3,6 @@ import UIKit
 public class ViewBase:UIView {
     weak var viewList:ViewList!
     weak var viewEmpty:ViewEmpty!
-    weak var viewRenamer:ViewRenamer!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -25,14 +24,12 @@ public class ViewBase:UIView {
         self.makeList()
         self.makeEmpty()
         self.makeSelector()
-        self.makeRenamer()
     }
     
     private func layoutOutlets() {
         self.layoutList()
         self.layoutEmpty()
         self.layoutSelector()
-        self.layoutRenamer()
     }
     
     private func makeList() {
@@ -53,12 +50,6 @@ public class ViewBase:UIView {
         self.viewList.viewSelector = viewSelector
     }
     
-    private func makeRenamer() {
-        let viewRenamer:ViewRenamer = ViewRenamer()
-        self.viewRenamer = viewRenamer
-        self.addSubview(viewRenamer)
-    }
-    
     private func layoutList() {
         self.layoutAdjustEqual(view:self.viewList)
     }
@@ -77,10 +68,6 @@ public class ViewBase:UIView {
             equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
         self.viewList.viewSelector.heightAnchor.constraint(
             equalToConstant:ViewConstants.Selector.height).isActive = true
-    }
-    
-    private func layoutRenamer() {
-        self.layoutAdjustEqual(view:self.viewRenamer)
     }
     
     private func layoutAdjustEqual(view:UIView) {

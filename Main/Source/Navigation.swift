@@ -4,7 +4,7 @@ import Shared
 
 class Navigation:NavigationProtocol {
     weak var view:NavigationView!
-    
+
     func launch() -> UIWindow {
         let view:NavigationView = NavigationView()
         let window:UIWindow = NavigationFactory.newWindow()
@@ -47,7 +47,12 @@ class Navigation:NavigationProtocol {
     }
     
     func pushTo(view:PresentingViewProtocol) {
+        view.transition = self
         self.view.pushTo(view:view)
+    }
+    
+    func pop() {
+        self.view.pop()
     }
     
     func transitionTo(view:PresentingViewProtocol) {

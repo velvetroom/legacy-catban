@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDelegate {
+public class View:Shared.View<Controller, Presenter, ViewBase> {
     public override func initProperties() {
         super.initProperties()
         self.toolbarHidden = false
@@ -11,30 +11,18 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
         super.didLoad()
         self.configureView()
         self.hookDelegates()
-        self.hookSelectors()
     }
     
-    public override func viewWillAppear(_ animated:Bool) {
-        super.viewWillAppear(animated)
+    public override func willAppear() {
+        super.willAppear()
         DispatchQueue.main.async { [weak self] in
             self?.content.viewList.updateIndicator()
         }
     }
     
-    public override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to:size, with:coordinator)
+    public override func orientationChanged() {
+        super.orientationChanged()
         self.content.viewList.updateLayout()
-    }
-    
-    public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    public func textFieldDidEndEditing(_ textField:UITextField) {
-        if let name:String = textField.text {
-            self.presenter.updateProject(name:name)
-        }
     }
     
     @objc func selectorOpen(button:UIBarButtonItem) {
@@ -49,10 +37,6 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
         self.presenter.renameProject()
     }
     
-    @objc func selectorRenamingDone(button:UIButton) {
-        self.content.viewRenamer.viewInput.viewField.resignFirstResponder()
-    }
-    
     @objc func selectorDelete(button:UIBarButtonItem) {
         self.presenter.delete()
     }
@@ -63,21 +47,10 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
             target:self, action:#selector(self.selectorAddProject(button:)))
-        self.content.viewRenamer.viewInput.viewField.delegate = self
     }
     
     private func hookDelegates() {
         self.presenter.list.view = self.content.viewList
-        self.presenter.renamer.view = self.content.viewRenamer
-        self.presenter.keyboard.viewContainer = self.content.viewRenamer
-        self.presenter.keyboard.layoutBottom = self.content.viewRenamer.layoutBottom
-    }
-    
-    private func hookSelectors() {
-        self.content.viewRenamer.viewInput.doneButton.addTarget(
-            self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
-        self.content.viewRenamer.doneButton.addTarget(
-            self, action:#selector(self.selectorRenamingDone(button:)), for:UIControlEvents.touchUpInside)
     }
     
     public override func viewModelUpdated() {

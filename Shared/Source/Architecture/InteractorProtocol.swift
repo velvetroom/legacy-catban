@@ -5,5 +5,4 @@ public protocol InteractorProtocol {
     
     init()
     func didLoad()
-    func didAppear()
 }

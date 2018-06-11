@@ -27,27 +27,6 @@ struct ViewConstants {
         static let animateDuration:TimeInterval = 0.3
     }
     
-    struct Renamer {
-        static let alphaOn:CGFloat = 1
-        static let alphaOff:CGFloat = 0
-        static let animateDuration:TimeInterval = 0.3
-    }
-    
-    struct RenamerInput {
-        static let height:CGFloat = 48
-        static let cornerRadius:CGFloat = 4
-    }
-    
-    struct RenamerButton {
-        static let fontSize:CGFloat = 16
-        static let width:CGFloat = 75
-    }
-    
-    struct RenamerField {
-        static let fontSize:CGFloat = 16
-        static let margin:CGFloat = 8
-    }
-    
     struct NamerField {
         static let fontSize:CGFloat = 26
         static let width:CGFloat = 200
