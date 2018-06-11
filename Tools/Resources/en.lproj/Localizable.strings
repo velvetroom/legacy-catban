@@ -1,2 +1,5 @@
 ErrorNaming_length="The name seems to be empty, please define a name.";
 ErrorNaming_visible="This name seems to be invalid, please try to define it again.";
+PresenterDelete_alert_title="You are about to delete";
+PresenterDelete_alert_confirm="Delete";
+PresenterDelete_alert_cancel="Cancel";
