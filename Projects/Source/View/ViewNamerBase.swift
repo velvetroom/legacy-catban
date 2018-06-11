@@ -63,7 +63,7 @@ class ViewNamerBase:UIView {
         labelError.isUserInteractionEnabled = false
         labelError.font = UIFont.systemFont(ofSize:ViewConstants.NamerError.fontSize, weight:UIFont.Weight.regular)
         labelError.numberOfLines = 0
-        labelError.textColor = UIColor(white:0, alpha:0.4)
+        labelError.textColor = UIColor(white:0, alpha:0.5)
         self.labelError = labelError
         self.addSubview(labelError)
     }
@@ -95,7 +95,7 @@ class ViewNamerBase:UIView {
         self.labelError.topAnchor.constraint(equalTo:self.viewBorder.bottomAnchor,
                                              constant:ViewConstants.NamerError.top).isActive = true
         self.labelError.leftAnchor.constraint(equalTo:self.viewBorder.leftAnchor).isActive = true
-        self.labelError.rightAnchor.constraint(equalTo:self.viewBorder.rightAnchor).isActive = true
+        self.labelError.rightAnchor.constraint(equalTo:self.viewStatus.rightAnchor).isActive = true
         self.labelError.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
     }
 }

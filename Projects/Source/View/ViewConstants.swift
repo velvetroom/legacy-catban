@@ -42,7 +42,7 @@ struct ViewConstants {
     struct NamerStatus {
         static let assetValid:String = "assetValid"
         static let assetError:String = "assetError"
-        static let size:CGFloat = 70
+        static let size:CGFloat = 50
     }
     
     struct NamerError {

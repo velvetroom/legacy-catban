@@ -59,7 +59,7 @@
 		DACE508D20B848F200276D5A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
 		DACE508F20B848FB00276D5A /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
 		DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD05F9720C827C40083F5DA /* View+Factory.swift */; };
-		DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */; };
+		DAD5F06F20BBCBC100CEC10A /* ViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* ViewModelLoader.swift */; };
 		DAD5F07120BBCBD300CEC10A /* TestPresenterViewModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */; };
 		DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */; };
 		DAD5F07720BBDA0300CEC10A /* TestPresenterViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */; };
@@ -136,7 +136,7 @@
 		DACE508C20B848F200276D5A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE508E20B848FB00276D5A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD05F9720C827C40083F5DA /* View+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Factory.swift"; sourceTree = "<group>"; };
-		DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterViewModelLoader.swift; sourceTree = "<group>"; };
+		DAD5F06E20BBCBC100CEC10A /* ViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelLoader.swift; sourceTree = "<group>"; };
 		DAD5F07020BBCBD300CEC10A /* TestPresenterViewModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewModelLoader.swift; sourceTree = "<group>"; };
 		DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
 		DAD5F07620BBDA0300CEC10A /* TestPresenterViewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterViewUpdater.swift; sourceTree = "<group>"; };
@@ -218,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				DA204FF720B8924F00A41DB0 /* Presenter.swift */,
-				DAD5F06E20BBCBC100CEC10A /* PresenterViewModelLoader.swift */,
 				DAD5F07820BBE18E00CEC10A /* PresenterList.swift */,
 				DA4777D020C6671F0069AB6C /* PresenterListDelegate.swift */,
 				DA4777D220C6694C0069AB6C /* PresenterListDatasource.swift */,
@@ -285,6 +284,7 @@
 		DA435A7320BABC92000C2E56 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DAD5F06E20BBCBC100CEC10A /* ViewModelLoader.swift */,
 				DA435A7820BABE48000C2E56 /* ViewModelProtocol.swift */,
 				DA435A7420BABCB7000C2E56 /* ViewModelEmpty.swift */,
 				DA435A7A20BAC58F000C2E56 /* ViewModelList.swift */,
@@ -488,7 +488,7 @@
 				DA4777D320C6694C0069AB6C /* PresenterListDatasource.swift in Sources */,
 				DA435A7B20BAC58F000C2E56 /* ViewModelList.swift in Sources */,
 				DA435A7920BABE48000C2E56 /* ViewModelProtocol.swift in Sources */,
-				DAD5F06F20BBCBC100CEC10A /* PresenterViewModelLoader.swift in Sources */,
+				DAD5F06F20BBCBC100CEC10A /* ViewModelLoader.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Controller.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
 				DA12564A20C91AFA007FE155 /* ViewNamerBase.swift in Sources */,

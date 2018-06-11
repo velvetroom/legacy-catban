@@ -1,7 +1,7 @@
 import Foundation
 import Board
 
-class PresenterViewModelLoader {
+class ViewModelLoader {
     weak var board:BoardProjectsProtocol!
     var viewModel:ViewModelProtocol
     

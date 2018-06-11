@@ -61,7 +61,7 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateViewModel() {
-        let loader:PresenterViewModelLoader = PresenterViewModelLoader()
+        let loader:ViewModelLoader = ViewModelLoader()
         loader.board = self.interactor.board
         loader.load()
         self.viewModel = loader.viewModel

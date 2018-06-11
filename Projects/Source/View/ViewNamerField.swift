@@ -16,7 +16,7 @@ class ViewNamerField:UITextField {
         self.font = UIFont.systemFont(ofSize:ViewConstants.NamerField.fontSize, weight:UIFont.Weight.light)
         self.textColor = UIColor.black
         self.tintColor = UIColor.black
-        self.autocapitalizationType = UITextAutocapitalizationType.sentences
+        self.autocapitalizationType = UITextAutocapitalizationType.words
         self.autocorrectionType = UITextAutocorrectionType.no
         self.returnKeyType = UIReturnKeyType.done
         self.spellCheckingType = UITextSpellCheckingType.no

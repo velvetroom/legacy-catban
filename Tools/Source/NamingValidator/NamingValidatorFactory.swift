@@ -1,7 +1,7 @@
 import Foundation
 
 public class NamingValidatorFactory {
-    class func makeValidator() -> NamingValidatorProtocol {
+    public class func makeValidator() -> NamingValidatorProtocol {
         return NamingValidatorComposite()
     }
     

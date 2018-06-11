@@ -3,12 +3,12 @@ import Board
 @testable import Projects
 
 class TestPresenterViewModelLoader:XCTestCase {
-    private var presenter:PresenterViewModelLoader!
+    private var presenter:ViewModelLoader!
     private var board:MockBoardProjectsProtocol!
     
     override func setUp() {
         super.setUp()
-        self.presenter = PresenterViewModelLoader()
+        self.presenter = ViewModelLoader()
         self.board = MockBoardProjectsProtocol()
         self.presenter.board = self.board
     }
