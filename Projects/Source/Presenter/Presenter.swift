@@ -4,12 +4,16 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresentingViewProtocol!
+    public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var list:PresenterList
     var renamer:PresenterRenamer
     var keyboard:PresenterForKeyboardProtocol
-    var viewModel:ViewModelProtocol
+    var viewModel:ViewModelProtocol {
+        didSet {
+            self.presenting?.viewModelUpdated()
+        }
+    }
     
     public required init() {
         self.list = PresenterList()
@@ -27,24 +31,24 @@ public class Presenter:PresenterProtocol {
     }
     
     func addProject() {
-//        let project:ProjectProtocol = self.controller.addProject()
-//        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
-//        self.renamer.show()
+        let project:ProjectProtocol = self.interactor.addProject()
+        self.renamer.item = ViewModelListItemFactory.makeWith(project:project)
+        self.renamer.show()
     }
     
     func openProject() {
         let identifier:String = self.list.selected.identifier
-//        self.controller.openProjectWith(identifier:identifier)
+        self.interactor.openProjectWith(identifier:identifier)
     }
     
     func renameProject() {
-//        self.controller.renameProjectWith(identifier:self.list.selected.identifier)
+        self.interactor.renameProjectWith(identifier:self.list.selected.identifier)
     }
     
     func updateProject(name:String) {
         self.renamer.hide()
         let identifier:String = self.renamer.item.identifier
-//        self.controller.update(project:identifier, with:name)
+        self.interactor.update(project:identifier, with:name)
         self.list.selectItemWith(identifier:identifier)
     }
     
@@ -61,7 +65,6 @@ public class Presenter:PresenterProtocol {
         loader.board = self.interactor.board
         loader.load()
         self.viewModel = loader.viewModel
-        self.presenting.viewModelUpdated()
         self.list.updateWith(viewModel:self.viewModel)
     }
 }

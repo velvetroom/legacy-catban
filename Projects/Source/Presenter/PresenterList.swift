@@ -3,7 +3,6 @@ import UIKit
 class PresenterList {
     let delegate:PresenterListDelegate
     let datasource:PresenterListDatasource
-    
     var selected:ViewModelListItem {
         get {
             return self.items[self.delegate.selected.item]
@@ -16,6 +15,7 @@ class PresenterList {
         }
         set(newValue) {
             self.datasource.items = newValue
+            self.view.reloadData()
         }
     }
     
@@ -41,7 +41,6 @@ class PresenterList {
         } else {
             self.items = []
         }
-        self.view.reloadData()
         self.selectFirstItem()
     }
     

@@ -32,22 +32,21 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
     }
     
     public func textFieldDidEndEditing(_ textField:UITextField) {
-        guard
-            let name:String = textField.text
-        else { return }
-//        self.presenter.updateProject(name:name)
+        if let name:String = textField.text {
+            self.presenter.updateProject(name:name)
+        }
     }
     
     @objc func selectorOpen(button:UIBarButtonItem) {
-//        self.presenter.openProject()
+        self.presenter.openProject()
     }
     
     @objc func selectorAddProject(button:UIBarButtonItem) {
-//        self.presenter.addProject()
+        self.presenter.addProject()
     }
     
     @objc func selectorRename(button:UIBarButtonItem) {
-//        self.presenter.renameProject()
+        self.presenter.renameProject()
     }
     
     @objc func selectorRenamingDone(button:UIButton) {
@@ -55,7 +54,7 @@ public class View:Shared.View<Controller, Presenter, ViewBase>, UITextFieldDeleg
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
-//        self.presenter.delete()
+        self.presenter.delete()
     }
     
     private func configureView() {

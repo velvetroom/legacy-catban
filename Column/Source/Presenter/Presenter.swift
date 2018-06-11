@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresentingViewProtocol!
+    public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var outlets:PresenterOutlets
     

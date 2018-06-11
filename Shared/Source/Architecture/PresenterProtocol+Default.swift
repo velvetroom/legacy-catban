@@ -1,9 +1,9 @@
 import Foundation
 
 public extension PresenterProtocol {
-    public var transition:TransitionProtocol! {
+    public var transition:TransitionProtocol? {
         get {
-            return self.presenting.transition
+            return self.presenting?.transition
         }
     }
     

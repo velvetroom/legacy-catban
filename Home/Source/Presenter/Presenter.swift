@@ -3,7 +3,7 @@ import Board
 import Shared
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresentingViewProtocol!
+    public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var canvas:CanvasProtocol
     var outlets:PresenterOutlets
@@ -21,7 +21,9 @@ public class Presenter:PresenterProtocol {
     }
     
     public func didLoad() {
-        self.loadCanvasOn(view:self.presenting.view)
+        if let view:UIView = self.presenting?.view {
+            self.loadCanvasOn(view:view)
+        }
     }
     
     public func shouldUpdate() {

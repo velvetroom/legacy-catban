@@ -18,7 +18,7 @@ public class Controller:InteractorBoardProtocol {
     func openProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
-//        self.transiton.transitionToHome(project:projectManaged)
+        self.presenter?.transition?.transitionToHome(project:projectManaged)
     }
     
     func renameProjectWith(identifier:String) {
@@ -29,14 +29,14 @@ public class Controller:InteractorBoardProtocol {
         let project:ProjectProtocol = self.board.projectWith(identifier:project)
         project.name = name
         self.save(project:project)
-//        self.presenter.shouldUpdate()
+        self.presenter?.shouldUpdate()
     }
     
     func deleteProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         self.board.remove(project:project)
         self.deleteFromRepository(project:project)
-//        self.presenter.shouldUpdate()
+        self.presenter?.shouldUpdate()
     }
     
     private func deleteFromRepository(project:ProjectProtocol) {
