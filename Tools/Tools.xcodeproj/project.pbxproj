@@ -30,6 +30,9 @@
 		DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */; };
 		DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */; };
 		DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */; };
+		DAED6D7B20CF9A3F002AB9F9 /* PresenterNamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */; };
+		DAED6D7D20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */; };
+		DAED6D7F20CF9A53002AB9F9 /* PresenterNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
 		DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
 		DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteDelegateProtocol.swift; sourceTree = "<group>"; };
+		DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamerFactory.swift; sourceTree = "<group>"; };
+		DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamerProtocol.swift; sourceTree = "<group>"; };
+		DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 		DA4BD73320CA4F29003257FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DAED6D7920CF9A2B002AB9F9 /* PresenterNamer */,
 				DAE5E4FE20CEB631005A8F34 /* PresenterDelete */,
 				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
 				DA4BD73820CA4F29003257FA /* NamingValidator */,
@@ -198,6 +205,16 @@
 				DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */,
 			);
 			path = PresenterDelete;
+			sourceTree = "<group>";
+		};
+		DAED6D7920CF9A2B002AB9F9 /* PresenterNamer */ = {
+			isa = PBXGroup;
+			children = (
+				DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */,
+				DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */,
+				DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */,
+			);
+			path = PresenterNamer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +327,7 @@
 			files = (
 				DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */,
 				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
+				DAED6D7D20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift in Sources */,
 				DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */,
 				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
 				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
@@ -317,6 +335,8 @@
 				DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */,
 				DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */,
+				DAED6D7F20CF9A53002AB9F9 /* PresenterNamer.swift in Sources */,
+				DAED6D7B20CF9A3F002AB9F9 /* PresenterNamerFactory.swift in Sources */,
 				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
 				DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */,
 				DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */,
