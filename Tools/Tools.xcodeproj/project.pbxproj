@@ -30,9 +30,12 @@
 		DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */; };
 		DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */; };
 		DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */; };
-		DAED6D7B20CF9A3F002AB9F9 /* PresenterNamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */; };
-		DAED6D7D20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */; };
-		DAED6D7F20CF9A53002AB9F9 /* PresenterNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */; };
+		DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */; };
+		DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */; };
+		DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */; };
+		DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */; };
+		DAED6D8520CF9CBD002AB9F9 /* NamerViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8420CF9CBD002AB9F9 /* NamerViewBase.swift */; };
+		DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +73,12 @@
 		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
 		DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
 		DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteDelegateProtocol.swift; sourceTree = "<group>"; };
-		DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamerFactory.swift; sourceTree = "<group>"; };
-		DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamerProtocol.swift; sourceTree = "<group>"; };
-		DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterNamer.swift; sourceTree = "<group>"; };
+		DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerFactory.swift; sourceTree = "<group>"; };
+		DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerPresenter.swift; sourceTree = "<group>"; };
+		DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerView.swift; sourceTree = "<group>"; };
+		DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerInteractorProtocol.swift; sourceTree = "<group>"; };
+		DAED6D8420CF9CBD002AB9F9 /* NamerViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewBase.swift; sourceTree = "<group>"; };
+		DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +134,7 @@
 		DA4BD73320CA4F29003257FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DAED6D7920CF9A2B002AB9F9 /* PresenterNamer */,
+				DAED6D7920CF9A2B002AB9F9 /* Namer */,
 				DAE5E4FE20CEB631005A8F34 /* PresenterDelete */,
 				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
 				DA4BD73820CA4F29003257FA /* NamingValidator */,
@@ -207,14 +213,17 @@
 			path = PresenterDelete;
 			sourceTree = "<group>";
 		};
-		DAED6D7920CF9A2B002AB9F9 /* PresenterNamer */ = {
+		DAED6D7920CF9A2B002AB9F9 /* Namer */ = {
 			isa = PBXGroup;
 			children = (
-				DAED6D7A20CF9A3F002AB9F9 /* PresenterNamerFactory.swift */,
-				DAED6D7C20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift */,
-				DAED6D7E20CF9A53002AB9F9 /* PresenterNamer.swift */,
+				DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */,
+				DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */,
+				DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */,
+				DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */,
+				DAED6D8420CF9CBD002AB9F9 /* NamerViewBase.swift */,
+				DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */,
 			);
-			path = PresenterNamer;
+			path = Namer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,16 +336,19 @@
 			files = (
 				DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */,
 				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
-				DAED6D7D20CF9A4A002AB9F9 /* PresenterNamerProtocol.swift in Sources */,
 				DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */,
+				DAED6D8520CF9CBD002AB9F9 /* NamerViewBase.swift in Sources */,
 				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
 				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
 				DA4BD74520CA4F29003257FA /* NamingValidatorLength.swift in Sources */,
 				DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */,
+				DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */,
+				DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */,
 				DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */,
-				DAED6D7F20CF9A53002AB9F9 /* PresenterNamer.swift in Sources */,
-				DAED6D7B20CF9A3F002AB9F9 /* PresenterNamerFactory.swift in Sources */,
+				DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */,
+				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
+				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
 				DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */,
 				DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */,
