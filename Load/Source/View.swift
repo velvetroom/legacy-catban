@@ -1,8 +1,8 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, UIView> {
-    weak var imageLogo:UIImageView!
+public class View:Shared.View<Interactor, Presenter, UIView> {
+    private weak var imageLogo:UIImageView!
     
     public override func initProperties() {
         super.initProperties()
@@ -27,7 +27,7 @@ public class View:Shared.View<Controller, Presenter, UIView> {
         imageLogo.clipsToBounds = true
         imageLogo.isUserInteractionEnabled = false
         imageLogo.contentMode = UIViewContentMode.center
-        imageLogo.image = UIImage(name:ViewConstants.assetLogo, in:type(of:self))
+        imageLogo.image = UIImage(name:Constants.assetLogo, in:type(of:self))
         self.imageLogo = imageLogo
         self.content.addSubview(imageLogo)
     }

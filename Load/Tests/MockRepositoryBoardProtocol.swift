@@ -1,6 +1,6 @@
 import Foundation
-@testable import Shared
-@testable import Board
+import Shared
+import Board
 
 class MockRepositoryBoardProtocol:RepositoryBoardProtocol {
     static var board:BoardProtocol = BoardFactory.newBoard()

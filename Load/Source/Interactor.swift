@@ -3,12 +3,12 @@ import Board
 import Shared
 import Template
 
-public class Controller:InteractorProtocol {
+public class Interactor:InteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     var dispatchQueue:DispatchQueue
     
     public required init() {
-        self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:ControllerConstants.queueIdentifier)
+        self.dispatchQueue = DispatchQueue.privateBackgroundWith(identifier:Constants.queueIdentifier)
     }
     
     public func didLoad() {

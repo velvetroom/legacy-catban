@@ -3,7 +3,7 @@ import Shared
 
 public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol?
-    public var interactor:Controller!
+    public var interactor:Interactor!
     
     public required init() { }
 }

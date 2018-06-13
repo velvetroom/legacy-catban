@@ -1,19 +1,21 @@
 import XCTest
+import Shared
+import Board
 @testable import Load
-@testable import Shared
-@testable import Board
 
-class TestController_Transitions:XCTestCase {
-    private var controller:Controller!
+class TestInteractor_Transitions:XCTestCase {
+    private var interactor:Interactor!
+    private var view:Load.View!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.repositoryBoardType = MockRepositoryBoardProtocol.self
         MockRepositoryBoardProtocol.error = nil
-        self.controller = Controller()
+        self.view = Load.View()
+        self.interactor = view.presenter.interactor
         self.transition = MockTransitionProtocol()
-        self.controller.transiton = self.transition
+        self.view.transition = self.transition
     }
     
     func testBoardLoadedTransitionsToHome() {
@@ -27,7 +29,7 @@ class TestController_Transitions:XCTestCase {
             let board:BoardProtocol = BoardFactory.newBoard()
             let project:ProjectProtocol = ProjectFactory.newProject()
             let managed:ProjectManagedProtocol = board.manage(project:project)
-            self?.controller.open(project:managed)
+            self?.interactor.open(project:managed)
         }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
@@ -40,7 +42,7 @@ class TestController_Transitions:XCTestCase {
             expect.fulfill()
         }
         
-        self.controller.didLoadPresenter()
+        self.interactor.didLoad()
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
@@ -52,7 +54,7 @@ class TestController_Transitions:XCTestCase {
             expect.fulfill()
         }
         
-        self.controller.didLoadPresenter()
+        self.interactor.didLoad()
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
@@ -64,7 +66,7 @@ class TestController_Transitions:XCTestCase {
             expect.fulfill()
         }
         
-        self.controller.didLoadPresenter()
+        self.interactor.didLoad()
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     

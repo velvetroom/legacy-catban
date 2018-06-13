@@ -1,6 +1,6 @@
 import Foundation
-@testable import Shared
-@testable import Board
+import Shared
+import Board
 
 class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
@@ -9,6 +9,8 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionToLoad() { }
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
+    func pushTo(view: PresentingViewProtocol) { }
+    func pop() { }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
         self.onTransitionToProjects?()
