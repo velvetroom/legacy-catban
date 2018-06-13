@@ -12,18 +12,17 @@
 		DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */; };
 		DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */; };
 		DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */; };
-		DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */; };
-		DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */; };
-		DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */; };
-		DA4BD74520CA4F29003257FA /* NamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */; };
-		DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */; };
-		DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */; };
+		DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */; };
+		DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */; };
+		DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */; };
+		DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */; };
+		DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73E20CA4F29003257FA /* NamerError.swift */; };
 		DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */; };
 		DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */; };
-		DA4BD75320CA4F33003257FA /* TestNamingValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */; };
-		DA4BD75420CA4F33003257FA /* TestNamingValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */; };
-		DA4BD75520CA4F33003257FA /* MockNamingValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */; };
-		DA4BD75620CA4F33003257FA /* TestNamingValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */; };
+		DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */; };
+		DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */; };
+		DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */; };
+		DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */; };
 		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */; };
@@ -56,18 +55,17 @@
 		DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
 		DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboard.swift; sourceTree = "<group>"; };
 		DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardProtocol.swift; sourceTree = "<group>"; };
-		DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorProtocol.swift; sourceTree = "<group>"; };
-		DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorVisible.swift; sourceTree = "<group>"; };
-		DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorComposite.swift; sourceTree = "<group>"; };
-		DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorLength.swift; sourceTree = "<group>"; };
-		DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingValidatorFactory.swift; sourceTree = "<group>"; };
-		DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNaming.swift; sourceTree = "<group>"; };
+		DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorProtocol.swift; sourceTree = "<group>"; };
+		DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorVisible.swift; sourceTree = "<group>"; };
+		DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorComposite.swift; sourceTree = "<group>"; };
+		DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorLength.swift; sourceTree = "<group>"; };
+		DA4BD73E20CA4F29003257FA /* NamerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerError.swift; sourceTree = "<group>"; };
 		DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterForKeyboard.swift; sourceTree = "<group>"; };
-		DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorVisible.swift; sourceTree = "<group>"; };
-		DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorComposite.swift; sourceTree = "<group>"; };
-		DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamingValidatorProtocol.swift; sourceTree = "<group>"; };
-		DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamingValidatorLength.swift; sourceTree = "<group>"; };
+		DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorVisible.swift; sourceTree = "<group>"; };
+		DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorComposite.swift; sourceTree = "<group>"; };
+		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
+		DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteFactory.swift; sourceTree = "<group>"; };
 		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				DAED6D7920CF9A2B002AB9F9 /* Namer */,
 				DAE5E4FE20CEB631005A8F34 /* PresenterDelete */,
 				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
-				DA4BD73820CA4F29003257FA /* NamingValidator */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -152,24 +149,11 @@
 			path = PresenterForKeyboard;
 			sourceTree = "<group>";
 		};
-		DA4BD73820CA4F29003257FA /* NamingValidator */ = {
-			isa = PBXGroup;
-			children = (
-				DA4BD73D20CA4F29003257FA /* NamingValidatorFactory.swift */,
-				DA4BD73920CA4F29003257FA /* NamingValidatorProtocol.swift */,
-				DA4BD73A20CA4F29003257FA /* NamingValidatorVisible.swift */,
-				DA4BD73B20CA4F29003257FA /* NamingValidatorComposite.swift */,
-				DA4BD73C20CA4F29003257FA /* NamingValidatorLength.swift */,
-				DA4BD73E20CA4F29003257FA /* ErrorNaming.swift */,
-			);
-			path = NamingValidator;
-			sourceTree = "<group>";
-		};
 		DA4BD74820CA4F33003257FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
-				DA4BD74C20CA4F33003257FA /* NamingValidator */,
+				DA4BD74C20CA4F33003257FA /* Namer */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -183,15 +167,15 @@
 			path = PresenterForKeyboard;
 			sourceTree = "<group>";
 		};
-		DA4BD74C20CA4F33003257FA /* NamingValidator */ = {
+		DA4BD74C20CA4F33003257FA /* Namer */ = {
 			isa = PBXGroup;
 			children = (
-				DA4BD74D20CA4F33003257FA /* TestNamingValidatorVisible.swift */,
-				DA4BD74E20CA4F33003257FA /* TestNamingValidatorComposite.swift */,
-				DA4BD75020CA4F33003257FA /* TestNamingValidatorLength.swift */,
-				DA4BD74F20CA4F33003257FA /* MockNamingValidatorProtocol.swift */,
+				DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */,
+				DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */,
+				DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */,
+				DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */,
 			);
-			path = NamingValidator;
+			path = Namer;
 			sourceTree = "<group>";
 		};
 		DA4BD75720CA525B003257FA /* Frameworks */ = {
@@ -222,6 +206,11 @@
 				DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */,
 				DAED6D8420CF9CBD002AB9F9 /* NamerViewBase.swift */,
 				DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */,
+				DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */,
+				DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */,
+				DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */,
+				DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */,
+				DA4BD73E20CA4F29003257FA /* NamerError.swift */,
 			);
 			path = Namer;
 			sourceTree = "<group>";
@@ -334,24 +323,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4BD74420CA4F29003257FA /* NamingValidatorComposite.swift in Sources */,
+				DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */,
 				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
 				DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */,
 				DAED6D8520CF9CBD002AB9F9 /* NamerViewBase.swift in Sources */,
 				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
 				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
-				DA4BD74520CA4F29003257FA /* NamingValidatorLength.swift in Sources */,
-				DA4BD74320CA4F29003257FA /* NamingValidatorVisible.swift in Sources */,
+				DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */,
+				DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */,
 				DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */,
-				DA4BD74220CA4F29003257FA /* NamingValidatorProtocol.swift in Sources */,
+				DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */,
 				DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */,
-				DA4BD74720CA4F29003257FA /* ErrorNaming.swift in Sources */,
+				DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */,
 				DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */,
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
 				DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */,
-				DA4BD74620CA4F29003257FA /* NamingValidatorFactory.swift in Sources */,
 				DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,11 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4BD75420CA4F33003257FA /* TestNamingValidatorComposite.swift in Sources */,
-				DA4BD75520CA4F33003257FA /* MockNamingValidatorProtocol.swift in Sources */,
-				DA4BD75320CA4F33003257FA /* TestNamingValidatorVisible.swift in Sources */,
+				DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */,
+				DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */,
+				DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */,
 				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
-				DA4BD75620CA4F33003257FA /* TestNamingValidatorLength.swift in Sources */,
+				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
 				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

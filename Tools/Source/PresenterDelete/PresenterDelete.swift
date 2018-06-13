@@ -35,8 +35,7 @@ class PresenterDelete:PresenterDeleteProtocol {
         alert.addAction(self.actionConfirm)
         alert.addAction(self.actionCancel)
         self.prepareForIpad(alert:alert)
-        let viewController:UIViewController = self.presentingView as! UIViewController
-        viewController.present(alert, animated:true, completion:nil)
+        self.presentingView.viewController.present(alert, animated:true, completion:nil)
     }
     
     func confirmed() {
@@ -45,7 +44,7 @@ class PresenterDelete:PresenterDeleteProtocol {
     
     private func prepareForIpad(alert:UIAlertController) {
         if let popover:UIPopoverPresentationController = alert.popoverPresentationController {
-            popover.sourceView = self.presentingView?.view
+            popover.sourceView = self.presentingView.viewController.view
             popover.permittedArrowDirections = UIPopoverArrowDirection.any
             popover.sourceRect = CGRect(
                 x:0,

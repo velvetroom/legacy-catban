@@ -1,6 +1,6 @@
 import Foundation
 
-class NamingValidatorVisible:NamingValidatorProtocol {
+class NamerValidatorVisible:NamerValidatorProtocol {
     required init() { }
     
     func validate(name:String) throws {
@@ -9,7 +9,7 @@ class NamingValidatorVisible:NamingValidatorProtocol {
         else { return }
         let cleanedName:String = self.clean(name:name)
         if cleanedName.isEmpty {
-            throw ErrorNaming.visible
+            throw NamerError.visible
         }
     }
     

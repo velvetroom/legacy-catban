@@ -58,7 +58,7 @@ class ViewNamer:Shared.View<Controller, PresenterNamer, ViewNamerBase>, UITextFi
     }
     
     private func validate(name:String) {
-        let validator:NamingValidatorProtocol = NamingValidatorFactory.makeValidator()
+        let validator:NamerValidatorProtocol = NamingValidatorFactory.makeValidator()
         do {
             try validator.validate(name:name)
         } catch let error {

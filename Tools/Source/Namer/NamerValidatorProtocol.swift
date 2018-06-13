@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol NamingValidatorProtocol {
+protocol NamerValidatorProtocol {
     init()
     func validate(name:String) throws
 }

@@ -1,11 +1,11 @@
 import Foundation
 
-class NamingValidatorLength:NamingValidatorProtocol {
+class NamerValidatorLength:NamerValidatorProtocol {
     required init() { }
     
     func validate(name:String) throws {
         if name.isEmpty {
-            throw ErrorNaming.length
+            throw NamerError.length
         }
     }
 }

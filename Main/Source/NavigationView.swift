@@ -17,13 +17,13 @@ class NavigationView:UINavigationController {
     }
     
     func transitionTo(view:PresentingViewProtocol) {
-        self.setViewControllers([view as! UIViewController], animated:self.animated)
+        self.setViewControllers([view.viewController], animated:self.animated)
         self.setNavigationBarHidden(view.navigationbarHidden, animated:true)
         self.setToolbarHidden(view.toolbarHidden, animated:true)
     }
     
     func pushTo(view:PresentingViewProtocol) {
-        self.pushViewController(view as! UIViewController, animated:true)
+        self.pushViewController(view.viewController, animated:true)
     }
     
     func pop() {

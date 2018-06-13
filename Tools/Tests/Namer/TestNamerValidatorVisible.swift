@@ -1,12 +1,12 @@
 import XCTest
 @testable import Tools
 
-class TestNamingValidatorVisible:XCTestCase {
-    private var model:NamingValidatorVisible!
+class TestNamerValidatorVisible:XCTestCase {
+    private var model:NamerValidatorVisible!
     
     override func setUp() {
         super.setUp()
-        self.model = NamingValidatorVisible()
+        self.model = NamerValidatorVisible()
     }
     
     func testNoThrowsOnRegularName() {

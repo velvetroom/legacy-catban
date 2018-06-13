@@ -1,12 +1,12 @@
 import XCTest
 @testable import Tools
 
-class TestNamingValidatorLength:XCTestCase {
-    private var model:NamingValidatorLength!
+class TestNamerValidatorLength:XCTestCase {
+    private var model:NamerValidatorLength!
     
     override func setUp() {
         super.setUp()
-        self.model = NamingValidatorLength()
+        self.model = NamerValidatorLength()
     }
     
     func testThrowsOnEmptyString() {
