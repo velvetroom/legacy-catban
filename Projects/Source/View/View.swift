@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, ViewBase> {
+public class View:Shared.View<Interactor, Presenter, ViewBase> {
     public override func initProperties() {
         super.initProperties()
         self.toolbarHidden = false
@@ -16,7 +16,7 @@ public class View:Shared.View<Controller, Presenter, ViewBase> {
     public override func willAppear() {
         super.willAppear()
         DispatchQueue.main.async { [weak self] in
-            self?.content.viewList.updateIndicator()
+            self?.content.viewList.updateSelector()
         }
     }
     

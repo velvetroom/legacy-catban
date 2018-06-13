@@ -5,14 +5,14 @@ import Board
 class TestPresenter_ViewModel:XCTestCase {
     private var presenter:Presenter!
     private var board:MockBoardProjectsProtocol!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var viewList:ViewList!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
         self.board = MockBoardProjectsProtocol()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.viewList = ViewList()
         self.controller.board = self.board
         self.presenter.controller = self.controller

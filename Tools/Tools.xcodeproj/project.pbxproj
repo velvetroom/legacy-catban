@@ -37,6 +37,9 @@
 		DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */; };
 		DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */; };
 		DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C2B20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift */; };
+		DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */; };
+		DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3B20D1181A0048FFC5 /* NamerViewStatus.swift */; };
+		DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3D20D119810048FFC5 /* NamerConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewModel.swift; sourceTree = "<group>"; };
 		DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerFactory.swift; sourceTree = "<group>"; };
 		DAF88C2B20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNamerInteractorProtocol.swift; sourceTree = "<group>"; };
+		DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewField.swift; sourceTree = "<group>"; };
+		DAF88C3B20D1181A0048FFC5 /* NamerViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewStatus.swift; sourceTree = "<group>"; };
+		DAF88C3D20D119810048FFC5 /* NamerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,10 +213,13 @@
 			isa = PBXGroup;
 			children = (
 				DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */,
+				DAF88C3D20D119810048FFC5 /* NamerConstants.swift */,
 				DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */,
 				DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */,
 				DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */,
 				DAED6D8420CF9CBD002AB9F9 /* NamerViewBase.swift */,
+				DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */,
+				DAF88C3B20D1181A0048FFC5 /* NamerViewStatus.swift */,
 				DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */,
 				DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */,
 				DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */,
@@ -337,11 +346,14 @@
 				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
 				DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */,
 				DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */,
+				DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */,
 				DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */,
+				DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */,
 				DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */,
 				DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */,
 				DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */,
+				DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */,
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,

@@ -8,4 +8,13 @@ class TestViewList:XCTestCase {
         super.setUp()
         self.view = ViewList()
     }
+    
+    func testSimulateScrollOnUpdateSelector() {
+        var called:Bool = false
+        let delegate:MockCollectionViewDelegate = MockCollectionViewDelegate()
+        self.view.delegate = delegate
+        delegate.onScrollDidScroll = { called = true }
+        self.view.updateSelector()
+        XCTAssertTrue(called, "No called")
+    }
 }

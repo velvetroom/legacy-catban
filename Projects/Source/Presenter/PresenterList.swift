@@ -19,7 +19,7 @@ class PresenterList {
         }
     }
     
-    weak var view:ViewList! {
+    weak var view:ViewList? {
         get {
             return self.delegate.view
         }

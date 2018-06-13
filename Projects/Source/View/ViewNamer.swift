@@ -2,7 +2,7 @@ import UIKit
 import Shared
 import Tools
 
-class ViewNamer:Shared.View<Controller, PresenterNamer, ViewNamerBase>, UITextFieldDelegate {
+class ViewNamer:Shared.View<Interactor, PresenterNamer, ViewNamerBase>, UITextFieldDelegate {
     override func didLoad() {
         super.didLoad()
         self.configureView()

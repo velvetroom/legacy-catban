@@ -6,7 +6,7 @@ class TestPresenter_Renamer:XCTestCase {
     private var presenter:Presenter!
     private var view:View!
     private var viewRenamer:ViewRenamer!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var board:MockBoardProjectsProtocol!
     private var project:ProjectProtocol!
     private var viewField:ViewRenamerField!
@@ -21,7 +21,7 @@ class TestPresenter_Renamer:XCTestCase {
         super.setUp()
         self.presenter = Presenter()
         self.viewRenamer = ViewRenamer()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.board = MockBoardProjectsProtocol()
         self.project = ProjectFactory.newProject()
         self.view = View()

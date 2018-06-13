@@ -5,7 +5,7 @@ import Tools
 
 public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     public weak var presenting:PresentingViewProtocol?
-    public var interactor:Controller!
+    public var interactor:Interactor!
     var list:PresenterList
     var keyboard:PresenterForKeyboardProtocol
     var viewModel:ViewModelProtocol! {

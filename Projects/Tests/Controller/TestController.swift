@@ -4,14 +4,14 @@ import Shared
 @testable import Projects
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var transition:MockTransitionProtocol!
     private var presenter:MockPresenter!
     private var board:MockBoardProjectsProtocol!
     
     override func setUp() {
         super.setUp()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.transition = MockTransitionProtocol()
         self.presenter = MockPresenter()
         self.board = MockBoardProjectsProtocol()

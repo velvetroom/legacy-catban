@@ -30,7 +30,6 @@ class TestView:XCTestCase {
         let view:MockView = MockView(presenter:presenter)
         var called:Bool = false
         presenter.onDidLoad = { called = true }
-        
         view.viewDidLoad()
         XCTAssertTrue(called, "Not called")
     }
@@ -40,7 +39,6 @@ class TestView:XCTestCase {
         let view:MockView = MockView(presenter:presenter)
         var called:Bool = false
         presenter.interactor.onDidLoad = { called = true }
-        
         view.viewDidLoad()
         XCTAssertTrue(called, "Not called")
     }
@@ -50,7 +48,6 @@ class TestView:XCTestCase {
         let view:MockView = MockView(presenter:presenter)
         var called:Bool = false
         presenter.onWillAppear = { called = true }
-        
         view.viewWillAppear(false)
         XCTAssertTrue(called, "Not called")
     }
@@ -60,7 +57,6 @@ class TestView:XCTestCase {
         let view:MockView = MockView(presenter:presenter)
         var called:Bool = false
         presenter.onDidAppear = { called = true }
-        
         view.viewDidAppear(false)
         XCTAssertTrue(called, "Not called")
     }
@@ -70,7 +66,6 @@ class TestView:XCTestCase {
         let view:MockView = MockView(presenter:presenter)
         var called:Bool = false
         presenter.onOrientationChanged = { called = true }
-        
         view.viewWillTransition(to:CGSize.zero, with:MockTransitionCoordinator())
         XCTAssertTrue(called, "Not called")
     }

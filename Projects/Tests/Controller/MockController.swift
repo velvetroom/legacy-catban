@@ -1,7 +1,7 @@
 import Foundation
 @testable import Projects
 
-class MockController:Controller {
+class MockController:Interactor {
     var onOpenProject:(() -> Void)?
     var onDelete:(() -> Void)?
     var onRenameProject:(() -> Void)?

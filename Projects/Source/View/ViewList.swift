@@ -16,11 +16,11 @@ class ViewList:UICollectionView {
     func updateLayout() {
         self.collectionViewLayout.invalidateLayout()
         DispatchQueue.main.async { [weak self] in
-            self?.updateIndicator()
+            self?.updateSelector()
         }
     }
     
-    func updateIndicator() {
+    func updateSelector() {
         self.delegate?.scrollViewDidScroll?(self)
     }
     

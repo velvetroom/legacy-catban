@@ -4,7 +4,7 @@ import Shared
 
 class TestPresenter:XCTestCase {
     private var presenter:Presenter!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var board:MockBoardProjectsProtocol!
     private var project:MockProjectManagedProtocol!
     private var view:Projects.View!
@@ -17,7 +17,7 @@ class TestPresenter:XCTestCase {
         super.setUp()
         self.presenter = Presenter()
         self.view = Projects.View()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.board = MockBoardProjectsProtocol()
         self.project = MockProjectManagedProtocol()
         self.transition = MockTransitionProtocol()
@@ -38,12 +38,12 @@ class TestPresenter:XCTestCase {
     }
     
     func testNotRetainingController() {
-        self.presenter.controller = Controller()
+        self.presenter.controller = Interactor()
         XCTAssertNil(self.presenter.controller, "Retains")
     }
     
     func testNotRetainingDelegate() {
-        self.presenter.delegate = Controller()
+        self.presenter.delegate = Interactor()
         XCTAssertNil(self.presenter.delegate, "Retains")
     }
     

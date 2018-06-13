@@ -57,14 +57,12 @@ class ViewListCell:UICollectionViewCell {
     }
     
     private func showOn() {
-        labelName.textColor = UIColor.black
-        labelName.font = UIFont.monospacedDigitSystemFont(
-            ofSize:ViewConstants.ListItem.fontSizeOn, weight:UIFont.Weight.medium)
+        self.labelName.textColor = UIColor.black
+        self.labelName.font = UIFont.systemFont(ofSize:ViewConstants.ListItem.fontSizeOn, weight:UIFont.Weight.medium)
     }
     
     private func showOff() {
-        labelName.textColor = UIColor(white:0, alpha:0.25)
-        labelName.font = UIFont.monospacedDigitSystemFont(
-            ofSize:ViewConstants.ListItem.fontSizeOff, weight:UIFont.Weight.regular)
+        self.labelName.textColor = UIColor(white:0, alpha:0.25)
+        self.labelName.font = UIFont.systemFont(ofSize:ViewConstants.ListItem.fontSizeOff, weight:UIFont.Weight.regular)
     }
 }
