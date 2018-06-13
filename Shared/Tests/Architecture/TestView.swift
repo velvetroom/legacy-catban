@@ -35,6 +35,16 @@ class TestView:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
+    func testCallsInteractorOnViewDidLoad() {
+        let presenter:MockPresenterProtocol = PresenterFactory.makePresenter()
+        let view:MockView = MockView(presenter:presenter)
+        var called:Bool = false
+        presenter.interactor.onDidLoad = { called = true }
+        
+        view.viewDidLoad()
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testCallsPresenterOnViewWillAppear() {
         let presenter:MockPresenterProtocol = PresenterFactory.makePresenter()
         let view:MockView = MockView(presenter:presenter)
