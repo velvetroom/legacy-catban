@@ -23,4 +23,13 @@ class TestNamerPresenter:XCTestCase {
         self.presenter.saveWith(name:name)
         XCTAssertTrue(called, "Not called")
     }
+    
+    func testSaveButtonInitiallyDisabled() {
+        let view:NamerView<MockNamerInteractorProtocol> = NamerView<MockNamerInteractorProtocol>()
+        self.presenter.presenting = view
+        view.presenter = self.presenter
+        XCTAssertNotNil(view.view)
+        view.viewDidAppear(false)
+        XCTAssertFalse(self.presenter.buttonSave!.isEnabled, "Should not be enabled")
+    }
 }

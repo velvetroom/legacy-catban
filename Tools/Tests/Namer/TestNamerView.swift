@@ -30,4 +30,9 @@ class TestNamerView:XCTestCase {
         self.view.didLoad()
         XCTAssertEqual(self.view.content.viewField.text!, currentName, "Not updated")
     }
+    
+    func testStatusInitiallyHidden() {
+        self.view.didLoad()
+        XCTAssertTrue(self.view.content.viewStatus.isHidden, "Status should initially be hidden")
+    }
 }
