@@ -81,9 +81,8 @@ public class Presenter:PresenterProtocol, PresenterDeleteDelegateProtocol {
     }
     
     private func showNamer() {
-        let presenter:PresenterNamer = PresenterNamer()
-        presenter.interactor = self.interactor
-        let view:ViewNamer = ViewNamer(presenter:presenter)
+        var viewModel:NamerViewModel = NamerViewModel()
+        let view:PresentingViewProtocol = NamerFactory.makeNamerWith(interactor:self.interactor, and:viewModel)
         self.transition?.pushTo(view:view)
         view.viewModelUpdated()
     }

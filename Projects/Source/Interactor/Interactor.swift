@@ -1,12 +1,17 @@
 import Foundation
 import Shared
 import Board
+import Tools
 
-public class Interactor:InteractorBoardProtocol {
+public class Interactor:InteractorBoardProtocol, NamerInteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public var board:BoardProjectsProtocol!
     
     public required init() { }
+    
+    public func namerFinishedWith(name:String) {
+        
+    }
     
     func addProject() -> ProjectProtocol {
         let project:ProjectProtocol = ProjectFactory.newProject()

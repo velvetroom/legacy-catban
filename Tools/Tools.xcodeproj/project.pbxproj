@@ -42,6 +42,8 @@
 		DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3D20D119810048FFC5 /* NamerConstants.swift */; };
 		DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C4120D12F900048FFC5 /* TestNamerView.swift */; };
 		DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */; };
+		DAF88C4620D16A370048FFC5 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF88C4520D16A370048FFC5 /* assets.xcassets */; };
+		DAF88C4820D16A5F0048FFC5 /* TestNamerImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		DAF88C3D20D119810048FFC5 /* NamerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerConstants.swift; sourceTree = "<group>"; };
 		DAF88C4120D12F900048FFC5 /* TestNamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerView.swift; sourceTree = "<group>"; };
 		DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerPresenter.swift; sourceTree = "<group>"; };
+		DAF88C4520D16A370048FFC5 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4BD73020CA4F22003257FA /* Localizable.strings */,
+				DAF88C4520D16A370048FFC5 /* assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		DA4BD74C20CA4F33003257FA /* Namer */ = {
 			isa = PBXGroup;
 			children = (
+				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
 				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
 				DAF88C4120D12F900048FFC5 /* TestNamerView.swift */,
@@ -326,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF88C4620D16A370048FFC5 /* assets.xcassets in Resources */,
 				DA4BD73220CA4F22003257FA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +382,7 @@
 				DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */,
 				DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */,
 				DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */,
+				DAF88C4820D16A5F0048FFC5 /* TestNamerImages.swift in Sources */,
 				DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */,
 				DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */,
 				DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */,

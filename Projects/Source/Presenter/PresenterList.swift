@@ -15,7 +15,7 @@ class PresenterList {
         }
         set(newValue) {
             self.datasource.items = newValue
-            self.view.reloadData()
+            self.view?.reloadData()
         }
     }
     
@@ -25,8 +25,8 @@ class PresenterList {
         }
         set(newValue) {
             self.delegate.view = newValue
-            newValue.delegate = self.delegate
-            newValue.dataSource = self.datasource
+            newValue?.delegate = self.delegate
+            newValue?.dataSource = self.datasource
         }
     }
     
@@ -66,7 +66,7 @@ class PresenterList {
     }
     
     private func selectAnimating() {
-        self.view.selectItem(at:self.delegate.selected, animated:true,
-                             scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        self.view?.selectItem(at:self.delegate.selected, animated:true,
+                              scrollPosition:UICollectionViewScrollPosition.centeredVertically)
     }
 }
