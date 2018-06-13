@@ -21,7 +21,7 @@ public class Presenter:PresenterProtocol {
     }
     
     public func didLoad() {
-        if let view:UIView = self.presenting?.view {
+        if let view:UIView = self.presenting?.viewController.view {
             self.loadCanvasOn(view:view)
         }
     }

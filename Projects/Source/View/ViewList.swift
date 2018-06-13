@@ -33,6 +33,7 @@ class ViewList:UICollectionView {
         self.alwaysBounceVertical = true
         self.canCancelContentTouches = false
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        self.decelerationRate = UIScrollViewDecelerationRateFast
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
     }
 }
