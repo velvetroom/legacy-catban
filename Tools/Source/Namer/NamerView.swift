@@ -4,8 +4,8 @@ import Shared
 class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewBase> {
     override func didLoad() {
         super.didLoad()
-        self.configureView()
         self.configureNavigationItem()
+        self.configureView()
     }
     
     override func didAppear() {

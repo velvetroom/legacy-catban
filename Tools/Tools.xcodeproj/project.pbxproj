@@ -40,6 +40,8 @@
 		DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */; };
 		DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3B20D1181A0048FFC5 /* NamerViewStatus.swift */; };
 		DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3D20D119810048FFC5 /* NamerConstants.swift */; };
+		DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C4120D12F900048FFC5 /* TestNamerView.swift */; };
+		DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewField.swift; sourceTree = "<group>"; };
 		DAF88C3B20D1181A0048FFC5 /* NamerViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewStatus.swift; sourceTree = "<group>"; };
 		DAF88C3D20D119810048FFC5 /* NamerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerConstants.swift; sourceTree = "<group>"; };
+		DAF88C4120D12F900048FFC5 /* TestNamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerView.swift; sourceTree = "<group>"; };
+		DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
+				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
+				DAF88C4120D12F900048FFC5 /* TestNamerView.swift */,
 				DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */,
 				DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */,
 				DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */,
@@ -370,9 +376,11 @@
 				DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */,
 				DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */,
 				DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */,
+				DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */,
 				DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */,
 				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
 				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
+				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
 				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
