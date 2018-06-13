@@ -15,25 +15,25 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
     
     public required init() {
         self.content = Content()
-        self.toolbarHidden = true
-        self.navigationbarHidden = false
-        self.presenter = View.makePresenter()
+        self.toolbarHidden = ViewConstants.toolbarHidden
+        self.navigationbarHidden = ViewConstants.navigationbarHidden
+        self.presenter = PresenterFactory.makePresenter()
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self
         self.initProperties()
     }
     
-    public required init?(coder:NSCoder) {
-        return nil
-    }
-    
     public init(presenter:Presenter) {
         self.content = Content()
-        self.toolbarHidden = true
-        self.navigationbarHidden = false
+        self.toolbarHidden = ViewConstants.toolbarHidden
+        self.navigationbarHidden = ViewConstants.navigationbarHidden
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
         self.initProperties()
+    }
+    
+    public required init?(coder:NSCoder) {
+        return nil
     }
     
     open override func loadView() {
@@ -72,14 +72,6 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
     open func didAppear() { }
     open func orientationChanged() { }
     open func viewModelUpdated() { }
-    
-    private class func makePresenter() -> Presenter {
-        var interactor:Interactor = Interactor()
-        var presenter:Presenter = Presenter()
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        return presenter
-    }
     
     private func configureView() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
