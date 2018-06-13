@@ -3,21 +3,25 @@ import Board
 @testable import Projects
 
 class TestPresenter_ViewModel:XCTestCase {
+    private var view:View!
     private var presenter:Presenter!
     private var board:MockBoardProjectsProtocol!
-    private var controller:Interactor!
     private var viewList:ViewList!
     
     override func setUp() {
         super.setUp()
-        self.presenter = Presenter()
+        self.view = View()
+        self.presenter = self.view.presenter
         self.board = MockBoardProjectsProtocol()
-        self.controller = Interactor()
-        self.viewList = ViewList()
-        self.controller.board = self.board
-        self.presenter.controller = self.controller
-        self.presenter.outlets.list = self.viewList
+        self.viewList = self.view.content.viewList
+        self.presenter.interactor.board = self.board
         self.presenter.list.view = self.viewList
+    }
+    
+    func testNotRetainingView() {
+        let presenter:Presenter = self.presenter
+        presenter.presenting = View()
+        XCTAssertNil(presenter.presenting, "Retains")
     }
     
     func testShouldUpdateRefreshesViewModelWithNoProjects() {

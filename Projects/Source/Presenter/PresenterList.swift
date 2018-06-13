@@ -57,10 +57,10 @@ class PresenterList {
         self.selectAnimating()
     }
     
-    private func selectFirstItem() {
+    func selectFirstItem() {
         guard
             self.items.isEmpty == false
-            else { return }
+        else { return }
         self.delegate.selected = IndexPath(item:0, section:0)
         self.selectAnimating()
     }

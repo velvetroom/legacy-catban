@@ -1,5 +1,5 @@
 import Foundation
-@testable import Board
+import Board
 
 class MockProjectManagedProtocol:ProjectManagedProtocol {
     var manager:BoardProjectsProtocol
