@@ -1,7 +1,8 @@
 import UIKit
 import Shared
 
-class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewBase> {
+class NamerView<Interactor:NamerInteractorProtocol>:View
+    <Interactor, NamerPresenter<Interactor>, NamerViewModel, NamerViewBase> {
     override func didLoad() {
         super.didLoad()
         self.configureNavigationItem()
@@ -14,8 +15,8 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
     }
     
     private func configureView() {
-        self.title = self.presenter.viewModel.title
-        self.content.viewField.text = self.presenter.viewModel.currentName
+        self.title = self.viewModel.title
+        self.content.viewField.text = self.viewModel.currentName
         self.content.viewField.delegate = self.presenter
         self.content.viewStatus.isHidden = true
         self.presenter.viewStatus = self.content.viewStatus

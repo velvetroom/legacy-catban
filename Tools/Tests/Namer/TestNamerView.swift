@@ -26,7 +26,7 @@ class TestNamerView:XCTestCase {
     
     func testUpdatesFieldWithName() {
         let currentName:String = "hello world"
-        self.view.presenter.viewModel.currentName = currentName
+        self.view.viewModel.currentName = currentName
         self.view.didLoad()
         XCTAssertEqual(self.view.content.viewField.text!, currentName, "Not updated")
     }

@@ -2,12 +2,12 @@ import UIKit
 import Shared
 
 class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProtocol, UITextFieldDelegate {
+    typealias ViewModel = NamerViewModel
     weak var presenting:PresentingViewProtocol?
     weak var viewStatus:NamerViewStatus?
     weak var labelError:UILabel?
     weak var buttonSave:UIBarButtonItem?
     var interactor:Interactor!
-    var viewModel:NamerViewModel!
     
     required override init() {
         super.init()

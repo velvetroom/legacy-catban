@@ -9,7 +9,7 @@ class TestNamerFactory:XCTestCase {
         let view:PresentingViewProtocol = NamerFactory.makeNamerWith(interactor:MockNamerInteractorProtocol(),
                                                                      and:viewModel)
         let namer:NamerView<MockNamerInteractorProtocol> = view as! NamerView<MockNamerInteractorProtocol>
-        XCTAssertEqual(namer.presenter.viewModel.currentName, viewModel.currentName, "Not injected")
+        XCTAssertEqual(namer.viewModel.currentName, viewModel.currentName, "Not injected")
     }
     
     func testInjectsInteractor() {

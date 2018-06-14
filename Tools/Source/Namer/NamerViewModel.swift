@@ -1,6 +1,7 @@
 import Foundation
+import Shared
 
-public struct NamerViewModel {
+public struct NamerViewModel:ViewModelProtocol {
     public var title:String
     public var currentName:String
     

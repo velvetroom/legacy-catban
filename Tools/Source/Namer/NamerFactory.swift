@@ -6,7 +6,7 @@ public class NamerFactory {
         interactor:Interactor, and viewModel:NamerViewModel) -> PresentingViewProtocol {
         let presenter:NamerPresenter<Interactor> = makePresenterWith(interactor:interactor)
         let view:NamerView<Interactor> = NamerView<Interactor>(presenter:presenter)
-        view.presenter.viewModel = viewModel
+        view.viewModel = viewModel
         return view
     }
     
