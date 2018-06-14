@@ -1,13 +1,27 @@
 import UIKit
 
 open class View<Interactor, Presenter:PresenterProtocol, ViewModel, Content:UIView>:UIViewController,
-    PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Presenter.ViewModel {
+PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Presenter.ViewModel {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
     open var content:Content
-    open var toolbarHidden:Bool
-    open var navigationbarHidden:Bool
-    public var interactor:InteractorProtocol! {
+    
+    open var viewModel:ViewModel {
+        didSet {
+            self.viewModelUpdated()
+        }
+    }
+    
+    public var presentingViewModel:ViewModelProtocol {
+        get {
+            return self.viewModel
+        }
+        set(newValue) {
+            self.viewModel = presentingViewModel as! ViewModel
+        }
+    }
+    
+    open var interactor:InteractorProtocol! {
         get {
             return self.presenter.interactor
         }
@@ -15,19 +29,16 @@ open class View<Interactor, Presenter:PresenterProtocol, ViewModel, Content:UIVi
     
     public required init() {
         self.content = Content()
-        self.toolbarHidden = ViewConstants.toolbarHidden
-        self.navigationbarHidden = ViewConstants.navigationbarHidden
+        self.viewModel = ViewModel()
         self.presenter = PresenterFactory.makePresenter()
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self
-        self.presenter.viewModel = ViewModel()
         self.initProperties()
     }
     
     public init(presenter:Presenter) {
         self.content = Content()
-        self.toolbarHidden = ViewConstants.toolbarHidden
-        self.navigationbarHidden = ViewConstants.navigationbarHidden
+        self.viewModel = ViewModel()
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
         self.initProperties()

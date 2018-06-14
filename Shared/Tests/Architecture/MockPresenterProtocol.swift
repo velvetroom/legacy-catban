@@ -2,13 +2,13 @@ import Foundation
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
+    typealias ViewModel = MockViewModelProtocol
     var onDidLoad:(() -> Void)?
     var onWillAppear:(() -> Void)?
     var onDidAppear:(() -> Void)?
     var onOrientationChanged:(() -> Void)?
     weak var presenting:PresentingViewProtocol?
     var interactor:MockInteractorProtocol!
-    var viewModel:MockViewModelProtocol!
     
     required init() { }
     
