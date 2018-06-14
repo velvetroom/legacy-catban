@@ -1,7 +1,7 @@
 import UIKit
 
-open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:
-UIViewController, PresentingViewProtocol where Interactor == Presenter.Interactor {
+open class View<Interactor, Presenter:PresenterProtocol, ViewModel, Content:UIView>:UIViewController,
+    PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Presenter.ViewModel {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
     open var content:Content
@@ -20,6 +20,7 @@ UIViewController, PresentingViewProtocol where Interactor == Presenter.Interacto
         self.presenter = PresenterFactory.makePresenter()
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self
+        self.presenter.viewModel = ViewModel()
         self.initProperties()
     }
     

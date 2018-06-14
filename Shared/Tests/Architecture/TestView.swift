@@ -69,4 +69,15 @@ class TestView:XCTestCase {
         view.viewWillTransition(to:CGSize.zero, with:MockTransitionCoordinator())
         XCTAssertTrue(called, "Not called")
     }
+    
+    func testInjectsViewModelOnPresenter() {
+        let view:MockView = MockView()
+        XCTAssertNotNil(view.presenter.viewModel, "Not injected")
+    }
+    
+    func testInitWithPresenterNotInjectingViewModel() {
+        let presenter:MockPresenterProtocol = PresenterFactory.makePresenter()
+        let _:MockView = MockView(presenter:presenter)
+        XCTAssertNil(presenter.viewModel, "Injecting/replacing view model on presenter")
+    }
 }

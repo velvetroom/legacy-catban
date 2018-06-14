@@ -8,6 +8,7 @@ class MockPresenterProtocol:PresenterProtocol {
     var onOrientationChanged:(() -> Void)?
     weak var presenting:PresentingViewProtocol?
     var interactor:MockInteractorProtocol!
+    var viewModel:MockViewModelProtocol!
     
     required init() { }
     
