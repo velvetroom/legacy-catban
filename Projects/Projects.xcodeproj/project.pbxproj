@@ -28,6 +28,13 @@
 		DA44422720D24C5400587AF3 /* Presenter+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44422620D24C5400587AF3 /* Presenter+Delete.swift */; };
 		DA44422920D24D6500587AF3 /* Presenter+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44422820D24D6500587AF3 /* Presenter+CollectionDelegate.swift */; };
 		DA44422B20D250FC00587AF3 /* Presenter+CollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */; };
+		DA44423320D26CBB00587AF3 /* StateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423220D26CBB00587AF3 /* StateProtocol.swift */; };
+		DA44423520D26CE500587AF3 /* StateDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423420D26CE500587AF3 /* StateDefault.swift */; };
+		DA44423720D26CFE00587AF3 /* StateSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423620D26CFE00587AF3 /* StateSelecting.swift */; };
+		DA44423920D26D1F00587AF3 /* StateRename.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423820D26D1F00587AF3 /* StateRename.swift */; };
+		DA44423B20D26D4F00587AF3 /* StateAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423A20D26D4F00587AF3 /* StateAdd.swift */; };
+		DA44423D20D26EA000587AF3 /* Interactor+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423C20D26EA000587AF3 /* Interactor+State.swift */; };
+		DA44423F20D26F6E00587AF3 /* StateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423E20D26F6E00587AF3 /* StateProtocol+Default.swift */; };
 		DA4777CD20C658A80069AB6C /* MockPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */; };
 		DA4BD76420CA542C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76320CA542C003257FA /* Tools.framework */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
@@ -83,6 +90,13 @@
 		DA44422620D24C5400587AF3 /* Presenter+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+Delete.swift"; sourceTree = "<group>"; };
 		DA44422820D24D6500587AF3 /* Presenter+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+CollectionDelegate.swift"; sourceTree = "<group>"; };
 		DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+CollectionDatasource.swift"; sourceTree = "<group>"; };
+		DA44423220D26CBB00587AF3 /* StateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProtocol.swift; sourceTree = "<group>"; };
+		DA44423420D26CE500587AF3 /* StateDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDefault.swift; sourceTree = "<group>"; };
+		DA44423620D26CFE00587AF3 /* StateSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSelecting.swift; sourceTree = "<group>"; };
+		DA44423820D26D1F00587AF3 /* StateRename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRename.swift; sourceTree = "<group>"; };
+		DA44423A20D26D4F00587AF3 /* StateAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAdd.swift; sourceTree = "<group>"; };
+		DA44423C20D26EA000587AF3 /* Interactor+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+State.swift"; sourceTree = "<group>"; };
+		DA44423E20D26F6E00587AF3 /* StateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA4777CC20C658A80069AB6C /* MockPresenterForKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterForKeyboard.swift; sourceTree = "<group>"; };
 		DA4BD76320CA542C003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +181,13 @@
 			isa = PBXGroup;
 			children = (
 				DA93139F20B83016008EDA07 /* Interactor.swift */,
+				DA44423C20D26EA000587AF3 /* Interactor+State.swift */,
+				DA44423220D26CBB00587AF3 /* StateProtocol.swift */,
+				DA44423E20D26F6E00587AF3 /* StateProtocol+Default.swift */,
+				DA44423420D26CE500587AF3 /* StateDefault.swift */,
+				DA44423620D26CFE00587AF3 /* StateSelecting.swift */,
+				DA44423820D26D1F00587AF3 /* StateRename.swift */,
+				DA44423A20D26D4F00587AF3 /* StateAdd.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -411,17 +432,24 @@
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
+				DA44423720D26CFE00587AF3 /* StateSelecting.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
 				DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */,
+				DA44423D20D26EA000587AF3 /* Interactor+State.swift in Sources */,
 				DA44422920D24D6500587AF3 /* Presenter+CollectionDelegate.swift in Sources */,
+				DA44423B20D26D4F00587AF3 /* StateAdd.swift in Sources */,
 				DA435A7D20BAC5B4000C2E56 /* ViewModelItem.swift in Sources */,
+				DA44423F20D26F6E00587AF3 /* StateProtocol+Default.swift in Sources */,
 				DAD5F07920BBE18E00CEC10A /* Presenter+List.swift in Sources */,
 				DAEABCA520C7BB0700025891 /* ViewBase.swift in Sources */,
 				DA44422520D2456F00587AF3 /* ViewModel.swift in Sources */,
+				DA44423520D26CE500587AF3 /* StateDefault.swift in Sources */,
 				DA44422B20D250FC00587AF3 /* Presenter+CollectionDatasource.swift in Sources */,
 				DA435A7020BAA07E000C2E56 /* ViewListCell.swift in Sources */,
+				DA44423320D26CBB00587AF3 /* StateProtocol.swift in Sources */,
 				DAD5F06F20BBCBC100CEC10A /* ViewModelFactory.swift in Sources */,
+				DA44423920D26D1F00587AF3 /* StateRename.swift in Sources */,
 				DA44422720D24C5400587AF3 /* Presenter+Delete.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Interactor.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,

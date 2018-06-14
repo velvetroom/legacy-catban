@@ -15,7 +15,6 @@
 		DA44421B20D2358400587AF3 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44421A20D2358400587AF3 /* ViewModelProtocol.swift */; };
 		DA44421D20D235CE00587AF3 /* ViewModelProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44421C20D235CE00587AF3 /* ViewModelProtocol+Default.swift */; };
 		DA44421F20D236BE00587AF3 /* MockViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44421E20D236BE00587AF3 /* MockViewModelProtocol.swift */; };
-		DA44422120D23F5900587AF3 /* ViewDelegateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44422020D23F5900587AF3 /* ViewDelegateProtocol+Default.swift */; };
 		DA48AC5D20CBB0C0005D7016 /* PresentingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */; };
 		DA48AC6120CBB86C005D7016 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */; };
 		DA54DDA720CD5A2D007834EF /* InteractorProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54DDA620CD5A2D007834EF /* InteractorProtocol+Default.swift */; };
@@ -70,7 +69,6 @@
 		DA44421A20D2358400587AF3 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		DA44421C20D235CE00587AF3 /* ViewModelProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA44421E20D236BE00587AF3 /* MockViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelProtocol.swift; sourceTree = "<group>"; };
-		DA44422020D23F5900587AF3 /* ViewDelegateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewDelegateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewProtocol.swift; sourceTree = "<group>"; };
 		DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DA54DDA620CD5A2D007834EF /* InteractorProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InteractorProtocol+Default.swift"; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */,
 				DAB376A420D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift */,
 				DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */,
-				DA44422020D23F5900587AF3 /* ViewDelegateProtocol+Default.swift */,
 				DA44421A20D2358400587AF3 /* ViewModelProtocol.swift */,
 				DA44421C20D235CE00587AF3 /* ViewModelProtocol+Default.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
@@ -384,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFFF4F520CA67F400A50077 /* InteractorBoardProtocol.swift in Sources */,
-				DA44422120D23F5900587AF3 /* ViewDelegateProtocol+Default.swift in Sources */,
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DAB376A520D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift in Sources */,

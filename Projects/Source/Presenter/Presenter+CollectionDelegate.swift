@@ -38,17 +38,17 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
         guard
             let indexPath:IndexPath = self.centerIndexPath
         else { return }
-        self.selected = indexPath
+        self.interactor.stateSelecting(index:indexPath.item)
         self.view.selectItem(at:indexPath, animated:false, scrollPosition:UICollectionViewScrollPosition())
     }
     
     public func scrollViewWillBeginDragging(_:UIScrollView) {
-        self.trackingScroll = true
+        self.view.trackingScroll = true
     }
     
     public func scrollViewDidScroll(_:UIScrollView) {
         self.updateSelector()
-        if self.trackingScroll {
+        if self.view.trackingScroll {
             self.selectCentreCell()
         }
     }
@@ -68,8 +68,8 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
     }
     
     public func collectionView(_:UICollectionView, didSelectItemAt index:IndexPath) {
-        self.selected = index
-        self.trackingScroll = false
+        self.interactor.stateSelecting(index:index.item)
+        self.view.trackingScroll = false
         self.view.scrollToItem(at:index, at:UICollectionViewScrollPosition.centeredVertically, animated:true)
     }
     

@@ -9,15 +9,13 @@ extension Presenter {
     }
     
     func selectItemWith(identifier:String) {
-        var itemIndex:Int = 0
         let items:[ViewModelItem] = self.viewModel.items
         for index:Int in 0 ..< items.count {
             if items[index].identifier == identifier {
-                itemIndex = index
+                self.interactor.stateSelecting(index:index)
                 break
             }
         }
-        self.selected = IndexPath(item:itemIndex, section:0)
         self.selectAnimating()
     }
     
@@ -25,12 +23,12 @@ extension Presenter {
         guard
             self.viewModel.items.isEmpty == false
         else { return }
-        self.selected = IndexPath(item:0, section:0)
+        self.interactor.stateSelecting(index:0)
         self.selectAnimating()
     }
     
     private func selectAnimating() {
-        self.view.selectItem(at:self.selected, animated:true,
+        self.view.selectItem(at:self.interactor.state.selected, animated:true,
                              scrollPosition:UICollectionViewScrollPosition.centeredVertically)
     }
 }

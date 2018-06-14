@@ -6,8 +6,11 @@ import Tools
 public class Interactor:InteractorBoardProtocol, NamerInteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public var board:BoardProjectsProtocol!
+    var state:StateProtocol
     
-    public required init() { }
+    public required init() {
+        self.state = StateDefault()
+    }
     
     public func namerFinishedWith(name:String) {
         
