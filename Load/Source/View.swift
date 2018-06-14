@@ -1,13 +1,8 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, UIView> {
+public class View:Shared.View<Interactor, Presenter, ViewModel, UIView> {
     private weak var imageLogo:UIImageView!
-    
-    public override func initProperties() {
-        super.initProperties()
-        self.navigationbarHidden = false
-    }
     
     public override func didLoad() {
         super.didLoad()
