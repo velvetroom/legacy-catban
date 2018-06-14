@@ -10,7 +10,7 @@ public extension PresenterProtocol {
         }
         
         set(newValue) {
-            self.presenting?.presentingViewModel = viewModel
+            self.presenting?.presentingViewModel = newValue
         }
     }
     

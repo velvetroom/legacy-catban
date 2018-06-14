@@ -50,8 +50,9 @@ public class View:Shared.View<Interactor, Presenter, Projects.ViewModel, ViewBas
     }
     
     public override func viewModelUpdated() {
-        self.content.viewList.isHidden = self.viewModel.listHidden
         self.content.viewEmpty.isHidden = self.viewModel.emptyHidden
+        self.content.viewList.isHidden = self.viewModel.listHidden
+        self.content.viewList.reloadData()
         self.navigationController?.setToolbarHidden(self.viewModel.toolbarHidden, animated:true)
     }
 }

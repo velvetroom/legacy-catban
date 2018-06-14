@@ -17,7 +17,7 @@ PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Pr
             return self.viewModel
         }
         set(newValue) {
-            self.viewModel = presentingViewModel as! ViewModel
+            self.viewModel = newValue as! ViewModel
         }
     }
     

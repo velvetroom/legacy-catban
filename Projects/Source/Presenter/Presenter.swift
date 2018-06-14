@@ -12,6 +12,10 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     public func didLoad() {
-        self.viewModel = ViewModel()
+        self.updateViewModel()
+    }
+    
+    func updateViewModel() {
+        self.viewModel = ViewModelFactory.makeWith(board:self.interactor.board)
     }
 }

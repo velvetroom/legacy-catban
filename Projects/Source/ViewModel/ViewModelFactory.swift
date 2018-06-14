@@ -2,15 +2,16 @@ import Foundation
 import Board
 
 class ViewModelFactory {
-    class func makeWith(board:BoardProtocol) -> ViewModel {
+    class func makeWith(board:BoardProjectsProtocol) -> ViewModel {
         var viewModel:ViewModel = ViewModel()
         viewModel.items = makeSortedItemsWith(board:board)
-        viewModel.emptyHidden = viewModel.items.isEmpty
-        viewModel.listHidden = !viewModel.items.isEmpty
+        viewModel.emptyHidden = !viewModel.items.isEmpty
+        viewModel.listHidden = viewModel.items.isEmpty
+        viewModel.toolbarHidden = viewModel.items.isEmpty
         return viewModel
     }
     
-    private class func makeSortedItemsWith(board:BoardProtocol) -> [ViewModelItem] {
+    private class func makeSortedItemsWith(board:BoardProjectsProtocol) -> [ViewModelItem] {
         var items:[ViewModelItem] = makeItemsWith(board:board)
         items.sort { (itemLeft:ViewModelItem, itemRight:ViewModelItem) -> Bool in
             let comparison:ComparisonResult = itemLeft.name.compare(
@@ -20,7 +21,7 @@ class ViewModelFactory {
         return items
     }
     
-    private class func makeItemsWith(board:BoardProtocol) -> [ViewModelItem] {
+    private class func makeItemsWith(board:BoardProjectsProtocol) -> [ViewModelItem] {
         var items:[ViewModelItem] = []
         board.iterate { (project:ProjectProtocol) in
             var item:ViewModelItem = ViewModelItem()
