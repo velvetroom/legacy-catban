@@ -1,6 +1,6 @@
 import Foundation
 
-struct ViewModelListItem {
+struct ViewModelItem {
     var name:String
     var identifier:String
     

@@ -1,15 +1,16 @@
 import Foundation
 
 public extension ViewDelegateProtocol {
-    var viewModel:ViewModel? {
+    var viewModel:ViewModel {
         get {
-            return self.presenting?.presentingViewModel as? Self.ViewModel
+            guard
+                let viewModel:ViewModel = self.presenting?.presentingViewModel as? Self.ViewModel
+            else { return ViewModel() }
+            return viewModel
         }
         
         set(newValue) {
-            if let viewModel:ViewModel = newValue {
-                self.presenting?.presentingViewModel = viewModel
-            }
+            self.presenting?.presentingViewModel = viewModel
         }
     }
 }

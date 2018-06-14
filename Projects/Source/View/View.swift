@@ -1,12 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewBase> {
-    public override func initProperties() {
-        super.initProperties()
-        self.toolbarHidden = false
-    }
-    
+public class View:Shared.View<Interactor, Presenter, Projects.ViewModel, ViewBase> {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -26,15 +21,15 @@ public class View:Shared.View<Interactor, Presenter, ViewBase> {
     }
     
     @objc func selectorOpen(button:UIBarButtonItem) {
-        self.presenter.openProject()
+//        self.presenter.openProject()
     }
     
     @objc func selectorAddProject(button:UIBarButtonItem) {
-        self.presenter.addProject()
+//        self.presenter.addProject()
     }
     
     @objc func selectorRename(button:UIBarButtonItem) {
-        self.presenter.renameProject()
+//        self.presenter.renameProject()
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {
@@ -50,12 +45,13 @@ public class View:Shared.View<Interactor, Presenter, ViewBase> {
     }
     
     private func hookDelegates() {
-        self.presenter.list.view = self.content.viewList
+        self.content.viewList.delegate = self.presenter
+        self.content.viewList.dataSource = self.presenter
     }
     
     public override func viewModelUpdated() {
-        self.content.viewList.isHidden = self.presenter.viewModel.listHidden
-        self.content.viewEmpty.isHidden = self.presenter.viewModel.emptyHidden
-        self.navigationController?.setToolbarHidden(self.presenter.viewModel.toolbarHidden, animated:true)
+        self.content.viewList.isHidden = self.viewModel.listHidden
+        self.content.viewEmpty.isHidden = self.viewModel.emptyHidden
+        self.navigationController?.setToolbarHidden(self.viewModel.toolbarHidden, animated:true)
     }
 }
