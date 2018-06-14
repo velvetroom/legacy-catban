@@ -2,27 +2,22 @@ import XCTest
 import Board
 @testable import Projects
 
-class TestViewModelLoader:XCTestCase {
-    private var loader:ViewModelFactory!
+class TestViewModelFactory:XCTestCase {
     private var board:MockBoardProjectsProtocol!
     
     override func setUp() {
         super.setUp()
-        self.loader = ViewModelFactory()
         self.board = MockBoardProjectsProtocol()
-        self.loader.board = self.board
     }
     
-    func testNotRetainingBoard() {
-        self.loader.board = MockBoardProjectsProtocol()
-        XCTAssertNil(self.loader.board, "Retains")
-    }
-    
-    func testLoadViewModelWithProjects() {
+    func testViewModelWithProjects() {
         self.board.projects.append(ProjectFactory.newProject())
-        self.loader.load()
-        let viewModel:ViewModelList? = self.loader.viewModel as? ViewModelList
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
+        XCTAssertTrue(viewModel.emptyHidden, "Should be hidden")
+        XCTAssertEqual(viewModel.items.count, 1, "Should have 1 item")
+        XCTAssertFalse(viewModel.listHidden, "Should NOT be hidden")
+        XCTAssertFalse(viewModel.toolbarHidden, "Should NOT be hidden")
+        XCTAssertFalse(viewModel.navigationbarHidden, "Should NOT be hidden")
     }
     
     func testListItems() {
@@ -34,8 +29,7 @@ class TestViewModelLoader:XCTestCase {
         projectB.name = nameB
         self.board.projects = [projectA, projectB]
         
-        self.loader.load()
-        let viewModel:ViewModelList = self.loader.viewModel as! ViewModelList
+        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
         XCTAssertEqual(viewModel.items.count, 2, "Invalid items")
         XCTAssertEqual(viewModel.items[0].name, nameA, "Invalid value")
         XCTAssertEqual(viewModel.items[0].identifier, projectA.identifier, "Invalid value")
@@ -43,10 +37,13 @@ class TestViewModelLoader:XCTestCase {
         XCTAssertEqual(viewModel.items[1].identifier, projectB.identifier, "Invalid value")
     }
     
-    func testNoItems() {
-        self.loader.load()
-        let viewModel:ViewModelEmpty? = self.loader.viewModel as? ViewModelEmpty
-        XCTAssertNotNil(viewModel, "Invalid view model type")
+    func testViewModelWithNoItems() {
+        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
+        XCTAssertFalse(viewModel.emptyHidden, "Should NOT be hidden")
+        XCTAssertTrue(viewModel.items.isEmpty, "Should be empty")
+        XCTAssertTrue(viewModel.listHidden, "Should be hidden")
+        XCTAssertTrue(viewModel.toolbarHidden, "Should be hidden")
+        XCTAssertFalse(viewModel.navigationbarHidden, "Should NOT be hidden")
     }
     
     func testSortItems() {
@@ -58,8 +55,7 @@ class TestViewModelLoader:XCTestCase {
         projectC.name = "C"
         self.board.projects = [projectB, projectC, projectA]
         
-        self.loader.load()
-        let viewModel:ViewModelList = self.loader.viewModel as! ViewModelList
+        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
         XCTAssertEqual(viewModel.items[0].identifier, projectA.identifier, "Invalid order")
         XCTAssertEqual(viewModel.items[1].identifier, projectB.identifier, "Invalid order")
         XCTAssertEqual(viewModel.items[2].identifier, projectC.identifier, "Invalid order")

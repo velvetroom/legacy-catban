@@ -1,5 +1,5 @@
 import Foundation
 
 protocol StateProtocol {
-    var selected:IndexPath { get }
+    func selectCurrentOn(view:ViewList)
 }

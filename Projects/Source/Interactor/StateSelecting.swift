@@ -1,15 +1,16 @@
-import Foundation
+import UIKit
+import Board
 
 class StateSelecting:StateProtocol {
-    var selected:IndexPath
-    var index:Int {
-        didSet {
-            self.selected = IndexPath(item:self.index, section:0)
-        }
-    }
+    weak var project:ProjectProtocol!
+    var index:Int
     
     init() {
         self.index = 0
-        self.selected = IndexPath(item:0, section:0)
+    }
+    
+    func selectCurrentOn(view: ViewList) {
+        view.selectItem(at:IndexPath(item:self.index, section:0), animated:true,
+                        scrollPosition:UICollectionViewScrollPosition.centeredVertically)
     }
 }

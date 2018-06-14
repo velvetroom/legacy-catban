@@ -8,7 +8,8 @@ extension Presenter:UICollectionViewDataSource {
     public func collectionView(_ view:UICollectionView, cellForItemAt index:IndexPath) -> UICollectionViewCell {
         let cell:ViewListCell = view.dequeueReusableCell(withReuseIdentifier:ViewConstants.ListItem.identifier,
                                                          for:index) as! ViewListCell
-        self.configure(view:cell, with:self.viewModel.items[index.item])
+        let item:ViewModelItem = self.viewModel.items[index.item]
+        self.configure(view:cell, with:item)
         return cell
     }
     

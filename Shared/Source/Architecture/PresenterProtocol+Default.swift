@@ -4,8 +4,8 @@ public extension PresenterProtocol {
     var viewModel:ViewModel {
         get {
             guard
-                let viewModel:ViewModel = self.presenting?.presentingViewModel as? Self.ViewModel
-                else { return ViewModel() }
+                let viewModel:ViewModel = self.presenting?.presentingViewModel as? ViewModel
+            else { return ViewModel() }
             return viewModel
         }
         

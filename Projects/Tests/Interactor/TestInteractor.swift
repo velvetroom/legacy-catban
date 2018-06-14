@@ -29,30 +29,12 @@ class TestInteractor:XCTestCase {
         XCTAssertTrue(transitioned, "Failed")
     }
     
-    func testUpdateProjectReloadsPresenter() {
-        var updated:Bool = false
-        let presenter:MockPresenter = MockPresenter()
-        self.interactor.presenter = presenter
-        presenter.onShouldUpdate = { updated = true }
-        self.interactor.update(project:String(), with:String())
-        XCTAssertTrue(updated, "Not updated")
-    }
-    
     func testDeleteRemovesProject() {
         var removed:Bool = false
         self.interactor.board = board
         self.board.onRemoveProject = { removed = true }
         self.interactor.deleteProjectWith(identifier:String())
         XCTAssertTrue(removed, "Not removed")
-    }
-    
-    func testDeleteProjectReloadsPresenter() {
-        var updated:Bool = false
-        let presenter:MockPresenter = MockPresenter()
-        self.interactor.presenter = presenter
-        presenter.onShouldUpdate = { updated = true }
-        self.interactor.deleteProjectWith(identifier:String())
-        XCTAssertTrue(updated, "Not updated")
     }
     
     func testDeleteCallsRepository() {

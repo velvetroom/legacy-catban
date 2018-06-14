@@ -8,27 +8,16 @@ extension Presenter {
         }
     }
     
-    func selectItemWith(identifier:String) {
-        let items:[ViewModelItem] = self.viewModel.items
-        for index:Int in 0 ..< items.count {
-            if items[index].identifier == identifier {
-                self.interactor.stateSelecting(index:index)
-                break
-            }
-        }
-        self.selectAnimating()
-    }
-    
     func selectFirstItem() {
         guard
-            self.viewModel.items.isEmpty == false
+            self.viewModel.items.isEmpty == false,
+            let item:ViewModelItem = self.viewModel.items.first
         else { return }
-        self.interactor.stateSelecting(index:0)
-        self.selectAnimating()
+        self.interactor.stateSelecting(index:0, identifier:item.identifier)
+        self.selectCurrentOnView()
     }
     
-    private func selectAnimating() {
-        self.view.selectItem(at:self.interactor.state.selected, animated:true,
-                             scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+    private func selectCurrentOnView() {
+        self.interactor.state.selectCurrentOn(view:self.view)
     }
 }

@@ -1,3 +1,4 @@
 View_title="Boards";
 ViewNamer_title="Board name";
 ViewEmpty_label="You have no projects";
+Presenter_DeleteritemType="Project";

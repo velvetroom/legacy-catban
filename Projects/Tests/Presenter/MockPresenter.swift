@@ -6,12 +6,8 @@ class MockPresenter:Presenter {
     var onAddProject:(() -> Void)?
     var onRename:(() -> Void)?
     var onDelete:(() -> Void)?
-    var onShouldUpdate:(() -> Void)?
     
-    override func shouldUpdate() {
-        self.onShouldUpdate?()
-    }
-    
+    /*
     override func openProject() {
         self.onOpen?()
     }
@@ -22,7 +18,7 @@ class MockPresenter:Presenter {
     
     override func renameProject() {
         self.onRename?()
-    }
+    }*/
     
     override func delete() {
         self.onDelete?()

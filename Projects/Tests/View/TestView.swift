@@ -15,11 +15,6 @@ class TestView:XCTestCase {
         self.view.content.viewList = self.viewList
     }
     
-    func testInjectList() {
-        self.view.didLoad()
-        XCTAssertNotNil(self.presenter.list.view, "Not injected")
-    }
-    
     func testUpdateListLayoutOnOrientationChange() {
         var called:Bool = false
         self.viewList.onUpdateLayout = { called = true }

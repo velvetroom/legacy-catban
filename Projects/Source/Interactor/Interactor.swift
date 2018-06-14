@@ -3,7 +3,7 @@ import Shared
 import Board
 import Tools
 
-public class Interactor:InteractorBoardProtocol, NamerInteractorProtocol {
+public class Interactor:InteractorBoardProtocol, NamerInteractorProtocol, DeleterInteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public var board:BoardProjectsProtocol!
     var state:StateProtocol
@@ -13,6 +13,10 @@ public class Interactor:InteractorBoardProtocol, NamerInteractorProtocol {
     }
     
     public func namerFinishedWith(name:String) {
+        
+    }
+    
+    public func deleteConfirmed() {
         
     }
     
