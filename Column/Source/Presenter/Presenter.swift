@@ -2,6 +2,7 @@ import Foundation
 import Shared
 
 public class Presenter:PresenterProtocol {
+    public typealias ViewModel = Column.ViewModel
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Controller!
     var outlets:PresenterOutlets

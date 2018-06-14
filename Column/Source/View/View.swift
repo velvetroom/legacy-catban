@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, ViewScroll>, UITextFieldDelegate {
+public class View:Shared.View<Controller, Presenter, Column.ViewModel, ViewScroll>, UITextFieldDelegate {
     weak var viewScroll:ViewScroll!
     
     public override func loadView() {

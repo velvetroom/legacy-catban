@@ -1,10 +1,11 @@
 import Foundation
+import Shared
 
-struct ViewModel {
+public struct ViewModel:ViewModelProtocol {
     var view:ViewModelView
     var text:ViewModelText
     
-    init() {
+    public init() {
         self.view = ViewModelView()
         self.text = ViewModelText()
     }

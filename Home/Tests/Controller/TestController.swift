@@ -5,13 +5,13 @@ import Board
 @testable import Home
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
-        self.controller = Controller()
+        self.controller = Interactor()
     }
     
     func testPresenterAssignamentAfterLoad() {

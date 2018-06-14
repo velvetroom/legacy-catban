@@ -3,20 +3,19 @@ import Board
 import Shared
 
 public class Presenter:PresenterProtocol {
+    public typealias ViewModel = Home.ViewModel
     public weak var presenting:PresentingViewProtocol?
-    public var interactor:Controller!
+    public var interactor:Interactor!
     var canvas:CanvasProtocol
-    var outlets:PresenterOutlets
     
     public required init() {
         self.canvas = Configuration.canvasType.init()
-        self.outlets = PresenterOutlets()
     }
     
     func showMenu() {
         let menu:PresenterMenu = PresenterMenu()
-        menu.controller = self.interactor
-        menu.view = self.outlets.view
+        menu.interactor = self.interactor
+//        menu.view = self.presenting
         menu.show()
     }
     
@@ -27,7 +26,6 @@ public class Presenter:PresenterProtocol {
     }
     
     public func shouldUpdate() {
-        self.updateView()
         self.updateCanvas()
     }
     
@@ -42,10 +40,6 @@ public class Presenter:PresenterProtocol {
         canvas.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
         canvas.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
         canvas.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
-    }
-    
-    private func updateView() {
-        self.outlets.view?.title = self.interactor.project.name
     }
     
     private func updateCanvas() {

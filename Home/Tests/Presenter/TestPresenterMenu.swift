@@ -16,7 +16,7 @@ class TestPresenterMenu:XCTestCase {
     }
     
     func testNotRetainingController() {
-        self.presenter.controller = Controller()
+        self.presenter.controller = Interactor()
         XCTAssertNil(self.presenter.controller, "Retains")
     }
     

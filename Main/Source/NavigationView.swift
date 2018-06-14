@@ -18,8 +18,8 @@ class NavigationView:UINavigationController {
     
     func transitionTo(view:PresentingViewProtocol) {
         self.setViewControllers([view.viewController], animated:self.animated)
-        self.setNavigationBarHidden(view.navigationbarHidden, animated:true)
-        self.setToolbarHidden(view.toolbarHidden, animated:true)
+        self.setNavigationBarHidden(view.presentingViewModel.navigationbarHidden, animated:true)
+        self.setToolbarHidden(view.presentingViewModel.toolbarHidden, animated:true)
     }
     
     func pushTo(view:PresentingViewProtocol) {

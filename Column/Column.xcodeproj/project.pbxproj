@@ -34,6 +34,7 @@
 		DA2ACC8720B5A662008CD9F4 /* TestPresenterOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2ACC8620B5A662008CD9F4 /* TestPresenterOutlets.swift */; };
 		DA2ACC8920B5A971008CD9F4 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2ACC8820B5A971008CD9F4 /* MockPresenter.swift */; };
 		DA3BA75620C2D10E004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75520C2D10E004CB162 /* MockRepositoryProjectProtocol.swift */; };
+		DA44423120D2684F00587AF3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423020D2684F00587AF3 /* ViewModel.swift */; };
 		DA4B895020B6A8B600B67ED5 /* MockPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894F20B6A8B600B67ED5 /* MockPresenterDelete.swift */; };
 		DA636E7820B538000048BF41 /* TestViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7720B538000048BF41 /* TestViewBase.swift */; };
 		DA636E7A20B53FDE0048BF41 /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA636E7920B53FDE0048BF41 /* ViewInput.swift */; };
@@ -83,6 +84,7 @@
 		DA2ACC8620B5A662008CD9F4 /* TestPresenterOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterOutlets.swift; sourceTree = "<group>"; };
 		DA2ACC8820B5A971008CD9F4 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		DA3BA75520C2D10E004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DA44423020D2684F00587AF3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DA4B894F20B6A8B600B67ED5 /* MockPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDelete.swift; sourceTree = "<group>"; };
 		DA636E7720B538000048BF41 /* TestViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewBase.swift; sourceTree = "<group>"; };
 		DA636E7920B53FDE0048BF41 /* ViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				DA1F31CB20B444D90076ECAF /* Controller */,
 				DA1F31CC20B444E10076ECAF /* Presenter */,
+				DA44422F20D2683E00587AF3 /* ViewModel */,
 				DA1F31CD20B444EA0076ECAF /* View */,
 			);
 			path = Source;
@@ -245,6 +248,14 @@
 				DA1F31D720B446380076ECAF /* Board.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA44422F20D2683E00587AF3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA44423020D2684F00587AF3 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DA636E7B20B543090048BF41 /* Resources */ = {
@@ -372,6 +383,7 @@
 				DA039F6520B462B3000CE027 /* ViewBar.swift in Sources */,
 				DA1F31E320B448270076ECAF /* Presenter.swift in Sources */,
 				DA636E7A20B53FDE0048BF41 /* ViewInput.swift in Sources */,
+				DA44423120D2684F00587AF3 /* ViewModel.swift in Sources */,
 				DA039F6320B46101000CE027 /* ViewBase.swift in Sources */,
 				DA1F31D020B445060076ECAF /* Controller.swift in Sources */,
 				DA039F6120B45AB0000CE027 /* ViewConstants.swift in Sources */,

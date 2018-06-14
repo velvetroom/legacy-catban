@@ -2,7 +2,7 @@ import Foundation
 
 class PresenterMenu {
     weak var view:View!
-    weak var controller:Controller!
+    weak var interactor:Interactor!
     weak var viewMenu:ViewMenu?
 
     func show() {
@@ -18,13 +18,13 @@ class PresenterMenu {
     
     func openProjects() {
         self.closeWith { [weak self] in
-            self?.controller.openProjects()
+            self?.interactor.openProjects()
         }
     }
     
     func openAbout() {
         self.closeWith { [weak self] in
-            self?.controller.createNewCard()
+            self?.interactor.createNewCard()
         }
     }
     

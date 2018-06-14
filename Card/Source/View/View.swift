@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, UIView>, UITextViewDelegate {
+public class View:Shared.View<Controller, Presenter, Card.ViewModel, UIView>, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
