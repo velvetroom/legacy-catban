@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 public class NamerFactory {
-    public class func makeNamerWith<Interactor:NamerInteractorProtocol>(
+    public class func makeWith<Interactor:NamerInteractorProtocol>(
         interactor:Interactor, and viewModel:NamerViewModel) -> PresentingViewProtocol {
         let presenter:NamerPresenter<Interactor> = makePresenterWith(interactor:interactor)
         let view:NamerView<Interactor> = NamerView<Interactor>(presenter:presenter)

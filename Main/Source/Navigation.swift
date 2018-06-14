@@ -46,6 +46,11 @@ class Navigation:NavigationProtocol {
 //        self.transitionTo(view:view)
     }
     
+    func present(view:PresentingViewProtocol) {
+        view.transition = self
+        self.view.present(view:view)
+    }
+    
     func pushTo(view:PresentingViewProtocol) {
         view.transition = self
         self.view.pushTo(view:view)

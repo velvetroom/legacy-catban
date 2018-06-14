@@ -1,13 +1,12 @@
 import Foundation
+import Shared
 import Tools
 
 extension Presenter:PresenterDeleteDelegateProtocol {
     func delete() {
-        var presenter:PresenterDeleteProtocol = PresenterDeleteFactory.makePresenter()
-        presenter.delegate = self
-        presenter.presentingView = self.presenting
-//        presenter.itemName = self.list.selected.name
-        presenter.askConfirmation()
+        var viewModel:DeleterViewModel = DeleterViewModel()
+        let view:PresentingViewProtocol = DeleterFactory.makeWith(interactor:self.interactor, and:viewModel)
+        self.transition?.present(view:view)
     }
     
     public func deleteConfirm() {

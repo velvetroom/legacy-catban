@@ -22,6 +22,10 @@ class NavigationView:UINavigationController {
         self.setToolbarHidden(view.presentingViewModel.toolbarHidden, animated:true)
     }
     
+    func present(view:PresentingViewProtocol) {
+        self.present(view.viewController, animated:false, completion:nil)
+    }
+    
     func pushTo(view:PresentingViewProtocol) {
         self.pushViewController(view.viewController, animated:true)
     }
