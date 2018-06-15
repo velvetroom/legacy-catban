@@ -1,5 +1,3 @@
 import Foundation
 
-class StateDefault:StateProtocol {
-    
-}
+class StateDefault:StateProtocol { }

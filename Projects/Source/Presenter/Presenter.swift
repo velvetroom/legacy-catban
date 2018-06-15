@@ -23,7 +23,8 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     func rename() {
-        
+        self.interactor.stateRenameProjectWith(identifier:self.viewModel.items[self.selected].identifier)
+        self.interactor.openNamer()
     }
     
     func delete() {
