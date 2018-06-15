@@ -3,13 +3,13 @@ import Foundation
 struct NamerViewModelState {
     var message:String
     var saveEnabled:Bool
-    var statusValidVisible:Bool
-    var statusErrorVisible:Bool
+    var statusValidHidden:Bool
+    var statusErrorHidden:Bool
     
     init() {
         self.message = String()
         self.saveEnabled = false
-        self.statusValidVisible = false
-        self.statusErrorVisible = false
+        self.statusValidHidden = true
+        self.statusErrorHidden = true
     }
 }

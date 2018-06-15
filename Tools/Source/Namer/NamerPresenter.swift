@@ -49,8 +49,8 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
         var state:NamerViewModelState = NamerViewModelState()
         state.saveEnabled = true
         state.message = String()
-        state.statusValidVisible = true
-        state.statusErrorVisible = false
+        state.statusValidHidden = false
+        state.statusErrorHidden = true
         self.viewModel.state = state
     }
     
@@ -58,8 +58,8 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
         var state:NamerViewModelState = NamerViewModelState()
         state.saveEnabled = false
         state.message = error
-        state.statusValidVisible = false
-        state.statusErrorVisible = true
+        state.statusValidHidden = true
+        state.statusErrorHidden = false
         self.viewModel.state = state
     }
 }

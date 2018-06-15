@@ -1,10 +1,10 @@
 import UIKit
 
-class NamerViewBase:UIView {
+class NamerViewContent:UIView {
     weak var viewField:NamerViewField!
     weak var viewStatus:NamerViewStatus!
     weak var viewBorder:UIView!
-    weak var labelError:UILabel!
+    weak var labelMessage:UILabel!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -57,15 +57,15 @@ class NamerViewBase:UIView {
     }
     
     private func makerError() {
-        let labelError:UILabel = UILabel()
-        labelError.translatesAutoresizingMaskIntoConstraints = false
-        labelError.backgroundColor = UIColor.clear
-        labelError.isUserInteractionEnabled = false
-        labelError.font = UIFont.systemFont(ofSize:NamerConstants.Error.fontSize, weight:UIFont.Weight.regular)
-        labelError.numberOfLines = 0
-        labelError.textColor = UIColor(white:0, alpha:0.5)
-        self.labelError = labelError
-        self.addSubview(labelError)
+        let labelMessage:UILabel = UILabel()
+        labelMessage.translatesAutoresizingMaskIntoConstraints = false
+        labelMessage.backgroundColor = UIColor.clear
+        labelMessage.isUserInteractionEnabled = false
+        labelMessage.font = UIFont.systemFont(ofSize:NamerConstants.Error.fontSize, weight:UIFont.Weight.regular)
+        labelMessage.numberOfLines = 0
+        labelMessage.textColor = UIColor(white:0, alpha:0.5)
+        self.labelMessage = labelMessage
+        self.addSubview(labelMessage)
     }
     
     private func layoutField() {
@@ -91,10 +91,10 @@ class NamerViewBase:UIView {
     }
     
     private func layoutError() {
-        self.labelError.leftAnchor.constraint(equalTo:self.viewBorder.leftAnchor).isActive = true
-        self.labelError.rightAnchor.constraint(equalTo:self.viewStatus.rightAnchor).isActive = true
-        self.labelError.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
-        self.labelError.topAnchor.constraint(equalTo:self.viewBorder.bottomAnchor,
+        self.labelMessage.leftAnchor.constraint(equalTo:self.viewBorder.leftAnchor).isActive = true
+        self.labelMessage.rightAnchor.constraint(equalTo:self.viewStatus.rightAnchor).isActive = true
+        self.labelMessage.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+        self.labelMessage.topAnchor.constraint(equalTo:self.viewBorder.bottomAnchor,
                                              constant:NamerConstants.Error.top).isActive = true
     }
 }

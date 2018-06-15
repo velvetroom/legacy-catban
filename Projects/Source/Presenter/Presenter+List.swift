@@ -3,7 +3,7 @@ import UIKit
 extension Presenter {
     var view:ViewList {
         get {
-            let view:ViewBase = self.presenting!.viewController.view as! ViewBase
+            let view:ViewContent = self.presenting!.viewController.view as! ViewContent
             return view.viewList
         }
     }

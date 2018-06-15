@@ -1,24 +1,19 @@
 import UIKit
 import Shared
 
-class NamerViewStatus:UIImageView {
+class NamerViewStatus:UIView {
+    weak var statusValid:UIImageView!
+    weak var statusError:UIImageView!
+    
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
     required init?(coder:NSCoder) {
         return nil
-    }
-    
-    func statusValid() {
-        self.loadImage(name:NamerConstants.Status.assetValid)
-        self.isHidden = false
-    }
-    
-    func statusError() {
-        self.loadImage(name:NamerConstants.Status.assetError)
-        self.isHidden = false
     }
     
     private func configureView() {
@@ -28,7 +23,31 @@ class NamerViewStatus:UIImageView {
         self.isUserInteractionEnabled = false
     }
     
-    private func loadImage(name:String) {
-        self.image = UIImage(name:name, in:type(of:self))
+    private func makeOutlets() {
+        self.statusValid = self.makeImageWith(name:NamerConstants.Status.assetValid)
+        self.statusError = self.makeImageWith(name:NamerConstants.Status.assetError)
+    }
+    
+    private func layoutOutlets() {
+        self.layout(image:self.statusValid)
+        self.layout(image:self.statusError)
+    }
+    
+    private func makeImageWith(name:String) -> UIImageView {
+        let image:UIImageView = UIImageView()
+        image.clipsToBounds = true
+        image.contentMode = UIViewContentMode.center
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.isUserInteractionEnabled = false
+        image.image = UIImage(name:name, in:type(of:self))
+        self.addSubview(image)
+        return image
+    }
+    
+    private func layout(image:UIImageView) {
+        image.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        image.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        image.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        image.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

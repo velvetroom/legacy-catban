@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, Projects.ViewModel, ViewBase> {
+public class View:Shared.View<Interactor, Presenter, Projects.ViewModel, ViewContent> {
     public override func didLoad() {
         super.didLoad()
         self.configureView()

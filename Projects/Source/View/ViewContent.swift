@@ -1,6 +1,6 @@
 import UIKit
 
-public class ViewBase:UIView {
+public class ViewContent:UIView {
     weak var viewList:ViewList!
     weak var viewEmpty:ViewEmpty!
     
