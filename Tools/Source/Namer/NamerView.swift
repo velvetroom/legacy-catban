@@ -19,9 +19,6 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
         self.content.viewField.text = self.viewModel.currentName
         self.content.viewField.delegate = self.presenter
         self.content.viewStatus.isHidden = true
-        self.presenter.viewStatus = self.content.viewStatus
-        self.presenter.labelError = self.content.labelError
-        self.presenter.buttonSave = self.navigationItem.rightBarButtonItem
     }
     
     private func configureNavigationItem() {
@@ -39,6 +36,7 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
     }
     
     @objc private func selectorCancel(button:UIBarButtonItem) {
+        self.presenter.cancel()
         self.closeNamer()
     }
     

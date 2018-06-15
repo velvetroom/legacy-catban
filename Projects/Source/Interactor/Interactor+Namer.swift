@@ -6,6 +6,10 @@ extension Interactor:NamerInteractorProtocol {
         
     }
     
+    public func namerCancelled() {
+        
+    }
+    
     func openNamer() {
         self.state.openNamer(interactor:self)
     }

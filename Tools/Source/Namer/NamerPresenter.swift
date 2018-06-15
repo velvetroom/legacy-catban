@@ -4,9 +4,6 @@ import Shared
 class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProtocol, UITextFieldDelegate {
     typealias ViewModel = NamerViewModel
     weak var presenting:PresentingViewProtocol?
-    weak var viewStatus:NamerViewStatus?
-    weak var labelError:UILabel?
-    weak var buttonSave:UIBarButtonItem?
     var interactor:Interactor!
     
     required override init() {
@@ -17,8 +14,8 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
         self.interactor.namerFinishedWith(name:name)
     }
     
-    func didAppear() {
-        self.buttonSave?.isEnabled = false
+    func cancel() {
+        self.interactor.namerCancelled()
     }
     
     func textField(_ textField:UITextField,
@@ -49,14 +46,20 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
     }
     
     private func nameValid() {
-        self.buttonSave?.isEnabled = true
-        self.labelError?.text = nil
-        self.viewStatus?.statusValid()
+        var state:NamerViewModelState = NamerViewModelState()
+        state.saveEnabled = true
+        state.message = String()
+        state.statusValidVisible = true
+        state.statusErrorVisible = false
+        self.viewModel.state = state
     }
     
     private func nameInvalidWith(error:String) {
-        self.buttonSave?.isEnabled = false
-        self.labelError?.text = error
-        self.viewStatus?.statusError()
+        var state:NamerViewModelState = NamerViewModelState()
+        state.saveEnabled = false
+        state.message = error
+        state.statusValidVisible = false
+        state.statusErrorVisible = true
+        self.viewModel.state = state
     }
 }
