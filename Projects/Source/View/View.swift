@@ -29,7 +29,7 @@ public class View:Shared.View<Interactor, Presenter, Projects.ViewModel, ViewBas
     }
     
     @objc func selectorRename(button:UIBarButtonItem) {
-//        self.presenter.renameProject()
+        self.presenter.rename()
     }
     
     @objc func selectorDelete(button:UIBarButtonItem) {

@@ -15,10 +15,10 @@ class MockPresenter:Presenter {
     override func addProject() {
         self.onAddProject?()
     }
-    
-    override func renameProject() {
+    */
+    override func rename() {
         self.onRename?()
-    }*/
+    }
     
     override func delete() {
         self.onDelete?()

@@ -29,10 +29,11 @@
 		DA44422B20D250FC00587AF3 /* Presenter+CollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */; };
 		DA44423320D26CBB00587AF3 /* StateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423220D26CBB00587AF3 /* StateProtocol.swift */; };
 		DA44423520D26CE500587AF3 /* StateDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423420D26CE500587AF3 /* StateDefault.swift */; };
-		DA44423720D26CFE00587AF3 /* StateSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423620D26CFE00587AF3 /* StateSelecting.swift */; };
 		DA44423920D26D1F00587AF3 /* StateRename.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423820D26D1F00587AF3 /* StateRename.swift */; };
 		DA44423B20D26D4F00587AF3 /* StateAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423A20D26D4F00587AF3 /* StateAdd.swift */; };
 		DA44423D20D26EA000587AF3 /* Interactor+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44423C20D26EA000587AF3 /* Interactor+State.swift */; };
+		DA4571F620D38A340066764B /* TestInteractor_States.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571F520D38A340066764B /* TestInteractor_States.swift */; };
+		DA4571F820D38DA90066764B /* TestStateRename.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571F720D38DA90066764B /* TestStateRename.swift */; };
 		DA4BD76420CA542C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76320CA542C003257FA /* Tools.framework */; };
 		DA62C39420D2A0C800085759 /* StateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62C39320D2A0C800085759 /* StateProtocol+Default.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
@@ -87,10 +88,11 @@
 		DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+CollectionDatasource.swift"; sourceTree = "<group>"; };
 		DA44423220D26CBB00587AF3 /* StateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProtocol.swift; sourceTree = "<group>"; };
 		DA44423420D26CE500587AF3 /* StateDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDefault.swift; sourceTree = "<group>"; };
-		DA44423620D26CFE00587AF3 /* StateSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSelecting.swift; sourceTree = "<group>"; };
 		DA44423820D26D1F00587AF3 /* StateRename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRename.swift; sourceTree = "<group>"; };
 		DA44423A20D26D4F00587AF3 /* StateAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAdd.swift; sourceTree = "<group>"; };
 		DA44423C20D26EA000587AF3 /* Interactor+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+State.swift"; sourceTree = "<group>"; };
+		DA4571F520D38A340066764B /* TestInteractor_States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_States.swift; sourceTree = "<group>"; };
+		DA4571F720D38DA90066764B /* TestStateRename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStateRename.swift; sourceTree = "<group>"; };
 		DA4BD76320CA542C003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA62C39320D2A0C800085759 /* StateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,7 +179,6 @@
 				DA44423220D26CBB00587AF3 /* StateProtocol.swift */,
 				DA62C39320D2A0C800085759 /* StateProtocol+Default.swift */,
 				DA44423420D26CE500587AF3 /* StateDefault.swift */,
-				DA44423620D26CFE00587AF3 /* StateSelecting.swift */,
 				DA44423820D26D1F00587AF3 /* StateRename.swift */,
 				DA44423A20D26D4F00587AF3 /* StateAdd.swift */,
 			);
@@ -297,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				DAF88C3120D100CC0048FFC5 /* TestInteractor.swift */,
+				DA4571F520D38A340066764B /* TestInteractor_States.swift */,
+				DA4571F720D38DA90066764B /* TestStateRename.swift */,
 				DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */,
 				DAE21CB620B89A0900ABDB55 /* MockBoardProjectsProtocol.swift */,
 				DA3BA75120C2C383004CB162 /* MockRepositoryProjectProtocol.swift */,
@@ -421,7 +424,6 @@
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
-				DA44423720D26CFE00587AF3 /* StateSelecting.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
 				DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */,
@@ -451,7 +453,9 @@
 				DA04DEAE20B9717A00228ABB /* TestView.swift in Sources */,
 				DAD5F07120BBCBD300CEC10A /* TestViewModelFactory.swift in Sources */,
 				DA9E471620D16FF200CC3693 /* MockProjectManagedProtocol.swift in Sources */,
+				DA4571F620D38A340066764B /* TestInteractor_States.swift in Sources */,
 				DAE21CB720B89A0900ABDB55 /* MockBoardProjectsProtocol.swift in Sources */,
+				DA4571F820D38DA90066764B /* TestStateRename.swift in Sources */,
 				DA435A8520BAD1EF000C2E56 /* TestViewImages.swift in Sources */,
 				DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */,
 				DAF88C3220D100CC0048FFC5 /* TestInteractor.swift in Sources */,

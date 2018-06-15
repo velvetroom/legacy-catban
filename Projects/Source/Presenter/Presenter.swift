@@ -22,6 +22,10 @@ public class Presenter:NSObject, PresenterProtocol {
         self.viewModel = ViewModelFactory.makeWith(board:self.interactor.board)
     }
     
+    func rename() {
+        
+    }
+    
     func delete() {
         var viewModel:DeleterViewModel = DeleterViewModel()
         viewModel.itemType = String.localized(key:"Presenter_DeleteritemType", in:type(of:self))
