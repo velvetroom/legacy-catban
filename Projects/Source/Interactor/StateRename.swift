@@ -13,4 +13,9 @@ class StateRename:StateProtocol {
         let namer:PresentingViewProtocol = NamerFactory.makeWith(interactor:interactor, and:viewModel)
         interactor.presenter?.transition?.pushTo(view:namer)
     }
+    
+    func namerFinishedWith(name:String, interactor:Interactor) {
+        self.project.name = name
+        interactor.updated(project:self.project)
+    }
 }

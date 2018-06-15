@@ -15,10 +15,10 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     public func didLoad() {
-        self.updateViewModel()
+        self.shouldUpdate()
     }
     
-    func updateViewModel() {
+    public func shouldUpdate() {
         self.viewModel = ViewModelFactory.makeWith(board:self.interactor.board)
     }
     

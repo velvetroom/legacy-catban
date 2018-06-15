@@ -49,7 +49,7 @@ class TestInteractor:XCTestCase {
         var called:Bool = false
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         MockRepositoryProjectProtocol.onSave = { called = true }
-        self.interactor.update(project:String(), with:String())
+        self.interactor.updated(project:self.project)
         XCTAssertTrue(called, "Failed to save")
     }
     

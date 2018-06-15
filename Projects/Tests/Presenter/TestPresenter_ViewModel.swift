@@ -15,12 +15,6 @@ class TestPresenter_ViewModel:XCTestCase {
         self.presenter.interactor.board = self.board
     }
     
-    func testNotRetainingView() {
-        let presenter:Presenter = self.presenter
-        presenter.presenting = View()
-        XCTAssertNil(presenter.presenting, "Retains")
-    }
-    
     func testShouldUpdateRefreshesViewModelWithProjects() {
         self.board.projects.append(ProjectFactory.newProject())
         self.presenter.shouldUpdate()

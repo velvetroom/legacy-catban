@@ -48,4 +48,11 @@ class TestInteractor_States:XCTestCase {
         self.view.selectorRename(button:UIBarButtonItem())
         XCTAssertTrue(transitioned, "No trasition")
     }
+    
+    func testNamerCancelledChangesToDefault() {
+        self.interactor.state = StateRename()
+        self.interactor.namerCancelled()
+        let state:StateDefault? = self.interactor.state as? StateDefault
+        XCTAssertNotNil(state, "Invalid state")
+    }
 }

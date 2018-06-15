@@ -13,4 +13,16 @@ class TestStateRename:XCTestCase {
         self.state.project = MockProjectManagedProtocol()
         XCTAssertNil(self.state.project, "Retains")
     }
+    
+    func testNamerFinishedUpdatesProject() {
+        var called:Bool = false
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let interactor:MockInteractor = MockInteractor()
+        let name:String = "lorem ipsum"
+        interactor.state = self.state
+        self.state.project = project
+        interactor.onUpdated = { called = true }
+        interactor.namerFinishedWith(name:name)
+        XCTAssertTrue(called, "State not called")
+    }
 }
