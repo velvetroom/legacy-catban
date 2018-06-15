@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
+		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424320D27F0700587AF3 /* DeleterFactory.swift */; };
 		DA44424620D27F4100587AF3 /* DeleterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424520D27F4100587AF3 /* DeleterViewModel.swift */; };
 		DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424720D27F9A00587AF3 /* DeleterInteractorProtocol.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
+		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA44424320D27F0700587AF3 /* DeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterFactory.swift; sourceTree = "<group>"; };
 		DA44424520D27F4100587AF3 /* DeleterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewModel.swift; sourceTree = "<group>"; };
 		DA44424720D27F9A00587AF3 /* DeleterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA13EF4420D3CB7400475A16 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		DA44424220D27EF400587AF3 /* Deleter */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +211,7 @@
 		DA4BD74820CA4F33003257FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DA13EF4420D3CB7400475A16 /* Shared */,
 				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
 				DA4BD74C20CA4F33003257FA /* Namer */,
 			);
@@ -217,6 +230,7 @@
 		DA4BD74C20CA4F33003257FA /* Namer */ = {
 			isa = PBXGroup;
 			children = (
+				DA13EF4220D3CA2A00475A16 /* TestNamer.swift */,
 				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
 				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
@@ -424,6 +438,8 @@
 				DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */,
 				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
 				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
+				DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */,
+				DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */,
 				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
 				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
 			);

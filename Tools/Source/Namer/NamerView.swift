@@ -23,6 +23,16 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
         self.content.viewStatus.statusValid.isHidden = self.viewModel.state.statusValidHidden
     }
     
+    @objc func selectorSave(button:UIBarButtonItem) {
+        self.presenter.saveWith(name:self.content.viewField.text!)
+        self.closeNamer()
+    }
+    
+    @objc func selectorCancel(button:UIBarButtonItem) {
+        self.presenter.cancel()
+        self.closeNamer()
+    }
+    
     private func configureView() {
         self.content.viewField.delegate = self.presenter
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -36,16 +46,6 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
     private func initialViewModel() {
         self.title = self.viewModel.title
         self.content.viewField.text = self.viewModel.currentName
-    }
-    
-    @objc private func selectorSave(button:UIBarButtonItem) {
-        self.presenter.saveWith(name:self.content.viewField.text!)
-        self.closeNamer()
-    }
-    
-    @objc private func selectorCancel(button:UIBarButtonItem) {
-        self.presenter.cancel()
-        self.closeNamer()
     }
     
     private func closeNamer() {

@@ -2,7 +2,6 @@ import XCTest
 @testable import Tools
 
 class TestNamerView:XCTestCase {
-    private var interactor:MockNamerInteractorProtocol!
     private var view:NamerView<MockNamerInteractorProtocol>!
     
     override func setUp() {
