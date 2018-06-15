@@ -6,6 +6,8 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
     override func didLoad() {
         super.didLoad()
         self.configureView()
+        self.initialViewModel()
+        self.viewModelUpdated()
     }
     
     override func didAppear() {
@@ -15,9 +17,7 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
     
     override func viewModelUpdated() {
         super.viewModelUpdated()
-        self.title = self.viewModel.title
         self.navigationItem.rightBarButtonItem?.isEnabled = self.viewModel.state.saveEnabled
-        self.content.viewField.text = self.viewModel.currentName
         self.content.labelMessage.text = self.viewModel.state.message
         self.content.viewStatus.statusError.isHidden = self.viewModel.state.statusErrorHidden
         self.content.viewStatus.statusValid.isHidden = self.viewModel.state.statusValidHidden
@@ -31,6 +31,11 @@ class NamerView<Interactor:NamerInteractorProtocol>:View
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
             action:#selector(self.selectorSave(button:)))
+    }
+    
+    private func initialViewModel() {
+        self.title = self.viewModel.title
+        self.content.viewField.text = self.viewModel.currentName
     }
     
     @objc private func selectorSave(button:UIBarButtonItem) {

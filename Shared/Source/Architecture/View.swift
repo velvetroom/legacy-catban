@@ -41,6 +41,7 @@ PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Pr
         self.viewModel = ViewModel()
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
+        self.presenter.presenting = self
         self.initProperties()
     }
     
