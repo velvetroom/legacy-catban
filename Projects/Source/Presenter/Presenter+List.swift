@@ -10,14 +10,14 @@ extension Presenter {
     
     func selectFirstItem() {
         guard
-            self.viewModel.items.isEmpty == false,
-            let item:ViewModelItem = self.viewModel.items.first
+            self.viewModel.items.isEmpty == false
         else { return }
-        self.interactor.stateSelecting(index:0, identifier:item.identifier)
-        self.selectCurrentOnView()
+        self.selected = 0
+        self.selectCurrent()
     }
     
-    private func selectCurrentOnView() {
-        self.interactor.state.selectCurrentOn(view:self.view)
+    private func selectCurrent() {
+        self.view.selectItem(at:IndexPath(item:self.selected, section:0), animated:true,
+                             scrollPosition:UICollectionViewScrollPosition.centeredVertically)
     }
 }

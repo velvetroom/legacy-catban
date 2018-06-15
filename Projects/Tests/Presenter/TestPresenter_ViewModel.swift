@@ -21,11 +21,6 @@ class TestPresenter_ViewModel:XCTestCase {
         XCTAssertNil(presenter.presenting, "Retains")
     }
     
-    func testShouldUpdateRefreshesViewModelWithNoProjects() {
-        self.presenter.shouldUpdate()
-        XCTAssertTrue(self.view.content.viewList.isHidden, "Should be hidden")
-    }
-    
     func testShouldUpdateRefreshesViewModelWithProjects() {
         self.board.projects.append(ProjectFactory.newProject())
         self.presenter.shouldUpdate()

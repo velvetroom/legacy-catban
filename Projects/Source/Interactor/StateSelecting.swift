@@ -10,7 +10,6 @@ class StateSelecting:StateProtocol {
     }
     
     func selectCurrentOn(view: ViewList) {
-        view.selectItem(at:IndexPath(item:self.index, section:0), animated:true,
-                        scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        
     }
 }

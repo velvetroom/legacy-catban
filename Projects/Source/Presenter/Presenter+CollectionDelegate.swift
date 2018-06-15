@@ -38,8 +38,7 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
         guard
             let indexPath:IndexPath = self.centerIndexPath
         else { return }
-        let item:ViewModelItem = self.viewModel.items[indexPath.item]
-        self.interactor.stateSelecting(index:indexPath.item, identifier:item.identifier)
+        self.selected = indexPath.item
         self.view.selectItem(at:indexPath, animated:false, scrollPosition:UICollectionViewScrollPosition())
     }
     
@@ -69,8 +68,7 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
     }
     
     public func collectionView(_:UICollectionView, didSelectItemAt index:IndexPath) {
-        let item:ViewModelItem = self.viewModel.items[index.item]
-        self.interactor.stateSelecting(index:index.item, identifier:item.identifier)
+        self.selected = index.item
         self.view.trackingScroll = false
         self.view.scrollToItem(at:index, at:UICollectionViewScrollPosition.centeredVertically, animated:true)
     }

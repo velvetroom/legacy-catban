@@ -7,8 +7,10 @@ public class Presenter:NSObject, PresenterProtocol {
     public typealias ViewModel = Projects.ViewModel
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Interactor!
+    var selected:Int
     
     public required override init() {
+        self.selected = 0
         super.init()
     }
     
