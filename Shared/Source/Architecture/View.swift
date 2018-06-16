@@ -6,21 +6,6 @@ PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Pr
     open var presenter:Presenter
     open var content:Content
     
-    open var viewModel:ViewModel {
-        didSet {
-            self.viewModelUpdated()
-        }
-    }
-    
-    public var presentingViewModel:ViewModelProtocol {
-        get {
-            return self.viewModel
-        }
-        set(newValue) {
-            self.viewModel = newValue as! ViewModel
-        }
-    }
-    
     open var interactor:InteractorProtocol! {
         get {
             return self.presenter.interactor
@@ -29,7 +14,6 @@ PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Pr
     
     public required init() {
         self.content = Content()
-        self.viewModel = ViewModel()
         self.presenter = PresenterFactory.makePresenter()
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self
@@ -38,7 +22,6 @@ PresentingViewProtocol where Interactor == Presenter.Interactor, ViewModel == Pr
     
     public init(presenter:Presenter) {
         self.content = Content()
-        self.viewModel = ViewModel()
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
         self.presenter.presenting = self

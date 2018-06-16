@@ -10,4 +10,5 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func pushTo(view:PresentingViewProtocol) { }
     func pop() { }
+    func present(view:PresentingViewProtocol) { }
 }

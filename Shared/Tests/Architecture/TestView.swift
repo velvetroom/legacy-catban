@@ -77,6 +77,7 @@ class TestView:XCTestCase {
     
     func testInitWithPresenterNotInjectingViewModel() {
         let presenter:MockPresenterProtocol = PresenterFactory.makePresenter()
+        presenter.viewModel = nil
         let _:MockView = MockView(presenter:presenter)
         XCTAssertNil(presenter.viewModel, "Injecting/replacing view model on presenter")
     }
