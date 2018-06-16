@@ -34,6 +34,8 @@
 		DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */; };
 		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
+		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
+		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
 		DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */; };
 		DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */; };
 		DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */; };
@@ -94,6 +96,8 @@
 		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
+		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
 		DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteFactory.swift; sourceTree = "<group>"; };
 		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
 		DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
@@ -148,11 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				DA44424320D27F0700587AF3 /* DeleterFactory.swift */,
+				DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */,
 				DA44424720D27F9A00587AF3 /* DeleterInteractorProtocol.swift */,
 				DA44424920D27FE100587AF3 /* DeleterPresenter.swift */,
 				DA44424520D27F4100587AF3 /* DeleterViewModel.swift */,
 				DA44424B20D2807900587AF3 /* DeleterView.swift */,
 				DA44424D20D280B500587AF3 /* DeleterViewContent.swift */,
+				DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */,
 			);
 			path = Deleter;
 			sourceTree = "<group>";
@@ -411,9 +417,11 @@
 				DA44424C20D2807900587AF3 /* DeleterView.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */,
 				DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */,
+				DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */,
 				DA44424A20D27FE100587AF3 /* DeleterPresenter.swift in Sources */,
 				DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */,
 				DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */,
+				DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */,
 				DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */,
 				DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */,
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
