@@ -1,7 +1,7 @@
 import Foundation
 
 public struct ViewModelNavigation:ViewModelPropertyProtocol {
-    public weak var observer:ViewModelObserverProtocol?
+    public weak var observer:AnyObject?
     var toolbarHidden:Bool
     var navigationbarHidden:Bool
     
