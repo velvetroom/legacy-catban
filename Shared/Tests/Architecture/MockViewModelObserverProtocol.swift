@@ -4,7 +4,8 @@ import Foundation
 class MockViewModelObserverProtocol:ViewModelObserverProtocol {
     var onMutated:((String) -> Void)?
     
-    func mutated(viewModel:MockViewModelPropertyProtocol) {
+    func mutated(viewModel:ViewModelPropertyProtocol) {
+        let viewModel:MockViewModelPropertyProtocol = viewModel as! MockViewModelPropertyProtocol
         self.onMutated?(viewModel.name)
     }
 }

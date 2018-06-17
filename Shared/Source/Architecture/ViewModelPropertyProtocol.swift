@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol ViewModelPropertyProtocol {
-    var observer:AnyObject? { get set }
+    var observer:ViewModelObserverProtocol? { get set }
 }
