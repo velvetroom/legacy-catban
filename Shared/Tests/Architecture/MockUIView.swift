@@ -1,5 +1,3 @@
 import UIKit
 
-class MockUIView:UIView {
-    
-}
+class MockUIView:UIView { }
