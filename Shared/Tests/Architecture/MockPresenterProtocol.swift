@@ -8,9 +8,11 @@ class MockPresenterProtocol:PresenterProtocol {
     var onOrientationChanged:(() -> Void)?
     weak var presenting:PresentingViewProtocol?
     var interactor:MockInteractorProtocol!
-    var viewModel: MockViewModelProtocol!
+    var viewModel:ViewModel
     
-    required init() { }
+    required init() {
+        self.viewModel = ViewModel()
+    }
     
     func didLoad() {
         self.onDidLoad?()

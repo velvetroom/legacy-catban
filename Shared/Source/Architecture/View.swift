@@ -67,7 +67,6 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     open func willAppear() { }
     open func didAppear() { }
     open func orientationChanged() { }
-    open func viewModelUpdated() { }
     
     private func configureView() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always

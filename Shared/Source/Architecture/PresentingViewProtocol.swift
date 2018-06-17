@@ -5,5 +5,4 @@ public protocol PresentingViewProtocol:class {
     var interactor:InteractorProtocol! { get }
     
     init()
-    func viewModelUpdated()
 }
