@@ -13,7 +13,6 @@ class TestNamerPresenter:XCTestCase {
         self.interactor = MockNamerInteractorProtocol()
         self.presenter.interactor = self.interactor
         self.view.didLoad()
-        self.presenter.viewModel = NamerViewModel()
     }
     
     func testCallsInteractorOnSave() {
@@ -41,20 +40,24 @@ class TestNamerPresenter:XCTestCase {
     func testValidateNameWithError() {
         let _:Bool = self.presenter.textField(self.view.content.viewField, shouldChangeCharactersIn:NSMakeRange(0, 0),
                                               replacementString:String())
-        XCTAssertFalse(self.view.viewModel.state.saveEnabled, "Not validated")
-        XCTAssertFalse(self.view.viewModel.state.message.isEmpty, "Not validated")
-        XCTAssertTrue(self.view.viewModel.state.statusValidHidden, "Not validated")
-        XCTAssertFalse(self.view.viewModel.state.statusErrorHidden, "Not validated")
+        let viewModel:NamerViewModelState? = self.presenter.viewModel.property()
+        XCTAssertNotNil(viewModel, "Property not set")
+        XCTAssertFalse(viewModel!.saveEnabled, "Not validated")
+        XCTAssertFalse(viewModel!.message.isEmpty, "Not validated")
+        XCTAssertTrue(viewModel!.statusValidHidden, "Not validated")
+        XCTAssertFalse(viewModel!.statusErrorHidden, "Not validated")
     }
     
     func testValidateNameWithSuccess() {
         self.view.content.viewField.text = "lorem ipsum"
         let _:Bool = self.presenter.textField(self.view.content.viewField, shouldChangeCharactersIn:NSMakeRange(0, 0),
                                               replacementString:String())
-        XCTAssertTrue(self.view.viewModel.state.saveEnabled, "Not validated")
-        XCTAssertTrue(self.view.viewModel.state.message.isEmpty, "Not validated")
-        XCTAssertFalse(self.view.viewModel.state.statusValidHidden, "Not validated")
-        XCTAssertTrue(self.view.viewModel.state.statusErrorHidden, "Not validated")
+        let viewModel:NamerViewModelState? = self.presenter.viewModel.property()
+        XCTAssertNotNil(viewModel, "Property not set")
+        XCTAssertTrue(viewModel!.saveEnabled, "Not validated")
+        XCTAssertTrue(viewModel!.message.isEmpty, "Not validated")
+        XCTAssertFalse(viewModel!.statusValidHidden, "Not validated")
+        XCTAssertTrue(viewModel!.statusErrorHidden, "Not validated")
     }
     
 }

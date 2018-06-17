@@ -3,10 +3,10 @@ import Shared
 
 public class NamerFactory {
     public class func makeWith<Interactor:NamerInteractorProtocol>(
-        interactor:Interactor, and viewModel:NamerViewModel) -> PresentingViewProtocol {
+        interactor:Interactor, and viewModel:NamerViewModelContent) -> PresentingViewProtocol {
         let presenter:NamerPresenter<Interactor> = makePresenterWith(interactor:interactor)
         let view:NamerView<Interactor> = NamerView<Interactor>(presenter:presenter)
-        view.viewModel = viewModel
+        presenter.viewModel.update(property:viewModel)
         return view
     }
     

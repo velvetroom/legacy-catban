@@ -4,7 +4,7 @@ open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:UIViewC
 PresentingViewProtocol where Interactor == Presenter.Interactor {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
-    open var content:Content
+    open var content:Content!
     
     open var interactor:InteractorProtocol! {
         get {
@@ -13,19 +13,15 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     }
     
     public required init() {
-        self.content = Content()
         self.presenter = PresenterFactory.makePresenter()
         super.init(nibName:nil, bundle:nil)
-        self.presenter.presenting = self
-        self.initProperties()
+        self.postInit()
     }
     
     public init(presenter:Presenter) {
-        self.content = Content()
         self.presenter = presenter
         super.init(nibName:nil, bundle:nil)
-        self.presenter.presenting = self
-        self.initProperties()
+        self.postInit()
     }
     
     public required init?(coder:NSCoder) {
@@ -67,6 +63,13 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     open func willAppear() { }
     open func didAppear() { }
     open func orientationChanged() { }
+    
+    private func postInit() {
+        self.content = Content()
+        self.presenter.viewModel = ViewModel()
+        self.presenter.presenting = self
+        self.initProperties()
+    }
     
     private func configureView() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always

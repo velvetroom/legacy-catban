@@ -2,10 +2,10 @@ import Foundation
 
 public struct ViewModelNavigation:ViewModelPropertyProtocol {
     public weak var observer:ViewModelObserverProtocol?
-    var toolbarHidden:Bool
-    var navigationbarHidden:Bool
+    public var toolbarHidden:Bool
+    public var navigationbarHidden:Bool
     
-    init() {
+    public init() {
         self.toolbarHidden = true
         self.navigationbarHidden = false
     }

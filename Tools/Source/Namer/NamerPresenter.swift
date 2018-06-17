@@ -2,9 +2,9 @@ import UIKit
 import Shared
 
 class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProtocol, UITextFieldDelegate {
-    typealias ViewModel = NamerViewModel
     weak var presenting:PresentingViewProtocol?
     var interactor:Interactor!
+    var viewModel:ViewModel!
     
     required override init() {
         super.init()
@@ -51,7 +51,7 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
         state.message = String()
         state.statusValidHidden = false
         state.statusErrorHidden = true
-        self.viewModel.state = state
+        self.viewModel.update(property:state)
     }
     
     private func nameInvalidWith(error:String) {
@@ -60,6 +60,6 @@ class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProt
         state.message = error
         state.statusValidHidden = true
         state.statusErrorHidden = false
-        self.viewModel.state = state
+        self.viewModel.update(property:state)
     }
 }

@@ -2,9 +2,9 @@ import Foundation
 import Shared
 
 class DeleterPresenter<Interactor:DeleterInteractorProtocol>:PresenterProtocol {
-    typealias ViewModel = DeleterViewModel
     weak var presenting:PresentingViewProtocol?
     var interactor:Interactor!
+    var viewModel:ViewModel!
     
     required init() { }
     

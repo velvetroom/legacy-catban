@@ -4,9 +4,7 @@ import Shared
 public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Interactor!
-    public var viewModel:ViewModel
+    public var viewModel:ViewModel!
     
-    public required init() {
-        self.viewModel = ViewModel()
-    }
+    public required init() { }
 }

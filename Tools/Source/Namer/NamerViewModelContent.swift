@@ -1,14 +1,13 @@
 import UIKit
 import Shared
 
-public struct NamerViewModel:ViewModelProtocol {
+public struct NamerViewModelContent:ViewModelPropertyProtocol {
+    public weak var observer:ViewModelObserverProtocol?
     public var title:String
     public var currentName:String
-    var state:NamerViewModelState
     
     public init() {
         self.title = String()
         self.currentName = String()
-        self.state = NamerViewModelState()
     }
 }

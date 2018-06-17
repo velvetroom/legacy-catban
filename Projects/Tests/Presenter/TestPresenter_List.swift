@@ -14,9 +14,9 @@ class TestPresenter_List:XCTestCase {
         self.view = View()
         self.board = MockBoardProjectsProtocol()
         self.view.presenter.interactor.board = self.board
-        var itemA:ViewModelItem = ViewModelItem()
+        var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name
-        let itemB:ViewModelItem = ViewModelItem()
+        let itemB:ViewModelListItem = ViewModelListItem()
         self.view.content.viewList.frame = Constants.frame
         XCTAssertNotNil(self.view.view)
         self.view.presenter.viewModel.items = [itemA, itemB]

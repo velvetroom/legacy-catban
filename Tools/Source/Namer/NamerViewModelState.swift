@@ -1,6 +1,8 @@
 import Foundation
+import Shared
 
-struct NamerViewModelState {
+struct NamerViewModelState:ViewModelPropertyProtocol {
+    weak var observer:ViewModelObserverProtocol?
     var message:String
     var saveEnabled:Bool
     var statusValidHidden:Bool

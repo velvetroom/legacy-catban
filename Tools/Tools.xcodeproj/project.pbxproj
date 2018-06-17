@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA00028F20D68F3200C282A2 /* TestNamerViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00028E20D68F3200C282A2 /* TestNamerViewModelState.swift */; };
 		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424320D27F0700587AF3 /* DeleterFactory.swift */; };
@@ -34,6 +35,8 @@
 		DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */; };
 		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
+		DA4F1AC820D68AC500C0BB5C /* TestNamerViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AC720D68AC500C0BB5C /* TestNamerViewModelContent.swift */; };
+		DA4F1ACA20D68D7600C0BB5C /* MockViewModelObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AC920D68D7600C0BB5C /* MockViewModelObserverProtocol.swift */; };
 		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
 		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
 		DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */; };
@@ -45,7 +48,7 @@
 		DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */; };
 		DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */; };
 		DAED6D8520CF9CBD002AB9F9 /* NamerViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8420CF9CBD002AB9F9 /* NamerViewContent.swift */; };
-		DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */; };
+		DAED6D8720CF9D92002AB9F9 /* NamerViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8620CF9D92002AB9F9 /* NamerViewModelContent.swift */; };
 		DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */; };
 		DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C2B20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift */; };
 		DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */; };
@@ -68,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA00028E20D68F3200C282A2 /* TestNamerViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerViewModelState.swift; sourceTree = "<group>"; };
 		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA44424320D27F0700587AF3 /* DeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterFactory.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4F1AC720D68AC500C0BB5C /* TestNamerViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerViewModelContent.swift; sourceTree = "<group>"; };
+		DA4F1AC920D68D7600C0BB5C /* MockViewModelObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelObserverProtocol.swift; sourceTree = "<group>"; };
 		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
 		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
 		DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteFactory.swift; sourceTree = "<group>"; };
@@ -107,7 +113,7 @@
 		DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerView.swift; sourceTree = "<group>"; };
 		DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerInteractorProtocol.swift; sourceTree = "<group>"; };
 		DAED6D8420CF9CBD002AB9F9 /* NamerViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewContent.swift; sourceTree = "<group>"; };
-		DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewModel.swift; sourceTree = "<group>"; };
+		DAED6D8620CF9D92002AB9F9 /* NamerViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewModelContent.swift; sourceTree = "<group>"; };
 		DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerFactory.swift; sourceTree = "<group>"; };
 		DAF88C2B20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNamerInteractorProtocol.swift; sourceTree = "<group>"; };
 		DAF88C3920D1180E0048FFC5 /* NamerViewField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewField.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */,
+				DA4F1AC920D68D7600C0BB5C /* MockViewModelObserverProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -240,6 +247,8 @@
 				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
 				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
+				DA4F1AC720D68AC500C0BB5C /* TestNamerViewModelContent.swift */,
+				DA00028E20D68F3200C282A2 /* TestNamerViewModelState.swift */,
 				DAF88C4120D12F900048FFC5 /* TestNamerView.swift */,
 				DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */,
 				DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */,
@@ -276,7 +285,7 @@
 				DAF88C3D20D119810048FFC5 /* NamerConstants.swift */,
 				DAED6D8220CF9C77002AB9F9 /* NamerInteractorProtocol.swift */,
 				DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */,
-				DAED6D8620CF9D92002AB9F9 /* NamerViewModel.swift */,
+				DAED6D8620CF9D92002AB9F9 /* NamerViewModelContent.swift */,
 				DA4571FB20D397C10066764B /* NamerViewModelState.swift */,
 				DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */,
 				DAED6D8420CF9CBD002AB9F9 /* NamerViewContent.swift */,
@@ -422,7 +431,7 @@
 				DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */,
 				DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */,
 				DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */,
-				DAED6D8720CF9D92002AB9F9 /* NamerViewModel.swift in Sources */,
+				DAED6D8720CF9D92002AB9F9 /* NamerViewModelContent.swift in Sources */,
 				DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */,
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
@@ -445,6 +454,9 @@
 				DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */,
 				DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */,
 				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
+				DA00028F20D68F3200C282A2 /* TestNamerViewModelState.swift in Sources */,
+				DA4F1ACA20D68D7600C0BB5C /* MockViewModelObserverProtocol.swift in Sources */,
+				DA4F1AC820D68AC500C0BB5C /* TestNamerViewModelContent.swift in Sources */,
 				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
 				DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */,
 				DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */,

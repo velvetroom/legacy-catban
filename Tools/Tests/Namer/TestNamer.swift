@@ -10,7 +10,6 @@ class TestNamer:XCTestCase {
         super.setUp()
         self.view = NamerView<MockNamerInteractorProtocol>()
         self.transition = MockTransitionProtocol()
-        self.view.presenter.viewModel = NamerViewModel()
         self.interactor = self.view.presenter.interactor
         self.view.transition = self.transition
     }

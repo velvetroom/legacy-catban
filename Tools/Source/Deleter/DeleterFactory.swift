@@ -6,7 +6,7 @@ public class DeleterFactory {
         interactor:Interactor, and viewModel:DeleterViewModel) -> PresentingViewProtocol {
         let presenter:DeleterPresenter<Interactor> = makePresenterWith(interactor:interactor)
         let view:DeleterView<Interactor> = DeleterView<Interactor>(presenter:presenter)
-        view.viewModel = viewModel
+        presenter.viewModel.update(property:viewModel)
         return view
     }
     

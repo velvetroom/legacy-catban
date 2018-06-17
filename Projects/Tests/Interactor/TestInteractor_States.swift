@@ -20,7 +20,7 @@ class TestInteractor_States:XCTestCase {
         self.board.project = self.project
         self.interactor.board = self.board
         self.view.transition = self.transition
-        self.view.presenter.viewModel.items = [ViewModelItem()]
+        self.view.presenter.viewModel.items = [ViewModelListItem()]
         self.project.name = "Lorem ipsum"
     }
     
