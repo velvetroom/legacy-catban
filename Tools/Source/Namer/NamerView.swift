@@ -12,14 +12,6 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
         super.didAppear()
         self.content.viewField.becomeFirstResponder()
     }
-    /*
-    override func viewModelUpdated() {
-        super.viewModelUpdated()
-        self.navigationItem.rightBarButtonItem?.isEnabled = self.viewModel.state.saveEnabled
-        self.content.labelMessage.text = self.viewModel.state.message
-        self.content.viewStatus.statusError.isHidden = self.viewModel.state.statusErrorHidden
-        self.content.viewStatus.statusValid.isHidden = self.viewModel.state.statusValidHidden
-    }*/
     
     @objc func selectorSave(button:UIBarButtonItem) {
         self.presenter.saveWith(name:self.content.viewField.text!)
@@ -42,13 +34,33 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
     }
     
     private func configureObservers() {
-        
+        self.configureContentObserver()
+        self.configureStateObserver()
     }
-    /*
-    private func initialViewModel() {
-        self.title = self.viewModel.title
-        self.content.viewField.text = self.viewModel.currentName
-    }*/
+    
+    private func configureContentObserver() {
+        var viewModel:NamerViewModelContent = NamerViewModelContent()
+        viewModel.observing = self.updated
+        self.presenter.viewModel.update(property:viewModel)
+    }
+    
+    private func configureStateObserver() {
+        var viewModel:NamerViewModelState = NamerViewModelState()
+        viewModel.observing = self.updated
+        self.presenter.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:NamerViewModelContent) {
+        self.title = viewModel.title
+        self.content.viewField.text = viewModel.currentName
+    }
+    
+    private func updated(viewModel:NamerViewModelState) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = viewModel.saveEnabled
+        self.content.labelMessage.text = viewModel.message
+        self.content.viewStatus.statusError.isHidden = viewModel.statusErrorHidden
+        self.content.viewStatus.statusValid.isHidden = viewModel.statusValidHidden
+    }
     
     private func closeNamer() {
         self.content.viewField.resignFirstResponder()

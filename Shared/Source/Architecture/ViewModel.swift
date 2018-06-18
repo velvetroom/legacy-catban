@@ -15,7 +15,7 @@ open class ViewModel {
         property.notifyObserver()
     }
     
-    open func property<ViewModelProperty:ViewModelPropertyProtocol>() -> ViewModelProperty? {
+    open func property<ViewModelProperty:ViewModelPropertyProtocol>() -> ViewModelProperty! {
         let identifier:ObjectIdentifier = ObjectIdentifier(ViewModelProperty.self)
         return self.properties[identifier] as? ViewModelProperty
     }
