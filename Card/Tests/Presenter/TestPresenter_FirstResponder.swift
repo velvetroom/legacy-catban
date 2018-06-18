@@ -6,7 +6,7 @@ import Board
 class TestPresenter_FirstResponder:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockControllerProtocol!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var text:MockViewText!
     private var view:Shared.View!
     private var project:ProjectManagedProtocol!
@@ -16,7 +16,7 @@ class TestPresenter_FirstResponder:XCTestCase {
         super.setUp()
         self.presenter = Presenter()
         self.delegate = MockControllerProtocol()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.text = MockViewText()
         self.transition = MockTransitionProtocol()
         self.view = Shared.View()

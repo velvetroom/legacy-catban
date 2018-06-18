@@ -4,13 +4,13 @@ import XCTest
 class TestPresenter_Retains:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockControllerProtocol!
-    private var controller:Controller!
+    private var controller:Interactor!
     
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
         self.delegate = MockControllerProtocol()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.presenter.controller = self.controller
         self.presenter.delegate = self.delegate
     }

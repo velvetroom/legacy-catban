@@ -7,7 +7,7 @@ class TestPresenter:XCTestCase {
     private var presenter:Presenter!
     private var delegate:MockControllerProtocol!
     private var view:Shared.View!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var card:CardProtocol!
     private var column:ColumnProtocol!
     private struct Constants {
@@ -19,7 +19,7 @@ class TestPresenter:XCTestCase {
         self.presenter = Presenter()
         self.delegate = MockControllerProtocol()
         self.view = Shared.View()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.column = ColumnFactory.newColumn()
         self.card = CardFactory.newCard()
         self.card.container = self.column

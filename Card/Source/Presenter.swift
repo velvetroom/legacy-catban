@@ -3,9 +3,9 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public typealias ViewModel = Card.ViewModel
     public weak var presenting:PresentingViewProtocol?
-    public var interactor:Controller!
+    public var interactor:Interactor!
+    public var viewModel:ViewModel!
     var outlets:PresenterOutlets
     var presenterForKeyboard:PresenterForKeyboardProtocol
     

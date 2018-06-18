@@ -2,7 +2,7 @@ import Foundation
 import Shared
 import Board
 
-public class Controller:InteractorProtocol {
+public class Interactor:InteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public weak var card:CardProtocol!
     public var project:ProjectManagedProtocol!

@@ -4,7 +4,7 @@ import Shared
 @testable import Board
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var transition:MockTransitionProtocol!
     private var project:MockProjectManagedProtocol!
     private var card:CardProtocol!
@@ -13,7 +13,7 @@ class TestController:XCTestCase {
         super.setUp()
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.card = CardFactory.newCard()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.transition = MockTransitionProtocol()
         self.project = MockProjectManagedProtocol()
         self.controller.transiton = self.transition
