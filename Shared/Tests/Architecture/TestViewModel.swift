@@ -4,14 +4,11 @@ import XCTest
 class TestViewModel:XCTestCase {
     private var viewModel:ViewModel!
     private var property:MockViewModelPropertyProtocol!
-    private var observer:MockViewModelObserverProtocol!
     
     override func setUp() {
         super.setUp()
         self.viewModel = ViewModel()
         self.property = MockViewModelPropertyProtocol()
-        self.observer = MockViewModelObserverProtocol()
-        self.property.observer = self.observer
     }
     
     func testContainsViewModelNavigation() {
@@ -33,21 +30,22 @@ class TestViewModel:XCTestCase {
     func testNotifyObserver() {
         var notified:Bool = false
         var notifiedAfterCopy:Bool = false
-        
         let firstName:String = "hello world"
-        self.property.name = firstName
-        self.observer.onMutated = { (received:String) in
-            notified = true
-            XCTAssertEqual(firstName, received, "Invalid value")
+        let secondName:String = "lorem ipsum"
+        self.property.observing = { (viewModel:MockViewModelPropertyProtocol) in
+            if notified == false {
+                notified = true
+                XCTAssertEqual(firstName, viewModel.name, "Invalid value")
+            } else {
+                notifiedAfterCopy = true
+                XCTAssertEqual(secondName, viewModel.name, "Invalid value")
+            }
         }
+        
+        self.property.name = firstName
         self.viewModel.update(property:self.property)
         
-        let secondName:String = "lorem ipsum"
         self.property.name = secondName
-        self.observer.onMutated = { (received:String) in
-            notifiedAfterCopy = true
-            XCTAssertEqual(secondName, received, "Invalid value")
-        }
         self.viewModel.update(property:self.property)
         
         XCTAssertTrue(notified, "Not notified")

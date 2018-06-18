@@ -2,7 +2,7 @@ import Foundation
 @testable import Shared
 
 struct MockViewModelPropertyProtocol:ViewModelPropertyProtocol {
-    weak var observer:ViewModelObserverProtocol?
+    var observing:((MockViewModelPropertyProtocol) -> Void)?
     var name:String
     
     init() {

@@ -1,7 +1,7 @@
 import Foundation
 
 open class ViewModel {
-    private var properties:[ObjectIdentifier:ViewModelPropertyProtocol]
+    private var properties:[ObjectIdentifier:Any]
     
     public init() {
         self.properties = [:]
@@ -24,7 +24,7 @@ open class ViewModel {
         property:ViewModelProperty) -> ViewModelProperty {
         var property:ViewModelProperty = property
         if let previousProperty:ViewModelProperty = self.property() {
-            property.observer = previousProperty.observer
+            property.observing = previousProperty.observing
         }
         return property
     }
