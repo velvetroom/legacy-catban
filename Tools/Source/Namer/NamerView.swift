@@ -1,7 +1,8 @@
 import UIKit
 import Shared
 
-class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewContent> {
+class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewContent>,
+ViewModelObserverProtocol {
     override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -10,6 +11,10 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
     override func didAppear() {
         super.didAppear()
         self.content.viewField.becomeFirstResponder()
+    }
+    
+    func mutated(viewModel:ViewModelPropertyProtocol) {
+        
     }
     /*
     override func viewModelUpdated() {
