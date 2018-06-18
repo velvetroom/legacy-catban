@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 struct ViewModelContent:ViewModelPropertyProtocol {
-    weak var observer:ViewModelObserverProtocol?
+    var observing:((ViewModelContent) -> Void)?
     var listHidden:Bool
     var emptyHidden:Bool
     

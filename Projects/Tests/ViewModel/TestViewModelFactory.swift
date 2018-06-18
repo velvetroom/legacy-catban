@@ -1,5 +1,6 @@
 import XCTest
 import Board
+import Shared
 @testable import Projects
 
 class TestViewModelFactory:XCTestCase {
@@ -10,14 +11,41 @@ class TestViewModelFactory:XCTestCase {
         self.board = MockBoardProjectsProtocol()
     }
     
-    func testViewModelWithProjects() {
+    func testViewModelNavigationWithProjects() {
         self.board.projects.append(ProjectFactory.newProject())
-        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
-        XCTAssertTrue(viewModel.emptyHidden, "Should be hidden")
-        XCTAssertEqual(viewModel.items.count, 1, "Should have 1 item")
-        XCTAssertFalse(viewModel.listHidden, "Should NOT be hidden")
+        let viewModel:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.board)
         XCTAssertFalse(viewModel.toolbarHidden, "Should NOT be hidden")
         XCTAssertFalse(viewModel.navigationbarHidden, "Should NOT be hidden")
+    }
+    
+    func testViewModelNavigationWithNoProject() {
+        let viewModel:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.board)
+        XCTAssertTrue(viewModel.toolbarHidden, "Should be hidden")
+        XCTAssertFalse(viewModel.navigationbarHidden, "Should NOT be hidden")
+    }
+    
+    func testViewModelContentWithProject() {
+        self.board.projects.append(ProjectFactory.newProject())
+        let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(board:self.board)
+        XCTAssertTrue(viewModel.emptyHidden, "Should be hidden")
+        XCTAssertFalse(viewModel.listHidden, "Should NOT be hidden")
+    }
+    
+    func testViewModelContentWithNoProject() {
+        let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(board:self.board)
+        XCTAssertFalse(viewModel.emptyHidden, "Should NOT be hidden")
+        XCTAssertTrue(viewModel.listHidden, "Should be hidden")
+    }
+    
+    func testViewModelListWithProjects() {
+        self.board.projects.append(ProjectFactory.newProject())
+        let viewModel:ViewModelList = ViewModelFactory.makeListWith(board:self.board)
+        XCTAssertEqual(viewModel.items.count, 1, "Should have 1 item")
+    }
+    
+    func testViewModelListWithNoProjects() {
+        let viewModel:ViewModelList = ViewModelFactory.makeListWith(board:self.board)
+        XCTAssertTrue(viewModel.items.isEmpty, "Should not have item")
     }
     
     func testListItems() {
@@ -29,21 +57,12 @@ class TestViewModelFactory:XCTestCase {
         projectB.name = nameB
         self.board.projects = [projectA, projectB]
         
-        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
+        let viewModel:ViewModelList = ViewModelFactory.makeListWith(board:self.board)
         XCTAssertEqual(viewModel.items.count, 2, "Invalid items")
         XCTAssertEqual(viewModel.items[0].name, nameA, "Invalid value")
         XCTAssertEqual(viewModel.items[0].identifier, projectA.identifier, "Invalid value")
         XCTAssertEqual(viewModel.items[1].name, nameB, "Invalid value")
         XCTAssertEqual(viewModel.items[1].identifier, projectB.identifier, "Invalid value")
-    }
-    
-    func testViewModelWithNoItems() {
-        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
-        XCTAssertFalse(viewModel.emptyHidden, "Should NOT be hidden")
-        XCTAssertTrue(viewModel.items.isEmpty, "Should be empty")
-        XCTAssertTrue(viewModel.listHidden, "Should be hidden")
-        XCTAssertTrue(viewModel.toolbarHidden, "Should be hidden")
-        XCTAssertFalse(viewModel.navigationbarHidden, "Should NOT be hidden")
     }
     
     func testSortItems() {
@@ -55,7 +74,7 @@ class TestViewModelFactory:XCTestCase {
         projectC.name = "C"
         self.board.projects = [projectB, projectC, projectA]
         
-        let viewModel:ViewModel = ViewModelFactory.makeWith(board:self.board)
+        let viewModel:ViewModelList = ViewModelFactory.makeListWith(board:self.board)
         XCTAssertEqual(viewModel.items[0].identifier, projectA.identifier, "Invalid order")
         XCTAssertEqual(viewModel.items[1].identifier, projectB.identifier, "Invalid order")
         XCTAssertEqual(viewModel.items[2].identifier, projectC.identifier, "Invalid order")

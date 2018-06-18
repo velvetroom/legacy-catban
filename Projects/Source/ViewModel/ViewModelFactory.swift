@@ -3,20 +3,13 @@ import Board
 import Shared
 
 class ViewModelFactory {
-    class func makePropertiesWith(board:BoardProjectsProtocol) -> [ViewModelPropertyProtocol] {
-        return [
-            makeListWith(board:board),
-            makeContentWith(board:board),
-            makeNavigationWith(board:board)]
-    }
-    
-    private class func makeListWith(board:BoardProjectsProtocol) -> ViewModelList {
+    class func makeListWith(board:BoardProjectsProtocol) -> ViewModelList {
         var viewModel:ViewModelList = ViewModelList()
         viewModel.items = makeSortedItemsWith(board:board)
         return viewModel
     }
     
-    private class func makeContentWith(board:BoardProjectsProtocol) -> ViewModelContent {
+    class func makeContentWith(board:BoardProjectsProtocol) -> ViewModelContent {
         var viewModel:ViewModelContent = ViewModelContent()
         if board.countProjects > 0 {
             viewModel.emptyHidden = true
@@ -28,7 +21,7 @@ class ViewModelFactory {
         return viewModel
     }
     
-    private class func makeNavigationWith(board:BoardProjectsProtocol) -> ViewModelNavigation {
+    class func makeNavigationWith(board:BoardProjectsProtocol) -> ViewModelNavigation {
         var viewModel:ViewModelNavigation = ViewModelNavigation()
         if board.countProjects > 0 {
             viewModel.toolbarHidden = false

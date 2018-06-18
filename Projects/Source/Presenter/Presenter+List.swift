@@ -9,11 +9,11 @@ extension Presenter {
     }
     
     func selectFirstItem() {
-        guard
-            self.viewModel.items.isEmpty == false
-        else { return }
+        let viewModel:ViewModelList = self.viewModel.property()
         self.selected = 0
-        self.selectCurrent()
+        if viewModel.items.isEmpty == false {
+            self.selectCurrent()
+        }
     }
     
     private func selectCurrent() {

@@ -5,6 +5,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
+        self.configureViewModel()
         self.hookDelegates()
     }
     
@@ -44,15 +45,34 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
             target:self, action:#selector(self.selectorAddProject(button:)))
     }
     
+    private func configureViewModel() {
+        self.configureViewModelContent()
+        self.configureViewModelList()
+    }
+    
+    private func configureViewModelContent() {
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.observing = self.updated
+        self.presenter.viewModel.update(property:viewModel)
+    }
+    
+    private func configureViewModelList() {
+        var viewModel:ViewModelList = ViewModelList()
+        viewModel.observing = self.updated
+        self.presenter.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:ViewModelContent) {
+        self.content.viewEmpty.isHidden = viewModel.emptyHidden
+        self.content.viewList.isHidden = viewModel.listHidden
+    }
+    
+    private func updated(viewModel:ViewModelList) {
+        self.content.viewList.reloadData()
+    }
+    
     private func hookDelegates() {
         self.content.viewList.delegate = self.presenter
         self.content.viewList.dataSource = self.presenter
-    }
-    
-    public override func viewModelUpdated() {
-        self.content.viewEmpty.isHidden = self.viewModel.emptyHidden
-        self.content.viewList.isHidden = self.viewModel.listHidden
-        self.content.viewList.reloadData()
-        self.navigationController?.setToolbarHidden(self.viewModel.toolbarHidden, animated:true)
     }
 }

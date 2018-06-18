@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 struct ViewModelList:ViewModelPropertyProtocol {
-    weak var observer:ViewModelObserverProtocol?
+    var observing:((ViewModelList) -> Void)?
     var items:[ViewModelListItem]
     
     init() {

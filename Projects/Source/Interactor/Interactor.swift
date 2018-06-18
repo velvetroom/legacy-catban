@@ -28,6 +28,10 @@ public class Interactor:InteractorBoardProtocol, DeleterInteractorProtocol {
         
     }
     
+    public func deleteCancelled() {
+        
+    }
+    
     func addProject() -> ProjectProtocol {
         let project:ProjectProtocol = ProjectFactory.newProject()
         self.board.add(project:project)

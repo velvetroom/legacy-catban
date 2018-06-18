@@ -19,12 +19,14 @@ class TestPresenter_List:XCTestCase {
         let itemB:ViewModelListItem = ViewModelListItem()
         self.view.content.viewList.frame = Constants.frame
         XCTAssertNotNil(self.view.view)
-        self.view.presenter.viewModel.items = [itemA, itemB]
+        var viewModel:ViewModelList = ViewModelList()
+        viewModel.items = [itemA, itemB]
+        self.view.presenter.viewModel.update(property:viewModel)
     }
     
     func testNumberOfItems() {
-        XCTAssertEqual(self.view.viewModel.items.count, self.view.content.viewList.numberOfItems(inSection:0),
-                       "Invalid sections")
+        let viewModel:ViewModelList = self.view.presenter.viewModel.property()
+        XCTAssertEqual(viewModel.items.count, self.view.content.viewList.numberOfItems(inSection:0), "Invalid sections")
     }
     
     func testCellviewType() {

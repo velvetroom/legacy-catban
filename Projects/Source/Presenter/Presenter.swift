@@ -4,9 +4,9 @@ import Shared
 import Tools
 
 public class Presenter:NSObject, PresenterProtocol {
-    public typealias ViewModel = Projects.ViewModel
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Interactor!
+    public var viewModel:ViewModel!
     var selected:Int
     
     public required override init() {
@@ -19,11 +19,17 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     public func shouldUpdate() {
-        self.viewModel = ViewModelFactory.makeWith(board:self.interactor.board)
+        let navigation:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.interactor.board)
+        let content:ViewModelContent = ViewModelFactory.makeContentWith(board:self.interactor.board)
+        let list:ViewModelList = ViewModelFactory.makeListWith(board:self.interactor.board)
+        self.viewModel.update(property:navigation)
+        self.viewModel.update(property:content)
+        self.viewModel.update(property:list)
     }
     
     func rename() {
-        self.interactor.stateRenameProjectWith(identifier:self.viewModel.items[self.selected].identifier)
+        let viewModel:ViewModelList = self.viewModel.property()
+        self.interactor.stateRenameProjectWith(identifier:viewModel.items[self.selected].identifier)
         self.interactor.openNamer()
     }
     

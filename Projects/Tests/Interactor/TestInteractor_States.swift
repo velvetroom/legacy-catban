@@ -17,10 +17,12 @@ class TestInteractor_States:XCTestCase {
         self.board = MockBoardProjectsProtocol()
         self.project = MockProjectManagedProtocol()
         self.transition = MockTransitionProtocol()
+        var viewModelList:ViewModelList = ViewModelList()
+        viewModelList.items.append(ViewModelListItem())
         self.board.project = self.project
         self.interactor.board = self.board
         self.view.transition = self.transition
-        self.view.presenter.viewModel.items = [ViewModelListItem()]
+        self.view.presenter.viewModel.update(property:viewModelList)
         self.project.name = "Lorem ipsum"
     }
     
@@ -40,9 +42,11 @@ class TestInteractor_States:XCTestCase {
         var transitioned:Bool = false
         self.transition.onPush = { (view:PresentingViewProtocol) in
             let view:NamerView<Interactor>? = view as? NamerView<Interactor>
+            let viewModel:NamerViewModelContent? = view?.presenter.viewModel.property()
             XCTAssertNotNil(view, "Invalid view type")
-            XCTAssertFalse(view!.viewModel.currentName.isEmpty, "Failed to assign name")
-            XCTAssertFalse(view!.viewModel.title.isEmpty, "Failed to assign title")
+            XCTAssertNotNil(viewModel, "View model not injected")
+            XCTAssertFalse(viewModel!.currentName.isEmpty, "Failed to assign name")
+            XCTAssertFalse(viewModel!.title.isEmpty, "Failed to assign title")
             transitioned = true
         }
         self.view.selectorRename(button:UIBarButtonItem())
