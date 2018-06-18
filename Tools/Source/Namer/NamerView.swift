@@ -1,20 +1,16 @@
 import UIKit
 import Shared
 
-class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewContent>,
-ViewModelObserverProtocol {
+class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresenter<Interactor>, NamerViewContent> {
     override func didLoad() {
         super.didLoad()
         self.configureView()
+        self.configureObservers()
     }
     
     override func didAppear() {
         super.didAppear()
         self.content.viewField.becomeFirstResponder()
-    }
-    
-    func mutated(viewModel:ViewModelPropertyProtocol) {
-        
     }
     /*
     override func viewModelUpdated() {
@@ -43,6 +39,10 @@ ViewModelObserverProtocol {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
             action:#selector(self.selectorSave(button:)))
+    }
+    
+    private func configureObservers() {
+        
     }
     /*
     private func initialViewModel() {

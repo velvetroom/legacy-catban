@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 public struct NamerViewModelContent:ViewModelPropertyProtocol {
-    public weak var observer:ViewModelObserverProtocol?
+    public var observing:((NamerViewModelContent) -> Void)?
     public var title:String
     public var currentName:String
     
