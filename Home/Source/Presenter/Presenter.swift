@@ -3,9 +3,9 @@ import Board
 import Shared
 
 public class Presenter:PresenterProtocol {
-    public typealias ViewModel = Home.ViewModel
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Interactor!
+    public var viewModel:ViewModel!
     var canvas:CanvasProtocol
     
     public required init() {
