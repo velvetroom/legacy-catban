@@ -2,7 +2,7 @@ import Foundation
 import Shared
 import Board
 
-public class Interactor:InteractorProtocol, CanvasDelegateProtocol {
+public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public var project:ProjectManagedProtocol!
     

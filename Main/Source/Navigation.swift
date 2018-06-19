@@ -20,9 +20,10 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionToHome(project:ProjectManagedProtocol) {
-//        let view:ViewProject = Configuration.viewHomeType.init()
-//        view.project = project
-//        self.transitionTo(view:view)
+        let view:PresentingViewProtocol = Configuration.viewHomeType.init()
+        var interactor:InteractorProjectProtocol = view.interactor as! InteractorProjectProtocol
+        interactor.project = project
+        self.transitionTo(view:view)
     }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
