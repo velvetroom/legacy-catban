@@ -15,6 +15,11 @@ public class Presenter:PresenterProtocol {
         self.canvas.refresh()
     }
     
+    public func didLoad() {
+        self.configureCanvas()
+        self.configureViewModel()
+    }
+    
     func showMenu() {
 //        let menu:PresenterMenu = PresenterMenu()
 //        menu.interactor = self.interactor
@@ -22,9 +27,15 @@ public class Presenter:PresenterProtocol {
 //        menu.show()
     }
     
-    public func didLoad() {
+    private func configureCanvas() {
         self.canvas.project = self.interactor.project
         self.canvas.delegate = self.interactor
         self.canvas.refresh()
+    }
+    
+    private func configureViewModel() {
+        var viewModel:ViewModelContent = self.viewModel.property()
+        viewModel.title = self.interactor.project.name
+        self.viewModel.update(property:viewModel)
     }
 }
