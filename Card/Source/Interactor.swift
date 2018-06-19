@@ -10,18 +10,18 @@ public class Interactor:InteractorProtocol {
     public required init() { }
     
     func done() {
-//        self.save()
-//        self.transiton.transitionToHome(project:self.project)
+        self.save()
+        self.presenter?.transition?.transitionToHome(project:self.project)
     }
     
     func delete() {
-//        self.project.remove(card:self.card)
-//        self.save()
-//        self.transiton.transitionToHome(project:self.project)
+        self.project.remove(card:self.card)
+        self.save()
+        self.presenter?.transition?.transitionToHome(project:self.project)
     }
     
     func update(content:String) {
-//        self.card.content = content
+        self.card.content = content
     }
     
     private func save() {

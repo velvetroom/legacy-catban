@@ -1,7 +1,7 @@
 import Foundation
 @testable import Card
 
-class MockController:Interactor {
+class MockInteractor:Interactor {
     var onDone:(() -> Void)?
     var onDelete:(() -> Void)?
     
