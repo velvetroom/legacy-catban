@@ -1,18 +1,15 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Controller, Presenter, Card.ViewModel, UIView>, UITextViewDelegate {
+public class View:Shared.View<Interactor, Presenter, UIView>, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
-        self.configureNavigationItem()
+        self.configureViewModel()
     }
     
     private func configureView() {
         self.view.backgroundColor = UIColor.white
-    }
-    
-    private func configureNavigationItem() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
                                                          target:self, action:#selector(self.selectorDone(button:)))
         let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:type(of:self))
@@ -20,6 +17,16 @@ public class View:Shared.View<Controller, Presenter, Card.ViewModel, UIView>, UI
                                                            target:self,
                                                            action:#selector(self.selectorDelete(button:)))
         self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
+    }
+    
+    private func configureViewModel() {
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.observing = self.updated
+        self.presenter.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:ViewModelContent) {
+        
     }
     
     @objc func selectorDone(button:UIBarButtonItem) {

@@ -6,16 +6,14 @@ public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
-    var outlets:PresenterOutlets
     var presenterForKeyboard:PresenterForKeyboardProtocol
     
     public required init() {
-        self.outlets = PresenterOutlets()
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
     }
     
     func done() {
-        self.outlets.viewText?.resignFirstResponder()
+//        self.outlets.viewText?.resignFirstResponder()
         self.interactor.done()
     }
     
@@ -64,17 +62,4 @@ public class Presenter:PresenterProtocol {
         builder.card = self.controller.card
         self.updateWith(viewModel:builder.buildViewModel())
     }*/
-    
-    private func updateWith(viewModel:ViewModel) {
-        self.updateViewWith(viewModel:viewModel.view)
-        self.updateTextWith(viewModel:viewModel.text)
-    }
-    
-    private func updateViewWith(viewModel:ViewModelView) {
-//        self.outlets.view?.title = viewModel.title
-    }
-    
-    private func updateTextWith(viewModel:ViewModelText) {
-        self.outlets.viewText?.text = viewModel.content
-    }
 }

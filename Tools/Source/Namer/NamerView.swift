@@ -5,7 +5,7 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
     override func didLoad() {
         super.didLoad()
         self.configureView()
-        self.configureObservers()
+        self.configureViewModel()
     }
     
     override func didAppear() {
@@ -33,18 +33,18 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
             action:#selector(self.selectorSave(button:)))
     }
     
-    private func configureObservers() {
-        self.configureContentObserver()
-        self.configureStateObserver()
+    private func configureViewModel() {
+        self.configureContentViewModel()
+        self.configureStateViewModel()
     }
     
-    private func configureContentObserver() {
+    private func configureContentViewModel() {
         var viewModel:NamerViewModelContent = NamerViewModelContent()
         viewModel.observing = self.updated
         self.presenter.viewModel.update(property:viewModel)
     }
     
-    private func configureStateObserver() {
+    private func configureStateViewModel() {
         var viewModel:NamerViewModelState = NamerViewModelState()
         viewModel.observing = self.updated
         self.presenter.viewModel.update(property:viewModel)
