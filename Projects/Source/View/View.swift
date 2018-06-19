@@ -53,13 +53,13 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     private func configureViewModelContent() {
         var viewModel:ViewModelContent = ViewModelContent()
         viewModel.observing = self.updated
-        self.presenter.viewModel.update(property:viewModel)
+        self.viewModel.update(property:viewModel)
     }
     
     private func configureViewModelList() {
         var viewModel:ViewModelList = ViewModelList()
         viewModel.observing = self.updated
-        self.presenter.viewModel.update(property:viewModel)
+        self.viewModel.update(property:viewModel)
     }
     
     private func updated(viewModel:ViewModelContent) {

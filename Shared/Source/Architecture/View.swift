@@ -6,9 +6,15 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     open var presenter:Presenter
     open var content:Content!
     
-    open var interactor:InteractorProtocol! {
+    open var interactor:InteractorProtocol {
         get {
             return self.presenter.interactor
+        }
+    }
+    
+    public var viewModel:ViewModel {
+        get {
+            return self.presenter.viewModel
         }
     }
     

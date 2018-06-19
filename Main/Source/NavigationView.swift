@@ -17,16 +17,17 @@ class NavigationView:UINavigationController {
     }
     
     func transitionTo(view:PresentingViewProtocol) {
+        self.configureViewModelFor(view:view)
         self.setViewControllers([view.viewController], animated:self.animated)
-        self.setNavigationBarHidden(view.presentingViewModel.navigationbarHidden, animated:true)
-        self.setToolbarHidden(view.presentingViewModel.toolbarHidden, animated:true)
     }
     
     func present(view:PresentingViewProtocol) {
+        self.configureViewModelFor(view:view)
         self.present(view.viewController, animated:false, completion:nil)
     }
     
     func pushTo(view:PresentingViewProtocol) {
+        self.configureViewModelFor(view:view)
         self.pushViewController(view.viewController, animated:true)
     }
     
@@ -54,5 +55,16 @@ class NavigationView:UINavigationController {
         self.toolbar.barTintColor = UIColor.white
         self.toolbar.tintColor = UIColor.black
         self.toolbar.isTranslucent = false
+    }
+    
+    private func configureViewModelFor(view:PresentingViewProtocol) {
+        var viewModel:ViewModelNavigation = ViewModelNavigation()
+        viewModel.observing = self.updated
+        view.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:ViewModelNavigation) {
+        self.setNavigationBarHidden(viewModel.navigationbarHidden, animated:true)
+        self.setToolbarHidden(viewModel.toolbarHidden, animated:true)
     }
 }

@@ -5,7 +5,6 @@ open class ViewModel {
     
     public init() {
         self.properties = [:]
-        self.update(property:ViewModelNavigation())
     }
     
     open func update<ViewModelProperty:ViewModelPropertyProtocol>(property:ViewModelProperty) {

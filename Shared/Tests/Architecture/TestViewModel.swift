@@ -11,11 +11,6 @@ class TestViewModel:XCTestCase {
         self.property = MockViewModelPropertyProtocol()
     }
     
-    func testContainsViewModelNavigation() {
-        let navigation:ViewModelNavigation? = self.viewModel.property()
-        XCTAssertNotNil(navigation, "Not conained")
-    }
-    
     func testUpdatesNavigation() {
         guard
             var navigation:ViewModelNavigation = self.viewModel.property()
