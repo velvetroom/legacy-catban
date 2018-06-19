@@ -8,7 +8,7 @@ class TestPresenter:XCTestCase {
     private var delegate:MockPresenterDelegateProtocol!
     private var view:Column.View!
     private var column:ColumnProtocol!
-    private var controller:Controller!
+    private var controller:Interactor!
     private struct Constants {
         static let name:String = "lorem ipsum"
     }
@@ -18,7 +18,7 @@ class TestPresenter:XCTestCase {
         self.presenter = Presenter()
         self.delegate = MockPresenterDelegateProtocol()
         self.column = ColumnFactory.newColumn()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.view = Column.View()
         self.controller.column = self.column
         self.presenter.delegate = self.delegate
@@ -33,12 +33,12 @@ class TestPresenter:XCTestCase {
     }
     
     func testNotRetainingController() {
-        self.presenter.controller = Controller()
+        self.presenter.controller = Interactor()
         XCTAssertNil(self.presenter.controller, "Retains controller")
     }
     
     func testNotRetainingDelegate() {
-        self.presenter.delegate = Controller()
+        self.presenter.delegate = Interactor()
         XCTAssertNil(self.presenter.delegate, "Retains delegate")
     }
     

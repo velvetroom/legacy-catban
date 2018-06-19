@@ -1,7 +1,7 @@
 import UIKit
 
 public class ViewScroll:UIScrollView {
-    private(set) weak var viewBase:ViewBase?
+    private(set) weak var viewBase:ViewContent?
     public override var frame:CGRect {
         didSet {
             self.updateContentSize()
@@ -29,7 +29,7 @@ public class ViewScroll:UIScrollView {
     }
     
     private func factoryViews() {
-        let viewBase:ViewBase = ViewBase()
+        let viewBase:ViewContent = ViewContent()
         self.viewBase = viewBase
         self.addSubview(viewBase)
     }

@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewBase:UIView {
+class ViewContent:UIView {
     private(set) weak var viewBar:ViewBar!
     private(set) weak var viewInput:ViewInput!
     private(set) weak var icon:UIImageView!
