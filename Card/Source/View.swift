@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, UIView>, UITextViewDelegate {
+public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()

@@ -10,6 +10,7 @@
 		DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450A20A45EE300CCC59D /* Presenter.swift */; };
 		DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450E20A45F0000CCC59D /* TestPresenter.swift */; };
 		DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */; };
+		DA4493BF20D8D3C600A66CDF /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4493BE20D8D3C600A66CDF /* ViewContent.swift */; };
 		DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315720A4864800070042 /* MockTransitionProtocol.swift */; };
 		DA4B894E20B6A47800B67ED5 /* MockPresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */; };
 		DA4BD76120CA5413003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76020CA5413003257FA /* Tools.framework */; };
@@ -58,6 +59,7 @@
 		DA15450A20A45EE300CCC59D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA15450E20A45F0000CCC59D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DA4493BE20D8D3C600A66CDF /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		DA46315720A4864800070042 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA4B894D20B6A47800B67ED5 /* MockPresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterDelete.swift; sourceTree = "<group>"; };
 		DA4BD76020CA5413003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 				DA66E03B20D7FF3800E1E91F /* ViewModelContent.swift */,
 				DA7E009020A562AC00AD4A74 /* View.swift */,
 				DA7E009620A5635F00AD4A74 /* ViewConstants.swift */,
+				DA4493BE20D8D3C600A66CDF /* ViewContent.swift */,
 				DA7E009420A5630F00AD4A74 /* ViewText.swift */,
 			);
 			path = Source;
@@ -350,6 +353,7 @@
 				DA7E009720A5635F00AD4A74 /* ViewConstants.swift in Sources */,
 				DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */,
 				DA66E03C20D7FF3800E1E91F /* ViewModelContent.swift in Sources */,
+				DA4493BF20D8D3C600A66CDF /* ViewContent.swift in Sources */,
 				DA7E009520A5630F00AD4A74 /* ViewText.swift in Sources */,
 				DABDB03220A389B9001B7D47 /* Interactor.swift in Sources */,
 				DA7E009120A562AC00AD4A74 /* View.swift in Sources */,
