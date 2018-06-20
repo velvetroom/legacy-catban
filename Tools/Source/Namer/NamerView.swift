@@ -39,7 +39,7 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<Interactor, NamerPresen
     }
     
     private func configureContentViewModel() {
-        var viewModel:NamerViewModelContent = NamerViewModelContent()
+        var viewModel:NamerViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }

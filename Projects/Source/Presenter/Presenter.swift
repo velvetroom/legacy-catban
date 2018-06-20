@@ -33,6 +33,14 @@ public class Presenter:NSObject, PresenterProtocol {
         self.interactor.openNamer()
     }
     
+    func openProject() {
+        
+    }
+    
+    func addProject() {
+        
+    }
+    
     func delete() {
         var viewModel:DeleterViewModel = DeleterViewModel()
         viewModel.itemType = String.localized(key:"Presenter_DeleteritemType", in:type(of:self))

@@ -22,11 +22,11 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     @objc func selectorOpen(button:UIBarButtonItem) {
-//        self.presenter.openProject()
+        self.presenter.openProject()
     }
     
     @objc func selectorAddProject(button:UIBarButtonItem) {
-//        self.presenter.addProject()
+        self.presenter.addProject()
     }
     
     @objc func selectorRename(button:UIBarButtonItem) {

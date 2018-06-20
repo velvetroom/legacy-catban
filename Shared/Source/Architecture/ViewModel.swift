@@ -23,7 +23,9 @@ open class ViewModel {
         property:ViewModelProperty) -> ViewModelProperty {
         var property:ViewModelProperty = property
         if let previousProperty:ViewModelProperty = self.property() {
-            property.observing = previousProperty.observing
+            if previousProperty.observing != nil {
+                property.observing = previousProperty.observing
+            }
         }
         return property
     }
