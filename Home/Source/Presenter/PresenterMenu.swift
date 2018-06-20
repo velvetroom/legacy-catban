@@ -16,7 +16,9 @@ class PresenterMenu:PresenterProtocol {
     }
     
     func close() {
-        self.closeWith(completion:nil)
+        self.closeWith { [weak self] in
+            self?.interactor.closedMenu()
+        }
     }
     
     func openProjects() {

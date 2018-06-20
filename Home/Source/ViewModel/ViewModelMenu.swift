@@ -3,9 +3,9 @@ import Shared
 
 struct ViewModelMenu:ViewModelPropertyProtocol {
     var observing:((ViewModelMenu) -> Void)?
-    var hidden:Bool
+    var show:Bool
     
     init() {
-        self.hidden = true
+        self.show = true
     }
 }

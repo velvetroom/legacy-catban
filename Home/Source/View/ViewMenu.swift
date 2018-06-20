@@ -2,10 +2,22 @@ import UIKit
 import Shared
 
 class ViewMenu:Shared.View<Interactor, PresenterMenu, ViewMenuContent> {
-    override func didLoad() {
-        super.didLoad()
+    override init(presenter:PresenterMenu) {
+        super.init(presenter:presenter)
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+    }
+    
+    required init() {
+        super.init()
+    }
+    
+    required init?(coder:NSCoder) {
+        return nil
+    }
+    
+    override func didLoad() {
+        super.didLoad()
         self.hookSelectors()
     }
     

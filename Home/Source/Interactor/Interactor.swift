@@ -40,4 +40,8 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol {
 //        board.unmanage(project:project)
 //        self.transiton.transitionToProjects(board:board)
     }
+    
+    func closedMenu() {
+        self.presenter?.shouldUpdate()
+    }
 }

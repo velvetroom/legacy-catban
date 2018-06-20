@@ -2,6 +2,8 @@ import UIKit
 import Shared
 
 public class View:Shared.View<Interactor, Presenter, ViewContent> {
+    private var buttonMenu:UIBarButtonItem!
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -14,24 +16,14 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
         self.listenForOrientationChange()
     }
     
-    public override func dismiss(animated:Bool, completion:(() -> Void)? = nil) {
-        super.dismiss(animated:animated) { [weak self] in
-            var viewModel:ViewModelMenu = ViewModelMenu()
-            viewModel.hidden = false
-            self?.viewModel.update(property:viewModel)
-        }
-    }
-    
     @objc func selectorMenu(button:UIBarButtonItem) {
-        self.navigationItem.rightBarButtonItem = nil
         self.presenter.showMenu()
     }
     
     private func configureView() {
         let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
-        let buttonMenu:UIBarButtonItem = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
-                                                         target:self, action:#selector(self.selectorMenu(button:)))
-        self.navigationItem.rightBarButtonItem = buttonMenu
+        self.buttonMenu = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
+                                          target:self, action:#selector(self.selectorMenu(button:)))
     }
     
     private func configureCanvas() {
@@ -59,7 +51,11 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func updated(viewModel:ViewModelMenu) {
-        self.navigationItem.rightBarButtonItem?.customView?.isHidden = viewModel.hidden
+        if viewModel.show {
+            self.navigationItem.rightBarButtonItem = self.buttonMenu
+        } else {
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     private func updated(viewModel:ViewModelContent) {

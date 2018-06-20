@@ -21,10 +21,12 @@ public class Presenter:PresenterProtocol {
     }
     
     func showMenu() {
-        let presenter:PresenterMenu = PresenterMenu()
-        presenter.interactor = self.interactor
-        let menu:ViewMenu = ViewMenu(presenter:presenter)
-        self.transition?.present(view:menu)
+        self.updateMenuViewModel(show:false)
+        self.transitionToMenu()
+    }
+    
+    public func shouldUpdate() {
+        self.updateMenuViewModel(show:true)
     }
     
     private func configureCanvas() {
@@ -37,5 +39,18 @@ public class Presenter:PresenterProtocol {
         var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.title = self.interactor.project.name
         self.viewModel.update(property:viewModel)
+    }
+    
+    private func updateMenuViewModel(show:Bool) {
+        var viewModel:ViewModelMenu = ViewModelMenu()
+        viewModel.show = show
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func transitionToMenu() {
+        let presenter:PresenterMenu = PresenterMenu()
+        presenter.interactor = self.interactor
+        let menu:ViewMenu = ViewMenu(presenter:presenter)
+        self.transition?.present(view:menu)
     }
 }
