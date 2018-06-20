@@ -24,7 +24,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     
     @objc func selectorMenu(button:UIBarButtonItem) {
         self.navigationItem.rightBarButtonItem = nil
-//        self.presenter?.showMenu()
+        self.presenter.showMenu()
     }
     
     private func configureView() {

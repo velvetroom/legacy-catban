@@ -1,13 +1,15 @@
 import UIKit
+import Shared
 
-class ViewMenu:UIViewController {
-    var presenter:PresenterMenu!
-    weak var viewBase:ViewMenuBase!
-    
-    init() {
-        super.init(nibName:nil, bundle:nil)
+class ViewMenu:Shared.View<Interactor, PresenterMenu, ViewMenuContent> {
+    override init(presenter: PresenterMenu) {
+        super.init(presenter:presenter)
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+    }
+    
+    required init() {
+        super.init()
     }
     
     required init?(coder:NSCoder) {
@@ -15,7 +17,7 @@ class ViewMenu:UIViewController {
     }
     
     func animateClose() {
-        self.viewBase.animateClose()
+//        self.viewBase.animateClose()
     }
     
     @objc func selectorClose(button:UIButton) {
@@ -30,34 +32,23 @@ class ViewMenu:UIViewController {
         self.presenter.openAbout()
     }
     
-    override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to:size, with:coordinator)
+    override func didAppear() {
+        super.didAppear()
+        self.content.animateOpen()
+    }
+    
+    override func orientationChanged(size:CGSize) {
+        super.orientationChanged(size:size)
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
     }
     
-    override func loadView() {
-        self.view = self.configureViewBase()
-    }
-    
-    override func viewDidAppear(_ animated:Bool) {
-        super.viewDidAppear(animated)
-        self.viewBase.animateOpen()
-    }
-    
-    private func configureViewBase() -> ViewMenuBase {
-        let viewBase:ViewMenuBase = ViewMenuBase()
-        self.viewBase = viewBase
-        self.linkSelectors()
-        return viewBase
-    }
-    
     private func linkSelectors() {
-        self.viewBase.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
-                                          for:UIControlEvents.touchUpInside)
-        self.viewBase.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
-                                          for:UIControlEvents.touchUpInside)
-        self.viewBase.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
-                                                           for:UIControlEvents.touchUpInside)
+//        self.viewBase.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
+//                                          for:UIControlEvents.touchUpInside)
+//        self.viewBase.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
+//                                          for:UIControlEvents.touchUpInside)
+//        self.viewBase.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
+//                                                           for:UIControlEvents.touchUpInside)
 //        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
 //                                                        for:UIControlEvents.touchUpInside)
     }

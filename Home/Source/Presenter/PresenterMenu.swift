@@ -1,15 +1,18 @@
 import Foundation
+import Shared
 
-class PresenterMenu {
-    weak var view:View!
+class PresenterMenu:PresenterProtocol {
     weak var interactor:Interactor!
-    weak var viewMenu:ViewMenu?
+    weak var presenting:PresentingViewProtocol?
+    var viewModel:ViewModel!
 
+    required init() { }
+    
     func show() {
-        let viewMenu:ViewMenu = ViewMenu()
-        viewMenu.presenter = self
-        self.viewMenu = viewMenu
-        self.view.present(viewMenu, animated:false, completion:nil)
+//        let viewMenu:ViewMenu = ViewMenu()
+//        viewMenu.presenter = self
+//        self.viewMenu = viewMenu
+//        self.view.present(viewMenu, animated:false, completion:nil)
     }
     
     func close() {
@@ -29,11 +32,11 @@ class PresenterMenu {
     }
     
     private func closeWith(completion:(() -> Void)?) {
-        self.viewMenu?.animateClose()
-        let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
-        DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
-            self?.view.dismiss(animated:false, completion:nil)
-            completion?()
-        }
+//        self.viewMenu?.animateClose()
+//        let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
+//        DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
+//            self?.view.dismiss(animated:false, completion:nil)
+//            completion?()
+//        }
     }
 }

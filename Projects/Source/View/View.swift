@@ -16,8 +16,8 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
         }
     }
     
-    public override func orientationChanged() {
-        super.orientationChanged()
+    public override func orientationChanged(size:CGSize) {
+        super.orientationChanged(size:size)
         self.content.viewList.updateLayout()
     }
     

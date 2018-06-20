@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewMenuBase:UIView {
+class ViewMenuContent:UIView {
     weak var viewBackground:ViewMenuBackground!
     weak var viewClose:ViewMenuClose!
     weak var viewOptions:ViewMenuOptions!

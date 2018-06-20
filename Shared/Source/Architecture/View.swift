@@ -60,7 +60,7 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     
     open override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to:size, with:coordinator)
-        self.orientationChanged()
+        self.orientationChanged(size:size)
         self.presenter.orientationChanged()
     }
     
@@ -68,7 +68,7 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     open func didLoad() { }
     open func willAppear() { }
     open func didAppear() { }
-    open func orientationChanged() { }
+    open func orientationChanged(size:CGSize) { }
     
     private func postInit() {
         self.content = Content()

@@ -21,10 +21,10 @@ public class Presenter:PresenterProtocol {
     }
     
     func showMenu() {
-//        let menu:PresenterMenu = PresenterMenu()
-//        menu.interactor = self.interactor
-//        menu.view = self.presenting
-//        menu.show()
+        let presenter:PresenterMenu = PresenterMenu()
+        presenter.interactor = self.interactor
+        let menu:ViewMenu = ViewMenu(presenter:presenter)
+        self.transition?.present(view:menu)
     }
     
     private func configureCanvas() {
