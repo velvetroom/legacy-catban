@@ -27,6 +27,7 @@ class ViewMenu:Shared.View<Interactor, PresenterMenu, ViewMenuContent> {
     }
     
     @objc func selectorProjects(button:UIButton) {
+        self.content.animateClose()
         self.presenter.openProjects()
     }
     

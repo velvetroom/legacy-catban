@@ -8,13 +8,6 @@ class PresenterMenu:PresenterProtocol {
 
     required init() { }
     
-    func show() {
-//        let viewMenu:ViewMenu = ViewMenu()
-//        viewMenu.presenter = self
-//        self.viewMenu = viewMenu
-//        self.view.present(viewMenu, animated:false, completion:nil)
-    }
-    
     func close() {
         self.closeWith { [weak self] in
             self?.interactor.closedMenu()

@@ -34,17 +34,19 @@ class Navigation:NavigationProtocol {
     }
     
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
-//        let view:ViewCardProtocol = Configuration.viewCardType.init()
-//        view.project = project
-//        view.card = card
-//        self.transitionTo(view:view)
+        let view:PresentingViewProtocol = Configuration.viewCardType.init()
+        var interactor:InteractorCardProtocol = view.interactor as! InteractorCardProtocol
+        interactor.project = project
+        interactor.card = card
+        self.transitionTo(view:view)
     }
     
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) {
-//        let view:ViewColumnProtocol = Configuration.viewColumnType.init()
-//        view.project = project
-//        view.column = column
-//        self.transitionTo(view:view)
+        let view:PresentingViewProtocol = Configuration.viewColumnType.init()
+        var interactor:InteractorColumnProtocol = view.interactor as! InteractorColumnProtocol
+        interactor.project = project
+        interactor.column = column
+        self.transitionTo(view:view)
     }
     
     func present(view:PresentingViewProtocol) {

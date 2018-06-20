@@ -2,7 +2,7 @@ import Foundation
 import Shared
 import Board
 
-public class Interactor:InteractorProtocol {
+public class Interactor:InteractorColumnProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public weak var column:ColumnProtocol!
     public var project:ProjectManagedProtocol!
