@@ -17,7 +17,11 @@ public class Interactor:InteractorBoardProtocol, DeleterInteractorProtocol {
         self.presenter?.shouldUpdate()
     }
     
-    
+    func add(project:ProjectProtocol) {
+        self.board.add(project:project)
+        self.save(project:project)
+        self.presenter?.shouldUpdate()
+    }
     
     
     

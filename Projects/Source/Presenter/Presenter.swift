@@ -38,7 +38,8 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     func addProject() {
-        
+        self.interactor.stateAddProject()
+        self.interactor.openNamer()
     }
     
     func delete() {

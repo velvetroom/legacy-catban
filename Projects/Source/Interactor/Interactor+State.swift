@@ -12,4 +12,9 @@ extension Interactor {
         state.project = project
         self.state = state
     }
+    
+    func stateAddProject() {
+        let state:StateAdd = StateAdd()
+        self.state = state
+    }
 }

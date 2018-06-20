@@ -2,3 +2,4 @@ View_title="Boards";
 ViewEmpty_label="You have no projects";
 Presenter_DeleterItemType="Project";
 StateRename_ViewModel_Title="Rename Board";
+StateAdd_ViewModel_Title="New Board";
