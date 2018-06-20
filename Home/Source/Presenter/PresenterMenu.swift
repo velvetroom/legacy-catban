@@ -32,11 +32,10 @@ class PresenterMenu:PresenterProtocol {
     }
     
     private func closeWith(completion:(() -> Void)?) {
-//        self.viewMenu?.animateClose()
-//        let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
-//        DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
-//            self?.view.dismiss(animated:false, completion:nil)
-//            completion?()
-//        }
+        let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
+        DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
+            self?.transition?.dismiss()
+            completion?()
+        }
     }
 }

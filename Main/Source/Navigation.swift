@@ -61,6 +61,10 @@ class Navigation:NavigationProtocol {
         self.view.pop()
     }
     
+    func dismiss() {
+        self.view.dismiss()
+    }
+    
     func transitionTo(view:PresentingViewProtocol) {
         view.transition = self
         self.view.transitionTo(view:view)

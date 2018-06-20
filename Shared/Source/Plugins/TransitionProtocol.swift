@@ -10,4 +10,5 @@ public protocol TransitionProtocol:class {
     func present(view:PresentingViewProtocol)
     func pushTo(view:PresentingViewProtocol)
     func pop()
+    func dismiss()
 }
