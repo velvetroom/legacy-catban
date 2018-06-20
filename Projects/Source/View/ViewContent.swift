@@ -3,6 +3,7 @@ import UIKit
 public class ViewContent:UIView {
     weak var viewList:ViewList!
     weak var viewEmpty:ViewEmpty!
+    weak var viewSelector:ViewSelector!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -21,15 +22,15 @@ public class ViewContent:UIView {
     }
     
     private func makeOutlets() {
+        self.makeSelector()
         self.makeList()
         self.makeEmpty()
-        self.makeSelector()
     }
     
     private func layoutOutlets() {
+        self.layoutSelector()
         self.layoutList()
         self.layoutEmpty()
-        self.layoutSelector()
     }
     
     private func makeList() {
@@ -46,8 +47,8 @@ public class ViewContent:UIView {
     
     private func makeSelector() {
         let viewSelector:ViewSelector = ViewSelector()
-        self.viewList.addSubview(viewSelector)
-        self.viewList.viewSelector = viewSelector
+        self.addSubview(viewSelector)
+        self.viewSelector = viewSelector
     }
     
     private func layoutList() {
@@ -59,15 +60,12 @@ public class ViewContent:UIView {
     }
     
     private func layoutSelector() {
-        self.viewList.viewSelector.layoutY = self.viewList.viewSelector.centerYAnchor.constraint(
+        self.viewSelector.layoutY = self.viewSelector.centerYAnchor.constraint(
             equalTo:self.safeAreaLayoutGuide.topAnchor)
-        self.viewList.viewSelector.layoutY.isActive = true
-        self.viewList.viewSelector.leftAnchor.constraint(
-            equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
-        self.viewList.viewSelector.rightAnchor.constraint(
-            equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
-        self.viewList.viewSelector.heightAnchor.constraint(
-            equalToConstant:ViewConstants.Selector.height).isActive = true
+        self.viewSelector.layoutY.isActive = true
+        self.viewSelector.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
+        self.viewSelector.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
+        self.viewSelector.heightAnchor.constraint(equalToConstant:ViewConstants.Selector.height).isActive = true
     }
     
     private func layoutAdjustEqual(view:UIView) {

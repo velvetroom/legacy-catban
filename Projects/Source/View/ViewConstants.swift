@@ -1,12 +1,6 @@
 import UIKit
 
 struct ViewConstants {
-    struct Add {
-        static let imageOn:String = "assetAddOn"
-        static let imageOff:String = "assetAddOff"
-        static let size:CGFloat = 68
-    }
-    
     struct Empty {
         static let icon:String = "assetEmpty"
         static let iconSize:CGFloat = 92

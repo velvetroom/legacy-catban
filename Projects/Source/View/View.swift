@@ -11,9 +11,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     
     public override func willAppear() {
         super.willAppear()
-        DispatchQueue.main.async { [weak self] in
-            self?.content.viewList.updateSelector()
-        }
+        self.centreSelector()
     }
     
     public override func orientationChanged(size:CGSize) {
@@ -45,34 +43,14 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
             target:self, action:#selector(self.selectorAddProject(button:)))
     }
     
-    private func configureViewModel() {
-        self.configureViewModelContent()
-        self.configureViewModelList()
-    }
-    
-    private func configureViewModelContent() {
-        var viewModel:ViewModelContent = ViewModelContent()
-        viewModel.observing = self.updated
-        self.viewModel.update(property:viewModel)
-    }
-    
-    private func configureViewModelList() {
-        var viewModel:ViewModelList = ViewModelList()
-        viewModel.observing = self.updated
-        self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.content.viewEmpty.isHidden = viewModel.emptyHidden
-        self.content.viewList.isHidden = viewModel.listHidden
-    }
-    
-    private func updated(viewModel:ViewModelList) {
-        self.content.viewList.reloadData()
-    }
-    
     private func hookDelegates() {
         self.content.viewList.delegate = self.presenter
         self.content.viewList.dataSource = self.presenter
+    }
+    
+    private func centreSelector() {
+        var viewModel:ViewModelSelector = ViewModelSelector()
+        viewModel.positionY = self.content.bounds.height / 2.0
+        self.viewModel.update(property:viewModel)
     }
 }

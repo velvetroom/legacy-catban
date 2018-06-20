@@ -14,16 +14,18 @@ public class Interactor:InteractorBoardProtocol, DeleterInteractorProtocol {
     
     func updated(project:ProjectProtocol) {
         self.save(project:project)
-        self.presenter?.shouldUpdate()
     }
     
     func add(project:ProjectProtocol) {
         self.board.add(project:project)
         self.save(project:project)
-        self.presenter?.shouldUpdate()
     }
     
-    
+    func openProjectWith(identifier:String) {
+        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
+        let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
+        self.presenter?.transition?.transitionToHome(project:projectManaged)
+    }
     
     
     
@@ -43,11 +45,7 @@ public class Interactor:InteractorBoardProtocol, DeleterInteractorProtocol {
         return project
     }
     
-    func openProjectWith(identifier:String) {
-        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
-        let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
-        self.presenter?.transition?.transitionToHome(project:projectManaged)
-    }
+    
     
     func deleteProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)

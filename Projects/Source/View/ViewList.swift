@@ -1,12 +1,8 @@
 import UIKit
 
 class ViewList:UICollectionView {
-    weak var viewSelector:ViewSelector!
-    var trackingScroll:Bool
-    
     init() {
         let flow:ViewListFlow = ViewListFlow()
-        self.trackingScroll = true
         super.init(frame:CGRect.zero, collectionViewLayout:flow)
         self.configureView()
     }

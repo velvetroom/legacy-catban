@@ -40,6 +40,10 @@
 		DA4571FA20D38FD90066764B /* Interactor+Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571F920D38FD90066764B /* Interactor+Namer.swift */; };
 		DA4BD76420CA542C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD76320CA542C003257FA /* Tools.framework */; };
 		DA4F1AC620D684C400C0BB5C /* ViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AC520D684C400C0BB5C /* ViewModelContent.swift */; };
+		DA52105C20DA6C75008DE6DE /* ViewModelSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52105B20DA6C75008DE6DE /* ViewModelSelector.swift */; };
+		DA52105E20DA6E1C008DE6DE /* ViewModelSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52105D20DA6E1C008DE6DE /* ViewModelSelected.swift */; };
+		DA52106020DA74C5008DE6DE /* View+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52105F20DA74C5008DE6DE /* View+ViewModel.swift */; };
+		DA52106220DA7B4B008DE6DE /* PresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52106120DA7B4B008DE6DE /* PresenterState.swift */; };
 		DA62C39420D2A0C800085759 /* StateProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62C39320D2A0C800085759 /* StateProtocol+Default.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA9313A020B83016008EDA07 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139F20B83016008EDA07 /* Interactor.swift */; };
@@ -51,7 +55,6 @@
 		DAD5F06F20BBCBC100CEC10A /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F06E20BBCBC100CEC10A /* ViewModelFactory.swift */; };
 		DAD5F07120BBCBD300CEC10A /* TestViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07020BBCBD300CEC10A /* TestViewModelFactory.swift */; };
 		DAD5F07320BBD60800CEC10A /* TestPresenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */; };
-		DAD5F07920BBE18E00CEC10A /* Presenter+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07820BBE18E00CEC10A /* Presenter+List.swift */; };
 		DAD5F07B20BBE1B200CEC10A /* TestPresenter_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07A20BBE1B200CEC10A /* TestPresenter_List.swift */; };
 		DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */; };
 		DAE21CB520B8998500ABDB55 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */; };
@@ -104,6 +107,10 @@
 		DA4571F920D38FD90066764B /* Interactor+Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+Namer.swift"; sourceTree = "<group>"; };
 		DA4BD76320CA542C003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4F1AC520D684C400C0BB5C /* ViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContent.swift; sourceTree = "<group>"; };
+		DA52105B20DA6C75008DE6DE /* ViewModelSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSelector.swift; sourceTree = "<group>"; };
+		DA52105D20DA6E1C008DE6DE /* ViewModelSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSelected.swift; sourceTree = "<group>"; };
+		DA52105F20DA74C5008DE6DE /* View+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ViewModel.swift"; sourceTree = "<group>"; };
+		DA52106120DA7B4B008DE6DE /* PresenterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterState.swift; sourceTree = "<group>"; };
 		DA62C39320D2A0C800085759 /* StateProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateProtocol+Default.swift"; sourceTree = "<group>"; };
 		DA93138020B82F13008EDA07 /* Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93138F20B82F84008EDA07 /* TestsProjects.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsProjects.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +124,6 @@
 		DAD5F06E20BBCBC100CEC10A /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		DAD5F07020BBCBD300CEC10A /* TestViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelFactory.swift; sourceTree = "<group>"; };
 		DAD5F07220BBD60800CEC10A /* TestPresenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_ViewModel.swift; sourceTree = "<group>"; };
-		DAD5F07820BBE18E00CEC10A /* Presenter+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presenter+List.swift"; sourceTree = "<group>"; };
 		DAD5F07A20BBE1B200CEC10A /* TestPresenter_List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_List.swift; sourceTree = "<group>"; };
 		DAD5F07C20BBE63400CEC10A /* ViewListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewListFlow.swift; sourceTree = "<group>"; };
 		DAE21CB420B8998500ABDB55 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
@@ -200,9 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				DA204FF720B8924F00A41DB0 /* Presenter.swift */,
-				DAD5F07820BBE18E00CEC10A /* Presenter+List.swift */,
 				DA44422820D24D6500587AF3 /* Presenter+CollectionDelegate.swift */,
 				DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */,
+				DA52106120DA7B4B008DE6DE /* PresenterState.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			children = (
 				DA204FFE20B8984600A41DB0 /* View.swift */,
 				DAD05F9720C827C40083F5DA /* View+Factory.swift */,
+				DA52105F20DA74C5008DE6DE /* View+ViewModel.swift */,
 				DA04DEB120B9722500228ABB /* ViewConstants.swift */,
 				DAEABCA420C7BB0700025891 /* ViewContent.swift */,
 				DA04DEBE20B9834E00228ABB /* ViewList.swift */,
@@ -240,6 +247,8 @@
 				DA4F1AC520D684C400C0BB5C /* ViewModelContent.swift */,
 				DA44422420D2456F00587AF3 /* ViewModelList.swift */,
 				DA435A7C20BAC5B4000C2E56 /* ViewModelListItem.swift */,
+				DA52105B20DA6C75008DE6DE /* ViewModelSelector.swift */,
+				DA52105D20DA6E1C008DE6DE /* ViewModelSelected.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -439,15 +448,18 @@
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
+				DA52105C20DA6C75008DE6DE /* ViewModelSelector.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Factory.swift in Sources */,
 				DA435A7720BABD91000C2E56 /* ViewEmpty.swift in Sources */,
+				DA52106220DA7B4B008DE6DE /* PresenterState.swift in Sources */,
 				DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */,
+				DA52106020DA74C5008DE6DE /* View+ViewModel.swift in Sources */,
 				DA44423D20D26EA000587AF3 /* Interactor+State.swift in Sources */,
+				DA52105E20DA6E1C008DE6DE /* ViewModelSelected.swift in Sources */,
 				DA44422920D24D6500587AF3 /* Presenter+CollectionDelegate.swift in Sources */,
 				DA4571FA20D38FD90066764B /* Interactor+Namer.swift in Sources */,
 				DA44423B20D26D4F00587AF3 /* StateAdd.swift in Sources */,
 				DA435A7D20BAC5B4000C2E56 /* ViewModelListItem.swift in Sources */,
-				DAD5F07920BBE18E00CEC10A /* Presenter+List.swift in Sources */,
 				DAEABCA520C7BB0700025891 /* ViewContent.swift in Sources */,
 				DA44422520D2456F00587AF3 /* ViewModelList.swift in Sources */,
 				DA4F1AC620D684C400C0BB5C /* ViewModelContent.swift in Sources */,
