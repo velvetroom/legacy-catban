@@ -3,7 +3,7 @@ import Shared
 
 public class DeleterFactory {
     public class func makeWith<Interactor:DeleterInteractorProtocol>(
-        interactor:Interactor, and viewModel:DeleterViewModel) -> PresentingViewProtocol {
+        interactor:Interactor, and viewModel:DeleterViewModel) -> ViewProtocol {
         let presenter:DeleterPresenter<Interactor> = makePresenterWith(interactor:interactor)
         let view:DeleterView<Interactor> = DeleterView<Interactor>(presenter:presenter)
         presenter.viewModel.update(property:viewModel)

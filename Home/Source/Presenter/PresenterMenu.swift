@@ -3,7 +3,7 @@ import Shared
 
 class PresenterMenu:PresenterProtocol {
     weak var interactor:Interactor!
-    weak var presenting:PresentingViewProtocol?
+    weak var presenting:ViewProtocol?
     var viewModel:ViewModel!
 
     required init() { }

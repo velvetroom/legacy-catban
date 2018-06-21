@@ -1,6 +1,6 @@
 import UIKit
 
-public extension PresentingViewProtocol {
+public extension ViewProtocol {
     var viewController:UIViewController {
         get {
             return self as! UIViewController

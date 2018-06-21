@@ -3,7 +3,7 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresentingViewProtocol?
+    public weak var presenting:ViewProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     
@@ -25,7 +25,7 @@ public class Presenter:PresenterProtocol {
         var viewModel:NamerViewModelContent = NamerViewModelContent()
         viewModel.currentName = self.interactor.column.name
         viewModel.title = String.localized(key:"Presenter_Namer_Title", in:type(of:self))
-        let namer:PresentingViewProtocol = NamerFactory.makeWith(interactor:self.interactor, and:viewModel)
+        let namer:ViewProtocol = NamerFactory.makeWith(interactor:self.interactor, and:viewModel)
         self.transition?.pushTo(view:namer)
     }
     

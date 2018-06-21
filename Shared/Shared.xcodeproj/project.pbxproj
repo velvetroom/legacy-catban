@@ -12,7 +12,7 @@
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
 		DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFCF209C3F4C00B736CD /* Configuration.swift */; };
-		DA48AC5D20CBB0C0005D7016 /* PresentingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */; };
+		DA48AC5D20CBB0C0005D7016 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC5C20CBB0C0005D7016 /* ViewProtocol.swift */; };
 		DA48AC6120CBB86C005D7016 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */; };
 		DA4F1AB620D51BC700C0BB5C /* ViewModelPropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AB520D51BC700C0BB5C /* ViewModelPropertyProtocol.swift */; };
 		DA4F1ABA20D51ED300C0BB5C /* ViewModelNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */; };
@@ -29,7 +29,7 @@
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
 		DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */; };
 		DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */; };
-		DAB376A520D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB376A420D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift */; };
+		DAB376A520D0E1BC00884FA8 /* ViewProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB376A420D0E1BC00884FA8 /* ViewProtocol+Default.swift */; };
 		DAB376A820D0E29C00884FA8 /* MockInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB376A620D0E28B00884FA8 /* MockInteractorProtocol.swift */; };
 		DAB376AB20D0E2E600884FA8 /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB376A920D0E2D100884FA8 /* MockPresenterProtocol.swift */; };
 		DAB376AD20D0E30C00884FA8 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB376AC20D0E30C00884FA8 /* MockView.swift */; };
@@ -69,7 +69,7 @@
 		DA3ADF97209C340900B736CD /* String+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bundle.swift"; sourceTree = "<group>"; };
 		DA3ADF99209C347200B736CD /* TestString_Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestString_Bundle.swift; sourceTree = "<group>"; };
 		DA3ADFCF209C3F4C00B736CD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewProtocol.swift; sourceTree = "<group>"; };
+		DA48AC5C20CBB0C0005D7016 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		DA4F1AB520D51BC700C0BB5C /* ViewModelPropertyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPropertyProtocol.swift; sourceTree = "<group>"; };
 		DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNavigation.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
 		DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDispatchQueue_Private.swift; sourceTree = "<group>"; };
-		DAB376A420D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentingViewProtocol+Default.swift"; sourceTree = "<group>"; };
+		DAB376A420D0E1BC00884FA8 /* ViewProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAB376A620D0E28B00884FA8 /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
 		DAB376A920D0E2D100884FA8 /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAB376AC20D0E30C00884FA8 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				DAB376B220D0E5C500884FA8 /* PresenterFactory.swift */,
 				DA48AC6020CBB86C005D7016 /* PresenterProtocol.swift */,
 				DAFFF4E920CA5DE400A50077 /* PresenterProtocol+Default.swift */,
-				DA48AC5C20CBB0C0005D7016 /* PresentingViewProtocol.swift */,
-				DAB376A420D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift */,
+				DA48AC5C20CBB0C0005D7016 /* ViewProtocol.swift */,
+				DAB376A420D0E1BC00884FA8 /* ViewProtocol+Default.swift */,
 				DAFFF4E820CA5DE400A50077 /* ViewDelegateProtocol.swift */,
 				DA4F1AB520D51BC700C0BB5C /* ViewModelPropertyProtocol.swift */,
 				DA4F1ABD20D5244800C0BB5C /* ViewModelPropertyProtocol+Default.swift */,
@@ -393,9 +393,9 @@
 				DAFFF4F520CA67F400A50077 /* InteractorBoardProtocol.swift in Sources */,
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
-				DAB376A520D0E1BC00884FA8 /* PresentingViewProtocol+Default.swift in Sources */,
+				DAB376A520D0E1BC00884FA8 /* ViewProtocol+Default.swift in Sources */,
 				DAFFF4EB20CA5DE400A50077 /* PresenterProtocol+Default.swift in Sources */,
-				DA48AC5D20CBB0C0005D7016 /* PresentingViewProtocol.swift in Sources */,
+				DA48AC5D20CBB0C0005D7016 /* ViewProtocol.swift in Sources */,
 				DA4F1ABA20D51ED300C0BB5C /* ViewModelNavigation.swift in Sources */,
 				DAB376B320D0E5C500884FA8 /* PresenterFactory.swift in Sources */,
 				DAFFF4ED20CA639F00A50077 /* InteractorProtocol.swift in Sources */,

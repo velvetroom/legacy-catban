@@ -6,7 +6,7 @@ class MockPresenterProtocol:PresenterProtocol {
     var onWillAppear:(() -> Void)?
     var onDidAppear:(() -> Void)?
     var onOrientationChanged:(() -> Void)?
-    weak var presenting:PresentingViewProtocol?
+    weak var presenting:ViewProtocol?
     var interactor:MockInteractorProtocol!
     var viewModel:ViewModel!
     

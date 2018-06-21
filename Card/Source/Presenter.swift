@@ -3,7 +3,7 @@ import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:PresentingViewProtocol?
+    public weak var presenting:ViewProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var presenterForKeyboard:PresenterForKeyboardProtocol

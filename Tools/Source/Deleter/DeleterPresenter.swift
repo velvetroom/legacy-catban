@@ -2,7 +2,7 @@ import Foundation
 import Shared
 
 class DeleterPresenter<Interactor:DeleterInteractorProtocol>:PresenterProtocol {
-    weak var presenting:PresentingViewProtocol?
+    weak var presenting:ViewProtocol?
     var interactor:Interactor!
     var viewModel:ViewModel!
     

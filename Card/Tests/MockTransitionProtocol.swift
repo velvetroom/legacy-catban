@@ -9,8 +9,8 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func transitionToProjects(board:BoardProjectsProtocol) { }
-    func present(view: PresentingViewProtocol) { }
-    func pushTo(view: PresentingViewProtocol) { }
+    func present(view: ViewProtocol) { }
+    func pushTo(view: ViewProtocol) { }
     func pop() { }
     
     func transitionToHome(project:ProjectManagedProtocol) {

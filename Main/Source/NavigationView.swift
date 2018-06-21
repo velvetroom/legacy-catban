@@ -16,17 +16,17 @@ class NavigationView:UINavigationController {
         return nil
     }
     
-    func transitionTo(view:PresentingViewProtocol) {
+    func transitionTo(view:ViewProtocol) {
         self.configureViewModelFor(view:view)
         self.setViewControllers([view.viewController], animated:self.animated)
     }
     
-    func present(view:PresentingViewProtocol) {
+    func present(view:ViewProtocol) {
         self.configureViewModelFor(view:view)
         self.present(view.viewController, animated:false, completion:nil)
     }
     
-    func pushTo(view:PresentingViewProtocol) {
+    func pushTo(view:ViewProtocol) {
         self.configureViewModelFor(view:view)
         self.pushViewController(view.viewController, animated:true)
     }
@@ -61,7 +61,7 @@ class NavigationView:UINavigationController {
         self.toolbar.isTranslucent = false
     }
     
-    private func configureViewModelFor(view:PresentingViewProtocol) {
+    private func configureViewModelFor(view:ViewProtocol) {
         var viewModel:ViewModelNavigation = ViewModelNavigation()
         viewModel.observing = self.updated
         view.viewModel.update(property:viewModel)

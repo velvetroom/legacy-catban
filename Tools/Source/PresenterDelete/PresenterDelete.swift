@@ -3,7 +3,7 @@ import Shared
 
 class PresenterDelete:PresenterDeleteProtocol {
     weak var delegate:PresenterDeleteDelegateProtocol?
-    weak var presentingView:PresentingViewProtocol!
+    weak var presentingView:ViewProtocol!
     var itemName:String
     private var alert:UIAlertController {
         get {

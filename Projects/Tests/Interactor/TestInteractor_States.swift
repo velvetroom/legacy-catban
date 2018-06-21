@@ -40,7 +40,7 @@ class TestInteractor_States:XCTestCase {
     
     func testTransitionsToNamer() {
         var transitioned:Bool = false
-        self.transition.onPush = { (view:PresentingViewProtocol) in
+        self.transition.onPush = { (view:ViewProtocol) in
             let view:NamerView<Interactor>? = view as? NamerView<Interactor>
             let viewModel:NamerViewModelContent? = view?.presenter.viewModel.property()
             XCTAssertNotNil(view, "Invalid view type")
