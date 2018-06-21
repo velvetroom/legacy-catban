@@ -48,6 +48,7 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     
     open override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
+        self.updateNavigation()
         self.willAppear()
         self.presenter.willAppear()
     }
@@ -79,5 +80,10 @@ PresentingViewProtocol where Interactor == Presenter.Interactor {
     
     private func configureView() {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
+    }
+    
+    private func updateNavigation() {
+        let viewModel:ViewModelNavigation = self.viewModel.property()
+        self.viewModel.update(property:viewModel)
     }
 }
