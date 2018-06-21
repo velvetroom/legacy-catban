@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
+		DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */; };
 		DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424320D27F0700587AF3 /* DeleterFactory.swift */; };
 		DA44424620D27F4100587AF3 /* DeleterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424520D27F4100587AF3 /* DeleterViewModel.swift */; };
 		DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424720D27F9A00587AF3 /* DeleterInteractorProtocol.swift */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
+		DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewMenu.swift; sourceTree = "<group>"; };
 		DA44424320D27F0700587AF3 /* DeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterFactory.swift; sourceTree = "<group>"; };
 		DA44424520D27F4100587AF3 /* DeleterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewModel.swift; sourceTree = "<group>"; };
 		DA44424720D27F9A00587AF3 /* DeleterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				DA44424B20D2807900587AF3 /* DeleterView.swift */,
 				DA44424D20D280B500587AF3 /* DeleterViewContent.swift */,
 				DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */,
+				DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */,
 			);
 			path = Deleter;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */,
 				DAED6D8720CF9D92002AB9F9 /* NamerViewModelContent.swift in Sources */,
 				DAF88C3C20D1181A0048FFC5 /* NamerViewStatus.swift in Sources */,
+				DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */,
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */,

@@ -22,7 +22,6 @@ class NavigationView:UINavigationController {
     }
     
     func present(view:ViewProtocol) {
-        self.configureViewModelFor(view:view)
         self.present(view.viewController, animated:false, completion:nil)
     }
     

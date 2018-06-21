@@ -8,8 +8,8 @@ class ViewEmpty:UIView {
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.makeViews()
-        self.layoutViews()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
     required init?(coder:NSCoder) {
@@ -22,12 +22,12 @@ class ViewEmpty:UIView {
         self.isUserInteractionEnabled = false
     }
     
-    private func makeViews() {
+    private func makeOutlets() {
         self.makeLabel()
         self.makeIcon()
     }
     
-    private func layoutViews() {
+    private func layoutOutlets() {
         self.layoutIcon()
         self.layoutLabel()
     }

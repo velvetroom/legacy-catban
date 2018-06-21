@@ -1,5 +1,4 @@
 NamerError_length="Provide a name.";
 NamerError_visible="Invalid name, try editing it.";
-PresenterDelete_alert_title="You are about to delete";
-PresenterDelete_alert_confirm="Delete";
-PresenterDelete_alert_cancel="Cancel";
+DeleterViewMenu_buttonConfirm="Delete";
+DeleterViewMenu_buttonCancel="Cancel";
