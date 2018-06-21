@@ -25,13 +25,15 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View
     }
     
     @objc func selectorCancel(button:UIButton) {
-        self.closeDeleter()
-        self.presenter.cancel()
+        self.closeDeleter { [weak self] in
+            self?.presenter.confirm()
+        }
     }
     
     @objc func selectorConfirm(button:UIButton) {
-        self.closeDeleter()
-        self.presenter.confirm()
+        self.closeDeleter { [weak self] in
+            self?.presenter.confirm()
+        }
     }
     
     private func configureView() {
@@ -69,12 +71,13 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View
         }
     }
     
-    private func closeDeleter() {
+    private func closeDeleter(completion:@escaping(() -> ())) {
         self.content.viewMenu.layoutBottom.constant = DeleterConstats.Menu.height
         UIView.animate(withDuration:DeleterConstats.Shared.animation, animations: { [weak self] in
             self?.content.alpha = 0
             self?.content.layoutIfNeeded()
         }) { [weak self] (done:Bool) in
+            completion()
             self?.transition.dismiss()
         }
     }

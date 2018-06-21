@@ -30,7 +30,11 @@ public class Presenter:PresenterProtocol {
     }
     
     func delete() {
-        
+        var viewModel:DeleterViewModel = DeleterViewModel()
+        viewModel.name = self.interactor.column.name
+        viewModel.title = String.localized(key:"Presenter_Deleter_Title", in:type(of:self))
+        let deleter:ViewProtocol = DeleterFactory.makeWith(interactor:self.interactor, and:viewModel)
+        self.transition?.present(view:deleter)
     }
     
     private func configureViewModel() {
