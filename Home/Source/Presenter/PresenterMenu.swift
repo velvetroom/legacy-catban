@@ -1,41 +1,35 @@
 import Foundation
 import Shared
 
-class PresenterMenu {
-    weak var view:Shared.View!
-    weak var controller:Controller!
-    weak var viewMenu:ViewMenu?
-    
+class PresenterMenu:PresenterProtocol {
+    weak var interactor:Interactor!
+    weak var presenting:ViewProtocol?
+    var viewModel:ViewModel!
+
     required init() { }
     
-    func show() {
-        let viewMenu:ViewMenu = ViewMenu()
-        viewMenu.presenter = self
-        self.viewMenu = viewMenu
-        self.view.present(viewMenu, animated:false, completion:nil)
-    }
-    
     func close() {
-        self.closeWith(completion:nil)
+        self.closeWith { [weak self] in
+            self?.interactor.closedMenu()
+        }
     }
     
     func openProjects() {
         self.closeWith { [weak self] in
-            self?.controller.openProjects()
+            self?.interactor.openProjects()
         }
     }
     
     func openAbout() {
         self.closeWith { [weak self] in
-            self?.controller.createNewCard()
+            self?.interactor.createNewCard()
         }
     }
     
     private func closeWith(completion:(() -> Void)?) {
-        self.viewMenu?.animateClose()
         let deadline:DispatchTime = DispatchTime.now() + ViewConstants.Menu.menuDismissTimeout
         DispatchQueue.main.asyncAfter(deadline:deadline) { [weak self] in
-            self?.view.dismiss(animated:false, completion:nil)
+            self?.transition?.dismiss()
             completion?()
         }
     }

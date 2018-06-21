@@ -5,7 +5,7 @@ import Canvas
 @testable import Home
 
 class TestController_CreateCard:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var project:MockProjectManagedProtocol!
     private var transition:MockTransitionProtocol!
     private var column:ColumnProtocol!
@@ -13,7 +13,7 @@ class TestController_CreateCard:XCTestCase {
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
-        self.controller = Controller()
+        self.controller = Interactor()
         self.project = MockProjectManagedProtocol()
         self.column = ColumnFactory.newColumn()
         self.transition = MockTransitionProtocol()

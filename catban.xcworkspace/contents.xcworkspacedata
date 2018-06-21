@@ -11,6 +11,9 @@
       location = "group:Board/Board.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Tools/Tools.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Repository/Repository.xcodeproj">
    </FileRef>
    <FileRef

@@ -4,7 +4,7 @@ import Shared
 @testable import Column
 
 class TestController:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var transition:MockTransitionProtocol!
     private var project:MockProjectManagedProtocol!
     private var column:ColumnProtocol!
@@ -12,7 +12,7 @@ class TestController:XCTestCase {
     override func setUp() {
         super.setUp()
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
-        self.controller = Controller()
+        self.controller = Interactor()
         self.transition = MockTransitionProtocol()
         self.project = MockProjectManagedProtocol()
         self.column = ColumnFactory.newColumn()

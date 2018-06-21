@@ -1,41 +1,6 @@
 import UIKit
 
 struct ViewConstants {
-    struct Bar {
-        static let height:CGFloat = 70
-        static let borderWidth:CGFloat = 0.5
-    }
-    
-    struct Add {
-        static let imageOn:String = "assetAddOn"
-        static let imageOff:String = "assetAddOff"
-        static let size:CGFloat = 68
-    }
-    
-    struct BarTitle {
-        static let left:CGFloat = 20
-        static let height:CGFloat = 45
-        static let fontSize:CGFloat = 22
-    }
-    
-    struct Menu {
-        static let height:CGFloat = 80
-        static let borderWidth:CGFloat = 1
-        static let borderMargin:CGFloat = 20
-        static let alphaOn:CGFloat = 1
-        static let alphaOff:CGFloat = 0.3
-        static let itemMargin:CGFloat = 5
-    }
-    
-    struct MenuItem {
-        static let alphaOn:CGFloat = 0.2
-        static let alphaOff:CGFloat = 1
-        static let iconDelete:String = "assetDelete"
-        static let iconRename:String = "assetRename"
-        static let iconOpen:String = "assetOpen"
-        static let size:CGFloat = 60
-    }
-    
     struct Empty {
         static let icon:String = "assetEmpty"
         static let iconSize:CGFloat = 92
@@ -45,35 +10,21 @@ struct ViewConstants {
     
     struct ListItem {
         static let identifier:String = String(ObjectIdentifier(ViewListCell.self).hashValue)
-        static let nameLeft:CGFloat = 20
+        static let horizontalPadding:CGFloat = 20
         static let fontSizeOn:CGFloat = 30
         static let fontSizeOff:CGFloat = 18
-        static let height:CGFloat = 38
+        static let height:CGFloat = 50
     }
     
-    struct ListSelector {
-        static let height:CGFloat = 45
-        static let borderWidth:CGFloat = 1
-    }
-    
-    struct Renamer {
-        static let alphaOn:CGFloat = 1
-        static let alphaOff:CGFloat = 0
+    struct Selector {
+        static let height:CGFloat = 48
         static let animateDuration:TimeInterval = 0.3
     }
     
-    struct RenamerInput {
-        static let height:CGFloat = 48
-        static let cornerRadius:CGFloat = 4
-    }
-    
-    struct RenamerButton {
-        static let fontSize:CGFloat = 16
-        static let width:CGFloat = 60
-    }
-    
-    struct RenamerField {
-        static let fontSize:CGFloat = 16
-        static let margin:CGFloat = 8
+    struct Toolbar {
+        static let fixedSpace:CGFloat = 15
+        static let assetDelete:String = "assetDelete"
+        static let assetRename:String = "assetRename"
+        static let assetColumns:String = "assetColumns"
     }
 }

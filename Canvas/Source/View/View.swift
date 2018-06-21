@@ -64,7 +64,7 @@ class View:UIScrollView, MapDelegateProtocol {
     private func configureScroll() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.clear
         self.alwaysBounceVertical = true
         self.alwaysBounceHorizontal = true
         self.showsVerticalScrollIndicator = false

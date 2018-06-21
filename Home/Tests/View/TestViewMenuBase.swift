@@ -2,11 +2,11 @@ import XCTest
 @testable import Home
 
 class TestViewMenuBase:XCTestCase {
-    private var view:ViewMenuBase!
+    private var view:ViewMenuContent!
     
     override func setUp() {
         super.setUp()
-        self.view = ViewMenuBase()
+        self.view = ViewMenuContent()
     }
     
     func testNotRetainingBackground() {

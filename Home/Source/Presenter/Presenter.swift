@@ -1,65 +1,57 @@
 import UIKit
-import Board
 import Shared
 
-class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Home.View.self
-    var menuType:PresenterMenu.Type
+public class Presenter:PresenterProtocol {
+    public weak var presenting:ViewProtocol?
+    public var interactor:Interactor!
+    public var viewModel:ViewModel!
     var canvas:CanvasProtocol
-    var outlets:PresenterOutlets
-    weak var controller:Controller!
-    weak var delegate:PresenterDelegateProtocol!
     
-    init() {
+    public required init() {
         self.canvas = Configuration.canvasType.init()
-        self.outlets = PresenterOutlets()
-        self.menuType = PresenterMenu.self
+    }
+    
+    public func orientationChanged() {
+        self.canvas.refresh()
+    }
+    
+    public func didLoad() {
+        self.configureCanvas()
+        self.configureViewModel()
     }
     
     func showMenu() {
-        let menu:PresenterMenu = self.menuType.init()
-        menu.controller = self.controller
-        menu.view = self.outlets.view
-        menu.show()
+        self.updateMenuViewModel(show:false)
+        self.transitionToMenu()
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
-        self.configure(view:view)
-        self.loadCanvasOn(view:view.view)
-    }
-    
-    func shouldUpdate() {
-        self.updateView()
-        self.updateCanvas()
-    }
-    
-    func updateConstraints() {
+    public func shouldUpdate() {
+        self.updateMenuViewModel(show:true)
         self.canvas.refresh()
     }
     
-    private func configure(view:Shared.View) {
-        self.outlets.view = view
-        if let view:View = view as? View {
-            view.presenter = self
-        }
-    }
-    
-    private func loadCanvasOn(view:UIView) {
-        let canvas:UIView = self.canvas.view
-        view.addSubview(canvas)
-        canvas.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
-        canvas.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
-        canvas.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
-        canvas.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
-    }
-    
-    private func updateView() {
-        self.outlets.view?.title = self.controller.project.name
-    }
-    
-    private func updateCanvas() {
-        self.canvas.project = self.controller.project
-        self.canvas.delegate = self.controller
+    private func configureCanvas() {
+        self.canvas.project = self.interactor.project
+        self.canvas.delegate = self.interactor
         self.canvas.refresh()
+    }
+    
+    private func configureViewModel() {
+        var viewModel:ViewModelContent = self.viewModel.property()
+        viewModel.title = self.interactor.project.name
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func updateMenuViewModel(show:Bool) {
+        var viewModel:ViewModelMenu = ViewModelMenu()
+        viewModel.show = show
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func transitionToMenu() {
+        let presenter:PresenterMenu = PresenterMenu()
+        presenter.interactor = self.interactor
+        let menu:ViewMenu = ViewMenu(presenter:presenter)
+        self.transition?.present(view:menu)
     }
 }

@@ -5,14 +5,14 @@ import Canvas
 @testable import Board
 
 class TestController_Presenter:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var presenter:MockPresenterProtocol!
     private var project:ProjectManagedProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
-        self.controller = Controller()
+        self.controller = Interactor()
         self.presenter = MockPresenterProtocol()
         self.controller.presenter = self.presenter
         let board:BoardProtocol = BoardFactory.newBoard()

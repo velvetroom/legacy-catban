@@ -1,94 +1,98 @@
 import Foundation
 import Board
 import Shared
+import Tools
 
-class Presenter:PresenterProtocol {
-    var viewType:Shared.View.Type = Projects.View.self
-    var deleteType:PresenterDelete.Type
-    var outlets:PresenterOutlets
-    var list:PresenterList
-    var renamer:PresenterRenamer
-    weak var delegate:PresenterDelegateProtocol!
-    weak var controller:Controller!
+public class Presenter:NSObject, PresenterProtocol {
+    public weak var presenting:ViewProtocol?
+    public var interactor:Interactor!
+    public var viewModel:ViewModel!
+    var state:PresenterState
     
-    init() {
-        self.outlets = PresenterOutlets()
-        self.list = PresenterList()
-        self.renamer = PresenterRenamer()
-        self.deleteType = PresenterDelete.self
+    public required override init() {
+        self.state = PresenterState()
+        super.init()
     }
     
-    func presenterDidLoadWith(view:Shared.View) {
+    func identifierFor(indexPath:IndexPath) -> String {
+        let viewModel:ViewModelList = self.viewModel.property()
+        return viewModel.items[indexPath.item].identifier
+    }
+    
+    func rename() {
         guard
-            let view:View = view as? Projects.View
+            let selected:String = self.state.selected
         else { return }
-        self.configure(view:view)
-        self.loadOutlets(view:view)
-        self.injectDelegates(view:view)
-    }
-    
-    func shouldUpdate() {
-        let viewModel:ViewModelProtocol = self.makeViewModel()
-        self.updateWith(viewModel:viewModel)
-    }
-    
-    func addProject() {
-        let project:ProjectProtocol = self.controller.addProject()
-        self.list.selected = ViewModelListItemFactory.makeWith(project:project)
-        self.renameProject()
+        self.interactor.stateRenameProjectWith(identifier:selected)
+        self.interactor.openNamer()
     }
     
     func openProject() {
-        let identifier:String = self.list.selected.identifier
-        self.controller.openProjectWith(identifier:identifier)
+        guard
+            let selected:String = self.state.selected
+        else { return }
+        self.interactor.openProjectWith(identifier:selected)
     }
     
-    func renameProject() {
-        self.renamer.item = self.list.selected
-        self.renamer.showRenamer()
-    }
-    
-    func updateProject(name:String) {
-        self.renamer.hideRenamer()
-        self.controller.update(project:self.renamer.item.identifier, with:name)
+    func addProject() {
+        self.interactor.stateAddProject()
+        self.interactor.openNamer()
     }
     
     func delete() {
-        let presenter:PresenterDelete = self.deleteType.init()
-        presenter.controller = self.controller
-        presenter.view = self.outlets.view
-        presenter.item = self.list.selected
-        presenter.askConfirmation()
+        guard
+            let selected:String = self.state.selected
+        else { return }
+        self.interactor.stateDeleteProjectWith(identifier:selected)
+        self.interactor.openDeleter()
     }
     
-    private func configure(view:View) {
-        view.presenter = self
+    public func willAppear() {
+        self.shouldUpdate()
     }
     
-    private func loadOutlets(view:View) {
-        let loader:PresenterOutletsLoader = PresenterOutletsLoader()
-        loader.view = view
-        loader.load()
-        self.outlets = loader.outlets
+    public func shouldUpdate() {
+        let navigation:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.interactor.board)
+        let content:ViewModelContent = ViewModelFactory.makeContentWith(board:self.interactor.board)
+        let list:ViewModelList = ViewModelFactory.makeListWith(board:self.interactor.board)
+        self.viewModel.update(property:navigation)
+        self.viewModel.update(property:content)
+        self.viewModel.update(property:list)
+        self.selectCurrentItem()
     }
     
-    private func injectDelegates(view:View) {
-        let delegater:PresenterDelegater = PresenterDelegater()
-        delegater.presenter = self
-        delegater.inject()
+    private func selectCurrentItem() {
+        let viewModel:ViewModelList = self.viewModel.property()
+        if viewModel.items.isEmpty == false {
+            if let identifier:String = self.state.selected {
+                self.selectItemWith(identifier:identifier, from:viewModel)
+            } else {
+                self.selectItemAt(index:0)
+            }
+        }
     }
     
-    private func makeViewModel() -> ViewModelProtocol {
-        let loader:PresenterViewModelLoader = PresenterViewModelLoader()
-        loader.board = self.controller.board
-        loader.load()
-        return loader.viewModel
+    private func selectItemWith(identifier:String, from viewModel:ViewModelList) {
+        var index:Int = 0
+        let countItems:Int = viewModel.items.count
+        for indexItem:Int in 0 ..< countItems {
+            if viewModel.items[indexItem].identifier == identifier {
+                index = indexItem
+                break
+            }
+        }
+        self.selectItemAt(index:index)
     }
     
-    private func updateWith(viewModel:ViewModelProtocol) {
-        let updater:PresenterViewUpdater = PresenterViewUpdater()
-        updater.presenter = self
-        updater.viewModel = viewModel
-        updater.update()
+    private func selectItemAt(index:Int) {
+        var viewModel:ViewModelSelected = ViewModelSelected()
+        viewModel.indexPath = IndexPath(item:index, section:0)
+        self.viewModel.update(property:viewModel)
+        self.stateSelectAt(index:index)
+    }
+    
+    private func stateSelectAt(index:Int) {
+        let viewModel:ViewModelList = self.viewModel.property()
+        self.state.selected = viewModel.items[index].identifier
     }
 }

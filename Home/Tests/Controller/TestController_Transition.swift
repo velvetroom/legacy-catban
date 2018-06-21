@@ -5,7 +5,7 @@ import Canvas
 @testable import Board
 
 class TestController_Transition:XCTestCase {
-    private var controller:Controller!
+    private var controller:Interactor!
     private var transition:MockTransitionProtocol!
     private var project:ProjectManagedProtocol!
     private struct Constants {
@@ -15,7 +15,7 @@ class TestController_Transition:XCTestCase {
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
-        self.controller = Controller()
+        self.controller = Interactor()
         self.transition = MockTransitionProtocol()
         var card:CardProtocol = CardFactory.newCard()
         card.identifier = Constants.identifier

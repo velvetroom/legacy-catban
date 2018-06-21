@@ -1,8 +1,6 @@
 import UIKit
 
 class ViewList:UICollectionView {
-    weak var layoutSelectorY:NSLayoutConstraint!
-    
     init() {
         let flow:ViewListFlow = ViewListFlow()
         super.init(frame:CGRect.zero, collectionViewLayout:flow)
@@ -16,11 +14,11 @@ class ViewList:UICollectionView {
     func updateLayout() {
         self.collectionViewLayout.invalidateLayout()
         DispatchQueue.main.async { [weak self] in
-            self?.updateIndicator()
+            self?.updateSelector()
         }
     }
     
-    func updateIndicator() {
+    func updateSelector() {
         self.delegate?.scrollViewDidScroll?(self)
     }
     
@@ -31,7 +29,9 @@ class ViewList:UICollectionView {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceVertical = true
+        self.canCancelContentTouches = false
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        self.decelerationRate = UIScrollViewDecelerationRateFast
         self.register(ViewListCell.self, forCellWithReuseIdentifier:ViewConstants.ListItem.identifier)
     }
 }

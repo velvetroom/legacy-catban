@@ -3,56 +3,72 @@ import Board
 import Shared
 
 class Navigation:NavigationProtocol {
-    var view:UINavigationController!
-    var controller:ControllerProtocol!
-    private var animated:Bool {
-        get {
-            return self.view.viewControllers.count > 0
-        }
-    }
-    
+    weak var view:NavigationView!
+
     func launch() -> UIWindow {
-        self.view = NavigationView()
+        let view:NavigationView = NavigationView()
         let window:UIWindow = NavigationFactory.newWindow()
-        window.rootViewController = self.view
+        window.rootViewController = view
+        self.view = view
         self.transitionToLoad()
         return window
     }
     
     func transitionToLoad() {
-        let controller:ControllerProtocol = Configuration.controllerLoadType.init()
-        self.transitionTo(controller:controller)
+        let view:ViewProtocol = Configuration.viewLoadType.init()
+        self.transitionTo(view:view)
     }
     
     func transitionToHome(project:ProjectManagedProtocol) {
-        let controller:ControllerProjectProtocol = Configuration.controllerHomeType.init()
-        controller.project = project
-        self.transitionTo(controller:controller)
+        let view:ViewProtocol = Configuration.viewHomeType.init()
+        var interactor:InteractorProjectProtocol = view.interactor as! InteractorProjectProtocol
+        interactor.project = project
+        self.transitionTo(view:view)
     }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
-        let controller:ControllerBoardProtocol = Configuration.controllerProjectsType.init()
-        controller.board = board
-        self.transitionTo(controller:controller)
+        let view:ViewProtocol = Configuration.viewProjectsType.init()
+        var interactor:InteractorBoardProtocol = view.interactor as! InteractorBoardProtocol
+        interactor.board = board
+        self.transitionTo(view:view)
     }
     
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
-        let controller:ControllerCardProtocol = Configuration.controllerCardType.init()
-        controller.project = project
-        controller.card = card
-        self.transitionTo(controller:controller)
+        let view:ViewProtocol = Configuration.viewCardType.init()
+        var interactor:InteractorCardProtocol = view.interactor as! InteractorCardProtocol
+        interactor.project = project
+        interactor.card = card
+        self.transitionTo(view:view)
     }
     
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) {
-        let controller:ControllerColumnProtocol = Configuration.controllerColumnType.init()
-        controller.project = project
-        controller.column = column
-        self.transitionTo(controller:controller)
+        let view:ViewProtocol = Configuration.viewColumnType.init()
+        var interactor:InteractorColumnProtocol = view.interactor as! InteractorColumnProtocol
+        interactor.project = project
+        interactor.column = column
+        self.transitionTo(view:view)
     }
     
-    func transitionTo(controller:ControllerProtocol) {
-        self.controller = controller
-        self.controller.transiton = self
-        self.view.setViewControllers([self.controller.presenter.view], animated:self.animated)
+    func present(view:ViewProtocol) {
+        view.transition = self
+        self.view.present(view:view)
+    }
+    
+    func pushTo(view:ViewProtocol) {
+        view.transition = self
+        self.view.pushTo(view:view)
+    }
+    
+    func pop() {
+        self.view.pop()
+    }
+    
+    func dismiss() {
+        self.view.dismiss()
+    }
+    
+    func transitionTo(view:ViewProtocol) {
+        view.transition = self
+        self.view.transitionTo(view:view)
     }
 }

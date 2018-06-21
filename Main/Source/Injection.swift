@@ -7,19 +7,17 @@ import Home
 import Card
 import Column
 import Projects
-import Template
 
 class Injection {
     func load() {
         Configuration.repositoryBoardType = Repository.self
         Configuration.repositoryProjectType = Repository.self
-        Configuration.controllerLoadType = Load.Controller.self
-        Configuration.controllerHomeType = Home.Controller.self
-        Configuration.controllerCardType = Card.Controller.self
-        Configuration.controllerColumnType = Column.Controller.self
-        Configuration.controllerProjectsType = Projects.Controller.self
+        Configuration.viewLoadType = Load.View.self
+        Configuration.viewHomeType = Home.View.self
+        Configuration.viewCardType = Card.View.self
+        Configuration.viewColumnType = Column.View.self
+        Configuration.viewProjectsType = Projects.View.self
         Configuration.canvasType = Canvas.self
-        Configuration.templateFactory = KanbanFactory.self
         Configuration.directoryRoot = RepositoryConstants.Url.directoryRoot
     }
 }

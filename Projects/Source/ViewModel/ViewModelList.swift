@@ -1,19 +1,11 @@
-import UIKit
+import Foundation
+import Shared
 
-struct ViewModelList:ViewModelProtocol {
+struct ViewModelList:ViewModelPropertyProtocol {
+    var observing:((ViewModelList) -> Void)?
     var items:[ViewModelListItem]
-    let selectorHidden:Bool
-    let listHidden:Bool
-    let emptyHidden:Bool
-    let menuEnabled:Bool
-    let menuAlpha:CGFloat
     
     init() {
         self.items = []
-        self.selectorHidden = false
-        self.listHidden = false
-        self.emptyHidden = true
-        self.menuEnabled = true
-        self.menuAlpha = ViewConstants.Menu.alphaOn
     }
 }

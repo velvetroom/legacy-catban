@@ -2,15 +2,14 @@ import UIKit
 import Shared
 
 @UIApplicationMain class Application:UIResponder, UIApplicationDelegate {
-    var navigation:NavigationProtocol
     var window:UIWindow?
+    private let navigation:NavigationProtocol
     
     override init() {
         let injection:Injection = Injection()
         injection.load()
-        self.navigation = NavigationFactory.newNavigation()
+        self.navigation = Navigation()
         super.init()
-        
     }
     
     func application(_:UIApplication, didFinishLaunchingWithOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool {

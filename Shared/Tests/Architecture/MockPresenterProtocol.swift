@@ -1,11 +1,30 @@
-import UIKit
+import Foundation
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
-    var onShouldUpdate:(() -> Void)?
-    var delegate:PresenterDelegateProtocol!
+    var onDidLoad:(() -> Void)?
+    var onWillAppear:(() -> Void)?
+    var onDidAppear:(() -> Void)?
+    var onOrientationChanged:(() -> Void)?
+    weak var presenting:ViewProtocol?
+    var interactor:MockInteractorProtocol!
+    var viewModel:ViewModel!
     
-    func shouldUpdate() {
-        self.onShouldUpdate?()
+    required init() { }
+    
+    func didLoad() {
+        self.onDidLoad?()
+    }
+    
+    func willAppear() {
+        self.onWillAppear?()
+    }
+    
+    func didAppear() {
+        self.onDidAppear?()
+    }
+    
+    func orientationChanged() {
+        self.onOrientationChanged?()
     }
 }

@@ -1,61 +1,52 @@
 import XCTest
-import Board
 @testable import Projects
 
 class TestView:XCTestCase {
     private var view:View!
-    private var viewRenamer:ViewRenamer!
-    private var presenter:Presenter!
-    private var controller:MockController!
-    private var board:MockBoardProjectsProtocol!
+    private var viewList:MockViewList!
+    private var presenter:MockPresenter!
     
     override func setUp() {
         super.setUp()
         self.view = View()
-        self.presenter = Presenter()
-        self.controller = MockController()
-        self.board = MockBoardProjectsProtocol()
-        self.viewRenamer = ViewRenamer()
+        self.presenter = MockPresenter()
+        self.viewList = MockViewList()
         self.view.presenter = self.presenter
-        self.presenter.controller = self.controller
-        self.controller.board = self.board
-        self.presenter.renamer.view = self.viewRenamer
+        self.view.content.viewList = self.viewList
     }
     
-    func testNotRetainingPresenter() {
-        self.view.presenter = Presenter()
-        XCTAssertNil(self.view.presenter, "Retains")
-    }
-    
-    func testOpenProject() {
+    func testUpdateListLayoutOnOrientationChange() {
         var called:Bool = false
-        self.controller.onOpenProject = {
-            called = true
-        }
-        
-        self.view.selectorOpen(button:ViewMenuItem())
-        XCTAssertTrue(called, "Failed")
+        self.viewList.onUpdateLayout = { called = true }
+        self.view.orientationChanged()
+        XCTAssertTrue(called, "Not called")
     }
     
-    func testInjectsRenamerDelegate() {
-        XCTAssertNotNil(self.view.view, "Loaded view")
-        XCTAssertNotNil(self.view.viewBase.viewRenamer.viewInput.viewField.delegate, "Not injected")
+    func testCallsPresenterOnOpen() {
+        var called:Bool = false
+        self.presenter.onOpen = { called = true }
+        self.view.selectorOpen(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
     }
     
-    func testAddingANewProject() {
-        var added:Bool = false
-        self.board.onAddProject = { (project:ProjectProtocol) in
-            XCTAssertFalse(project.identifier.isEmpty, "No identifier")
-            added = true
-        }
-        
-        self.view.selectorAddProject(button:UIButton())
-        XCTAssertTrue(added, "Not added")
+    func testCallsPresenterAddProject() {
+        var called:Bool = false
+        self.presenter.onAddProject = { called = true }
+        self.view.selectorAddProject(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
     }
     
-    func testAddProjectUpdatesSelectedItem() {
-        self.presenter.list.selected.identifier = String()
-        self.view.selectorAddProject(button:UIButton())
-        XCTAssertFalse(self.presenter.list.selected.identifier.isEmpty, "Selected not updated")
+    func testCallsPresenterOnRename() {
+        var called:Bool = false
+        self.presenter.onRename = { called = true }
+        self.view.selectorRename(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
+    }
+    
+    func testCallsPresenterOnDelete() {
+        var called:Bool = false
+        self.presenter.onDelete = { called = true }
+        self.view.selectorDelete(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
     }
 }

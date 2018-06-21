@@ -1,0 +1,4 @@
+NamerError_length="Provide a name.";
+NamerError_visible="Invalid name, try editing it.";
+DeleterViewMenu_buttonConfirm="Delete";
+DeleterViewMenu_buttonCancel="Cancel";

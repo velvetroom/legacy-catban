@@ -5,7 +5,7 @@ import XCTest
 
 class TestPresenter:XCTestCase {
     private var presenter:Presenter!
-    private var controller:Controller!
+    private var controller:Interactor!
     private var delegate:MockControllerProtocol!
     private var project:ProjectManagedProtocol!
     private var view:Home.View!
@@ -16,7 +16,7 @@ class TestPresenter:XCTestCase {
     override func setUp() {
         super.setUp()
         self.presenter = Presenter()
-        self.controller = Controller()
+        self.controller = Interactor()
         self.presenter.controller = self.controller
         self.delegate = MockControllerProtocol()
         self.view = View()
@@ -49,12 +49,12 @@ class TestPresenter:XCTestCase {
     }
     
     func testDelegateIsNotRetained() {
-        self.presenter.delegate = Controller()
+        self.presenter.delegate = Interactor()
         XCTAssertNil(self.presenter.delegate, "Strong retained delegate")
     }
     
     func testControllerIsNotRetained() {
-        self.presenter.controller = Controller()
+        self.presenter.controller = Interactor()
         XCTAssertNil(self.presenter.controller, "Strong retained controller")
     }
     

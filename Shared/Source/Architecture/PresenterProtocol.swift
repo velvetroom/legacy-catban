@@ -1,10 +1,3 @@
 import Foundation
 
-public protocol PresenterProtocol:ViewDelegateProtocol {
-    var viewType:View.Type { get }
-    var view:View { get }
-    var delegate:PresenterDelegateProtocol! { get set }
-    
-    func presenterDidLoadWith(view:View)
-    func shouldUpdate()
-}
+public protocol PresenterProtocol:InteractorPresentationProtocol, ViewDelegateProtocol { }

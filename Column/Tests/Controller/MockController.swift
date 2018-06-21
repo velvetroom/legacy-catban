@@ -1,7 +1,7 @@
 import Foundation
 @testable import Column
 
-class MockController:Controller {
+class MockController:Interactor {
     var onDone:(() -> Void)?
     var onDelete:(() -> Void)?
     
