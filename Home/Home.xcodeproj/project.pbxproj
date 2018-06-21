@@ -12,6 +12,9 @@
 		DA15451720A46DAD00CCC59D /* MockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockController.swift */; };
 		DA1F31E720B44B660076ECAF /* TestController_CreateColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F31E620B44B660076ECAF /* TestController_CreateColumn.swift */; };
 		DA3BA75820C2D41F004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */; };
+		DA3D81B920DBBAF7004E9E85 /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D81B820DBBAF7004E9E85 /* Tools.framework */; };
+		DA3D81BA20DBBB05004E9E85 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B894120B690FF00B67ED5 /* Canvas.framework */; };
+		DA3D81BB20DBBB11004E9E85 /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D81B820DBBAF7004E9E85 /* Tools.framework */; };
 		DA4493C120D8E7B300A66CDF /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4493C020D8E7B300A66CDF /* ViewContent.swift */; };
 		DA4493C420D8EA0E00A66CDF /* ViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4493C320D8EA0E00A66CDF /* ViewModelContent.swift */; };
 		DA4493C620D8EA1C00A66CDF /* ViewModelMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4493C520D8EA1C00A66CDF /* ViewModelMenu.swift */; };
@@ -70,6 +73,7 @@
 		DA15451620A46DAD00CCC59D /* MockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockController.swift; sourceTree = "<group>"; };
 		DA1F31E620B44B660076ECAF /* TestController_CreateColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController_CreateColumn.swift; sourceTree = "<group>"; };
 		DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DA3D81B820DBBAF7004E9E85 /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4493C020D8E7B300A66CDF /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		DA4493C320D8EA0E00A66CDF /* ViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContent.swift; sourceTree = "<group>"; };
 		DA4493C520D8EA1C00A66CDF /* ViewModelMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMenu.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3D81BA20DBBB05004E9E85 /* Canvas.framework in Frameworks */,
+				DA3D81B920DBBAF7004E9E85 /* Tools.framework in Frameworks */,
 				DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */,
 				DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */,
 			);
@@ -129,6 +135,7 @@
 				DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */,
 				DA978FB920A1A81C002461E6 /* Shared.framework in Frameworks */,
 				DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */,
+				DA3D81BB20DBBB11004E9E85 /* Tools.framework in Frameworks */,
 				DA4B894420B6912200B67ED5 /* Canvas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +155,7 @@
 		DA58BD7B209B3AE10013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA3D81B820DBBAF7004E9E85 /* Tools.framework */,
 				DA4B894120B690FF00B67ED5 /* Canvas.framework */,
 				DA978FBA20A1A838002461E6 /* Board.framework */,
 				DA58BD7C209B3AE10013DBF0 /* Shared.framework */,
