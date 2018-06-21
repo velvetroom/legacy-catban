@@ -40,11 +40,11 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     func delete() {
-        var viewModel:DeleterViewModel = DeleterViewModel()
-        viewModel.itemType = String.localized(key:"Presenter_DeleteritemType", in:type(of:self))
-//        viewModel.name = self.interactor.state
-        let view:PresentingViewProtocol = DeleterFactory.makeWith(interactor:self.interactor, and:viewModel)
-        self.transition?.present(view:view)
+        guard
+            let selected:String = self.state.selected
+        else { return }
+        self.interactor.stateDeleteProjectWith(identifier:selected)
+        self.interactor.openDeleter()
     }
     
     public func willAppear() {
@@ -63,17 +63,22 @@ public class Presenter:NSObject, PresenterProtocol {
     
     private func selectCurrentItem() {
         let viewModel:ViewModelList = self.viewModel.property()
-        guard
-            viewModel.items.isEmpty == false
-        else { return }
+        if viewModel.items.isEmpty == false {
+            if let identifier:String = self.state.selected {
+                self.selectItemWith(identifier:identifier, from:viewModel)
+            } else {
+                self.selectItemAt(index:0)
+            }
+        }
+    }
+    
+    private func selectItemWith(identifier:String, from viewModel:ViewModelList) {
         var index:Int = 0
-        if let identifier:String = self.state.selected {
-            let countItems:Int = viewModel.items.count
-            for indexItem:Int in 0 ..< countItems {
-                if viewModel.items[indexItem].identifier == identifier {
-                    index = indexItem
-                    break
-                }
+        let countItems:Int = viewModel.items.count
+        for indexItem:Int in 0 ..< countItems {
+            if viewModel.items[indexItem].identifier == identifier {
+                index = indexItem
+                break
             }
         }
         self.selectItemAt(index:index)
@@ -83,5 +88,11 @@ public class Presenter:NSObject, PresenterProtocol {
         var viewModel:ViewModelSelected = ViewModelSelected()
         viewModel.indexPath = IndexPath(item:index, section:0)
         self.viewModel.update(property:viewModel)
+        self.stateSelectAt(index:index)
+    }
+    
+    private func stateSelectAt(index:Int) {
+        let viewModel:ViewModelList = self.viewModel.property()
+        self.state.selected = viewModel.items[index].identifier
     }
 }

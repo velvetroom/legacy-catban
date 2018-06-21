@@ -13,6 +13,13 @@ extension Interactor {
         self.state = state
     }
     
+    func stateDeleteProjectWith(identifier:String) {
+        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
+        let state:StateDelete = StateDelete()
+        state.project = project
+        self.state = state
+    }
+    
     func stateAddProject() {
         let state:StateAdd = StateAdd()
         self.state = state

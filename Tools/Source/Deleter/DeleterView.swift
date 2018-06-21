@@ -7,4 +7,19 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View
         super.initProperties()
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
     }
+    
+    override func didLoad() {
+        super.didLoad()
+        self.configureViewModel()
+    }
+    
+    private func configureViewModel() {
+        var viewModel:DeleterViewModel = self.viewModel.property()
+        viewModel.observing = self.updated
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:DeleterViewModel) {
+        
+    }
 }

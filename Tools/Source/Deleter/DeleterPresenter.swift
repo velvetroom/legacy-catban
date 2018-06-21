@@ -11,4 +11,8 @@ class DeleterPresenter<Interactor:DeleterInteractorProtocol>:PresenterProtocol {
     func confirm() {
         self.interactor.deleteConfirmed()
     }
+    
+    func cancel() {
+        self.interactor.deleteCancelled()
+    }
 }

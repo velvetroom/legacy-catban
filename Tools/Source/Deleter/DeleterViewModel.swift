@@ -3,11 +3,11 @@ import Shared
 
 public struct DeleterViewModel:ViewModelPropertyProtocol {
     public var observing:((DeleterViewModel) -> Void)?
-    public var itemType:String
+    public var title:String
     public var name:String
     
     public init() {
-        self.itemType = String()
+        self.title = String()
         self.name = String()
     }
 }

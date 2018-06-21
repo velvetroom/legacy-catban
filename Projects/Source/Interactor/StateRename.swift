@@ -17,5 +17,6 @@ class StateRename:StateProtocol {
     func namerFinishedWith(name:String, interactor:Interactor) {
         self.project.name = name
         interactor.updated(project:self.project)
+        interactor.stateDefault()
     }
 }

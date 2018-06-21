@@ -15,5 +15,6 @@ class StateAdd:StateProtocol {
         let project:ProjectProtocol = ProjectFactory.newProject()
         project.name = name
         interactor.add(project:project)
+        interactor.stateDefault()
     }
 }
