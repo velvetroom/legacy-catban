@@ -1,8 +1,9 @@
 import Foundation
 import Shared
 import Board
+import Tools
 
-public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol {
+public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, NamerInteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public var project:ProjectManagedProtocol!
     
@@ -25,9 +26,22 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol {
     }
     
     public func createNewColumn() {
+        var viewModel:NamerViewModelContent = NamerViewModelContent()
+        viewModel.title = String.localized(key:"Interactor_Namer_Title", in:type(of:self))
+        let namer:ViewProtocol = NamerFactory.makeWith(interactor:self, and:viewModel)
+        self.presenter?.transition?.pushTo(view:namer)
+    }
+    
+    public func namerFinishedWith(name:String) {
         let column:ColumnProtocol = ColumnFactory.newColumn()
+        column.name = name
         self.project.add(column:column)
-        self.presenter?.transition?.transitionTo(column:column, in:self.project)
+        self.presenter?.shouldUpdate()
+        self.saveProject()
+    }
+    
+    public func namerCancelled() {
+        self.presenter?.shouldUpdate()
     }
     
     public func saveProject() {

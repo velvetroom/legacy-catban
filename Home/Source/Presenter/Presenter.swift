@@ -27,6 +27,7 @@ public class Presenter:PresenterProtocol {
     
     public func shouldUpdate() {
         self.updateMenuViewModel(show:true)
+        self.canvas.refresh()
     }
     
     private func configureCanvas() {
