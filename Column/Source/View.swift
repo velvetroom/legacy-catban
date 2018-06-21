@@ -8,8 +8,32 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
         self.configureViewModel()
     }
     
+    @objc func selectorDone(button:UIBarButtonItem) {
+        self.presenter.done()
+    }
+    
+    @objc func selectorRename(button:UIBarButtonItem) {
+        self.presenter.rename()
+    }
+    
+    @objc func selectorDelete(button:UIBarButtonItem) {
+        self.presenter.delete()
+    }
+    
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
+        let imageRename:UIImage = UIImage(name:ViewConstants.Icons.rename, in:type(of:self))
+        let imageDelete:UIImage = UIImage(name:ViewConstants.Icons.delete, in:type(of:self))
+        let fixedSpace:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.fixedSpace,
+                                                         target:nil, action:nil)
+        let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done, target:self,
+                                                         action:#selector(self.selectorDone(button:)))
+        let buttonRename:UIBarButtonItem = UIBarButtonItem(image:imageRename, style:UIBarButtonItemStyle.plain,
+                                                           target:self, action:#selector(self.selectorRename(button:)))
+        let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:imageDelete, style:UIBarButtonItemStyle.plain,
+                                                           target:self, action:#selector(self.selectorDelete(button:)))
+        fixedSpace.width = ViewConstants.Navigation.fixedSpace
+        self.navigationItem.rightBarButtonItems = [buttonDone, fixedSpace, buttonRename, buttonDelete]
     }
     
     private func configureViewModel() {
@@ -20,21 +44,5 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     
     private func updated(viewModel:ViewModelContent) {
         self.content.labelName.text = viewModel.name
-    }
-    
-    private func connectOutlets() {
-//        self.viewScroll.viewBase?.viewBar.deleteButton.addTarget(
-//            self, action:#selector(self.selectorDelete(button:)), for:UIControlEvents.touchUpInside)
-//        self.viewScroll.viewBase?.viewInput.doneButton.addTarget(
-//            self, action:#selector(self.selectorDone(button:)), for:UIControlEvents.touchUpInside)
-//        self.viewScroll.viewBase?.viewInput.field.delegate = self
-    }
-    
-    @objc func selectorDelete(button:UIButton) {
-//        self.presenter?.delete()
-    }
-    
-    @objc func selectorDone(button:UIButton) {
-//        self.presenter?.done()
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
 import Shared
+import Tools
 
 public class Presenter:PresenterProtocol {
     public weak var presenting:PresentingViewProtocol?
@@ -12,12 +13,20 @@ public class Presenter:PresenterProtocol {
         self.configureViewModel()
     }
     
+    public func shouldUpdate() {
+        self.configureViewModel()
+    }
+    
     func done() {
-        
+        self.transition?.transitionToHome(project:self.interactor.project)
     }
     
     func rename() {
-        
+        var viewModel:NamerViewModelContent = NamerViewModelContent()
+        viewModel.currentName = self.interactor.column.name
+        viewModel.title = String.localized(key:"Presenter_Namer_Title", in:type(of:self))
+        let namer:PresentingViewProtocol = NamerFactory.makeWith(interactor:self.interactor, and:viewModel)
+        self.transition?.pushTo(view:namer)
     }
     
     func delete() {
