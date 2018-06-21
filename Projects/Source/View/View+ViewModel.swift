@@ -34,6 +34,7 @@ extension View {
     
     private func updated(viewModel:ViewModelContent) {
         self.content.viewEmpty.isHidden = viewModel.emptyHidden
+        self.content.viewSelector.isHidden = viewModel.selectorHidden
         self.content.viewList.isHidden = viewModel.listHidden
     }
     

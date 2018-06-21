@@ -13,9 +13,11 @@ class ViewModelFactory {
         var viewModel:ViewModelContent = ViewModelContent()
         if board.countProjects > 0 {
             viewModel.emptyHidden = true
+            viewModel.selectorHidden = false
             viewModel.listHidden = false
         } else {
             viewModel.emptyHidden = false
+            viewModel.selectorHidden = true
             viewModel.listHidden = true
         }
         return viewModel
