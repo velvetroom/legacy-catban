@@ -26,7 +26,7 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View
     
     @objc func selectorCancel(button:UIButton) {
         self.closeDeleter { [weak self] in
-            self?.presenter.confirm()
+            self?.presenter.cancel()
         }
     }
     

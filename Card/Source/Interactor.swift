@@ -1,27 +1,24 @@
 import Foundation
 import Shared
 import Board
+import Tools
 
-public class Interactor:InteractorCardProtocol {
+public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
     public weak var presenter:InteractorPresentationProtocol?
     public weak var card:CardProtocol!
     public var project:ProjectManagedProtocol!
 
     public required init() { }
+    public func deleteCancelled() { }
+    
+    public func deleteConfirmed() {
+        self.project.remove(card:self.card)
+        self.done()
+    }
     
     func done() {
         self.save()
         self.presenter?.transition?.transitionToHome(project:self.project)
-    }
-    
-    func delete() {
-        self.project.remove(card:self.card)
-        self.save()
-        self.presenter?.transition?.transitionToHome(project:self.project)
-    }
-    
-    func update(content:String) {
-        self.card.content = content
     }
     
     private func save() {

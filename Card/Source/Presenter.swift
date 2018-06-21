@@ -12,20 +12,26 @@ public class Presenter:PresenterProtocol {
         self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
     }
     
+    public func didLoad() {
+        var viewModel:ViewModelContent = self.viewModel.property()
+        viewModel.title = self.interactor.card.container!.name
+        viewModel.text = self.interactor.card.content
+        self.viewModel.update(property:viewModel)
+    }
+    
     func done() {
         self.interactor.done()
     }
     
-    func delete() {/*
-        self.outlets.viewText?.resignFirstResponder()
-        let presenter:PresenterDelete = PresenterDelete()
-        presenter.controller = self.controller
-        presenter.view = self.outlets.view
-        presenter.card = self.controller.card
-        presenter.askConfirmation()*/
+    func delete() {
+        var viewModel:DeleterViewModel = DeleterViewModel()
+        viewModel.name = self.interactor.card.container!.name
+        viewModel.title = String.localized(key:"Presenter_Deleter_Title", in:type(of:self))
+        let deleter:ViewProtocol = DeleterFactory.makeWith(interactor:self.interactor, and:viewModel)
+        self.transition?.present(view:deleter)
     }
     
     func update(content:String) {
-        self.interactor.update(content:content)
+        self.interactor.card.content = content
     }
 }
