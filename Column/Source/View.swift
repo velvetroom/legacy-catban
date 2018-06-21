@@ -1,7 +1,26 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextFieldDelegate {
+public class View:Shared.View<Interactor, Presenter, ViewContent> {
+    public override func didLoad() {
+        super.didLoad()
+        self.configureView()
+        self.configureViewModel()
+    }
+    
+    private func configureView() {
+        self.title = String.localized(key:"View_title", in:type(of:self))
+    }
+    
+    private func configureViewModel() {
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.observing = self.updated
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:ViewModelContent) {
+        self.content.labelName.text = viewModel.name
+    }
     
     private func connectOutlets() {
 //        self.viewScroll.viewBase?.viewBar.deleteButton.addTarget(
@@ -17,10 +36,5 @@ public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextFieldDe
     
     @objc func selectorDone(button:UIButton) {
 //        self.presenter?.done()
-    }
-    
-    public func textFieldShouldReturn(_ textField:UITextField) -> Bool {
-//        self.presenter?.done()
-        return true
     }
 }

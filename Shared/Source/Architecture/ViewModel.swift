@@ -14,18 +14,20 @@ open class ViewModel {
         property.notifyObserver()
     }
     
-    open func property<ViewModelProperty:ViewModelPropertyProtocol>() -> ViewModelProperty! {
+    open func property<ViewModelProperty:ViewModelPropertyProtocol>() -> ViewModelProperty {
         let identifier:ObjectIdentifier = ObjectIdentifier(ViewModelProperty.self)
-        return self.properties[identifier] as? ViewModelProperty
+        guard
+            let viewModel:ViewModelProperty = self.properties[identifier] as? ViewModelProperty
+        else { return ViewModelProperty() }
+        return viewModel
     }
     
     private func observedProperty<ViewModelProperty:ViewModelPropertyProtocol>(
         property:ViewModelProperty) -> ViewModelProperty {
         var property:ViewModelProperty = property
-        if let previousProperty:ViewModelProperty = self.property() {
-            if previousProperty.observing != nil {
-                property.observing = previousProperty.observing
-            }
+        let previousProperty:ViewModelProperty = self.property()
+        if previousProperty.observing != nil {
+            property.observing = previousProperty.observing
         }
         return property
     }

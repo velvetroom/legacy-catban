@@ -1,71 +1,40 @@
 import UIKit
-import Shared
 
-class ViewContent:UIView {
-    private(set) weak var viewBar:ViewBar!
-    private(set) weak var viewInput:ViewInput!
-    private(set) weak var icon:UIImageView!
+public class ViewContent:UIView {
+    weak var labelName:UILabel!
     
-    init() {
+    public init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryOutlets()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
-    required init?(coder:NSCoder) {
+    public required init?(coder:NSCoder) {
         return nil
     }
     
     private func configureView() {
         self.clipsToBounds = true
+        self.backgroundColor = UIColor.white
     }
     
-    private func factoryOutlets() {
-        self.factoryBar()
-        self.factoryIcon()
-        self.factoryInput()
+    private func makeOutlets() {
+        let labelName:UILabel = UILabel()
+        labelName.isUserInteractionEnabled = false
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        labelName.backgroundColor = UIColor.clear
+        labelName.textColor = UIColor.black
+        labelName.font = UIFont.systemFont(ofSize:ViewConstants.Name.fontSize, weight:UIFont.Weight.medium)
+        self.labelName = labelName
+        self.addSubview(labelName)
     }
     
-    private func factoryBar() {
-        let viewBar:ViewBar = ViewBar()
-        self.viewBar = viewBar
-        
-        self.addSubview(viewBar)
-        
-        viewBar.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
-        viewBar.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
-        viewBar.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
-        viewBar.heightAnchor.constraint(equalToConstant:ViewConstants.Bar.height).isActive = true
-    }
-    
-    private func factoryIcon() {
-        let icon:UIImageView = UIImageView()
-        icon.isUserInteractionEnabled = false
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.clipsToBounds = true
-        icon.contentMode = UIViewContentMode.center
-        icon.image = UIImage(name:ViewConstants.Icon.icon, in:type(of:self))
-        self.icon = icon
-        
-        self.addSubview(icon)
-        
-        icon.topAnchor.constraint(
-            equalTo:self.safeAreaLayoutGuide.topAnchor, constant:ViewConstants.Icon.top).isActive = true
-        icon.heightAnchor.constraint(equalToConstant:ViewConstants.Icon.height).isActive = true
-        icon.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
-        icon.widthAnchor.constraint(equalToConstant:ViewConstants.Icon.width).isActive = true
-    }
-    
-    private func factoryInput() {
-        let viewInput:ViewInput = ViewInput()
-        self.viewInput = viewInput
-        
-        self.addSubview(viewInput)
-        
-        viewInput.topAnchor.constraint(
-            equalTo:self.icon.bottomAnchor, constant:ViewConstants.Input.top).isActive = true
-        viewInput.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        viewInput.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        viewInput.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
+    private func layoutOutlets() {
+        self.labelName.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
+        self.labelName.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor,
+                                             constant:ViewConstants.Name.left).isActive = true
+        self.labelName.heightAnchor.constraint(equalToConstant:ViewConstants.Name.height).isActive = true
+        self.labelName.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
     }
 }

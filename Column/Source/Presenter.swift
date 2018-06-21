@@ -8,27 +8,25 @@ public class Presenter:PresenterProtocol {
     
     public required init() { }
     
-//    func didLoad(view:Shared.View) {
-//        self.loadOutlets(view:view)
-//    }
-//
-//    func shouldUpdate() {
-//        self.outlets.viewField?.text = self.controller.column.name
-//    }
+    public func didLoad() {
+        self.configureViewModel()
+    }
     
     func done() {
-//        self.outlets.viewField?.resignFirstResponder()
-        self.updateColumn()
-//        self.controller.done()
+        
+    }
+    
+    func rename() {
+        
     }
     
     func delete() {
+        
     }
     
-    private func updateColumn() {
-//        guard
-//            let name:String = self.outlets.viewField?.text
-//        else { return }
-//        self.controller.column.name = name
+    private func configureViewModel() {
+        var viewModel:ViewModelContent = self.viewModel.property()
+        viewModel.name = self.interactor.column.name
+        self.viewModel.update(property:viewModel)
     }
 }
