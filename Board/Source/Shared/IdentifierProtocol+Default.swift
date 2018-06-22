@@ -5,7 +5,7 @@ extension IdentifierProtocol {
         guard
             self.identifier.isEmpty == false,
             model.identifier.isEmpty == false
-            else { return false }
+        else { return false }
         return self.identifier == model.identifier
     }
 }
