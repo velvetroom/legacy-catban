@@ -59,5 +59,4 @@ class TestNamerPresenter:XCTestCase {
         XCTAssertFalse(viewModel!.statusValidHidden, "Not validated")
         XCTAssertTrue(viewModel!.statusErrorHidden, "Not validated")
     }
-    
 }

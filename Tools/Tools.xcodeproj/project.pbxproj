@@ -12,7 +12,7 @@
 		DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */; };
 		DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50820DCE1380085BA58 /* TestDeleterView.swift */; };
 		DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */; };
-		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
+		DA13EF4320D3CA2A00475A16 /* TestNamerView_Calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */; };
 		DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424320D27F0700587AF3 /* DeleterFactory.swift */; };
@@ -42,10 +42,6 @@
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
 		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
-		DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */; };
-		DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */; };
-		DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */; };
-		DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */; };
 		DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */; };
 		DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */; };
 		DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */; };
@@ -79,7 +75,7 @@
 		DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterPresenter.swift; sourceTree = "<group>"; };
 		DA10A50820DCE1380085BA58 /* TestDeleterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterView.swift; sourceTree = "<group>"; };
 		DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterPresenter.swift; sourceTree = "<group>"; };
-		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
+		DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerView_Calls.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewMenu.swift; sourceTree = "<group>"; };
 		DA44424320D27F0700587AF3 /* DeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterFactory.swift; sourceTree = "<group>"; };
@@ -110,10 +106,6 @@
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
 		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
-		DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteFactory.swift; sourceTree = "<group>"; };
-		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
-		DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
-		DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerFactory.swift; sourceTree = "<group>"; };
 		DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerPresenter.swift; sourceTree = "<group>"; };
 		DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerView.swift; sourceTree = "<group>"; };
@@ -223,7 +215,6 @@
 			children = (
 				DA44424220D27EF400587AF3 /* Deleter */,
 				DAED6D7920CF9A2B002AB9F9 /* Namer */,
-				DAE5E4FE20CEB631005A8F34 /* PresenterDelete */,
 				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
 			);
 			path = Source;
@@ -262,11 +253,11 @@
 		DA4BD74C20CA4F33003257FA /* Namer */ = {
 			isa = PBXGroup;
 			children = (
-				DA13EF4220D3CA2A00475A16 /* TestNamer.swift */,
-				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
+				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
 				DAF88C4120D12F900048FFC5 /* TestNamerView.swift */,
+				DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */,
 				DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */,
 				DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */,
 				DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */,
@@ -282,17 +273,6 @@
 				DA4BD75820CA525B003257FA /* Shared.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DAE5E4FE20CEB631005A8F34 /* PresenterDelete */ = {
-			isa = PBXGroup;
-			children = (
-				DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */,
-				DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */,
-				DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */,
-				DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */,
-			);
-			path = PresenterDelete;
 			sourceTree = "<group>";
 		};
 		DAED6D7920CF9A2B002AB9F9 /* Namer */ = {
@@ -428,12 +408,10 @@
 			files = (
 				DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */,
 				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
-				DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */,
 				DAED6D8520CF9CBD002AB9F9 /* NamerViewContent.swift in Sources */,
 				DA44424E20D280B500587AF3 /* DeleterViewContent.swift in Sources */,
 				DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */,
 				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
-				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
 				DA4571FC20D397C10066764B /* NamerViewModelState.swift in Sources */,
 				DA44424620D27F4100587AF3 /* DeleterViewModel.swift in Sources */,
 				DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */,
@@ -455,8 +433,6 @@
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */,
 				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
-				DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */,
-				DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +454,7 @@
 				DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */,
 				DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */,
 				DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */,
-				DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */,
+				DA13EF4320D3CA2A00475A16 /* TestNamerView_Calls.swift in Sources */,
 				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
 				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
 				DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */,

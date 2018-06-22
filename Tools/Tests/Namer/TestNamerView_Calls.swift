@@ -1,7 +1,7 @@
 import XCTest
 @testable import Tools
 
-class TestNamer:XCTestCase {
+class TestNamerView_Calls:XCTestCase {
     private var interactor:MockNamerInteractorProtocol!
     private var view:NamerView<MockNamerInteractorProtocol>!
     private var transition:MockTransitionProtocol!
