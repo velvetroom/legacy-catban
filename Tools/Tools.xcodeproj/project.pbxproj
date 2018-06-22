@@ -30,7 +30,7 @@
 		DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */; };
 		DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73E20CA4F29003257FA /* NamerError.swift */; };
 		DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */; };
-		DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */; };
+		DA4BD75220CA4F33003257FA /* TestKeyboardAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */; };
 		DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */; };
 		DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */; };
 		DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */; };
@@ -95,7 +95,7 @@
 		DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD73E20CA4F29003257FA /* NamerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerError.swift; sourceTree = "<group>"; };
 		DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
-		DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterForKeyboard.swift; sourceTree = "<group>"; };
+		DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestKeyboardAdjuster.swift; sourceTree = "<group>"; };
 		DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorVisible.swift; sourceTree = "<group>"; };
 		DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorComposite.swift; sourceTree = "<group>"; };
 		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
@@ -224,20 +224,20 @@
 			isa = PBXGroup;
 			children = (
 				DA13EF4420D3CB7400475A16 /* Shared */,
+				DA4BD74920CA4F33003257FA /* KeyboardAdjuster */,
 				DA10A50120DCDD870085BA58 /* Deleter */,
 				DA4BD74C20CA4F33003257FA /* Namer */,
-				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		DA4BD74920CA4F33003257FA /* PresenterForKeyboard */ = {
+		DA4BD74920CA4F33003257FA /* KeyboardAdjuster */ = {
 			isa = PBXGroup;
 			children = (
-				DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */,
+				DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */,
 				DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */,
 			);
-			path = PresenterForKeyboard;
+			path = KeyboardAdjuster;
 			sourceTree = "<group>";
 		};
 		DA4BD74C20CA4F33003257FA /* Namer */ = {
@@ -456,7 +456,7 @@
 				DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */,
 				DA13EF4320D3CA2A00475A16 /* TestNamerView_Calls.swift in Sources */,
 				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
-				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
+				DA4BD75220CA4F33003257FA /* TestKeyboardAdjuster.swift in Sources */,
 				DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

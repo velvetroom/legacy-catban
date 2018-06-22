@@ -20,6 +20,7 @@ class TestDeleterView:XCTestCase {
         self.deleter.transition = self.transition
         self.presenter.view = self.deleter
         XCTAssertNotNil(self.deleter.view, "Loading view")
+        self.deleter.view.frame = CGRect(x:0, y:0, width:100, height:100)
     }
     
     func testCancelCloseDeleter() {

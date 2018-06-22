@@ -1,15 +1,18 @@
 import UIKit
 
 class KeyboardAdjuster:KeyboardAdjusterProtocol {
-    weak var view:UIView?
     weak var superview:UIView?
     weak var layoutBottom:NSLayoutConstraint?
     weak var notificationCenter:NotificationCenter!
+    weak var view:UIView? {
+        didSet {
+            self.configureView()
+            self.configureLayout()
+        }
+    }
     
     init() {
         self.notificationCenter = NotificationCenter.default
-        self.configureView()
-        self.configureLayout()
         self.startListening()
     }
     
