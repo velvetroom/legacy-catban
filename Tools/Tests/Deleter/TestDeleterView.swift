@@ -71,4 +71,13 @@ class TestDeleterView:XCTestCase {
         self.deleter.orientationChanged(size:size)
         XCTAssertEqual(self.deleter.content.frame.size, size, "Failes to update frame")
     }
+    
+    func testUpdateViewModel() {
+        var viewModel:DeleterViewModel = DeleterViewModel()
+        viewModel.name = "lorem ipsum"
+        viewModel.title = "hello world"
+        self.deleter.viewModel.update(property:viewModel)
+        XCTAssertEqual(self.deleter.content.viewMenu.labelTitle.text, viewModel.title, "Not updated")
+        XCTAssertEqual(self.deleter.content.viewMenu.labelName.text, viewModel.name, "Not updated")
+    }
 }

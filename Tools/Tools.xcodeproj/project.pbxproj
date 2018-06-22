@@ -244,8 +244,8 @@
 			children = (
 				DA13EF4420D3CB7400475A16 /* Shared */,
 				DA10A50120DCDD870085BA58 /* Deleter */,
-				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
 				DA4BD74C20CA4F33003257FA /* Namer */,
+				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
