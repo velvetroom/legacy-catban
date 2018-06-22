@@ -15,7 +15,9 @@ class TestInteractor:XCTestCase {
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Home.View()
         self.project = MockProjectManagedProtocol()
+        self.transition = MockTransitionProtocol()
         self.view.presenter.interactor.project = self.project
+        self.view.transition = self.transition
     }
     
     func testSavesProject() {
@@ -24,62 +26,37 @@ class TestInteractor:XCTestCase {
         self.view.presenter.interactor.project = MockProjectManagedProtocol()
         self.view.presenter.interactor.saveProject()
         XCTAssertTrue(called, "Failed to save")
-    }/*
+    }
     
     func testCreateCardTransitionsToCard() {
         var transitioned:Bool = false
-        self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
-            transitioned = true
-        }
-        
-        self.controller.createNewCard()
-        XCTAssertTrue(transitioned, "Failed to transition")
-    }
-    
-    func testEditCardTransitionsToCard() {
-        var transitioned:Bool = false
-        self.transition.onTransitionToCard = { (card:CardProtocol, project:ProjectManagedProtocol) in
-            transitioned = true
-        }
-        
-        self.controller.editCardWith(identifier:Constants.identifier)
+        self.transition.onTransitionToCard = { transitioned = true }
+        self.view.presenter.interactor.createNewCard()
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     
     func testCreateColumnTransitionsToColumn() {
         var transitioned:Bool = false
-        self.transition.onTransitionToColumn = {
-            transitioned = true
-        }
-        
-        self.controller.createNewColumn()
+        self.transition.onPush = { transitioned = true }
+        self.view.presenter.interactor.createNewColumn()
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     
     func testEditColumnTransitionsToColumn() {
         var transitioned:Bool = false
+        let identifier:String = "hello world"
         var column:ColumnProtocol = ColumnFactory.newColumn()
-        column.identifier = Constants.identifier
+        column.identifier = identifier
         self.project.add(column:column)
-        self.transition.onTransitionToColumn = {
-            transitioned = true
-        }
-        
-        self.controller.editColumnWith(identifier:Constants.identifier)
+        self.transition.onTransitionToColumn = { transitioned = true }
+        self.view.presenter.interactor.editColumnWith(identifier:identifier)
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     
     func testOpenProjectTransitions() {
         var transitioned:Bool = false
-        var column:ColumnProtocol = ColumnFactory.newColumn()
-        column.identifier = Constants.identifier
-        self.project.add(column:column)
-        self.transition.onTransitionToProjects = { (board:BoardProjectsProtocol) in
-            XCTAssertEqual(board.countProjects, 1, "Failed to unmanage project before transition")
-            transitioned = true
-        }
-        
-        self.controller.openProjects()
+        self.transition.onTransitionToProjects = { transitioned = true }
+        self.view.presenter.interactor.openProjects()
         XCTAssertTrue(transitioned, "Failed to transition")
-    }*/
+    }
 }

@@ -8,6 +8,7 @@ class TestPresenterMenu:XCTestCase {/*
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.presenter = PresenterMenu()
         self.view = View()
         self.controller = MockInteractor()

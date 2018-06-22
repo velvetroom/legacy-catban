@@ -1,4 +1,6 @@
 import XCTest
+import Shared
+import Canvas
 @testable import Home
 
 class TestViewMenu:XCTestCase {
@@ -7,6 +9,7 @@ class TestViewMenu:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.view = ViewMenu()
         self.presenter = MockPresenterMenu()
         self.view.presenter = self.presenter

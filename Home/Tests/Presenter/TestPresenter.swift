@@ -15,6 +15,7 @@ class TestPresenter:XCTestCase {/*
     
     override func setUp() {
         super.setUp()
+        Configuration.canvasType = Canvas.self
         self.presenter = Presenter()
         self.controller = Interactor()
         self.presenter.controller = self.controller

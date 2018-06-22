@@ -167,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				DA85C50120DD2955007CDF61 /* MockNotificationCenter.swift */,
+				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
+				DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */,
+				DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -276,9 +279,6 @@
 			children = (
 				DAFEF367209AF8C700740A88 /* TestInteractor.swift */,
 				DA15451620A46DAD00CCC59D /* MockInteractor.swift */,
-				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
-				DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */,
-				DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
