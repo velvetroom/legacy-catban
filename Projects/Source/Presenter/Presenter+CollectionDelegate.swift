@@ -70,7 +70,7 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
         } else {
             centreY = view.bounds.midY
         }
-        var viewModel:ViewModelSelector = ViewModelSelector()
+        var viewModel:ViewModelSelector = self.viewModel.property()
         viewModel.positionY = centreY - view.contentOffset.y
         self.viewModel.update(property:viewModel)
     }

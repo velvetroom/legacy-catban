@@ -43,7 +43,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextViewDel
     }
     
     private func configureViewModel() {
-        var viewModel:ViewModelContent = ViewModelContent()
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }

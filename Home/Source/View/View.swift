@@ -39,13 +39,13 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func configureMenuViewModel() {
-        var viewModel:ViewModelMenu = ViewModelMenu()
+        var viewModel:ViewModelMenu = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func configureContentViewModel() {
-        var viewModel:ViewModelContent = ViewModelContent()
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }

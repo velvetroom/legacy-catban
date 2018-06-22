@@ -49,7 +49,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func centreSelector() {
-        var viewModel:ViewModelSelector = ViewModelSelector()
+        var viewModel:ViewModelSelector = self.viewModel.property()
         viewModel.positionY = self.content.bounds.height / 2.0
         self.viewModel.update(property:viewModel)
     }

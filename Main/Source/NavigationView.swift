@@ -61,7 +61,7 @@ class NavigationView:UINavigationController {
     }
     
     private func configureViewModelFor(view:ViewProtocol) {
-        var viewModel:ViewModelNavigation = ViewModelNavigation()
+        var viewModel:ViewModelNavigation = view.viewModel.property()
         viewModel.observing = self.updated
         view.viewModel.update(property:viewModel)
     }

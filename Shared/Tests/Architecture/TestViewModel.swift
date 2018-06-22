@@ -12,9 +12,7 @@ class TestViewModel:XCTestCase {
     }
     
     func testUpdatesNavigation() {
-        guard
-            var navigation:ViewModelNavigation = self.viewModel.property()
-        else { return }
+        var navigation:ViewModelNavigation = self.viewModel.property()
         let current:Bool = navigation.toolbarHidden
         navigation.toolbarHidden = !current
         self.viewModel.update(property:navigation)

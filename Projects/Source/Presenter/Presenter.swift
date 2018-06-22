@@ -85,7 +85,7 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     private func selectItemAt(index:Int) {
-        var viewModel:ViewModelSelected = ViewModelSelected()
+        var viewModel:ViewModelSelected = self.viewModel.property()
         viewModel.indexPath = IndexPath(item:index, section:0)
         self.viewModel.update(property:viewModel)
         self.stateSelectAt(index:index)

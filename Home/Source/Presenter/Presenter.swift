@@ -43,7 +43,7 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateMenuViewModel(show:Bool) {
-        var viewModel:ViewModelMenu = ViewModelMenu()
+        var viewModel:ViewModelMenu = self.viewModel.property()
         viewModel.show = show
         self.viewModel.update(property:viewModel)
     }

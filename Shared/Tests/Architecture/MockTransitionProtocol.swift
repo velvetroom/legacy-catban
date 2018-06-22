@@ -11,4 +11,5 @@ class MockTransitionProtocol:TransitionProtocol {
     func pushTo(view:ViewProtocol) { }
     func pop() { }
     func present(view:ViewProtocol) { }
+    func dismiss() { }
 }
