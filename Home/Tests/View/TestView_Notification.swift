@@ -24,13 +24,6 @@ class TestView_Notification:XCTestCase {
         self.view.presenter.canvas.project = self.project
     }
     
-    func testRemoveObserverFromNotificationCenter() {
-        var removed:Bool = false
-        self.notificationCenter.onRemoveObserver = { removed = true }
-        self.view = nil
-        XCTAssertTrue(removed, "Not removed")
-    }
-    
     func testNotifyOrientationChange() {
         var notified:Bool = false
         self.presenter.onOrientationChange = { notified = true }

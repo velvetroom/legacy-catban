@@ -59,4 +59,13 @@ class TestInteractor:XCTestCase {
         self.view.presenter.interactor.openProjects()
         XCTAssertTrue(transitioned, "Failed to transition")
     }
+    
+    func testCloseMenuUpdatesPresenter() {
+        var called:Bool = false
+        let presenter:MockPresenter = MockPresenter()
+        self.view.presenter.interactor.presenter = presenter
+        presenter.onShouldUpdate = { called = true }
+        self.view.presenter.interactor.closedMenu()
+        XCTAssertTrue(called, "Not updated")
+    }
 }
