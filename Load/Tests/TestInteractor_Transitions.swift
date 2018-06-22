@@ -19,7 +19,7 @@ class TestInteractor_Transitions:XCTestCase {
     }
     
     func testBoardLoadedTransitionsToHome() {
-        let expect:XCTestExpectation = expectation(description:"Waiting transition")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting transition")
         self.transition.onTransitionToHome = { (project:ProjectManagedProtocol) in
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
             expect.fulfill()
@@ -31,11 +31,12 @@ class TestInteractor_Transitions:XCTestCase {
             let managed:ProjectManagedProtocol = board.manage(project:project)
             self?.interactor.open(project:managed)
         }
+        
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testTransitionsToHomeIfOneProject() {
-        let expect:XCTestExpectation = expectation(description:"Waiting transition")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting transition")
         self.configureBoardWithOneProject()
         self.transition.onTransitionToHome = { (project:ProjectManagedProtocol) in
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
@@ -47,7 +48,7 @@ class TestInteractor_Transitions:XCTestCase {
     }
     
     func testTransitionsToProjectsIfNoProject() {
-        let expect:XCTestExpectation = expectation(description:"Waiting transition")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting transition")
         MockRepositoryBoardProtocol.board = BoardFactory.newBoard()
         self.transition.onTransitionToProjects = {
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
@@ -59,7 +60,7 @@ class TestInteractor_Transitions:XCTestCase {
     }
     
     func testTransitionsToProjectsIfMultipleProjects() {
-        let expect:XCTestExpectation = expectation(description:"Waiting transition")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting transition")
         self.configureBoardWithMultipleProjects()
         self.transition.onTransitionToProjects = {
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")

@@ -17,7 +17,7 @@ class TestInteractor:XCTestCase {
     }
     
     func testLoadBoard() {
-        let expect:XCTestExpectation = expectation(description:"Waiting for board loaded")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting for board loaded")
         MockRepositoryBoardProtocol.onLoadBoard = {
             XCTAssertFalse(Thread.isMainThread, "Should not be called on main thread")
             MockRepositoryBoardProtocol.onLoadBoard = nil
@@ -29,7 +29,7 @@ class TestInteractor:XCTestCase {
     }
     
     func testSaveFactoredBoard() {
-        let expect:XCTestExpectation = expectation(description:"Waiting for save board")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting for save board")
         MockRepositoryBoardProtocol.error = NSError(domain:String(), code:0)
         MockRepositoryBoardProtocol.onSaveBoard = { (board:BoardProtocol) in
             MockRepositoryBoardProtocol.onSaveBoard = nil
@@ -42,7 +42,7 @@ class TestInteractor:XCTestCase {
     }
     
     func testSaveFactoredProject() {
-        let expect:XCTestExpectation = expectation(description:"Waiting for save board")
+        let expect:XCTestExpectation = self.expectation(description:"Waiting for save board")
         MockRepositoryBoardProtocol.error = NSError(domain:String(), code:0)
         MockRepositoryProjectProtocol.onSave = {
             MockRepositoryBoardProtocol.error = nil

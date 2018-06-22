@@ -21,7 +21,6 @@
 		DA803BB320CA94AF007BA6DD /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA803BB220CA94AF007BA6DD /* Template.framework */; };
 		DA803BB420CA94BD007BA6DD /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA803BB220CA94AF007BA6DD /* Template.framework */; };
 		DA8304AD20C2B244004E4012 /* TestInteractor_Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8304AC20C2B244004E4012 /* TestInteractor_Transitions.swift */; };
-		DAF88C2E20D0F9350048FFC5 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF88C2D20D0F9350048FFC5 /* TestPresenter.swift */; };
 		DAF88C2F20D0FAA20048FFC5 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91AEAF20C2BA4E0069B0FE /* MockRepositoryProjectProtocol.swift */; };
 		DAFD2FC7209CB2420005F5D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC6209CB2420005F5D2 /* Constants.swift */; };
 		DAFD2FC9209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */; };
@@ -53,7 +52,6 @@
 		DA8304AC20C2B244004E4012 /* TestInteractor_Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_Transitions.swift; sourceTree = "<group>"; };
 		DA91AEAF20C2BA4E0069B0FE /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DAB6133C209B3587005267A8 /* Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Load.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAF88C2D20D0F9350048FFC5 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DAFD2FC6209CB2420005F5D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryBoardProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FD4209CC7BB0005F5D2 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			children = (
 				DA58BD70209B384E0013DBF0 /* TestInteractor.swift */,
 				DA8304AC20C2B244004E4012 /* TestInteractor_Transitions.swift */,
-				DAF88C2D20D0F9350048FFC5 /* TestPresenter.swift */,
 				DAFD2FC8209CB2E30005F5D2 /* MockRepositoryBoardProtocol.swift */,
 				DA91AEAF20C2BA4E0069B0FE /* MockRepositoryProjectProtocol.swift */,
 				DAFD2FD4209CC7BB0005F5D2 /* MockTransitionProtocol.swift */,
@@ -268,7 +265,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8304AD20C2B244004E4012 /* TestInteractor_Transitions.swift in Sources */,
-				DAF88C2E20D0F9350048FFC5 /* TestPresenter.swift in Sources */,
 				DA58BD71209B384E0013DBF0 /* TestInteractor.swift in Sources */,
 				DAF88C2F20D0FAA20048FFC5 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DAFD2FD5209CC7BB0005F5D2 /* MockTransitionProtocol.swift in Sources */,
