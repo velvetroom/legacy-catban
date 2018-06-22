@@ -1,7 +1,7 @@
 import UIKit
 
 open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:UIViewController,
-ViewProtocol where Interactor == Presenter.Interactor {
+    ViewProtocol where Interactor == Presenter.Interactor {
     open weak var transition:TransitionProtocol!
     open var presenter:Presenter
     open var content:Content!
@@ -12,7 +12,7 @@ ViewProtocol where Interactor == Presenter.Interactor {
         }
     }
     
-    public var viewModel:ViewModel {
+    open var viewModel:ViewModel {
         get {
             return self.presenter.viewModel
         }
