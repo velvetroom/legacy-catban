@@ -14,8 +14,12 @@ class TestDeleterView:XCTestCase {
             interactor:self.interactor, and:DeleterViewModel()) as! DeleterView<MockDeleterInteractorProtocol>
         self.presenter = MockDeleterPresenter()
         self.transition = MockTransitionProtocol()
+        self.presenter.viewModel = self.deleter.presenter.viewModel
+        self.presenter.interactor = self.deleter.presenter.interactor
         self.deleter.presenter = self.presenter
         self.deleter.transition = self.transition
+        self.presenter.view = self.deleter
+        XCTAssertNotNil(self.deleter.view, "Loading view")
     }
     
     func testCancelCloseDeleter() {
@@ -26,21 +30,45 @@ class TestDeleterView:XCTestCase {
             expect.fulfill()
         }
         self.deleter.selectorCancel(button:UIButton())
-        self.waitForExpectations(timeout:0.5) { (error:Error?) in
-            XCTAssertTrue(closed, "Failed to close")
-        }
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(closed, "Failed to close") }
     }
     
     func testCancelCallsPresenter() {
         let expect:XCTestExpectation = self.expectation(description:String())
-        var closed:Bool = false
+        var called:Bool = false
         self.presenter.onCancel = {
-            closed = true
+            called = true
             expect.fulfill()
         }
         self.deleter.selectorCancel(button:UIButton())
-        self.waitForExpectations(timeout:0.5) { (error:Error?) in
-            XCTAssertTrue(closed, "Failed to close")
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(called, "Failed to call presenter") }
+    }
+    
+    func testConfirmCloseDeleter() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var closed:Bool = false
+        self.transition.onDimiss = {
+            closed = true
+            expect.fulfill()
         }
+        self.deleter.selectorConfirm(button:UIButton())
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(closed, "Failed to close") }
+    }
+    
+    func testConfirmCallsPresenter() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var called:Bool = false
+        self.presenter.onConfirm = {
+            called = true
+            expect.fulfill()
+        }
+        self.deleter.selectorConfirm(button:UIButton())
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(called, "Failed to call presenter") }
+    }
+    
+    func testOrientationChangedUpdatesFrame() {
+        let size:CGSize = CGSize(width:345, height:124)
+        self.deleter.orientationChanged(size:size)
+        XCTAssertEqual(self.deleter.content.frame.size, size, "Failes to update frame")
     }
 }
