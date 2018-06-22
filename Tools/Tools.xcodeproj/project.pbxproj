@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */; };
 		DA10A50520DCDE080085BA58 /* MockDeleterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */; };
+		DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */; };
 		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterFactory.swift; sourceTree = "<group>"; };
 		DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterInteractorProtocol.swift; sourceTree = "<group>"; };
+		DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterPresenter.swift; sourceTree = "<group>"; };
 		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewMenu.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */,
+				DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */,
 				DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */,
 			);
 			path = Deleter;
@@ -457,6 +460,7 @@
 			files = (
 				DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */,
 				DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */,
+				DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */,
 				DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */,
 				DAF88C4820D16A5F0048FFC5 /* TestNamerImages.swift in Sources */,
 				DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */,
