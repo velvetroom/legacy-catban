@@ -10,6 +10,8 @@
 		DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */; };
 		DA10A50520DCDE080085BA58 /* MockDeleterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */; };
 		DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */; };
+		DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50820DCE1380085BA58 /* TestDeleterView.swift */; };
+		DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */; };
 		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */; };
@@ -75,6 +77,8 @@
 		DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterFactory.swift; sourceTree = "<group>"; };
 		DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterInteractorProtocol.swift; sourceTree = "<group>"; };
 		DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterPresenter.swift; sourceTree = "<group>"; };
+		DA10A50820DCE1380085BA58 /* TestDeleterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterView.swift; sourceTree = "<group>"; };
+		DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterPresenter.swift; sourceTree = "<group>"; };
 		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewMenu.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			children = (
 				DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */,
 				DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */,
+				DA10A50820DCE1380085BA58 /* TestDeleterView.swift */,
+				DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */,
 				DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */,
 			);
 			path = Deleter;
@@ -470,10 +476,12 @@
 				DA10A50520DCDE080085BA58 /* MockDeleterInteractorProtocol.swift in Sources */,
 				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
 				DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */,
+				DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */,
 				DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */,
 				DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */,
 				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
 				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
+				DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
