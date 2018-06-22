@@ -1,34 +1,30 @@
 import XCTest
 import Shared
 import Canvas
+import Board
 @testable import Home
-@testable import Board
 
-class TestController_Transition:XCTestCase {
-    private var controller:Interactor!
+class TestInteractor:XCTestCase {
+    private var view:Home.View!
     private var transition:MockTransitionProtocol!
-    private var project:ProjectManagedProtocol!
-    private struct Constants {
-        static let identifier:String = "lorem ipsum"
-    }
+    private var project:MockProjectManagedProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
-        self.controller = Interactor()
-        self.transition = MockTransitionProtocol()
-        var card:CardProtocol = CardFactory.newCard()
-        card.identifier = Constants.identifier
-        let column:ColumnProtocol = ColumnFactory.newColumn()
-        column.add(card:card)
-        let board:BoardProtocol = BoardFactory.newBoard()
-        let project:ProjectProtocol = ProjectFactory.newProject()
-        let managed:ProjectManagedProtocol = board.manage(project:project)
-        managed.add(column:column)
-        self.project = managed
-        self.controller.project = self.project
-        self.controller.transiton = self.transition
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
+        self.view = Home.View()
+        self.project = MockProjectManagedProtocol()
+        self.view.presenter.interactor.project = self.project
     }
+    
+    func testSavesProject() {
+        var called:Bool = false
+        MockRepositoryProjectProtocol.onSave = { called = true }
+        self.view.presenter.interactor.project = MockProjectManagedProtocol()
+        self.view.presenter.interactor.saveProject()
+        XCTAssertTrue(called, "Failed to save")
+    }/*
     
     func testCreateCardTransitionsToCard() {
         var transitioned:Bool = false
@@ -68,7 +64,7 @@ class TestController_Transition:XCTestCase {
         self.transition.onTransitionToColumn = {
             transitioned = true
         }
-
+        
         self.controller.editColumnWith(identifier:Constants.identifier)
         XCTAssertTrue(transitioned, "Failed to transition")
     }
@@ -85,5 +81,5 @@ class TestController_Transition:XCTestCase {
         
         self.controller.openProjects()
         XCTAssertTrue(transitioned, "Failed to transition")
-    }
+    }*/
 }

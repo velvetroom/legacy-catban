@@ -8,7 +8,7 @@ class TestView:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.view = View()
+        self.view = Home.View()
         self.presenter = MockPresenter()
         self.view.presenter = self.presenter
     }

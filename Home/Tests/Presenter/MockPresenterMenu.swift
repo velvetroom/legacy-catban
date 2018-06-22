@@ -7,10 +7,6 @@ class MockPresenterMenu:PresenterMenu {
     var onOpenProjects:(() -> Void)?
     var onOpenAbout:(() -> Void)?
     
-    override func show() {
-        MockPresenterMenu.presenter = self
-    }
-    
     override func close() {
         self.onClose?()
     }

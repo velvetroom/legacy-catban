@@ -2,10 +2,16 @@ import UIKit
 import Shared
 
 public class View:Shared.View<Interactor, Presenter, ViewContent> {
+    var notificationCenter:NotificationCenter!
     private var buttonMenu:UIBarButtonItem!
     
+    public override func initProperties() {
+        super.initProperties()
+        self.notificationCenter = NotificationCenter.default
+    }
+    
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        self.notificationCenter.removeObserver(self)
     }
     
     public override func didLoad() {
@@ -63,8 +69,10 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func listenForOrientationChange() {
-        NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-            self?.presenter.orientationChanged()
+        self.notificationCenter.addObserver(
+            forName:Notification.Name.UIDeviceOrientationDidChange, object:nil,
+            queue:OperationQueue.main) { [weak self] (notification:Notification) in
+                self?.presenter.orientationChanged()
         }
     }
 }

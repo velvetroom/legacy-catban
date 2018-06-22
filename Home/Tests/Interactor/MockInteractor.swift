@@ -1,8 +1,8 @@
 import Foundation
+import Board
 @testable import Home
-@testable import Board
 
-class MockController:Interactor {
+class MockInteractor:Interactor {
     var onEditCardWith:((String) -> Void)?
     var onCreateNewCard:(() -> Void)?
     var onOpenProjects:(() -> Void)?
