@@ -2,7 +2,7 @@ import UIKit
 import Shared
 
 class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProtocol, UITextFieldDelegate {
-    weak var presenting:ViewProtocol?
+    weak var view:ViewProtocol?
     var interactor:Interactor!
     var viewModel:ViewModel!
     

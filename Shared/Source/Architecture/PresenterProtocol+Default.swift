@@ -3,7 +3,7 @@ import Foundation
 public extension PresenterProtocol {
     var transition:TransitionProtocol? {
         get {
-            return self.presenting?.transition
+            return self.view?.transition
         }
     }
     

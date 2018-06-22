@@ -4,7 +4,7 @@ import Shared
 import Tools
 
 public class Presenter:NSObject, PresenterProtocol {
-    public weak var presenting:ViewProtocol?
+    public weak var view:ViewProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var state:PresenterState

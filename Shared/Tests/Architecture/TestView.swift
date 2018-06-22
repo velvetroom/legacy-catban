@@ -10,13 +10,13 @@ class TestView:XCTestCase {
     
     func testInjectsViewOnPresenter() {
         let view:MockView = MockView()
-        XCTAssertNotNil(view.presenter.presenting, "Not injected")
+        XCTAssertNotNil(view.presenter.view, "Not injected")
     }
     
     func testInitWithPresenterNotInjectingView() {
         let presenter:MockPresenterProtocol = PresenterFactory.makePresenter()
         let _:MockView = MockView(presenter:presenter)
-        XCTAssertNil(presenter.presenting, "Injecting/replacing view on presenter")
+        XCTAssertNil(presenter.view, "Injecting/replacing view on presenter")
     }
     
     func testViewContent() {

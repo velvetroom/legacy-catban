@@ -74,7 +74,7 @@ ViewProtocol where Interactor == Presenter.Interactor {
     private func postInit() {
         self.content = Content()
         self.presenter.viewModel = ViewModel()
-        self.presenter.presenting = self
+        self.presenter.view = self
         self.initProperties()
     }
     
