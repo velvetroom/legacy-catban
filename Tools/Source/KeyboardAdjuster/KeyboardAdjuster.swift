@@ -1,19 +1,34 @@
 import UIKit
 
-class PresenterForKeyboard:PresenterForKeyboardProtocol {
-    weak var viewContainer:UIView?
+class KeyboardAdjuster:KeyboardAdjusterProtocol {
+    weak var view:UIView?
+    weak var superview:UIView?
     weak var layoutBottom:NSLayoutConstraint?
     weak var notificationCenter:NotificationCenter!
     
     init() {
         self.notificationCenter = NotificationCenter.default
+        self.configureView()
+        self.configureLayout()
+        self.startListening()
     }
     
     deinit {
         self.notificationCenter.removeObserver(self)
     }
     
-    func startListening() {
+    private func configureView() {
+        self.superview = self.view?.superview
+    }
+    
+    private func configureLayout() {
+        if let superview:UIView = self.superview {
+            self.layoutBottom = self.view?.bottomAnchor.constraint(equalTo:superview.bottomAnchor)
+            self.layoutBottom?.isActive = true
+        }
+    }
+    
+    private func startListening() {
         self.notificationCenter.addObserver(forName:Notification.Name.UIKeyboardWillChangeFrame, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
             self?.keyboardChanged(notification:notification)
         }
@@ -27,8 +42,8 @@ class PresenterForKeyboard:PresenterForKeyboardProtocol {
     
     private func keyboardHeightFrom(notification:Notification) -> CGFloat {
         let rect:CGRect = self.keyboardRectFrom(notification:notification)
-        if let view:UIView = self.viewContainer {
-            let height:CGFloat = view.bounds.height
+        if let superview:UIView = self.superview {
+            let height:CGFloat = superview.bounds.height
             if rect.minY < height {
                 return -rect.height
             }
@@ -55,7 +70,7 @@ class PresenterForKeyboard:PresenterForKeyboardProtocol {
     private func animateWith(keyboardHeight:CGFloat, duration:TimeInterval) {
         self.layoutBottom?.constant = keyboardHeight
         UIView.animate(withDuration:duration) { [weak self] in
-            self?.viewContainer?.layoutIfNeeded()
+            self?.superview?.layoutIfNeeded()
         }
     }
 }

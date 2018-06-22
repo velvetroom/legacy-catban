@@ -24,9 +24,6 @@
 		DA4571FC20D397C10066764B /* NamerViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571FB20D397C10066764B /* NamerViewModelState.swift */; };
 		DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD71420CA4DFF003257FA /* Tools.framework */; };
 		DA4BD73220CA4F22003257FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4BD73020CA4F22003257FA /* Localizable.strings */; };
-		DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */; };
-		DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */; };
-		DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */; };
 		DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */; };
 		DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */; };
 		DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */; };
@@ -40,6 +37,9 @@
 		DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */; };
 		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
+		DA58605620DD1B4A00777ECF /* KeyboardAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */; };
+		DA58605820DD1B7000777ECF /* KeyboardAdjusterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */; };
+		DA58605A20DD1FDC00777ECF /* KeyboardAdjusterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */; };
 		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
 		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
 		DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */; };
@@ -89,9 +89,6 @@
 		DA4BD72320CA4E5C003257FA /* TestTools.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTools.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4BD72E20CA4F0E003257FA /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA4BD73120CA4F22003257FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
-		DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboard.swift; sourceTree = "<group>"; };
-		DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardProtocol.swift; sourceTree = "<group>"; };
 		DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorVisible.swift; sourceTree = "<group>"; };
 		DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorComposite.swift; sourceTree = "<group>"; };
@@ -104,6 +101,9 @@
 		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjuster.swift; sourceTree = "<group>"; };
+		DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjusterProtocol.swift; sourceTree = "<group>"; };
+		DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjusterFactory.swift; sourceTree = "<group>"; };
 		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
 		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
 		DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerFactory.swift; sourceTree = "<group>"; };
@@ -213,21 +213,11 @@
 		DA4BD73320CA4F29003257FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DA58605420DD1ADC00777ECF /* KeyboardAdjuster */,
 				DA44424220D27EF400587AF3 /* Deleter */,
 				DAED6D7920CF9A2B002AB9F9 /* Namer */,
-				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		DA4BD73420CA4F29003257FA /* PresenterForKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */,
-				DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */,
-				DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */,
-			);
-			path = PresenterForKeyboard;
 			sourceTree = "<group>";
 		};
 		DA4BD74820CA4F33003257FA /* Tests */ = {
@@ -273,6 +263,16 @@
 				DA4BD75820CA525B003257FA /* Shared.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA58605420DD1ADC00777ECF /* KeyboardAdjuster */ = {
+			isa = PBXGroup;
+			children = (
+				DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */,
+				DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */,
+				DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */,
+			);
+			path = KeyboardAdjuster;
 			sourceTree = "<group>";
 		};
 		DAED6D7920CF9A2B002AB9F9 /* Namer */ = {
@@ -407,17 +407,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */,
-				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
 				DAED6D8520CF9CBD002AB9F9 /* NamerViewContent.swift in Sources */,
+				DA58605820DD1B7000777ECF /* KeyboardAdjusterProtocol.swift in Sources */,
 				DA44424E20D280B500587AF3 /* DeleterViewContent.swift in Sources */,
 				DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */,
-				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
 				DA4571FC20D397C10066764B /* NamerViewModelState.swift in Sources */,
 				DA44424620D27F4100587AF3 /* DeleterViewModel.swift in Sources */,
 				DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */,
 				DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */,
 				DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */,
 				DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */,
+				DA58605A20DD1FDC00777ECF /* KeyboardAdjusterFactory.swift in Sources */,
+				DA58605620DD1B4A00777ECF /* KeyboardAdjuster.swift in Sources */,
 				DA44424C20D2807900587AF3 /* DeleterView.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */,
 				DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */,
@@ -432,7 +433,6 @@
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */,
-				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
