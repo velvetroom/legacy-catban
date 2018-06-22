@@ -27,6 +27,7 @@
 		DA5B80F020DCC95D00319AD6 /* TestPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80EF20DCC95D00319AD6 /* TestPresenterProtocol.swift */; };
 		DA5B80F220DCC9DF00319AD6 /* TestViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80F120DCC9DF00319AD6 /* TestViewProtocol.swift */; };
 		DA5B80F420DCCA8A00319AD6 /* TestViewModelPropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80F320DCCA8A00319AD6 /* TestViewModelPropertyProtocol.swift */; };
+		DA5B80F620DCD09600319AD6 /* TestView_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80F520DCD09600319AD6 /* TestView_ViewModel.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */; };
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
@@ -87,6 +88,7 @@
 		DA5B80EF20DCC95D00319AD6 /* TestPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterProtocol.swift; sourceTree = "<group>"; };
 		DA5B80F120DCC9DF00319AD6 /* TestViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewProtocol.swift; sourceTree = "<group>"; };
 		DA5B80F320DCCA8A00319AD6 /* TestViewModelPropertyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelPropertyProtocol.swift; sourceTree = "<group>"; };
+		DA5B80F520DCD09600319AD6 /* TestView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView_ViewModel.swift; sourceTree = "<group>"; };
 		DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasProtocol.swift; sourceTree = "<group>"; };
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				DA5B80F320DCCA8A00319AD6 /* TestViewModelPropertyProtocol.swift */,
 				DA4F1ABF20D620DE00C0BB5C /* TestViewModel.swift */,
 				DAFFF4F620CA698700A50077 /* TestView.swift */,
+				DA5B80F520DCD09600319AD6 /* TestView_ViewModel.swift */,
 				DAB376A620D0E28B00884FA8 /* MockInteractorProtocol.swift */,
 				DAB376A920D0E2D100884FA8 /* MockPresenterProtocol.swift */,
 				DAB376AC20D0E30C00884FA8 /* MockView.swift */,
@@ -389,6 +392,7 @@
 				DA4F1AC020D620DE00C0BB5C /* TestViewModel.swift in Sources */,
 				DAB376AD20D0E30C00884FA8 /* MockView.swift in Sources */,
 				DAB376B720D0E71800884FA8 /* TestPresenterFactory.swift in Sources */,
+				DA5B80F620DCD09600319AD6 /* TestView_ViewModel.swift in Sources */,
 				DAB376AF20D0E33900884FA8 /* MockUIView.swift in Sources */,
 				DAFFF4F720CA698700A50077 /* TestView.swift in Sources */,
 				DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */,
