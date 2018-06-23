@@ -20,7 +20,6 @@
 		DA4B894020B68F9700B67ED5 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B893F20B68F9700B67ED5 /* ViewConstants.swift */; };
 		DA4B894420B6912200B67ED5 /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B894120B690FF00B67ED5 /* Canvas.framework */; };
 		DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */; };
-		DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */; };
 		DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B894920B69E5000B67ED5 /* MockPresenter.swift */; };
 		DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
@@ -45,6 +44,7 @@
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */; };
 		DAE6B51E20DE576E0084E4CE /* TestPresenter_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */; };
+		DAE6B52020DE6D050084E4CE /* TestPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51F20DE6D050084E4CE /* TestPresenterMenu.swift */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
@@ -74,7 +74,6 @@
 		DA4B893F20B68F9700B67ED5 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		DA4B894120B690FF00B67ED5 /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4B894520B69CC500B67ED5 /* PresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterMenu.swift; sourceTree = "<group>"; };
-		DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterMenu.swift; sourceTree = "<group>"; };
 		DA4B894920B69E5000B67ED5 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterMenu.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +96,7 @@
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
 		DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Canvas.swift; sourceTree = "<group>"; };
+		DAE6B51F20DE6D050084E4CE /* TestPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterMenu.swift; sourceTree = "<group>"; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,8 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				DAF7E65F209B064700B8A39A /* TestPresenter.swift */,
+				DAE6B51F20DE6D050084E4CE /* TestPresenterMenu.swift */,
 				DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */,
-				DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */,
 				DA4B894920B69E5000B67ED5 /* MockPresenter.swift */,
 				DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */,
 			);
@@ -433,10 +433,10 @@
 				DA3BA75820C2D41F004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DAE6B51E20DE576E0084E4CE /* TestPresenter_Canvas.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestInteractor.swift in Sources */,
-				DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */,
 				DA85C50220DD2955007CDF61 /* MockNotificationCenter.swift in Sources */,
 				DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockInteractor.swift in Sources */,
+				DAE6B52020DE6D050084E4CE /* TestPresenterMenu.swift in Sources */,
 				DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA914C8A20B6E7280025AE49 /* TestViewMenuClose.swift in Sources */,

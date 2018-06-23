@@ -6,6 +6,7 @@ class MockInteractor:Interactor {
     var onEditCardWith:((String) -> Void)?
     var onCreateNewCard:(() -> Void)?
     var onOpenProjects:(() -> Void)?
+    var onClosedMenu:(() -> Void)?
     
     override func editCardWith(identifier:String) {
         self.onEditCardWith?(identifier)
@@ -17,5 +18,9 @@ class MockInteractor:Interactor {
     
     override func openProjects() {
         self.onOpenProjects?()
+    }
+    
+    override func closedMenu() {
+        self.onClosedMenu?()
     }
 }

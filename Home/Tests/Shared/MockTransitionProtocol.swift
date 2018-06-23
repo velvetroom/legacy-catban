@@ -8,11 +8,11 @@ class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToProjects:(() -> Void)?
     var onPush:(() -> Void)?
     var onPresent:(() -> Void)?
+    var onDimiss:(() -> Void)?
     
     func transitionToLoad() { }
     func transitionToHome(project:ProjectManagedProtocol) { }
     func pop() { }
-    func dismiss() { }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
         self.onTransitionToProjects?()
@@ -32,5 +32,9 @@ class MockTransitionProtocol:TransitionProtocol {
     
     func present(view:ViewProtocol) {
         self.onPresent?()
+    }
+    
+    func dismiss() {
+        self.onDimiss?()
     }
 }
