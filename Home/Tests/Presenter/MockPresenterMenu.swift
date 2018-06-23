@@ -2,7 +2,6 @@ import Foundation
 @testable import Home
 
 class MockPresenterMenu:PresenterMenu {
-    static var presenter:PresenterMenu?
     var onClose:(() -> Void)?
     var onOpenProjects:(() -> Void)?
     var onOpenAbout:(() -> Void)?

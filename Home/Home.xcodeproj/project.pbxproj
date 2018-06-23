@@ -43,6 +43,8 @@
 		DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
+		DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */; };
+		DAE6B51E20DE576E0084E4CE /* TestPresenter_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */; };
 		DAF7E65D209B063300B8A39A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65C209B063300B8A39A /* Presenter.swift */; };
 		DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7E65F209B064700B8A39A /* TestPresenter.swift */; };
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
@@ -93,6 +95,8 @@
 		DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_Namer.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
+		DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter_Canvas.swift; sourceTree = "<group>"; };
 		DAF7E65C209B063300B8A39A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DAF7E65F209B064700B8A39A /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DAFEF348209AF7D800740A88 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,7 @@
 				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
 				DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */,
 				DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */,
+				DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF7E65F209B064700B8A39A /* TestPresenter.swift */,
+				DAE6B51D20DE576E0084E4CE /* TestPresenter_Canvas.swift */,
 				DA4B894720B69D7400B67ED5 /* TestPresenterMenu.swift */,
 				DA4B894920B69E5000B67ED5 /* MockPresenter.swift */,
 				DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */,
@@ -425,11 +431,13 @@
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DA85C50420DD2B6F007CDF61 /* TestView_Notification.swift in Sources */,
 				DA3BA75820C2D41F004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
+				DAE6B51E20DE576E0084E4CE /* TestPresenter_Canvas.swift in Sources */,
 				DAFEF368209AF8C700740A88 /* TestInteractor.swift in Sources */,
 				DA4B894820B69D7400B67ED5 /* TestPresenterMenu.swift in Sources */,
 				DA85C50220DD2955007CDF61 /* MockNotificationCenter.swift in Sources */,
 				DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */,
 				DA15451720A46DAD00CCC59D /* MockInteractor.swift in Sources */,
+				DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA914C8A20B6E7280025AE49 /* TestViewMenuClose.swift in Sources */,
 				DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */,
