@@ -1,8 +1,6 @@
 import UIKit
 
 class ViewText:UITextView {
-    weak var layoutBottom:NSLayoutConstraint!
-    
     init() {
         super.init(frame:CGRect.zero, textContainer:nil)
         self.clipsToBounds = true

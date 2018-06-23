@@ -26,10 +26,8 @@ public class ViewContent:UIView {
     }
     
     private func layoutText() {
-        self.viewText.layoutBottom = viewText.bottomAnchor.constraint(equalTo:self.safeAreaLayoutGuide.bottomAnchor)
         self.viewText.topAnchor.constraint(equalTo:self.safeAreaLayoutGuide.topAnchor).isActive = true
         self.viewText.leftAnchor.constraint(equalTo:self.safeAreaLayoutGuide.leftAnchor).isActive = true
         self.viewText.rightAnchor.constraint(equalTo:self.safeAreaLayoutGuide.rightAnchor).isActive = true
-        self.viewText.layoutBottom.isActive = true
     }
 }
