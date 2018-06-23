@@ -26,7 +26,6 @@
 		DABC3CAE20A5D563009600BB /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC3CAD20A5D563009600BB /* MockView.swift */; };
 		DABC3CB420A5E2AB009600BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DABC3CB220A5E2AB009600BB /* Localizable.strings */; };
 		DABC3CB820A5E81E009600BB /* TestView_FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC3CB720A5E81E009600BB /* TestView_FirstResponder.swift */; };
-		DABC751E20C597C70002A09F /* MockPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC751D20C597C70002A09F /* MockPresenterForKeyboard.swift */; };
 		DABDB02620A38840001B7D47 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB01220A387B6001B7D47 /* Card.framework */; };
 		DABDB03020A389AE001B7D47 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB02F20A389AE001B7D47 /* TestInteractor.swift */; };
 		DABDB03220A389B9001B7D47 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB03120A389B9001B7D47 /* Interactor.swift */; };
@@ -66,7 +65,6 @@
 		DABC3CAD20A5D563009600BB /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		DABC3CB320A5E2AB009600BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DABC3CB720A5E81E009600BB /* TestView_FirstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView_FirstResponder.swift; sourceTree = "<group>"; };
-		DABC751D20C597C70002A09F /* MockPresenterForKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterForKeyboard.swift; sourceTree = "<group>"; };
 		DABDB01220A387B6001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02120A38840001B7D47 /* TestsCard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB02C20A388FD001B7D47 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				DA7E009A20A565D500AD4A74 /* MockInteractor.swift */,
 				DABC3CA920A5D456009600BB /* MockPresenter.swift */,
 				DAD9184020A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift */,
-				DABC751D20C597C70002A09F /* MockPresenterForKeyboard.swift */,
 				DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */,
 				DAA0B95A20A5B23F0084C753 /* MockViewText.swift */,
 				DABC3CAD20A5D563009600BB /* MockView.swift */,
@@ -313,7 +310,6 @@
 				DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */,
 				DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DABC3CAA20A5D456009600BB /* MockPresenter.swift in Sources */,
-				DABC751E20C597C70002A09F /* MockPresenterForKeyboard.swift in Sources */,
 				DA7E009B20A565D500AD4A74 /* MockInteractor.swift in Sources */,
 				DABC3CB820A5E81E009600BB /* TestView_FirstResponder.swift in Sources */,
 				DABC3CAE20A5D563009600BB /* MockView.swift in Sources */,

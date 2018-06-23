@@ -6,10 +6,10 @@ public class Presenter:PresenterProtocol {
     public weak var view:ViewProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
-    var presenterForKeyboard:PresenterForKeyboardProtocol
+    var keyboardAdjuster:KeyboardAdjusterProtocol
     
     public required init() {
-        self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
+        self.keyboardAdjuster = KeyboardAdjusterFactory.makeAdjuster()
     }
     
     public func didLoad() {

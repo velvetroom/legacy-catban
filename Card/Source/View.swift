@@ -40,6 +40,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextViewDel
     
     private func hookDelegates() {
         self.content.viewText.delegate = self
+        self.presenter.keyboardAdjuster.view = self.content
     }
     
     private func configureViewModel() {

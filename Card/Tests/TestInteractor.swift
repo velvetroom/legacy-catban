@@ -28,7 +28,7 @@ class TestInteractor:XCTestCase {
         XCTAssertNil(self.interactor.card, "Strong retained")
     }
     
-    func testDone() {
+    func testDoneTransitionsToHome() {
         var transitioned:Bool = false
         self.transition.onTransitionToHome = { transitioned = true }
         self.interactor.done()
@@ -38,7 +38,7 @@ class TestInteractor:XCTestCase {
     func testDeleteTransitions() {
         var transitioned:Bool = false
         self.transition.onTransitionToHome = { transitioned = true }
-        self.interactor.delete()
+        self.interactor.deleteConfirmed()
         XCTAssertTrue(transitioned, "No transition")
     }
     
@@ -46,7 +46,7 @@ class TestInteractor:XCTestCase {
         let column:ColumnProtocol = ColumnFactory.newColumn()
         column.add(card:self.card)
         self.project.add(column:column)
-        self.interactor.delete()
+        self.interactor.deleteConfirmed()
         XCTAssertEqual(column.countCards, 0, "Not removed")
     }
     
@@ -56,7 +56,7 @@ class TestInteractor:XCTestCase {
         column.add(card:self.card)
         self.project.add(column:column)
         MockRepositoryProjectProtocol.onSave = { called = true }
-        self.interactor.delete()
+        self.interactor.deleteConfirmed()
         XCTAssertTrue(called, "Failed to save")
     }
     
