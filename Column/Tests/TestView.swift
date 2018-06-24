@@ -10,6 +10,7 @@ class TestView:XCTestCase {
         super.setUp()
         self.view = Column.View()
         self.presenter = MockPresenter()
+        self.presenter.viewModel = ViewModel()
         self.view.presenter = self.presenter
     }
     
@@ -42,5 +43,13 @@ class TestView:XCTestCase {
     func testLoadIconRename() {
         let icon:UIImage? = UIImage(name:ViewConstants.Icons.rename, in:Column.View.self)
         XCTAssertNotNil(icon, "Failed to load")
+    }
+    
+    func testUpdateViewModel() {
+        self.view.didLoad()
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.name = "hello world"
+        self.view.viewModel.update(property:viewModel)
+        XCTAssertEqual(self.view.content.labelName.text, viewModel.name, "Not updated")
     }
 }
