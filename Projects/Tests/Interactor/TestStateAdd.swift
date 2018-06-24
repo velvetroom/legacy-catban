@@ -2,37 +2,28 @@ import XCTest
 import Shared
 @testable import Projects
 
-class TestStateRename:XCTestCase {
-    private var state:StateRename!
+class TestStateAdd:XCTestCase {
+    private var state:StateAdd!
     
     override func setUp() {
         super.setUp()
-        self.state = StateRename()
+        self.state = StateAdd()
     }
     
-    func testNotRetainingProject() {
-        self.state.project = MockProjectManagedProtocol()
-        XCTAssertNil(self.state.project, "Retains")
-    }
-    
-    func testNamerFinishedUpdatesProject() {
-        var called:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+    func testNamerFinishedAddsProject() {
+        var added:Bool = false
         let interactor:MockInteractor = MockInteractor()
         let name:String = "lorem ipsum"
         interactor.state = self.state
-        self.state.project = project
-        interactor.onUpdated = { called = true }
+        interactor.onAddProject = { added = true }
         interactor.namerFinishedWith(name:name)
-        XCTAssertTrue(called, "State not called")
+        XCTAssertTrue(added, "Project not added")
     }
     
     func testNamerFinishedChangesStateToDefault() {
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
         let interactor:MockInteractor = MockInteractor()
         let name:String = "lorem ipsum"
         interactor.state = self.state
-        self.state.project = project
         interactor.namerFinishedWith(name:name)
         let newState:StateDefault? = interactor.state as? StateDefault
         XCTAssertNotNil(newState, "Not changed")
@@ -42,8 +33,6 @@ class TestStateRename:XCTestCase {
         var pushed:Bool = false
         let view:Projects.View = Projects.View()
         let transition:MockTransitionProtocol = MockTransitionProtocol()
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
-        self.state.project = project
         view.presenter.interactor.state = self.state
         view.transition = transition
         transition.onPush = { (view:ViewProtocol) in pushed = true }

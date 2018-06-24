@@ -12,6 +12,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func transitionToProjects(board:BoardProjectsProtocol) { }
     func pop() { }
+    func dismiss() { }
     
     func pushTo(view:ViewProtocol) {
         self.onPush?(view)

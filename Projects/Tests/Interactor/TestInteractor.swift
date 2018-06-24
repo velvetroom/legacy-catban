@@ -9,17 +9,27 @@ class TestInteractor:XCTestCase {
     private var transition:MockTransitionProtocol!
     private var board:MockBoardProjectsProtocol!
     private var project:MockProjectManagedProtocol!
+    private var state:MockStateProtocol!
     
     override func setUp() {
         super.setUp()
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Projects.View()
         self.transition = MockTransitionProtocol()
         self.board = MockBoardProjectsProtocol()
         self.project = MockProjectManagedProtocol()
+        self.state = MockStateProtocol()
         self.board.project = self.project
         self.interactor = self.view.presenter.interactor
         self.interactor.board = self.board
+        self.interactor.state = self.state
         self.view.transition = self.transition
+    }
+    
+    func testInitialStateIsDefault() {
+        let interactor:Interactor = Interactor()
+        let state:StateDefault? = interactor.state as? StateDefault
+        XCTAssertNotNil(state, "Invalid state")
     }
     
     func testOpenProject() {
@@ -29,35 +39,60 @@ class TestInteractor:XCTestCase {
         XCTAssertTrue(transitioned, "Failed")
     }
     
-    func testDeleteRemovesProject() {
+    func testDeleteCallsState() {
         var removed:Bool = false
         self.interactor.board = board
-        self.board.onRemoveProject = { removed = true }
-        self.interactor.deleteProjectWith(identifier:String())
+        self.state.onDeleteConfirmed = { removed = true }
+        self.interactor.deleteConfirmed()
         XCTAssertTrue(removed, "Not removed")
-    }
-    
-    func testDeleteCallsRepository() {
-        var called:Bool = false
-        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
-        MockRepositoryProjectProtocol.onDelete = { called = true }
-        self.interactor.deleteProjectWith(identifier:String())
-        XCTAssertTrue(called, "Failed to delete")
     }
     
     func testUpdateSavesProject() {
         var called:Bool = false
-        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         MockRepositoryProjectProtocol.onSave = { called = true }
         self.interactor.updated(project:self.project)
         XCTAssertTrue(called, "Failed to save")
     }
     
-    func testAddSavesProject() {
-        var called:Bool = false
-        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
-        MockRepositoryProjectProtocol.onSave = { called = true }
-        let _:ProjectProtocol = self.interactor.addProject()
-        XCTAssertTrue(called, "Failed to save")
+    func testAddProjectsAddsItToBoard() {
+        var added:Bool = false
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        self.board.onAddProject = { added = true }
+        self.interactor.add(project:project)
+        XCTAssertTrue(added, "Not added")
+    }
+    
+    func testAddProjectSaves() {
+        var added:Bool = false
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        MockRepositoryProjectProtocol.onSave = { added = true }
+        self.interactor.add(project:project)
+        XCTAssertTrue(added, "Not added")
+    }
+    
+    func testDeleteRemovesProject() {
+        var removed:Bool = false
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        self.board.onRemoveProject = { removed = true }
+        self.interactor.delete(project:project)
+        XCTAssertTrue(removed, "Not removed")
+    }
+    
+    func testDeleteRemovesFromRepository() {
+        var removed:Bool = false
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        MockRepositoryProjectProtocol.onDelete = { removed = true }
+        self.interactor.delete(project:project)
+        XCTAssertTrue(removed, "Not removed")
+    }
+    
+    func testDeleteUpdatesPresenter() {
+        var updated:Bool = false
+        let presenter:MockPresenter = MockPresenter()
+        self.interactor.presenter = presenter
+        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        presenter.onShouldUpdate = { updated = true }
+        self.interactor.delete(project:project)
+        XCTAssertTrue(updated, "Not updated")
     }
 }

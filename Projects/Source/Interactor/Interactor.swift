@@ -32,22 +32,6 @@ public class Interactor:InteractorBoardProtocol {
         self.presenter?.shouldUpdate()
     }
     
-    
-    
-    
-    
-    
-    func addProject() -> ProjectProtocol {
-        let project:ProjectProtocol = ProjectFactory.newProject()
-        self.board.add(project:project)
-        self.save(project:project)
-        return project
-    }
-    
-    
-    
-    
-    
     private func deleteFromRepository(project:ProjectProtocol) {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
         repository.delete(project:project)
