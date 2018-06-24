@@ -4,6 +4,7 @@ import Foundation
 class MockPresenter:Presenter {
     var onDelete:(() -> Void)?
     var onDone:(() -> Void)?
+    var onRename:(() -> Void)?
     
     override func delete() {
         self.onDelete?()
@@ -11,5 +12,9 @@ class MockPresenter:Presenter {
     
     override func done() {
         self.onDone?()
+    }
+    
+    override func rename() {
+        self.onRename?()
     }
 }
