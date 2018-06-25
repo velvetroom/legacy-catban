@@ -4,18 +4,6 @@ import UIKit
 @testable import Board
 
 class MockNavigationProtocol:NavigationProtocol {
-    func present(view: ViewProtocol) {
-        <#code#>
-    }
-    
-    func pushTo(view: ViewProtocol) {
-        <#code#>
-    }
-    
-    func pop() { }
-    
-    func dismiss() { }
-    
     var onLaunch:(() -> Void)?
     var onTransitionToLoad:(() -> Void)?
     var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
@@ -25,6 +13,10 @@ class MockNavigationProtocol:NavigationProtocol {
     
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func transitionToProjects(board:BoardProjectsProtocol) { }
+    func present(view:ViewProtocol) { }
+    func pushTo(view:ViewProtocol) { }
+    func pop() { }
+    func dismiss() { }
     
     func launch() -> UIWindow {
         self.onLaunch?()

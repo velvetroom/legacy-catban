@@ -22,7 +22,7 @@ class TestNavigation_Animation:XCTestCase {
         self.view.onSetViewController = { (controller:[UIViewController], animated:Bool) in
             XCTAssertFalse(animated, "Should not animate transition")
         }
-        self.model.transitionTo(controller:MockControllerProtocol())
+        self.model.transitionTo(view:MockView())
     }
     
     func testAnimateWhenPreviousController() {
@@ -30,6 +30,6 @@ class TestNavigation_Animation:XCTestCase {
         self.view.onSetViewController = { (controller:[UIViewController], animated:Bool) in
             XCTAssertTrue(animated, "Should animate transition")
         }
-        self.model.transitionTo(controller:MockControllerProtocol())
+        self.model.transitionTo(view:MockView())
     }
 }

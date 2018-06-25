@@ -3,4 +3,6 @@ import Foundation
 
 class MockInteractorProtocol:InteractorProtocol {
     var presenter:InteractorPresentationProtocol?
+    
+    required init() { }
 }
