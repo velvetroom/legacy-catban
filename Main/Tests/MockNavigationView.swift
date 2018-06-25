@@ -1,6 +1,7 @@
 import UIKit
+@testable import Main
 
-class MockNavigationController:UINavigationController {
+class MockNavigationView:NavigationView {
     var onSetViewController:(([UIViewController], Bool) -> Void)?
     
     override func setViewControllers(_ viewControllers:[UIViewController], animated:Bool) {

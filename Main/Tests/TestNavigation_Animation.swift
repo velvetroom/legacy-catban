@@ -3,13 +3,13 @@ import XCTest
 
 class TestNavigation_Animation:XCTestCase {
     private var model:Navigation!
-    private var view:MockNavigationController!
+    private var view:MockNavigationView!
     
     override func setUp() {
         super.setUp()
         Injection().load()
         self.model = Navigation()
-        self.view = MockNavigationController()
+        self.view = MockNavigationView()
         self.model.view = self.view
     }
     

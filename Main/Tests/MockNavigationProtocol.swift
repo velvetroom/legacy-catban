@@ -4,11 +4,22 @@ import UIKit
 @testable import Board
 
 class MockNavigationProtocol:NavigationProtocol {
+    func present(view: ViewProtocol) {
+        <#code#>
+    }
+    
+    func pushTo(view: ViewProtocol) {
+        <#code#>
+    }
+    
+    func pop() { }
+    
+    func dismiss() { }
+    
     var onLaunch:(() -> Void)?
     var onTransitionToLoad:(() -> Void)?
     var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
     var onTransitionToCard:((CardProtocol, ProjectManagedProtocol) -> Void)?
-    var onNavigateToController:((ControllerProtocol) -> Void)?
     
     required init() { }
     
