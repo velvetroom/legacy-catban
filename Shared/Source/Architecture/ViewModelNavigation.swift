@@ -1,4 +1,5 @@
 import Foundation
+import CleanArchitecture
 
 public struct ViewModelNavigation:ViewModelPropertyProtocol {
     public var observing:((ViewModelNavigation) -> Void)?
