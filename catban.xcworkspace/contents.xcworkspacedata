@@ -55,4 +55,7 @@
    <FileRef
       location = "group:Main/../.gitignore">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
