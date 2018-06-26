@@ -10,3 +10,9 @@ target 'Shared' do
   podlist
   project 'Shared/Shared.xcodeproj'
 end
+
+target 'TestsShared' do
+    platform :ios, '11.0'
+    podlist
+    project 'Shared/Shared.xcodeproj'
+end

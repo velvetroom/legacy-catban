@@ -38,6 +38,9 @@
       location = "group:Projects/Projects.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Design">
    </FileRef>
    <FileRef
@@ -54,8 +57,5 @@
    </FileRef>
    <FileRef
       location = "group:Main/../.gitignore">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
