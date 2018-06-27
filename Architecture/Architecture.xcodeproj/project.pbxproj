@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		238E071D3440E95D1FCEA422 /* Pods_Architecture_TestsArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114DE4BDABAA9A60A168CA6 /* Pods_Architecture_TestsArchitecture.framework */; };
 		4F7F346BBBDFADB9792BD260 /* Pods_Architecture_Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D65DF40A8320AF5627C0D0 /* Pods_Architecture_Architecture.framework */; };
+		DACCF60420E3D142003AA65E /* MockInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */; };
+		DACCF60520E3D142003AA65E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60120E3D142003AA65E /* TestView.swift */; };
+		DACCF60620E3D142003AA65E /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60220E3D142003AA65E /* MockView.swift */; };
+		DACCF60720E3D142003AA65E /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */; };
+		DACCF61120E3D149003AA65E /* InteractorCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */; };
+		DACCF61220E3D149003AA65E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60A20E3D149003AA65E /* View.swift */; };
+		DACCF61320E3D149003AA65E /* TransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */; };
+		DACCF61420E3D149003AA65E /* ViewModelNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */; };
+		DACCF61520E3D149003AA65E /* ViewNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */; };
+		DACCF61620E3D149003AA65E /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */; };
+		DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */; };
+		DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */; };
 		DAEE43F020E3CDCB0005564C /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE43DC20E3CD4E0005564C /* Architecture.framework */; };
-		DAEE440020E3CE2E0005564C /* InteractorCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43F820E3CE2E0005564C /* InteractorCardProtocol.swift */; };
-		DAEE440120E3CE2E0005564C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43F920E3CE2E0005564C /* View.swift */; };
-		DAEE440220E3CE2E0005564C /* TransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FA20E3CE2E0005564C /* TransitionProtocol.swift */; };
-		DAEE440320E3CE2E0005564C /* ViewModelNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FB20E3CE2E0005564C /* ViewModelNavigation.swift */; };
-		DAEE440420E3CE2E0005564C /* ViewNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FC20E3CE2E0005564C /* ViewNavigationProtocol.swift */; };
-		DAEE440520E3CE2E0005564C /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FD20E3CE2E0005564C /* InteractorProjectProtocol.swift */; };
-		DAEE440620E3CE2E0005564C /* InteractorBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FE20E3CE2E0005564C /* InteractorBoardProtocol.swift */; };
-		DAEE440720E3CE2E0005564C /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE43FF20E3CE2E0005564C /* InteractorColumnProtocol.swift */; };
-		DAEE440D20E3CE360005564C /* MockInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE440920E3CE350005564C /* MockInteractorProtocol.swift */; };
-		DAEE440E20E3CE360005564C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE440A20E3CE350005564C /* TestView.swift */; };
-		DAEE440F20E3CE360005564C /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE440B20E3CE350005564C /* MockView.swift */; };
-		DAEE441020E3CE360005564C /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE440C20E3CE350005564C /* MockPresenterProtocol.swift */; };
 		DAEE441320E3CEFE0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
 		DAEE441420E3CF0E0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
 /* End PBXBuildFile section */
@@ -42,21 +42,21 @@
 		9114DE4BDABAA9A60A168CA6 /* Pods_Architecture_TestsArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F75CD13415D4B782303EFA /* Pods-Architecture-TestsArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsArchitecture.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		C1D65DF40A8320AF5627C0D0 /* Pods_Architecture_Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
+		DACCF60120E3D142003AA65E /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		DACCF60220E3D142003AA65E /* MockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
+		DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
+		DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorCardProtocol.swift; sourceTree = "<group>"; };
+		DACCF60A20E3D149003AA65E /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionProtocol.swift; sourceTree = "<group>"; };
+		DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelNavigation.swift; sourceTree = "<group>"; };
+		DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewNavigationProtocol.swift; sourceTree = "<group>"; };
+		DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
+		DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorBoardProtocol.swift; sourceTree = "<group>"; };
+		DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
 		DAEE43DC20E3CD4E0005564C /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43EB20E3CDCA0005564C /* TestsArchitecture.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsArchitecture.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43F620E3CE270005564C /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
-		DAEE43F820E3CE2E0005564C /* InteractorCardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorCardProtocol.swift; sourceTree = "<group>"; };
-		DAEE43F920E3CE2E0005564C /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		DAEE43FA20E3CE2E0005564C /* TransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionProtocol.swift; sourceTree = "<group>"; };
-		DAEE43FB20E3CE2E0005564C /* ViewModelNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelNavigation.swift; sourceTree = "<group>"; };
-		DAEE43FC20E3CE2E0005564C /* ViewNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewNavigationProtocol.swift; sourceTree = "<group>"; };
-		DAEE43FD20E3CE2E0005564C /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
-		DAEE43FE20E3CE2E0005564C /* InteractorBoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorBoardProtocol.swift; sourceTree = "<group>"; };
-		DAEE43FF20E3CE2E0005564C /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
-		DAEE440920E3CE350005564C /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
-		DAEE440A20E3CE350005564C /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		DAEE440B20E3CE350005564C /* MockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
-		DAEE440C20E3CE350005564C /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAEE441220E3CEFE0005564C /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57B4BAA94F11EB8C00838FE /* Pods-Architecture-TestsArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsArchitecture.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,11 +95,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DACCF5FF20E3D142003AA65E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */,
+				DACCF60120E3D142003AA65E /* TestView.swift */,
+				DACCF60220E3D142003AA65E /* MockView.swift */,
+				DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DACCF60820E3D149003AA65E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */,
+				DACCF60A20E3D149003AA65E /* View.swift */,
+				DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */,
+				DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */,
+				DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */,
+				DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */,
+				DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */,
+				DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DAEE43D220E3CD4E0005564C = {
 			isa = PBXGroup;
 			children = (
-				DAEE440820E3CE350005564C /* Tests */,
-				DAEE43F720E3CE2E0005564C /* Source */,
+				DACCF60820E3D149003AA65E /* Source */,
+				DACCF5FF20E3D142003AA65E /* Tests */,
 				DAEE43DD20E3CD4E0005564C /* Products */,
 				DAEE441120E3CEFE0005564C /* Frameworks */,
 				6245A703E44447D28C801E87 /* Pods */,
@@ -114,32 +140,6 @@
 				DAEE43EB20E3CDCA0005564C /* TestsArchitecture.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DAEE43F720E3CE2E0005564C /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				DAEE43F820E3CE2E0005564C /* InteractorCardProtocol.swift */,
-				DAEE43F920E3CE2E0005564C /* View.swift */,
-				DAEE43FA20E3CE2E0005564C /* TransitionProtocol.swift */,
-				DAEE43FB20E3CE2E0005564C /* ViewModelNavigation.swift */,
-				DAEE43FC20E3CE2E0005564C /* ViewNavigationProtocol.swift */,
-				DAEE43FD20E3CE2E0005564C /* InteractorProjectProtocol.swift */,
-				DAEE43FE20E3CE2E0005564C /* InteractorBoardProtocol.swift */,
-				DAEE43FF20E3CE2E0005564C /* InteractorColumnProtocol.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		DAEE440820E3CE350005564C /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				DAEE440920E3CE350005564C /* MockInteractorProtocol.swift */,
-				DAEE440A20E3CE350005564C /* TestView.swift */,
-				DAEE440B20E3CE350005564C /* MockView.swift */,
-				DAEE440C20E3CE350005564C /* MockPresenterProtocol.swift */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		DAEE441120E3CEFE0005564C /* Frameworks */ = {
@@ -319,14 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEE440520E3CE2E0005564C /* InteractorProjectProtocol.swift in Sources */,
-				DAEE440320E3CE2E0005564C /* ViewModelNavigation.swift in Sources */,
-				DAEE440620E3CE2E0005564C /* InteractorBoardProtocol.swift in Sources */,
-				DAEE440220E3CE2E0005564C /* TransitionProtocol.swift in Sources */,
-				DAEE440720E3CE2E0005564C /* InteractorColumnProtocol.swift in Sources */,
-				DAEE440120E3CE2E0005564C /* View.swift in Sources */,
-				DAEE440020E3CE2E0005564C /* InteractorCardProtocol.swift in Sources */,
-				DAEE440420E3CE2E0005564C /* ViewNavigationProtocol.swift in Sources */,
+				DACCF61620E3D149003AA65E /* InteractorProjectProtocol.swift in Sources */,
+				DACCF61420E3D149003AA65E /* ViewModelNavigation.swift in Sources */,
+				DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */,
+				DACCF61320E3D149003AA65E /* TransitionProtocol.swift in Sources */,
+				DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */,
+				DACCF61220E3D149003AA65E /* View.swift in Sources */,
+				DACCF61120E3D149003AA65E /* InteractorCardProtocol.swift in Sources */,
+				DACCF61520E3D149003AA65E /* ViewNavigationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +334,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEE440E20E3CE360005564C /* TestView.swift in Sources */,
-				DAEE440D20E3CE360005564C /* MockInteractorProtocol.swift in Sources */,
-				DAEE441020E3CE360005564C /* MockPresenterProtocol.swift in Sources */,
-				DAEE440F20E3CE360005564C /* MockView.swift in Sources */,
+				DACCF60520E3D142003AA65E /* TestView.swift in Sources */,
+				DACCF60420E3D142003AA65E /* MockInteractorProtocol.swift in Sources */,
+				DACCF60720E3D142003AA65E /* MockPresenterProtocol.swift in Sources */,
+				DACCF60620E3D142003AA65E /* MockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F57B4BAA94F11EB8C00838FE /* Pods-Architecture-TestsArchitecture.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/tests.plist;
@@ -546,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96F75CD13415D4B782303EFA /* Pods-Architecture-TestsArchitecture.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/tests.plist;

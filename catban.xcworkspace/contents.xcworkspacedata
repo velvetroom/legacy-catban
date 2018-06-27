@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Architecture/Architecture.xcodeproj">
+      location = "group:Main/Main.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Main/Main.xcodeproj">
+      location = "group:Architecture/Architecture.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Shared/Shared.xcodeproj">
