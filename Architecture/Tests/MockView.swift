@@ -1,5 +1,5 @@
 import UIKit
 import CleanArchitecture
-@testable import Shared
+import Architecture
 
-class MockView:Shared.View<MockPresenterProtocol, UIView> { }
+class MockView:Architecture.View<MockPresenterProtocol, UIView> { }

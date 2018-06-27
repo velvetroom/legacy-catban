@@ -1,6 +1,6 @@
 import XCTest
 import CleanArchitecture
-@testable import Shared
+@testable import Architecture
 
 class TestView:XCTestCase {
     func testUpdateNavigationOnViewWillAppear() {

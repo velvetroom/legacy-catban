@@ -98,8 +98,8 @@
 		DACCF5FF20E3D142003AA65E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */,
 				DACCF60120E3D142003AA65E /* TestView.swift */,
+				DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */,
 				DACCF60220E3D142003AA65E /* MockView.swift */,
 				DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */,
 			);

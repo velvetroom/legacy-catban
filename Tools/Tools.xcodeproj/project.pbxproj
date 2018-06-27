@@ -44,6 +44,8 @@
 		DA58605A20DD1FDC00777ECF /* KeyboardAdjusterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */; };
 		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
 		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
+		DACCF61B20E3D2AB003AA65E /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACCF61A20E3D2AB003AA65E /* Architecture.framework */; };
+		DACCF61D20E3D2B5003AA65E /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACCF61C20E3D2B5003AA65E /* Architecture.framework */; };
 		DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */; };
 		DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */; };
 		DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */; };
@@ -112,6 +114,8 @@
 		DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjusterFactory.swift; sourceTree = "<group>"; };
 		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
 		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
+		DACCF61A20E3D2AB003AA65E /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACCF61C20E3D2B5003AA65E /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerFactory.swift; sourceTree = "<group>"; };
 		DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerPresenter.swift; sourceTree = "<group>"; };
 		DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACCF61B20E3D2AB003AA65E /* Architecture.framework in Frameworks */,
 				DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */,
 				51820EF7EE03574F4FB573F7 /* Pods_Architecture_Tools.framework in Frameworks */,
 			);
@@ -145,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACCF61D20E3D2B5003AA65E /* Architecture.framework in Frameworks */,
 				DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */,
 				DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */,
 				75776018B14361725E676201 /* Pods_Architecture_TestsTools.framework in Frameworks */,
@@ -271,6 +277,8 @@
 		DA4BD75720CA525B003257FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DACCF61C20E3D2B5003AA65E /* Architecture.framework */,
+				DACCF61A20E3D2AB003AA65E /* Architecture.framework */,
 				DA4BD75820CA525B003257FA /* Shared.framework */,
 				B517D51422DF1A56E4CF5E8B /* Pods_Architecture_Tools.framework */,
 				EE069635494215BD081D9900 /* Pods_Architecture_TestsTools.framework */,

@@ -1,6 +1,6 @@
 import Foundation
 import CleanArchitecture
-@testable import Shared
+import Architecture
 
 class MockPresenterProtocol:PresenterProtocol {
     var onDidLoad:(() -> Void)?
@@ -8,7 +8,7 @@ class MockPresenterProtocol:PresenterProtocol {
     var onDidAppear:(() -> Void)?
     var onOrientationChanged:(() -> Void)?
     weak var view:ViewProtocol?
-    weak var transition:Shared.TransitionProtocol?
+    weak var transition:TransitionProtocol?
     var interactor:MockInteractorProtocol!
     var viewModel:ViewModel!
     

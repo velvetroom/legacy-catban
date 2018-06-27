@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19264A20FDA0B4934BCEB846 /* Pods_Architecture_Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912693BA88355B360D841AA7 /* Pods_Architecture_Main.framework */; };
 		2865A40101095EF1E471C1C4 /* Pods_Architecture_TestsMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAD8176C349B2B25121671 /* Pods_Architecture_TestsMain.framework */; };
 		DA034AFB20AF4B3B001E461F /* Canvas.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA034AFC20AF4B60001E461F /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; };
@@ -29,7 +28,6 @@
 		DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD7209C427400B736CD /* MockInjection.swift */; };
 		DA4BD75E20CA52B5003257FA /* Tools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA4BD75F20CA52D1003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; };
-		DA4C364620E3CA85006D8BE9 /* Pods_Architecture_Main.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 912693BA88355B360D841AA7 /* Pods_Architecture_Main.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; };
 		DA7E00B520A584BC00AD4A74 /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA347D1C20A16DF400009316 /* Template.framework */; };
 		DA7E00B620A584BE00AD4A74 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD2FD0209CC4120005F5D2 /* Home.framework */; };
@@ -41,6 +39,7 @@
 		DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F40420C3CD430000B067 /* assets.xcassets */; };
 		DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DACCF61920E3D281003AA65E /* Pods_Architecture_Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912693BA88355B360D841AA7 /* Pods_Architecture_Main.framework */; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
 		DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */; };
@@ -83,7 +82,6 @@
 				DAFD2FD3209CC4190005F5D2 /* Home.framework in Embed Frameworks */,
 				DA347D1F20A16DFE00009316 /* Template.framework in Embed Frameworks */,
 				DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */,
-				DA4C364620E3CA85006D8BE9 /* Pods_Architecture_Main.framework in Embed Frameworks */,
 				DA4BD75E20CA52B5003257FA /* Tools.framework in Embed Frameworks */,
 				DA204FEE20B8492A00A41DB0 /* Projects.framework in Embed Frameworks */,
 				DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */,
@@ -145,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19264A20FDA0B4934BCEB846 /* Pods_Architecture_Main.framework in Frameworks */,
+				DACCF61920E3D281003AA65E /* Pods_Architecture_Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
