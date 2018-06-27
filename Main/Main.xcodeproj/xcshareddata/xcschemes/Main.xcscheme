@@ -143,8 +143,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA4BD72220CA4E5C003257FA"
-               BuildableName = "TestTools.xctest"
-               BlueprintName = "TestTools"
+               BuildableName = "TestsTools.xctest"
+               BlueprintName = "TestsTools"
                ReferencedContainer = "container:../Tools/Tools.xcodeproj">
             </BuildableReference>
          </TestableReference>
