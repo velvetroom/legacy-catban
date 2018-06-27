@@ -1,5 +1,6 @@
 import Foundation
 import CleanArchitecture
+import Architecture
 import Shared
 import Board
 import Template

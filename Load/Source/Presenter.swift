@@ -1,6 +1,6 @@
 import Foundation
 import CleanArchitecture
-import Shared
+import Architecture
 
 public class Presenter:PresenterProtocol {
     public weak var view:ViewProtocol?

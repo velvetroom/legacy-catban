@@ -10,6 +10,8 @@
 		91B447696AE18F13678B7D0B /* Pods_Architecture_TestsLoad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC58ED8544827820C36AABD2 /* Pods_Architecture_TestsLoad.framework */; };
 		C0C4513AA3782D1F73204DDE /* Pods_Architecture_Load.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06642226A89422B23699BF4F /* Pods_Architecture_Load.framework */; };
 		DA06361E209B61CD0037D22F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06361D209B61CD0037D22F /* View.swift */; };
+		DA20A74420E3D71E0058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74320E3D71E0058A65A /* Architecture.framework */; };
+		DA20A74520E3D72C0058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74320E3D71E0058A65A /* Architecture.framework */; };
 		DA3864C620A18F0500B638FE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864C520A18F0500B638FE /* Board.framework */; };
 		DA3864C820A18F1500B638FE /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864C720A18F1500B638FE /* Shared.framework */; };
 		DA3864D820A18FBA00B638FE /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3864C720A18F1500B638FE /* Shared.framework */; };
@@ -47,6 +49,7 @@
 		AC58ED8544827820C36AABD2 /* Pods_Architecture_TestsLoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsLoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FD30AB954832542AA9A3DA /* Pods-Architecture-TestsLoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsLoad.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsLoad/Pods-Architecture-TestsLoad.debug.xcconfig"; sourceTree = "<group>"; };
 		DA06361D209B61CD0037D22F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA20A74320E3D71E0058A65A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3864C520A18F0500B638FE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3864C720A18F1500B638FE /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3ADF87209C26BF00B736CD /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 				DA3864D920A18FBD00B638FE /* Board.framework in Frameworks */,
 				DA3864D820A18FBA00B638FE /* Shared.framework in Frameworks */,
 				DA803BB420CA94BD007BA6DD /* Template.framework in Frameworks */,
+				DA20A74520E3D72C0058A65A /* Architecture.framework in Frameworks */,
 				91B447696AE18F13678B7D0B /* Pods_Architecture_TestsLoad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA20A74420E3D71E0058A65A /* Architecture.framework in Frameworks */,
 				DA803BB320CA94AF007BA6DD /* Template.framework in Frameworks */,
 				DA3864C820A18F1500B638FE /* Shared.framework in Frameworks */,
 				DA3864C620A18F0500B638FE /* Board.framework in Frameworks */,
@@ -145,6 +150,7 @@
 		DA58BD78209B3A890013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA20A74320E3D71E0058A65A /* Architecture.framework */,
 				DA803BB220CA94AF007BA6DD /* Template.framework */,
 				DA3864C720A18F1500B638FE /* Shared.framework */,
 				DA3864C520A18F0500B638FE /* Board.framework */,
