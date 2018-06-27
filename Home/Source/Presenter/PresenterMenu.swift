@@ -1,6 +1,6 @@
 import Foundation
 import CleanArchitecture
-import Shared
+import Architecture
 
 class PresenterMenu:PresenterProtocol {
     weak var interactor:Interactor!
