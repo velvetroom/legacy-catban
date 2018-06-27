@@ -28,6 +28,8 @@
 		DA3ADFD8209C427400B736CD /* MockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFD7209C427400B736CD /* MockInjection.swift */; };
 		DA4BD75E20CA52B5003257FA /* Tools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA4BD75F20CA52D1003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; };
+		DA5828C820E3DA6F001592A5 /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA5828C520E3DA67001592A5 /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA5828C920E3DA84001592A5 /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5828C520E3DA67001592A5 /* Architecture.framework */; };
 		DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; };
 		DA7E00B520A584BC00AD4A74 /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA347D1C20A16DF400009316 /* Template.framework */; };
 		DA7E00B620A584BE00AD4A74 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD2FD0209CC4120005F5D2 /* Home.framework */; };
@@ -83,6 +85,7 @@
 				DA347D1F20A16DFE00009316 /* Template.framework in Embed Frameworks */,
 				DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */,
 				DA4BD75E20CA52B5003257FA /* Tools.framework in Embed Frameworks */,
+				DA5828C820E3DA6F001592A5 /* Architecture.framework in Embed Frameworks */,
 				DA204FEE20B8492A00A41DB0 /* Projects.framework in Embed Frameworks */,
 				DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */,
 			);
@@ -112,6 +115,7 @@
 		DA3ADFD5209C41AC00B736CD /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		DA3ADFD7209C427400B736CD /* MockInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInjection.swift; sourceTree = "<group>"; };
 		DA4BD75B20CA52AF003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5828C520E3DA67001592A5 /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA58BD7F209B3B4A0013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA1DB71209C7EA400509F4A /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA1DB75209C7EDB00509F4A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +157,7 @@
 			files = (
 				DA034AFC20AF4B60001E461F /* Canvas.framework in Frameworks */,
 				DA7E00B720A584C000AD4A74 /* Board.framework in Frameworks */,
+				DA5828C920E3DA84001592A5 /* Architecture.framework in Frameworks */,
 				DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */,
 				DA7E00BA20A584C600AD4A74 /* Shared.framework in Frameworks */,
 				DA7E00B920A584C500AD4A74 /* Load.framework in Frameworks */,
@@ -183,6 +188,7 @@
 		DA58BD7E209B3B4A0013DBF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA5828C520E3DA67001592A5 /* Architecture.framework */,
 				DA4BD75B20CA52AF003257FA /* Tools.framework */,
 				DA204FEB20B8492300A41DB0 /* Projects.framework */,
 				DA1F31DD20B446C00076ECAF /* Column.framework */,
