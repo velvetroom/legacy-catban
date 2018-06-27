@@ -1,4 +1,4 @@
 import UIKit
-import Shared
+import Architecture
 
 class MockView:View<MockPresenterProtocol, UIView> { }

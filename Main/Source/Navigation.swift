@@ -1,6 +1,7 @@
 import UIKit
 import CleanArchitecture
 import Board
+import Architecture
 import Shared
 
 class Navigation:NavigationProtocol {

@@ -1,6 +1,6 @@
 import UIKit
 import CleanArchitecture
-import Shared
+import Architecture
 
 class NavigationView:UINavigationController {
     private var animated:Bool {
