@@ -2,6 +2,8 @@ import UIKit
 import CleanArchitecture
 
 open class View<Interactor, Presenter:PresenterProtocol, Content:UIView>:CleanArchitecture.View<Interactor, Presenter, Content> where Interactor == Presenter.Interactor {
+    open weak var transition:TransitionProtocol!
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()

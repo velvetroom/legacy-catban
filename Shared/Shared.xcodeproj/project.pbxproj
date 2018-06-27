@@ -19,6 +19,7 @@
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */; };
 		DA5B80F620DCD09600319AD6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80F520DCD09600319AD6 /* TestView.swift */; };
+		DA71465120E3771F00D96BF2 /* ViewProtocol+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71465020E3771F00D96BF2 /* ViewProtocol+Transition.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA99EDB120E3606300E4C8AD /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99EDAC20E3603300E4C8AD /* MockView.swift */; };
 		DA99EDB220E3606600E4C8AD /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99EDAD20E3603300E4C8AD /* MockPresenterProtocol.swift */; };
@@ -61,6 +62,7 @@
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA5B80F520DCD09600319AD6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		DA71465020E3771F00D96BF2 /* ViewProtocol+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Transition.swift"; sourceTree = "<group>"; };
 		DA99EDAB20E3603300E4C8AD /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
 		DA99EDAC20E3603300E4C8AD /* MockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		DA99EDAD20E3603300E4C8AD /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */,
+				DA71465020E3771F00D96BF2 /* ViewProtocol+Transition.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
 			);
 			path = Architecture;
@@ -404,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
+				DA71465120E3771F00D96BF2 /* ViewProtocol+Transition.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DA4F1ABA20D51ED300C0BB5C /* ViewModelNavigation.swift in Sources */,
 				DAFD2FCB209CBDAC0005F5D2 /* TransitionProtocol.swift in Sources */,

@@ -1,5 +1,5 @@
 PODS:
-  - CleanArchitecture (1.1.41)
+  - CleanArchitecture (1.2.46)
 
 DEPENDENCIES:
   - CleanArchitecture
@@ -9,7 +9,7 @@ SPEC REPOS:
     - CleanArchitecture
 
 SPEC CHECKSUMS:
-  CleanArchitecture: 83cc1e10b306ef4da0e6e6fc2ac457485ab67dcc
+  CleanArchitecture: 58f6344d4a47db698ecdf271bb34b152bc4e4e7a
 
 PODFILE CHECKSUM: 35f09cc540039b743dc703301012d7de87115614
 
