@@ -1,4 +1,5 @@
 import XCTest
+import CleanArchitecture
 import Shared
 @testable import Column
 

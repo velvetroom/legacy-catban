@@ -1,10 +1,11 @@
 import Foundation
+import CleanArchitecture
 import Shared
 import Board
 import Tools
 
 public class Interactor:InteractorColumnProtocol, NamerInteractorProtocol, DeleterInteractorProtocol {
-    public weak var presenter:InteractorPresentationProtocol?
+    public weak var presenter:InteractorDelegateProtocol?
     public weak var column:ColumnProtocol!
     public var project:ProjectManagedProtocol!
     
@@ -21,7 +22,9 @@ public class Interactor:InteractorColumnProtocol, NamerInteractorProtocol, Delet
     public func deleteConfirmed() {
         self.project.remove(column:self.column)
         self.save()
-        self.presenter?.transition?.transitionToHome(project:self.project)
+        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
+            transition?.transitionToHome(project:self.project)
+        }
     }
     
     private func save() {
