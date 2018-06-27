@@ -53,4 +53,11 @@ abstract_target 'Architecture' do
     target 'TestsProjects' do
         project 'Projects/Projects.xcodeproj'
     end
+
+    target 'Main' do
+    project 'Main/Main.xcodeproj'
+    end
+    target 'TestsMain' do
+        project 'Main/Main.xcodeproj'
+    end
 end
