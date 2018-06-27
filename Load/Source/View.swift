@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, UIView> {
+public class View:Shared.View<Presenter, UIView> {
     private weak var imageLogo:UIImageView!
     
     public override func didLoad() {
