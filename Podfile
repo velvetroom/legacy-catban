@@ -19,6 +19,27 @@ abstract_target 'Architecture' do
         project 'Shared/Shared.xcodeproj'
     end
     
+    target 'Repository' do
+        project 'Repository/Repository.xcodeproj'
+    end
+    target 'TestsRepository' do
+        project 'Repository/Repository.xcodeproj'
+    end
+    
+    target 'Template' do
+        project 'Template/Template.xcodeproj'
+    end
+    target 'TestsTemplate' do
+        project 'Template/Template.xcodeproj'
+    end
+    
+    target 'Canvas' do
+        project 'Canvas/Canvas.xcodeproj'
+    end
+    target 'TestsCanvas' do
+        project 'Canvas/Canvas.xcodeproj'
+    end
+    
     target 'Tools' do
         project 'Tools/Tools.xcodeproj'
     end
