@@ -1,4 +1,5 @@
 import XCTest
+import CleanArchitecture
 import Board
 import Shared
 @testable import Card

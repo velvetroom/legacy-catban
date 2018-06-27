@@ -1,5 +1,6 @@
 import Foundation
-@testable import Shared
+import CleanArchitecture
+import Shared
 @testable import Board
 
 class MockTransitionProtocol:TransitionProtocol {
@@ -10,7 +11,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func transitionToProjects(board:BoardProjectsProtocol) { }
-    func pushTo(view: ViewProtocol) { }
+    func pushTo(view:ViewProtocol) { }
     func pop() { }
     func dismiss() { }
     

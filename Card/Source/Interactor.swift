@@ -1,10 +1,11 @@
 import Foundation
+import CleanArchitecture
 import Shared
 import Board
 import Tools
 
 public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
-    public weak var presenter:InteractorPresentationProtocol?
+    public weak var presenter:InteractorDelegateProtocol?
     public weak var card:CardProtocol!
     public var project:ProjectManagedProtocol!
 
@@ -18,7 +19,9 @@ public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
     
     func done() {
         self.save()
-        self.presenter?.transition?.transitionToHome(project:self.project)
+        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
+            transition?.transitionToHome(project:self.project)
+        }
     }
     
     private func save() {

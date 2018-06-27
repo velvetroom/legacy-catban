@@ -1,7 +1,8 @@
 import XCTest
+import CleanArchitecture
 import Board
+import Shared
 @testable import Card
-@testable import Shared
 
 class TestView:XCTestCase {
     private var view:Card.View!
