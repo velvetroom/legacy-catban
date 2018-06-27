@@ -1,4 +1,4 @@
 import UIKit
 import Shared
 
-class MockView:View<MockInteractorProtocol, MockPresenterProtocol, UIView> { }
+class MockView:View<MockPresenterProtocol, UIView> { }

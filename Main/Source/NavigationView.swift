@@ -1,4 +1,5 @@
 import UIKit
+import CleanArchitecture
 import Shared
 
 class NavigationView:UINavigationController {

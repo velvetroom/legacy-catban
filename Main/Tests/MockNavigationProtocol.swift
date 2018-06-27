@@ -1,7 +1,7 @@
 import UIKit
+import CleanArchitecture
+import Board
 @testable import Main
-@testable import Shared
-@testable import Board
 
 class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?

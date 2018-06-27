@@ -1,8 +1,8 @@
 import Foundation
-@testable import Shared
+import CleanArchitecture
 
 class MockInteractorProtocol:InteractorProtocol {
-    var presenter:InteractorPresentationProtocol?
+    var presenter:InteractorDelegateProtocol?
     
     required init() { }
 }

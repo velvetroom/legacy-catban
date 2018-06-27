@@ -1,6 +1,7 @@
 import XCTest
+import CleanArchitecture
+import Shared
 @testable import Main
-@testable import Shared
 
 class TestNavigation:XCTestCase {
     private var model:Navigation!

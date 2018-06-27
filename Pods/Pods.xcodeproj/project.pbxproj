@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,11 @@
 		0E80856605FBCCBAC1DB3D2852B1D057 /* Pods-Architecture-Shared-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB794EB2E5211BC44BA6293A515881F2 /* Pods-Architecture-Shared-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EA7B639766C5E7F4CB8D6366D967F12 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64496C1B82A318117ACE70FEECAEBAB /* ViewModel.swift */; };
 		117FFAF8B319F27E9B83CA4A4B4919A2 /* Pods-Architecture-Column-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4638D9DBA973EE5029ACAE820BD0F03C /* Pods-Architecture-Column-dummy.m */; };
-		12454A59A826DFCF046F4D4F9FF2F0F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1780AC2CCC5C0ABD06C2FEF8D8D50C66 /* Pods-Architecture-TestsColumn-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4452C6B24136B9664522ABF41B895151 /* Pods-Architecture-TestsColumn-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A759AE66C7F15102AD7696F4BC39DE5 /* Pods-Architecture-Load-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF22DCDFF36DEF64B848C345DE780100 /* Pods-Architecture-Load-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CF4125FCFE0F43AA5423589376A64F9 /* InteractorDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E7BAECE77E718E11A7C330CEAA877 /* InteractorDelegateProtocol.swift */; };
 		1FA5DC2E4166DC6FEDA78911FA6BBDF4 /* Pods-Architecture-TestsTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C16ADC6200D125BD658C4F72E11BCC /* Pods-Architecture-TestsTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22F2C98D717A84B0E953ACE2FB999B5B /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A236B22DA254FA927361C9C447D46536 /* PresenterProtocol.swift */; };
-		26828961727E01DC90464C1DD5CBAF67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		2757EC33FA6DD257B49DAA5282B7F073 /* Pods-Architecture-Main-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6DB5FC002542A5C05E9E6CBACF309 /* Pods-Architecture-Main-dummy.m */; };
 		40F06D35FD16FBA7DFC59EC989C90F0F /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD45A1F9D3AB6DE3711CA901F89D1E88 /* ViewProtocol.swift */; };
 		42DF9C62BF1DCE35997D132E43F8E56B /* InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07566E7FD581A74F91C73E7A2A610909 /* InteractorProtocol.swift */; };
@@ -30,21 +28,13 @@
 		6AEDA52E4AF9E03A543B545365A758A6 /* Pods-Architecture-Main-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2A437C2A87B649A483FBD02816830AD /* Pods-Architecture-Main-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70CD97DC964469F3D197FE83D85DBCAB /* Pods-Architecture-TestsColumn-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AEC5D036705200537CD28ED207837 /* Pods-Architecture-TestsColumn-dummy.m */; };
 		77544C8D9DB309C4CE5507F9A822FEF5 /* Pods-Architecture-TestsMain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBDF158D5E9525AB04A42D4961C13793 /* Pods-Architecture-TestsMain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F7CE0BBF8C84DA74A9CB8078B56188C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8583426E32183ED74D1AC132F631AEA6 /* InteractorProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9F687342284B2AF35514586ACCBB6 /* InteractorProtocol+Default.swift */; };
-		8BB0C6E684D3E1A4F29B67390FC815AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		8D5FFDA325DD68DF8F1A5E02E0A57A46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		90848267BEE1EBC2EEE8720A8CA39E66 /* Pods-Architecture-Home-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93ACBA5839D554F0F5B29CB5036185E3 /* Pods-Architecture-Home-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93532A9FE38EC612BF9EF0543AC73145 /* ViewProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B94B9C3CA9BBFF254092B18DAC315 /* ViewProtocol+Default.swift */; };
 		95A49BC17BAC5CB2A8E24F2B1224DA94 /* Pods-Architecture-TestsTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8165B65E48097704E1EDF85821077ECF /* Pods-Architecture-TestsTools-dummy.m */; };
 		9A2B13391149FD598FD19A9D4EC95813 /* ViewModelPropertyProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A6089AF1DC963146906FE5C6AAB2D3 /* ViewModelPropertyProtocol+Default.swift */; };
-		9A6D204F9F126BE1B7DFB154DC672937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		9EE4501672439F1A27B04EAE941BABEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		A15F0D0AB2E978B1E1F6AACAF2328BE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		A2D6C48DA2E1057082AA8FC014F9DC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A740BD13BF1A236B684896D9F5BC4787 /* Pods-Architecture-TestsProjects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37FCDB9E3AAF18F5EBD4C1FB87E8B4D3 /* Pods-Architecture-TestsProjects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8BB87562F77BD56F8C5191992FFC177 /* ViewModelPropertyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00486847643399B7DEAC2E1AC0CA145 /* ViewModelPropertyProtocol.swift */; };
-		AA2031330B5901D6F4FD13C2193E1997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AC31B7C6706E66322A5C889C2E3B3940 /* Pods-Architecture-TestsShared-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E0B20AA12FEF707B5D7B8419D0B2AF1 /* Pods-Architecture-TestsShared-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B298B1E6576DA422A35FF775910FF0B8 /* Pods-Architecture-TestsLoad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF5B58D47E429312F44FDEA956949D /* Pods-Architecture-TestsLoad-dummy.m */; };
 		BB99DDF00A2848CEDD0BE58EDC111B0F /* Pods-Architecture-Home-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2AEC554DB17D924A51F73667954E09 /* Pods-Architecture-Home-dummy.m */; };
@@ -54,7 +44,6 @@
 		C043C13483CDD240859A76258A76489F /* CleanArchitecture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA2A17246E768959288799F9E6A5C85 /* CleanArchitecture-dummy.m */; };
 		C0BCBA1411E7D155A953295418AB9937 /* Pods-Architecture-Load-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC504400444C12C565C8B1DBAC70C7E2 /* Pods-Architecture-Load-dummy.m */; };
 		CD9CA1EFE578E8BB553C3DB748D57B1C /* PresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C4204BEEA0F08CB02AB45E1A99A847 /* PresenterFactory.swift */; };
-		D05673AD482D64877D8BCD764131DBD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D100F8DF80C6CCA6B69192740E30BC58 /* Pods-Architecture-Projects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D8CAE9EFC5368440371402D0DC64E4 /* Pods-Architecture-Projects-dummy.m */; };
 		D1D3CF05B7BFAE06BFB798721E4BCC36 /* Pods-Architecture-TestsCard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D526D390C7D924C5800421B6AD18FCB /* Pods-Architecture-TestsCard-dummy.m */; };
 		D5D8C3C697AC15DBBB7E03C10DB60F02 /* Pods-Architecture-TestsLoad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B7EF7E6CA92307770BE735E7878801 /* Pods-Architecture-TestsLoad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,15 +51,9 @@
 		DFB230154A70300BC7029155AA83E0E3 /* Pods-Architecture-TestsMain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8F5C0B43ADB1A44AD6EEFA21BF02D /* Pods-Architecture-TestsMain-dummy.m */; };
 		E09F598F14379CAD01B4AB9FD252241D /* CleanArchitecture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C3233FC5D92739DD956B10992E6AF3B /* CleanArchitecture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E20EAD1052958D9027B9D70D5C0206D3 /* Pods-Architecture-TestsProjects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F087FF208AEFBA318021C71F97234C2 /* Pods-Architecture-TestsProjects-dummy.m */; };
-		EFC86D004D88DA629678119DD778E51F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		F0E91D40E611D9A494D0896467E4661E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		F48AFC3B4505871210DF0ECCF1CDEEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		F632797B8F6DC3B4E4DABE79304E13C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		F79ED01EADEA24096C55490A9DFAE44E /* Pods-Architecture-Projects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDBAF0C9E43672B84D282EBEF6A574B /* Pods-Architecture-Projects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7D982A483CD2C0C223CFD16DAE7BB11 /* Pods-Architecture-TestsHome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A90302DB71ADA9ADEE06B9D7121793 /* Pods-Architecture-TestsHome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD2CB217B5570247D7223634A5CD268B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FE22C752C0AA4ABBEF35555D7BBA8D92 /* PresenterProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE820E05A3991C70A1F4FB13E10832 /* PresenterProtocol+Default.swift */; };
-		FFC700250853DFF2DEA01A5A815A6D4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,7 +179,7 @@
 		046D6D109A98E08BC92E5AFDA0020DB8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C7021A842A4470C5BBF9078A90B1EE /* Pods-Architecture-TestsColumn.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-TestsColumn.modulemap"; sourceTree = "<group>"; };
 		05103808EBFE5B1EDD48BE1D79D52BD1 /* Pods-Architecture-TestsLoad-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsLoad-frameworks.sh"; sourceTree = "<group>"; };
-		05FE78C25E16CE6A8A69F0D19D8AF562 /* Pods_Architecture_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Home.framework; path = "Pods-Architecture-Home.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FE78C25E16CE6A8A69F0D19D8AF562 /* Pods_Architecture_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0728900D1752C075AC0F736EEB1A718B /* Pods-Architecture-TestsCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsCard.release.xcconfig"; sourceTree = "<group>"; };
 		07566E7FD581A74F91C73E7A2A610909 /* InteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractorProtocol.swift; path = CleanArchitecture/Source/InteractorProtocol.swift; sourceTree = "<group>"; };
 		0974A62846ADB8CB0796E53A65EFEC90 /* Pods-Architecture-Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Card.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,8 +187,8 @@
 		0EC2D35079482EBCCE17F4358AB993A2 /* Pods-Architecture-TestsTools-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsTools-frameworks.sh"; sourceTree = "<group>"; };
 		1028AE7894F58BCDDAEB0EF3D89A969C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B890C4B89029B323F85DAF38FBEE8B /* Pods-Architecture-TestsCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsCard.debug.xcconfig"; sourceTree = "<group>"; };
-		12056CADB880D25DB629A7F89453521A /* Pods_Architecture_Column.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Column.framework; path = "Pods-Architecture-Column.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1209EEF19B21BF455B2AFB2C465A2EC6 /* Pods_Architecture_TestsLoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsLoad.framework; path = "Pods-Architecture-TestsLoad.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12056CADB880D25DB629A7F89453521A /* Pods_Architecture_Column.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Column.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1209EEF19B21BF455B2AFB2C465A2EC6 /* Pods_Architecture_TestsLoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsLoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		128B69D3D3A4CFE118C121C1FDACE938 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1451EB5A5BD9B33C191EAE37C3E4BBD8 /* Pods-Architecture-TestsShared-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Architecture-TestsShared-acknowledgements.markdown"; sourceTree = "<group>"; };
 		14522671E3DC9F278258020C1D3E0932 /* Pods-Architecture-Main-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-Main-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -218,7 +201,7 @@
 		1BC6DB5FC002542A5C05E9E6CBACF309 /* Pods-Architecture-Main-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Architecture-Main-dummy.m"; sourceTree = "<group>"; };
 		25061F208DDCCC2141590E97DCDF5CFD /* Pods-Architecture-TestsHome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Architecture-TestsHome-dummy.m"; sourceTree = "<group>"; };
 		28C971928F9FDE49F361243927325624 /* Pods-Architecture-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Home.release.xcconfig"; sourceTree = "<group>"; };
-		2AFB3E6BE1B2FE73584E9BA9961B4EE4 /* Pods_Architecture_Main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Main.framework; path = "Pods-Architecture-Main.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFB3E6BE1B2FE73584E9BA9961B4EE4 /* Pods_Architecture_Main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0DA77F668EF3187B456728493E407F /* Pods-Architecture-Card-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-Card-umbrella.h"; sourceTree = "<group>"; };
 		2DD9457032AD6684DF5B1D55FD23E762 /* Pods-Architecture-Tools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-Tools.modulemap"; sourceTree = "<group>"; };
 		2ECA85EC38358AE7648E59493F369CB9 /* Pods-Architecture-Projects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Projects.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,7 +218,7 @@
 		4452C6B24136B9664522ABF41B895151 /* Pods-Architecture-TestsColumn-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-TestsColumn-umbrella.h"; sourceTree = "<group>"; };
 		4474F56CAAF9BC53AD2BCC43A8B859D2 /* Pods-Architecture-TestsHome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-TestsHome-acknowledgements.plist"; sourceTree = "<group>"; };
 		4638D9DBA973EE5029ACAE820BD0F03C /* Pods-Architecture-Column-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Architecture-Column-dummy.m"; sourceTree = "<group>"; };
-		4679822B85810C2037FA59F008A40C69 /* Pods_Architecture_TestsMain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsMain.framework; path = "Pods-Architecture-TestsMain.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4679822B85810C2037FA59F008A40C69 /* Pods_Architecture_TestsMain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsMain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47887B1D6166B5E37BCCFBC196FB00F0 /* Pods-Architecture-TestsTools-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Architecture-TestsTools-acknowledgements.markdown"; sourceTree = "<group>"; };
 		47C4204BEEA0F08CB02AB45E1A99A847 /* PresenterFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterFactory.swift; path = CleanArchitecture/Source/PresenterFactory.swift; sourceTree = "<group>"; };
 		4854C23612B3C1964FF828E1CF663620 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -244,7 +227,7 @@
 		4D2C9FEFB1DB375441F739C311B6D648 /* Pods-Architecture-TestsShared-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsShared-resources.sh"; sourceTree = "<group>"; };
 		4F1868EBF4420B8D4F10001BD31B566F /* Pods-Architecture-TestsCard-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsCard-resources.sh"; sourceTree = "<group>"; };
 		4FEC883CC9C7869275DA0D5173FE60C8 /* Pods-Architecture-TestsLoad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-TestsLoad.modulemap"; sourceTree = "<group>"; };
-		502E7BE673F0983F6AF9532DA1D8961D /* Pods_Architecture_Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Shared.framework; path = "Pods-Architecture-Shared.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		502E7BE673F0983F6AF9532DA1D8961D /* Pods_Architecture_Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5281A1C95CE8E45EEC0C44F72CF6768A /* Pods-Architecture-TestsHome.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-TestsHome.modulemap"; sourceTree = "<group>"; };
 		545FE32736458CFBAFEB3C83AB8579DF /* Pods-Architecture-TestsColumn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsColumn.debug.xcconfig"; sourceTree = "<group>"; };
 		5477B8809E8D1459699679B608C5D22B /* Pods-Architecture-TestsHome-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsHome-resources.sh"; sourceTree = "<group>"; };
@@ -253,14 +236,13 @@
 		56622E726FFFC739D7BEA270C5B5E39F /* Pods-Architecture-Card-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-Card-acknowledgements.plist"; sourceTree = "<group>"; };
 		58FD962FF541AE142C9B1870C4873058 /* Pods-Architecture-TestsMain-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsMain-resources.sh"; sourceTree = "<group>"; };
 		59B48E2EF14B7F0D2DE6A6742671EC18 /* Pods-Architecture-TestsTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsTools.debug.xcconfig"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5E966980A0A0511101513370763A4E48 /* Pods-Architecture-Projects-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Architecture-Projects-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5EE86D205A102C0F5262AAB18C55BB89 /* Pods-Architecture-TestsProjects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-TestsProjects.modulemap"; sourceTree = "<group>"; };
 		62CE820E05A3991C70A1F4FB13E10832 /* PresenterProtocol+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PresenterProtocol+Default.swift"; path = "CleanArchitecture/Source/PresenterProtocol+Default.swift"; sourceTree = "<group>"; };
 		6303BBDD2A8D31F464076D244CE04314 /* Pods-Architecture-Load-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-Load-resources.sh"; sourceTree = "<group>"; };
 		660A41E0CC4A315272D0416A6D77FE62 /* Pods-Architecture-TestsMain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsMain.debug.xcconfig"; sourceTree = "<group>"; };
-		673A8EA9C305536D10F2B385A469A9F8 /* CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CleanArchitecture.framework; path = CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6773809D76B8DDCE2BFF7879D4FEF49A /* Pods_Architecture_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Tools.framework; path = "Pods-Architecture-Tools.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		673A8EA9C305536D10F2B385A469A9F8 /* CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6773809D76B8DDCE2BFF7879D4FEF49A /* Pods_Architecture_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B45BDBE963226E51C8FFCD01720A7CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C1D16497F1E1DFE360DBCBB01F1A447 /* Pods-Architecture-TestsProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsProjects.release.xcconfig"; sourceTree = "<group>"; };
 		6C3233FC5D92739DD956B10992E6AF3B /* CleanArchitecture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CleanArchitecture-umbrella.h"; sourceTree = "<group>"; };
@@ -291,7 +273,7 @@
 		8F087FF208AEFBA318021C71F97234C2 /* Pods-Architecture-TestsProjects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Architecture-TestsProjects-dummy.m"; sourceTree = "<group>"; };
 		8F7EB45DB68960F76798D93D1F473E38 /* Pods-Architecture-Projects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-Projects.modulemap"; sourceTree = "<group>"; };
 		8FA2A17246E768959288799F9E6A5C85 /* CleanArchitecture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CleanArchitecture-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93ACBA5839D554F0F5B29CB5036185E3 /* Pods-Architecture-Home-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-Home-umbrella.h"; sourceTree = "<group>"; };
 		93E0CD07657AB614229500F3700BB9DD /* Pods-Architecture-TestsTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsTools.release.xcconfig"; sourceTree = "<group>"; };
 		95CDEE6A0F3AEF70D4B151DB2678840D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -303,12 +285,12 @@
 		A1050BB687FF6F007EC895907217927A /* Pods-Architecture-TestsCard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsCard-frameworks.sh"; sourceTree = "<group>"; };
 		A17DEDE22BD1EEB077371F41C40AFE3B /* Pods-Architecture-Projects-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-Projects-resources.sh"; sourceTree = "<group>"; };
 		A1A6089AF1DC963146906FE5C6AAB2D3 /* ViewModelPropertyProtocol+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewModelPropertyProtocol+Default.swift"; path = "CleanArchitecture/Source/ViewModelPropertyProtocol+Default.swift"; sourceTree = "<group>"; };
-		A224641FB9D311DC8F44BB7B63ABF2F1 /* Pods_Architecture_TestsHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsHome.framework; path = "Pods-Architecture-TestsHome.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A224641FB9D311DC8F44BB7B63ABF2F1 /* Pods_Architecture_TestsHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A236B22DA254FA927361C9C447D46536 /* PresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterProtocol.swift; path = CleanArchitecture/Source/PresenterProtocol.swift; sourceTree = "<group>"; };
 		A2A437C2A87B649A483FBD02816830AD /* Pods-Architecture-Main-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-Main-umbrella.h"; sourceTree = "<group>"; };
 		A323AF69CCEB8830BCD91376F4D2F725 /* Pods-Architecture-TestsProjects-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Architecture-TestsProjects-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A3775529DD1F5DCC966EB2C20213AA5E /* Pods-Architecture-TestsCard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-TestsCard.modulemap"; sourceTree = "<group>"; };
-		A3D2B13FD4D20C4E099FCACC2E511458 /* Pods_Architecture_TestsProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsProjects.framework; path = "Pods-Architecture-TestsProjects.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D2B13FD4D20C4E099FCACC2E511458 /* Pods_Architecture_TestsProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58B99F1452F17B8450E4F24218C3EE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E16C914E791E98542B557162E6844A /* Pods-Architecture-TestsLoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsLoad.debug.xcconfig"; sourceTree = "<group>"; };
 		A6819D423EB57AF00E004B556581B77C /* Pods-Architecture-TestsLoad-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-TestsLoad-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -319,7 +301,7 @@
 		B0058CF44FA915747F4AB293A4DA998B /* Pods-Architecture-TestsColumn-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-TestsColumn-frameworks.sh"; sourceTree = "<group>"; };
 		B42BD6D06AA7814BEE6CE8EA7770975C /* Pods-Architecture-Card-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-Card-resources.sh"; sourceTree = "<group>"; };
 		B4C16ADC6200D125BD658C4F72E11BCC /* Pods-Architecture-TestsTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-TestsTools-umbrella.h"; sourceTree = "<group>"; };
-		B536F04B5AA2CD87135496CD23452EA0 /* Pods_Architecture_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Card.framework; path = "Pods-Architecture-Card.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B536F04B5AA2CD87135496CD23452EA0 /* Pods_Architecture_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EF296253E6E500E9D4607C536907AD /* Pods-Architecture-TestsShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsShared.debug.xcconfig"; sourceTree = "<group>"; };
 		B9084DE58FBA5F330B320D399340F008 /* Pods-Architecture-Main.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Main.debug.xcconfig"; sourceTree = "<group>"; };
 		B95E009FB9BCC4B3EFC061854A201679 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -331,12 +313,12 @@
 		BC504400444C12C565C8B1DBAC70C7E2 /* Pods-Architecture-Load-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Architecture-Load-dummy.m"; sourceTree = "<group>"; };
 		BC731065845170202D05C651987EDE44 /* Pods-Architecture-TestsCard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-TestsCard-umbrella.h"; sourceTree = "<group>"; };
 		C306E85B77D80B9CF0860CAE422E8D08 /* Pods-Architecture-TestsCard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-TestsCard-acknowledgements.plist"; sourceTree = "<group>"; };
-		C438B73DA6221B8EE1BC4E85305AFBD5 /* Pods_Architecture_TestsShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsShared.framework; path = "Pods-Architecture-TestsShared.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C438B73DA6221B8EE1BC4E85305AFBD5 /* Pods_Architecture_TestsShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CEDCF33D85280DF28B9D3078DAAD8 /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = CleanArchitecture/Source/View.swift; sourceTree = "<group>"; };
 		C55ED70FB637BC4291425064579D7DDD /* Pods-Architecture-TestsProjects-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-TestsProjects-acknowledgements.plist"; sourceTree = "<group>"; };
 		C5B7EF7E6CA92307770BE735E7878801 /* Pods-Architecture-TestsLoad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-TestsLoad-umbrella.h"; sourceTree = "<group>"; };
 		C7574A4CF5B865F8FC4467B2163A3C6C /* Pods-Architecture-Column.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Column.release.xcconfig"; sourceTree = "<group>"; };
-		CA96B1FC489CEE93F1FBE1623DA9C6D4 /* Pods_Architecture_TestsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsTools.framework; path = "Pods-Architecture-TestsTools.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA96B1FC489CEE93F1FBE1623DA9C6D4 /* Pods_Architecture_TestsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB007D77A08D54C8C3A1A90BC3D7021A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4E70B47A231B2F4B9177DB1819B07F /* Pods-Architecture-Main-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Architecture-Main-resources.sh"; sourceTree = "<group>"; };
 		CE9A74803B8C3E3A1F162055C583AC3F /* Pods-Architecture-TestsMain-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-TestsMain-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -352,10 +334,10 @@
 		DB2336BCD500A5104EFE0A4980CF1F87 /* Pods-Architecture-Load.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Load.release.xcconfig"; sourceTree = "<group>"; };
 		DC5D4B07F33BDF75FA79DC46151C6D14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8163C839204A5829DEB8F76FF2475A /* Pods-Architecture-TestsShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsShared.release.xcconfig"; sourceTree = "<group>"; };
-		E17068C855BE5199962EE78BA83E94AA /* Pods_Architecture_TestsColumn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsColumn.framework; path = "Pods-Architecture-TestsColumn.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17068C855BE5199962EE78BA83E94AA /* Pods_Architecture_TestsColumn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsColumn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2854981B903FEC56A6AC88133B887EE /* Pods-Architecture-Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Card.debug.xcconfig"; sourceTree = "<group>"; };
 		E2EC2F2005E34A512CCE7694804E6CFA /* Pods-Architecture-Shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Shared.release.xcconfig"; sourceTree = "<group>"; };
-		E32B5A07926ABD71F071AE05F50E2E14 /* Pods_Architecture_Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Projects.framework; path = "Pods-Architecture-Projects.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32B5A07926ABD71F071AE05F50E2E14 /* Pods_Architecture_Projects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Projects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BC93DC715C40A17A638A9C41E52A53 /* Pods-Architecture-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		E581C12326D913E5B3FF63BC4B3E88E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64496C1B82A318117ACE70FEECAEBAB /* ViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = CleanArchitecture/Source/ViewModel.swift; sourceTree = "<group>"; };
@@ -373,9 +355,9 @@
 		F2F5B0B729808179BCB6C91CEDEF063B /* Pods-Architecture-TestsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Architecture-TestsHome.release.xcconfig"; sourceTree = "<group>"; };
 		F538E8950F826657C28B1F21C96287B5 /* Pods-Architecture-TestsHome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Architecture-TestsHome-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F6901F758328AEB5E148B479C97FF2EA /* Pods-Architecture-Home-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Architecture-Home-acknowledgements.plist"; sourceTree = "<group>"; };
-		F7A5B3618F7E2C340C364A1FA821BFF4 /* Pods_Architecture_TestsCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_TestsCard.framework; path = "Pods-Architecture-TestsCard.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A5B3618F7E2C340C364A1FA821BFF4 /* Pods_Architecture_TestsCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FA4E8AE68C57A677A40187291F3F90 /* Pods-Architecture-Card.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Architecture-Card.modulemap"; sourceTree = "<group>"; };
-		F9C25F5BF2EC9CC61FBD11A9B7D0B4EF /* Pods_Architecture_Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Architecture_Load.framework; path = "Pods-Architecture-Load.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C25F5BF2EC9CC61FBD11A9B7D0B4EF /* Pods_Architecture_Load.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Load.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA9606EDBAE3408772FA049AA331035 /* Pods-Architecture-Tools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-Tools-umbrella.h"; sourceTree = "<group>"; };
 		FBDF158D5E9525AB04A42D4961C13793 /* Pods-Architecture-TestsMain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Architecture-TestsMain-umbrella.h"; sourceTree = "<group>"; };
 		FD9E2FB3A483F0D377857C9712F23FFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -387,7 +369,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA2031330B5901D6F4FD13C2193E1997 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +376,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5FFDA325DD68DF8F1A5E02E0A57A46 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +383,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2CB217B5570247D7223634A5CD268B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +390,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EE4501672439F1A27B04EAE941BABEC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +397,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6D204F9F126BE1B7DFB154DC672937 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +404,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12454A59A826DFCF046F4D4F9FF2F0F0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +411,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E91D40E611D9A494D0896467E4661E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +418,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05673AD482D64877D8BCD764131DBD5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +425,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F7CE0BBF8C84DA74A9CB8078B56188C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +432,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15F0D0AB2E978B1E1F6AACAF2328BE6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +439,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC86D004D88DA629678119DD778E51F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +446,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC700250853DFF2DEA01A5A815A6D4C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +453,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB0C6E684D3E1A4F29B67390FC815AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +460,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F632797B8F6DC3B4E4DABE79304E13C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +467,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26828961727E01DC90464C1DD5CBAF67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +474,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D6C48DA2E1057082AA8FC014F9DC35 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +481,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48AFC3B4505871210DF0ECCF1CDEEC5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +636,6 @@
 				BA4B94B9C3CA9BBFF254092B18DAC315 /* ViewProtocol+Default.swift */,
 				2381D68A6669BD1F4BFBA8B849AF89DC /* Support Files */,
 			);
-			name = CleanArchitecture;
 			path = CleanArchitecture;
 			sourceTree = "<group>";
 		};
@@ -704,7 +668,6 @@
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -1738,11 +1701,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Column/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Column/Pods-Architecture-Column.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1778,11 +1737,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsHome/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1818,11 +1773,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsCard/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsCard/Pods-Architecture-TestsCard.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1858,11 +1809,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsProjects/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsProjects/Pods-Architecture-TestsProjects.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1898,11 +1845,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsColumn/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsColumn/Pods-Architecture-TestsColumn.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1938,11 +1881,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Home/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Home/Pods-Architecture-Home.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1978,11 +1917,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsTools/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2018,11 +1953,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Column/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Column/Pods-Architecture-Column.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2058,11 +1989,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Main/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Main/Pods-Architecture-Main.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2098,11 +2025,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsColumn/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsColumn/Pods-Architecture-TestsColumn.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2138,11 +2061,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Tools/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Tools/Pods-Architecture-Tools.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2178,11 +2097,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Load/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Load/Pods-Architecture-Load.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2218,11 +2133,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Shared/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Shared/Pods-Architecture-Shared.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2257,11 +2168,7 @@
 				INFOPLIST_FILE = "Target Support Files/CleanArchitecture/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CleanArchitecture/CleanArchitecture.modulemap";
 				PRODUCT_MODULE_NAME = CleanArchitecture;
 				PRODUCT_NAME = CleanArchitecture;
@@ -2294,11 +2201,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Home/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Home/Pods-Architecture-Home.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2334,11 +2237,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsMain/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsMain/Pods-Architecture-TestsMain.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2374,11 +2273,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Card/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Card/Pods-Architecture-Card.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2414,11 +2309,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsProjects/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsProjects/Pods-Architecture-TestsProjects.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2454,11 +2345,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Load/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Load/Pods-Architecture-Load.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2494,11 +2381,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsCard/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsCard/Pods-Architecture-TestsCard.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2534,11 +2417,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Projects/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Projects/Pods-Architecture-Projects.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2637,11 +2516,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsShared/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsShared/Pods-Architecture-TestsShared.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2677,11 +2552,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsShared/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsShared/Pods-Architecture-TestsShared.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2717,11 +2588,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Main/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Main/Pods-Architecture-Main.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2757,11 +2624,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsHome/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2797,11 +2660,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsTools/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2837,11 +2696,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Shared/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Shared/Pods-Architecture-Shared.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2877,11 +2732,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Projects/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Projects/Pods-Architecture-Projects.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2916,11 +2767,7 @@
 				INFOPLIST_FILE = "Target Support Files/CleanArchitecture/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CleanArchitecture/CleanArchitecture.modulemap";
 				PRODUCT_MODULE_NAME = CleanArchitecture;
 				PRODUCT_NAME = CleanArchitecture;
@@ -2954,11 +2801,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsLoad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsLoad/Pods-Architecture-TestsLoad.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2994,11 +2837,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsLoad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsLoad/Pods-Architecture-TestsLoad.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3034,11 +2873,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Card/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Card/Pods-Architecture-Card.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3074,11 +2909,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-TestsMain/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-TestsMain/Pods-Architecture-TestsMain.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3114,11 +2945,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Architecture-Tools/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Architecture-Tools/Pods-Architecture-Tools.modulemap";
 				OTHER_LDFLAGS = "";
