@@ -1,5 +1,5 @@
 import UIKit
-import Shared
+import Architecture
 
 protocol NavigationProtocol:TransitionProtocol {
     func launch() -> UIWindow

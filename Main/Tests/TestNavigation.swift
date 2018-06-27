@@ -1,22 +1,16 @@
 import XCTest
+import CleanArchitecture
+import Shared
 @testable import Main
-@testable import Shared
 
 class TestNavigation:XCTestCase {
     private var model:Navigation!
-    private var view:MockNavigationController!
+    private var view:MockNavigationView!
     
     override func setUp() {
         super.setUp()
         self.model = Navigation()
-        self.view = MockNavigationController()
-    }
-    
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.view, "Failed to load view")
-        XCTAssertNil(self.model.controller, "Controller should not be set")
-        XCTAssertNil(self.model.view, "View should be initially not set")
+        self.view = MockNavigationView()
     }
     
     func testLaunch() {
@@ -40,7 +34,7 @@ class TestNavigation:XCTestCase {
     func testFirstController() {
         self.model.view = self.view
         self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
-            let view:ControllerProtocol? = views.first as? ControllerProtocol
+            let view:ViewProtocol? = views.first as? ViewProtocol
             XCTAssertNotNil(view, "Invalid view received")
         }
         

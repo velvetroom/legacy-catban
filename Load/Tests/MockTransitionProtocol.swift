@@ -1,5 +1,6 @@
 import Foundation
-import Shared
+import CleanArchitecture
+import Architecture
 import Board
 
 class MockTransitionProtocol:TransitionProtocol {
@@ -12,6 +13,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func pushTo(view:ViewProtocol) { }
     func pop() { }
     func present(view:ViewProtocol) { }
+    func dismiss() { }
     
     func transitionToProjects(board:BoardProjectsProtocol) {
         self.onTransitionToProjects?()

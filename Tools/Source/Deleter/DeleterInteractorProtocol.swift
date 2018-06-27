@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 public protocol DeleterInteractorProtocol:InteractorProtocol {
     func deleteConfirmed()

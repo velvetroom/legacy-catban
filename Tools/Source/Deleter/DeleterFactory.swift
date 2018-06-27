@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 public class DeleterFactory {
     public class func makeWith<Interactor:DeleterInteractorProtocol>(

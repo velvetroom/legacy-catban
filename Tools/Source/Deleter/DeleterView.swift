@@ -1,8 +1,7 @@
 import UIKit
-import Shared
+import Architecture
 
-class DeleterView<Interactor:DeleterInteractorProtocol>:View
-    <Interactor, DeleterPresenter<Interactor>, DeleterViewContent> {
+class DeleterView<Interactor:DeleterInteractorProtocol>:View<DeleterPresenter<Interactor>, DeleterViewContent> {
     override func initProperties() {
         super.initProperties()
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -78,7 +77,7 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View
             self?.content.layoutIfNeeded()
         }) { [weak self] (done:Bool) in
             completion()
-            self?.transition.dismiss()
+            self?.presenter.transition?.dismiss()
         }
     }
 }

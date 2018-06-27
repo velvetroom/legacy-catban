@@ -2,46 +2,86 @@ import XCTest
 @testable import Home
 
 class TestPresenterMenu:XCTestCase {
-    private var presenter:PresenterMenu!
-    private var controller:MockController!
-    private var view:View!
+    private var view:ViewMenu!
+    private var interactor:MockInteractor!
+    private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
-        self.presenter = PresenterMenu()
-        self.view = View()
-        self.controller = MockController()
-        self.presenter.view = self.view
-        self.presenter.controller = self.controller
+        self.view = ViewMenu()
+        self.interactor = MockInteractor()
+        self.transition = MockTransitionProtocol()
+        self.view.presenter.interactor = self.interactor
+        self.view.transition = self.transition
     }
     
-    func testNotRetainingController() {
-        self.presenter.controller = Interactor()
-        XCTAssertNil(self.presenter.controller, "Retains")
+    func testNotRetainingInteractor() {
+        self.view.presenter.interactor = Interactor()
+        XCTAssertNil(self.view.presenter.interactor, "Retains")
     }
     
-    func testNotRetainingView() {
-        self.presenter.view = View()
-        XCTAssertNil(self.presenter.view, "Retains")
-    }
-    
-    func testNotRetainingViewMenu() {
-        self.presenter.viewMenu = ViewMenu()
-        XCTAssertNil(self.presenter.viewMenu, "Retains")
-    }
-    
-    func testInjectsItselfToView() {
-        self.presenter.show()
-        XCTAssertNotNil(self.presenter.viewMenu?.presenter, "Not injected")
-    }
-    
-    func testOpenProjectsCallsController() {
-        let expect:XCTestExpectation = expectation(description:"Waiting for call")
-        self.controller.onOpenProjects = {
+    func testCloseDismissesView() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var dimissed:Bool = false
+        self.transition.onDimiss = {
+            dimissed = true
             expect.fulfill()
         }
-        
-        self.presenter.openProjects()
-        waitForExpectations(timeout:1) { (error:Error?) in }
+        self.view.presenter.close()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(dimissed, "Not dismissed")
+        }
+    }
+    
+    func testOpenProjectsDismissesView() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var dimissed:Bool = false
+        self.transition.onDimiss = {
+            dimissed = true
+            expect.fulfill()
+        }
+        self.view.presenter.openProjects()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(dimissed, "Not dismissed")
+        }
+    }
+    
+    func testOpenAboutDismissesView() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var dimissed:Bool = false
+        self.transition.onDimiss = {
+            dimissed = true
+            expect.fulfill()
+        }
+        self.view.presenter.openAbout()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(dimissed, "Not dismissed")
+        }
+    }
+    
+    func testCloseNotifiesInteractor() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var called:Bool = false
+        self.interactor.onClosedMenu = {
+            called = true
+            expect.fulfill()
+        }
+        self.view.presenter.close()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(called, "Not called")
+        }
+    }
+    
+    func testOpenProjectsNotifiesInteractor() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var called:Bool = false
+        self.interactor.onOpenProjects = {
+            called = true
+            expect.fulfill()
+        }
+        self.view.presenter.openProjects()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(called, "Not called")
+        }
     }
 }

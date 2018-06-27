@@ -14,13 +14,12 @@ class TestInjection:XCTestCase {
     func testConfigurationIsUpdated() {
         XCTAssertNotNil(Configuration.repositoryBoardType, "Failed to inject repository for board")
         XCTAssertNotNil(Configuration.repositoryProjectType, "Failed to inject repository for project")
-        XCTAssertNotNil(Configuration.controllerLoadType, "Failed to inject controller load")
-        XCTAssertNotNil(Configuration.controllerHomeType, "Failed to inject controller home")
-        XCTAssertNotNil(Configuration.controllerCardType, "Failed to inject controller card")
-        XCTAssertNotNil(Configuration.controllerColumnType, "Failed to inject controller column")
-        XCTAssertNotNil(Configuration.controllerProjectsType, "Failed to inject controller projects")
+        XCTAssertNotNil(Configuration.viewLoadType, "Failed to inject controller load")
+        XCTAssertNotNil(Configuration.viewHomeType, "Failed to inject controller home")
+        XCTAssertNotNil(Configuration.viewCardType, "Failed to inject controller card")
+        XCTAssertNotNil(Configuration.viewColumnType, "Failed to inject controller column")
+        XCTAssertNotNil(Configuration.viewProjectsType, "Failed to inject controller projects")
         XCTAssertNotNil(Configuration.canvasType, "Failed to inject canvas")
-        XCTAssertNotNil(Configuration.templateFactory, "Failed to inject template factory")
         XCTAssertNotNil(Configuration.directoryRoot, "Failed to inject directory root")
     }
 }

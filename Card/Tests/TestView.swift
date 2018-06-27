@@ -1,12 +1,14 @@
 import XCTest
+import CleanArchitecture
 import Board
+import Shared
 @testable import Card
-@testable import Shared
 
 class TestView:XCTestCase {
     private var view:Card.View!
     private var interactor:MockInteractor!
     private var card:CardProtocol!
+    private var column:ColumnProtocol!
     private var presenter:MockPresenter!
     private struct Constants {
         static let initialText:String = "hello world"
@@ -19,10 +21,13 @@ class TestView:XCTestCase {
         self.view = Card.View()
         self.interactor = MockInteractor()
         self.presenter = MockPresenter()
+        self.presenter.viewModel = ViewModel()
         self.presenter.viewModel = self.view.presenter.viewModel
         self.view.presenter = self.presenter
         self.presenter.interactor = self.interactor
         self.card = CardFactory.newCard()
+        self.column = ColumnFactory.newColumn()
+        self.card.container = self.column
         self.interactor.card = self.card
         self.card.content = Constants.initialText
     }
@@ -30,6 +35,16 @@ class TestView:XCTestCase {
     func testLoadingTrashImage() {
         let image:UIImage? = UIImage(name:ViewConstants.Navigation.iconDelete, in:View.self)
         XCTAssertNotNil(image)
+    }
+    
+    func testDidLoadInjectsViewToKeyboardAdjuster() {
+        self.view.didLoad()
+        XCTAssertNotNil(self.view.presenter.keyboardAdjuster.view, "Not injected")
+    }
+    
+    func testDidLoadAssignsTextDelegate() {
+        self.view.didLoad()
+        XCTAssertNotNil(self.view.content.viewText.delegate, "Not assigned")
     }
     
     func testSelectorDone() {
@@ -51,5 +66,15 @@ class TestView:XCTestCase {
         self.view.content.viewText.text = Constants.updatedText
         self.view.textViewDidChange(self.view.content.viewText)
         XCTAssertEqual(self.card.content, Constants.updatedText, "Failed to update card")
+    }
+    
+    func testUpdateViewModel() {
+        XCTAssertNotNil(self.view.view, "Failed to load view")
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.title = "hello world"
+        viewModel.text = "lorem ipsum"
+        self.view.viewModel.update(property:viewModel)
+        XCTAssertEqual(self.view.title, viewModel.title, "Not updated")
+        XCTAssertEqual(self.view.content.viewText.text, viewModel.text, "Not updated")
     }
 }

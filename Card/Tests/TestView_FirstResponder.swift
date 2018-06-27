@@ -7,6 +7,8 @@ class TestView_FirstResponder:XCTestCase {
     private var view:Card.View!
     private var text:MockViewText!
     private var project:MockProjectManagedProtocol!
+    private var card:CardProtocol!
+    private var column:ColumnProtocol!
     
     override func setUp() {
         super.setUp()
@@ -14,8 +16,12 @@ class TestView_FirstResponder:XCTestCase {
         self.view = Card.View()
         self.text = MockViewText()
         self.project = MockProjectManagedProtocol()
+        self.card = CardFactory.newCard()
+        self.column = ColumnFactory.newColumn()
+        self.card.container = self.column
         self.view.content.viewText = self.text
         self.view.presenter.interactor.project = self.project
+        self.view.presenter.interactor.card = self.card
     }
     
     func testTextBecomesFirstResponder() {

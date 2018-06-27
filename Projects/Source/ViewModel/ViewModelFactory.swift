@@ -1,6 +1,6 @@
 import Foundation
 import Board
-import Shared
+import Architecture
 
 class ViewModelFactory {
     class func makeListWith(board:BoardProjectsProtocol) -> ViewModelList {

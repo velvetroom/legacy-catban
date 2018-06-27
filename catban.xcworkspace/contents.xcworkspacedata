@@ -5,6 +5,9 @@
       location = "group:Main/Main.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Architecture/Architecture.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Shared/Shared.xcodeproj">
    </FileRef>
    <FileRef
@@ -38,6 +41,9 @@
       location = "group:Projects/Projects.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Design">
    </FileRef>
    <FileRef
@@ -48,6 +54,9 @@
    </FileRef>
    <FileRef
       location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile">
    </FileRef>
    <FileRef
       location = "group:Main/../.gitignore">

@@ -1,5 +1,7 @@
 import Foundation
+import CleanArchitecture
 import Board
+import Architecture
 import Shared
 import Tools
 
@@ -8,7 +10,9 @@ class StateAdd:StateProtocol {
         var viewModel:NamerViewModelContent = NamerViewModelContent()
         viewModel.title = String.localized(key:"StateAdd_ViewModel_Title", in:type(of:self))
         let namer:ViewProtocol = NamerFactory.makeWith(interactor:interactor, and:viewModel)
-        interactor.presenter?.transition?.pushTo(view:namer)
+        interactor.presenter?.shouldTransition { (transition:TransitionProtocol?) in
+            transition?.pushTo(view:namer)
+        }
     }
     
     func namerFinishedWith(name:String, interactor:Interactor) {

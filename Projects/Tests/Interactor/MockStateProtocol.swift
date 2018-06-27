@@ -4,6 +4,12 @@ import Foundation
 class MockStateProtocol:StateProtocol {
     var onOpenNamer:(() -> Void)?
     var onNamerFinished:(() -> Void)?
+    var onDeleteConfirmed:(() -> Void)?
+    var onOpenDeleter:(() -> Void)?
+    
+    func deleterConfirmed(interactor:Interactor) {
+        self.onDeleteConfirmed?()
+    }
     
     func openNamer(interactor:Interactor) {
         self.onOpenNamer?()
@@ -11,5 +17,9 @@ class MockStateProtocol:StateProtocol {
     
     func namerFinishedWith(name:String, interactor:Interactor) {
         self.onNamerFinished?()
+    }
+    
+    func openDeleter(interactor:Interactor) {
+        self.onOpenDeleter?()
     }
 }

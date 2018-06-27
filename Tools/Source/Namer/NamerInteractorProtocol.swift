@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 public protocol NamerInteractorProtocol:InteractorProtocol {
     func namerFinishedWith(name:String)

@@ -1,11 +1,18 @@
 import UIKit
+import Architecture
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewContent> {
+public class View:Architecture.View<Presenter, ViewContent> {
+    var notificationCenter:NotificationCenter!
     private var buttonMenu:UIBarButtonItem!
     
+    public override func initProperties() {
+        super.initProperties()
+        self.notificationCenter = NotificationCenter.default
+    }
+    
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        self.notificationCenter.removeObserver(self)
     }
     
     public override func didLoad() {
@@ -39,13 +46,13 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func configureMenuViewModel() {
-        var viewModel:ViewModelMenu = ViewModelMenu()
+        var viewModel:ViewModelMenu = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func configureContentViewModel() {
-        var viewModel:ViewModelContent = ViewModelContent()
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
@@ -63,8 +70,10 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func listenForOrientationChange() {
-        NotificationCenter.default.addObserver(forName:Notification.Name.UIDeviceOrientationDidChange, object:nil, queue:OperationQueue.main) { [weak self] (notification:Notification) in
-            self?.presenter.orientationChanged()
+        self.notificationCenter.addObserver(
+            forName:Notification.Name.UIDeviceOrientationDidChange, object:nil,
+            queue:OperationQueue.main) { [weak self] (notification:Notification) in
+                self?.presenter.orientationChanged()
         }
     }
 }

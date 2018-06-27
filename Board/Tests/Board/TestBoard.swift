@@ -13,9 +13,11 @@ class TestBoard:XCTestCase {
         self.model.identifier = Constants.identifier
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.countProjects, "Failed to load count projects")
-        XCTAssertNotNil(self.model.projects, "Failed to load projects")
+    func testCountProjects() {
+        XCTAssertEqual(self.model.countProjects, 0, "Should have no projects")
+        let project:Project = Project()
+        project.identifier = "lorem ipsum"
+        self.model.add(project:project)
+        XCTAssertEqual(self.model.countProjects, 1, "Should have 1 project")
     }
 }

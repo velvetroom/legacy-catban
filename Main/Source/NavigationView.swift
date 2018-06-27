@@ -1,5 +1,6 @@
 import UIKit
-import Shared
+import CleanArchitecture
+import Architecture
 
 class NavigationView:UINavigationController {
     private var animated:Bool {
@@ -61,7 +62,7 @@ class NavigationView:UINavigationController {
     }
     
     private func configureViewModelFor(view:ViewProtocol) {
-        var viewModel:ViewModelNavigation = ViewModelNavigation()
+        var viewModel:ViewModelNavigation = view.viewModel.property()
         viewModel.observing = self.updated
         view.viewModel.update(property:viewModel)
     }

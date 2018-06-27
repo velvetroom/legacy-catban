@@ -1,6 +1,6 @@
 import XCTest
 import Board
-import Shared
+import Architecture
 @testable import Projects
 
 class TestViewModelFactory:XCTestCase {

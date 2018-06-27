@@ -1,7 +1,8 @@
 import UIKit
+import Architecture
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextViewDelegate {
+public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -40,10 +41,11 @@ public class View:Shared.View<Interactor, Presenter, ViewContent>, UITextViewDel
     
     private func hookDelegates() {
         self.content.viewText.delegate = self
+        self.presenter.keyboardAdjuster.view = self.content.viewText
     }
     
     private func configureViewModel() {
-        var viewModel:ViewModelContent = ViewModelContent()
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }

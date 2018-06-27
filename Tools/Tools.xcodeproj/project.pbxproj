@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamer.swift */; };
+		51820EF7EE03574F4FB573F7 /* Pods_Architecture_Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B517D51422DF1A56E4CF5E8B /* Pods_Architecture_Tools.framework */; };
+		75776018B14361725E676201 /* Pods_Architecture_TestsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE069635494215BD081D9900 /* Pods_Architecture_TestsTools.framework */; };
+		DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */; };
+		DA10A50520DCDE080085BA58 /* MockDeleterInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */; };
+		DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */; };
+		DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50820DCE1380085BA58 /* TestDeleterView.swift */; };
+		DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */; };
+		DA13EF4320D3CA2A00475A16 /* TestNamerView_Calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */; };
 		DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */; };
 		DA3D81B320DB9161004E9E85 /* DeleterViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */; };
 		DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44424320D27F0700587AF3 /* DeleterFactory.swift */; };
@@ -19,28 +26,26 @@
 		DA4571FC20D397C10066764B /* NamerViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4571FB20D397C10066764B /* NamerViewModelState.swift */; };
 		DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD71420CA4DFF003257FA /* Tools.framework */; };
 		DA4BD73220CA4F22003257FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4BD73020CA4F22003257FA /* Localizable.strings */; };
-		DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */; };
-		DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */; };
-		DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */; };
 		DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */; };
 		DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */; };
 		DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */; };
 		DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */; };
 		DA4BD74720CA4F29003257FA /* NamerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD73E20CA4F29003257FA /* NamerError.swift */; };
 		DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */; };
-		DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */; };
+		DA4BD75220CA4F33003257FA /* TestKeyboardAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */; };
 		DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */; };
 		DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */; };
 		DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */; };
 		DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */; };
 		DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
 		DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75820CA525B003257FA /* Shared.framework */; };
+		DA58605620DD1B4A00777ECF /* KeyboardAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */; };
+		DA58605820DD1B7000777ECF /* KeyboardAdjusterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */; };
+		DA58605A20DD1FDC00777ECF /* KeyboardAdjusterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */; };
 		DAA7E46920D3D9CC00AF5F4F /* DeleterViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */; };
 		DAA7E46B20D3DC9C00AF5F4F /* DeleterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */; };
-		DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */; };
-		DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */; };
-		DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */; };
-		DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */; };
+		DACCF61B20E3D2AB003AA65E /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACCF61A20E3D2AB003AA65E /* Architecture.framework */; };
+		DACCF61D20E3D2B5003AA65E /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACCF61C20E3D2B5003AA65E /* Architecture.framework */; };
 		DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */; };
 		DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */; };
 		DAED6D8120CF9C3F002AB9F9 /* NamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */; };
@@ -69,7 +74,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA13EF4220D3CA2A00475A16 /* TestNamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamer.swift; sourceTree = "<group>"; };
+		859CA7D40CB0D42D3044B8D5 /* Pods-Architecture-TestsTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsTools.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools.release.xcconfig"; sourceTree = "<group>"; };
+		9B0BB0C3C09699FAB9DF9753 /* Pods-Architecture-Tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Tools.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Tools/Pods-Architecture-Tools.debug.xcconfig"; sourceTree = "<group>"; };
+		B517D51422DF1A56E4CF5E8B /* Pods_Architecture_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B913CBFD9DF5CFDD381DBBCD /* Pods-Architecture-TestsTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsTools.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools.debug.xcconfig"; sourceTree = "<group>"; };
+		DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterFactory.swift; sourceTree = "<group>"; };
+		DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterInteractorProtocol.swift; sourceTree = "<group>"; };
+		DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterPresenter.swift; sourceTree = "<group>"; };
+		DA10A50820DCE1380085BA58 /* TestDeleterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeleterView.swift; sourceTree = "<group>"; };
+		DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeleterPresenter.swift; sourceTree = "<group>"; };
+		DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerView_Calls.swift; sourceTree = "<group>"; };
 		DA13EF4520D3CB8800475A16 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA3D81B220DB9161004E9E85 /* DeleterViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewMenu.swift; sourceTree = "<group>"; };
 		DA44424320D27F0700587AF3 /* DeleterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterFactory.swift; sourceTree = "<group>"; };
@@ -80,30 +94,28 @@
 		DA44424D20D280B500587AF3 /* DeleterViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewContent.swift; sourceTree = "<group>"; };
 		DA4571FB20D397C10066764B /* NamerViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerViewModelState.swift; sourceTree = "<group>"; };
 		DA4BD71420CA4DFF003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4BD72320CA4E5C003257FA /* TestTools.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTools.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4BD72320CA4E5C003257FA /* TestsTools.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsTools.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4BD72E20CA4F0E003257FA /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA4BD73120CA4F22003257FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardFactory.swift; sourceTree = "<group>"; };
-		DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboard.swift; sourceTree = "<group>"; };
-		DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterForKeyboardProtocol.swift; sourceTree = "<group>"; };
 		DA4BD73920CA4F29003257FA /* NamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD73A20CA4F29003257FA /* NamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorVisible.swift; sourceTree = "<group>"; };
 		DA4BD73B20CA4F29003257FA /* NamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorComposite.swift; sourceTree = "<group>"; };
 		DA4BD73C20CA4F29003257FA /* NamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD73E20CA4F29003257FA /* NamerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamerError.swift; sourceTree = "<group>"; };
 		DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
-		DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenterForKeyboard.swift; sourceTree = "<group>"; };
+		DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestKeyboardAdjuster.swift; sourceTree = "<group>"; };
 		DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorVisible.swift; sourceTree = "<group>"; };
 		DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorComposite.swift; sourceTree = "<group>"; };
 		DA4BD74F20CA4F33003257FA /* MockNamerValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNamerValidatorProtocol.swift; sourceTree = "<group>"; };
 		DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNamerValidatorLength.swift; sourceTree = "<group>"; };
 		DA4BD75820CA525B003257FA /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjuster.swift; sourceTree = "<group>"; };
+		DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjusterProtocol.swift; sourceTree = "<group>"; };
+		DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdjusterFactory.swift; sourceTree = "<group>"; };
 		DAA7E46820D3D9CC00AF5F4F /* DeleterViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterViewBackground.swift; sourceTree = "<group>"; };
 		DAA7E46A20D3DC9C00AF5F4F /* DeleterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleterConstants.swift; sourceTree = "<group>"; };
-		DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteFactory.swift; sourceTree = "<group>"; };
-		DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteProtocol.swift; sourceTree = "<group>"; };
-		DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelete.swift; sourceTree = "<group>"; };
-		DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDeleteDelegateProtocol.swift; sourceTree = "<group>"; };
+		DACCF61A20E3D2AB003AA65E /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACCF61C20E3D2B5003AA65E /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED6D7A20CF9A3F002AB9F9 /* NamerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerFactory.swift; sourceTree = "<group>"; };
 		DAED6D7E20CF9A53002AB9F9 /* NamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerPresenter.swift; sourceTree = "<group>"; };
 		DAED6D8020CF9C3F002AB9F9 /* NamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamerView.swift; sourceTree = "<group>"; };
@@ -119,6 +131,8 @@
 		DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerPresenter.swift; sourceTree = "<group>"; };
 		DAF88C4520D16A370048FFC5 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamerImages.swift; sourceTree = "<group>"; };
+		E00FBF8AF3C15AE37B9D8180 /* Pods-Architecture-Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Tools.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Tools/Pods-Architecture-Tools.release.xcconfig"; sourceTree = "<group>"; };
+		EE069635494215BD081D9900 /* Pods_Architecture_TestsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +140,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACCF61B20E3D2AB003AA65E /* Architecture.framework in Frameworks */,
 				DA4BD75920CA525B003257FA /* Shared.framework in Frameworks */,
+				51820EF7EE03574F4FB573F7 /* Pods_Architecture_Tools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,14 +150,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACCF61D20E3D2B5003AA65E /* Architecture.framework in Frameworks */,
 				DA4BD72820CA4E5C003257FA /* Tools.framework in Frameworks */,
 				DA4BD75A20CA528C003257FA /* Shared.framework in Frameworks */,
+				75776018B14361725E676201 /* Pods_Architecture_TestsTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA10A50120DCDD870085BA58 /* Deleter */ = {
+			isa = PBXGroup;
+			children = (
+				DA10A50220DCDDB10085BA58 /* TestDeleterFactory.swift */,
+				DA10A50620DCDFD70085BA58 /* TestDeleterPresenter.swift */,
+				DA10A50820DCE1380085BA58 /* TestDeleterView.swift */,
+				DA10A50A20DCE1B00085BA58 /* MockDeleterPresenter.swift */,
+				DA10A50420DCDE080085BA58 /* MockDeleterInteractorProtocol.swift */,
+			);
+			path = Deleter;
+			sourceTree = "<group>";
+		};
 		DA13EF4420D3CB7400475A16 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +202,10 @@
 				DA4BD73320CA4F29003257FA /* Source */,
 				DA4BD74820CA4F33003257FA /* Tests */,
 				DA4BD72F20CA4F22003257FA /* Resources */,
+				DA85C4FF20DD2853007CDF61 /* Assets */,
 				DA4BD71520CA4DFF003257FA /* Products */,
 				DA4BD75720CA525B003257FA /* Frameworks */,
+				E8260F88A70DE5F88B646BBE /* Pods */,
 				DA4BD72E20CA4F0E003257FA /* Configuration */,
 			);
 			sourceTree = "<group>";
@@ -182,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4BD71420CA4DFF003257FA /* Tools.framework */,
-				DA4BD72320CA4E5C003257FA /* TestTools.xctest */,
+				DA4BD72320CA4E5C003257FA /* TestsTools.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4BD73020CA4F22003257FA /* Localizable.strings */,
-				DAF88C4520D16A370048FFC5 /* assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,51 +230,41 @@
 		DA4BD73320CA4F29003257FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DA58605420DD1ADC00777ECF /* KeyboardAdjuster */,
 				DA44424220D27EF400587AF3 /* Deleter */,
 				DAED6D7920CF9A2B002AB9F9 /* Namer */,
-				DAE5E4FE20CEB631005A8F34 /* PresenterDelete */,
-				DA4BD73420CA4F29003257FA /* PresenterForKeyboard */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		DA4BD73420CA4F29003257FA /* PresenterForKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				DA4BD73520CA4F29003257FA /* PresenterForKeyboardFactory.swift */,
-				DA4BD73720CA4F29003257FA /* PresenterForKeyboardProtocol.swift */,
-				DA4BD73620CA4F29003257FA /* PresenterForKeyboard.swift */,
-			);
-			path = PresenterForKeyboard;
 			sourceTree = "<group>";
 		};
 		DA4BD74820CA4F33003257FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				DA13EF4420D3CB7400475A16 /* Shared */,
-				DA4BD74920CA4F33003257FA /* PresenterForKeyboard */,
+				DA4BD74920CA4F33003257FA /* KeyboardAdjuster */,
+				DA10A50120DCDD870085BA58 /* Deleter */,
 				DA4BD74C20CA4F33003257FA /* Namer */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		DA4BD74920CA4F33003257FA /* PresenterForKeyboard */ = {
+		DA4BD74920CA4F33003257FA /* KeyboardAdjuster */ = {
 			isa = PBXGroup;
 			children = (
-				DA4BD74B20CA4F33003257FA /* TestPresenterForKeyboard.swift */,
+				DA4BD74B20CA4F33003257FA /* TestKeyboardAdjuster.swift */,
 				DA4BD74A20CA4F33003257FA /* MockNotificationCenter.swift */,
 			);
-			path = PresenterForKeyboard;
+			path = KeyboardAdjuster;
 			sourceTree = "<group>";
 		};
 		DA4BD74C20CA4F33003257FA /* Namer */ = {
 			isa = PBXGroup;
 			children = (
-				DA13EF4220D3CA2A00475A16 /* TestNamer.swift */,
-				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C2920D0F5980048FFC5 /* TestNamerFactory.swift */,
+				DAF88C4720D16A5F0048FFC5 /* TestNamerImages.swift */,
 				DAF88C4320D135FC0048FFC5 /* TestNamerPresenter.swift */,
 				DAF88C4120D12F900048FFC5 /* TestNamerView.swift */,
+				DA13EF4220D3CA2A00475A16 /* TestNamerView_Calls.swift */,
 				DA4BD74D20CA4F33003257FA /* TestNamerValidatorVisible.swift */,
 				DA4BD74E20CA4F33003257FA /* TestNamerValidatorComposite.swift */,
 				DA4BD75020CA4F33003257FA /* TestNamerValidatorLength.swift */,
@@ -256,20 +277,31 @@
 		DA4BD75720CA525B003257FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DACCF61C20E3D2B5003AA65E /* Architecture.framework */,
+				DACCF61A20E3D2AB003AA65E /* Architecture.framework */,
 				DA4BD75820CA525B003257FA /* Shared.framework */,
+				B517D51422DF1A56E4CF5E8B /* Pods_Architecture_Tools.framework */,
+				EE069635494215BD081D9900 /* Pods_Architecture_TestsTools.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DAE5E4FE20CEB631005A8F34 /* PresenterDelete */ = {
+		DA58605420DD1ADC00777ECF /* KeyboardAdjuster */ = {
 			isa = PBXGroup;
 			children = (
-				DAE5E4FF20CEB664005A8F34 /* PresenterDeleteFactory.swift */,
-				DAE5E50120CEB695005A8F34 /* PresenterDeleteProtocol.swift */,
-				DAE5E50520CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift */,
-				DAE5E50320CEB6B1005A8F34 /* PresenterDelete.swift */,
+				DA58605920DD1FDC00777ECF /* KeyboardAdjusterFactory.swift */,
+				DA58605720DD1B7000777ECF /* KeyboardAdjusterProtocol.swift */,
+				DA58605520DD1B4A00777ECF /* KeyboardAdjuster.swift */,
 			);
-			path = PresenterDelete;
+			path = KeyboardAdjuster;
+			sourceTree = "<group>";
+		};
+		DA85C4FF20DD2853007CDF61 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DAF88C4520D16A370048FFC5 /* assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		DAED6D7920CF9A2B002AB9F9 /* Namer */ = {
@@ -294,6 +326,17 @@
 			path = Namer;
 			sourceTree = "<group>";
 		};
+		E8260F88A70DE5F88B646BBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BB0C3C09699FAB9DF9753 /* Pods-Architecture-Tools.debug.xcconfig */,
+				E00FBF8AF3C15AE37B9D8180 /* Pods-Architecture-Tools.release.xcconfig */,
+				B913CBFD9DF5CFDD381DBBCD /* Pods-Architecture-TestsTools.debug.xcconfig */,
+				859CA7D40CB0D42D3044B8D5 /* Pods-Architecture-TestsTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -311,6 +354,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA4BD71C20CA4E00003257FA /* Build configuration list for PBXNativeTarget "Tools" */;
 			buildPhases = (
+				ED85C795C68CCDABD4932DC1 /* [CP] Check Pods Manifest.lock */,
 				DA4BD70F20CA4DFF003257FA /* Sources */,
 				DA4BD71020CA4DFF003257FA /* Frameworks */,
 				DA4BD71120CA4DFF003257FA /* Headers */,
@@ -325,22 +369,24 @@
 			productReference = DA4BD71420CA4DFF003257FA /* Tools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DA4BD72220CA4E5C003257FA /* TestTools */ = {
+		DA4BD72220CA4E5C003257FA /* TestsTools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA4BD72B20CA4E5C003257FA /* Build configuration list for PBXNativeTarget "TestTools" */;
+			buildConfigurationList = DA4BD72B20CA4E5C003257FA /* Build configuration list for PBXNativeTarget "TestsTools" */;
 			buildPhases = (
+				052B4F968066B6C6B0588B0F /* [CP] Check Pods Manifest.lock */,
 				DA4BD71F20CA4E5C003257FA /* Sources */,
 				DA4BD72020CA4E5C003257FA /* Frameworks */,
 				DA4BD72120CA4E5C003257FA /* Resources */,
+				E9DAC0D5C55E6424F7802072 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DA4BD72A20CA4E5C003257FA /* PBXTargetDependency */,
 			);
-			name = TestTools;
+			name = TestsTools;
 			productName = TestTools;
-			productReference = DA4BD72320CA4E5C003257FA /* TestTools.xctest */;
+			productReference = DA4BD72320CA4E5C003257FA /* TestsTools.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +420,7 @@
 			projectRoot = "";
 			targets = (
 				DA4BD71320CA4DFF003257FA /* Tools */,
-				DA4BD72220CA4E5C003257FA /* TestTools */,
+				DA4BD72220CA4E5C003257FA /* TestsTools */,
 			);
 		};
 /* End PBXProject section */
@@ -398,25 +444,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		052B4F968066B6C6B0588B0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Architecture-TestsTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DAC0D5C55E6424F7802072 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CleanArchitecture/CleanArchitecture.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CleanArchitecture.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsTools/Pods-Architecture-TestsTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED85C795C68CCDABD4932DC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Architecture-Tools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA4BD70F20CA4DFF003257FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DA4BD74420CA4F29003257FA /* NamerValidatorComposite.swift in Sources */,
-				DA4BD74120CA4F29003257FA /* PresenterForKeyboardProtocol.swift in Sources */,
-				DAE5E50620CEB71E005A8F34 /* PresenterDeleteDelegateProtocol.swift in Sources */,
 				DAED6D8520CF9CBD002AB9F9 /* NamerViewContent.swift in Sources */,
+				DA58605820DD1B7000777ECF /* KeyboardAdjusterProtocol.swift in Sources */,
 				DA44424E20D280B500587AF3 /* DeleterViewContent.swift in Sources */,
 				DA44424420D27F0700587AF3 /* DeleterFactory.swift in Sources */,
-				DA4BD73F20CA4F29003257FA /* PresenterForKeyboardFactory.swift in Sources */,
-				DAE5E50420CEB6B1005A8F34 /* PresenterDelete.swift in Sources */,
 				DA4571FC20D397C10066764B /* NamerViewModelState.swift in Sources */,
 				DA44424620D27F4100587AF3 /* DeleterViewModel.swift in Sources */,
 				DA4BD74520CA4F29003257FA /* NamerValidatorLength.swift in Sources */,
 				DA4BD74320CA4F29003257FA /* NamerValidatorVisible.swift in Sources */,
 				DAF88C3A20D1180E0048FFC5 /* NamerViewField.swift in Sources */,
 				DAED6D8320CF9C77002AB9F9 /* NamerInteractorProtocol.swift in Sources */,
+				DA58605A20DD1FDC00777ECF /* KeyboardAdjusterFactory.swift in Sources */,
+				DA58605620DD1B4A00777ECF /* KeyboardAdjuster.swift in Sources */,
 				DA44424C20D2807900587AF3 /* DeleterView.swift in Sources */,
 				DA4BD74220CA4F29003257FA /* NamerValidatorProtocol.swift in Sources */,
 				DAF88C3E20D119810048FFC5 /* NamerConstants.swift in Sources */,
@@ -431,9 +533,6 @@
 				DAED6D7F20CF9A53002AB9F9 /* NamerPresenter.swift in Sources */,
 				DAED6D7B20CF9A3F002AB9F9 /* NamerFactory.swift in Sources */,
 				DA44424820D27F9A00587AF3 /* DeleterInteractorProtocol.swift in Sources */,
-				DA4BD74020CA4F29003257FA /* PresenterForKeyboard.swift in Sources */,
-				DAE5E50020CEB664005A8F34 /* PresenterDeleteFactory.swift in Sources */,
-				DAE5E50220CEB695005A8F34 /* PresenterDeleteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,17 +542,22 @@
 			files = (
 				DA4BD75420CA4F33003257FA /* TestNamerValidatorComposite.swift in Sources */,
 				DA4BD75520CA4F33003257FA /* MockNamerValidatorProtocol.swift in Sources */,
+				DA10A50720DCDFD70085BA58 /* TestDeleterPresenter.swift in Sources */,
 				DAF88C2C20D0F5F10048FFC5 /* MockNamerInteractorProtocol.swift in Sources */,
 				DAF88C4820D16A5F0048FFC5 /* TestNamerImages.swift in Sources */,
 				DA4BD75320CA4F33003257FA /* TestNamerValidatorVisible.swift in Sources */,
 				DAF88C4420D135FC0048FFC5 /* TestNamerPresenter.swift in Sources */,
 				DAF88C2A20D0F5980048FFC5 /* TestNamerFactory.swift in Sources */,
 				DA4BD75120CA4F33003257FA /* MockNotificationCenter.swift in Sources */,
+				DA10A50520DCDE080085BA58 /* MockDeleterInteractorProtocol.swift in Sources */,
 				DA4BD75620CA4F33003257FA /* TestNamerValidatorLength.swift in Sources */,
 				DA13EF4620D3CB8800475A16 /* MockTransitionProtocol.swift in Sources */,
-				DA13EF4320D3CA2A00475A16 /* TestNamer.swift in Sources */,
+				DA10A50B20DCE1B00085BA58 /* MockDeleterPresenter.swift in Sources */,
+				DA10A50320DCDDB10085BA58 /* TestDeleterFactory.swift in Sources */,
+				DA13EF4320D3CA2A00475A16 /* TestNamerView_Calls.swift in Sources */,
 				DAF88C4220D12F900048FFC5 /* TestNamerView.swift in Sources */,
-				DA4BD75220CA4F33003257FA /* TestPresenterForKeyboard.swift in Sources */,
+				DA4BD75220CA4F33003257FA /* TestKeyboardAdjuster.swift in Sources */,
+				DA10A50920DCE1380085BA58 /* TestDeleterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +707,7 @@
 		};
 		DA4BD71D20CA4E00003257FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0BB0C3C09699FAB9DF9753 /* Pods-Architecture-Tools.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +732,7 @@
 		};
 		DA4BD71E20CA4E00003257FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00FBF8AF3C15AE37B9D8180 /* Pods-Architecture-Tools.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -651,8 +757,8 @@
 		};
 		DA4BD72C20CA4E5C003257FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B913CBFD9DF5CFDD381DBBCD /* Pods-Architecture-TestsTools.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/tests.plist;
@@ -669,8 +775,8 @@
 		};
 		DA4BD72D20CA4E5C003257FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 859CA7D40CB0D42D3044B8D5 /* Pods-Architecture-TestsTools.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/tests.plist;
@@ -706,7 +812,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA4BD72B20CA4E5C003257FA /* Build configuration list for PBXNativeTarget "TestTools" */ = {
+		DA4BD72B20CA4E5C003257FA /* Build configuration list for PBXNativeTarget "TestsTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA4BD72C20CA4E5C003257FA /* Debug */,

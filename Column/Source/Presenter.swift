@@ -1,9 +1,12 @@
 import Foundation
+import CleanArchitecture
+import Architecture
 import Shared
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:ViewProtocol?
+    public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     

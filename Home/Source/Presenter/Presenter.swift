@@ -1,8 +1,11 @@
 import UIKit
+import CleanArchitecture
+import Architecture
 import Shared
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:ViewProtocol?
+    public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var canvas:CanvasProtocol
@@ -43,7 +46,7 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateMenuViewModel(show:Bool) {
-        var viewModel:ViewModelMenu = ViewModelMenu()
+        var viewModel:ViewModelMenu = self.viewModel.property()
         viewModel.show = show
         self.viewModel.update(property:viewModel)
     }

@@ -1,10 +1,12 @@
 import Foundation
+import CleanArchitecture
 import Board
-import Shared
+import Architecture
 import Tools
 
 public class Presenter:NSObject, PresenterProtocol {
-    public weak var presenting:ViewProtocol?
+    public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var state:PresenterState
@@ -85,7 +87,7 @@ public class Presenter:NSObject, PresenterProtocol {
     }
     
     private func selectItemAt(index:Int) {
-        var viewModel:ViewModelSelected = ViewModelSelected()
+        var viewModel:ViewModelSelected = self.viewModel.property()
         viewModel.indexPath = IndexPath(item:index, section:0)
         self.viewModel.update(property:viewModel)
         self.stateSelectAt(index:index)

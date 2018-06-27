@@ -1,5 +1,6 @@
 import Foundation
-import Shared
+import CleanArchitecture
+import Architecture
 import Board
 
 class MockTransitionProtocol:TransitionProtocol {
@@ -7,6 +8,7 @@ class MockTransitionProtocol:TransitionProtocol {
     var onPresent:(() -> Void)?
     var onPush:((ViewProtocol) -> Void)?
     var onPop:(() -> Void)?
+    var onDimiss:(() -> Void)?
     
     func transitionToLoad() { }
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
@@ -27,5 +29,9 @@ class MockTransitionProtocol:TransitionProtocol {
     
     func present(view:ViewProtocol) {
         self.onPresent?()
+    }
+    
+    func dismiss() {
+        self.onDimiss?()
     }
 }

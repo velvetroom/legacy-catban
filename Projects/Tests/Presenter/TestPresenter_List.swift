@@ -17,8 +17,8 @@ class TestPresenter_List:XCTestCase {
         var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name
         let itemB:ViewModelListItem = ViewModelListItem()
-        self.view.content.viewList.frame = Constants.frame
         XCTAssertNotNil(self.view.view)
+        self.view.content.viewList.frame = Constants.frame
         var viewModel:ViewModelList = ViewModelList()
         viewModel.items = [itemA, itemB]
         self.view.presenter.viewModel.update(property:viewModel)

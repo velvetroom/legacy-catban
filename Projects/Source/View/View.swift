@@ -1,7 +1,8 @@
 import UIKit
+import Architecture
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewContent> {
+public class View:Architecture.View<Presenter, ViewContent> {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -49,7 +50,7 @@ public class View:Shared.View<Interactor, Presenter, ViewContent> {
     }
     
     private func centreSelector() {
-        var viewModel:ViewModelSelector = ViewModelSelector()
+        var viewModel:ViewModelSelector = self.viewModel.property()
         viewModel.positionY = self.content.bounds.height / 2.0
         self.viewModel.update(property:viewModel)
     }

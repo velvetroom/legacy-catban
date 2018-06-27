@@ -1,10 +1,12 @@
 import Foundation
-import Board
+import CleanArchitecture
+import Architecture
 import Shared
+import Board
 import Template
 
 public class Interactor:InteractorProtocol {
-    public weak var presenter:InteractorPresentationProtocol?
+    public weak var presenter:InteractorDelegateProtocol?
     var dispatchQueue:DispatchQueue
     
     public required init() {
@@ -18,14 +20,14 @@ public class Interactor:InteractorProtocol {
     }
     
     func open(project:ProjectManagedProtocol) {
-        DispatchQueue.main.async { [weak self] in
-            self?.presenter?.transition?.transitionToHome(project:project)
+        self.transitionOnMainThread { (transition:TransitionProtocol?) in
+            transition?.transitionToHome(project:project)
         }
     }
     
     func open(board:BoardProjectsProtocol) {
-        DispatchQueue.main.async { [weak self] in
-            self?.presenter?.transition?.transitionToProjects(board:board)
+        self.transitionOnMainThread { (transition:TransitionProtocol?) in
+            transition?.transitionToProjects(board:board)
         }
     }
     
@@ -83,5 +85,11 @@ public class Interactor:InteractorProtocol {
     private func save(project:ProjectProtocol) {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
         repository.save(project:project)
+    }
+    
+    private func transitionOnMainThread(completion:@escaping((TransitionProtocol?) -> Void)) {
+        DispatchQueue.main.async { [weak self] in
+            self?.presenter?.shouldTransition(completion:completion)
+        }
     }
 }

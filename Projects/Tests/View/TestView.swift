@@ -5,11 +5,14 @@ class TestView:XCTestCase {
     private var view:View!
     private var viewList:MockViewList!
     private var presenter:MockPresenter!
+    private var interactor:MockInteractor!
     
     override func setUp() {
         super.setUp()
         self.view = View()
         self.presenter = MockPresenter()
+        self.interactor = MockInteractor()
+        self.presenter.interactor = self.interactor
         self.viewList = MockViewList()
         self.view.presenter = self.presenter
         self.view.content.viewList = self.viewList
@@ -18,7 +21,7 @@ class TestView:XCTestCase {
     func testUpdateListLayoutOnOrientationChange() {
         var called:Bool = false
         self.viewList.onUpdateLayout = { called = true }
-        self.view.orientationChanged()
+        self.view.orientationChanged(size:CGSize.zero)
         XCTAssertTrue(called, "Not called")
     }
     

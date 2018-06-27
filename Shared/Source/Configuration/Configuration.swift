@@ -1,4 +1,5 @@
 import Foundation
+import CleanArchitecture
 
 public struct Configuration {
     public static var repositoryBoardType:RepositoryBoardProtocol.Type!

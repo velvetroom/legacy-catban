@@ -1,9 +1,11 @@
 import Foundation
-import Shared
+import CleanArchitecture
+import Architecture
 
 class PresenterMenu:PresenterProtocol {
     weak var interactor:Interactor!
-    weak var presenting:ViewProtocol?
+    weak var transition:TransitionProtocol?
+    weak var view:ViewProtocol?
     var viewModel:ViewModel!
 
     required init() { }

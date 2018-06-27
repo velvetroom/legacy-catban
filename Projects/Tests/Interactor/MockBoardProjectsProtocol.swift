@@ -4,7 +4,7 @@ import Board
 class MockBoardProjectsProtocol:BoardProjectsProtocol {
     var projects:[ProjectProtocol]
     var project:ProjectProtocol?
-    var onAddProject:((ProjectProtocol) -> Void)?
+    var onAddProject:(() -> Void)?
     var onRemoveProject:(() -> Void)?
     
     var firstProject:ProjectProtocol? {
@@ -46,6 +46,6 @@ class MockBoardProjectsProtocol:BoardProjectsProtocol {
     }
     
     func add(project:ProjectProtocol) {
-        self.onAddProject?(project)
+        self.onAddProject?()
     }
 }

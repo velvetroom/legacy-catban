@@ -1,30 +1,30 @@
 import XCTest
+import Board
 @testable import Main
 @testable import Shared
-@testable import Board
+@testable import Card
+@testable import Column
 
 class TestNavigation_Transitions_Board:XCTestCase {
     private var model:Navigation!
-    private var view:MockNavigationController!
+    private var view:MockNavigationView!
     
     override func setUp() {
         super.setUp()
         Injection().load()
         self.model = Navigation()
-        self.view = MockNavigationController()
+        self.view = MockNavigationView()
         self.model.view = self.view
     }
     
     func testTransitionToCard() {
         var transition:Bool = false
         self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
-            let view:View = views.first as! View
-            let presenter:PresenterProtocol = view.delegate as! PresenterProtocol
-            let controller:ControllerCardProtocol = presenter.delegate as! ControllerCardProtocol
-            XCTAssertNotNil(controller, "Invalid view received")
-            XCTAssertNotNil(controller.transiton, "Failed to assign transition")
-            XCTAssertNotNil(controller.project, "Failed to inject project")
-            XCTAssertNotNil(controller.card, "Failed to inject")
+            let view:Card.View? = views.first as? Card.View
+            XCTAssertNotNil(view, "Invalid view received")
+            XCTAssertNotNil(view?.transition, "Failed to assign transition")
+            XCTAssertNotNil(view?.presenter.interactor.project, "Failed to inject project")
+            XCTAssertNotNil(view?.presenter.interactor.card, "Failed to inject")
             transition = true
         }
         
@@ -32,7 +32,6 @@ class TestNavigation_Transitions_Board:XCTestCase {
         let project:ProjectProtocol = ProjectFactory.newProject()
         let managed:ProjectManagedProtocol = board.manage(project:project)
         let card:CardProtocol = CardFactory.newCard()
-        
         self.model.transitionTo(card:card, in:managed)
         XCTAssertTrue(transition, "Transition never happened")
     }
@@ -40,13 +39,11 @@ class TestNavigation_Transitions_Board:XCTestCase {
     func testTransitionToColumn() {
         var transition:Bool = false
         self.view.onSetViewController = { (views:[UIViewController], animated:Bool) in
-            let view:View = views.first as! View
-            let presenter:PresenterProtocol = view.delegate as! PresenterProtocol
-            let controller:ControllerColumnProtocol = presenter.delegate as! ControllerColumnProtocol
-            XCTAssertNotNil(controller, "Invalid view received")
-            XCTAssertNotNil(controller.transiton, "Failed to assign transition")
-            XCTAssertNotNil(controller.project, "Failed to inject project")
-            XCTAssertNotNil(controller.column, "Failed to inject")
+            let view:Column.View? = views.first as? Column.View
+            XCTAssertNotNil(view, "Invalid view received")
+            XCTAssertNotNil(view?.transition, "Failed to assign transition")
+            XCTAssertNotNil(view?.presenter.interactor.project, "Failed to inject project")
+            XCTAssertNotNil(view?.presenter.interactor.column, "Failed to inject")
             transition = true
         }
         
@@ -54,7 +51,6 @@ class TestNavigation_Transitions_Board:XCTestCase {
         let project:ProjectProtocol = ProjectFactory.newProject()
         let managed:ProjectManagedProtocol = board.manage(project:project)
         let column:ColumnProtocol = ColumnFactory.newColumn()
-        
         self.model.transitionTo(column:column, in:managed)
         XCTAssertTrue(transition, "Transition never happened")
     }

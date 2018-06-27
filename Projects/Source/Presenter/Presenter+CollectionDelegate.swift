@@ -1,31 +1,6 @@
 import UIKit
 
 extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {    
-    var centerIndexPath:IndexPath? {
-        get {
-//            return self.view.indexPathForItem(at:self.centerPoint)
-            return IndexPath(item:0, section:0)
-        }
-    }
-    
-    private var centerPoint:CGPoint {
-        get {
-//            let halfHeight:CGFloat = self.view.bounds.height / 2.0
-//            return CGPoint(x:0, y:halfHeight + self.view.contentOffset.y)
-            return CGPoint.zero
-        }
-    }
-    
-    private var centerCell:UICollectionViewCell? {
-        get {
-//            guard
-//                let indexPath:IndexPath = self.centerIndexPath
-//            else { return nil }
-//            return self.view.cellForItem(at:indexPath)
-            return nil
-        }
-    }
-    
     public func scrollViewWillBeginDragging(_:UIScrollView) {
         self.state.trackingScroll = true
     }
@@ -70,7 +45,7 @@ extension Presenter:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
         } else {
             centreY = view.bounds.midY
         }
-        var viewModel:ViewModelSelector = ViewModelSelector()
+        var viewModel:ViewModelSelector = self.viewModel.property()
         viewModel.positionY = centreY - view.contentOffset.y
         self.viewModel.update(property:viewModel)
     }

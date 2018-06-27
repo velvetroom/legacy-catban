@@ -3,13 +3,13 @@ import Foundation
 
 class MockInteractor:Interactor {
     var onDone:(() -> Void)?
-    var onDelete:(() -> Void)?
+    var onDeleteConfirmed:(() -> Void)?
     
     override func done() {
         self.onDone?()
     }
     
-    override func delete() {
-        self.onDelete?()
+    override func deleteConfirmed() {
+        self.onDeleteConfirmed?()
     }
 }

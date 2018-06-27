@@ -1,4 +1,5 @@
 import XCTest
+import CleanArchitecture
 import Shared
 @testable import Tools
 @testable import Projects
@@ -32,6 +33,7 @@ class TestInteractor_States:XCTestCase {
     }
     
     func testRenameChangesStateToRename() {
+        self.view.presenter.state.selected = String()
         self.view.selectorRename(button:UIBarButtonItem())
         let state:StateRename? = self.interactor.state as? StateRename
         XCTAssertNotNil(state, "Invalid state")
@@ -49,14 +51,21 @@ class TestInteractor_States:XCTestCase {
             XCTAssertFalse(viewModel!.title.isEmpty, "Failed to assign title")
             transitioned = true
         }
+        self.view.presenter.state.selected = String()
         self.view.selectorRename(button:UIBarButtonItem())
         XCTAssertTrue(transitioned, "No trasition")
     }
     
-    func testNamerCancelledChangesToDefault() {
-        self.interactor.state = StateRename()
-        self.interactor.namerCancelled()
-        let state:StateDefault? = self.interactor.state as? StateDefault
-        XCTAssertNotNil(state, "Invalid state")
+    func testDeleteChangesState() {
+        self.view.presenter.interactor.stateDeleteProjectWith(identifier:String())
+        let state:StateDelete? = self.view.presenter.interactor.state as? StateDelete
+        XCTAssertNotNil(state, "Not changed")
+        XCTAssertNotNil(state?.project, "Not injected project")
+    }
+    
+    func testAddProjectChangesState() {
+        self.view.presenter.interactor.stateAddProject()
+        let state:StateAdd? = self.view.presenter.interactor.state as? StateAdd
+        XCTAssertNotNil(state, "Not changed")
     }
 }

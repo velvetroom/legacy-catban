@@ -1,15 +1,17 @@
 import Foundation
-import Shared
+import CleanArchitecture
+import Architecture
 import Tools
 
 public class Presenter:PresenterProtocol {
-    public weak var presenting:ViewProtocol?
+    public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
-    var presenterForKeyboard:PresenterForKeyboardProtocol
+    var keyboardAdjuster:KeyboardAdjusterProtocol
     
     public required init() {
-        self.presenterForKeyboard = PresenterForKeyboardFactory.makePresenter()
+        self.keyboardAdjuster = KeyboardAdjusterFactory.makeAdjuster()
     }
     
     public func didLoad() {

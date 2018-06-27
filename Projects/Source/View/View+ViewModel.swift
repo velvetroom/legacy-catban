@@ -9,25 +9,25 @@ extension View {
     }
     
     private func configureContentViewModel() {
-        var viewModel:ViewModelContent = ViewModelContent()
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func configureListViewModel() {
-        var viewModel:ViewModelList = ViewModelList()
+        var viewModel:ViewModelList = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func configureSelectorViewModel() {
-        var viewModel:ViewModelSelector = ViewModelSelector()
+        var viewModel:ViewModelSelector = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func configureSelectedViewModel() {
-        var viewModel:ViewModelSelected = ViewModelSelected()
+        var viewModel:ViewModelSelected = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }

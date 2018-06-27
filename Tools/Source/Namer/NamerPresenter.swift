@@ -1,8 +1,10 @@
 import UIKit
-import Shared
+import CleanArchitecture
+import Architecture
 
 class NamerPresenter<Interactor:NamerInteractorProtocol>:NSObject, PresenterProtocol, UITextFieldDelegate {
-    weak var presenting:ViewProtocol?
+    weak var view:ViewProtocol?
+    weak var transition:TransitionProtocol?
     var interactor:Interactor!
     var viewModel:ViewModel!
     
