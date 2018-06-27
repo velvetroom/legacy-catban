@@ -5,6 +5,13 @@ platform :ios, '11.0'
 abstract_target 'Architecture' do
     pod 'CleanArchitecture'
     
+    target 'Architecture' do
+        project 'Architecture/Architecture.xcodeproj'
+    end
+    target 'TestsArchitecture' do
+        project 'Architecture/Architecture.xcodeproj'
+    end
+    
     target 'Shared' do
         project 'Shared/Shared.xcodeproj'
     end
