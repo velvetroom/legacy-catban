@@ -1,8 +1,10 @@
 import Foundation
+import CleanArchitecture
 import Shared
 
 class PresenterMenu:PresenterProtocol {
     weak var interactor:Interactor!
+    weak var transition:TransitionProtocol?
     weak var view:ViewProtocol?
     var viewModel:ViewModel!
 

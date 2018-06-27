@@ -1,8 +1,10 @@
 import UIKit
+import CleanArchitecture
 import Shared
 
 public class Presenter:PresenterProtocol {
     public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var canvas:CanvasProtocol

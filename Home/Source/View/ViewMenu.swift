@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class ViewMenu:Shared.View<Interactor, PresenterMenu, ViewMenuContent> {
+class ViewMenu:Shared.View<PresenterMenu, ViewMenuContent> {
     override func initProperties() {
         super.initProperties()
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve

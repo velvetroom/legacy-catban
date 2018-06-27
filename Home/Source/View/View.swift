@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-public class View:Shared.View<Interactor, Presenter, ViewContent> {
+public class View:Shared.View<Presenter, ViewContent> {
     var notificationCenter:NotificationCenter!
     private var buttonMenu:UIBarButtonItem!
     

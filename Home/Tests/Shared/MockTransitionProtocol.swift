@@ -1,6 +1,7 @@
 import Foundation
+import CleanArchitecture
 import Board
-@testable import Shared
+import Shared
 
 class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToCard:(() -> Void)?

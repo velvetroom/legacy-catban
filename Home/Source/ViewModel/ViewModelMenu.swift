@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 struct ViewModelMenu:ViewModelPropertyProtocol {
     var observing:((ViewModelMenu) -> Void)?
