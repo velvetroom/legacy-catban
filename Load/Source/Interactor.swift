@@ -1,10 +1,11 @@
 import Foundation
-import Board
+import CleanArchitecture
 import Shared
+import Board
 import Template
 
 public class Interactor:InteractorProtocol {
-    public weak var presenter:InteractorPresentationProtocol?
+    public weak var presenter:InteractorDelegateProtocol?
     var dispatchQueue:DispatchQueue
     
     public required init() {
