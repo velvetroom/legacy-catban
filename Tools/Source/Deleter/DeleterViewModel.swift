@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 public struct DeleterViewModel:ViewModelPropertyProtocol {
     public var observing:((DeleterViewModel) -> Void)?

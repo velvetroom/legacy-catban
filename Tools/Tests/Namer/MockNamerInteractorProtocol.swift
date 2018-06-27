@@ -1,11 +1,11 @@
 import Foundation
-import Shared
+import CleanArchitecture
 import Tools
 
 class MockNamerInteractorProtocol:NamerInteractorProtocol {
     var onNamerFinished:((String) -> Void)?
     var onNamerCancelled:(() -> Void)?
-    weak var presenter:InteractorPresentationProtocol?
+    weak var presenter:InteractorDelegateProtocol?
     
     required init() { }
     

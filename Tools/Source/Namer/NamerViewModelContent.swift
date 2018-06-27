@@ -1,5 +1,5 @@
 import UIKit
-import Shared
+import CleanArchitecture
 
 public struct NamerViewModelContent:ViewModelPropertyProtocol {
     public var observing:((NamerViewModelContent) -> Void)?

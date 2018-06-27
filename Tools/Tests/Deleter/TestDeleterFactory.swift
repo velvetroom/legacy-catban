@@ -1,5 +1,5 @@
 import XCTest
-import Shared
+import CleanArchitecture
 @testable import Tools
 
 class TestDeleterFactory:XCTestCase {

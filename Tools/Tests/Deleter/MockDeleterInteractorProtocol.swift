@@ -1,11 +1,11 @@
 import Foundation
-import Shared
+import CleanArchitecture
 import Tools
 
 class MockDeleterInteractorProtocol:DeleterInteractorProtocol {
     var onDeleteConfirmed:(() -> Void)?
     var onDeleteCancelled:(() -> Void)?
-    var presenter:InteractorPresentationProtocol?
+    var presenter:InteractorDelegateProtocol?
     
     required init() { }
     

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		170F9D1BC3CBE03B3FCE86C8 /* Pods_Architecture_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A0EC1FE4C1EF77EE8AE183 /* Pods_Architecture_Shared.framework */; };
 		3CF6CCDAF2CBE634B2FFFAD3 /* Pods_Architecture_TestsShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616832EFD068540C1DE731B1 /* Pods_Architecture_TestsShared.framework */; };
-		7E2568BF87738E10CF752DDE /* Pods_TestsShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C0068BE48DE496DE0BC5EF /* Pods_TestsShared.framework */; };
 		DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58B8209F39EF00AD4425 /* UIColor+Shared.swift */; };
-		DA1B8A31972A30B47A0D0F63 /* Pods_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2038E05976F635817D11BC01 /* Pods_Shared.framework */; };
 		DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF89209C299F00B736CD /* UIImage+Bundle.swift */; };
 		DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF97209C340900B736CD /* String+Bundle.swift */; };
 		DA3ADF9A209C347200B736CD /* TestString_Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADF99209C347200B736CD /* TestString_Bundle.swift */; };
@@ -84,7 +82,6 @@
 			files = (
 				DAF7E66A209B077E00B8A39A /* Shared.framework in Frameworks */,
 				DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */,
-				7E2568BF87738E10CF752DDE /* Pods_TestsShared.framework in Frameworks */,
 				3CF6CCDAF2CBE634B2FFFAD3 /* Pods_Architecture_TestsShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA567B33209C6F89005D74EE /* Board.framework in Frameworks */,
-				DA1B8A31972A30B47A0D0F63 /* Pods_Shared.framework in Frameworks */,
 				170F9D1BC3CBE03B3FCE86C8 /* Pods_Architecture_Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

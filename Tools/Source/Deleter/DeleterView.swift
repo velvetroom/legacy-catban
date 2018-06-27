@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class DeleterView<Interactor:DeleterInteractorProtocol>:View
+class DeleterView<Interactor:DeleterInteractorProtocol>:Shared.View
     <Interactor, DeleterPresenter<Interactor>, DeleterViewContent> {
     override func initProperties() {
         super.initProperties()

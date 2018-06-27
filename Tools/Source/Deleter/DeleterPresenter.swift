@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 class DeleterPresenter<Interactor:DeleterInteractorProtocol>:PresenterProtocol {
     weak var view:ViewProtocol?

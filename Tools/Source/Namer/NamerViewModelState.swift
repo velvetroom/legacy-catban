@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 struct NamerViewModelState:ViewModelPropertyProtocol {
     var observing:((NamerViewModelState) -> Void)?

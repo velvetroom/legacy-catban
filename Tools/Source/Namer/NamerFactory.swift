@@ -1,5 +1,5 @@
 import Foundation
-import Shared
+import CleanArchitecture
 
 public class NamerFactory {
     public class func makeWith<Interactor:NamerInteractorProtocol>(
