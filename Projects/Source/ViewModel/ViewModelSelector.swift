@@ -1,5 +1,5 @@
 import UIKit
-import Shared
+import CleanArchitecture
 
 struct ViewModelSelector:ViewModelPropertyProtocol {
     var observing:((ViewModelSelector) -> Void)?

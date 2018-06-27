@@ -1,9 +1,10 @@
 import Foundation
+import CleanArchitecture
 import Shared
 import Board
 
 public class Interactor:InteractorBoardProtocol {
-    public weak var presenter:InteractorPresentationProtocol?
+    public weak var presenter:InteractorDelegateProtocol?
     public var board:BoardProjectsProtocol!
     var state:StateProtocol
     
@@ -23,7 +24,9 @@ public class Interactor:InteractorBoardProtocol {
     func openProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
         let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
-        self.presenter?.transition?.transitionToHome(project:projectManaged)
+        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
+            transition?.transitionToHome(project:projectManaged)
+        }
     }
     
     func delete(project:ProjectProtocol) {

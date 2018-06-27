@@ -1,10 +1,12 @@
 import Foundation
+import CleanArchitecture
 import Board
 import Shared
 import Tools
 
 public class Presenter:NSObject, PresenterProtocol {
     public weak var view:ViewProtocol?
+    public weak var transition:TransitionProtocol?
     public var interactor:Interactor!
     public var viewModel:ViewModel!
     var state:PresenterState
