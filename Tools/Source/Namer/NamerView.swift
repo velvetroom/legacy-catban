@@ -1,7 +1,7 @@
 import UIKit
-import Shared
+import Architecture
 
-class NamerView<Interactor:NamerInteractorProtocol>:Shared.View<NamerPresenter<Interactor>, NamerViewContent> {
+class NamerView<Interactor:NamerInteractorProtocol>:View<NamerPresenter<Interactor>, NamerViewContent> {
     override func didLoad() {
         super.didLoad()
         self.configureView()

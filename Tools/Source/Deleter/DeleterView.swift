@@ -1,7 +1,7 @@
 import UIKit
-import Shared
+import Architecture
 
-class DeleterView<Interactor:DeleterInteractorProtocol>:Shared.View<DeleterPresenter<Interactor>, DeleterViewContent> {
+class DeleterView<Interactor:DeleterInteractorProtocol>:View<DeleterPresenter<Interactor>, DeleterViewContent> {
     override func initProperties() {
         super.initProperties()
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
