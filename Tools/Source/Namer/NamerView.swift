@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class NamerView<Interactor:NamerInteractorProtocol>:Shared.View<Interactor, NamerPresenter<Interactor>, NamerViewContent> {
+class NamerView<Interactor:NamerInteractorProtocol>:Shared.View<NamerPresenter<Interactor>, NamerViewContent> {
     override func didLoad() {
         super.didLoad()
         self.configureView()
@@ -64,6 +64,6 @@ class NamerView<Interactor:NamerInteractorProtocol>:Shared.View<Interactor, Name
     
     private func closeNamer() {
         self.content.viewField.resignFirstResponder()
-        self.transition.pop()
+        self.presenter.transition?.pop()
     }
 }

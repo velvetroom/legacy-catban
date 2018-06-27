@@ -1,8 +1,10 @@
 import Foundation
 import CleanArchitecture
+import Shared
 
 class DeleterPresenter<Interactor:DeleterInteractorProtocol>:PresenterProtocol {
     weak var view:ViewProtocol?
+    weak var transition:TransitionProtocol?
     var interactor:Interactor!
     var viewModel:ViewModel!
     

@@ -1,5 +1,6 @@
 import Foundation
 import CleanArchitecture
+import Shared
 import Board
 
 class MockTransitionProtocol:TransitionProtocol {
