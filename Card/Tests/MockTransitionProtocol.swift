@@ -1,7 +1,7 @@
 import Foundation
 import CleanArchitecture
-import Shared
-@testable import Board
+import Architecture
+import Board
 
 class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToHome:(() -> Void)?

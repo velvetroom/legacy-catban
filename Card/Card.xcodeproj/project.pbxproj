@@ -11,6 +11,8 @@
 		CEB1FC091E470DFD14A18538 /* Pods_Architecture_Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C62E56E8EFF8C21604A3A7 /* Pods_Architecture_Card.framework */; };
 		DA15450B20A45EE300CCC59D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450A20A45EE300CCC59D /* Presenter.swift */; };
 		DA15450F20A45F0000CCC59D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15450E20A45F0000CCC59D /* TestPresenter.swift */; };
+		DA20A74A20E3D8130058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74920E3D8130058A65A /* Architecture.framework */; };
+		DA20A74B20E3D81D0058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74920E3D8130058A65A /* Architecture.framework */; };
 		DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA4493BF20D8D3C600A66CDF /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4493BE20D8D3C600A66CDF /* ViewContent.swift */; };
 		DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315720A4864800070042 /* MockTransitionProtocol.swift */; };
@@ -56,6 +58,7 @@
 		D8C62E56E8EFF8C21604A3A7 /* Pods_Architecture_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA15450A20A45EE300CCC59D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA15450E20A45F0000CCC59D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		DA20A74920E3D8130058A65A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA4493BE20D8D3C600A66CDF /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		DA46315720A4864800070042 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA20A74A20E3D8130058A65A /* Architecture.framework in Frameworks */,
 				DA4BD76120CA5413003257FA /* Tools.framework in Frameworks */,
 				DABDB03B20A38B97001B7D47 /* Board.framework in Frameworks */,
 				DABDB03920A38B85001B7D47 /* Shared.framework in Frameworks */,
@@ -103,6 +107,7 @@
 				DABDB03C20A38BB9001B7D47 /* Board.framework in Frameworks */,
 				DABDB03D20A38BBB001B7D47 /* Shared.framework in Frameworks */,
 				DA4BD76220CA541E003257FA /* Tools.framework in Frameworks */,
+				DA20A74B20E3D81D0058A65A /* Architecture.framework in Frameworks */,
 				75EFC23B6DCBB86FF1A756D5 /* Pods_Architecture_TestsCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +200,7 @@
 		DABDB03720A38B85001B7D47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA20A74920E3D8130058A65A /* Architecture.framework */,
 				DA4BD76020CA5413003257FA /* Tools.framework */,
 				DABDB03A20A38B97001B7D47 /* Board.framework */,
 				DABDB03820A38B85001B7D47 /* Shared.framework */,
