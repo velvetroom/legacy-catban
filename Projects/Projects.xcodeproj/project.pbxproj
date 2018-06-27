@@ -23,6 +23,8 @@
 		DA204FF120B8494900A41DB0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
 		DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA204FF720B8924F00A41DB0 /* Presenter.swift */; };
 		DA204FFF20B8984600A41DB0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA204FFE20B8984600A41DB0 /* View.swift */; };
+		DA20A75020E3D8CC0058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74F20E3D8CC0058A65A /* Architecture.framework */; };
+		DA20A75120E3D8D40058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74F20E3D8CC0058A65A /* Architecture.framework */; };
 		DA3BA75220C2C383004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75120C2C383004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA3D81AF20DB8474004E9E85 /* Interactor+Deleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81AE20DB8474004E9E85 /* Interactor+Deleter.swift */; };
 		DA3D81B120DB851B004E9E85 /* StateDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B020DB851B004E9E85 /* StateDelete.swift */; };
@@ -101,6 +103,7 @@
 		DA1D02E920BC47B4003F6137 /* TestViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewList.swift; sourceTree = "<group>"; };
 		DA204FF720B8924F00A41DB0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA204FFE20B8984600A41DB0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA20A74F20E3D8CC0058A65A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3BA75120C2C383004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA3D81AE20DB8474004E9E85 /* Interactor+Deleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+Deleter.swift"; sourceTree = "<group>"; };
 		DA3D81B020DB851B004E9E85 /* StateDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDelete.swift; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA20A75020E3D8CC0058A65A /* Architecture.framework in Frameworks */,
 				DA4BD76420CA542C003257FA /* Tools.framework in Frameworks */,
 				DACE508F20B848FB00276D5A /* Board.framework in Frameworks */,
 				DACE508D20B848F200276D5A /* Shared.framework in Frameworks */,
@@ -173,6 +177,7 @@
 			files = (
 				DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */,
 				DA204FF020B8494700A41DB0 /* Board.framework in Frameworks */,
+				DA20A75120E3D8D40058A65A /* Architecture.framework in Frameworks */,
 				DA3D81B420DBBAB1004E9E85 /* Tools.framework in Frameworks */,
 				DA204FF120B8494900A41DB0 /* Shared.framework in Frameworks */,
 				76E0BA0C0C66EFD2F07A7123 /* Pods_Architecture_TestsProjects.framework in Frameworks */,
@@ -336,6 +341,7 @@
 		DACE508B20B848F200276D5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA20A74F20E3D8CC0058A65A /* Architecture.framework */,
 				DA4BD76320CA542C003257FA /* Tools.framework */,
 				DACE508E20B848FB00276D5A /* Board.framework */,
 				DACE508C20B848F200276D5A /* Shared.framework */,

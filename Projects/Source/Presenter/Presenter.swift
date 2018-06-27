@@ -1,7 +1,7 @@
 import Foundation
 import CleanArchitecture
 import Board
-import Shared
+import Architecture
 import Tools
 
 public class Presenter:NSObject, PresenterProtocol {
