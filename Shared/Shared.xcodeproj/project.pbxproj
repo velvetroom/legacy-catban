@@ -18,6 +18,7 @@
 		DA4C363E20E3C141006D8BE9 /* InteractorCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C363D20E3C141006D8BE9 /* InteractorCardProtocol.swift */; };
 		DA4C364020E3C163006D8BE9 /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C363F20E3C163006D8BE9 /* InteractorColumnProtocol.swift */; };
 		DA4C364220E3C185006D8BE9 /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C364120E3C185006D8BE9 /* InteractorProjectProtocol.swift */; };
+		DA4C364420E3C853006D8BE9 /* ViewNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C364320E3C853006D8BE9 /* ViewNavigationProtocol.swift */; };
 		DA4F1ABA20D51ED300C0BB5C /* ViewModelNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */; };
 		DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */; };
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
@@ -64,6 +65,7 @@
 		DA4C363D20E3C141006D8BE9 /* InteractorCardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorCardProtocol.swift; sourceTree = "<group>"; };
 		DA4C363F20E3C163006D8BE9 /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
 		DA4C364120E3C185006D8BE9 /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
+		DA4C364320E3C853006D8BE9 /* ViewNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNavigationProtocol.swift; sourceTree = "<group>"; };
 		DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNavigation.swift; sourceTree = "<group>"; };
 		DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBoardProtocol.swift; sourceTree = "<group>"; };
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				DA4C364120E3C185006D8BE9 /* InteractorProjectProtocol.swift */,
 				DA4F1AB920D51ED300C0BB5C /* ViewModelNavigation.swift */,
 				DADB5EB7209B092100CFFC9A /* View.swift */,
+				DA4C364320E3C853006D8BE9 /* ViewNavigationProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DA4C363E20E3C141006D8BE9 /* InteractorCardProtocol.swift in Sources */,
 				DA4C364020E3C163006D8BE9 /* InteractorColumnProtocol.swift in Sources */,
 				DA4C364220E3C185006D8BE9 /* InteractorProjectProtocol.swift in Sources */,
+				DA4C364420E3C853006D8BE9 /* ViewNavigationProtocol.swift in Sources */,
 				DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
