@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19264A20FDA0B4934BCEB846 /* Pods_Architecture_Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912693BA88355B360D841AA7 /* Pods_Architecture_Main.framework */; };
 		2865A40101095EF1E471C1C4 /* Pods_Architecture_TestsMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAD8176C349B2B25121671 /* Pods_Architecture_TestsMain.framework */; };
 		DA034AFB20AF4B3B001E461F /* Canvas.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA034AFC20AF4B60001E461F /* Canvas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA034AF820AF4B36001E461F /* Canvas.framework */; };
@@ -144,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19264A20FDA0B4934BCEB846 /* Pods_Architecture_Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
