@@ -1,4 +1,5 @@
 import Foundation
+import CleanArchitecture
 @testable import Shared
 
 class MockPresenterProtocol:PresenterProtocol {
