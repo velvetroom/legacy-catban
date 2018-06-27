@@ -19,7 +19,6 @@
 		DA567B33209C6F89005D74EE /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA567B3D209C7663005D74EE /* RepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */; };
 		DA5B80F620DCD09600319AD6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B80F520DCD09600319AD6 /* TestView.swift */; };
-		DA93D4BD20E3A225001BF6F1 /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93D4BC20E3A225001BF6F1 /* MockTransitionProtocol.swift */; };
 		DA978FAA20A198CE002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA567B32209C6F89005D74EE /* Board.framework */; };
 		DA99EDB120E3606300E4C8AD /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99EDAC20E3603300E4C8AD /* MockView.swift */; };
 		DA99EDB220E3606600E4C8AD /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99EDAD20E3603300E4C8AD /* MockPresenterProtocol.swift */; };
@@ -62,7 +61,6 @@
 		DA567B32209C6F89005D74EE /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA5B80F520DCD09600319AD6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		DA93D4BC20E3A225001BF6F1 /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA99EDAB20E3603300E4C8AD /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
 		DA99EDAC20E3603300E4C8AD /* MockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		DA99EDAD20E3603300E4C8AD /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				DA99EDAB20E3603300E4C8AD /* MockInteractorProtocol.swift */,
 				DA99EDAD20E3603300E4C8AD /* MockPresenterProtocol.swift */,
 				DA99EDAC20E3603300E4C8AD /* MockView.swift */,
-				DA93D4BC20E3A225001BF6F1 /* MockTransitionProtocol.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -399,7 +396,6 @@
 				DA99EDB120E3606300E4C8AD /* MockView.swift in Sources */,
 				DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */,
 				DA99EDB220E3606600E4C8AD /* MockPresenterProtocol.swift in Sources */,
-				DA93D4BD20E3A225001BF6F1 /* MockTransitionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@ import Foundation
 import CleanArchitecture
 import Board
 
-public protocol TransitionProtocol:CleanArchitecture.TransitionProtocol {
+public protocol TransitionProtocol:class {
     func transitionToLoad()
     func transitionToHome(project:ProjectManagedProtocol)
     func transitionToProjects(board:BoardProjectsProtocol)
