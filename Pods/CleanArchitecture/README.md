@@ -2,13 +2,13 @@
 
 ![iOS](https://img.shields.io/badge/iOS-9.0%2B-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-4.1-blue.svg)
-[![Bitrise](https://www.bitrise.io/app/04e42b095f2aed11/status.svg?token=7ZlxOD8DBPw6ho39Xb9CRw)](https://www.bitrise.io/app/04e42b095f2aed11)
+[![Build Status](https://app.bitrise.io/app/04e42b095f2aed11/status.svg?token=7ZlxOD8DBPw6ho39Xb9CRw&branch=master)](https://app.bitrise.io/app/04e42b095f2aed11)
 
 
 ## Description
 
 Clean Architecture is a Framework that will enable a clean separation of concerns in your iOS app;
-it is greatly inspired by Uncle Bob's Clean Architecture [![Uncle Bob](http://blog.cleancoder.com)](http://blog.cleancoder.com)
+it is greatly inspired by Uncle Bob's Clean Architecture [Uncle Bob](http://blog.cleancoder.com)
 
 
 ## Rationale
