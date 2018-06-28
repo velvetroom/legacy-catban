@@ -17,6 +17,11 @@
 		DA51AD6820E51C9C00EE178D /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6720E51C9C00EE178D /* Board.framework */; };
 		DA51AD6920E51CA500EE178D /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6520E51C9800EE178D /* Shared.framework */; };
 		DA51AD6A20E51CA700EE178D /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6720E51C9C00EE178D /* Board.framework */; };
+		DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6B20E51CE900EE178D /* Presenter.swift */; };
+		DA51AD6E20E51D0C00EE178D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6D20E51D0C00EE178D /* View.swift */; };
+		DA51AD7020E51E0A00EE178D /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6F20E51E0A00EE178D /* ViewContent.swift */; };
+		DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7120E51EC000EE178D /* TestPresenter.swift */; };
+		DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */; };
 		DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD2526D20E5167F00B97B2E /* Cloud.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		DA51AD6220E51C1F00EE178D /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA51AD6520E51C9800EE178D /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA51AD6720E51C9C00EE178D /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA51AD6B20E51CE900EE178D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DA51AD6D20E51D0C00EE178D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DA51AD6F20E51E0A00EE178D /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
+		DA51AD7120E51EC000EE178D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DAD2526D20E5167F00B97B2E /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2527C20E516B700B97B2E /* TestsCloud.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCloud.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2528720E517CF00B97B2E /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -138,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
+				DA51AD6B20E51CE900EE178D /* Presenter.swift */,
+				DA51AD6D20E51D0C00EE178D /* View.swift */,
+				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -146,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				DA51AD6020E51B0500EE178D /* TestInteractor.swift */,
+				DA51AD7120E51EC000EE178D /* TestPresenter.swift */,
+				DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -320,6 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */,
+				DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */,
+				DA51AD7020E51E0A00EE178D /* ViewContent.swift in Sources */,
+				DA51AD6E20E51D0C00EE178D /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */,
+				DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */,
 				DA51AD6120E51B0500EE178D /* TestInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,12 @@
-//
-//  Interactor.swift
-//  Cloud
-//
-//  Created by zero on 28.06.18.
-//  Copyright © 2018 iturbide. All rights reserved.
-//
-
 import Foundation
+import CleanArchitecture
+import Architecture
+import Board
+
+public class Interactor:InteractorProjectProtocol {
+    public weak var presenter:InteractorDelegateProtocol?
+    public weak var project:ProjectProtocol!
+    public var board:BoardProtocol!
+    
+    public required init() { }
+}
