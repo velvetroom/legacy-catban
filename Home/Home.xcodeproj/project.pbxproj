@@ -43,6 +43,8 @@
 		DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */; };
+		DAD2525E20E4F23F00B97B2E /* ViewMenuOptions+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */; };
+		DAD2526020E5092300B97B2E /* TestImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2525F20E5092300B97B2E /* TestImages.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */; };
@@ -103,6 +105,8 @@
 		DA914C8F20B7042A0025AE49 /* ViewMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuOption.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_Namer.swift; sourceTree = "<group>"; };
+		DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewMenuOptions+Option.swift"; sourceTree = "<group>"; };
+		DAD2525F20E5092300B97B2E /* TestImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImages.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				DA914C8120B6CEF30025AE49 /* ViewMenuClose.swift */,
 				DA914C8320B6D7D00025AE49 /* ViewMenuCloseFactory.swift */,
 				DA914C8D20B7030A0025AE49 /* ViewMenuOptions.swift */,
+				DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */,
 				DA914C8F20B7042A0025AE49 /* ViewMenuOption.swift */,
 			);
 			path = View;
@@ -230,6 +235,7 @@
 		DADB5EC2209B11F800CFFC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAD2525F20E5092300B97B2E /* TestImages.swift */,
 				DADB5EC3209B120F00CFFC9A /* TestView.swift */,
 				DA85C50320DD2B6F007CDF61 /* TestView_Notification.swift */,
 				DA914C8720B6E55C0025AE49 /* TestViewMenu.swift */,
@@ -504,6 +510,7 @@
 				DA914C7E20B6BA040025AE49 /* ViewMenu.swift in Sources */,
 				DA914C8420B6D7D00025AE49 /* ViewMenuCloseFactory.swift in Sources */,
 				DA914C9020B7042A0025AE49 /* ViewMenuOption.swift in Sources */,
+				DAD2525E20E4F23F00B97B2E /* ViewMenuOptions+Option.swift in Sources */,
 				DA914C8E20B7030A0025AE49 /* ViewMenuOptions.swift in Sources */,
 				DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Interactor.swift in Sources */,
@@ -528,6 +535,7 @@
 				DA15451720A46DAD00CCC59D /* MockInteractor.swift in Sources */,
 				DAE6B52020DE6D050084E4CE /* TestPresenterMenu.swift in Sources */,
 				DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */,
+				DAD2526020E5092300B97B2E /* TestImages.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA914C8A20B6E7280025AE49 /* TestViewMenuClose.swift in Sources */,
 				DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */,

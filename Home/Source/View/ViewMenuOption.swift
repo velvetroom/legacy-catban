@@ -7,7 +7,8 @@ class ViewMenuOption:UIButton {
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryViews()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
     required init?(coder:NSCoder) {
@@ -32,9 +33,12 @@ class ViewMenuOption:UIButton {
         self.setImage(image.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for:UIControlState.highlighted)
     }
     
-    func layoutSize() {
-        self.widthAnchor.constraint(equalToConstant:ViewConstants.Option.size).isActive = true
-        self.heightAnchor.constraint(equalToConstant:ViewConstants.Option.size).isActive = true
+    private func updateState() {
+        if self.isSelected || self.isHighlighted {
+            self.nameLabel.alpha = ViewConstants.Option.alphaOn
+        } else {
+            self.nameLabel.alpha = ViewConstants.Option.alphaOff
+        }
     }
     
     private func configureView() {
@@ -45,7 +49,7 @@ class ViewMenuOption:UIButton {
         self.imageView!.tintColor = UIColor(white:0, alpha:0.2)
     }
     
-    private func factoryViews() {
+    private func makeOutlets() {
         let nameLabel:UILabel = UILabel()
         nameLabel.isUserInteractionEnabled = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -54,20 +58,13 @@ class ViewMenuOption:UIButton {
         nameLabel.textColor = UIColor.black
         nameLabel.font = UIFont.systemFont(ofSize:ViewConstants.Option.fontSize, weight:UIFont.Weight.medium)
         self.nameLabel = nameLabel
-        
         self.addSubview(nameLabel)
-        
-        nameLabel.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant:ViewConstants.Option.nameHeight).isActive = true
-        nameLabel.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        nameLabel.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
-    private func updateState() {
-        if self.isSelected || self.isHighlighted {
-            self.nameLabel.alpha = ViewConstants.Option.alphaOn
-        } else {
-            self.nameLabel.alpha = ViewConstants.Option.alphaOff
-        }
+    private func layoutOutlets() {
+        self.nameLabel.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        self.nameLabel.heightAnchor.constraint(equalToConstant:ViewConstants.Option.nameHeight).isActive = true
+        self.nameLabel.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.nameLabel.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }
