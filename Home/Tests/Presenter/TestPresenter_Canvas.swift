@@ -3,13 +3,13 @@ import XCTest
 
 class TestPresenter_Canvas:XCTestCase {
     private var view:Home.View!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var canvas:MockCanvasProtocol!
     
     override func setUp() {
         super.setUp()
         self.view = Home.View()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.canvas = MockCanvasProtocol()
         self.view.presenter.interactor.project = self.project
         self.view.presenter.canvas = self.canvas

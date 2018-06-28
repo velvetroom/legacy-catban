@@ -6,30 +6,31 @@ import Board
 import Tools
 
 public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, NamerInteractorProtocol {
+    public var board:BoardProtocol!
+    public weak var project:ProjectProtocol!
     public weak var presenter:InteractorDelegateProtocol?
-    public var project:ProjectManagedProtocol!
     
     public required init() { }
     
     public func editCardWith(identifier:String) {
         let card:CardProtocol = self.project.cardWith(identifier:identifier)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionTo(card:card, in:self.project)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            self?.start(transition:transition, to:card)
         }
     }
     
     public func editColumnWith(identifier:String) {
         let column:ColumnProtocol = self.project.columnWith(identifier:identifier)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionTo(column:column, in:self.project)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            self?.start(transition:transition, to:column)
         }
     }
     
     public func createNewCard() {
         let card:CardProtocol = CardFactory.newCard()
         self.project.add(card:card)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionTo(card:card, in:self.project)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            self?.start(transition:transition, to:card)
         }
     }
     
@@ -37,8 +38,8 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, Namer
         var viewModel:NamerViewModelContent = NamerViewModelContent()
         viewModel.title = String.localized(key:"Interactor_Namer_Title", in:type(of:self))
         let namer:ViewProtocol = NamerFactory.makeWith(interactor:self, and:viewModel)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.pushTo(view:namer)
+        self.presenter?.startTransition { (transition:TransitionProtocol) in
+            transition.pushTo(view:namer)
         }
     }
     
@@ -60,14 +61,22 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, Namer
     }
     
     func openProjects() {
-        let board:ProjectManagerProtocol = self.project.manager
-        board.unmanage(project:project)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionToProjects(board:board)
+        self.presenter?.startTransition { (transition:TransitionProtocol) in
+            if let board:BoardProtocol = self.board {
+                transition.transitionToProjects(board:board)
+            }
         }
     }
     
     func closedMenu() {
         self.presenter?.shouldUpdate()
+    }
+    
+    private func start(transition:TransitionProtocol, to card:CardProtocol) {
+        transition.transitionTo(card:card, board:self.board, project:self.project)
+    }
+    
+    private func start(transition:TransitionProtocol, to column:ColumnProtocol) {
+        transition.transitionTo(column:column, board:self.board, project:self.project)
     }
 }

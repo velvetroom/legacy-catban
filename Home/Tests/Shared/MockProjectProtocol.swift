@@ -1,7 +1,7 @@
 import Foundation
 @testable import Board
 
-class MockProjectManagedProtocol:ProjectManaged {
+class MockProjectProtocol:Project {
     var numberOfColumns:Int {
         get {
             return self.columns.count

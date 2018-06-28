@@ -7,23 +7,26 @@ import Board
 class TestInteractor:XCTestCase {
     private var view:Home.View!
     private var transition:MockTransitionProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
+    private var board:BoardProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.canvasType = Canvas.self
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Home.View()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.transition = MockTransitionProtocol()
         self.view.presenter.interactor.project = self.project
+        self.view.presenter.interactor.board = BoardFactory.newBoard()
         self.view.transition = self.transition
     }
     
     func testSavesProject() {
         var called:Bool = false
         MockRepositoryProjectProtocol.onSave = { called = true }
-        self.view.presenter.interactor.project = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
+        self.view.presenter.interactor.project = project
         self.view.presenter.interactor.saveProject()
         XCTAssertTrue(called, "Failed to save")
     }
@@ -67,5 +70,15 @@ class TestInteractor:XCTestCase {
         presenter.onShouldUpdate = { called = true }
         self.view.presenter.interactor.closedMenu()
         XCTAssertTrue(called, "Not updated")
+    }
+    
+    func testNotRetainingProject() {
+        self.view.presenter.interactor.project = ProjectFactory.newProject()
+        XCTAssertNil(self.view.presenter.interactor.project, "Retains project")
+    }
+    
+    func testRetainingBoard() {
+        self.view.presenter.interactor.board = BoardFactory.newBoard()
+        XCTAssertNotNil(self.view.presenter.interactor.board, "Not retaining")
     }
 }

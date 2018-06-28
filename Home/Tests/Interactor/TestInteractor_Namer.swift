@@ -7,7 +7,7 @@ import Board
 class TestInteractor_Namer:XCTestCase {
     private var view:Home.View!
     private var transition:MockTransitionProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var presenter:MockPresenter!
     
     override func setUp() {
@@ -15,7 +15,7 @@ class TestInteractor_Namer:XCTestCase {
         Configuration.canvasType = Canvas.self
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Home.View()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.transition = MockTransitionProtocol()
         self.presenter = MockPresenter()
         self.view.presenter.interactor.presenter = self.presenter

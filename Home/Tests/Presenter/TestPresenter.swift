@@ -4,7 +4,7 @@ import Board
 @testable import Home
 
 class TestPresenter:XCTestCase {
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var view:Home.View!
     private var transition:MockTransitionProtocol!
     private var canvas:MockCanvasProtocol!
@@ -12,7 +12,7 @@ class TestPresenter:XCTestCase {
     override func setUp() {
         super.setUp()
         self.view = Home.View()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.transition = MockTransitionProtocol()
         self.canvas = MockCanvasProtocol()
         self.view.presenter.canvas = self.canvas
