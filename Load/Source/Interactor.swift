@@ -19,13 +19,13 @@ public class Interactor:InteractorProtocol {
         }
     }
     
-    func open(project:ProjectManagedProtocol) {
+    func open(board:BoardProtocol, project:ProjectProtocol) {
         self.transitionOnMainThread { (transition:TransitionProtocol?) in
-            transition?.transitionToHome(project:project)
+            transition?.transitionToHome(board:board, project:project)
         }
     }
     
-    func open(board:ProjectManagerProtocol) {
+    func open(board:BoardProtocol) {
         self.transitionOnMainThread { (transition:TransitionProtocol?) in
             transition?.transitionToProjects(board:board)
         }
@@ -43,19 +43,14 @@ public class Interactor:InteractorProtocol {
     }
     
     private func boardLoaded(board:BoardProtocol) {
-        if board.countProjects == 1 {
-            self.boardWithOneProject(board:board)
-        } else {
-            self.open(board:board)
-        }
-    }
-    
-    private func boardWithOneProject(board:BoardProtocol) {
         guard
+            board.countProjects == 1,
             let project:ProjectProtocol = board.firstProject
-        else { return }
-        let managed:ProjectManagedProtocol = board.manage(project:project)
-        self.open(project:managed)
+        else {
+            self.open(board:board)
+            return
+        }
+        self.open(board:board, project:project)
     }
     
     private func firstTime() -> BoardProtocol {

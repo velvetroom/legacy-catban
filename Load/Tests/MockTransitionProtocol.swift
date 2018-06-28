@@ -4,22 +4,22 @@ import Architecture
 import Board
 
 class MockTransitionProtocol:TransitionProtocol {
-    var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
+    var onTransitionToHome:((ProjectProtocol) -> Void)?
     var onTransitionToProjects:(() -> Void)?
     
     func transitionToLoad() { }
-    func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
-    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
     func pushTo(view:ViewProtocol) { }
     func pop() { }
     func present(view:ViewProtocol) { }
     func dismiss() { }
+    func transitionTo(card:CardProtocol, board:BoardProtocol, project:ProjectProtocol) { }
+    func transitionTo(column:ColumnProtocol, board:BoardProtocol, project:ProjectProtocol) { }
     
-    func transitionToProjects(board:ProjectManagerProtocol) {
+    func transitionToProjects(board:BoardProtocol) {
         self.onTransitionToProjects?()
     }
     
-    func transitionToHome(project:ProjectManagedProtocol) {
+    func transitionToHome(board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToHome?(project)
     }
 }

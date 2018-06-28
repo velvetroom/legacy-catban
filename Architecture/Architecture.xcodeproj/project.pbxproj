@@ -100,8 +100,8 @@
 			children = (
 				DACCF60120E3D142003AA65E /* TestView.swift */,
 				DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */,
-				DACCF60220E3D142003AA65E /* MockView.swift */,
 				DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */,
+				DACCF60220E3D142003AA65E /* MockView.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
