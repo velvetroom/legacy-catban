@@ -12,13 +12,6 @@ class TestProject:XCTestCase {
         self.model = Project()
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.countColumns, "Failed to load count columns")
-        XCTAssertNotNil(self.model.columns, "Failed to load columns")
-        XCTAssertNotNil(self.model.name, "Failed to load name")
-    }
-    
     func testCopyIdentifier() {
         let projectA:ProjectProtocol = ProjectFactory.newProject()
         let projectB:ProjectProtocol = ProjectFactory.blankProject()

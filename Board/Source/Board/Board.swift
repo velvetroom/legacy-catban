@@ -21,20 +21,11 @@ class Board:BoardProtocol, Equatable {
         self.projects = []
     }
     
-    func manage(project:ProjectProtocol) -> ProjectManagedProtocol {
-        self.remove(project:project)
-        return ProjectManagedFactory.assign(manager:self, to:project)
-    }
-    
-    func unmanage(project:ProjectManagedProtocol) {
-        let unmanaged:ProjectProtocol = ProjectFactory.removeManagementFrom(project:project)
-        self.add(project:unmanaged)
-    }
-    
     func add(project:ProjectProtocol) {
         guard
             project.identifier.isEmpty == false
         else { return }
+        project.board = self
         self.projects.append(project)
     }
     
@@ -43,6 +34,7 @@ class Board:BoardProtocol, Equatable {
         for index:Int in 0 ..< countProjects {
             let item:ProjectProtocol = self.projects[index]
             if project.identifier == item.identifier {
+                item.board = nil
                 self.projects.remove(at:index)
                 break
             }

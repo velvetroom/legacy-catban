@@ -9,10 +9,6 @@ class TestColumn_CardsManager:XCTestCase {
         self.model = Column()
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-    }
-    
     func testCountCards() {
         XCTAssertEqual(self.model.countCards, 0, "Should have no cards")
     }

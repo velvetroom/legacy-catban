@@ -10,10 +10,6 @@ class TestBoard_ProjectManager:XCTestCase {
         self.model.identifier = "lorem ipsum"
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-    }
-    
     func testCountProjects() {
         XCTAssertEqual(self.model.countProjects, 0, "There should be no projects")
     }
@@ -42,6 +38,13 @@ class TestBoard_ProjectManager:XCTestCase {
         XCTAssertEqual(self.model.countProjects, 1, "There should be 1 project")
         self.model.remove(project:project)
         XCTAssertEqual(self.model.countProjects, 0, "Failed to remove project")
+    }
+    
+    func testRemoveProjectNotContained() {
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        XCTAssertEqual(self.model.countProjects, 0, "Should have no projects")
+        self.model.remove(project:project)
+        XCTAssertEqual(self.model.countProjects, 0, "Should still have no projects")
     }
     
     func testProjectWithIdentifier() {

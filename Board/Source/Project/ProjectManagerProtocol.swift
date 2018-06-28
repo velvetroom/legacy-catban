@@ -4,8 +4,6 @@ public protocol ProjectManagerProtocol:class {
     var countProjects:Int { get }
     var firstProject:ProjectProtocol? { get }
     
-    func manage(project:ProjectProtocol) -> ProjectManagedProtocol
-    func unmanage(project:ProjectManagedProtocol)
     func projectWith(identifier:String) -> ProjectProtocol
     func add(project:ProjectProtocol)
     func remove(project:ProjectProtocol)

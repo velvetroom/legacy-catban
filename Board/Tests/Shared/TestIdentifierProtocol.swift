@@ -13,11 +13,6 @@ class TestBoard_Equatable:XCTestCase {
         self.model.identifier = Constants.identifier
     }
     
-    func testLoad() {
-        XCTAssertNotNil(self.model, "Failed to load model")
-        XCTAssertNotNil(self.model.identifier, "Failed to load identifier")
-    }
-    
     func testNonEmptyIdentifier() {
         XCTAssertFalse(self.model.identifier.isEmpty, "Identifier should not be empty")
     }
