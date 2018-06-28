@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol ProjectColumnsProtocol {
+public protocol ColumnManagerProtocol {
     var countColumns:Int { get }
     
     func add(column:ColumnProtocol)

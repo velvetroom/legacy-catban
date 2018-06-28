@@ -40,7 +40,7 @@
 		DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */; };
 		DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551D20A5608100813E95 /* ContainedProtocol.swift */; };
 		DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */; };
-		DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */; };
+		DAC67FF920A01B2200791B6A /* ColumnManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */; };
 		DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */; };
 		DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */; };
 		DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */; };
@@ -112,7 +112,7 @@
 		DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 		DAB7551D20A5608100813E95 /* ContainedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedProtocol.swift; sourceTree = "<group>"; };
 		DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_CardsManager.swift; sourceTree = "<group>"; };
-		DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumnsProtocol.swift; sourceTree = "<group>"; };
+		DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnManagerProtocol.swift; sourceTree = "<group>"; };
 		DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_ColumnsManager.swift; sourceTree = "<group>"; };
 		DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumnFactory.swift; sourceTree = "<group>"; };
 		DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFactory.swift; sourceTree = "<group>"; };
@@ -181,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */,
+				DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */,
 				DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */,
 				DA8F5F0E20B2D206009DA097 /* ColumnOrderProtocol.swift */,
 				DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */,
@@ -207,7 +208,6 @@
 			children = (
 				DA567B38209C7117005D74EE /* ProjectProtocol.swift */,
 				DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */,
-				DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */,
 				DA8F5F0020B2C5A2009DA097 /* ProjectOrderProtocol.swift */,
 				DA0E58C4209F486100AD4425 /* ProjectFactory.swift */,
 				DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */,
@@ -486,7 +486,7 @@
 				DA0E58D1209F4AD900AD4425 /* Date+Timestamp.swift in Sources */,
 				DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */,
 				DA55194120E4AA0600A2609C /* SynchedProtocol.swift in Sources */,
-				DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */,
+				DAC67FF920A01B2200791B6A /* ColumnManagerProtocol.swift in Sources */,
 				DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */,
 				DA8F5F0F20B2D206009DA097 /* ColumnOrderProtocol.swift in Sources */,
 				DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */,
