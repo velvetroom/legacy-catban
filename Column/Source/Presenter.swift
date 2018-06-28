@@ -21,7 +21,7 @@ public class Presenter:PresenterProtocol {
     }
     
     func done() {
-        self.transition?.transitionToHome(project:self.interactor.project)
+        self.transition?.transitionToHome(board:self.interactor.board, project:self.interactor.project)
     }
     
     func rename() {

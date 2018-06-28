@@ -30,10 +30,9 @@
 		DA3BA75620C2D10E004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75520C2D10E004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA3D81B620DBBAC0004E9E85 /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D81B520DBBAC0004E9E85 /* Tools.framework */; };
 		DA3D81B720DBBADC004E9E85 /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D81B520DBBAC0004E9E85 /* Tools.framework */; };
+		DA3DB4A020E4DF7A00F63521 /* MockProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DB49E20E4DF7300F63521 /* MockProject.swift */; };
 		DA49F37320DB753C00BFA7C7 /* ViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49F37220DB753C00BFA7C7 /* ViewModelContent.swift */; };
 		DA636E7E20B543270048BF41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA636E7C20B543270048BF41 /* Localizable.strings */; };
-		DAAE5D3F20B5B52C00879BBC /* MockProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D3E20B5B52C00879BBC /* MockProject.swift */; };
-		DAAE5D4720B5BBF900879BBC /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */; };
 		F80D903E5FB162F904870EED /* Pods_Architecture_TestsColumn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEAF51BA924A309CA6ABCC2 /* Pods_Architecture_TestsColumn.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +72,9 @@
 		DA3B18DB7462E6B74EF80ECB /* Pods-Architecture-TestsColumn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsColumn.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsColumn/Pods-Architecture-TestsColumn.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3BA75520C2D10E004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA3D81B520DBBAC0004E9E85 /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3DB49E20E4DF7300F63521 /* MockProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockProject.swift; sourceTree = "<group>"; };
 		DA49F37220DB753C00BFA7C7 /* ViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContent.swift; sourceTree = "<group>"; };
 		DA636E7D20B543270048BF41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DAAE5D3E20B5B52C00879BBC /* MockProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProject.swift; sourceTree = "<group>"; };
-		DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DD17352F40B300268F863E8D /* Pods-Architecture-Column.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Column.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Column/Pods-Architecture-Column.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,9 +171,8 @@
 				DA039F5B20B456B6000CE027 /* MockTransitionProtocol.swift */,
 				DA2ACC7E20B5999A008CD9F4 /* MockInteractor.swift */,
 				DA2ACC8820B5A971008CD9F4 /* MockPresenter.swift */,
-				DAAE5D3E20B5B52C00879BBC /* MockProject.swift */,
-				DAAE5D4620B5BBF900879BBC /* MockProjectManagedProtocol.swift */,
 				DA3BA75520C2D10E004CB162 /* MockRepositoryProjectProtocol.swift */,
+				DA3DB49E20E4DF7300F63521 /* MockProject.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -387,9 +384,8 @@
 			files = (
 				DA2ACC7D20B5963F008CD9F4 /* TestView.swift in Sources */,
 				DA039F5C20B456B6000CE027 /* MockTransitionProtocol.swift in Sources */,
+				DA3DB4A020E4DF7A00F63521 /* MockProject.swift in Sources */,
 				DA039F5A20B45380000CE027 /* TestPresenter.swift in Sources */,
-				DAAE5D3F20B5B52C00879BBC /* MockProject.swift in Sources */,
-				DAAE5D4720B5BBF900879BBC /* MockProjectManagedProtocol.swift in Sources */,
 				DA2ACC7F20B5999A008CD9F4 /* MockInteractor.swift in Sources */,
 				DA3BA75620C2D10E004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DA2ACC8920B5A971008CD9F4 /* MockPresenter.swift in Sources */,

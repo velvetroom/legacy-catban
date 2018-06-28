@@ -20,6 +20,7 @@ class TestPresenter:XCTestCase {
         self.view.presenter.interactor = self.interactor
         self.interactor.column = self.column
         self.interactor.project = self.project
+        self.interactor.board = BoardFactory.newBoard()
         self.view.transition = self.transition
     }
     
