@@ -20,14 +20,14 @@ public class Interactor:InteractorProtocol {
     }
     
     func open(board:BoardProtocol, project:ProjectProtocol) {
-        self.transitionOnMainThread { (transition:TransitionProtocol?) in
-            transition?.transitionToHome(board:board, project:project)
+        self.transitionOnMainThread { (transition:TransitionProtocol) in
+            transition.transitionToHome(board:board, project:project)
         }
     }
     
     func open(board:BoardProtocol) {
-        self.transitionOnMainThread { (transition:TransitionProtocol?) in
-            transition?.transitionToProjects(board:board)
+        self.transitionOnMainThread { (transition:TransitionProtocol) in
+            transition.transitionToProjects(board:board)
         }
     }
     
@@ -82,9 +82,9 @@ public class Interactor:InteractorProtocol {
         repository.save(project:project)
     }
     
-    private func transitionOnMainThread(completion:@escaping((TransitionProtocol?) -> Void)) {
+    private func transitionOnMainThread(completion:@escaping((TransitionProtocol) -> Void)) {
         DispatchQueue.main.async { [weak self] in
-            self?.presenter?.shouldTransition(completion:completion)
+            self?.presenter?.startTransition(completion:completion)
         }
     }
 }
