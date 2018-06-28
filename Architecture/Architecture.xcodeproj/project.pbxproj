@@ -21,6 +21,7 @@
 		DACCF61620E3D149003AA65E /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */; };
 		DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */; };
 		DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */; };
+		DAD2526220E50D3300B97B2E /* TransitionProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */; };
 		DAEE43F020E3CDCB0005564C /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE43DC20E3CD4E0005564C /* Architecture.framework */; };
 		DAEE441320E3CEFE0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
 		DAEE441420E3CF0E0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
@@ -54,6 +55,7 @@
 		DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
 		DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorBoardProtocol.swift; sourceTree = "<group>"; };
 		DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
+		DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitionProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAEE43DC20E3CD4E0005564C /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43EB20E3CDCA0005564C /* TestsArchitecture.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsArchitecture.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43F620E3CE270005564C /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				DACCF60A20E3D149003AA65E /* View.swift */,
 				DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */,
+				DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */,
 				DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */,
 				DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */,
 				DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */,
@@ -323,6 +326,7 @@
 				DACCF61420E3D149003AA65E /* ViewModelNavigation.swift in Sources */,
 				DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */,
 				DACCF61320E3D149003AA65E /* TransitionProtocol.swift in Sources */,
+				DAD2526220E50D3300B97B2E /* TransitionProtocol+Default.swift in Sources */,
 				DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */,
 				DACCF61220E3D149003AA65E /* View.swift in Sources */,
 				DACCF61120E3D149003AA65E /* InteractorCardProtocol.swift in Sources */,
