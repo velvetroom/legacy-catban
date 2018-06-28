@@ -13,8 +13,8 @@ class StateDelete:StateProtocol {
         viewModel.name = self.project.name
         viewModel.title = String.localized(key:"StateDelete_ViewModel_Title", in:type(of:self))
         let deleter:ViewProtocol = DeleterFactory.makeWith(interactor:interactor, and:viewModel)
-        interactor.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.present(view:deleter)
+        interactor.presenter?.startTransition { (transition:TransitionProtocol) in
+            transition.present(view:deleter)
         }
     }
     

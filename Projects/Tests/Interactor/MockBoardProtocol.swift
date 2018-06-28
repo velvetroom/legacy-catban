@@ -1,7 +1,8 @@
 import Foundation
 import Board
 
-class MockBoardProjectsProtocol:ProjectManagerProtocol {
+class MockBoardProtocol:BoardProtocol {
+    var identifier:String
     var projects:[ProjectProtocol]
     var project:ProjectProtocol?
     var onAddProject:(() -> Void)?
@@ -20,10 +21,9 @@ class MockBoardProjectsProtocol:ProjectManagerProtocol {
     }
     
     init() {
+        self.identifier = String()
         self.projects = []
     }
-    
-    func unmanage(project:ProjectManagedProtocol) { }
     
     func remove(project:ProjectProtocol) {
         self.onRemoveProject?()
@@ -37,12 +37,8 @@ class MockBoardProjectsProtocol:ProjectManagerProtocol {
         self.projects.forEach(projects)
     }
     
-    func manage(project:ProjectProtocol) -> ProjectManagedProtocol {
-        return MockProjectManagedProtocol()
-    }
-    
     func projectAt(index:Int) -> ProjectProtocol {
-        return MockProjectManagedProtocol()
+        return MockProjectProtocol()
     }
     
     func add(project:ProjectProtocol) {

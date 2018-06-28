@@ -10,7 +10,7 @@ class TestStateDelete:XCTestCase {
     }
     
     func testNotRetainingProject() {
-        self.state.project = MockProjectManagedProtocol()
+        self.state.project = MockProjectProtocol()
         XCTAssertNil(self.state.project, "Retains")
     }
     
@@ -18,7 +18,7 @@ class TestStateDelete:XCTestCase {
         var presented:Bool = false
         let view:Projects.View = Projects.View()
         let transition:MockTransitionProtocol = MockTransitionProtocol()
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.state.project = project
         view.presenter.interactor.state = self.state
         view.transition = transition
@@ -29,8 +29,8 @@ class TestStateDelete:XCTestCase {
     
     func testDeleteConfirmedChangesStateToDefault() {
         let interactor:MockInteractor = MockInteractor()
-        interactor.board = MockBoardProjectsProtocol()
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        interactor.board = MockBoardProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.state.project = project
         interactor.state = self.state
         interactor.deleteConfirmed()
@@ -41,8 +41,8 @@ class TestStateDelete:XCTestCase {
     func testDeleteConfirmedCallsInteractor() {
         var called:Bool = false
         let interactor:MockInteractor = MockInteractor()
-        interactor.board = MockBoardProjectsProtocol()
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        interactor.board = MockBoardProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.state.project = project
         interactor.state = self.state
         interactor.onDelete = { called = true }

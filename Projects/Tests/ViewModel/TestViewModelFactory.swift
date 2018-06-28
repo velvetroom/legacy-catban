@@ -4,11 +4,11 @@ import Architecture
 @testable import Projects
 
 class TestViewModelFactory:XCTestCase {
-    private var board:MockBoardProjectsProtocol!
+    private var board:MockBoardProtocol!
     
     override func setUp() {
         super.setUp()
-        self.board = MockBoardProjectsProtocol()
+        self.board = MockBoardProtocol()
     }
     
     func testViewModelNavigationWithProjects() {

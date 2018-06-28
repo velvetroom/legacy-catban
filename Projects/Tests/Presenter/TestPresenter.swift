@@ -4,15 +4,15 @@ import XCTest
 class TestPresenter:XCTestCase {
     private var view:Projects.View!
     private var interactor:MockInteractor!
-    private var board:MockBoardProjectsProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var board:MockBoardProtocol!
+    private var project:MockProjectProtocol!
     
     override func setUp() {
         super.setUp()
         self.view = Projects.View()
         self.interactor = MockInteractor()
-        self.board = MockBoardProjectsProtocol()
-        self.project = MockProjectManagedProtocol()
+        self.board = MockBoardProtocol()
+        self.project = MockProjectProtocol()
         self.board.project = self.project
         self.view.presenter.interactor = self.interactor
         self.view.presenter.state.selected = String()

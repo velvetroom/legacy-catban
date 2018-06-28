@@ -7,16 +7,16 @@ import Shared
 class TestInteractor_States:XCTestCase {
     private var view:Projects.View!
     private var interactor:Interactor!
-    private var board:MockBoardProjectsProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var board:MockBoardProtocol!
+    private var project:MockProjectProtocol!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         self.view = Projects.View()
         self.interactor = self.view.presenter.interactor
-        self.board = MockBoardProjectsProtocol()
-        self.project = MockProjectManagedProtocol()
+        self.board = MockBoardProtocol()
+        self.project = MockProjectProtocol()
         self.transition = MockTransitionProtocol()
         var viewModelList:ViewModelList = ViewModelList()
         viewModelList.items.append(ViewModelListItem())

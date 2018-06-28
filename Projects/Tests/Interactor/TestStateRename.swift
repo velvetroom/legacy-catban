@@ -12,13 +12,13 @@ class TestStateRename:XCTestCase {
     }
     
     func testNotRetainingProject() {
-        self.state.project = MockProjectManagedProtocol()
+        self.state.project = MockProjectProtocol()
         XCTAssertNil(self.state.project, "Retains")
     }
     
     func testNamerFinishedUpdatesProject() {
         var called:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         let interactor:MockInteractor = MockInteractor()
         let name:String = "lorem ipsum"
         interactor.state = self.state
@@ -29,7 +29,7 @@ class TestStateRename:XCTestCase {
     }
     
     func testNamerFinishedChangesStateToDefault() {
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         let interactor:MockInteractor = MockInteractor()
         let name:String = "lorem ipsum"
         interactor.state = self.state
@@ -43,7 +43,7 @@ class TestStateRename:XCTestCase {
         var pushed:Bool = false
         let view:Projects.View = Projects.View()
         let transition:MockTransitionProtocol = MockTransitionProtocol()
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.state.project = project
         view.presenter.interactor.state = self.state
         view.transition = transition

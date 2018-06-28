@@ -3,7 +3,7 @@ import XCTest
 
 class TestPresenter_List:XCTestCase {
     private var view:View!
-    private var board:MockBoardProjectsProtocol!
+    private var board:MockBoardProtocol!
     private struct Constants {
         static let name:String = "lorem ipsum"
         static let frame:CGRect = CGRect(x:10, y:20, width:30, height:400)
@@ -12,7 +12,7 @@ class TestPresenter_List:XCTestCase {
     override func setUp() {
         super.setUp()
         self.view = View()
-        self.board = MockBoardProjectsProtocol()
+        self.board = MockBoardProtocol()
         self.view.presenter.interactor.board = self.board
         var itemA:ViewModelListItem = ViewModelListItem()
         itemA.name = Constants.name

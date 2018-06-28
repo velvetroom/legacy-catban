@@ -6,7 +6,7 @@ import Board
 
 public class Interactor:InteractorBoardProtocol {
     public weak var presenter:InteractorDelegateProtocol?
-    public var board:ProjectManagerProtocol!
+    public var board:BoardProtocol!
     var state:StateProtocol
     
     public required init() {
@@ -24,9 +24,10 @@ public class Interactor:InteractorBoardProtocol {
     
     func openProjectWith(identifier:String) {
         let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
-        let projectManaged:ProjectManagedProtocol = self.board.manage(project:project)
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionToHome(project:projectManaged)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            if let board:BoardProtocol = self?.board {
+                transition.transitionToHome(board:board, project:project)
+            }
         }
     }
     

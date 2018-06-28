@@ -1,7 +1,7 @@
 import Foundation
 import Board
 
-class MockProjectManagedProtocol:ProjectManagedProtocol {
+class MockProjectProtocol:ProjectProtocol {
     var manager:ProjectManagerProtocol
     var identifier:String
     var created:Int
