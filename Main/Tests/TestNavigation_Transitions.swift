@@ -38,13 +38,13 @@ class TestNavigation_Transitions:XCTestCase {
             XCTAssertNotNil(view, "Invalid view received")
             XCTAssertNotNil(view?.transition, "Failed to assign transition")
             XCTAssertNotNil(view?.presenter.interactor.project, "Failed to inject project")
+            XCTAssertNotNil(view?.presenter.interactor.board, "Failed to inject")
             transition = true
         }
         
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
-        let managed:ProjectManagedProtocol = board.manage(project:project)
-        self.model.transitionToHome(project:managed)
+        self.model.transitionToHome(board:board, project:project)
         XCTAssertTrue(transition, "Transition never happened")
     }
     

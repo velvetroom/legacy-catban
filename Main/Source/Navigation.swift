@@ -21,31 +21,34 @@ class Navigation:NavigationProtocol {
         self.transitionTo(view:view)
     }
     
-    func transitionToHome(project:ProjectManagedProtocol) {
+    func transitionToHome(board:BoardProtocol, project:ProjectProtocol) {
         let view:ViewProtocol = Configuration.viewHomeType.init()
         let interactor:InteractorProjectProtocol = view.interactor as! InteractorProjectProtocol
+        interactor.board = board
         interactor.project = project
         self.transitionTo(view:view)
     }
     
-    func transitionToProjects(board:ProjectManagerProtocol) {
+    func transitionToProjects(board:BoardProtocol) {
         let view:ViewProtocol = Configuration.viewProjectsType.init()
         let interactor:InteractorBoardProtocol = view.interactor as! InteractorBoardProtocol
         interactor.board = board
         self.transitionTo(view:view)
     }
     
-    func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
+    func transitionTo(card:CardProtocol, board:BoardProtocol, project:ProjectProtocol) {
         let view:ViewProtocol = Configuration.viewCardType.init()
         let interactor:InteractorCardProtocol = view.interactor as! InteractorCardProtocol
+        interactor.board = board
         interactor.project = project
         interactor.card = card
         self.transitionTo(view:view)
     }
     
-    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) {
+    func transitionTo(column:ColumnProtocol, board:BoardProtocol, project:ProjectProtocol) {
         let view:ViewProtocol = Configuration.viewColumnType.init()
         let interactor:InteractorColumnProtocol = view.interactor as! InteractorColumnProtocol
+        interactor.board = board
         interactor.project = project
         interactor.column = column
         self.transitionTo(view:view)
