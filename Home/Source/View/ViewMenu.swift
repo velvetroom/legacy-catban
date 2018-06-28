@@ -47,8 +47,11 @@ class ViewMenu:Architecture.View<PresenterMenu, ViewMenuContent> {
                                          for:UIControlEvents.touchUpInside)
         self.content.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
                                                        for:UIControlEvents.touchUpInside)
+        self.content.viewOptions.optionCloud.addTarget(self, action:#selector(self.selectorCloud(button:)),
+                                                       for:UIControlEvents.touchUpInside)
         self.content.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
                                                           for:UIControlEvents.touchUpInside)
+        
 //        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),
 //                                                        for:UIControlEvents.touchUpInside)
     }
