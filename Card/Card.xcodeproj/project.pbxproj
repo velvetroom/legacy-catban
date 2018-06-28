@@ -37,7 +37,7 @@
 		DABDB03B20A38B97001B7D47 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03A20A38B97001B7D47 /* Board.framework */; };
 		DABDB03C20A38BB9001B7D47 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03A20A38B97001B7D47 /* Board.framework */; };
 		DABDB03D20A38BBB001B7D47 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03820A38B85001B7D47 /* Shared.framework */; };
-		DAD9184120A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9184020A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift */; };
+		DAD9184120A5F5A4002DC2B3 /* MockProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9184020A5F5A4002DC2B3 /* MockProjectProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		DABDB03120A389B9001B7D47 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		DABDB03820A38B85001B7D47 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABDB03A20A38B97001B7D47 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAD9184020A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
+		DAD9184020A5F5A4002DC2B3 /* MockProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectProtocol.swift; sourceTree = "<group>"; };
 		E20AF881733BF41987373623 /* Pods-Architecture-Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Card.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Card/Pods-Architecture-Card.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +189,7 @@
 				DA46315720A4864800070042 /* MockTransitionProtocol.swift */,
 				DA7E009A20A565D500AD4A74 /* MockInteractor.swift */,
 				DABC3CA920A5D456009600BB /* MockPresenter.swift */,
-				DAD9184020A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift */,
+				DAD9184020A5F5A4002DC2B3 /* MockProjectProtocol.swift */,
 				DA3BA75320C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift */,
 				DAA0B95A20A5B23F0084C753 /* MockViewText.swift */,
 				DABC3CAD20A5D563009600BB /* MockView.swift */,
@@ -396,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7E009320A562D800AD4A74 /* TestView.swift in Sources */,
-				DAD9184120A5F5A4002DC2B3 /* MockProjectManagedProtocol.swift in Sources */,
+				DAD9184120A5F5A4002DC2B3 /* MockProjectProtocol.swift in Sources */,
 				DA46315820A4864800070042 /* MockTransitionProtocol.swift in Sources */,
 				DA3BA75420C2CF9C004CB162 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DABC3CAA20A5D456009600BB /* MockPresenter.swift in Sources */,

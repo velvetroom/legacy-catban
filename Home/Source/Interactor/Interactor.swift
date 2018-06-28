@@ -6,9 +6,9 @@ import Board
 import Tools
 
 public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, NamerInteractorProtocol {
-    public var board:BoardProtocol!
-    public weak var project:ProjectProtocol!
     public weak var presenter:InteractorDelegateProtocol?
+    public weak var project:ProjectProtocol!
+    public var board:BoardProtocol!
     
     public required init() { }
     

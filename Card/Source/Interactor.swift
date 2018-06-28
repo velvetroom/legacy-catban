@@ -8,7 +8,8 @@ import Tools
 public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
     public weak var presenter:InteractorDelegateProtocol?
     public weak var card:CardProtocol!
-    public var project:ProjectManagedProtocol!
+    public weak var project:ProjectProtocol!
+    public var board:BoardProtocol!
 
     public required init() { }
     public func deleteCancelled() { }
@@ -20,13 +21,17 @@ public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
     
     func done() {
         self.save()
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionToHome(project:self.project)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            self?.transitionToHomeWith(transition:transition)
         }
     }
     
     private func save() {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
         repository.save(project:self.project)
+    }
+    
+    private func transitionToHomeWith(transition:TransitionProtocol) {
+        transition.transitionToHome(board:self.board, project:self.project)
     }
 }

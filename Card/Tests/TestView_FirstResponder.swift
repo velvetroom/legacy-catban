@@ -6,7 +6,7 @@ import Shared
 class TestView_FirstResponder:XCTestCase {
     private var view:Card.View!
     private var text:MockViewText!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var card:CardProtocol!
     private var column:ColumnProtocol!
     
@@ -15,7 +15,7 @@ class TestView_FirstResponder:XCTestCase {
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Card.View()
         self.text = MockViewText()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.card = CardFactory.newCard()
         self.column = ColumnFactory.newColumn()
         self.card.container = self.column

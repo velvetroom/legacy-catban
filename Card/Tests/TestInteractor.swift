@@ -7,7 +7,7 @@ class TestInteractor:XCTestCase {
     private var view:Card.View!
     private var interactor:Interactor!
     private var transition:MockTransitionProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var card:CardProtocol!
     
     override func setUp() {
@@ -17,10 +17,11 @@ class TestInteractor:XCTestCase {
         self.interactor = self.view.presenter.interactor
         self.card = CardFactory.newCard()
         self.transition = MockTransitionProtocol()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.view.transition = self.transition
         self.interactor.project = self.project
         self.interactor.card = self.card
+        self.interactor.board = BoardFactory.newBoard()
     }
     
     func testCardIsNotRetained() {
