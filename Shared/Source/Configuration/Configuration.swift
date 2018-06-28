@@ -9,6 +9,7 @@ public struct Configuration {
     public static var viewCardType:ViewProtocol.Type!
     public static var viewColumnType:ViewProtocol.Type!
     public static var viewProjectsType:ViewProtocol.Type!
+    public static var viewCloudType:ViewProtocol.Type!
     public static var canvasType:CanvasProtocol.Type!
     public static var directoryRoot:String!
 }

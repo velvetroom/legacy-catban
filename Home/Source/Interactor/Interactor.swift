@@ -60,6 +60,16 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, Namer
         repository.save(project:self.project)
     }
     
+    func openCloud() {
+        self.presenter?.startTransition { (transition:TransitionProtocol) in
+            guard
+                let board:BoardProtocol = self.board,
+                let project:ProjectProtocol = self.project
+            else { return }
+            transition.transitionToCloud(board:board, project:project)
+        }
+    }
+    
     func openProjects() {
         self.presenter?.startTransition { (transition:TransitionProtocol) in
             if let board:BoardProtocol = self.board {

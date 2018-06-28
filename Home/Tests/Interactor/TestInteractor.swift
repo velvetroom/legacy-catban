@@ -63,6 +63,13 @@ class TestInteractor:XCTestCase {
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     
+    func testOpenCloudTransitions() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToCloud = { transitioned = true }
+        self.view.presenter.interactor.openCloud()
+        XCTAssertTrue(transitioned, "Failed to transition")
+    }
+    
     func testCloseMenuUpdatesPresenter() {
         var called:Bool = false
         let presenter:MockPresenter = MockPresenter()

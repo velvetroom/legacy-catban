@@ -18,6 +18,11 @@ class ViewMenu:Architecture.View<PresenterMenu, ViewMenuContent> {
         self.presenter.close()
     }
     
+    @objc func selectorCloud(button:UIButton) {
+        self.content.animateClose()
+        self.presenter.openCloud()
+    }
+    
     @objc func selectorProjects(button:UIButton) {
         self.content.animateClose()
         self.presenter.openProjects()

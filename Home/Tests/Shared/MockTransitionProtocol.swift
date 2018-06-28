@@ -7,6 +7,7 @@ class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToCard:(() -> Void)?
     var onTransitionToColumn:(() -> Void)?
     var onTransitionToProjects:(() -> Void)?
+    var onTransitionToCloud:(() -> Void)?
     var onPush:(() -> Void)?
     var onPresent:(() -> Void)?
     var onDimiss:(() -> Void)?
@@ -21,6 +22,10 @@ class MockTransitionProtocol:TransitionProtocol {
     
     func transitionTo(card:CardProtocol, board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToCard?()
+    }
+    
+    func transitionToCloud(board:BoardProtocol, project:ProjectProtocol) {
+        self.onTransitionToCloud?()
     }
     
     func pushTo(view:ViewProtocol) {

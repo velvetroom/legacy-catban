@@ -54,6 +54,14 @@ class Navigation:NavigationProtocol {
         self.transitionTo(view:view)
     }
     
+    func transitionToCloud(board:BoardProtocol, project:ProjectProtocol) {
+        let view:ViewProtocol = Configuration.viewCloudType.init()
+        let interactor:InteractorProjectProtocol = view.interactor as! InteractorProjectProtocol
+        interactor.board = board
+        interactor.project = project
+        self.transitionTo(view:view)
+    }
+    
     func present(view:ViewProtocol) {
         self.injectTransition(view:view)
         self.view.present(view:view)
