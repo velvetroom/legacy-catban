@@ -11,10 +11,6 @@ class MockTransitionProtocol:TransitionProtocol {
     var onPresent:(() -> Void)?
     var onDimiss:(() -> Void)?
     
-    func transitionToLoad() { }
-    func transitionToHome(board:BoardProtocol, project:ProjectProtocol) { }
-    func pop() { }
-    
     func transitionToProjects(board:BoardProtocol) {
         self.onTransitionToProjects?()
     }
