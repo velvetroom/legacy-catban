@@ -11,7 +11,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionToLoad() { }
     func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
-    func transitionToProjects(board:BoardProjectsProtocol) { }
+    func transitionToProjects(board:ProjectManagerProtocol) { }
     func pop() { }
     func dismiss() { }
     

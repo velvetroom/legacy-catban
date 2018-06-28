@@ -15,7 +15,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func transitionToHome(project:ProjectManagedProtocol) { }
     func pop() { }
     
-    func transitionToProjects(board:BoardProjectsProtocol) {
+    func transitionToProjects(board:ProjectManagerProtocol) {
         self.onTransitionToProjects?()
     }
     

@@ -25,7 +25,7 @@ public class Interactor:InteractorProtocol {
         }
     }
     
-    func open(board:BoardProjectsProtocol) {
+    func open(board:ProjectManagerProtocol) {
         self.transitionOnMainThread { (transition:TransitionProtocol?) in
             transition?.transitionToProjects(board:board)
         }

@@ -12,7 +12,7 @@ class MockNavigationProtocol:NavigationProtocol {
     required init() { }
     
     func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
-    func transitionToProjects(board:BoardProjectsProtocol) { }
+    func transitionToProjects(board:ProjectManagerProtocol) { }
     func present(view:ViewProtocol) { }
     func pushTo(view:ViewProtocol) { }
     func pop() { }

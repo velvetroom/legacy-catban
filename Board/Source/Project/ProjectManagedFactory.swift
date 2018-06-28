@@ -1,7 +1,7 @@
 import Foundation
 
 class ProjectManagedFactory {
-    class func assign(manager:BoardProjectsProtocol, to project:ProjectProtocol) -> ProjectManagedProtocol {
+    class func assign(manager:ProjectManagerProtocol, to project:ProjectProtocol) -> ProjectManagedProtocol {
         let managed:ProjectManagedProtocol = blankProjectManaged()
         managed.copy(project:project)
         managed.manager = manager

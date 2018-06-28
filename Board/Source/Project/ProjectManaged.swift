@@ -1,7 +1,7 @@
 import Foundation
 
 class ProjectManaged:Project, ProjectManagedProtocol {
-    var manager:BoardProjectsProtocol
+    var manager:ProjectManagerProtocol
     
     override init() {
         self.manager = Board()

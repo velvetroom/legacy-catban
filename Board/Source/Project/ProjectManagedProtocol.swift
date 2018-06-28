@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol ProjectManagedProtocol:ProjectProtocol {
-    var manager:BoardProjectsProtocol { get set }
+    var manager:ProjectManagerProtocol { get set }
 }

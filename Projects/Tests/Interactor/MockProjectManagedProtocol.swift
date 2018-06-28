@@ -2,7 +2,7 @@ import Foundation
 import Board
 
 class MockProjectManagedProtocol:ProjectManagedProtocol {
-    var manager:BoardProjectsProtocol
+    var manager:ProjectManagerProtocol
     var identifier:String
     var created:Int
     var name:String

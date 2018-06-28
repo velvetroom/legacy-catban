@@ -28,7 +28,7 @@ class Navigation:NavigationProtocol {
         self.transitionTo(view:view)
     }
     
-    func transitionToProjects(board:BoardProjectsProtocol) {
+    func transitionToProjects(board:ProjectManagerProtocol) {
         let view:ViewProtocol = Configuration.viewProjectsType.init()
         let interactor:InteractorBoardProtocol = view.interactor as! InteractorBoardProtocol
         interactor.board = board

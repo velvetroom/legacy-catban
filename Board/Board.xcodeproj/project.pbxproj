@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */; };
+		DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */; };
 		DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */; };
 		DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */; };
 		DA0E58C3209F453000AD4425 /* TestProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */; };
@@ -79,7 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardProjectsProtocol.swift; sourceTree = "<group>"; };
+		DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerProtocol.swift; sourceTree = "<group>"; };
 		DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagedProtocol.swift; sourceTree = "<group>"; };
 		DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManaged.swift; sourceTree = "<group>"; };
 		DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectManaged.swift; sourceTree = "<group>"; };
@@ -207,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				DA567B38209C7117005D74EE /* ProjectProtocol.swift */,
+				DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */,
 				DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */,
 				DA8F5F0020B2C5A2009DA097 /* ProjectOrderProtocol.swift */,
 				DA0E58C4209F486100AD4425 /* ProjectFactory.swift */,
@@ -338,7 +339,6 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
-				DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */,
 				DAFEF338209AF47600740A88 /* BoardFactory.swift */,
 				DAFEF2F7209AEC7700740A88 /* Board.swift */,
 			);
@@ -475,7 +475,7 @@
 				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
 				DA8F5F0320B2C706009DA097 /* Project+Columns.swift in Sources */,
 				DAE3E7DD209F53C900F8240C /* Column.swift in Sources */,
-				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
+				DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
 				DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */,
 				DA8F5F0720B2C789009DA097 /* Project+Order.swift in Sources */,

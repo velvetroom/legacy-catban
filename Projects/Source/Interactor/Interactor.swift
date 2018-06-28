@@ -6,7 +6,7 @@ import Board
 
 public class Interactor:InteractorBoardProtocol {
     public weak var presenter:InteractorDelegateProtocol?
-    public var board:BoardProjectsProtocol!
+    public var board:ProjectManagerProtocol!
     var state:StateProtocol
     
     public required init() {

@@ -1,7 +1,7 @@
 import Foundation
 import Board
 
-class MockBoardProjectsProtocol:BoardProjectsProtocol {
+class MockBoardProjectsProtocol:ProjectManagerProtocol {
     var projects:[ProjectProtocol]
     var project:ProjectProtocol?
     var onAddProject:(() -> Void)?

@@ -15,7 +15,7 @@ class MockTransitionProtocol:TransitionProtocol {
     func present(view:ViewProtocol) { }
     func dismiss() { }
     
-    func transitionToProjects(board:BoardProjectsProtocol) {
+    func transitionToProjects(board:ProjectManagerProtocol) {
         self.onTransitionToProjects?()
     }
     

@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol BoardProjectsProtocol:class {
+public protocol ProjectManagerProtocol:class {
     var countProjects:Int { get }
     var firstProject:ProjectProtocol? { get }
     

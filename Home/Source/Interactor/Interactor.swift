@@ -60,7 +60,7 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, Namer
     }
     
     func openProjects() {
-        let board:BoardProjectsProtocol = self.project.manager
+        let board:ProjectManagerProtocol = self.project.manager
         board.unmanage(project:project)
         self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
             transition?.transitionToProjects(board:board)
