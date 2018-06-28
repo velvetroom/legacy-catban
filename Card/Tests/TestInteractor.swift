@@ -67,4 +67,19 @@ class TestInteractor:XCTestCase {
         self.interactor.done()
         XCTAssertTrue(called, "Failed to save")
     }
+    
+    func testRetainingBoard() {
+        self.interactor.board = BoardFactory.newBoard()
+        XCTAssertNotNil(self.interactor.board, "Not retaining")
+    }
+    
+    func testNotRetainingProject() {
+        self.interactor.project = MockProjectProtocol()
+        XCTAssertNil(self.interactor.project, "Retains")
+    }
+    
+    func testNotRetainingCard() {
+        self.interactor.card = CardFactory.newCard()
+        XCTAssertNil(self.interactor.card, "Retains")
+    }
 }
