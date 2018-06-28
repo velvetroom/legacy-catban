@@ -2,7 +2,6 @@ import Foundation
 import Board
 
 class MockProject:ProjectProtocol {
-    var manager:ProjectManagerProtocol
     var identifier:String
     var created:Int
     var name:String
@@ -11,7 +10,6 @@ class MockProject:ProjectProtocol {
     var onRemoveColumn:(() -> Void)?
     
     init() {
-        self.manager = BoardFactory.newBoard()
         self.identifier = String()
         self.created = 0
         self.name = String()

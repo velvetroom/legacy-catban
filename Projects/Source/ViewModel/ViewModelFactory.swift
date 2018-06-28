@@ -3,13 +3,13 @@ import Board
 import Architecture
 
 class ViewModelFactory {
-    class func makeListWith(board:ProjectManagerProtocol) -> ViewModelList {
+    class func makeListWith(board:BoardProtocol) -> ViewModelList {
         var viewModel:ViewModelList = ViewModelList()
         viewModel.items = makeSortedItemsWith(board:board)
         return viewModel
     }
     
-    class func makeContentWith(board:ProjectManagerProtocol) -> ViewModelContent {
+    class func makeContentWith(board:BoardProtocol) -> ViewModelContent {
         var viewModel:ViewModelContent = ViewModelContent()
         if board.countProjects > 0 {
             viewModel.emptyHidden = true
@@ -23,7 +23,7 @@ class ViewModelFactory {
         return viewModel
     }
     
-    class func makeNavigationWith(board:ProjectManagerProtocol) -> ViewModelNavigation {
+    class func makeNavigationWith(board:BoardProtocol) -> ViewModelNavigation {
         var viewModel:ViewModelNavigation = ViewModelNavigation()
         if board.countProjects > 0 {
             viewModel.toolbarHidden = false
@@ -31,7 +31,7 @@ class ViewModelFactory {
         return viewModel
     }
     
-    private class func makeSortedItemsWith(board:ProjectManagerProtocol) -> [ViewModelListItem] {
+    private class func makeSortedItemsWith(board:BoardProtocol) -> [ViewModelListItem] {
         var items:[ViewModelListItem] = makeItemsWith(board:board)
         items.sort { (itemLeft:ViewModelListItem, itemRight:ViewModelListItem) -> Bool in
             let comparison:ComparisonResult = itemLeft.name.compare(
@@ -41,7 +41,7 @@ class ViewModelFactory {
         return items
     }
     
-    private class func makeItemsWith(board:ProjectManagerProtocol) -> [ViewModelListItem] {
+    private class func makeItemsWith(board:BoardProtocol) -> [ViewModelListItem] {
         var items:[ViewModelListItem] = []
         board.iterate { (project:ProjectProtocol) in
             var item:ViewModelListItem = ViewModelListItem()

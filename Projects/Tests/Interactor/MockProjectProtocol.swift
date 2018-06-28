@@ -2,7 +2,6 @@ import Foundation
 import Board
 
 class MockProjectProtocol:ProjectProtocol {
-    var manager:ProjectManagerProtocol
     var identifier:String
     var created:Int
     var name:String
@@ -10,7 +9,6 @@ class MockProjectProtocol:ProjectProtocol {
     var countCards:Int
     
     init() {
-        self.manager = BoardFactory.newBoard()
         self.identifier = String()
         self.created = 0
         self.name = String()
