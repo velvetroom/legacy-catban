@@ -109,13 +109,13 @@
 		DACCF60820E3D149003AA65E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */,
 				DACCF60A20E3D149003AA65E /* View.swift */,
 				DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */,
 				DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */,
 				DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */,
-				DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */,
 				DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */,
+				DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */,
+				DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */,
 				DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */,
 			);
 			path = Source;
