@@ -9,10 +9,18 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>TestsCloud.xcscheme</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DAD2526C20E5167F00B97B2E</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAD2527B20E516B700B97B2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

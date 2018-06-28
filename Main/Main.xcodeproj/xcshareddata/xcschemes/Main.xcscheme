@@ -158,6 +158,16 @@
                ReferencedContainer = "container:../Architecture/Architecture.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAD2527B20E516B700B97B2E"
+               BuildableName = "TestsCloud.xctest"
+               BlueprintName = "TestsCloud"
+               ReferencedContainer = "container:../Cloud/Cloud.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

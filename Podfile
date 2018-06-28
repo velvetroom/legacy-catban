@@ -83,6 +83,13 @@ abstract_target 'Architecture' do
     target 'TestsProjects' do
         project 'Projects/Projects.xcodeproj'
     end
+    
+    target 'Cloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
+    target 'TestsCloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
 
     target 'Main' do
     project 'Main/Main.xcodeproj'
