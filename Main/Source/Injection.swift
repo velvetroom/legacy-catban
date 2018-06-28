@@ -7,6 +7,7 @@ import Home
 import Card
 import Column
 import Projects
+import Cloud
 
 class Injection {
     func load() {
@@ -17,6 +18,7 @@ class Injection {
         Configuration.viewCardType = Card.View.self
         Configuration.viewColumnType = Column.View.self
         Configuration.viewProjectsType = Projects.View.self
+        Configuration.viewCloudType = Cloud.View.self
         Configuration.canvasType = Canvas.self
         Configuration.directoryRoot = RepositoryConstants.Url.directoryRoot
     }
