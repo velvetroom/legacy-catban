@@ -6,7 +6,10 @@ public extension PresenterProtocol {
     func didAppear() { }
     func orientationChanged() { }
     
-    func shouldTransition<Transition>(completion:((Transition?) -> Void)) {
-        completion(self.transition as? Transition)
+    func startTransition<Transition>(completion:((Transition) -> Void)) {
+        guard
+            let transition:Transition = self.transition as? Transition
+        else { return }
+        completion(transition)
     }
 }
