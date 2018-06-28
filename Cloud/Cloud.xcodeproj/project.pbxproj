@@ -11,6 +11,12 @@
 		7808D1911E7D2F1CB5451274 /* Pods_Architecture_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BB848B16E55CA451457675 /* Pods_Architecture_Cloud.framework */; };
 		DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD5E20E51AEE00EE178D /* Interactor.swift */; };
 		DA51AD6120E51B0500EE178D /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6020E51B0500EE178D /* TestInteractor.swift */; };
+		DA51AD6320E51C1F00EE178D /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6220E51C1F00EE178D /* Architecture.framework */; };
+		DA51AD6420E51C8B00EE178D /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6220E51C1F00EE178D /* Architecture.framework */; };
+		DA51AD6620E51C9800EE178D /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6520E51C9800EE178D /* Shared.framework */; };
+		DA51AD6820E51C9C00EE178D /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6720E51C9C00EE178D /* Board.framework */; };
+		DA51AD6920E51CA500EE178D /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6520E51C9800EE178D /* Shared.framework */; };
+		DA51AD6A20E51CA700EE178D /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6720E51C9C00EE178D /* Board.framework */; };
 		DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD2526D20E5167F00B97B2E /* Cloud.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +38,9 @@
 		8A338FE33C6EE4F9F6675DC7 /* Pods-Architecture-TestsCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsCloud.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsCloud/Pods-Architecture-TestsCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		DA51AD5E20E51AEE00EE178D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		DA51AD6020E51B0500EE178D /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		DA51AD6220E51C1F00EE178D /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA51AD6520E51C9800EE178D /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA51AD6720E51C9C00EE178D /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2526D20E5167F00B97B2E /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2527C20E516B700B97B2E /* TestsCloud.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCloud.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2528720E517CF00B97B2E /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -43,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA51AD6820E51C9C00EE178D /* Board.framework in Frameworks */,
+				DA51AD6620E51C9800EE178D /* Shared.framework in Frameworks */,
+				DA51AD6320E51C1F00EE178D /* Architecture.framework in Frameworks */,
 				7808D1911E7D2F1CB5451274 /* Pods_Architecture_Cloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +64,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */,
+				DA51AD6420E51C8B00EE178D /* Architecture.framework in Frameworks */,
+				DA51AD6920E51CA500EE178D /* Shared.framework in Frameworks */,
+				DA51AD6A20E51CA700EE178D /* Board.framework in Frameworks */,
 				3CE0B65CA6CF13E324123CC4 /* Pods_Architecture_TestsCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +77,9 @@
 		4680F846F154DAA77D0571D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA51AD6720E51C9C00EE178D /* Board.framework */,
+				DA51AD6520E51C9800EE178D /* Shared.framework */,
+				DA51AD6220E51C1F00EE178D /* Architecture.framework */,
 				16BB848B16E55CA451457675 /* Pods_Architecture_Cloud.framework */,
 				21CE3E370A2175AABACA8EC4 /* Pods_Architecture_TestsCloud.framework */,
 			);
