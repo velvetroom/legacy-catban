@@ -1,6 +1,8 @@
 workspace 'catban.xcworkspace'
 use_frameworks!
 platform :ios, '11.0'
+install! 'cocoapods',
+  :share_schemes_for_development_pods => false
 
 abstract_target 'Architecture' do
     pod 'CleanArchitecture'
