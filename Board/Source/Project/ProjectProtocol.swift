@@ -8,7 +8,5 @@ public protocol ProjectProtocol:
     CardManagerProtocol,
     ProjectOrderProtocol {
     
-    var board:BoardProtocol? { get set }
-    
     func copy(project:ProjectProtocol)
 }

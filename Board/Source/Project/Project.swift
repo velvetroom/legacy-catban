@@ -1,7 +1,6 @@
 import Foundation
 
 class Project:ProjectProtocol, Equatable {
-    var board:BoardProtocol?
     var identifier:String
     var name:String
     var columns:[ColumnProtocol]

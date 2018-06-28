@@ -25,7 +25,6 @@ class Board:BoardProtocol, Equatable {
         guard
             project.identifier.isEmpty == false
         else { return }
-        project.board = self
         self.projects.append(project)
     }
     
@@ -34,7 +33,6 @@ class Board:BoardProtocol, Equatable {
         for index:Int in 0 ..< countProjects {
             let item:ProjectProtocol = self.projects[index]
             if project.identifier == item.identifier {
-                item.board = nil
                 self.projects.remove(at:index)
                 break
             }

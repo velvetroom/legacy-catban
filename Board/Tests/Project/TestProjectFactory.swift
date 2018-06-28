@@ -27,14 +27,4 @@ class TestProjectFactory:XCTestCase {
         let project:ProjectProtocol = ProjectFactory.blankProject()
         XCTAssertEqual(project.countColumns, 0, "Should have no columns")
     }
-    
-    func testNewProjectShouldHaveNoBoard() {
-        let project:ProjectProtocol = ProjectFactory.newProject()
-        XCTAssertNil(project.board, "Has a board")
-    }
-    
-    func testBlankProjectShouldHaveNoBoard() {
-        let project:ProjectProtocol = ProjectFactory.blankProject()
-        XCTAssertNil(project.board, "Has a board")
-    }
 }

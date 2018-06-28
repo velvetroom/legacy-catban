@@ -18,7 +18,6 @@
 		DA46315420A47FBD00070042 /* TestProject_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315320A47FBD00070042 /* TestProject_Cards.swift */; };
 		DA46315620A4834D00070042 /* TestColumn_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315520A4834D00070042 /* TestColumn_Cards.swift */; };
 		DA55194120E4AA0600A2609C /* SynchedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55194020E4AA0600A2609C /* SynchedProtocol.swift */; };
-		DA55194320E4B62700A2609C /* TestBoard_ProjectWithBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55194220E4B62700A2609C /* TestBoard_ProjectWithBoard.swift */; };
 		DA567B37209C70D5005D74EE /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B36209C70D5005D74EE /* TestProject.swift */; };
 		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
 		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
@@ -84,7 +83,6 @@
 		DA46315320A47FBD00070042 /* TestProject_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Cards.swift; sourceTree = "<group>"; };
 		DA46315520A4834D00070042 /* TestColumn_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_Cards.swift; sourceTree = "<group>"; };
 		DA55194020E4AA0600A2609C /* SynchedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchedProtocol.swift; sourceTree = "<group>"; };
-		DA55194220E4B62700A2609C /* TestBoard_ProjectWithBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_ProjectWithBoard.swift; sourceTree = "<group>"; };
 		DA567B36209C70D5005D74EE /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 			children = (
 				DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */,
 				DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */,
-				DA55194220E4B62700A2609C /* TestBoard_ProjectWithBoard.swift */,
 				DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */,
 			);
 			path = Board;
@@ -504,7 +501,6 @@
 				DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */,
 				DA0E58D5209F4DB800AD4425 /* TestIdentifierProtocol.swift in Sources */,
 				DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */,
-				DA55194320E4B62700A2609C /* TestBoard_ProjectWithBoard.swift in Sources */,
 				DA46315420A47FBD00070042 /* TestProject_Cards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
