@@ -50,9 +50,6 @@
       location = "group:Design">
    </FileRef>
    <FileRef
-      location = "group:Scripts">
-   </FileRef>
-   <FileRef
       location = "group:LICENSE">
    </FileRef>
    <FileRef
