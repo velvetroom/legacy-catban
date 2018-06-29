@@ -12,6 +12,9 @@
 		DA49175F20E5FE8F00416DD2 /* ViewModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49175E20E5FE8F00416DD2 /* ViewModelContent.swift */; };
 		DA49176420E6080200416DD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA49176220E6080200416DD2 /* Localizable.strings */; };
 		DA49176620E60A7700416DD2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176520E60A7700416DD2 /* TestView.swift */; };
+		DA49176820E6102600416DD2 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA49176720E6102600416DD2 /* assets.xcassets */; };
+		DA49176A20E6106700416DD2 /* ViewNotClouded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176920E6106700416DD2 /* ViewNotClouded.swift */; };
+		DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176B20E6134000416DD2 /* ViewConstants.swift */; };
 		DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD5E20E51AEE00EE178D /* Interactor.swift */; };
 		DA51AD6120E51B0500EE178D /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6020E51B0500EE178D /* TestInteractor.swift */; };
 		DA51AD6320E51C1F00EE178D /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6220E51C1F00EE178D /* Architecture.framework */; };
@@ -47,6 +50,9 @@
 		DA49175E20E5FE8F00416DD2 /* ViewModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContent.swift; sourceTree = "<group>"; };
 		DA49176320E6080200416DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA49176520E60A7700416DD2 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		DA49176720E6102600416DD2 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		DA49176920E6106700416DD2 /* ViewNotClouded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotClouded.swift; sourceTree = "<group>"; };
+		DA49176B20E6134000416DD2 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		DA51AD5E20E51AEE00EE178D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		DA51AD6020E51B0500EE178D /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		DA51AD6220E51C1F00EE178D /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +145,7 @@
 		DAD2528820E517DF00B97B2E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DA49176720E6102600416DD2 /* assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -157,8 +164,10 @@
 				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
 				DA51AD6B20E51CE900EE178D /* Presenter.swift */,
 				DA51AD6D20E51D0C00EE178D /* View.swift */,
-				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
 				DA49175E20E5FE8F00416DD2 /* ViewModelContent.swift */,
+				DA49176B20E6134000416DD2 /* ViewConstants.swift */,
+				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
+				DA49176920E6106700416DD2 /* ViewNotClouded.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -269,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA49176820E6102600416DD2 /* assets.xcassets in Resources */,
 				DA49176420E6080200416DD2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +356,9 @@
 			files = (
 				DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */,
 				DA49175F20E5FE8F00416DD2 /* ViewModelContent.swift in Sources */,
+				DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */,
 				DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */,
+				DA49176A20E6106700416DD2 /* ViewNotClouded.swift in Sources */,
 				DA51AD7020E51E0A00EE178D /* ViewContent.swift in Sources */,
 				DA51AD6E20E51D0C00EE178D /* View.swift in Sources */,
 			);

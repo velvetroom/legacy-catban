@@ -1,4 +1,5 @@
 import XCTest
+import Shared
 @testable import Cloud
 
 class TestView:XCTestCase {
@@ -7,6 +8,16 @@ class TestView:XCTestCase {
     override func setUp() {
         super.setUp()
         self.view = Cloud.View()
+    }
+    
+    func testLoadImageNotClouded() {
+        let image:UIImage = UIImage(name:ViewConstants.NotCloudedIcon.asset, in:Cloud.View.self)
+        XCTAssertNotNil(image, "Failed to load")
+    }
+    
+    func testLoadImageAction() {
+        let image:UIImage = UIImage(name:ViewConstants.Action.asset, in:Cloud.View.self)
+        XCTAssertNotNil(image, "Failed to load")
     }
     
     func testUpdatesProjectTitle() {

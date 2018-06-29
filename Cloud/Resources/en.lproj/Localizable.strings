@@ -1,1 +1,3 @@
 View_Title="Cloud";
+ViewNotClouded_Label="Cloud not started";
+ViewNotClouded_Button="Start";
