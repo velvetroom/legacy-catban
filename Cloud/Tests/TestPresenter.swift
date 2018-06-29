@@ -24,12 +24,12 @@ class TestPresenter:XCTestCase {
         XCTAssertNil(self.view.presenter.transition, "Retains")
     }
     
-    func testUpdatesViewModelContent() {
+    func testUpdatesViewModelProject() {
         var updated:Bool = false
         var receivedProjectName:String = String()
         self.project.name = "hello world"
-        var viewModel:ViewModelContent = self.view.viewModel.property()
-        viewModel.observing = { (property:ViewModelContent) in
+        var viewModel:ViewModelProject = self.view.viewModel.property()
+        viewModel.observing = { (property:ViewModelProject) in
             receivedProjectName = property.projectName
             updated = true
         }

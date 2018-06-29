@@ -33,12 +33,12 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func configureContentViewModel() {
-        var viewModel:ViewModelContent = self.viewModel.property()
+        var viewModel:ViewModelProject = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
-    private func updated(viewModel:ViewModelContent) {
+    private func updated(viewModel:ViewModelProject) {
         self.titleProject.title = viewModel.projectName
     }
 }

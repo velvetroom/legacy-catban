@@ -23,7 +23,7 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateViewModelContent() {
-        var viewModel:ViewModelContent = self.viewModel.property()
+        var viewModel:ViewModelProject = self.viewModel.property()
         viewModel.projectName = self.interactor.project.name
         self.viewModel.update(property:viewModel)
     }

@@ -1,8 +1,8 @@
 import Foundation
 import CleanArchitecture
 
-struct ViewModelContent:ViewModelPropertyProtocol {
-    var observing:((ViewModelContent) -> Void)?
+struct ViewModelProject:ViewModelPropertyProtocol {
+    var observing:((ViewModelProject) -> Void)?
     var projectName:String
     
     init() {

@@ -23,7 +23,7 @@ class TestView:XCTestCase {
     func testUpdatesProjectTitle() {
         let projectName:String = "hello world"
         self.view.didLoad()
-        var viewModel:ViewModelContent = self.view.viewModel.property()
+        var viewModel:ViewModelProject = self.view.viewModel.property()
         viewModel.projectName = projectName
         self.view.viewModel.update(property:viewModel)
         XCTAssertEqual(self.view.titleProject.title, projectName, "Not updated")
