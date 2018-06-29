@@ -13,7 +13,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     @objc func selectorDone(button:UIBarButtonItem) {
-//        self.presenter.done()
+        self.presenter.done()
     }
     
     private func configureView() {

@@ -28,4 +28,13 @@ class TestView:XCTestCase {
         self.view.viewModel.update(property:viewModel)
         XCTAssertEqual(self.view.titleProject.title, projectName, "Not updated")
     }
+    
+    func testSelectorDoneCallsPresenter() {
+        var called:Bool = false
+        let presenter:MockPresenter = MockPresenter()
+        presenter.onDone = { called = true }
+        self.view.presenter = presenter
+        self.view.selectorDone(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Failed to call")
+    }
 }

@@ -14,6 +14,10 @@ public class Presenter:PresenterProtocol {
         self.updateViewModel()
     }
     
+    func done() {
+        self.transition?.transitionToHome(board:self.interactor.board, project:self.interactor.project)
+    }
+    
     private func updateViewModel() {
         self.updateViewModelContent()
     }

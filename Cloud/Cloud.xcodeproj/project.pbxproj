@@ -15,6 +15,7 @@
 		DA49176820E6102600416DD2 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA49176720E6102600416DD2 /* assets.xcassets */; };
 		DA49176A20E6106700416DD2 /* ViewNotClouded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176920E6106700416DD2 /* ViewNotClouded.swift */; };
 		DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176B20E6134000416DD2 /* ViewConstants.swift */; };
+		DA49176E20E6247400416DD2 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49176D20E6247400416DD2 /* MockPresenter.swift */; };
 		DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD5E20E51AEE00EE178D /* Interactor.swift */; };
 		DA51AD6120E51B0500EE178D /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD6020E51B0500EE178D /* TestInteractor.swift */; };
 		DA51AD6320E51C1F00EE178D /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD6220E51C1F00EE178D /* Architecture.framework */; };
@@ -53,6 +54,7 @@
 		DA49176720E6102600416DD2 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DA49176920E6106700416DD2 /* ViewNotClouded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotClouded.swift; sourceTree = "<group>"; };
 		DA49176B20E6134000416DD2 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		DA49176D20E6247400416DD2 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		DA51AD5E20E51AEE00EE178D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		DA51AD6020E51B0500EE178D /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		DA51AD6220E51C1F00EE178D /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				DA51AD6020E51B0500EE178D /* TestInteractor.swift */,
 				DA51AD7120E51EC000EE178D /* TestPresenter.swift */,
 				DA49176520E60A7700416DD2 /* TestView.swift */,
+				DA49176D20E6247400416DD2 /* MockPresenter.swift */,
 				DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */,
 			);
 			path = Tests;
@@ -368,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA49176E20E6247400416DD2 /* MockPresenter.swift in Sources */,
 				DA49176620E60A7700416DD2 /* TestView.swift in Sources */,
 				DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */,
 				DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */,
