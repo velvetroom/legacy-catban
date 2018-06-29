@@ -9,4 +9,18 @@ public class Presenter:PresenterProtocol {
     public var viewModel:ViewModel!
     
     public required init() { }
+    
+    public func didLoad() {
+        self.updateViewModel()
+    }
+    
+    private func updateViewModel() {
+        self.updateViewModelContent()
+    }
+    
+    private func updateViewModelContent() {
+        var viewModel:ViewModelContent = self.viewModel.property()
+        viewModel.title = "\(self.interactor.project.name)\nCloud"
+        self.viewModel.update(property:viewModel)
+    }
 }
