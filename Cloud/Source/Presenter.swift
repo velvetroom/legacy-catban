@@ -20,7 +20,7 @@ public class Presenter:PresenterProtocol {
     
     private func updateViewModelContent() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.title = "\(self.interactor.project.name)\nCloud"
+        viewModel.projectName = self.interactor.project.name
         self.viewModel.update(property:viewModel)
     }
 }

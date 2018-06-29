@@ -3,9 +3,9 @@ import CleanArchitecture
 
 struct ViewModelContent:ViewModelPropertyProtocol {
     var observing:((ViewModelContent) -> Void)?
-    var title:String
+    var projectName:String
     
     init() {
-        self.title = String()
+        self.projectName = String()
     }
 }
