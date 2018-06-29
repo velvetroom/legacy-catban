@@ -31,6 +31,8 @@
 		DA4917AF20E6685C00416DD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4917AE20E6685C00416DD2 /* Constants.swift */; };
 		DA4917B120E66AB700416DD2 /* ErrorUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4917B020E66AB700416DD2 /* ErrorUpdater.swift */; };
 		DA4917B320E673CA00416DD2 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4917B220E673CA00416DD2 /* Shell.swift */; };
+		DA4917B520E683B700416DD2 /* GitTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4917B420E683B700416DD2 /* GitTag.swift */; };
+		DA4917B720E683ED00416DD2 /* GitTagFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4917B620E683ED00416DD2 /* GitTagFactory.swift */; };
 		DA4BD75E20CA52B5003257FA /* Tools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA4BD75F20CA52D1003257FA /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4BD75B20CA52AF003257FA /* Tools.framework */; };
 		DA51AD5C20E5198600EE178D /* Cloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD5920E5198000EE178D /* Cloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -139,6 +141,8 @@
 		DA4917AE20E6685C00416DD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA4917B020E66AB700416DD2 /* ErrorUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorUpdater.swift; sourceTree = "<group>"; };
 		DA4917B220E673CA00416DD2 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		DA4917B420E683B700416DD2 /* GitTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTag.swift; sourceTree = "<group>"; };
+		DA4917B620E683ED00416DD2 /* GitTagFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTagFactory.swift; sourceTree = "<group>"; };
 		DA4BD75B20CA52AF003257FA /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA51AD5920E5198000EE178D /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5828C520E3DA67001592A5 /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +228,8 @@
 			children = (
 				DA4917A820E663D700416DD2 /* main.swift */,
 				DA4917AC20E664C300416DD2 /* Updater.swift */,
+				DA4917B420E683B700416DD2 /* GitTag.swift */,
+				DA4917B620E683ED00416DD2 /* GitTagFactory.swift */,
 				DA4917B220E673CA00416DD2 /* Shell.swift */,
 				DA4917B020E66AB700416DD2 /* ErrorUpdater.swift */,
 				DA4917AE20E6685C00416DD2 /* Constants.swift */,
@@ -532,6 +538,8 @@
 				DA4917B320E673CA00416DD2 /* Shell.swift in Sources */,
 				DA4917AD20E664C300416DD2 /* Updater.swift in Sources */,
 				DA4917AF20E6685C00416DD2 /* Constants.swift in Sources */,
+				DA4917B720E683ED00416DD2 /* GitTagFactory.swift in Sources */,
+				DA4917B520E683B700416DD2 /* GitTag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

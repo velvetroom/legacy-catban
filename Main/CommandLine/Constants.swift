@@ -12,6 +12,12 @@ struct Constants {
         static let encodingKey:String = "LC_ALL"
         static let encodingValue:String = "en_US.UTF-8"
         static let homeKey:String = "HOME"
+        static let newLine:String = "\n"
         static let separator:Character = " "
+    }
+    
+    struct Git {
+        static let countCommits:String = "git rev-list HEAD --count"
+        static let listTags:String = "git tag --sort=-refname"
     }
 }

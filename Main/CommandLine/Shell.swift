@@ -35,6 +35,17 @@ class Shell {
         guard
             let string:String = String(data:data, encoding:String.Encoding.utf8)
         else { return String() }
+        let cleaned:String = self.clean(string:string)
+        return cleaned
+    }
+    
+    private func clean(string:String) -> String {
+        var string:String = string
+        if let last:Character = string.last {
+            if String(last) == Constants.Shell.newLine {
+                string = String(string.dropLast())
+            }
+        }
         return string
     }
 }
