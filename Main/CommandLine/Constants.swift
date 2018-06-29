@@ -1,7 +1,17 @@
 import Foundation
 
 struct Constants {
-    static let plist:String = "../Configuration/source.plist"
-    static let versionKey:String = "CFBundleShortVersionString"
-    static let bundleKey:String = "CFBundleVersion"
+    struct Plist {
+        static let location:String = "../Configuration/source.plist"
+        static let versionKey:String = "CFBundleShortVersionString"
+        static let bundleKey:String = "CFBundleVersion"
+    }
+    
+    struct Shell {
+        static let environment:String = "/usr/bin/env"
+        static let encodingKey:String = "LC_ALL"
+        static let encodingValue:String = "en_US.UTF-8"
+        static let homeKey:String = "HOME"
+        static let separator:Character = " "
+    }
 }
