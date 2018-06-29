@@ -1,13 +1,15 @@
 import UIKit
 
 struct ViewConstants {
-    struct NotCloudedIcon {
-        static let asset:String = "assetError"
+    struct Icon {
+        static let assetNotClouded:String = "assetError"
+        static let assetCloud:String = "assetCloud"
+        static let assetUpToDate:String = "assetUpToDate"
         static let size:CGFloat = 60
     }
     
-    struct NotCloudedTitle {
-        static let height:CGFloat = 18
+    struct Title {
+        static let height:CGFloat = 30
         static let fontSize:CGFloat = 14
     }
     

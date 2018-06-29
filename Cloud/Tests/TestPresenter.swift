@@ -14,6 +14,7 @@ class TestPresenter:XCTestCase {
         self.board = BoardFactory.newBoard()
         self.project = ProjectFactory.newProject()
         self.transition = MockTransitionProtocol()
+        self.project.name = "lorem ipsum"
         self.view.presenter.interactor.board = self.board
         self.view.presenter.interactor.project = self.project
         self.view.transition = self.transition
@@ -24,25 +25,17 @@ class TestPresenter:XCTestCase {
         XCTAssertNil(self.view.presenter.transition, "Retains")
     }
     
-    func testUpdatesViewModelProject() {
-        var updated:Bool = false
-        var receivedProjectName:String = String()
-        self.project.name = "hello world"
-        var viewModel:ViewModelProject = self.view.viewModel.property()
-        viewModel.observing = { (property:ViewModelProject) in
-            receivedProjectName = property.projectName
-            updated = true
-        }
-        self.view.viewModel.update(property:viewModel)
-        self.view.presenter.didLoad()
-        XCTAssertTrue(updated, "Not updated")
-        XCTAssertEqual(receivedProjectName, self.project.name, "Invalid name")
-    }
-    
     func testDoneTransitionsToHome() {
         var transitioned:Bool = false
         self.transition.onTransitionToHome = { transitioned = true }
-        self.view.presenter.done()
+        self.view.selectorDone(button:UIBarButtonItem())
         XCTAssertTrue(transitioned, "Failed to transition")
+    }
+    
+    func testUpdateViewModel() {
+        XCTAssertNotNil(self.view.view, "Failed loading view")
+        XCTAssertEqual(self.view.titleProject.title, self.project.name, "Failed to load")
+        XCTAssertFalse(self.view.content.label.text!.isEmpty, "Failed to load")
+        XCTAssertNotNil(self.view.content.icon.image, "Failed to load")
     }
 }

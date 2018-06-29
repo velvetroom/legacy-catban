@@ -1,13 +1,14 @@
-import Foundation
+import UIKit
 import CleanArchitecture
 
 struct ViewModelContent:ViewModelPropertyProtocol {
     var observing:((ViewModelContent) -> Void)?
-    var notCloudedHidden:Bool
-    var cloudHidden:Bool
+    var icon:UIImage?
+    var actionHidden:Bool
+    var message:String
     
     init() {
-        self.notCloudedHidden = true
-        self.cloudHidden = true
+        self.actionHidden = false
+        self.message = String()
     }
 }
