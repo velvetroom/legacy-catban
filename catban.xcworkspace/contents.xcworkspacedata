@@ -53,6 +53,9 @@
       location = "group:Scripts">
    </FileRef>
    <FileRef
+      location = "group:VersionUpdater">
+   </FileRef>
+   <FileRef
       location = "group:LICENSE">
    </FileRef>
    <FileRef
