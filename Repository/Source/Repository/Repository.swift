@@ -28,16 +28,12 @@ public class Repository:RepositoryProtocol {
         }
     }
     
-    public func localSave(project:ProjectProtocol) {
-        self.dispatchQueue.async {
-            self.backgroundSave(project:project)
-        }
-    }
-    
-    public func localDelete(project:ProjectProtocol) {
-        self.dispatchQueue.async {
-            self.backgroundDelete(project:project)
-        }
+    private func backgroundSave(board:BoardProtocol) {
+        let serialise:SerialiseProtocol = Serialise()
+        do {
+            let data:Data = try serialise.makeDataFrom(board:board)
+            try self.file.writeBoard(data:data)
+        } catch { }
     }
     
     private func loadProjectsOn(board:BoardProtocol) {
@@ -52,29 +48,5 @@ public class Repository:RepositoryProtocol {
             }
             board.add(project:project)
         }
-    }
-    
-    private func backgroundSave(board:BoardProtocol) {
-        let serialise:SerialiseProtocol = Serialise()
-        do {
-            let data:Data = try serialise.makeDataFrom(board:board)
-            try self.file.writeBoard(data:data)
-        } catch {
-            return
-        }
-    }
-    
-    private func backgroundSave(project:ProjectProtocol) {
-        let serialise:SerialiseProtocol = Serialise()
-        do {
-            let data:Data = try serialise.makeDataFrom(project:project)
-            try self.file.writeProject(data:data, with:project.identifier)
-        } catch {
-            return
-        }
-    }
-    
-    private func backgroundDelete(project:ProjectProtocol) {
-        do { try self.file.deleteProjectWith(identifier:project.identifier) } catch { }
     }
 }

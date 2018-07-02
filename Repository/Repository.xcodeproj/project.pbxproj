@@ -20,6 +20,8 @@
 		DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */; };
 		DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3ADFC8209C3A3500B736CD /* Repository.swift */; };
 		DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ADFCB209C3B9300B736CD /* Shared.framework */; };
+		DA5606DA20EA1A14006F2797 /* Repository+Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606D920EA1A14006F2797 /* Repository+Local.swift */; };
+		DA5606DC20EA1ACD006F2797 /* Repository+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606DB20EA1ACD006F2797 /* Repository+Remote.swift */; };
 		DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */; };
 		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
 		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
@@ -73,6 +75,8 @@
 		DA3ADFC6209C3A2B00B736CD /* TestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository.swift; sourceTree = "<group>"; };
 		DA3ADFC8209C3A3500B736CD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DA3ADFCB209C3B9300B736CD /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5606D920EA1A14006F2797 /* Repository+Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Local.swift"; sourceTree = "<group>"; };
+		DA5606DB20EA1ACD006F2797 /* Repository+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Remote.swift"; sourceTree = "<group>"; };
 		DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 			children = (
 				DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */,
 				DA3ADFC8209C3A3500B736CD /* Repository.swift */,
+				DA5606D920EA1A14006F2797 /* Repository+Local.swift */,
+				DA5606DB20EA1ACD006F2797 /* Repository+Remote.swift */,
 				DA8C60CE20C0362D00F852A6 /* RepositoryFile.swift */,
 				DA2AF74420C11A7400BF94D1 /* RepositoryFileUrl.swift */,
 				DA8C60D620C03AEC00F852A6 /* RepositoryFileFactory.swift */,
@@ -480,9 +486,11 @@
 				DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */,
 				DAAFF3A2209C9DAE003EE7D8 /* SerialiseProtocol.swift in Sources */,
 				DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */,
+				DA5606DC20EA1ACD006F2797 /* Repository+Remote.swift in Sources */,
 				DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */,
 				DA2AF74520C11A7400BF94D1 /* RepositoryFileUrl.swift in Sources */,
 				DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */,
+				DA5606DA20EA1A14006F2797 /* Repository+Local.swift in Sources */,
 				DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */,
 				DA8C60D320C037A100F852A6 /* RepositoryConstants.swift in Sources */,
 				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
