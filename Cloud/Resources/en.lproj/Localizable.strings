@@ -1,5 +1,5 @@
 View_Title="Cloud";
-ViewNotClouded_LabelNotClouded="Cloud not started";
+ViewNotClouded_LabelNotClouded="Cloud not started for this Board";
 ViewNotClouded_LabelCloud="Changes not uploaded";
 ViewNotClouded_LabelUpToDate="Cloud up to date";
 ViewNotClouded_Button="Start";
