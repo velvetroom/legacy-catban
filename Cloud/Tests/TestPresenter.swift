@@ -35,7 +35,11 @@ class TestPresenter:XCTestCase {
     func testUpdateViewModel() {
         XCTAssertNotNil(self.view.view, "Failed loading view")
         XCTAssertEqual(self.view.titleProject.title, self.project.name, "Failed to load")
-        XCTAssertFalse(self.view.content.label.text!.isEmpty, "Failed to load")
+        XCTAssertNotNil(self.view.content.label.text, "Failed to load")
         XCTAssertNotNil(self.view.content.icon.image, "Failed to load")
+        
+        if let labelText:String = self.view.content.label.text {
+            XCTAssertFalse(labelText.isEmpty, "Failed to load")
+        }
     }
 }

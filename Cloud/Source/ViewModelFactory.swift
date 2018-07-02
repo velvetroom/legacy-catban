@@ -20,7 +20,7 @@ class ViewModelFactory {
     
     class func makeNavigationWith(project:ProjectProtocol) -> ViewModelNavigation {
         var property:ViewModelNavigation = ViewModelNavigation()
-        property.navigationbarHidden = !(project is ProjectSynchedProtocol)
+        property.toolbarHidden = !(project is ProjectSynchedProtocol)
         return property
     }
     
