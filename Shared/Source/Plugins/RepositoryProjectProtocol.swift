@@ -6,6 +6,6 @@ public protocol RepositoryProjectProtocol {
     func localSave(project:ProjectProtocol)
     func localDelete(project:ProjectProtocol)
     func startRemote(project:ProjectProtocol,
-                     completion:@escaping((ProjectSynchedProtocol) -> Void),
-                     error:@escaping((Error) -> Void))
+                     onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                     onError:@escaping((Error) -> Void))
 }

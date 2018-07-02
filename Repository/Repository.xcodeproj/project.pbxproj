@@ -25,6 +25,8 @@
 		DA5606DE20EA2F92006F2797 /* TestRepository_Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606DD20EA2F92006F2797 /* TestRepository_Remote.swift */; };
 		DA5606E120EA2FE6006F2797 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606E020EA2FE6006F2797 /* RemoteProtocol.swift */; };
 		DA5606E320EA2FFB006F2797 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606E220EA2FFB006F2797 /* Remote.swift */; };
+		DA5606E620EA3025006F2797 /* MockRemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606E520EA3025006F2797 /* MockRemoteProtocol.swift */; };
+		DA5606E820EA3078006F2797 /* TestRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5606E720EA3078006F2797 /* TestRemote.swift */; };
 		DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */; };
 		DA567B4D209C78E5005D74EE /* ErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B4C209C78E5005D74EE /* ErrorRepository.swift */; };
 		DA567B52209C7A11005D74EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA567B50209C7A11005D74EE /* Localizable.strings */; };
@@ -83,6 +85,8 @@
 		DA5606DD20EA2F92006F2797 /* TestRepository_Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepository_Remote.swift; sourceTree = "<group>"; };
 		DA5606E020EA2FE6006F2797 /* RemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProtocol.swift; sourceTree = "<group>"; };
 		DA5606E220EA2FFB006F2797 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		DA5606E520EA3025006F2797 /* MockRemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteProtocol.swift; sourceTree = "<group>"; };
+		DA5606E720EA3078006F2797 /* TestRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRemote.swift; sourceTree = "<group>"; };
 		DA567B3E209C76BC005D74EE /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA567B4C209C78E5005D74EE /* ErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepository.swift; sourceTree = "<group>"; };
 		DA567B51209C7A11005D74EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		DA3ADFB5209C385E00B736CD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DA5606E420EA3015006F2797 /* Remote */,
 				DA2AF74620C15F6D00BF94D1 /* Files */,
 				DA567B4E209C78F7005D74EE /* Repository */,
 				DAAFF398209C9CA7003EE7D8 /* Serial */,
@@ -215,6 +220,15 @@
 			children = (
 				DA5606E020EA2FE6006F2797 /* RemoteProtocol.swift */,
 				DA5606E220EA2FFB006F2797 /* Remote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		DA5606E420EA3015006F2797 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				DA5606E720EA3078006F2797 /* TestRemote.swift */,
+				DA5606E520EA3025006F2797 /* MockRemoteProtocol.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -529,11 +543,13 @@
 				DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */,
 				DA8C60D120C0365C00F852A6 /* TestRepositoryFile.swift in Sources */,
 				DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */,
+				DA5606E820EA3078006F2797 /* TestRemote.swift in Sources */,
 				DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */,
 				DA2AF74C20C1610A00BF94D1 /* TestFileLoader.swift in Sources */,
 				DA66D67A20C29E60006D3905 /* MockRepositoryFile.swift in Sources */,
 				DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */,
 				DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */,
+				DA5606E620EA3025006F2797 /* MockRemoteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

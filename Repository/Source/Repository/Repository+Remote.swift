@@ -3,8 +3,8 @@ import Board
 
 public extension Repository {
     public func startRemote(project:ProjectProtocol,
-                            completion:@escaping((ProjectSynchedProtocol) -> Void),
-                            error:@escaping((Error) -> Void)) {
+                            onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                            onError:@escaping((Error) -> Void)) {
         self.dispatchQueue.async {
             
         }

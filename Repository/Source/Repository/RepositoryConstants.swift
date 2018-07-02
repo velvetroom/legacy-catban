@@ -32,4 +32,8 @@ public struct RepositoryConstants {
     struct Shared {
         static let queueIdentifier:String = "iturbide.catban.repository"
     }
+    
+    struct Remote {
+        static let maxRetry:Int = 3
+    }
 }
