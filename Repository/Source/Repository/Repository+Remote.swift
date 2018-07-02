@@ -21,9 +21,13 @@ public extension Repository {
     private func backgroundStart(project:ProjectProtocol,
                                  onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
                                  onError:@escaping((Error) -> Void)) {
-        self.remote.makeIdentifier(onCompletion: { (identifier:String) in
-            self.remoteStarted(project:project, with:identifier, onCompletion:onCompletion, onError:onError)
-        }, onError:onError)
+        if project is ProjectSynchedProtocol {
+            onError(ErrorRepository.alreadyClouded)
+        } else {
+            self.remote.makeIdentifier(onCompletion: { (identifier:String) in
+                self.remoteStarted(project:project, with:identifier, onCompletion:onCompletion, onError:onError)
+            }, onError:onError)
+        }
     }
     
     private func remoteStarted(project:ProjectProtocol, with remoteIdentifier:String,
@@ -32,6 +36,7 @@ public extension Repository {
         var project:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         project.remoteIdentifier = remoteIdentifier
         self.backgroundSave(project:project, onCompletion: {
+            project.downloadTimestamp = Date.timestamp
             onCompletion(project)
         }, onError:onError)
     }

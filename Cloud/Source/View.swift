@@ -10,10 +10,16 @@ public class View:Architecture.View<Presenter, ViewContent> {
         super.didLoad()
         self.configureView()
         self.configureViewModel()
+        self.hookSelectors()
     }
     
     @objc func selectorDone(button:UIBarButtonItem) {
         self.presenter.done()
+    }
+    
+    @objc func selectorStart(button:UIButton) {
+        self.content.button.isEnabled = false
+        self.presenter.start()
     }
     
     private func configureView() {
@@ -33,6 +39,11 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.configureContentViewModel()
     }
     
+    private func hookSelectors() {
+        self.content.button.addTarget(self, action:#selector(self.selectorStart(button:)),
+                                      for:UIControlEvents.touchUpInside)
+    }
+    
     private func configureProjectViewModel() {
         var viewModel:ViewModelProject = self.viewModel.property()
         viewModel.observing = self.updated
@@ -50,6 +61,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func updated(viewModel:ViewModelContent) {
+        self.content.button.isEnabled = true
         self.content.icon.image = viewModel.icon
         self.content.button.isHidden = viewModel.buttonHidden
         self.content.label.text = viewModel.message

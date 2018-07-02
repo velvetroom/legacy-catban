@@ -11,6 +11,7 @@ class Remote:RemoteProtocol {
     func save(project:ProjectSynchedProtocol,
               onCompletion:@escaping(() -> Void),
               onError:@escaping((Error) -> Void)) {
+        self.updateSynched(project:project)
         onCompletion()
     }
     
@@ -34,5 +35,11 @@ class Remote:RemoteProtocol {
     
     private func validateIdentifier(onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
         onCompletion()
+    }
+    
+    private func updateSynched(project:ProjectSynchedProtocol) {
+        let timestamp:Int = Date.timestamp
+        var project:ProjectSynchedProtocol = project
+        project.uploadTimestamp = timestamp
     }
 }

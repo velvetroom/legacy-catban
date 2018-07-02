@@ -18,6 +18,10 @@ public class Presenter:PresenterProtocol {
         self.transition?.transitionToHome(board:self.interactor.board, project:self.interactor.project)
     }
     
+    func start() {
+        
+    }
+    
     private func updateViewModel() {
         self.updateViewModelNavigation()
         self.updateViewModelProject()

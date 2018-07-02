@@ -32,6 +32,10 @@
 		DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7120E51EC000EE178D /* TestPresenter.swift */; };
 		DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */; };
 		DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD2526D20E5167F00B97B2E /* Cloud.framework */; };
+		DADB20EE20EA5D5D000C89D9 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADB20ED20EA5D5D000C89D9 /* Repository.framework */; };
+		DADB20F020EA5D67000C89D9 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADB20EF20EA5D67000C89D9 /* Repository.framework */; };
+		DADB20F220EA6067000C89D9 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F120EA6067000C89D9 /* MockRepositoryProjectProtocol.swift */; };
+		DADB20F820EA675A000C89D9 /* MockBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		DAD2526D20E5167F00B97B2E /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2527C20E516B700B97B2E /* TestsCloud.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCloud.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2528720E517CF00B97B2E /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
+		DADB20ED20EA5D5D000C89D9 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADB20EF20EA5D67000C89D9 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADB20F120EA6067000C89D9 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
+		DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProtocol.swift; sourceTree = "<group>"; };
 		F6A8044DFBF6B34C104DA0B3 /* Pods-Architecture-TestsCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsCloud.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsCloud/Pods-Architecture-TestsCloud.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADB20EE20EA5D5D000C89D9 /* Repository.framework in Frameworks */,
 				DA51AD6820E51C9C00EE178D /* Board.framework in Frameworks */,
 				DA51AD6620E51C9800EE178D /* Shared.framework in Frameworks */,
 				DA51AD6320E51C1F00EE178D /* Architecture.framework in Frameworks */,
@@ -91,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADB20F020EA5D67000C89D9 /* Repository.framework in Frameworks */,
 				DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */,
 				DA51AD6420E51C8B00EE178D /* Architecture.framework in Frameworks */,
 				DA51AD6920E51CA500EE178D /* Shared.framework in Frameworks */,
@@ -105,6 +115,8 @@
 		4680F846F154DAA77D0571D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DADB20EF20EA5D67000C89D9 /* Repository.framework */,
+				DADB20ED20EA5D5D000C89D9 /* Repository.framework */,
 				DA51AD6720E51C9C00EE178D /* Board.framework */,
 				DA51AD6520E51C9800EE178D /* Shared.framework */,
 				DA51AD6220E51C1F00EE178D /* Architecture.framework */,
@@ -188,6 +200,8 @@
 				DA49178320E651EE00416DD2 /* TestViewModelFactory.swift */,
 				DA49176D20E6247400416DD2 /* MockPresenter.swift */,
 				DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */,
+				DADB20F120EA6067000C89D9 /* MockRepositoryProjectProtocol.swift */,
+				DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -380,9 +394,11 @@
 			files = (
 				DA49176E20E6247400416DD2 /* MockPresenter.swift in Sources */,
 				DA49178420E651EE00416DD2 /* TestViewModelFactory.swift in Sources */,
+				DADB20F220EA6067000C89D9 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DA49176620E60A7700416DD2 /* TestView.swift in Sources */,
 				DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */,
 				DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */,
+				DADB20F820EA675A000C89D9 /* MockBoardProtocol.swift in Sources */,
 				DA51AD6120E51B0500EE178D /* TestInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
