@@ -8,4 +8,7 @@ public protocol RepositoryProjectProtocol {
     func startRemote(project:ProjectProtocol,
                      onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
                      onError:@escaping((Error) -> Void))
+    func remoteSave(project:ProjectSynchedProtocol,
+                    onCompletion:@escaping(() -> Void),
+                    onError:@escaping((Error) -> Void))
 }

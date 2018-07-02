@@ -11,7 +11,7 @@ class Remote:RemoteProtocol {
     func save(project:ProjectSynchedProtocol,
               onCompletion:@escaping(() -> Void),
               onError:@escaping((Error) -> Void)) {
-        
+        onCompletion()
     }
     
     private func makeIdentifier(

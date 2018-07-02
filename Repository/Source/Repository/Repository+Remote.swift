@@ -22,7 +22,7 @@ public extension Repository {
                                  onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
                                  onError:@escaping((Error) -> Void)) {
         self.remote.makeIdentifier(onCompletion: { (identifier:String) in
-            
+            self.remoteStarted(project:project, with:identifier, onCompletion:onCompletion, onError:onError)
         }, onError:onError)
     }
     
@@ -39,7 +39,7 @@ public extension Repository {
     private func backgroundSave(project:ProjectSynchedProtocol,
                                 onCompletion:@escaping(() -> Void),
                                 onError:@escaping((Error) -> Void)) {
-        
+        self.remote.save(project:project, onCompletion:onCompletion, onError:onError)
     }
     
     private func makeSynchedWith(project:ProjectProtocol, and remoteIdentifier:String) -> ProjectSynchedProtocol {
