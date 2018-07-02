@@ -1,10 +1,17 @@
 import Foundation
+import Board
 
 class Remote:RemoteProtocol {
     func makeIdentifier(
         onCompletion:@escaping((String) -> Void),
         onError:@escaping((Error) -> Void)) {
         self.makeIdentifier(onCompletion:onCompletion, onError:onError, retry:0)
+    }
+    
+    func save(project:ProjectSynchedProtocol,
+              onCompletion:@escaping(() -> Void),
+              onError:@escaping((Error) -> Void)) {
+        
     }
     
     private func makeIdentifier(

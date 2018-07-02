@@ -15,6 +15,6 @@ class TestRemote:XCTestCase {
             XCTAssertFalse(identifier.isEmpty, "Invalid identifier")
             expect.fulfill()
         }, onError: { (error:Error) in })
-        self.waitForExpectations(timeout:10, handler:nil)
+        self.waitForExpectations(timeout:0.3, handler:nil)
     }
 }

@@ -5,11 +5,13 @@ import Board
 public class Repository:RepositoryProtocol {
     var file:RepositoryFile
     var deserialise:DeserialiseProtocol
+    var remote:RemoteProtocol
     var dispatchQueue:DispatchQueue
     
     public required init() {
         self.file = RepositoryFile()
         self.deserialise = Deserialise()
+        self.remote = Remote()
         self.dispatchQueue = DispatchQueue.privateBackgroundWith(
             identifier:RepositoryConstants.Shared.queueIdentifier)
     }
