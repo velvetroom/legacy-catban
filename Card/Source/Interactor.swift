@@ -28,7 +28,7 @@ public class Interactor:InteractorCardProtocol, DeleterInteractorProtocol {
     
     private func save() {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:self.project)
+        repository.localSave(project:self.project)
     }
     
     private func transitionToHomeWith(transition:TransitionProtocol) {

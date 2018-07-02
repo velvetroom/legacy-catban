@@ -28,13 +28,13 @@ public class Repository:RepositoryProtocol {
         }
     }
     
-    public func save(project:ProjectProtocol) {
+    public func localSave(project:ProjectProtocol) {
         self.dispatchQueue.async {
             self.backgroundSave(project:project)
         }
     }
     
-    public func delete(project:ProjectProtocol) {
+    public func localDelete(project:ProjectProtocol) {
         self.dispatchQueue.async {
             self.backgroundDelete(project:project)
         }

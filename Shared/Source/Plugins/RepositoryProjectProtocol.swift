@@ -3,6 +3,6 @@ import Board
 
 public protocol RepositoryProjectProtocol {
     init()
-    func save(project:ProjectProtocol)
-    func delete(project:ProjectProtocol)
+    func localSave(project:ProjectProtocol)
+    func localDelete(project:ProjectProtocol)
 }

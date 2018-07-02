@@ -39,11 +39,11 @@ public class Interactor:InteractorBoardProtocol {
     
     private func deleteFromRepository(project:ProjectProtocol) {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.delete(project:project)
+        repository.localDelete(project:project)
     }
     
     private func save(project:ProjectProtocol) {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:project)
+        repository.localSave(project:project)
     }
 }

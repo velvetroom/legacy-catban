@@ -73,7 +73,7 @@ class TestRepository:XCTestCase {
     private func performDelete(project:ProjectProtocol, file:RepositoryFile) {
         let model:Repository = Repository()
         model.file = file
-        model.delete(project:project)
+        model.localDelete(project:project)
     }
     
     private func write(data:Data, to url:URL) {

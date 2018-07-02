@@ -8,11 +8,11 @@ class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
     
     required init() { }
     
-    func save(project:ProjectProtocol) {
+    func localSave(project:ProjectProtocol) {
         MockRepositoryProjectProtocol.onSave?()
     }
     
-    func delete(project:ProjectProtocol) {
+    func localDelete(project:ProjectProtocol) {
         MockRepositoryProjectProtocol.onDelete?()
     }
 }

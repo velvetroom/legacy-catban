@@ -79,7 +79,7 @@ public class Interactor:InteractorProtocol {
     
     private func save(project:ProjectProtocol) {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:project)
+        repository.localSave(project:project)
     }
     
     private func transitionOnMainThread(completion:@escaping((TransitionProtocol) -> Void)) {

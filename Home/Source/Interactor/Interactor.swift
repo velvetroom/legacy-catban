@@ -57,7 +57,7 @@ public class Interactor:InteractorProjectProtocol, CanvasDelegateProtocol, Namer
     
     public func saveProject() {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:self.project)
+        repository.localSave(project:self.project)
     }
     
     func openCloud() {
