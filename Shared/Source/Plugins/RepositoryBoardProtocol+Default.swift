@@ -5,6 +5,6 @@ public extension RepositoryBoardProtocol {
     func save(board:BoardProtocol) { }
     
     func loadBoard() throws -> BoardProtocol {
-        throw NSError(domain:String(), code:0, userInfo:nil)
+        fatalError("Method not implemented")
     }
 }
