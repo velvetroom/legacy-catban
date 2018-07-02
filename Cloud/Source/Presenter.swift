@@ -19,11 +19,23 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateViewModel() {
+        self.updateViewModelNavigation()
         self.updateViewModelProject()
+        self.updateViewModelContent()
+    }
+    
+    private func updateViewModelNavigation() {
+        let property:ViewModelNavigation = ViewModelFactory.makeNavigationWith(project:self.interactor.project)
+        self.viewModel.update(property:property)
     }
     
     private func updateViewModelProject() {
         let property:ViewModelProject = ViewModelFactory.makeProjectWith(project:self.interactor.project)
+        self.viewModel.update(property:property)
+    }
+    
+    private func updateViewModelContent() {
+        let property:ViewModelContent = ViewModelFactory.makeContentWith(project:self.interactor.project)
         self.viewModel.update(property:property)
     }
 }

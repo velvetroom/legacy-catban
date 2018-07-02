@@ -34,7 +34,7 @@ class ViewModelFactory {
     
     private class func makeNotClouded() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
-        property.actionHidden = true
+        property.buttonHidden = true
         property.message = String.localized(key:"ViewNotClouded_LabelNotClouded", in:View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetNotClouded, in:Cloud.View.self)
         return property
@@ -42,7 +42,7 @@ class ViewModelFactory {
     
     private class func makeCloud() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
-        property.actionHidden = false
+        property.buttonHidden = false
         property.message = String.localized(key:"ViewNotClouded_LabelCloud", in:Cloud.View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
         return property
@@ -50,7 +50,7 @@ class ViewModelFactory {
     
     private class func makeUpToDate() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
-        property.actionHidden = true
+        property.buttonHidden = true
         property.message = String.localized(key:"ViewNotClouded_LabelUpToDate", in:Cloud.View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
         return property

@@ -7,7 +7,7 @@ class TestViewModelFactory:XCTestCase {
     func testMakeContentWithNotClouded() {
         let project:ProjectProtocol = ProjectFactory.newProject()
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:project)
-        XCTAssertTrue(viewModel.actionHidden, "Action should be hidden")
+        XCTAssertTrue(viewModel.buttonHidden, "Action should be hidden")
     }
     
     func testNavigationWithNoClouded() {
@@ -20,7 +20,7 @@ class TestViewModelFactory:XCTestCase {
         let project:ProjectProtocol = ProjectFactory.newProject()
         let synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:synchable)
-        XCTAssertTrue(viewModel.actionHidden, "Action should be hidden")
+        XCTAssertTrue(viewModel.buttonHidden, "Action should be hidden")
     }
     
     func testMakeContentNeedsSynching() {
@@ -28,7 +28,7 @@ class TestViewModelFactory:XCTestCase {
         var synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         synchable.changeTimestamp = 10
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:synchable)
-        XCTAssertFalse(viewModel.actionHidden, "Action should not be hidden")
+        XCTAssertFalse(viewModel.buttonHidden, "Action should not be hidden")
     }
     
     func testNavigationWithClouded() {

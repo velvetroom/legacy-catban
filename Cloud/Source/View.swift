@@ -29,16 +29,29 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func configureViewModel() {
+        self.configureProjectViewModel()
         self.configureContentViewModel()
     }
     
-    private func configureContentViewModel() {
+    private func configureProjectViewModel() {
         var viewModel:ViewModelProject = self.viewModel.property()
+        viewModel.observing = self.updated
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func configureContentViewModel() {
+        var viewModel:ViewModelContent = self.viewModel.property()
         viewModel.observing = self.updated
         self.viewModel.update(property:viewModel)
     }
     
     private func updated(viewModel:ViewModelProject) {
         self.titleProject.title = viewModel.projectName
+    }
+    
+    private func updated(viewModel:ViewModelContent) {
+        self.content.icon.image = viewModel.icon
+        self.content.button.isHidden = viewModel.buttonHidden
+        self.content.label.text = viewModel.message
     }
 }

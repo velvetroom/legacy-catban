@@ -4,11 +4,11 @@ import CleanArchitecture
 struct ViewModelContent:ViewModelPropertyProtocol {
     var observing:((ViewModelContent) -> Void)?
     var icon:UIImage?
-    var actionHidden:Bool
+    var buttonHidden:Bool
     var message:String
     
     init() {
-        self.actionHidden = false
+        self.buttonHidden = false
         self.message = String()
     }
 }
