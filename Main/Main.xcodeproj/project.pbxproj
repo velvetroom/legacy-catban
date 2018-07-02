@@ -292,6 +292,7 @@
 				DADB5ECE209B144900CFFC9A /* Resources */,
 				DAB61331209B33DD005267A8 /* Embed Frameworks */,
 				027E30DD2D71DB64A2421E82 /* [CP] Embed Pods Frameworks */,
+				DA4F972F20E9F82F0003498D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -453,6 +454,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DA4F972F20E9F82F0003498D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/devel/iturbide/catban/VersionUpdater/bin/Main /devel/iturbide/catban/Main/Configuration/source.plist";
 		};
 /* End PBXShellScriptBuildPhase section */
 
