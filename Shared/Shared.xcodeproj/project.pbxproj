@@ -22,6 +22,8 @@
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
 		DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */; };
 		DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */; };
+		DADB20F420EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */; };
+		DADB20F620EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F520EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift */; };
 		DAF7E66A209B077E00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF375209AFC6900740A88 /* Shared.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
 		DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDispatchQueue_Private.swift; sourceTree = "<group>"; };
+		DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryProjectProtocol+Default.swift"; sourceTree = "<group>"; };
+		DADB20F520EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryBoardProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAF7E665209B077E00B8A39A /* TestsShared.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsShared.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF375209AFC6900740A88 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF380209AFCEF00740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -117,7 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				DA567B2F209C662C005D74EE /* RepositoryBoardProtocol.swift */,
+				DADB20F520EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift */,
 				DA567B3C209C7663005D74EE /* RepositoryProjectProtocol.swift */,
+				DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */,
 				DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */,
 				DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */,
 			);
@@ -359,10 +365,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
+				DADB20F420EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
+				DADB20F620EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift in Sources */,
 				DA3ADF8A209C299F00B736CD /* UIImage+Bundle.swift in Sources */,
 				DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */,
 				DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */,
