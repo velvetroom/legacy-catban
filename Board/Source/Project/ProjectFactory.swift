@@ -12,5 +12,11 @@ public class ProjectFactory {
         return Project()
     }
     
+    public class func makeSynchable(project:ProjectProtocol) -> ProjectSynchedProtocol {
+        let synchable:ProjectSynchedProtocol = ProjectSynched()
+        synchable.copy(project:project)
+        return synchable
+    }
+    
     private init() { }
 }
