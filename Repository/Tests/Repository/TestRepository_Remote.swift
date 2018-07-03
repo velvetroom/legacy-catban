@@ -37,7 +37,6 @@ class TestRepository_Remote:XCTestCase {
     private func validateSynched(project:ProjectSynchedProtocol, with original:ProjectProtocol) throws {
         XCTAssertEqual(project.identifier, original.identifier, "Not the same project")
         XCTAssertEqual(project.name, original.name, "Not the same project")
-        XCTAssertGreaterThan(project.uploadTimestamp, 0, "Invalid timestamp")
-        XCTAssertGreaterThan(project.downloadTimestamp, 0, "Invalid download timestamp")
+        XCTAssertGreaterThan(project.uploaded, 0, "Invalid timestamp")
     }
 }

@@ -38,8 +38,7 @@ class Remote:RemoteProtocol {
     }
     
     private func updateSynched(project:ProjectSynchedProtocol) {
-        let timestamp:Int = Date.timestamp
         var project:ProjectSynchedProtocol = project
-        project.uploadTimestamp = timestamp
+        project.uploaded = Date.timestamp
     }
 }

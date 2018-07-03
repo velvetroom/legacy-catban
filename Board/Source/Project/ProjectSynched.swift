@@ -2,15 +2,11 @@ import Foundation
 
 class ProjectSynched:Project, ProjectSynchedProtocol {
     var remoteIdentifier:String
-    var downloadTimestamp:Int
-    var uploadTimestamp:Int
-    var changeTimestamp:Int
+    var uploaded:Int
     
     override init() {
         self.remoteIdentifier = String()
-        self.downloadTimestamp = 0
-        self.uploadTimestamp = 0
-        self.changeTimestamp = 0
+        self.uploaded = 0
         super.init()
     }
     
@@ -18,9 +14,7 @@ class ProjectSynched:Project, ProjectSynchedProtocol {
         super.copy(project:project)
         if let project:ProjectSynchedProtocol = project as? ProjectSynchedProtocol {
             self.remoteIdentifier = project.remoteIdentifier
-            self.uploadTimestamp = project.uploadTimestamp
-            self.downloadTimestamp = project.downloadTimestamp
-            self.changeTimestamp = project.changeTimestamp
+            self.uploaded = project.uploaded
         }
     }
 }

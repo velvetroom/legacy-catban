@@ -24,8 +24,7 @@ class TestViewModelFactory:XCTestCase {
     
     func testMakeContentCloud() {
         let project:ProjectProtocol = ProjectFactory.newProject()
-        var synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
-        synchable.changeTimestamp = 10
+        let synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:synchable)
         XCTAssertTrue(viewModel.buttonStartHidden, "Button should be hidden")
     }

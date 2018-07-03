@@ -2,8 +2,5 @@ import Foundation
 
 public protocol SynchedProtocol {
     var remoteIdentifier:String { get set }
-    var downloadTimestamp:Int { get set }
-    var uploadTimestamp:Int { get set }
-    var changeTimestamp:Int { get set }
-    var needsSync:Bool { get }
+    var uploaded:Int { get set }
 }
