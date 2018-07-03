@@ -5,11 +5,14 @@ import Shared
 
 class TestRepository_Remote:XCTestCase {
     private var repository:Repository!
+    private var remote:MockRemoteProtocol!
     
     override func setUp() {
         super.setUp()
         Configuration.directoryRoot = "test"
         self.repository = Repository()
+        self.remote = MockRemoteProtocol()
+        self.repository.remote = self.remote
     }
     
     func testStartCloudReturnsNoError() {

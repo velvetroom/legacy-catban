@@ -1,44 +1,23 @@
 import Foundation
-import Board
+import Shared
 
 class Remote:RemoteProtocol {
-    func makeIdentifier(
-        onCompletion:@escaping((String) -> Void),
-        onError:@escaping((Error) -> Void)) {
-        self.makeIdentifier(onCompletion:onCompletion, onError:onError, retry:0)
+    func makeIdentifier(onCompletion:@escaping((String) -> Void), onError:@escaping((Error) -> Void)) {
+        onCompletion(UUID().uuidString)
     }
     
-    func save(project:ProjectSynchedProtocol,
-              onCompletion:@escaping(() -> Void),
-              onError:@escaping((Error) -> Void)) {
-        self.updateSynched(project:project)
-        onCompletion()
-    }
-    
-    private func makeIdentifier(
-        onCompletion:@escaping((String) -> Void),
-        onError:@escaping((Error) -> Void),
-        retry:Int) {
-        let identifier:String = self.makeRandomIdentifier()
-        self.validateIdentifier(onCompletion: {
-            onCompletion(identifier)
-        }) { (error:Error) in
-            if retry < RepositoryConstants.Remote.maxRetry {
-                self.makeIdentifier(onCompletion:onCompletion, onError:onError, retry:retry + 1)
-            }
+    func save(data:Data, identifier:String, onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
+        if let providerType:RemoteProviderProtocol.Type = Configuration.remoteProviderType {
+            let provider:RemoteProviderProtocol = providerType.init()
+            self.saveWith(provider:provider, data:data, identifier:identifier,
+                          onCompletion:onCompletion, onError:onError)
+        } else {
+            onError(ErrorRepository.noRemoteProvider)
         }
     }
     
-    private func makeRandomIdentifier() -> String {
-        return UUID().uuidString
-    }
-    
-    private func validateIdentifier(onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
-        onCompletion()
-    }
-    
-    private func updateSynched(project:ProjectSynchedProtocol) {
-        var project:ProjectSynchedProtocol = project
-        project.uploaded = Date.timestamp
+    private func saveWith(provider:RemoteProviderProtocol, data:Data, identifier:String,
+                          onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
+        provider.save(data:data, identifier:identifier, onCompletion:onCompletion, onError:onError)
     }
 }

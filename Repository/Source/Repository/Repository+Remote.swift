@@ -40,15 +40,31 @@ public extension Repository {
         }, onError:onError)
     }
     
-    private func backgroundSave(project:ProjectSynchedProtocol,
-                                onCompletion:@escaping(() -> Void),
+    private func backgroundSave(project:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void),
                                 onError:@escaping((Error) -> Void)) {
-        self.remote.save(project:project, onCompletion:onCompletion, onError:onError)
+        let serialise:SerialiseProtocol = Serialise()
+        let data:Data
+        do {
+            try data = serialise.makeDataFrom(project:project)
+        } catch let error {
+            onError(error)
+            return
+        }
+        self.save(project:project, data:data, onCompletion:onCompletion, onError:onError)
     }
     
     private func makeSynchedWith(project:ProjectProtocol, and remoteIdentifier:String) -> ProjectSynchedProtocol {
         var synched:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         synched.remoteIdentifier = remoteIdentifier
         return synched
+    }
+    
+    private func save(project:ProjectSynchedProtocol, data:Data, onCompletion:@escaping(() -> Void),
+                      onError:@escaping((Error) -> Void)) {
+        var project:ProjectSynchedProtocol = project
+        self.remote.save(data:data, identifier:project.remoteIdentifier, onCompletion: {
+            project.uploaded = Date.timestamp
+            onCompletion()
+        }, onError:onError)
     }
 }

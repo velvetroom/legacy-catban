@@ -3,8 +3,8 @@ import Shared
 import Board
 
 public class Repository:RepositoryProtocol {
-    var file:RepositoryFile
     var deserialise:DeserialiseProtocol
+    var file:RepositoryFile
     var remote:RemoteProtocol
     var dispatchQueue:DispatchQueue
     

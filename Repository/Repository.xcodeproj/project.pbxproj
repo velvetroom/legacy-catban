@@ -49,6 +49,7 @@
 		DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */; };
 		DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */; };
 		DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */; };
+		DAC90F1A20EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1920EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialise.swift; sourceTree = "<group>"; };
 		DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialise.swift; sourceTree = "<group>"; };
 		DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorRepository.swift; sourceTree = "<group>"; };
+		DAC90F1920EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteProviderProtocol.swift; sourceTree = "<group>"; };
 		EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Repository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Repository/Pods-Podlist-Repository.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 			children = (
 				DA5606E720EA3078006F2797 /* TestRemote.swift */,
 				DA5606E520EA3025006F2797 /* MockRemoteProtocol.swift */,
+				DAC90F1920EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				DAAFF39C209C9D62003EE7D8 /* TestDeserialise.swift in Sources */,
 				DA2AF74C20C1610A00BF94D1 /* TestFileLoader.swift in Sources */,
 				DA66D67A20C29E60006D3905 /* MockRepositoryFile.swift in Sources */,
+				DAC90F1A20EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift in Sources */,
 				DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */,
 				DAAFF39A209C9D53003EE7D8 /* TestSerialise.swift in Sources */,
 				DA5606E620EA3025006F2797 /* MockRemoteProtocol.swift in Sources */,

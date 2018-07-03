@@ -1,5 +1,4 @@
 import Foundation
-import Board
 @testable import Repository
 
 class MockRemoteProtocol:RemoteProtocol {
@@ -18,7 +17,7 @@ class MockRemoteProtocol:RemoteProtocol {
         }
     }
     
-    func save(project:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
+    func save(data:Data, identifier:String, onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
         if let error:Error = self.error {
             onError(error)
         } else {

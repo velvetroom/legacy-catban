@@ -1,5 +1,5 @@
 import XCTest
-import Board
+import Shared
 @testable import Repository
 
 class TestRemote:XCTestCase {
@@ -7,6 +7,7 @@ class TestRemote:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.remoteProviderType = MockRemoteProviderProtocol.self
         self.remote = Remote()
     }
     
@@ -19,15 +20,29 @@ class TestRemote:XCTestCase {
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
-    func testRemoteSaveUpdatesIdentifiers() {
+    func testRemoteSaveUpdatesUploaded() {
         let expect:XCTestExpectation = self.expectation(description:"Project not saved")
-        let original:ProjectProtocol = ProjectFactory.newProject()
-        var project:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:original)
-        project.uploaded = 0
-        self.remote.save(project:project, onCompletion: {
-            XCTAssertGreaterThan(project.uploaded, 0, "Upload timestamp not updated")
+        self.remote.save(data:Data(), identifier:String(), onCompletion: {
             expect.fulfill()
         }, onError: { (error:Error) in })
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testRemoteSaveReturnsErrorIfNoProvider() {
+        Configuration.remoteProviderType = nil
+        let expect:XCTestExpectation = self.expectation(description:"Error not returned")
+        self.remote.save(data:Data(), identifier:String(), onCompletion: { }, onError: { (error:Error) in
+            expect.fulfill()
+        })
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testReturnErrorIfRemoteFails() {
+        MockRemoteProviderProtocol.error = NSError(domain:String(), code:0, userInfo:nil)
+        let expect:XCTestExpectation = self.expectation(description:"Error not returned")
+        self.remote.save(data:Data(), identifier:String(), onCompletion: { }, onError: { (error:Error) in
+            expect.fulfill()
+        })
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
 }
