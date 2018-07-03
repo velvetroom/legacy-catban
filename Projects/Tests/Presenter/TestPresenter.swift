@@ -32,6 +32,13 @@ class TestPresenter:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
+    func testOpenProjectCloudCallsInteractor() {
+        var called:Bool = false
+        self.interactor.onOpenProjectCloud = { called = true }
+        self.view.presenter.openProjectCloud()
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testAddProjectChangesStatus() {
         self.view.presenter.addProject()
         let state:StateAdd? = self.interactor.state as? StateAdd

@@ -36,6 +36,13 @@ public class Presenter:NSObject, PresenterProtocol {
         self.interactor.openProjectWith(identifier:selected)
     }
     
+    func openProjectCloud() {
+        guard
+            let selected:String = self.state.selected
+        else { return }
+        self.interactor.openProjectCloudWith(identifier:selected)
+    }
+    
     func addProject() {
         self.interactor.stateAddProject()
         self.interactor.openNamer()

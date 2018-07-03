@@ -39,6 +39,13 @@ class TestInteractor:XCTestCase {
         XCTAssertTrue(transitioned, "Failed")
     }
     
+    func testOpenCloudTransitions() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToCloud = { transitioned = true }
+        self.interactor.openProjectCloudWith(identifier:String())
+        XCTAssertTrue(transitioned, "Failed")
+    }
+    
     func testDeleteCallsState() {
         var removed:Bool = false
         self.interactor.board = board

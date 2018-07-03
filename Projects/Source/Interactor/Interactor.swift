@@ -31,6 +31,15 @@ public class Interactor:InteractorBoardProtocol {
         }
     }
     
+    func openProjectCloudWith(identifier:String) {
+        let project:ProjectProtocol = self.board.projectWith(identifier:identifier)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            if let board:BoardProtocol = self?.board {
+                transition.transitionToCloud(board:board, project:project)
+            }
+        }
+    }
+    
     func delete(project:ProjectProtocol) {
         self.board.remove(project:project)
         self.deleteFromRepository(project:project)

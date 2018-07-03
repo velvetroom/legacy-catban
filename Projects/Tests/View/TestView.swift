@@ -32,6 +32,13 @@ class TestView:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
+    func testCallsPresenterOnOpenCloud() {
+        var called:Bool = false
+        self.presenter.onOpenCloud = { called = true }
+        self.view.selectorCloud(button:UIBarButtonItem())
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testCallsPresenterAddProject() {
         var called:Bool = false
         self.presenter.onAddProject = { called = true }

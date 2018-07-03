@@ -22,9 +22,10 @@ struct ViewConstants {
     }
     
     struct Toolbar {
-        static let fixedSpace:CGFloat = 15
+        static let fixedSpace:CGFloat = 30
         static let assetDelete:String = "assetDelete"
         static let assetRename:String = "assetRename"
         static let assetColumns:String = "assetColumns"
+        static let assetCloud:String = "assetCloud"
     }
 }

@@ -24,6 +24,10 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.presenter.openProject()
     }
     
+    @objc func selectorCloud(button:UIBarButtonItem) {
+        self.presenter.openProjectCloud()
+    }
+    
     @objc func selectorAddProject(button:UIBarButtonItem) {
         self.presenter.addProject()
     }
@@ -38,7 +42,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
-        self.setToolbarItems(self.makeToolbarItems(), animated:true)
+        self.setToolbarItems(self.makeToolbarItems(), animated:false)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
             target:self, action:#selector(self.selectorAddProject(button:)))

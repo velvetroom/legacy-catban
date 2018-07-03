@@ -7,9 +7,14 @@ class MockPresenter:Presenter {
     var onRename:(() -> Void)?
     var onDelete:(() -> Void)?
     var onShouldUpdate:(() -> Void)?
+    var onOpenCloud:(() -> Void)?
     
     override func openProject() {
         self.onOpen?()
+    }
+    
+    override func openProjectCloud() {
+        self.onOpenCloud?()
     }
     
     override func addProject() {
