@@ -3,11 +3,11 @@ import Shared
 
 extension View {
     func makeToolbarItems() -> [UIBarButtonItem] {
-        return [makeButtonDelete(),
-                makeFixedSpace(),
-                makeButtonRename(),
-                makeFixedSpace(),
-                makeButtonColumns()]
+        return [self.makeButtonDelete(),
+                self.makeFixedSpace(),
+                self.makeButtonRename(),
+                self.makeFixedSpace(),
+                self.makeButtonColumns()]
     }
     
     private func makeButtonDelete() -> UIBarButtonItem {
