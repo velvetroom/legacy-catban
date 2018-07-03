@@ -1,0 +1,6 @@
+framework module Pods_Podlist_TestsCloud {
+  umbrella header "Pods-Podlist-TestsCloud-umbrella.h"
+
+  export *
+  module * { export * }
+}

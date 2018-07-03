@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FB8C41ED725A1791DD70337 /* Pods_Architecture_TestsRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6643207C4C429699833136DE /* Pods_Architecture_TestsRepository.framework */; };
-		B9C77CD370F54E73A41B7E39 /* Pods_Architecture_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CA6525FD3EFFDE3810E496 /* Pods_Architecture_Repository.framework */; };
+		25F5D578752B5C555F0716BC /* Pods_Podlist_TestsRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FDE0031010019FC6E6F2B7 /* Pods_Podlist_TestsRepository.framework */; };
+		9928F464A44D0369C7EFFDFD /* Pods_Podlist_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4504F57AA5CEE7B8D401FF /* Pods_Podlist_Repository.framework */; };
 		DA2AF74520C11A7400BF94D1 /* RepositoryFileUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74420C11A7400BF94D1 /* RepositoryFileUrl.swift */; };
 		DA2AF74820C15FB300BF94D1 /* Board.catban in Resources */ = {isa = PBXBuildFile; fileRef = DA2AF74720C15FB300BF94D1 /* Board.catban */; };
 		DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2AF74920C1602500BF94D1 /* FileLoader.swift */; };
@@ -62,11 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FABCA210590A4BA2D5C167F /* Pods-Architecture-Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Repository.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Repository/Pods-Architecture-Repository.release.xcconfig"; sourceTree = "<group>"; };
-		6643207C4C429699833136DE /* Pods_Architecture_TestsRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B310856156DDBBD0BB94DEF /* Pods-Architecture-Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Repository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Repository/Pods-Architecture-Repository.debug.xcconfig"; sourceTree = "<group>"; };
-		99CA6525FD3EFFDE3810E496 /* Pods_Architecture_Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6ADFC52D4073DA20E77EED5 /* Pods-Architecture-TestsRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsRepository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsRepository/Pods-Architecture-TestsRepository.debug.xcconfig"; sourceTree = "<group>"; };
+		289471566C54407F40ED4027 /* Pods-Podlist-Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Repository.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Repository/Pods-Podlist-Repository.release.xcconfig"; sourceTree = "<group>"; };
+		6F4504F57AA5CEE7B8D401FF /* Pods_Podlist_Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7224BA0E0E706A4BA8E1F106 /* Pods-Podlist-TestsRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsRepository.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsRepository/Pods-Podlist-TestsRepository.release.xcconfig"; sourceTree = "<group>"; };
+		82FDE0031010019FC6E6F2B7 /* Pods_Podlist_TestsRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_TestsRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17F0B7C11EA54A718137101 /* Pods-Podlist-TestsRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsRepository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsRepository/Pods-Podlist-TestsRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		DA2AF74420C11A7400BF94D1 /* RepositoryFileUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFileUrl.swift; sourceTree = "<group>"; };
 		DA2AF74720C15FB300BF94D1 /* Board.catban */ = {isa = PBXFileReference; lastKnownFileType = text; path = Board.catban; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		DA2AF74920C1602500BF94D1 /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		DAAFF3A5209C9F05003EE7D8 /* Serialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialise.swift; sourceTree = "<group>"; };
 		DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialise.swift; sourceTree = "<group>"; };
 		DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorRepository.swift; sourceTree = "<group>"; };
-		FDB4B1E730F9071989F275E9 /* Pods-Architecture-TestsRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsRepository.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsRepository/Pods-Architecture-TestsRepository.release.xcconfig"; sourceTree = "<group>"; };
+		EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Repository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Repository/Pods-Podlist-Repository.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			files = (
 				DA978FCB20A1BDBE002461E6 /* Board.framework in Frameworks */,
 				DA3ADFCC209C3B9300B736CD /* Shared.framework in Frameworks */,
-				B9C77CD370F54E73A41B7E39 /* Pods_Architecture_Repository.framework in Frameworks */,
+				9928F464A44D0369C7EFFDFD /* Pods_Podlist_Repository.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 				DA3ADFBF209C387800B736CD /* Repository.framework in Frameworks */,
 				DA978FCC20A1BDC9002461E6 /* Board.framework in Frameworks */,
 				DA978FCD20A1BDCB002461E6 /* Shared.framework in Frameworks */,
-				9FB8C41ED725A1791DD70337 /* Pods_Architecture_TestsRepository.framework in Frameworks */,
+				25F5D578752B5C555F0716BC /* Pods_Podlist_TestsRepository.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +138,10 @@
 		92A21D2D4ABD3AC8628D1CA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7B310856156DDBBD0BB94DEF /* Pods-Architecture-Repository.debug.xcconfig */,
-				0FABCA210590A4BA2D5C167F /* Pods-Architecture-Repository.release.xcconfig */,
-				B6ADFC52D4073DA20E77EED5 /* Pods-Architecture-TestsRepository.debug.xcconfig */,
-				FDB4B1E730F9071989F275E9 /* Pods-Architecture-TestsRepository.release.xcconfig */,
+				EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */,
+				289471566C54407F40ED4027 /* Pods-Podlist-Repository.release.xcconfig */,
+				C17F0B7C11EA54A718137101 /* Pods-Podlist-TestsRepository.debug.xcconfig */,
+				7224BA0E0E706A4BA8E1F106 /* Pods-Podlist-TestsRepository.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -209,8 +209,8 @@
 			children = (
 				DA978FCA20A1BDBE002461E6 /* Board.framework */,
 				DA3ADFCB209C3B9300B736CD /* Shared.framework */,
-				99CA6525FD3EFFDE3810E496 /* Pods_Architecture_Repository.framework */,
-				6643207C4C429699833136DE /* Pods_Architecture_TestsRepository.framework */,
+				6F4504F57AA5CEE7B8D401FF /* Pods_Podlist_Repository.framework */,
+				82FDE0031010019FC6E6F2B7 /* Pods_Podlist_TestsRepository.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-Repository-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-Repository-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,7 +481,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-TestsRepository-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-TestsRepository-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,22 +494,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsRepository/Pods-Architecture-TestsRepository-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsRepository/Pods-Podlist-TestsRepository-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CleanArchitecture/CleanArchitecture.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CleanArchitecture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsRepository/Pods-Architecture-TestsRepository-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsRepository/Pods-Podlist-TestsRepository-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -709,7 +703,7 @@
 		};
 		DA3ADFB2209C36E100B736CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B310856156DDBBD0BB94DEF /* Pods-Architecture-Repository.debug.xcconfig */;
+			baseConfigurationReference = EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -735,7 +729,7 @@
 		};
 		DA3ADFB3209C36E100B736CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FABCA210590A4BA2D5C167F /* Pods-Architecture-Repository.release.xcconfig */;
+			baseConfigurationReference = 289471566C54407F40ED4027 /* Pods-Podlist-Repository.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -760,7 +754,7 @@
 		};
 		DA3ADFC3209C387800B736CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6ADFC52D4073DA20E77EED5 /* Pods-Architecture-TestsRepository.debug.xcconfig */;
+			baseConfigurationReference = C17F0B7C11EA54A718137101 /* Pods-Podlist-TestsRepository.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
@@ -779,7 +773,7 @@
 		};
 		DA3ADFC4209C387800B736CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB4B1E730F9071989F275E9 /* Pods-Architecture-TestsRepository.release.xcconfig */;
+			baseConfigurationReference = 7224BA0E0E706A4BA8E1F106 /* Pods-Podlist-TestsRepository.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;

@@ -40,6 +40,7 @@ class TestInteractor_Transitions:XCTestCase {
         self.transition.onTransitionToHome = { (project:ProjectProtocol) in
             XCTAssertTrue(Thread.isMainThread, "Should be on main thread")
             expect.fulfill()
+            self.transition.onTransitionToHome = nil
         }
         
         self.interactor.didLoad()
