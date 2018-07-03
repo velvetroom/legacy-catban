@@ -42,6 +42,8 @@ public extension Repository {
     
     private func backgroundSave(project:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void),
                                 onError:@escaping((Error) -> Void)) {
+        var project:ProjectSynchedProtocol = project
+        project.uploaded = Date.timestamp
         let serialise:SerialiseProtocol = Serialise()
         let data:Data
         do {
@@ -61,9 +63,7 @@ public extension Repository {
     
     private func save(project:ProjectSynchedProtocol, data:Data, onCompletion:@escaping(() -> Void),
                       onError:@escaping((Error) -> Void)) {
-        var project:ProjectSynchedProtocol = project
         self.remote.save(data:data, identifier:project.remoteIdentifier, onCompletion: {
-            project.uploaded = Date.timestamp
             onCompletion()
         }, onError:onError)
     }
