@@ -4,6 +4,7 @@ import CleanArchitecture
 public struct Configuration {
     public static var repositoryBoardType:RepositoryBoardProtocol.Type!
     public static var repositoryProjectType:RepositoryProjectProtocol.Type!
+    public static var remoteProviderType:RemoteProviderProtocol.Type!
     public static var viewLoadType:ViewProtocol.Type!
     public static var viewHomeType:ViewProtocol.Type!
     public static var viewCardType:ViewProtocol.Type!

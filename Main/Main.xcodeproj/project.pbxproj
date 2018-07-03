@@ -46,6 +46,8 @@
 		DAA1DB78209C7EE700509F4A /* Board.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1DB75209C7EDB00509F4A /* Board.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB4F40420C3CD430000B067 /* assets.xcassets */; };
 		DABDB03620A38B5F001B7D47 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAC90F1620EB77B000DF5C34 /* RemoteProviderFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1520EB77B000DF5C34 /* RemoteProviderFirebase.swift */; };
+		DAC90F1820EB79CA00DF5C34 /* RemoteProviderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1720EB79CA00DF5C34 /* RemoteProviderConstants.swift */; };
 		DADB5EF7209B157900CFFC9A /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF6209B157900CFFC9A /* TestApplication.swift */; };
 		DADB5EF9209B158400CFFC9A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EF8209B158400CFFC9A /* Application.swift */; };
 		DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */; };
@@ -132,6 +134,8 @@
 		DAA1DB75209C7EDB00509F4A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB4F40420C3CD430000B067 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DABDB03320A38B5C001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC90F1520EB77B000DF5C34 /* RemoteProviderFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProviderFirebase.swift; sourceTree = "<group>"; };
+		DAC90F1720EB79CA00DF5C34 /* RemoteProviderConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProviderConstants.swift; sourceTree = "<group>"; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EF6209B157900CFFC9A /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 				DADB5F08209B21BD00CFFC9A /* NavigationFactory.swift */,
 				DADB5F02209B1EFA00CFFC9A /* Navigation.swift */,
 				DA3ADF93209C314500B736CD /* NavigationView.swift */,
+				DAC90F1520EB77B000DF5C34 /* RemoteProviderFirebase.swift */,
+				DAC90F1720EB79CA00DF5C34 /* RemoteProviderConstants.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -507,6 +513,8 @@
 				DA3ADFD6209C41AC00B736CD /* Injection.swift in Sources */,
 				DADB5F03209B1EFA00CFFC9A /* Navigation.swift in Sources */,
 				DADB5EF9209B158400CFFC9A /* Application.swift in Sources */,
+				DAC90F1820EB79CA00DF5C34 /* RemoteProviderConstants.swift in Sources */,
+				DAC90F1620EB77B000DF5C34 /* RemoteProviderFirebase.swift in Sources */,
 				DA3ADF94209C314500B736CD /* NavigationView.swift in Sources */,
 				DADB5F09209B21BD00CFFC9A /* NavigationFactory.swift in Sources */,
 			);
