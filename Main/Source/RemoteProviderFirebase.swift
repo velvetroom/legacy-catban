@@ -1,9 +1,16 @@
 import Foundation
 import Shared
+import Firebase
 import FirebaseStorage
 
 class RemoteProviderFirebase:RemoteProviderProtocol {
-    required init() { }
+    required init() {
+        guard
+            FirebaseApp.app() == nil
+        else { return }
+        FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
+        FirebaseApp.configure()
+    }
     
     func save(data:Data, identifier:String, onCompletion:@escaping(() -> ()), onError:@escaping((Error) -> Void)) {
         FirebaseStorage.Storage.storage().reference().child(identifier).putData(

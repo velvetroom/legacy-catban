@@ -7,6 +7,13 @@ class Remote:RemoteProtocol {
     }
     
     func save(data:Data, identifier:String, onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
+        DispatchQueue.main.async { [weak self] in
+            self?.mainThreadSave(data:data, identifier:identifier, onCompletion:onCompletion, onError:onError)
+        }
+    }
+    
+    private func mainThreadSave(data:Data, identifier:String,
+                                onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
         if let providerType:RemoteProviderProtocol.Type = Configuration.remoteProviderType {
             let provider:RemoteProviderProtocol = providerType.init()
             self.saveWith(provider:provider, data:data, identifier:identifier,
