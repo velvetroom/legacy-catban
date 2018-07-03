@@ -46,12 +46,10 @@ public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate 
     
     private func configureViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.title = property.title
+            self?.content.viewText.text = property.text
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.title = viewModel.title
-        self.content.viewText.text = viewModel.text
     }
 }

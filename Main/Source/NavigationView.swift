@@ -63,12 +63,10 @@ class NavigationView:UINavigationController {
     
     private func configureViewModelFor(view:ViewProtocol) {
         var viewModel:ViewModelNavigation = view.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelNavigation) in
+            self?.setNavigationBarHidden(property.navigationbarHidden, animated:true)
+            self?.setToolbarHidden(property.toolbarHidden, animated:true)
+        }
         view.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelNavigation) {
-        self.setNavigationBarHidden(viewModel.navigationbarHidden, animated:true)
-        self.setToolbarHidden(viewModel.toolbarHidden, animated:true)
     }
 }

@@ -46,13 +46,11 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View<DeleterPresenter<In
     
     private func configureViewModel() {
         var viewModel:DeleterViewModel = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:DeleterViewModel) in
+            self?.content.viewMenu.labelTitle.text = property.title
+            self?.content.viewMenu.labelName.text = property.name
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:DeleterViewModel) {
-        self.content.viewMenu.labelTitle.text = viewModel.title
-        self.content.viewMenu.labelName.text = viewModel.name
     }
     
     private func animateOpen() {

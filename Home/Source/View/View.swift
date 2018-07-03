@@ -47,26 +47,22 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureMenuViewModel() {
         var viewModel:ViewModelMenu = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelMenu) in
+            if property.show {
+                self?.navigationItem.rightBarButtonItem = self?.buttonMenu
+            } else {
+                self?.navigationItem.rightBarButtonItem = nil
+            }
+        }
         self.viewModel.update(property:viewModel)
     }
     
     private func configureContentViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
-        self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelMenu) {
-        if viewModel.show {
-            self.navigationItem.rightBarButtonItem = self.buttonMenu
-        } else {
-            self.navigationItem.rightBarButtonItem = nil
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.title = property.title
         }
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.title = viewModel.title
+        self.viewModel.update(property:viewModel)
     }
     
     private func listenForOrientationChange() {

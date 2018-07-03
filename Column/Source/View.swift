@@ -39,11 +39,9 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.content.labelName.text = property.name
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.content.labelName.text = viewModel.name
     }
 }

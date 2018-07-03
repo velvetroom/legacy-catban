@@ -52,25 +52,21 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureProjectViewModel() {
         var viewModel:ViewModelProject = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelProject) in
+            self?.titleProject.title = property.projectName
+        }
         self.viewModel.update(property:viewModel)
     }
     
     private func configureContentViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.content.buttonStart.isEnabled = true
+            self?.content.icon.image = property.icon
+            self?.content.buttonContinue.isHidden = property.buttonContinueHidden
+            self?.content.buttonStart.isHidden = property.buttonStartHidden
+            self?.content.label.text = property.message
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelProject) {
-        self.titleProject.title = viewModel.projectName
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.content.buttonStart.isEnabled = true
-        self.content.icon.image = viewModel.icon
-        self.content.buttonContinue.isHidden = viewModel.buttonContinueHidden
-        self.content.buttonStart.isHidden = viewModel.buttonStartHidden
-        self.content.label.text = viewModel.message
     }
 }
