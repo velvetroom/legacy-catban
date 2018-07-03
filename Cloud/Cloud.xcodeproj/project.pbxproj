@@ -32,6 +32,7 @@
 		DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7120E51EC000EE178D /* TestPresenter.swift */; };
 		DA51AD7420E51EE800EE178D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */; };
 		DA569E6F20EB49A2006282E5 /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA569E6D20EB4974006282E5 /* MockInteractor.swift */; };
+		DA680E2320EBB71E00D41CDA /* View+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA680E2220EBB71E00D41CDA /* View+Factory.swift */; };
 		DAD2528120E516B700B97B2E /* Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD2526D20E5167F00B97B2E /* Cloud.framework */; };
 		DADB20EE20EA5D5D000C89D9 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADB20ED20EA5D5D000C89D9 /* Repository.framework */; };
 		DADB20F020EA5D67000C89D9 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADB20EF20EA5D67000C89D9 /* Repository.framework */; };
@@ -76,6 +77,7 @@
 		DA51AD7120E51EC000EE178D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		DA51AD7320E51EE800EE178D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA569E6D20EB4974006282E5 /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
+		DA680E2220EBB71E00D41CDA /* View+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Factory.swift"; sourceTree = "<group>"; };
 		DAD2526D20E5167F00B97B2E /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2527C20E516B700B97B2E /* TestsCloud.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsCloud.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2528720E517CF00B97B2E /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
 				DA51AD6B20E51CE900EE178D /* Presenter.swift */,
 				DA51AD6D20E51D0C00EE178D /* View.swift */,
+				DA680E2220EBB71E00D41CDA /* View+Factory.swift */,
 				DA49177520E6397E00416DD2 /* ViewModelFactory.swift */,
 				DA49175E20E5FE8F00416DD2 /* ViewModelProject.swift */,
 				DA49176F20E6262300416DD2 /* ViewModelContent.swift */,
@@ -382,6 +385,7 @@
 			files = (
 				DA49177020E6262300416DD2 /* ViewModelContent.swift in Sources */,
 				DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */,
+				DA680E2320EBB71E00D41CDA /* View+Factory.swift in Sources */,
 				DA49175F20E5FE8F00416DD2 /* ViewModelProject.swift in Sources */,
 				DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */,
 				DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */,

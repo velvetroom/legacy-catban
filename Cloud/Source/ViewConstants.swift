@@ -21,4 +21,8 @@ struct ViewConstants {
         static let bottom:CGFloat = -25
         static let fontSize:CGFloat = 16
     }
+    
+    struct Toolbar {
+        static let fixedSpace:CGFloat = 30
+    }
 }

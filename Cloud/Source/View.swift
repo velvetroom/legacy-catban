@@ -9,6 +9,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     public override func didLoad() {
         super.didLoad()
         self.configureView()
+        self.configureActions()
         self.configureViewModel()
         self.hookSelectors()
     }
@@ -27,15 +28,19 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func configureView() {
-        let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(button:)))
-        let titleProject:UIBarButtonItem = UIBarButtonItem(title:nil, style:UIBarButtonItemStyle.plain,
-                                                           target:nil, action:nil)
+        let titleProject:UIBarButtonItem = UIBarButtonItem(title:nil, style:UIBarButtonItemStyle.plain, target:nil,
+                                                           action:nil)
         titleProject.isEnabled = false
         self.titleProject = titleProject
         self.navigationItem.leftBarButtonItem = titleProject
-        self.navigationItem.rightBarButtonItem = buttonDone
         self.title = String.localized(key:"View_Title", in:type(of:self))
+    }
+    
+    private func configureActions() {
+        let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
+                                                         target:self, action:#selector(self.selectorDone(button:)))
+        self.setToolbarItems(self.makeToolbarItems(), animated:false)
+        self.navigationItem.rightBarButtonItem = buttonDone
     }
     
     private func configureViewModel() {
