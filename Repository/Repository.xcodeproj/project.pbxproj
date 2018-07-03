@@ -50,6 +50,9 @@
 		DAAFF3A8209C9F22003EE7D8 /* Deserialise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */; };
 		DAAFF3AD209C9FEA003EE7D8 /* TestErrorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */; };
 		DAC90F1A20EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1920EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift */; };
+		DAE60C5E20EB99B700C8E17C /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C5D20EB99B700C8E17C /* Policy.swift */; };
+		DAE60C6020EB9A5500C8E17C /* PolicyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C5F20EB9A5500C8E17C /* PolicyFactory.swift */; };
+		DAE60C6320EB9AFE00C8E17C /* TestPolicyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6220EB9AFE00C8E17C /* TestPolicyFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserialise.swift; sourceTree = "<group>"; };
 		DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrorRepository.swift; sourceTree = "<group>"; };
 		DAC90F1920EB7C5E00DF5C34 /* MockRemoteProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteProviderProtocol.swift; sourceTree = "<group>"; };
+		DAE60C5D20EB99B700C8E17C /* Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
+		DAE60C5F20EB9A5500C8E17C /* PolicyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyFactory.swift; sourceTree = "<group>"; };
+		DAE60C6220EB9AFE00C8E17C /* TestPolicyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPolicyFactory.swift; sourceTree = "<group>"; };
 		EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Repository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Repository/Pods-Podlist-Repository.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +203,7 @@
 		DA3ADFB5209C385E00B736CD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DAE60C6120EB9AED00C8E17C /* Policy */,
 				DA5606E420EA3015006F2797 /* Remote */,
 				DA2AF74620C15F6D00BF94D1 /* Files */,
 				DA567B4E209C78F7005D74EE /* Repository */,
@@ -285,6 +292,7 @@
 		DAAFF397209C9C9A003EE7D8 /* Serial */ = {
 			isa = PBXGroup;
 			children = (
+				DAE60C5C20EB999400C8E17C /* Policy */,
 				DAAFF39F209C9D93003EE7D8 /* Serialise */,
 				DAAFF3A0209C9D9E003EE7D8 /* Deserialise */,
 			);
@@ -340,6 +348,23 @@
 				DAAFF3AC209C9FEA003EE7D8 /* TestErrorRepository.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		DAE60C5C20EB999400C8E17C /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				DAE60C5F20EB9A5500C8E17C /* PolicyFactory.swift */,
+				DAE60C5D20EB99B700C8E17C /* Policy.swift */,
+			);
+			path = Policy;
+			sourceTree = "<group>";
+		};
+		DAE60C6120EB9AED00C8E17C /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				DAE60C6220EB9AFE00C8E17C /* TestPolicyFactory.swift */,
+			);
+			path = Policy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +548,7 @@
 				DA5606DC20EA1ACD006F2797 /* Repository+Remote.swift in Sources */,
 				DA3ADFC9209C3A3500B736CD /* Repository.swift in Sources */,
 				DA2AF74520C11A7400BF94D1 /* RepositoryFileUrl.swift in Sources */,
+				DAE60C5E20EB99B700C8E17C /* Policy.swift in Sources */,
 				DAAFF3A6209C9F05003EE7D8 /* Serialise.swift in Sources */,
 				DA5606DA20EA1A14006F2797 /* Repository+Local.swift in Sources */,
 				DAAFF3A4209C9E29003EE7D8 /* DeserialiseProtocol.swift in Sources */,
@@ -531,6 +557,7 @@
 				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
 				DA8C60D720C03AEC00F852A6 /* RepositoryFileFactory.swift in Sources */,
 				DA5606E120EA2FE6006F2797 /* RemoteProtocol.swift in Sources */,
+				DAE60C6020EB9A5500C8E17C /* PolicyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +571,7 @@
 				DA66D67720C271FD006D3905 /* TestRepositoryFile_Delete.swift in Sources */,
 				DA5606DE20EA2F92006F2797 /* TestRepository_Remote.swift in Sources */,
 				DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */,
+				DAE60C6320EB9AFE00C8E17C /* TestPolicyFactory.swift in Sources */,
 				DA8C60D120C0365C00F852A6 /* TestRepositoryFile.swift in Sources */,
 				DA3ADFC7209C3A2B00B736CD /* TestRepository.swift in Sources */,
 				DA5606E820EA3078006F2797 /* TestRemote.swift in Sources */,
