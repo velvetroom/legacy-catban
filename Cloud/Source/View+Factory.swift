@@ -5,7 +5,7 @@ extension View {
         let flexibleSpace:UIBarButtonItem = self.makeFlexibleSpace()
         return [flexibleSpace,
                 self.makeButtonUpload(),
-                flexibleSpace,
+                self.makeSeparator(),
                 self.makeButtonShare(),
                 flexibleSpace]
     }
@@ -16,6 +16,13 @@ extension View {
     
     private func makeButtonShare() -> UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:nil, action:nil)
+    }
+    
+    private func makeSeparator() -> UIBarButtonItem {
+        let separator:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.fixedSpace,
+                                                        target:nil, action:nil)
+        separator.width = ViewConstants.Toolbar.fixedSpace
+        return separator
     }
     
     private func makeFlexibleSpace() -> UIBarButtonItem {

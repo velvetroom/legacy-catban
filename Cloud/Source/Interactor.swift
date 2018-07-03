@@ -23,12 +23,19 @@ public class Interactor:InteractorProjectProtocol {
         })
     }
     
+    func save(onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
+//        let project:ProjectSynchedProtocol = self.project as! ProjectSynchedProtocol
+//        self.repository.remoteSave(project:project,
+//                                   onCompletion: { [weak self] in
+//                                    self?.remoteSaved(project:project, onCompletion:onCompletion)
+//            }, onError: { [weak self] (error:Error) in
+//                self?.found(error:error, onError:onError)
+//        })
+    }
+    
     private func started(synched:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void)) {
         self.replaceProject(synched:synched)
-        self.save(project:synched)
-        DispatchQueue.main.async {
-            onCompletion()
-        }
+        self.remoteSaved(project:synched, onCompletion:onCompletion)
     }
     
     private func replaceProject(synched:ProjectSynchedProtocol) {
@@ -40,6 +47,13 @@ public class Interactor:InteractorProjectProtocol {
     private func found(error:Error, onError:@escaping((Error) -> Void)) {
         DispatchQueue.main.async {
             onError(error)
+        }
+    }
+    
+    private func remoteSaved(project:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void)) {
+        self.save(project:project)
+        DispatchQueue.main.async {
+            onCompletion()
         }
     }
     

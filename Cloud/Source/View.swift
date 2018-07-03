@@ -27,6 +27,14 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.presenter.updateViewModel()
     }
     
+    @objc func selectorSave(button:UIBarButtonItem) {
+        self.presenter.save()
+    }
+    
+    @objc func selectorShare(button:UIBarButtonItem) {
+        self.presenter.share()
+    }
+    
     private func configureView() {
         let titleProject:UIBarButtonItem = UIBarButtonItem(title:nil, style:UIBarButtonItemStyle.plain, target:nil,
                                                            action:nil)

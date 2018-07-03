@@ -27,6 +27,18 @@ public class Presenter:PresenterProtocol {
         })
     }
     
+    func save() {
+        self.interactor.save(onCompletion: { [weak self] in
+            self?.updateViewModel()
+        }) { [weak self] (error:Error) in
+            self?.updateViewModelWith(error:error)
+        }
+    }
+    
+    func share() {
+        
+    }
+    
     func updateViewModel() {
         self.updateViewModelNavigation()
         self.updateViewModelContent()
