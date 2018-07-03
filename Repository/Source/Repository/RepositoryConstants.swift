@@ -12,6 +12,12 @@ public struct RepositoryConstants {
         struct Shared {
             static let identifier:String = "identifier"
             static let created:String = "created"
+            static let policy:String = "policy"
+        }
+        
+        struct Synched {
+            static let remoteIdentifier:String = "remoteIdentifier"
+            static let uploaded:String = "uploaded"
         }
         
         struct Project {
