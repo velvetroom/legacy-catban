@@ -32,6 +32,7 @@
 		DA51AD5D20E5199300EE178D /* Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51AD5920E5198000EE178D /* Cloud.framework */; };
 		DA5828C820E3DA6F001592A5 /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA5828C520E3DA67001592A5 /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA5828C920E3DA84001592A5 /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5828C520E3DA67001592A5 /* Architecture.framework */; };
+		DA6AA8C120EB5CD900D72F15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6AA8BF20EB5CCD00D72F15 /* GoogleService-Info.plist */; };
 		DA7E00B420A584BA00AD4A74 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDB03320A38B5C001B7D47 /* Card.framework */; };
 		DA7E00B520A584BC00AD4A74 /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA347D1C20A16DF400009316 /* Template.framework */; };
 		DA7E00B620A584BE00AD4A74 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD2FD0209CC4120005F5D2 /* Home.framework */; };
@@ -121,13 +122,15 @@
 		DA51AD5920E5198000EE178D /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5828C520E3DA67001592A5 /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA58BD7F209B3B4A0013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA6AA8BE20EB5CCD00D72F15 /* tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tests.plist; sourceTree = "<group>"; };
+		DA6AA8BF20EB5CCD00D72F15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA6AA8C020EB5CCD00D72F15 /* source.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = source.plist; sourceTree = "<group>"; };
 		DAA1DB71209C7EA400509F4A /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA1DB75209C7EDB00509F4A /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB4F40420C3CD430000B067 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DABDB03320A38B5C001B7D47 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5ED0209B144900CFFC9A /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB5EE9209B148E00CFFC9A /* TestsMain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsMain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DADB5EF3209B153500CFFC9A /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DADB5EF6209B157900CFFC9A /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
 		DADB5EF8209B158400CFFC9A /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -212,16 +215,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA6AA8BD20EB5CCD00D72F15 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DA6AA8C020EB5CCD00D72F15 /* source.plist */,
+				DA6AA8BE20EB5CCD00D72F15 /* tests.plist */,
+				DA6AA8BF20EB5CCD00D72F15 /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		DADB5EC7209B144900CFFC9A = {
 			isa = PBXGroup;
 			children = (
 				DADB5EF4209B154000CFFC9A /* Source */,
 				DADB5EF5209B154900CFFC9A /* Tests */,
 				DADB5EFB209B1DA000CFFC9A /* Assets */,
+				DA6AA8BD20EB5CCD00D72F15 /* Configuration */,
 				DADB5ED1209B144900CFFC9A /* Products */,
 				DA58BD7E209B3B4A0013DBF0 /* Frameworks */,
 				1FC2F1F18C7BAF3E34E0F083 /* Pods */,
-				DADB5EF3209B153500CFFC9A /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -368,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB5EFD209B1DB700CFFC9A /* LaunchScreen.storyboard in Resources */,
+				DA6AA8C120EB5CD900D72F15 /* GoogleService-Info.plist in Resources */,
 				DADB5EFF209B1DD800CFFC9A /* brand.xcassets in Resources */,
 				DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */,
 			);
