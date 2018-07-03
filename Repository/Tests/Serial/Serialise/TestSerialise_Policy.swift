@@ -23,7 +23,9 @@ class TestSerialise_Policy:XCTestCase {
         self.model.makeDictionaryFrom(project:synched)
         let remoteIdentifier:String? = self.model.dictionary[RepositoryConstants.Keys.Synched.remoteIdentifier] as? String
         let uploaded:Int? = self.model.dictionary[RepositoryConstants.Keys.Synched.uploaded] as? Int
+        let identifier:String? = self.model.dictionary[RepositoryConstants.Keys.Shared.identifier] as? String
         XCTAssertNotNil(remoteIdentifier, "Failed to store synched information")
         XCTAssertNotNil(uploaded, "Failed to store synched information")
+        XCTAssertNotNil(identifier, "Standard information not loaded")
     }
 }

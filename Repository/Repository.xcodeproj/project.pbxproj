@@ -55,6 +55,8 @@
 		DAE60C6320EB9AFE00C8E17C /* TestPolicyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6220EB9AFE00C8E17C /* TestPolicyFactory.swift */; };
 		DAE60C6520EB9D0200C8E17C /* TestSerialise_Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6420EB9D0200C8E17C /* TestSerialise_Policy.swift */; };
 		DAE60C6720EB9F2E00C8E17C /* Serialise+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6620EB9F2E00C8E17C /* Serialise+Project.swift */; };
+		DAE60C6920EBA26800C8E17C /* Deserialise+Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6820EBA26800C8E17C /* Deserialise+Project.swift */; };
+		DAE60C6B20EBA35400C8E17C /* TestDeserialise_Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE60C6A20EBA35400C8E17C /* TestDeserialise_Policy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		DAE60C6220EB9AFE00C8E17C /* TestPolicyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPolicyFactory.swift; sourceTree = "<group>"; };
 		DAE60C6420EB9D0200C8E17C /* TestSerialise_Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSerialise_Policy.swift; sourceTree = "<group>"; };
 		DAE60C6620EB9F2E00C8E17C /* Serialise+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serialise+Project.swift"; sourceTree = "<group>"; };
+		DAE60C6820EBA26800C8E17C /* Deserialise+Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deserialise+Project.swift"; sourceTree = "<group>"; };
+		DAE60C6A20EBA35400C8E17C /* TestDeserialise_Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDeserialise_Policy.swift; sourceTree = "<group>"; };
 		EC44AD00BFFC4224CE025978 /* Pods-Podlist-Repository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Repository.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Repository/Pods-Podlist-Repository.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAFF39B209C9D62003EE7D8 /* TestDeserialise.swift */,
+				DAE60C6A20EBA35400C8E17C /* TestDeserialise_Policy.swift */,
 			);
 			path = Deserialise;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			children = (
 				DAAFF3A3209C9E29003EE7D8 /* DeserialiseProtocol.swift */,
 				DAAFF3A7209C9F22003EE7D8 /* Deserialise.swift */,
+				DAE60C6820EBA26800C8E17C /* Deserialise+Project.swift */,
 			);
 			path = Deserialise;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				DA5606E320EA2FFB006F2797 /* Remote.swift in Sources */,
 				DA567B3F209C76BC005D74EE /* RepositoryProtocol.swift in Sources */,
 				DA8C60D720C03AEC00F852A6 /* RepositoryFileFactory.swift in Sources */,
+				DAE60C6920EBA26800C8E17C /* Deserialise+Project.swift in Sources */,
 				DA5606E120EA2FE6006F2797 /* RemoteProtocol.swift in Sources */,
 				DAE60C6020EB9A5500C8E17C /* PolicyFactory.swift in Sources */,
 			);
@@ -575,6 +582,7 @@
 				DA66D67520C26B57006D3905 /* TestRepository_Save.swift in Sources */,
 				DA8C60D520C0383200F852A6 /* TestRepositoryConstants.swift in Sources */,
 				DA8C60D920C03FC900F852A6 /* TestRepositoryFileFactory.swift in Sources */,
+				DAE60C6B20EBA35400C8E17C /* TestDeserialise_Policy.swift in Sources */,
 				DA66D67720C271FD006D3905 /* TestRepositoryFile_Delete.swift in Sources */,
 				DA5606DE20EA2F92006F2797 /* TestRepository_Remote.swift in Sources */,
 				DA2AF74A20C1602500BF94D1 /* FileLoader.swift in Sources */,
