@@ -22,6 +22,8 @@
 		DAA7316020B033F4009A6C36 /* CanvasDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */; };
 		DAAFF3B1209CA23A003EE7D8 /* DispatchQueue+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */; };
 		DAAFF3B3209CA297003EE7D8 /* TestDispatchQueue_Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */; };
+		DAC90F1220EB744700DF5C34 /* RemoteProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1120EB744700DF5C34 /* RemoteProviderProtocol.swift */; };
+		DAC90F1420EB745600DF5C34 /* RemoteProviderProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC90F1320EB745600DF5C34 /* RemoteProviderProtocol+Default.swift */; };
 		DADB20F420EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */; };
 		DADB20F620EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F520EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift */; };
 		DAF7E66A209B077E00B8A39A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF375209AFC6900740A88 /* Shared.framework */; };
@@ -55,6 +57,8 @@
 		DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDelegateProtocol.swift; sourceTree = "<group>"; };
 		DAAFF3B0209CA23A003EE7D8 /* DispatchQueue+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Private.swift"; sourceTree = "<group>"; };
 		DAAFF3B2209CA297003EE7D8 /* TestDispatchQueue_Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDispatchQueue_Private.swift; sourceTree = "<group>"; };
+		DAC90F1120EB744700DF5C34 /* RemoteProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProviderProtocol.swift; sourceTree = "<group>"; };
+		DAC90F1320EB745600DF5C34 /* RemoteProviderProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteProviderProtocol+Default.swift"; sourceTree = "<group>"; };
 		DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryProjectProtocol+Default.swift"; sourceTree = "<group>"; };
 		DADB20F520EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryBoardProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAF7E665209B077E00B8A39A /* TestsShared.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsShared.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,8 @@
 				DADB20F320EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift */,
 				DAA7315D20B033E9009A6C36 /* CanvasProtocol.swift */,
 				DAA7315F20B033F4009A6C36 /* CanvasDelegateProtocol.swift */,
+				DAC90F1120EB744700DF5C34 /* RemoteProviderProtocol.swift */,
+				DAC90F1320EB745600DF5C34 /* RemoteProviderProtocol+Default.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -367,7 +373,9 @@
 				DA0E58B9209F39EF00AD4425 /* UIColor+Shared.swift in Sources */,
 				DADB20F420EA60C5000C89D9 /* RepositoryProjectProtocol+Default.swift in Sources */,
 				DAA7315E20B033E9009A6C36 /* CanvasProtocol.swift in Sources */,
+				DAC90F1420EB745600DF5C34 /* RemoteProviderProtocol+Default.swift in Sources */,
 				DA3ADF98209C340900B736CD /* String+Bundle.swift in Sources */,
+				DAC90F1220EB744700DF5C34 /* RemoteProviderProtocol.swift in Sources */,
 				DA3ADFD0209C3F4C00B736CD /* Configuration.swift in Sources */,
 				DA567B30209C662C005D74EE /* RepositoryBoardProtocol.swift in Sources */,
 				DADB20F620EA60D7000C89D9 /* RepositoryBoardProtocol+Default.swift in Sources */,
