@@ -9,9 +9,9 @@ struct ViewConstants {
         static let size:CGFloat = 60
     }
     
-    struct Title {
-        static let height:CGFloat = 30
+    struct Label {
         static let fontSize:CGFloat = 14
+        static let margin:CGFloat = 30
     }
     
     struct Action {

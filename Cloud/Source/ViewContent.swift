@@ -52,8 +52,9 @@ public class ViewContent:UIView {
         label.isUserInteractionEnabled = false
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
+        label.numberOfLines = 0
         label.textColor = UIColor(white:0, alpha:0.6)
-        label.font = UIFont.systemFont(ofSize:ViewConstants.Title.fontSize, weight:UIFont.Weight.regular)
+        label.font = UIFont.systemFont(ofSize:ViewConstants.Label.fontSize, weight:UIFont.Weight.regular)
         self.label = label
         self.addSubview(label)
     }
@@ -74,8 +75,8 @@ public class ViewContent:UIView {
     private func makeButtonContinue() {
         let buttonContinue:UIButton = UIButton()
         buttonContinue.translatesAutoresizingMaskIntoConstraints = false
-        buttonContinue.setTitleColor(UIColor.white, for:UIControlState.normal)
-        buttonContinue.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
+        buttonContinue.setTitleColor(UIColor.black, for:UIControlState.normal)
+        buttonContinue.setTitleColor(UIColor(white:0, alpha:0.2), for:UIControlState.highlighted)
         buttonContinue.setTitle(String.localized(key:"ViewNotClouded_ButtonContinue", in:type(of:self)), for:UIControlState())
         buttonContinue.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
         buttonContinue.isHidden = true
@@ -92,9 +93,11 @@ public class ViewContent:UIView {
     
     private func layoutLabel() {
         self.label.topAnchor.constraint(equalTo:self.icon.bottomAnchor).isActive = true
-        self.label.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
-        self.label.heightAnchor.constraint(equalToConstant:ViewConstants.Title.height).isActive = true
-        self.label.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
+        self.label.leftAnchor.constraint(equalTo:self.leftAnchor,
+                                         constant:ViewConstants.Label.margin).isActive = true
+        self.label.rightAnchor.constraint(equalTo:self.rightAnchor,
+                                          constant:-ViewConstants.Label.margin).isActive = true
+        self.label.heightAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
     }
     
     private func layoutButtonStart() {

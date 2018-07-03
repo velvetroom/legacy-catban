@@ -5,9 +5,11 @@ public extension Repository {
     public func startRemote(project:ProjectProtocol,
                             onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
                             onError:@escaping((Error) -> Void)) {
-        self.dispatchQueue.async {
-            self.backgroundStart(project:project, onCompletion:onCompletion, onError:onError)
-        }
+        onError(ErrorRepository.alreadyClouded)
+        return
+//        self.dispatchQueue.async {
+//            self.backgroundStart(project:project, onCompletion:onCompletion, onError:onError)
+//        }
     }
     
     public func remoteSave(project:ProjectSynchedProtocol,

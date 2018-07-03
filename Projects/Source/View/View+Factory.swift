@@ -12,17 +12,17 @@ extension View {
     
     private func makeButtonDelete() -> UIBarButtonItem {
         let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetDelete, in:type(of:self))
-        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorDelete(buttonStart:)))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorDelete(button:)))
     }
     
     private func makeButtonRename() -> UIBarButtonItem {
         let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetRename, in:type(of:self))
-        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorRename(buttonStart:)))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorRename(button:)))
     }
     
     private func makeButtonColumns() -> UIBarButtonItem {
         let image:UIImage = UIImage(name:ViewConstants.Toolbar.assetColumns, in:type(of:self))
-        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorOpen(buttonStart:)))
+        return UIBarButtonItem(image:image, style:UIBarButtonItemStyle.plain, target:self, action:#selector(self.selectorOpen(button:)))
     }
     
     private func makeFixedSpace() -> UIBarButtonItem {

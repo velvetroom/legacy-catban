@@ -30,7 +30,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     private func configureView() {
         let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
         self.buttonMenu = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
-                                          target:self, action:#selector(self.selectorMenu(buttonStart:)))
+                                          target:self, action:#selector(self.selectorMenu(button:)))
     }
     
     private func configureCanvas() {

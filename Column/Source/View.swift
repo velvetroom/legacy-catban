@@ -28,11 +28,11 @@ public class View:Architecture.View<Presenter, ViewContent> {
         let fixedSpace:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.fixedSpace,
                                                          target:nil, action:nil)
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done, target:self,
-                                                         action:#selector(self.selectorDone(buttonStart:)))
+                                                         action:#selector(self.selectorDone(button:)))
         let buttonRename:UIBarButtonItem = UIBarButtonItem(image:imageRename, style:UIBarButtonItemStyle.plain,
-                                                           target:self, action:#selector(self.selectorRename(buttonStart:)))
+                                                           target:self, action:#selector(self.selectorRename(button:)))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:imageDelete, style:UIBarButtonItemStyle.plain,
-                                                           target:self, action:#selector(self.selectorDelete(buttonStart:)))
+                                                           target:self, action:#selector(self.selectorDelete(button:)))
         fixedSpace.width = ViewConstants.Navigation.fixedSpace
         self.navigationItem.rightBarButtonItems = [buttonDone, fixedSpace, buttonRename, buttonDelete]
     }

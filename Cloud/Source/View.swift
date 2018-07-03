@@ -46,6 +46,8 @@ public class View:Architecture.View<Presenter, ViewContent> {
     private func hookSelectors() {
         self.content.buttonStart.addTarget(self, action:#selector(self.selectorStart(button:)),
                                       for:UIControlEvents.touchUpInside)
+        self.content.buttonContinue.addTarget(self, action:#selector(self.selectorContinue(button:)),
+                                              for:UIControlEvents.touchUpInside)
     }
     
     private func configureProjectViewModel() {
@@ -67,6 +69,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     private func updated(viewModel:ViewModelContent) {
         self.content.buttonStart.isEnabled = true
         self.content.icon.image = viewModel.icon
+        self.content.buttonContinue.isHidden = viewModel.buttonContinueHidden
         self.content.buttonStart.isHidden = viewModel.buttonStartHidden
         self.content.label.text = viewModel.message
     }

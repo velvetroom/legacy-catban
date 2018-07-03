@@ -36,11 +36,11 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View<DeleterPresenter<In
     }
     
     private func configureView() {
-        self.content.background.button.addTarget(self, action:#selector(self.selectorCancel(buttonStart:)),
+        self.content.background.button.addTarget(self, action:#selector(self.selectorCancel(button:)),
                                                  for:UIControlEvents.touchUpInside)
-        self.content.viewMenu.buttonCancel.addTarget(self, action:#selector(self.selectorCancel(buttonStart:)),
+        self.content.viewMenu.buttonCancel.addTarget(self, action:#selector(self.selectorCancel(button:)),
                                                      for:UIControlEvents.touchUpInside)
-        self.content.viewMenu.buttonConfirm.addTarget(self, action:#selector(self.selectorConfirm(buttonStart:)),
+        self.content.viewMenu.buttonConfirm.addTarget(self, action:#selector(self.selectorConfirm(button:)),
                                                       for:UIControlEvents.touchUpInside)
     }
     

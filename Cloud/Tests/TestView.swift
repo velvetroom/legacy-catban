@@ -74,4 +74,12 @@ class TestView:XCTestCase {
         self.view.viewModel.update(property:viewModel)
         XCTAssertTrue(self.view.content.buttonStart.isEnabled, "Not enabled on refresh")
     }
+    
+    func testUpdatesViewModel() {
+        self.view.didLoad()
+        var viewModel:ViewModelContent = self.view.viewModel.property()
+        viewModel.buttonContinueHidden = false
+        self.view.viewModel.update(property:viewModel)
+        XCTAssertFalse(self.view.content.buttonContinue.isHidden, "Should not be hidden")
+    }
 }
