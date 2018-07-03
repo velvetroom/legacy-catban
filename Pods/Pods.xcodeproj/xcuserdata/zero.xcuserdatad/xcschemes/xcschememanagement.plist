@@ -3,144 +3,169 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17C9287830246127799E78FECDA198FE</key>
+		<key>CleanArchitecture.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>246FCEB8774994EC3AC71728B528006D</key>
+		<key>FirebaseCore.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>261390C16B967ABCEB15F8F37623748D</key>
+		<key>FirebaseStorage.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>2C1E2CFBA79602D332126B9CF35B8B37</key>
+		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>2DCE9C0FB3A3C9B346A01A665B619C96</key>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>3D4ECA10F4A9EEC0003A412BE32E9BAC</key>
+		<key>Pods-Architecture-Architecture.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>4EE867FC0F7F9A284672B79E16DEE64C</key>
+		<key>Pods-Architecture-Canvas.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>50E2DC291CEDE2739D1BEB08CA77473A</key>
+		<key>Pods-Architecture-Card.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>65285F97004FE213C159392D07E11818</key>
+		<key>Pods-Architecture-Cloud.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>71B6F9BF2ADA09F27A00FA3B524C529C</key>
+		<key>Pods-Architecture-Column.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>80106EDBAA83CAA4CA38EF02015CCDE4</key>
+		<key>Pods-Architecture-Home.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>844F79C55F44C77199D4D644D1164889</key>
+		<key>Pods-Architecture-Load.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>8790DCC85F9896686F29B2E75CC201D0</key>
+		<key>Pods-Architecture-Main.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>8937E0E70A6AA289D770C75A4C8ACD2D</key>
+		<key>Pods-Architecture-Projects.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>92EC41C82AADA55A9E9199E3D7BD31BE</key>
+		<key>Pods-Architecture-Repository.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>9AD9A7769342CB3BE15A146527B04388</key>
+		<key>Pods-Architecture-Shared.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>9B0D142A4731FFD3F818623664D565DA</key>
+		<key>Pods-Architecture-Template.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>AC4AA2AAA658303998DDCC2C4F0C1332</key>
+		<key>Pods-Architecture-TestsArchitecture.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>B198522F77BB5F2299C02615E9671F73</key>
+		<key>Pods-Architecture-TestsCanvas.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>B5B0BBF457FA09A75801476F1B230146</key>
+		<key>Pods-Architecture-TestsCard.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DD77C98BC719200883F74FC85EC3A55B</key>
+		<key>Pods-Architecture-TestsCloud.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>DF6ED23533EA5D2740B1259D31E6DB7D</key>
+		<key>Pods-Architecture-TestsColumn.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>F3AF515D17536EC6CDD6C3FB5811ED16</key>
+		<key>Pods-Architecture-TestsHome.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>F64A8C656424F2C311FA1AA2148BAE30</key>
+		<key>Pods-Architecture-TestsLoad.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>FD3E7CCE3EC6C192C7D5AF8ECF6642A2</key>
+		<key>Pods-Architecture-TestsMain.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>FEB1D6FEDCB4F72BFEADECD967898CAA</key>
+		<key>Pods-Architecture-TestsProjects.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>FF42BB79F59AF59FEBC1D155B5F56CA4</key>
+		<key>Pods-Architecture-TestsRepository.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Architecture-TestsShared.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Architecture-TestsTemplate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Architecture-TestsTools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Architecture-Tools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>
