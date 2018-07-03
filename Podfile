@@ -21,13 +21,6 @@ abstract_target 'Architecture' do
         project 'Shared/Shared.xcodeproj'
     end
     
-    target 'Repository' do
-        project 'Repository/Repository.xcodeproj'
-    end
-    target 'TestsRepository' do
-        project 'Repository/Repository.xcodeproj'
-    end
-    
     target 'Template' do
         project 'Template/Template.xcodeproj'
     end
@@ -84,6 +77,13 @@ abstract_target 'Architecture' do
         project 'Projects/Projects.xcodeproj'
     end
     
+    target 'Cloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
+    target 'TestsCloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
+    
     target 'Main' do
         project 'Main/Main.xcodeproj'
     end
@@ -91,13 +91,13 @@ abstract_target 'Architecture' do
         project 'Main/Main.xcodeproj'
     end
     
-    target 'Cloud' do
-        project 'Cloud/Cloud.xcodeproj'
+    target 'Repository' do
+        project 'Repository/Repository.xcodeproj'
         pod 'Firebase/Core'
         pod 'Firebase/Storage'
     end
-    target 'TestsCloud' do
-        project 'Cloud/Cloud.xcodeproj'
+    target 'TestsRepository' do
+        project 'Repository/Repository.xcodeproj'
         pod 'Firebase/Core'
         pod 'Firebase/Storage'
     end
