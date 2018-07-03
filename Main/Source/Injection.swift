@@ -13,6 +13,7 @@ class Injection {
     func load() {
         Configuration.repositoryBoardType = Repository.self
         Configuration.repositoryProjectType = Repository.self
+        Configuration.remoteProviderType = RemoteProviderFirebase.self
         Configuration.viewLoadType = Load.View.self
         Configuration.viewHomeType = Home.View.self
         Configuration.viewCardType = Card.View.self

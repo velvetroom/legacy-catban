@@ -14,6 +14,7 @@ class TestInjection:XCTestCase {
     func testConfigurationIsUpdated() {
         XCTAssertNotNil(Configuration.repositoryBoardType, "Failed to inject repository for board")
         XCTAssertNotNil(Configuration.repositoryProjectType, "Failed to inject repository for project")
+        XCTAssertNotNil(Configuration.remoteProviderType, "Failed to inject remote provider")
         XCTAssertNotNil(Configuration.viewLoadType, "Failed to inject controller load")
         XCTAssertNotNil(Configuration.viewHomeType, "Failed to inject controller home")
         XCTAssertNotNil(Configuration.viewCardType, "Failed to inject controller card")
