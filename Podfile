@@ -84,17 +84,21 @@ abstract_target 'Architecture' do
         project 'Projects/Projects.xcodeproj'
     end
     
-    target 'Cloud' do
-        project 'Cloud/Cloud.xcodeproj'
-    end
-    target 'TestsCloud' do
-        project 'Cloud/Cloud.xcodeproj'
-    end
-
     target 'Main' do
-    project 'Main/Main.xcodeproj'
+        project 'Main/Main.xcodeproj'
     end
     target 'TestsMain' do
         project 'Main/Main.xcodeproj'
+    end
+    
+    target 'Cloud' do
+        project 'Cloud/Cloud.xcodeproj'
+        pod 'Firebase/Core'
+        pod 'Firebase/Storage'
+    end
+    target 'TestsCloud' do
+        project 'Cloud/Cloud.xcodeproj'
+        pod 'Firebase/Core'
+        pod 'Firebase/Storage'
     end
 end
