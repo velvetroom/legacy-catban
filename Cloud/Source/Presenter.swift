@@ -12,6 +12,7 @@ public class Presenter:PresenterProtocol {
     
     public func didLoad() {
         self.updateViewModel()
+        self.updateViewModelProject()
     }
     
     func done() {
@@ -19,18 +20,21 @@ public class Presenter:PresenterProtocol {
     }
     
     func start() {
-        
+        self.interactor.start(onCompletion: { [weak self] in
+            self?.updateViewModel()
+        }, onError: { [weak self] (error:Error) in
+            self?.updateViewModelWith(error:error)
+        })
     }
     
-    private func updateViewModel() {
+    func updateViewModel() {
         self.updateViewModelNavigation()
-        self.updateViewModelProject()
         self.updateViewModelContent()
     }
     
-    private func updateViewModelNavigation() {
-        let property:ViewModelNavigation = ViewModelFactory.makeNavigationWith(project:self.interactor.project)
-        self.viewModel.update(property:property)
+    private func updateViewModelWith(error:Error) {
+        self.updateViewModelNavigationWith(error:error)
+        self.updateViewModelContentWith(error:error)
     }
     
     private func updateViewModelProject() {
@@ -38,8 +42,23 @@ public class Presenter:PresenterProtocol {
         self.viewModel.update(property:property)
     }
     
+    private func updateViewModelNavigation() {
+        let property:ViewModelNavigation = ViewModelFactory.makeNavigationWith(project:self.interactor.project)
+        self.viewModel.update(property:property)
+    }
+    
+    private func updateViewModelNavigationWith(error:Error) {
+        let property:ViewModelNavigation = ViewModelFactory.makeNavigationWith(error:error)
+        self.viewModel.update(property:property)
+    }
+    
     private func updateViewModelContent() {
         let property:ViewModelContent = ViewModelFactory.makeContentWith(project:self.interactor.project)
+        self.viewModel.update(property:property)
+    }
+    
+    private func updateViewModelContentWith(error:Error) {
+        let property:ViewModelContent = ViewModelFactory.makeContentWith(error:error)
         self.viewModel.update(property:property)
     }
 }

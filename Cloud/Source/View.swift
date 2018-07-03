@@ -22,6 +22,10 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.presenter.start()
     }
     
+    @objc func selectorContinue(button:UIButton) {
+        self.presenter.updateViewModel()
+    }
+    
     private func configureView() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
                                                          target:self, action:#selector(self.selectorDone(button:)))

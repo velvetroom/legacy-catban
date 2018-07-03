@@ -33,6 +33,12 @@ class ViewModelFactory {
         return viewModel
     }
     
+    class func makeNavigationWith(error:Error) -> ViewModelNavigation {
+        var property:ViewModelNavigation = ViewModelNavigation()
+        property.toolbarHidden = true
+        return property
+    }
+    
     private class func makeNotClouded() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
         property.buttonStartHidden = false

@@ -36,4 +36,10 @@ class TestViewModelFactory:XCTestCase {
         let viewModel:ViewModelNavigation = ViewModelFactory.makeNavigationWith(project:synchable)
         XCTAssertFalse(viewModel.toolbarHidden, "Tool bar should not be hidden")
     }
+    
+    func testNavigationWithError() {
+        let viewModel:ViewModelNavigation = ViewModelFactory.makeNavigationWith(
+            error:NSError(domain:String(), code:0, userInfo:nil))
+        XCTAssertTrue(viewModel.toolbarHidden, "Tool bar should be hidden")
+    }
 }

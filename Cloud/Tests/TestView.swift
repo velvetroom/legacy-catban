@@ -1,13 +1,19 @@
 import XCTest
 import Shared
+import CleanArchitecture
 @testable import Cloud
 
 class TestView:XCTestCase {
     private var view:Cloud.View!
+    private var presenter:MockPresenter!
     
     override func setUp() {
         super.setUp()
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Cloud.View()
+        self.presenter = MockPresenter()
+        self.presenter.viewModel = ViewModel()
+        self.view.presenter = presenter
     }
     
     func testLoadImageNotClouded() {
@@ -37,17 +43,20 @@ class TestView:XCTestCase {
     
     func testCallPresenterOnDone() {
         var called:Bool = false
-        let presenter:MockPresenter = MockPresenter()
-        self.view.presenter = presenter
         presenter.onDone = { called = true }
         self.view.selectorDone(button:UIBarButtonItem())
         XCTAssertTrue(called, "Not called")
     }
     
+    func testCallPresenterOnContinue() {
+        var called:Bool = false
+        presenter.onUpdateViewModel = { called = true }
+        self.view.selectorContinue(button:UIButton())
+        XCTAssertTrue(called, "Not called")
+    }
+    
     func testCallsPresenterOnStart() {
         var called:Bool = false
-        let presenter:MockPresenter = MockPresenter()
-        self.view.presenter = presenter
         presenter.onStart = { called = true }
         self.view.selectorStart(button:UIButton())
         XCTAssertTrue(called, "Not called")
@@ -58,7 +67,7 @@ class TestView:XCTestCase {
         XCTAssertFalse(self.view.content.buttonStart.isEnabled, "Should be disabled")
     }
     
-    func testShouldEnabledOnRefresh() {
+    func testShouldBeEnabledOnRefresh() {
         self.view.didLoad()
         self.view.content.buttonStart.isEnabled = false
         let viewModel:ViewModelContent = self.view.viewModel.property()

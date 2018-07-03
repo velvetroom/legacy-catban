@@ -4,6 +4,7 @@ import Foundation
 class MockPresenter:Presenter {
     var onDone:(() -> Void)?
     var onStart:(() -> Void)?
+    var onUpdateViewModel:(() -> Void)?
     
     override func done() {
         self.onDone?()
@@ -11,5 +12,9 @@ class MockPresenter:Presenter {
     
     override func start() {
         self.onStart?()
+    }
+    
+    override func updateViewModel() {
+        self.onUpdateViewModel?()
     }
 }
