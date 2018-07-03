@@ -31,11 +31,11 @@ public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate 
     
     private func configureView() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(button:)))
+                                                         target:self, action:#selector(self.selectorDone(buttonStart:)))
         let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
-                                                           action:#selector(self.selectorDelete(button:)))
+                                                           action:#selector(self.selectorDelete(buttonStart:)))
         self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
     }
     

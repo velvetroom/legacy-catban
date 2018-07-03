@@ -41,7 +41,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.setToolbarItems(self.makeToolbarItems(), animated:true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
-            target:self, action:#selector(self.selectorAddProject(button:)))
+            target:self, action:#selector(self.selectorAddProject(buttonStart:)))
     }
     
     private func hookDelegates() {

@@ -18,7 +18,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     @objc func selectorStart(button:UIButton) {
-        self.content.button.isEnabled = false
+        self.content.buttonStart.isEnabled = false
         self.presenter.start()
     }
     
@@ -40,7 +40,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func hookSelectors() {
-        self.content.button.addTarget(self, action:#selector(self.selectorStart(button:)),
+        self.content.buttonStart.addTarget(self, action:#selector(self.selectorStart(button:)),
                                       for:UIControlEvents.touchUpInside)
     }
     
@@ -61,9 +61,9 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func updated(viewModel:ViewModelContent) {
-        self.content.button.isEnabled = true
+        self.content.buttonStart.isEnabled = true
         self.content.icon.image = viewModel.icon
-        self.content.button.isHidden = viewModel.buttonHidden
+        self.content.buttonStart.isHidden = viewModel.buttonStartHidden
         self.content.label.text = viewModel.message
     }
 }

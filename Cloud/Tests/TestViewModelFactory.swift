@@ -7,7 +7,7 @@ class TestViewModelFactory:XCTestCase {
     func testMakeContentWithNotClouded() {
         let project:ProjectProtocol = ProjectFactory.newProject()
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:project)
-        XCTAssertFalse(viewModel.buttonHidden, "Button should not be hidden")
+        XCTAssertFalse(viewModel.buttonStartHidden, "Button should not be hidden")
     }
     
     func testNavigationWithNoClouded() {
@@ -16,19 +16,18 @@ class TestViewModelFactory:XCTestCase {
         XCTAssertTrue(viewModel.toolbarHidden, "Tool bar should be hidden")
     }
     
-    func testMakeContentWithUpToDate() {
-        let project:ProjectProtocol = ProjectFactory.newProject()
-        let synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
-        let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:synchable)
-        XCTAssertTrue(viewModel.buttonHidden, "Button should be hidden")
+    func testMakeContentWithError() {
+        let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(
+            error:NSError(domain:String(), code:0, userInfo:nil))
+        XCTAssertFalse(viewModel.buttonContinueHidden, "Button should not be hidden")
     }
     
-    func testMakeContentNeedsSynching() {
+    func testMakeContentCloud() {
         let project:ProjectProtocol = ProjectFactory.newProject()
         var synchable:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         synchable.changeTimestamp = 10
         let viewModel:ViewModelContent = ViewModelFactory.makeContentWith(project:synchable)
-        XCTAssertTrue(viewModel.buttonHidden, "Button should be hidden")
+        XCTAssertTrue(viewModel.buttonStartHidden, "Button should be hidden")
     }
     
     func testNavigationWithClouded() {

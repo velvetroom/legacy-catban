@@ -43,13 +43,13 @@ class ViewMenu:Architecture.View<PresenterMenu, ViewMenuContent> {
     }
     
     private func hookSelectors() {
-        self.content.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
+        self.content.viewClose.addTarget(self, action:#selector(self.selectorClose(buttonStart:)),
                                          for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
+        self.content.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(buttonStart:)),
                                                        for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.optionCloud.addTarget(self, action:#selector(self.selectorCloud(button:)),
+        self.content.viewOptions.optionCloud.addTarget(self, action:#selector(self.selectorCloud(buttonStart:)),
                                                        for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
+        self.content.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(buttonStart:)),
                                                           for:UIControlEvents.touchUpInside)
         
 //        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),

@@ -15,6 +15,11 @@ class TestView:XCTestCase {
         XCTAssertNotNil(image, "Failed to load")
     }
     
+    func testLoadImageError() {
+        let image:UIImage = UIImage(name:ViewConstants.Icon.assetError, in:Cloud.View.self)
+        XCTAssertNotNil(image, "Failed to load")
+    }
+    
     func testLoadImageClouded() {
         let image:UIImage = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
@@ -50,14 +55,14 @@ class TestView:XCTestCase {
     
     func testSetButtonDisabledOnStart() {
         self.view.selectorStart(button:UIButton())
-        XCTAssertFalse(self.view.content.button.isEnabled, "Should be disabled")
+        XCTAssertFalse(self.view.content.buttonStart.isEnabled, "Should be disabled")
     }
     
     func testShouldEnabledOnRefresh() {
         self.view.didLoad()
-        self.view.content.button.isEnabled = false
+        self.view.content.buttonStart.isEnabled = false
         let viewModel:ViewModelContent = self.view.viewModel.property()
         self.view.viewModel.update(property:viewModel)
-        XCTAssertTrue(self.view.content.button.isEnabled, "Not enabled on refresh")
+        XCTAssertTrue(self.view.content.buttonStart.isEnabled, "Not enabled on refresh")
     }
 }

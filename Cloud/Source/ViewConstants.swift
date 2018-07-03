@@ -2,9 +2,10 @@ import UIKit
 
 struct ViewConstants {
     struct Icon {
-        static let assetNotClouded:String = "assetError"
+        static let assetNotClouded:String = "assetNotClouded"
         static let assetCloud:String = "assetCloud"
         static let assetUpToDate:String = "assetUpToDate"
+        static let assetError:String = "assetError"
         static let size:CGFloat = 60
     }
     

@@ -4,7 +4,8 @@ import Shared
 public class ViewContent:UIView {
     weak var icon:UIImageView!
     weak var label:UILabel!
-    weak var button:UIButton!
+    weak var buttonStart:UIButton!
+    weak var buttonContinue:UIButton!
     
     public init() {
         super.init(frame:CGRect.zero)
@@ -24,13 +25,15 @@ public class ViewContent:UIView {
     private func makeOutlets() {
         self.makeIcon()
         self.makeLabel()
-        self.makeButton()
+        self.makeButtonStart()
+        self.makeButtonContinue()
     }
     
     private func layoutOutlets() {
         self.layoutIcon()
         self.layoutLabel()
-        self.layoutButton()
+        self.layoutButtonStart()
+        self.layoutButtonContinue()
     }
     
     private func makeIcon() {
@@ -55,21 +58,29 @@ public class ViewContent:UIView {
         self.addSubview(label)
     }
     
-    private func makeButton() {
-        let button:UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setBackgroundImage(UIImage(name:ViewConstants.Action.asset, in:type(of:self)), for:UIControlState())
-        button.subviews.first?.clipsToBounds = true
-        button.subviews.first?.contentMode = UIViewContentMode.center
-        button.clipsToBounds = true
-        button.contentMode = UIViewContentMode.center
-        button.setTitleColor(UIColor.white, for:UIControlState.normal)
-        button.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
-        button.setTitle(String.localized(key:"ViewNotClouded_Button", in:type(of:self)), for:UIControlState())
-        button.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
-        button.isHidden = true
-        self.button = button
-        self.addSubview(button)
+    private func makeButtonStart() {
+        let buttonStart:UIButton = UIButton()
+        buttonStart.translatesAutoresizingMaskIntoConstraints = false
+        buttonStart.setBackgroundImage(UIImage(name:ViewConstants.Action.asset, in:type(of:self)), for:UIControlState())
+        buttonStart.setTitleColor(UIColor.white, for:UIControlState.normal)
+        buttonStart.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
+        buttonStart.setTitle(String.localized(key:"ViewNotClouded_ButtonStart", in:type(of:self)), for:UIControlState())
+        buttonStart.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
+        buttonStart.isHidden = true
+        self.buttonStart = buttonStart
+        self.addSubview(buttonStart)
+    }
+    
+    private func makeButtonContinue() {
+        let buttonContinue:UIButton = UIButton()
+        buttonContinue.translatesAutoresizingMaskIntoConstraints = false
+        buttonContinue.setTitleColor(UIColor.white, for:UIControlState.normal)
+        buttonContinue.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
+        buttonContinue.setTitle(String.localized(key:"ViewNotClouded_ButtonContinue", in:type(of:self)), for:UIControlState())
+        buttonContinue.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
+        buttonContinue.isHidden = true
+        self.buttonContinue = buttonContinue
+        self.addSubview(buttonContinue)
     }
     
     private func layoutIcon() {
@@ -86,11 +97,19 @@ public class ViewContent:UIView {
         self.label.widthAnchor.constraint(greaterThanOrEqualToConstant:0).isActive = true
     }
     
-    private func layoutButton() {
-        self.button.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
-        self.button.bottomAnchor.constraint(equalTo:self.safeAreaLayoutGuide.bottomAnchor,
+    private func layoutButtonStart() {
+        self.buttonStart.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+        self.buttonStart.bottomAnchor.constraint(equalTo:self.safeAreaLayoutGuide.bottomAnchor,
                                             constant:ViewConstants.Action.bottom).isActive = true
-        self.button.widthAnchor.constraint(equalToConstant:ViewConstants.Action.width).isActive = true
-        self.button.heightAnchor.constraint(equalToConstant:ViewConstants.Action.height).isActive = true
+        self.buttonStart.widthAnchor.constraint(equalToConstant:ViewConstants.Action.width).isActive = true
+        self.buttonStart.heightAnchor.constraint(equalToConstant:ViewConstants.Action.height).isActive = true
+    }
+    
+    private func layoutButtonContinue() {
+        self.buttonContinue.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
+        self.buttonContinue.bottomAnchor.constraint(equalTo:self.safeAreaLayoutGuide.bottomAnchor,
+                                                 constant:ViewConstants.Action.bottom).isActive = true
+        self.buttonContinue.widthAnchor.constraint(equalToConstant:ViewConstants.Action.width).isActive = true
+        self.buttonContinue.heightAnchor.constraint(equalToConstant:ViewConstants.Action.height).isActive = true
     }
 }

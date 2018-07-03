@@ -5,8 +5,8 @@ import Shared
 
 class ViewModelFactory {
     class func makeContentWith(project:ProjectProtocol) -> ViewModelContent {
-        if let project:ProjectSynchedProtocol = project as? ProjectSynchedProtocol {
-            return makeSynchedContentWith(project:project)
+        if project is ProjectSynchedProtocol {
+            return makeCloud()
         } else {
             return makeNotClouded()
         }
@@ -24,17 +24,18 @@ class ViewModelFactory {
         return property
     }
     
-    private class func makeSynchedContentWith(project:ProjectSynchedProtocol) -> ViewModelContent {
-        if project.needsSync {
-            return makeCloud()
-        } else {
-            return makeUpToDate()
-        }
+    class func makeContentWith(error:Error) -> ViewModelContent {
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.buttonContinueHidden = false
+        viewModel.buttonStartHidden = true
+        viewModel.message = error.localizedDescription
+        viewModel.icon = UIImage(name:ViewConstants.Icon.assetError, in:Cloud.View.self)
+        return viewModel
     }
     
     private class func makeNotClouded() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
-        property.buttonHidden = false
+        property.buttonStartHidden = false
         property.message = String.localized(key:"ViewNotClouded_LabelNotClouded", in:View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetNotClouded, in:Cloud.View.self)
         return property
@@ -42,17 +43,10 @@ class ViewModelFactory {
     
     private class func makeCloud() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
-        property.buttonHidden = true
+        property.buttonContinueHidden = true
+        property.buttonStartHidden = true
         property.message = String.localized(key:"ViewNotClouded_LabelCloud", in:Cloud.View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
-        return property
-    }
-    
-    private class func makeUpToDate() -> ViewModelContent {
-        var property:ViewModelContent = ViewModelContent()
-        property.buttonHidden = true
-        property.message = String.localized(key:"ViewNotClouded_LabelUpToDate", in:Cloud.View.self)
-        property.icon = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
         return property
     }
     

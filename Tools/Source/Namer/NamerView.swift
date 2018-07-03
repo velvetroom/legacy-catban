@@ -27,10 +27,10 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<NamerPresenter<Interact
         self.content.viewField.delegate = self.presenter
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.cancel,
-            target:self, action:#selector(self.selectorCancel(button:)))
+            target:self, action:#selector(self.selectorCancel(buttonStart:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
-            action:#selector(self.selectorSave(button:)))
+            action:#selector(self.selectorSave(buttonStart:)))
     }
     
     private func configureViewModel() {
