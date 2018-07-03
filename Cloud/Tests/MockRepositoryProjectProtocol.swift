@@ -3,6 +3,7 @@ import Shared
 import Board
 
 class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
+    static var onSave:(() -> Void)?
     var error:Error?
     
     required init() { }
@@ -19,5 +20,9 @@ class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
                 onCompletion(synched)
             }
         }
+    }
+    
+    func localSave(project:ProjectProtocol) {
+        MockRepositoryProjectProtocol.onSave?()
     }
 }

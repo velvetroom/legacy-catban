@@ -24,17 +24,27 @@ public class Interactor:InteractorProjectProtocol {
     }
     
     private func started(synched:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void)) {
-        self.board.remove(project:self.project)
-        self.board.add(project:synched)
-        self.project = synched
+        self.replaceProject(synched:synched)
+        self.save(project:synched)
         DispatchQueue.main.async {
             onCompletion()
         }
+    }
+    
+    private func replaceProject(synched:ProjectSynchedProtocol) {
+        self.board.remove(project:self.project)
+        self.board.add(project:synched)
+        self.project = synched
     }
     
     private func found(error:Error, onError:@escaping((Error) -> Void)) {
         DispatchQueue.main.async {
             onError(error)
         }
+    }
+    
+    private func save(project:ProjectProtocol) {
+        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
+        repository.localSave(project:project)
     }
 }
