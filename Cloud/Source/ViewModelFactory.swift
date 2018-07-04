@@ -33,6 +33,15 @@ class ViewModelFactory {
         return viewModel
     }
     
+    class func makeContentSaved() -> ViewModelContent {
+        var viewModel:ViewModelContent = ViewModelContent()
+        viewModel.buttonContinueHidden = true
+        viewModel.buttonStartHidden = true
+        viewModel.message = String.localized(key:"ViewModelFactory_LabelSaved", in:View.self)
+        viewModel.icon = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
+        return viewModel
+    }
+    
     class func makeNavigationWith(error:Error) -> ViewModelNavigation {
         var property:ViewModelNavigation = ViewModelNavigation()
         property.toolbarHidden = true
@@ -42,7 +51,7 @@ class ViewModelFactory {
     private class func makeNotClouded() -> ViewModelContent {
         var property:ViewModelContent = ViewModelContent()
         property.buttonStartHidden = false
-        property.message = String.localized(key:"ViewNotClouded_LabelNotClouded", in:View.self)
+        property.message = String.localized(key:"ViewModelFactory_LabelNotClouded", in:View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetNotClouded, in:Cloud.View.self)
         return property
     }
@@ -51,7 +60,7 @@ class ViewModelFactory {
         var property:ViewModelContent = ViewModelContent()
         property.buttonContinueHidden = true
         property.buttonStartHidden = true
-        property.message = String.localized(key:"ViewNotClouded_LabelCloud", in:Cloud.View.self)
+        property.message = String.localized(key:"ViewModelFactory_LabelCloud", in:Cloud.View.self)
         property.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
         return property
     }

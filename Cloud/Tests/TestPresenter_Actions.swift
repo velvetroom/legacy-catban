@@ -47,6 +47,7 @@ class TestPresenter_Actions:XCTestCase {
         viewModel.observing = { (property:ViewModelContent) in
             if ready {
                 XCTAssertTrue(property.buttonContinueHidden, "Should not be visible")
+                XCTAssertTrue(property.buttonStartHidden, "Should not be visible")
                 expect.fulfill()
             }
         }

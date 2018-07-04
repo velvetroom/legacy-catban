@@ -63,7 +63,7 @@ class TestInteractor:XCTestCase {
     
     func testStartCloudSavesSynchedProject() {
         let expect:XCTestExpectation = self.expectation(description:"Not saved")
-        MockRepositoryProjectProtocol.onSave = { expect.fulfill() }
+        self.repository.onLocalSave = { expect.fulfill() }
         self.view.presenter.interactor.start(onCompletion: { }, onError: { (error:Error) in })
         self.waitForExpectations(timeout:0.3, handler:nil)
     }

@@ -4,14 +4,15 @@ extension View {
     func makeToolbarItems() -> [UIBarButtonItem] {
         let flexibleSpace:UIBarButtonItem = self.makeFlexibleSpace()
         return [flexibleSpace,
-                self.makeButtonUpload(),
+                self.makeButtonSave(),
                 self.makeSeparator(),
                 self.makeButtonShare(),
                 flexibleSpace]
     }
     
-    private func makeButtonUpload() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.save, target:nil, action:nil)
+    private func makeButtonSave() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
+                               action:#selector(self.selectorSave(button:)))
     }
     
     private func makeButtonShare() -> UIBarButtonItem {

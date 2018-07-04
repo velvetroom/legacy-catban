@@ -1,5 +1,6 @@
 View_Title="Cloud";
-ViewNotClouded_LabelNotClouded="Cloud not started for this Board";
-ViewNotClouded_LabelCloud="Cloud enabled";
-ViewNotClouded_ButtonStart="Start";
-ViewNotClouded_ButtonContinue="Continue";
+ViewModelFactory_LabelNotClouded="Cloud not started for this Board";
+ViewModelFactory_LabelCloud="Cloud enabled";
+ViewModelFactory_LabelSaved="Saved on the Cloud";
+ViewContent_ButtonStart="Start";
+ViewContent_ButtonContinue="Continue";

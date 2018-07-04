@@ -6,7 +6,7 @@ struct ViewConstants {
         static let assetCloud:String = "assetCloud"
         static let assetUpToDate:String = "assetUpToDate"
         static let assetError:String = "assetError"
-        static let size:CGFloat = 60
+        static let size:CGFloat = 80
     }
     
     struct Label {

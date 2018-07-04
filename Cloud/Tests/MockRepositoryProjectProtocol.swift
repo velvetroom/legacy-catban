@@ -3,7 +3,8 @@ import Shared
 import Board
 
 class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
-    static var onSave:(() -> Void)?
+    var onLocalSave:(() -> Void)?
+    var onRemoteSave:(() -> Void)?
     var error:Error?
     
     required init() { }
@@ -22,7 +23,21 @@ class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
         }
     }
     
+    func remoteSave(project:ProjectSynchedProtocol, onCompletion:@escaping (() -> Void),
+                    onError:@escaping((Error) -> Void)) {
+        self.onRemoteSave?()
+        if let error:Error = self.error {
+            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+                onError(error)
+            }
+        } else {
+            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+                onCompletion()
+            }
+        }
+    }
+    
     func localSave(project:ProjectProtocol) {
-        MockRepositoryProjectProtocol.onSave?()
+        self.onLocalSave?()
     }
 }

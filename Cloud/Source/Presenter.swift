@@ -29,7 +29,7 @@ public class Presenter:PresenterProtocol {
     
     func save() {
         self.interactor.save(onCompletion: { [weak self] in
-            self?.updateViewModel()
+            self?.updateViewModelSaved()
         }) { [weak self] (error:Error) in
             self?.updateViewModelWith(error:error)
         }
@@ -42,6 +42,11 @@ public class Presenter:PresenterProtocol {
     func updateViewModel() {
         self.updateViewModelNavigation()
         self.updateViewModelContent()
+    }
+    
+    private func updateViewModelSaved() {
+        let property:ViewModelContent = ViewModelFactory.makeContentSaved()
+        self.viewModel.update(property:property)
     }
     
     private func updateViewModelWith(error:Error) {

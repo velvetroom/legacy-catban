@@ -53,7 +53,7 @@ public class ViewContent:UIView {
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
         label.numberOfLines = 0
-        label.textColor = UIColor(white:0, alpha:0.6)
+        label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize:ViewConstants.Label.fontSize, weight:UIFont.Weight.regular)
         self.label = label
         self.addSubview(label)
@@ -62,11 +62,13 @@ public class ViewContent:UIView {
     private func makeButtonStart() {
         let buttonStart:UIButton = UIButton()
         buttonStart.translatesAutoresizingMaskIntoConstraints = false
-        buttonStart.setBackgroundImage(UIImage(name:ViewConstants.Action.asset, in:type(of:self)), for:UIControlState())
+        buttonStart.setBackgroundImage(UIImage(name:ViewConstants.Action.asset, in:type(of:self)),
+                                       for:UIControlState())
         buttonStart.setTitleColor(UIColor.white, for:UIControlState.normal)
         buttonStart.setTitleColor(UIColor(white:1, alpha:0.2), for:UIControlState.highlighted)
-        buttonStart.setTitle(String.localized(key:"ViewNotClouded_ButtonStart", in:type(of:self)), for:UIControlState())
-        buttonStart.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
+        buttonStart.setTitle(String.localized(key:"ViewContent_ButtonStart", in:type(of:self)), for:UIControlState())
+        buttonStart.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize,
+                                                         weight:UIFont.Weight.bold)
         buttonStart.isHidden = true
         self.buttonStart = buttonStart
         self.addSubview(buttonStart)
@@ -77,7 +79,7 @@ public class ViewContent:UIView {
         buttonContinue.translatesAutoresizingMaskIntoConstraints = false
         buttonContinue.setTitleColor(UIColor.black, for:UIControlState.normal)
         buttonContinue.setTitleColor(UIColor(white:0, alpha:0.2), for:UIControlState.highlighted)
-        buttonContinue.setTitle(String.localized(key:"ViewNotClouded_ButtonContinue", in:type(of:self)), for:UIControlState())
+        buttonContinue.setTitle(String.localized(key:"ViewContent_ButtonContinue", in:type(of:self)), for:UIControlState())
         buttonContinue.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.Action.fontSize, weight:UIFont.Weight.bold)
         buttonContinue.isHidden = true
         self.buttonContinue = buttonContinue
