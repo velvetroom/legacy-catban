@@ -51,14 +51,9 @@ public class Interactor:InteractorProjectProtocol {
     }
     
     private func remoteSaved(project:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void)) {
-        self.save(project:project)
+        self.repository.localSave(project:project)
         DispatchQueue.main.async {
             onCompletion()
         }
-    }
-    
-    private func save(project:ProjectProtocol) {
-        let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.localSave(project:project)
     }
 }
