@@ -23,24 +23,24 @@ class DeleterView<Interactor:DeleterInteractorProtocol>:View<DeleterPresenter<In
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
     }
     
-    @objc func selectorCancel(button:UIButton) {
+    @objc func selectorCancel() {
         self.closeDeleter { [weak self] in
             self?.presenter.cancel()
         }
     }
     
-    @objc func selectorConfirm(button:UIButton) {
+    @objc func selectorConfirm() {
         self.closeDeleter { [weak self] in
             self?.presenter.confirm()
         }
     }
     
     private func configureView() {
-        self.content.background.button.addTarget(self, action:#selector(self.selectorCancel(button:)),
+        self.content.background.button.addTarget(self, action:#selector(self.selectorCancel),
                                                  for:UIControlEvents.touchUpInside)
-        self.content.viewMenu.buttonCancel.addTarget(self, action:#selector(self.selectorCancel(button:)),
+        self.content.viewMenu.buttonCancel.addTarget(self, action:#selector(self.selectorCancel),
                                                      for:UIControlEvents.touchUpInside)
-        self.content.viewMenu.buttonConfirm.addTarget(self, action:#selector(self.selectorConfirm(button:)),
+        self.content.viewMenu.buttonConfirm.addTarget(self, action:#selector(self.selectorConfirm),
                                                       for:UIControlEvents.touchUpInside)
     }
     

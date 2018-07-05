@@ -27,7 +27,7 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
     }
     
-    @objc func selectorClose(button:UIButton) {
+    @objc func selectorClose() {
         self.animateClose()
     }
     
@@ -46,13 +46,13 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
     }
     
     private func hookSelectors() {
-        self.content.buttonClose.addTarget(self, action:#selector(self.selectorClose(button:)),
+        self.content.buttonClose.addTarget(self, action:#selector(self.selectorClose),
                                            for:UIControlEvents.touchUpInside)
     }
     
     private func makeButtons() {
         let buttonClose:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.stop, target:self,
-                                                          action:#selector(self.selectorClose(button:)))
+                                                          action:#selector(self.selectorClose))
         let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.flexibleSpace,
                                                     target:nil, action:nil)
         let buttonShare:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:self,

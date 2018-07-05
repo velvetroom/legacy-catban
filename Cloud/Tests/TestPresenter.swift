@@ -33,7 +33,7 @@ class TestPresenter:XCTestCase {
     func testDoneTransitionsToHome() {
         var transitioned:Bool = false
         self.transition.onTransitionToHome = { transitioned = true }
-        self.view.selectorDone(button:UIBarButtonItem())
+        self.view.selectorDone()
         XCTAssertTrue(transitioned, "Failed to transition")
     }
     

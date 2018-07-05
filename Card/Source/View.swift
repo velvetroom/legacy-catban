@@ -19,23 +19,23 @@ public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate 
         self.presenter.update(content:textView.text)
     }
     
-    @objc func selectorDone(button:UIBarButtonItem) {
+    @objc func selectorDone() {
         self.content.viewText.resignFirstResponder()
         self.presenter.done()
     }
     
-    @objc func selectorDelete(button:UIBarButtonItem) {
+    @objc func selectorDelete() {
         self.content.viewText.resignFirstResponder()
         self.presenter.delete()
     }
     
     private func configureView() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(button:)))
+                                                         target:self, action:#selector(self.selectorDone))
         let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
-                                                           action:#selector(self.selectorDelete(button:)))
+                                                           action:#selector(self.selectorDelete))
         self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
     }
     

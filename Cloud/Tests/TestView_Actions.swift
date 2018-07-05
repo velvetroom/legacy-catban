@@ -15,14 +15,14 @@ class TestView_Actions:XCTestCase {
     func testSaveCallsPresenter() {
         var called:Bool = false
         self.presenter.onSave = { called = true }
-        self.view.selectorSave(button:UIBarButtonItem())
+        self.view.selectorSave()
         XCTAssertTrue(called, "Not called")
     }
     
     func testShareCallsPresenter() {
         var called:Bool = false
         self.presenter.onShare = { called = true }
-        self.view.selectorShare(button:UIBarButtonItem())
+        self.view.selectorShare()
         XCTAssertTrue(called, "Not called")
     }
 }

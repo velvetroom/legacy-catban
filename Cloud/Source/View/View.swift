@@ -14,24 +14,24 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.hookSelectors()
     }
     
-    @objc func selectorDone(button:UIBarButtonItem) {
+    @objc func selectorDone() {
         self.presenter.done()
     }
     
-    @objc func selectorStart(button:UIButton) {
+    @objc func selectorStart() {
         self.content.buttonStart.isEnabled = false
         self.presenter.start()
     }
     
-    @objc func selectorContinue(button:UIButton) {
+    @objc func selectorContinue() {
         self.presenter.updateViewModel()
     }
     
-    @objc func selectorSave(button:UIBarButtonItem) {
+    @objc func selectorSave() {
         self.presenter.save()
     }
     
-    @objc func selectorShare(button:UIBarButtonItem) {
+    @objc func selectorShare() {
         self.presenter.share()
     }
     
@@ -46,7 +46,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureActions() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(button:)))
+                                                         target:self, action:#selector(self.selectorDone))
         self.setToolbarItems(self.makeToolbarItems(), animated:false)
         self.navigationItem.rightBarButtonItem = buttonDone
     }
@@ -57,9 +57,9 @@ public class View:Architecture.View<Presenter, ViewContent> {
     }
     
     private func hookSelectors() {
-        self.content.buttonStart.addTarget(self, action:#selector(self.selectorStart(button:)),
+        self.content.buttonStart.addTarget(self, action:#selector(self.selectorStart),
                                       for:UIControlEvents.touchUpInside)
-        self.content.buttonContinue.addTarget(self, action:#selector(self.selectorContinue(button:)),
+        self.content.buttonContinue.addTarget(self, action:#selector(self.selectorContinue),
                                               for:UIControlEvents.touchUpInside)
     }
     

@@ -44,26 +44,26 @@ class TestView:XCTestCase {
     func testCallPresenterOnDone() {
         var called:Bool = false
         presenter.onDone = { called = true }
-        self.view.selectorDone(button:UIBarButtonItem())
+        self.view.selectorDone()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallPresenterOnContinue() {
         var called:Bool = false
         presenter.onUpdateViewModel = { called = true }
-        self.view.selectorContinue(button:UIButton())
+        self.view.selectorContinue()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallsPresenterOnStart() {
         var called:Bool = false
         presenter.onStart = { called = true }
-        self.view.selectorStart(button:UIButton())
+        self.view.selectorStart()
         XCTAssertTrue(called, "Not called")
     }
     
     func testSetButtonDisabledOnStart() {
-        self.view.selectorStart(button:UIButton())
+        self.view.selectorStart()
         XCTAssertFalse(self.view.content.buttonStart.isEnabled, "Should be disabled")
     }
     

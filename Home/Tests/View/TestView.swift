@@ -22,7 +22,7 @@ class TestView:XCTestCase {
     func testMenuButtonCallsPresenter() {
         var called:Bool = false
         self.presenter.onShowMenu = { called = true }
-        self.view.selectorMenu(button:UIBarButtonItem())
+        self.view.selectorMenu()
         XCTAssertTrue(called, "Not called")
     }
     

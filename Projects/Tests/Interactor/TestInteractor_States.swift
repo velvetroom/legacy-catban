@@ -34,7 +34,7 @@ class TestInteractor_States:XCTestCase {
     
     func testRenameChangesStateToRename() {
         self.view.presenter.state.selected = String()
-        self.view.selectorRename(button:UIBarButtonItem())
+        self.view.selectorRename()
         let state:StateRename? = self.interactor.state as? StateRename
         XCTAssertNotNil(state, "Invalid state")
         XCTAssertNotNil(state?.project, "Failed to inject to project to state")
@@ -52,7 +52,7 @@ class TestInteractor_States:XCTestCase {
             transitioned = true
         }
         self.view.presenter.state.selected = String()
-        self.view.selectorRename(button:UIBarButtonItem())
+        self.view.selectorRename()
         XCTAssertTrue(transitioned, "No trasition")
     }
     

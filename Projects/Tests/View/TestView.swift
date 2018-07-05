@@ -28,35 +28,35 @@ class TestView:XCTestCase {
     func testCallsPresenterOnOpen() {
         var called:Bool = false
         self.presenter.onOpen = { called = true }
-        self.view.selectorOpen(button:UIBarButtonItem())
+        self.view.selectorOpen()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallsPresenterOnOpenCloud() {
         var called:Bool = false
         self.presenter.onOpenCloud = { called = true }
-        self.view.selectorCloud(button:UIBarButtonItem())
+        self.view.selectorCloud()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallsPresenterAddProject() {
         var called:Bool = false
         self.presenter.onAddProject = { called = true }
-        self.view.selectorAddProject(button:UIBarButtonItem())
+        self.view.selectorAddProject()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallsPresenterOnRename() {
         var called:Bool = false
         self.presenter.onRename = { called = true }
-        self.view.selectorRename(button:UIBarButtonItem())
+        self.view.selectorRename()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCallsPresenterOnDelete() {
         var called:Bool = false
         self.presenter.onDelete = { called = true }
-        self.view.selectorDelete(button:UIBarButtonItem())
+        self.view.selectorDelete()
         XCTAssertTrue(called, "Not called")
     }
 }

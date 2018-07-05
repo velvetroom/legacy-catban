@@ -34,14 +34,14 @@ class TestView_FirstResponder:XCTestCase {
     func testTextResignsFirstResponderOnDone() {
         var resigns:Bool = false
         self.text.onResignsFirstResponder = { resigns = true }
-        self.view.selectorDone(button:UIBarButtonItem())
+        self.view.selectorDone()
         XCTAssertTrue(resigns, "Not resigning")
     }
     
     func testTextResignsFirstResponderOnDelete() {
         var resigns:Bool = false
         self.text.onResignsFirstResponder = { resigns = true }
-        self.view.selectorDelete(button:UIBarButtonItem())
+        self.view.selectorDelete()
         XCTAssertTrue(resigns, "Not resigning")
     }
 }

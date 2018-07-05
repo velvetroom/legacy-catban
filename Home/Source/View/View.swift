@@ -23,14 +23,14 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.listenForOrientationChange()
     }
     
-    @objc func selectorMenu(button:UIBarButtonItem) {
+    @objc func selectorMenu() {
         self.presenter.showMenu()
     }
     
     private func configureView() {
         let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
         self.buttonMenu = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
-                                          target:self, action:#selector(self.selectorMenu(button:)))
+                                          target:self, action:#selector(self.selectorMenu))
     }
     
     private func configureCanvas() {

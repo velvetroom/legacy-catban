@@ -20,23 +20,23 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.content.viewList.updateLayout()
     }
     
-    @objc func selectorOpen(button:UIBarButtonItem) {
+    @objc func selectorOpen() {
         self.presenter.openProject()
     }
     
-    @objc func selectorCloud(button:UIBarButtonItem) {
+    @objc func selectorCloud() {
         self.presenter.openProjectCloud()
     }
     
-    @objc func selectorAddProject(button:UIBarButtonItem) {
+    @objc func selectorAddProject() {
         self.presenter.addProject()
     }
     
-    @objc func selectorRename(button:UIBarButtonItem) {
+    @objc func selectorRename() {
         self.presenter.rename()
     }
     
-    @objc func selectorDelete(button:UIBarButtonItem) {
+    @objc func selectorDelete() {
         self.presenter.delete()
     }
     
@@ -45,7 +45,7 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.setToolbarItems(self.makeToolbarItems(), animated:false)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.add,
-            target:self, action:#selector(self.selectorAddProject(button:)))
+            target:self, action:#selector(self.selectorAddProject))
     }
     
     private func hookDelegates() {

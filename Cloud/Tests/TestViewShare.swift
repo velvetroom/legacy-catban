@@ -15,7 +15,7 @@ class TestViewShare:XCTestCase {
     func testSelectorCloseDimissesView() {
         let expect:XCTestExpectation = self.expectation(description:"View not dismissed")
         self.transition.onDismiss = { expect.fulfill() }
-        self.view.selectorClose(button:UIButton())
+        self.view.selectorClose()
         self.waitForExpectations(timeout:0.7, handler:nil)
     }
     

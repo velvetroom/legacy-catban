@@ -13,22 +13,22 @@ class ViewMenu:Architecture.View<PresenterMenu, ViewMenuContent> {
         self.hookSelectors()
     }
     
-    @objc func selectorClose(button:UIButton) {
+    @objc func selectorClose() {
         self.content.animateClose()
         self.presenter.close()
     }
     
-    @objc func selectorCloud(button:UIButton) {
+    @objc func selectorCloud() {
         self.content.animateClose()
         self.presenter.openCloud()
     }
     
-    @objc func selectorProjects(button:UIButton) {
+    @objc func selectorProjects() {
         self.content.animateClose()
         self.presenter.openProjects()
     }
     
-    @objc func selectorAbout(button:UIButton) {
+    @objc func selectorAbout() {
         self.presenter.openAbout()
     }
     
@@ -43,13 +43,13 @@ class ViewMenu:Architecture.View<PresenterMenu, ViewMenuContent> {
     }
     
     private func hookSelectors() {
-        self.content.viewClose.addTarget(self, action:#selector(self.selectorClose(button:)),
+        self.content.viewClose.addTarget(self, action:#selector(self.selectorClose),
                                          for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose(button:)),
+        self.content.viewOptions.closeButton.addTarget(self, action:#selector(self.selectorClose),
                                                        for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.optionCloud.addTarget(self, action:#selector(self.selectorCloud(button:)),
+        self.content.viewOptions.optionCloud.addTarget(self, action:#selector(self.selectorCloud),
                                                        for:UIControlEvents.touchUpInside)
-        self.content.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects(button:)),
+        self.content.viewOptions.optionProjects.addTarget(self, action:#selector(self.selectorProjects),
                                                           for:UIControlEvents.touchUpInside)
         
 //        self.viewBase.viewOptions.optionAbout.addTarget(self, action:#selector(self.selectorAbout(button:)),

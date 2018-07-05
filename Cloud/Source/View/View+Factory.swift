@@ -12,12 +12,12 @@ extension View {
     
     private func makeButtonSave() -> UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
-                               action:#selector(self.selectorSave(button:)))
+                               action:#selector(self.selectorSave))
     }
     
     private func makeButtonShare() -> UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:self,
-                               action:#selector(self.selectorShare(button:)))
+                               action:#selector(self.selectorShare))
     }
     
     private func makeSeparator() -> UIBarButtonItem {
