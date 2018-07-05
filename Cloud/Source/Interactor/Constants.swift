@@ -33,16 +33,10 @@ struct Constants {
     }
     
     struct ShareBase {
+        static let barHeight:CGFloat = 44
         static let animationDuration:TimeInterval = 0.2
         static let height:CGFloat = 310
         static let borderHeight:CGFloat = 1
-    }
-    
-    struct ShareDone {
-        static let fontSize:CGFloat = 16
-        static let width:CGFloat = 120
-        static let height:CGFloat = 32
-        static let bottom:CGFloat = -20
     }
     
     struct ShareImage {

@@ -4,6 +4,7 @@ class ViewShareContent:UIView {
     weak var viewImage:ViewShareImage!
     weak var viewBackground:ViewShareBackground!
     weak var viewBase:ViewShareBase!
+    weak var viewBar:ViewShareBar!
     weak var buttonClose:UIButton!
     
     init() {
@@ -26,6 +27,7 @@ class ViewShareContent:UIView {
         self.makeClose()
         self.makeBase()
         self.makeImage()
+        self.makeBar()
     }
     
     private func layoutOutlets() {
@@ -33,6 +35,7 @@ class ViewShareContent:UIView {
         self.layoutClose()
         self.layoutBase()
         self.layoutImage()
+        self.layoutBar()
     }
     
     private func makeBackground() {
@@ -58,6 +61,12 @@ class ViewShareContent:UIView {
         let viewImage:ViewShareImage = ViewShareImage()
         self.viewImage = viewImage
         self.viewBase.addSubview(viewImage)
+    }
+    
+    private func makeBar() {
+        let viewBar:ViewShareBar = ViewShareBar()
+        self.viewBar = viewBar
+        self.addSubview(viewBar)
     }
     
     private func layoutBackground() {
@@ -86,6 +95,13 @@ class ViewShareContent:UIView {
         self.viewImage.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
         self.viewImage.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
         self.viewImage.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
-        self.viewImage.bottomAnchor.constraint(equalTo:self.viewBase.buttonDone.topAnchor).isActive = true
+        self.viewImage.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
+    }
+    
+    private func layoutBar() {
+        self.viewBar.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
+        self.viewBar.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
+        self.viewBar.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
+        self.viewBar.heightAnchor.constraint(equalToConstant:Constants.ShareBase.barHeight).isActive = true
     }
 }

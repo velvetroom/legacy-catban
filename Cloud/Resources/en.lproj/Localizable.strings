@@ -3,4 +3,3 @@ ViewModelFactory_LabelNotClouded="Cloud not started for this Board";
 ViewModelFactory_LabelSaved="Last saved\n";
 ViewContent_ButtonStart="Start";
 ViewContent_ButtonContinue="Continue";
-ViewShareBase_ButtonDone="Done";

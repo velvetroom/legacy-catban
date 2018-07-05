@@ -1,8 +1,7 @@
 import UIKit
 
-class ViewShareBase:UIView {
+class ViewShareBar:UIToolbar {
     weak var viewBorder:UIView!
-    weak var layoutTop:NSLayoutConstraint!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -16,9 +15,13 @@ class ViewShareBase:UIView {
     }
     
     private func configureView() {
-        self.clipsToBounds = true
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = false
         self.backgroundColor = UIColor.white
+        self.barStyle = UIBarStyle.default
+        self.barTintColor = UIColor.white
+        self.tintColor = UIColor.black
+        self.isTranslucent = false
     }
     
     private func makeOutlets() {
@@ -32,14 +35,14 @@ class ViewShareBase:UIView {
     private func makeBorder() {
         let viewBorder:UIView = UIView()
         viewBorder.translatesAutoresizingMaskIntoConstraints = false
-        viewBorder.backgroundColor = UIColor.black
+        viewBorder.backgroundColor = UIColor(white:0, alpha:0.2)
         viewBorder.isUserInteractionEnabled = false
         self.viewBorder = viewBorder
         self.addSubview(viewBorder)
     }
     
     private func layoutBorder() {
-        self.viewBorder.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        self.viewBorder.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
         self.viewBorder.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         self.viewBorder.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         self.viewBorder.heightAnchor.constraint(equalToConstant:Constants.ShareBase.borderHeight).isActive = true

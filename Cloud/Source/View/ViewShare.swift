@@ -13,6 +13,7 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
     override func didLoad() {
         super.didLoad()
         self.hookSelectors()
+        self.makeButtons()
         self.configureViewModel()
     }
     
@@ -33,6 +34,16 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
     private func hookSelectors() {
         self.content.buttonClose.addTarget(self, action:#selector(self.selectorClose(button:)),
                                            for:UIControlEvents.touchUpInside)
+    }
+    
+    private func makeButtons() {
+        let buttonClose:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.stop, target:self,
+                                                          action:#selector(self.selectorClose(button:)))
+        let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.flexibleSpace,
+                                                    target:nil, action:nil)
+        let buttonShare:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:nil,
+                                                          action:nil)
+        self.content.viewBar.setItems([buttonClose, space, buttonShare], animated:false)
     }
     
     private func configureViewModel() {

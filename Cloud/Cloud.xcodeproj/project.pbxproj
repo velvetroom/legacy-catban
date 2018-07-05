@@ -52,6 +52,7 @@
 		DAE73E6C20EE1DD20097B174 /* TestInteractor_Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6B20EE1DD20097B174 /* TestInteractor_Share.swift */; };
 		DAE73E6E20EE21BB0097B174 /* TestPresenterShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6D20EE21BB0097B174 /* TestPresenterShare.swift */; };
 		DAE73E7020EE23D00097B174 /* ViewModelQr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6F20EE23D00097B174 /* ViewModelQr.swift */; };
+		DAE73E7220EE43AA0097B174 /* ViewShareBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E7120EE43AA0097B174 /* ViewShareBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		DAE73E6B20EE1DD20097B174 /* TestInteractor_Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_Share.swift; sourceTree = "<group>"; };
 		DAE73E6D20EE21BB0097B174 /* TestPresenterShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenterShare.swift; sourceTree = "<group>"; };
 		DAE73E6F20EE23D00097B174 /* ViewModelQr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelQr.swift; sourceTree = "<group>"; };
+		DAE73E7120EE43AA0097B174 /* ViewShareBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				DAE73E6320EDF1E40097B174 /* ViewShareBackground.swift */,
 				DAE73E6120EDEFDE0097B174 /* ViewShareBase.swift */,
 				DAE73E6720EE108E0097B174 /* ViewShareImage.swift */,
+				DAE73E7120EE43AA0097B174 /* ViewShareBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				DAE73E5820EDEB610097B174 /* PresenterShare.swift in Sources */,
 				DA680E2320EBB71E00D41CDA /* View+Factory.swift in Sources */,
 				DA49175F20E5FE8F00416DD2 /* ViewModelProject.swift in Sources */,
+				DAE73E7220EE43AA0097B174 /* ViewShareBar.swift in Sources */,
 				DAE73E5A20EDEB8D0097B174 /* ViewShare.swift in Sources */,
 				DAE73E6A20EE1A2A0097B174 /* Interactor+Qr.swift in Sources */,
 				DAE73E6020EDEC290097B174 /* ViewShareContent.swift in Sources */,
