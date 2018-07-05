@@ -20,14 +20,6 @@ class TestRemote:XCTestCase {
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
-    func testRemoteSaveUpdatesUploaded() {
-        let expect:XCTestExpectation = self.expectation(description:"Project not saved")
-        self.remote.save(data:Data(), identifier:String(), onCompletion: {
-            expect.fulfill()
-        }, onError: { (error:Error) in })
-        self.waitForExpectations(timeout:0.3, handler:nil)
-    }
-    
     func testRemoteSaveReturnsErrorIfNoProvider() {
         Configuration.remoteProviderType = nil
         let expect:XCTestExpectation = self.expectation(description:"Error not returned")

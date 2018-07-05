@@ -37,6 +37,28 @@ class TestRepository_Remote:XCTestCase {
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
+    func testSaveReturnsNoError() {
+        let expect:XCTestExpectation = self.expectation(description:"Project not saved")
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        let synched:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
+        self.repository.remoteSave(project:synched, onCompletion: {
+            expect.fulfill()
+        }, onError: { (error:Error) in })
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testSaveUpdatesUploaded() {
+        let expect:XCTestExpectation = self.expectation(description:"Project not saved")
+        let project:ProjectProtocol = ProjectFactory.newProject()
+        var synched:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
+        synched.uploaded = 0
+        self.repository.remoteSave(project:synched, onCompletion: {
+            XCTAssertGreaterThan(synched.uploaded, 0, "Uploaded not updated")
+            expect.fulfill()
+        }, onError: { (error:Error) in })
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
     private func validateSynched(project:ProjectSynchedProtocol, with original:ProjectProtocol) throws {
         XCTAssertEqual(project.identifier, original.identifier, "Not the same project")
         XCTAssertEqual(project.name, original.name, "Not the same project")
