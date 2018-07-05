@@ -1,6 +1,7 @@
 import Foundation
 import CleanArchitecture
 import Architecture
+import Board
 
 public class Presenter:PresenterProtocol {
     public weak var transition:TransitionProtocol?
@@ -45,7 +46,8 @@ public class Presenter:PresenterProtocol {
     }
     
     private func updateViewModelSaved() {
-        let property:ViewModelContent = ViewModelFactory.makeContentSaved()
+        let project:ProjectSynchedProtocol = self.interactor.project as! ProjectSynchedProtocol
+        let property:ViewModelContent = ViewModelFactory.makeContentSavedWith(project:project)
         self.viewModel.update(property:property)
     }
     

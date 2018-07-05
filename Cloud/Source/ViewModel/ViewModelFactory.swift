@@ -5,8 +5,8 @@ import Shared
 
 class ViewModelFactory {
     class func makeContentWith(project:ProjectProtocol) -> ViewModelContent {
-        if project is ProjectSynchedProtocol {
-            return makeCloud()
+        if let project:ProjectSynchedProtocol = project as? ProjectSynchedProtocol {
+            return makeCloudWithProject(project:project)
         } else {
             return makeNotClouded()
         }
@@ -33,11 +33,8 @@ class ViewModelFactory {
         return viewModel
     }
     
-    class func makeContentSaved() -> ViewModelContent {
-        var viewModel:ViewModelContent = ViewModelContent()
-        viewModel.buttonContinueHidden = true
-        viewModel.buttonStartHidden = true
-        viewModel.message = String.localized(key:"ViewModelFactory_LabelSaved", in:View.self)
+    class func makeContentSavedWith(project:ProjectSynchedProtocol) -> ViewModelContent {
+        var viewModel:ViewModelContent = makeLastSavedWith(project:project)
         viewModel.icon = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
         return viewModel
     }
@@ -56,13 +53,28 @@ class ViewModelFactory {
         return property
     }
     
-    private class func makeCloud() -> ViewModelContent {
+    private class func makeCloudWithProject(project:ProjectSynchedProtocol) -> ViewModelContent {
+        var viewModel:ViewModelContent = makeLastSavedWith(project:project)
+        viewModel.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
+        return viewModel
+    }
+    
+    private class func makeLastSavedWith(project:ProjectSynchedProtocol) -> ViewModelContent {
+        var message:String = String.localized(key:"ViewModelFactory_LabelSaved", in:Cloud.View.self)
+        message += dateFrom(timestamp:project.uploaded)
         var property:ViewModelContent = ViewModelContent()
         property.buttonContinueHidden = true
         property.buttonStartHidden = true
-        property.message = String.localized(key:"ViewModelFactory_LabelCloud", in:Cloud.View.self)
-        property.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
+        property.message = message
         return property
+    }
+    
+    private class func dateFrom(timestamp:Int) -> String {
+        let date:Date = Date(timeIntervalSince1970:TimeInterval(timestamp))
+        let dateFormatter:DateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        return dateFormatter.string(from:date)
     }
     
     private init() { }
