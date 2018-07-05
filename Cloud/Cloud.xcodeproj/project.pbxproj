@@ -44,6 +44,11 @@
 		DAE73E5820EDEB610097B174 /* PresenterShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5720EDEB610097B174 /* PresenterShare.swift */; };
 		DAE73E5A20EDEB8D0097B174 /* ViewShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5920EDEB8D0097B174 /* ViewShare.swift */; };
 		DAE73E6020EDEC290097B174 /* ViewShareContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */; };
+		DAE73E6220EDEFDE0097B174 /* ViewShareBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6120EDEFDE0097B174 /* ViewShareBase.swift */; };
+		DAE73E6420EDF1E40097B174 /* ViewShareBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6320EDF1E40097B174 /* ViewShareBackground.swift */; };
+		DAE73E6620EDFDFA0097B174 /* TestViewShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6520EDFDFA0097B174 /* TestViewShare.swift */; };
+		DAE73E6820EE108E0097B174 /* ViewShareImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6720EE108E0097B174 /* ViewShareImage.swift */; };
+		DAE73E6A20EE1A2A0097B174 /* Interactor+Qr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E6920EE1A2A0097B174 /* Interactor+Qr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,11 @@
 		DAE73E5720EDEB610097B174 /* PresenterShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterShare.swift; sourceTree = "<group>"; };
 		DAE73E5920EDEB8D0097B174 /* ViewShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShare.swift; sourceTree = "<group>"; };
 		DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareContent.swift; sourceTree = "<group>"; };
+		DAE73E6120EDEFDE0097B174 /* ViewShareBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareBase.swift; sourceTree = "<group>"; };
+		DAE73E6320EDF1E40097B174 /* ViewShareBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareBackground.swift; sourceTree = "<group>"; };
+		DAE73E6520EDFDFA0097B174 /* TestViewShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewShare.swift; sourceTree = "<group>"; };
+		DAE73E6720EE108E0097B174 /* ViewShareImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareImage.swift; sourceTree = "<group>"; };
+		DAE73E6920EE1A2A0097B174 /* Interactor+Qr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+Qr.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +222,7 @@
 				DA680E2620EBC52300D41CDA /* TestPresenter_Actions.swift */,
 				DA49176520E60A7700416DD2 /* TestView.swift */,
 				DA680E2420EBBB4000D41CDA /* TestView_Actions.swift */,
+				DAE73E6520EDFDFA0097B174 /* TestViewShare.swift */,
 				DA49178320E651EE00416DD2 /* TestViewModelFactory.swift */,
 				DA569E6D20EB4974006282E5 /* MockInteractor.swift */,
 				DA49176D20E6247400416DD2 /* MockPresenter.swift */,
@@ -226,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
+				DAE73E6920EE1A2A0097B174 /* Interactor+Qr.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -258,6 +270,9 @@
 				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
 				DAE73E5920EDEB8D0097B174 /* ViewShare.swift */,
 				DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */,
+				DAE73E6320EDF1E40097B174 /* ViewShareBackground.swift */,
+				DAE73E6120EDEFDE0097B174 /* ViewShareBase.swift */,
+				DAE73E6720EE108E0097B174 /* ViewShareImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,16 +450,20 @@
 			files = (
 				DA49177020E6262300416DD2 /* ViewModelContent.swift in Sources */,
 				DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */,
+				DAE73E6220EDEFDE0097B174 /* ViewShareBase.swift in Sources */,
 				DAE73E5820EDEB610097B174 /* PresenterShare.swift in Sources */,
 				DA680E2320EBB71E00D41CDA /* View+Factory.swift in Sources */,
 				DA49175F20E5FE8F00416DD2 /* ViewModelProject.swift in Sources */,
 				DAE73E5A20EDEB8D0097B174 /* ViewShare.swift in Sources */,
+				DAE73E6A20EE1A2A0097B174 /* Interactor+Qr.swift in Sources */,
 				DAE73E6020EDEC290097B174 /* ViewShareContent.swift in Sources */,
 				DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */,
 				DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */,
+				DAE73E6420EDF1E40097B174 /* ViewShareBackground.swift in Sources */,
 				DA49177620E6397E00416DD2 /* ViewModelFactory.swift in Sources */,
 				DA51AD7020E51E0A00EE178D /* ViewContent.swift in Sources */,
 				DA51AD6E20E51D0C00EE178D /* View.swift in Sources */,
+				DAE73E6820EE108E0097B174 /* ViewShareImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +474,7 @@
 				DA49176E20E6247400416DD2 /* MockPresenter.swift in Sources */,
 				DA49178420E651EE00416DD2 /* TestViewModelFactory.swift in Sources */,
 				DA680E2520EBBB4000D41CDA /* TestView_Actions.swift in Sources */,
+				DAE73E6620EDFDFA0097B174 /* TestViewShare.swift in Sources */,
 				DADB20F220EA6067000C89D9 /* MockRepositoryProjectProtocol.swift in Sources */,
 				DA49176620E60A7700416DD2 /* TestView.swift in Sources */,
 				DA51AD7220E51EC000EE178D /* TestPresenter.swift in Sources */,

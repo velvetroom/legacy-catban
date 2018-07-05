@@ -37,7 +37,10 @@ public class Presenter:PresenterProtocol {
     }
     
     func share() {
-        
+        let presenter:PresenterShare = PresenterShare()
+        presenter.interactor = self.interactor
+        let view:ViewShare = ViewShare(presenter:presenter)
+        self.transition?.present(view:view)
     }
     
     func updateViewModel() {

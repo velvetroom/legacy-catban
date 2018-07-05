@@ -25,4 +25,23 @@ struct ViewConstants {
     struct Toolbar {
         static let fixedSpace:CGFloat = 30
     }
+    
+    struct ShareBackground {
+        static let animationDuration:TimeInterval = 0.3
+        static let alphaOpen:CGFloat = 1
+        static let alphaClose:CGFloat = 0
+    }
+    
+    struct ShareBase {
+        static let animationDuration:TimeInterval = 0.2
+        static let height:CGFloat = 310
+        static let borderHeight:CGFloat = 1
+    }
+    
+    struct ShareDone {
+        static let fontSize:CGFloat = 16
+        static let width:CGFloat = 120
+        static let height:CGFloat = 32
+        static let bottom:CGFloat = -20
+    }
 }

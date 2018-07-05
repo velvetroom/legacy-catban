@@ -16,7 +16,8 @@ extension View {
     }
     
     private func makeButtonShare() -> UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:nil, action:nil)
+        return UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:self,
+                               action:#selector(self.selectorShare(button:)))
     }
     
     private func makeSeparator() -> UIBarButtonItem {
