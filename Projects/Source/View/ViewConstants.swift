@@ -28,4 +28,10 @@ struct ViewConstants {
         static let assetColumns:String = "assetColumns"
         static let assetCloud:String = "assetCloud"
     }
+    
+    struct AddBackground {
+        static let animationDuration:TimeInterval = 0.3
+        static let alphaOpen:CGFloat = 1
+        static let alphaClose:CGFloat = 0
+    }
 }

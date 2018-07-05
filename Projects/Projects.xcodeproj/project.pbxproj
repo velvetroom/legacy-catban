@@ -58,6 +58,10 @@
 		DA77482920DFAA0E0081D86E /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA77482820DFAA0E0081D86E /* TestPresenter.swift */; };
 		DA93139420B82F84008EDA07 /* Projects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93138020B82F13008EDA07 /* Projects.framework */; };
 		DA9313A020B83016008EDA07 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93139F20B83016008EDA07 /* Interactor.swift */; };
+		DA9E178A20EE62A000A5DAB5 /* ViewAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E178920EE62A000A5DAB5 /* ViewAdd.swift */; };
+		DA9E178C20EE62B000A5DAB5 /* PresenterAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E178B20EE62B000A5DAB5 /* PresenterAdd.swift */; };
+		DA9E178E20EE631600A5DAB5 /* ViewAddContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E178D20EE631600A5DAB5 /* ViewAddContent.swift */; };
+		DA9E179020EE654300A5DAB5 /* ViewAddBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E178F20EE654300A5DAB5 /* ViewAddBackground.swift */; };
 		DA9E471620D16FF200CC3693 /* MockProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E471520D16FF200CC3693 /* MockProjectProtocol.swift */; };
 		DAB0EFF720BD6FF20027FF56 /* ViewSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0EFF620BD6FF20027FF56 /* ViewSelector.swift */; };
 		DACE508D20B848F200276D5A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
@@ -140,6 +144,10 @@
 		DA93138F20B82F84008EDA07 /* TestsProjects.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsProjects.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93139A20B82FBA008EDA07 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DA93139F20B83016008EDA07 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		DA9E178920EE62A000A5DAB5 /* ViewAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAdd.swift; sourceTree = "<group>"; };
+		DA9E178B20EE62B000A5DAB5 /* PresenterAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterAdd.swift; sourceTree = "<group>"; };
+		DA9E178D20EE631600A5DAB5 /* ViewAddContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAddContent.swift; sourceTree = "<group>"; };
+		DA9E178F20EE654300A5DAB5 /* ViewAddBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAddBackground.swift; sourceTree = "<group>"; };
 		DA9E471520D16FF200CC3693 /* MockProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectProtocol.swift; sourceTree = "<group>"; };
 		DAB0EFF620BD6FF20027FF56 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSelector.swift; sourceTree = "<group>"; };
 		DACE508C20B848F200276D5A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +248,7 @@
 				DA44422820D24D6500587AF3 /* Presenter+CollectionDelegate.swift */,
 				DA44422A20D250FC00587AF3 /* Presenter+CollectionDatasource.swift */,
 				DA52106120DA7B4B008DE6DE /* PresenterState.swift */,
+				DA9E178B20EE62B000A5DAB5 /* PresenterAdd.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -268,6 +277,9 @@
 				DA435A6F20BAA07E000C2E56 /* ViewListCell.swift */,
 				DAB0EFF620BD6FF20027FF56 /* ViewSelector.swift */,
 				DA435A7620BABD91000C2E56 /* ViewEmpty.swift */,
+				DA9E178920EE62A000A5DAB5 /* ViewAdd.swift */,
+				DA9E178D20EE631600A5DAB5 /* ViewAddContent.swift */,
+				DA9E178F20EE654300A5DAB5 /* ViewAddBackground.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -553,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9E178E20EE631600A5DAB5 /* ViewAddContent.swift in Sources */,
 				DA04DEB220B9722500228ABB /* ViewConstants.swift in Sources */,
 				DA62C39420D2A0C800085759 /* StateProtocol+Default.swift in Sources */,
 				DA3D81B120DB851B004E9E85 /* StateDelete.swift in Sources */,
@@ -567,10 +580,12 @@
 				DA52106020DA74C5008DE6DE /* View+ViewModel.swift in Sources */,
 				DA44423D20D26EA000587AF3 /* Interactor+State.swift in Sources */,
 				DA52105E20DA6E1C008DE6DE /* ViewModelSelected.swift in Sources */,
+				DA9E178C20EE62B000A5DAB5 /* PresenterAdd.swift in Sources */,
 				DA44422920D24D6500587AF3 /* Presenter+CollectionDelegate.swift in Sources */,
 				DA4571FA20D38FD90066764B /* Interactor+Namer.swift in Sources */,
 				DA44423B20D26D4F00587AF3 /* StateAdd.swift in Sources */,
 				DA435A7D20BAC5B4000C2E56 /* ViewModelListItem.swift in Sources */,
+				DA9E178A20EE62A000A5DAB5 /* ViewAdd.swift in Sources */,
 				DAEABCA520C7BB0700025891 /* ViewContent.swift in Sources */,
 				DA44422520D2456F00587AF3 /* ViewModelList.swift in Sources */,
 				DA4F1AC620D684C400C0BB5C /* ViewModelContent.swift in Sources */,
@@ -582,6 +597,7 @@
 				DA3D81AF20DB8474004E9E85 /* Interactor+Deleter.swift in Sources */,
 				DA44423920D26D1F00587AF3 /* StateRename.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Interactor.swift in Sources */,
+				DA9E179020EE654300A5DAB5 /* ViewAddBackground.swift in Sources */,
 				DA204FFF20B8984600A41DB0 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
