@@ -41,6 +41,9 @@
 		DADB20F020EA5D67000C89D9 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADB20EF20EA5D67000C89D9 /* Repository.framework */; };
 		DADB20F220EA6067000C89D9 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F120EA6067000C89D9 /* MockRepositoryProjectProtocol.swift */; };
 		DADB20F820EA675A000C89D9 /* MockBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */; };
+		DAE73E5820EDEB610097B174 /* PresenterShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5720EDEB610097B174 /* PresenterShare.swift */; };
+		DAE73E5A20EDEB8D0097B174 /* ViewShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5920EDEB8D0097B174 /* ViewShare.swift */; };
+		DAE73E6020EDEC290097B174 /* ViewShareContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		DADB20EF20EA5D67000C89D9 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB20F120EA6067000C89D9 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBoardProtocol.swift; sourceTree = "<group>"; };
+		DAE73E5720EDEB610097B174 /* PresenterShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterShare.swift; sourceTree = "<group>"; };
+		DAE73E5920EDEB8D0097B174 /* ViewShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShare.swift; sourceTree = "<group>"; };
+		DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShareContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,15 +195,10 @@
 		DAD2528A20E517EA00B97B2E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
-				DA51AD6B20E51CE900EE178D /* Presenter.swift */,
-				DA51AD6D20E51D0C00EE178D /* View.swift */,
-				DA680E2220EBB71E00D41CDA /* View+Factory.swift */,
-				DA49177520E6397E00416DD2 /* ViewModelFactory.swift */,
-				DA49175E20E5FE8F00416DD2 /* ViewModelProject.swift */,
-				DA49176F20E6262300416DD2 /* ViewModelContent.swift */,
-				DA49176B20E6134000416DD2 /* ViewConstants.swift */,
-				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
+				DAE73E5B20EDEBB20097B174 /* Interactor */,
+				DAE73E5C20EDEBBF0097B174 /* Presenter */,
+				DAE73E5D20EDEBCA0097B174 /* ViewModel */,
+				DAE73E5E20EDEBD60097B174 /* View */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -219,6 +220,46 @@
 				DADB20F720EA675A000C89D9 /* MockBoardProtocol.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		DAE73E5B20EDEBB20097B174 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DA51AD5E20E51AEE00EE178D /* Interactor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DAE73E5C20EDEBBF0097B174 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA51AD6B20E51CE900EE178D /* Presenter.swift */,
+				DAE73E5720EDEB610097B174 /* PresenterShare.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DAE73E5D20EDEBCA0097B174 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA49177520E6397E00416DD2 /* ViewModelFactory.swift */,
+				DA49175E20E5FE8F00416DD2 /* ViewModelProject.swift */,
+				DA49176F20E6262300416DD2 /* ViewModelContent.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAE73E5E20EDEBD60097B174 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA49176B20E6134000416DD2 /* ViewConstants.swift */,
+				DA51AD6D20E51D0C00EE178D /* View.swift */,
+				DA680E2220EBB71E00D41CDA /* View+Factory.swift */,
+				DA51AD6F20E51E0A00EE178D /* ViewContent.swift */,
+				DAE73E5920EDEB8D0097B174 /* ViewShare.swift */,
+				DAE73E5F20EDEC290097B174 /* ViewShareContent.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +435,11 @@
 			files = (
 				DA49177020E6262300416DD2 /* ViewModelContent.swift in Sources */,
 				DA51AD5F20E51AEE00EE178D /* Interactor.swift in Sources */,
+				DAE73E5820EDEB610097B174 /* PresenterShare.swift in Sources */,
 				DA680E2320EBB71E00D41CDA /* View+Factory.swift in Sources */,
 				DA49175F20E5FE8F00416DD2 /* ViewModelProject.swift in Sources */,
+				DAE73E5A20EDEB8D0097B174 /* ViewShare.swift in Sources */,
+				DAE73E6020EDEC290097B174 /* ViewShareContent.swift in Sources */,
 				DA49176C20E6134000416DD2 /* ViewConstants.swift in Sources */,
 				DA51AD6C20E51CE900EE178D /* Presenter.swift in Sources */,
 				DA49177620E6397E00416DD2 /* ViewModelFactory.swift in Sources */,
