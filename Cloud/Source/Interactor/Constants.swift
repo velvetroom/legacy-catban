@@ -53,5 +53,6 @@ struct Constants {
         static let correctionValue:String = "H"
         static let contentKey:String = "inputMessage"
         static let scale:CGFloat = 3
+        static let saveScale:CGFloat = 1
     }
 }

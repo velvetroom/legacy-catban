@@ -1,5 +1,6 @@
 import XCTest
 import Board
+import Shared
 @testable import Cloud
 
 class TestInteractor_Share:XCTestCase {
@@ -8,6 +9,7 @@ class TestInteractor_Share:XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Cloud.View()
         let original:ProjectProtocol = ProjectFactory.newProject()
         self.project = ProjectFactory.makeSynchable(project:original)

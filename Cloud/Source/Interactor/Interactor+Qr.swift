@@ -29,9 +29,12 @@ extension Interactor {
     }
     
     private func generated(image:CIImage, onCompletion:@escaping((UIImage) -> Void)) {
-        let image:UIImage = UIImage(ciImage:image)
+        guard
+            let cgImage:CGImage = CIContext().createCGImage(image, from:image.extent)
+        else { return }
+        let uiImage:UIImage = UIImage(cgImage:cgImage, scale:Constants.Qr.saveScale, orientation:UIImageOrientation.up)
         DispatchQueue.main.async {
-            onCompletion(image)
+            onCompletion(uiImage)
         }
     }
     

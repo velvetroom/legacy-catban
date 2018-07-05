@@ -31,6 +31,20 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
         self.animateClose()
     }
     
+    @objc func selectorShare() {
+        guard
+            let image:UIImage = self.content.viewImage.image
+        else { return }
+        let activity:UIActivityViewController = UIActivityViewController(activityItems:[image],
+                                                                         applicationActivities:nil)
+        if let popover:UIPopoverPresentationController = activity.popoverPresentationController {
+            popover.sourceView = self.content
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
+        }
+        self.present(activity, animated:true, completion:nil)
+    }
+    
     private func hookSelectors() {
         self.content.buttonClose.addTarget(self, action:#selector(self.selectorClose(button:)),
                                            for:UIControlEvents.touchUpInside)
@@ -41,8 +55,8 @@ class ViewShare:Architecture.View<PresenterShare, ViewShareContent> {
                                                           action:#selector(self.selectorClose(button:)))
         let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.flexibleSpace,
                                                     target:nil, action:nil)
-        let buttonShare:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:nil,
-                                                          action:nil)
+        let buttonShare:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.action, target:self,
+                                                          action:#selector(self.selectorShare))
         self.content.viewBar.setItems([buttonClose, space, buttonShare], animated:false)
     }
     

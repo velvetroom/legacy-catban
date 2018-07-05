@@ -1,0 +1,4 @@
+NSPhotoLibraryUsageDescription="Load QR Codes from your Photo Library from Boards shared with you";
+NSPhotoLibraryAddUsageDescription="Store QR Codes in your Photo Library to share your Boards";
+NSCameraUsageDescription="Take pictures for Boards";
+

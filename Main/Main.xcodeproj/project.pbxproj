@@ -60,6 +60,7 @@
 		DADB5F0D209B273700CFFC9A /* MockNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F0C209B273700CFFC9A /* MockNavigationView.swift */; };
 		DADB5F0F209B27D100CFFC9A /* MockInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F0E209B27D100CFFC9A /* MockInteractorProtocol.swift */; };
 		DADB5F11209B283A00CFFC9A /* MockPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5F10209B283A00CFFC9A /* MockPresenterProtocol.swift */; };
+		DAE73E7620EE53310097B174 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE73E7420EE53310097B174 /* InfoPlist.strings */; };
 		DAFD2FCD209CBEC20005F5D2 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FCC209CBEC20005F5D2 /* NavigationProtocol.swift */; };
 		DAFD2FCF209CC0C10005F5D2 /* TestNavigation_Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD2FCE209CC0C10005F5D2 /* TestNavigation_Transitions.swift */; };
 		DAFD2FD3209CC4190005F5D2 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAFD2FD0209CC4120005F5D2 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -150,6 +151,7 @@
 		DADB5F0C209B273700CFFC9A /* MockNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationView.swift; sourceTree = "<group>"; };
 		DADB5F0E209B27D100CFFC9A /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
 		DADB5F10209B283A00CFFC9A /* MockPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterProtocol.swift; sourceTree = "<group>"; };
+		DAE73E7520EE53310097B174 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAFD2FCC209CBEC20005F5D2 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		DAFD2FCE209CC0C10005F5D2 /* TestNavigation_Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation_Transitions.swift; sourceTree = "<group>"; };
 		DAFD2FD0209CC4120005F5D2 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 				DADB5EF4209B154000CFFC9A /* Source */,
 				DADB5EF5209B154900CFFC9A /* Tests */,
 				DADB5EFB209B1DA000CFFC9A /* Assets */,
+				DAE73E7320EE53060097B174 /* Resources */,
 				DA6AA8BD20EB5CCD00D72F15 /* Configuration */,
 				DADB5ED1209B144900CFFC9A /* Products */,
 				DA58BD7E209B3B4A0013DBF0 /* Frameworks */,
@@ -298,6 +301,14 @@
 				DADB5EFC209B1DB700CFFC9A /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		DAE73E7320EE53060097B174 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAE73E7420EE53310097B174 /* InfoPlist.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				DA6AA8C120EB5CD900D72F15 /* GoogleService-Info.plist in Resources */,
 				DADB5EFF209B1DD800CFFC9A /* brand.xcassets in Resources */,
 				DAB4F40520C3CD430000B067 /* assets.xcassets in Resources */,
+				DAE73E7620EE53310097B174 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +563,17 @@
 			targetProxy = DADB5EEE209B148E00CFFC9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAE73E7420EE53310097B174 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE73E7520EE53310097B174 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DADB5EE0209B144A00CFFC9A /* Debug */ = {
