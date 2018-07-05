@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 import CleanArchitecture
 import Architecture
 import Board
@@ -30,6 +30,12 @@ public class Interactor:InteractorProjectProtocol {
             }, onError: { [weak self] (error:Error) in
                 self?.found(error:error, onError:onError)
         })
+    }
+    
+    func generateQr(onCompletion:@escaping((UIImage) -> Void)) {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
+            self?.backgroundGenerateQr(onCompletion:onCompletion)
+        }
     }
     
     private func started(synched:ProjectSynchedProtocol, onCompletion:@escaping(() -> Void)) {

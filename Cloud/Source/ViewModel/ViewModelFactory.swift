@@ -29,13 +29,13 @@ class ViewModelFactory {
         viewModel.buttonContinueHidden = false
         viewModel.buttonStartHidden = true
         viewModel.message = error.localizedDescription
-        viewModel.icon = UIImage(name:ViewConstants.Icon.assetError, in:Cloud.View.self)
+        viewModel.icon = UIImage(name:Constants.Icon.assetError, in:Cloud.View.self)
         return viewModel
     }
     
     class func makeContentSavedWith(project:ProjectSynchedProtocol) -> ViewModelContent {
         var viewModel:ViewModelContent = makeLastSavedWith(project:project)
-        viewModel.icon = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
+        viewModel.icon = UIImage(name:Constants.Icon.assetUpToDate, in:Cloud.View.self)
         return viewModel
     }
     
@@ -49,13 +49,13 @@ class ViewModelFactory {
         var property:ViewModelContent = ViewModelContent()
         property.buttonStartHidden = false
         property.message = String.localized(key:"ViewModelFactory_LabelNotClouded", in:View.self)
-        property.icon = UIImage(name:ViewConstants.Icon.assetNotClouded, in:Cloud.View.self)
+        property.icon = UIImage(name:Constants.Icon.assetNotClouded, in:Cloud.View.self)
         return property
     }
     
     private class func makeCloudWithProject(project:ProjectSynchedProtocol) -> ViewModelContent {
         var viewModel:ViewModelContent = makeLastSavedWith(project:project)
-        viewModel.icon = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
+        viewModel.icon = UIImage(name:Constants.Icon.assetCloud, in:Cloud.View.self)
         return viewModel
     }
     

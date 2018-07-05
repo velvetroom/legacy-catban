@@ -17,27 +17,27 @@ class TestView:XCTestCase {
     }
     
     func testLoadImageNotClouded() {
-        let image:UIImage = UIImage(name:ViewConstants.Icon.assetNotClouded, in:Cloud.View.self)
+        let image:UIImage = UIImage(name:Constants.Icon.assetNotClouded, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
     }
     
     func testLoadImageError() {
-        let image:UIImage = UIImage(name:ViewConstants.Icon.assetError, in:Cloud.View.self)
+        let image:UIImage = UIImage(name:Constants.Icon.assetError, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
     }
     
     func testLoadImageClouded() {
-        let image:UIImage = UIImage(name:ViewConstants.Icon.assetCloud, in:Cloud.View.self)
+        let image:UIImage = UIImage(name:Constants.Icon.assetCloud, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
     }
     
     func testLoadImageUpToDate() {
-        let image:UIImage = UIImage(name:ViewConstants.Icon.assetUpToDate, in:Cloud.View.self)
+        let image:UIImage = UIImage(name:Constants.Icon.assetUpToDate, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
     }
     
     func testLoadImageAction() {
-        let image:UIImage = UIImage(name:ViewConstants.Action.asset, in:Cloud.View.self)
+        let image:UIImage = UIImage(name:Constants.Action.asset, in:Cloud.View.self)
         XCTAssertNotNil(image, "Failed to load")
     }
     

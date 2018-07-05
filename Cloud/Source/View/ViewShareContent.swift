@@ -70,7 +70,7 @@ class ViewShareContent:UIView {
     private func layoutBase() {
         self.viewBase.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         self.viewBase.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        self.viewBase.heightAnchor.constraint(equalToConstant:ViewConstants.ShareBase.height).isActive = true
+        self.viewBase.heightAnchor.constraint(equalToConstant:Constants.ShareBase.height).isActive = true
         self.viewBase.layoutTop = self.viewBase.topAnchor.constraint(equalTo:self.bottomAnchor)
         self.viewBase.layoutTop.isActive = true
     }

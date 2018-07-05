@@ -18,4 +18,12 @@ class TestViewShare:XCTestCase {
         self.view.selectorClose(button:UIButton())
         self.waitForExpectations(timeout:0.7, handler:nil)
     }
+    
+    func testListenToViewModelUpdates() {
+        self.view.didLoad()
+        var viewModel:ViewModelQr = self.view.viewModel.property()
+        viewModel.image = UIImage()
+        self.view.viewModel.update(property:viewModel)
+        XCTAssertNotNil(self.view.content.viewImage.image, "Not listening")
+    }
 }

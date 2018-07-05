@@ -23,7 +23,7 @@ extension View {
     private func makeSeparator() -> UIBarButtonItem {
         let separator:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.fixedSpace,
                                                         target:nil, action:nil)
-        separator.width = ViewConstants.Toolbar.fixedSpace
+        separator.width = Constants.Toolbar.fixedSpace
         return separator
     }
     

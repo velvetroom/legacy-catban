@@ -18,7 +18,7 @@ class ViewShareBackground:UIView {
         self.isUserInteractionEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-        self.alpha = ViewConstants.ShareBackground.alphaClose
+        self.alpha = Constants.ShareBackground.alphaClose
     }
     
     private func makeOutlets() {

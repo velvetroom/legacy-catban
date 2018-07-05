@@ -1,6 +1,6 @@
 import UIKit
 
-struct ViewConstants {
+struct Constants {
     struct Icon {
         static let assetNotClouded:String = "assetNotClouded"
         static let assetCloud:String = "assetCloud"
@@ -43,5 +43,21 @@ struct ViewConstants {
         static let width:CGFloat = 120
         static let height:CGFloat = 32
         static let bottom:CGFloat = -20
+    }
+    
+    struct ShareImage {
+        static let alphaOn:CGFloat = 1
+        static let alphaOff:CGFloat = 0
+        static let animationDuration:TimeInterval = 2
+    }
+    
+    struct Qr {
+        static let prefix:String = "iturbide"
+        static let suffix:String = "catban"
+        static let filterName:String = "CIQRCodeGenerator"
+        static let correctionKey:String = "inputCorrectionLevel"
+        static let correctionValue:String = "H"
+        static let contentKey:String = "inputMessage"
+        static let scale:CGFloat = 3
     }
 }

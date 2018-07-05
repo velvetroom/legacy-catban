@@ -48,7 +48,7 @@ class ViewShareBase:UIView {
         buttonDone.setTitleColor(UIColor.black, for:UIControlState.normal)
         buttonDone.setTitleColor(UIColor(white:0, alpha:0.2), for:UIControlState.highlighted)
         buttonDone.setTitle(String.localized(key:"ViewShareBase_ButtonDone", in:type(of:self)), for:UIControlState())
-        buttonDone.titleLabel!.font = UIFont.systemFont(ofSize:ViewConstants.ShareDone.fontSize,
+        buttonDone.titleLabel!.font = UIFont.systemFont(ofSize:Constants.ShareDone.fontSize,
                                                         weight:UIFont.Weight.bold)
         self.buttonDone = buttonDone
         self.addSubview(buttonDone)
@@ -58,14 +58,14 @@ class ViewShareBase:UIView {
         self.viewBorder.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
         self.viewBorder.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
         self.viewBorder.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
-        self.viewBorder.heightAnchor.constraint(equalToConstant:ViewConstants.ShareBase.borderHeight).isActive = true
+        self.viewBorder.heightAnchor.constraint(equalToConstant:Constants.ShareBase.borderHeight).isActive = true
     }
     
     private func layoutDone() {
         self.buttonDone.bottomAnchor.constraint(equalTo:self.bottomAnchor,
-                                                constant:ViewConstants.ShareDone.bottom).isActive = true
-        self.buttonDone.widthAnchor.constraint(equalToConstant:ViewConstants.ShareDone.width).isActive = true
-        self.buttonDone.heightAnchor.constraint(equalToConstant:ViewConstants.ShareDone.height).isActive = true
+                                                constant:Constants.ShareDone.bottom).isActive = true
+        self.buttonDone.widthAnchor.constraint(equalToConstant:Constants.ShareDone.width).isActive = true
+        self.buttonDone.heightAnchor.constraint(equalToConstant:Constants.ShareDone.height).isActive = true
         self.buttonDone.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
     }
 }
