@@ -22,13 +22,23 @@ class PresenterScan:NSObject, PresenterProtocol, AVCaptureMetadataOutputObjectsD
         self.session.addOutput(self.output)
         
         
-        self.output.metadataObjectTypes = [AVMetadataObject.ObjectType.ean8, AVMetadataObject.ObjectType.ean13, AVMetadataObject.ObjectType.pdf417]
+        self.output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
         super.init()
         
         self.output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         
         
+    }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if let metadataObject = metadataObjects.first {
+            let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject;
+            
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            print("found: \(readableObject.stringValue!)")
+            //captureSession.stopRunning()
+        }
     }
     
     func close() {
