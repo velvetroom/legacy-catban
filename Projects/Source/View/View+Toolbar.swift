@@ -2,7 +2,11 @@ import UIKit
 import Shared
 
 extension View {
-    func makeToolbarItems() -> [UIBarButtonItem] {
+    func makeToolbar() {
+        self.setToolbarItems(self.makeToolbarItems(), animated:false)
+    }
+    
+    private func makeToolbarItems() -> [UIBarButtonItem] {
         let fixedSpace:UIBarButtonItem = self.makeFixedSpace()
         return [self.makeButtonDelete(),
                 fixedSpace,

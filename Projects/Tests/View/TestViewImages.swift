@@ -23,8 +23,13 @@ class TestViewImages:XCTestCase {
         XCTAssertNotNil(image, "Failed to load image")
     }
     
-    func testLoadImage() {
+    func testEmptyImage() {
         let image:UIImage? = UIImage(name:ViewConstants.Empty.icon, in:ViewEmpty.self)
+        XCTAssertNotNil(image, "Failed to load image")
+    }
+    
+    func testQrImage() {
+        let image:UIImage? = UIImage(name:ViewConstants.Actions.assetQr, in:ViewEmpty.self)
         XCTAssertNotNil(image, "Failed to load image")
     }
 }

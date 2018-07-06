@@ -29,6 +29,10 @@ struct ViewConstants {
         static let assetCloud:String = "assetCloud"
     }
     
+    struct Actions {
+        static let assetQr:String = "assetQr"
+    }
+    
     struct AddBackground {
         static let animationDuration:TimeInterval = 0.3
         static let alphaOpen:CGFloat = 1
