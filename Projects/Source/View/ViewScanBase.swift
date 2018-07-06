@@ -16,5 +16,6 @@ class ViewScanBase:UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.backgroundColor = UIColor.black
+        self.isUserInteractionEnabled = false
     }
 }

@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewScanContent:UIView {
+    weak var viewPreview:ViewScanPreview!
     weak var viewBase:ViewScanBase!
     weak var viewBar:ViewScanBar!
     
@@ -16,12 +17,20 @@ class ViewScanContent:UIView {
     
     private func makeOutlets() {
         self.makeBase()
+        self.makePreview()
         self.makeBar()
     }
     
     private func layoutOutlets() {
         self.layoutBase()
+        self.layoutPreview()
         self.layoutBar()
+    }
+    
+    private func makePreview() {
+        let viewPreview:ViewScanPreview = ViewScanPreview()
+        self.viewPreview = viewPreview
+        self.addSubview(viewPreview)
     }
     
     private func makeBase() {
@@ -34,6 +43,13 @@ class ViewScanContent:UIView {
         let viewBar:ViewScanBar = ViewScanBar()
         self.viewBar = viewBar
         self.addSubview(viewBar)
+    }
+    
+    private func layoutPreview() {
+        self.viewPreview.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
+        self.viewPreview.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
+        self.viewPreview.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
+        self.viewPreview.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
     }
     
     private func layoutBase() {
