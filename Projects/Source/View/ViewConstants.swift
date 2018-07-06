@@ -33,13 +33,9 @@ struct ViewConstants {
         static let assetQr:String = "assetQr"
     }
     
-    struct AddBackground {
-        static let animationDuration:TimeInterval = 0.3
-        static let alphaOpen:CGFloat = 1
-        static let alphaClose:CGFloat = 0
-    }
-    
     struct Scan {
         static let barHeight:CGFloat = 44
+        static let barTop:CGFloat = 20
+        static let animationDuration:TimeInterval = 0.3
     }
 }

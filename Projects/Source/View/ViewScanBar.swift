@@ -14,9 +14,11 @@ class ViewScanBar:UIToolbar {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = false
         self.backgroundColor = UIColor.clear
-        self.barStyle = UIBarStyle.default
+        self.barStyle = UIBarStyle.black
         self.barTintColor = UIColor.clear
         self.tintColor = UIColor.white
         self.isTranslucent = true
+        self.setBackgroundImage(UIImage(), forToolbarPosition:UIBarPosition.any, barMetrics:UIBarMetrics.default)
+        self.setShadowImage(UIImage(), forToolbarPosition:UIBarPosition.any)
     }
 }
