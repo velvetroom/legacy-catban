@@ -38,4 +38,8 @@ struct ViewConstants {
         static let alphaOpen:CGFloat = 1
         static let alphaClose:CGFloat = 0
     }
+    
+    struct Scan {
+        static let barHeight:CGFloat = 44
+    }
 }

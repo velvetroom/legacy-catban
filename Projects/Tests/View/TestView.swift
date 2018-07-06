@@ -39,7 +39,7 @@ class TestView:XCTestCase {
         XCTAssertTrue(called, "Not called")
     }
     
-    func testCallsPresenterAddProject() {
+    func testCallsPresenterOnAddProject() {
         var called:Bool = false
         self.presenter.onAddProject = { called = true }
         self.view.selectorAddProject()
@@ -57,6 +57,13 @@ class TestView:XCTestCase {
         var called:Bool = false
         self.presenter.onDelete = { called = true }
         self.view.selectorDelete()
+        XCTAssertTrue(called, "Not called")
+    }
+    
+    func testCallsPresenterOnScan() {
+        var called:Bool = false
+        self.presenter.onOpenScanner = { called = true }
+        self.view.selectorScan()
         XCTAssertTrue(called, "Not called")
     }
 }

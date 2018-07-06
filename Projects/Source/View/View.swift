@@ -32,6 +32,10 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.presenter.addProject()
     }
     
+    @objc func selectorScan() {
+        self.presenter.openScanner()
+    }
+    
     @objc func selectorRename() {
         self.presenter.rename()
     }

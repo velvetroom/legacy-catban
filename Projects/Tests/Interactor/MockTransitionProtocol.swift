@@ -8,6 +8,7 @@ class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToCloud:(() -> Void)?
     var onPresent:(() -> Void)?
     var onPush:((ViewProtocol) -> Void)?
+    var view:ViewProtocol?
     
     func pushTo(view:ViewProtocol) {
         self.onPush?(view)
@@ -22,6 +23,7 @@ class MockTransitionProtocol:TransitionProtocol {
     }
     
     func present(view:ViewProtocol) {
+        self.view = view
         self.onPresent?()
     }
 }
