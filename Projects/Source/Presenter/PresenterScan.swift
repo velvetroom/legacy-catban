@@ -8,40 +8,60 @@ class PresenterScan:NSObject, PresenterProtocol, AVCaptureMetadataOutputObjectsD
     weak var transition:TransitionProtocol?
     var interactor:Interactor!
     var viewModel:ViewModel!
-    let session:AVCaptureSession
-    private let device:AVCaptureDevice
-    private let input:AVCaptureInput!
-    private let output:AVCaptureMetadataOutput
+    var session:AVCaptureSession?
+    private var input:AVCaptureInput?
+    private var output:AVCaptureMetadataOutput?
     
     override required init() {
-        self.session = AVCaptureSession()
-        self.device = AVCaptureDevice.default(for:AVMediaType.video)!
-        do { try self.input = AVCaptureDeviceInput(device:self.device) } catch { self.input = nil }
-        self.session.addInput(self.input)
-        self.output = AVCaptureMetadataOutput()
-        self.session.addOutput(self.output)
-        
-        
-        self.output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-        
         super.init()
-        
-        self.output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        
-        
+        self.startSession()
     }
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if let metadataObject = metadataObjects.first {
-            let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject;
-            
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            print("found: \(readableObject.stringValue!)")
-            //captureSession.stopRunning()
-        }
+    deinit {
+        self.cleanSession()
     }
     
     func close() {
         self.transition?.dismiss()
+    }
+    
+    func metadataOutput(_:AVCaptureMetadataOutput, didOutput objects:[AVMetadataObject], from:AVCaptureConnection) {
+        guard
+            let object:AVMetadataMachineReadableCodeObject = objects.first as? AVMetadataMachineReadableCodeObject,
+            let string:String = object.stringValue
+        else { return }
+        self.cleanSession()
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        self.read(string:string)
+    }
+    
+    func read(string:String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.close()
+        }
+    }
+    
+    private func startSession() {
+        self.session = AVCaptureSession()
+        self.session!.sessionPreset = AVCaptureSession.Preset.hd1280x720
+        do { try self.input = AVCaptureDeviceInput(device:AVCaptureDevice.default(
+            AVCaptureDevice.DeviceType.builtInWideAngleCamera,
+            for:AVMediaType.video, position:AVCaptureDevice.Position.back)!) } catch { return }
+        self.output = AVCaptureMetadataOutput()
+        self.session!.addInput(self.input!)
+        self.session!.addOutput(self.output!)
+        self.output!.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+        self.output!.setMetadataObjectsDelegate(self, queue:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        self.session!.startRunning()
+    }
+    
+    private func cleanSession() {
+        guard let session:AVCaptureSession = self.session else { return }
+        session.stopRunning()
+        if let input:AVCaptureInput = self.input { session.removeInput(input) }
+        if let output:AVCaptureMetadataOutput = self.output { session.removeOutput(output) }
+        self.session = nil
+        self.input = nil
+        self.output = nil
     }
 }

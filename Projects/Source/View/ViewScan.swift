@@ -19,7 +19,7 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
     override func didLoad() {
         super.didLoad()
         self.makeBarActions()
-        self.content.viewPreview.loadPreview(session:self.presenter.session)
+        self.content.viewPreview.loadPreview(session:self.presenter.session!)
     }
     
     override func didAppear() {

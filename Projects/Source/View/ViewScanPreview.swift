@@ -23,7 +23,6 @@ class ViewScanPreview:UIView {
         self.previewLayer = previewLayer
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.layer.addSublayer(previewLayer)
-        session.startRunning()
     }
     
     private func configureView() {
