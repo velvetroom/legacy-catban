@@ -3,10 +3,17 @@ import Architecture
 import Shared
 
 class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
+    override var prefersStatusBarHidden:Bool {
+        get {
+            return true
+        }
+    }
+    
     override func initProperties() {
         super.initProperties()
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.modalPresentationCapturesStatusBarAppearance = true
     }
     
     override func didLoad() {

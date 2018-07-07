@@ -19,6 +19,12 @@ public class Spinner:UIImageView {
         return nil
     }
     
+    public override var intrinsicContentSize:CGSize {
+        get {
+            return CGSize(width:SpinnerConstants.width, height:SpinnerConstants.height)
+        }
+    }
+    
     private func configureView() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.isUserInteractionEnabled = false

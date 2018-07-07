@@ -18,6 +18,7 @@
 		DA106C4820BE884400A4AED5 /* MockViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA106C4720BE884400A4AED5 /* MockViewListCell.swift */; };
 		DA13EF3D20D3C67800475A16 /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF3C20D3C67800475A16 /* MockInteractor.swift */; };
 		DA13EF3F20D3C75400475A16 /* MockStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13EF3E20D3C75400475A16 /* MockStateProtocol.swift */; };
+		DA1C3B8920F0F80D00AA28F7 /* ViewScanLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C3B8820F0F80D00AA28F7 /* ViewScanLoading.swift */; };
 		DA1D02EA20BC47B4003F6137 /* TestViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D02E920BC47B4003F6137 /* TestViewList.swift */; };
 		DA204FF020B8494700A41DB0 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508E20B848FB00276D5A /* Board.framework */; };
 		DA204FF120B8494900A41DB0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE508C20B848F200276D5A /* Shared.framework */; };
@@ -111,6 +112,7 @@
 		DA106C4720BE884400A4AED5 /* MockViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewListCell.swift; sourceTree = "<group>"; };
 		DA13EF3C20D3C67800475A16 /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
 		DA13EF3E20D3C75400475A16 /* MockStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStateProtocol.swift; sourceTree = "<group>"; };
+		DA1C3B8820F0F80D00AA28F7 /* ViewScanLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScanLoading.swift; sourceTree = "<group>"; };
 		DA1D02E920BC47B4003F6137 /* TestViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewList.swift; sourceTree = "<group>"; };
 		DA204FF720B8924F00A41DB0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DA204FFE20B8984600A41DB0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				DA5FE56E20EF4C1C00F6BCF1 /* ViewScanBase.swift */,
 				DA5FE56A20EF499400F6BCF1 /* ViewScanBar.swift */,
 				DAC78FD920EFC73100EA74C5 /* ViewScanPreview.swift */,
+				DA1C3B8820F0F80D00AA28F7 /* ViewScanLoading.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				DA3D81B120DB851B004E9E85 /* StateDelete.swift in Sources */,
 				DA204FF820B8924F00A41DB0 /* Presenter.swift in Sources */,
 				DAD5F07D20BBE63400CEC10A /* ViewListFlow.swift in Sources */,
+				DA1C3B8920F0F80D00AA28F7 /* ViewScanLoading.swift in Sources */,
 				DA04DEBF20B9834E00228ABB /* ViewList.swift in Sources */,
 				DA52105C20DA6C75008DE6DE /* ViewModelSelector.swift in Sources */,
 				DAD05F9820C827C40083F5DA /* View+Toolbar.swift in Sources */,

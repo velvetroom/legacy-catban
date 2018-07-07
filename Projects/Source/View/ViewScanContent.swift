@@ -4,6 +4,7 @@ class ViewScanContent:UIView {
     weak var viewPreview:ViewScanPreview!
     weak var viewBase:ViewScanBase!
     weak var viewBar:ViewScanBar!
+    weak var viewLoading:ViewScanLoading!
     
     init() {
         super.init(frame:CGRect.zero)
@@ -18,12 +19,14 @@ class ViewScanContent:UIView {
     private func makeOutlets() {
         self.makeBase()
         self.makePreview()
+        self.makeLoading()
         self.makeBar()
     }
     
     private func layoutOutlets() {
         self.layoutBase()
         self.layoutPreview()
+        self.layoutLoading()
         self.layoutBar()
     }
     
@@ -45,6 +48,12 @@ class ViewScanContent:UIView {
         self.addSubview(viewBar)
     }
     
+    private func makeLoading() {
+        let viewLoading:ViewScanLoading = ViewScanLoading()
+        self.viewLoading = viewLoading
+        self.addSubview(viewLoading)
+    }
+    
     private func layoutPreview() {
         self.viewPreview.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
         self.viewPreview.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
@@ -61,10 +70,16 @@ class ViewScanContent:UIView {
     }
     
     private func layoutBar() {
-        self.viewBar.topAnchor.constraint(equalTo:self.viewBase.topAnchor,
-                                          constant:ViewConstants.Scan.barTop).isActive = true
+        self.viewBar.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
         self.viewBar.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
         self.viewBar.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
         self.viewBar.heightAnchor.constraint(equalToConstant:ViewConstants.Scan.barHeight).isActive = true
+    }
+    
+    private func layoutLoading() {
+        self.viewLoading.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
+        self.viewLoading.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
+        self.viewLoading.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
+        self.viewLoading.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
     }
 }

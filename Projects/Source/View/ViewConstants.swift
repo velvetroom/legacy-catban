@@ -35,7 +35,6 @@ struct ViewConstants {
     
     struct Scan {
         static let barHeight:CGFloat = 44
-        static let barTop:CGFloat = 20
         static let animationDuration:TimeInterval = 0.3
     }
 }
