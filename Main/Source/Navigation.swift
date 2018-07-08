@@ -64,7 +64,12 @@ class Navigation:NavigationProtocol {
     
     func present(view:ViewProtocol) {
         self.injectTransition(view:view)
-        self.view.present(view:view)
+        self.view.present(view.viewController, animated:false, completion:nil)
+    }
+    
+    func presentAnimated(view: ViewProtocol, completion:(() -> Void)?) {
+        self.injectTransition(view:view)
+        self.view.present(view.viewController, animated:true, completion:completion)
     }
     
     func pushTo(view:ViewProtocol) {
@@ -77,7 +82,11 @@ class Navigation:NavigationProtocol {
     }
     
     func dismiss() {
-        self.view.dismiss()
+        self.view.dismiss(animated:false, completion:nil)
+    }
+    
+    func dismissAnimated(completion:(() -> Void)?) {
+        self.view.dismiss(animated:true, completion:completion)
     }
     
     func transitionTo(view:ViewProtocol) {

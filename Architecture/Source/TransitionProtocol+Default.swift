@@ -10,9 +10,9 @@ public extension TransitionProtocol {
     func transitionTo(column:ColumnProtocol, board:BoardProtocol, project:ProjectProtocol) { }
     func transitionToCloud(board:BoardProtocol, project:ProjectProtocol) { }
     func present(view:ViewProtocol) { }
-    func presentAnimated(view:ViewProtocol) { }
+    func presentAnimated(view:ViewProtocol, completion:(() -> Void)?) { }
     func pushTo(view:ViewProtocol) { }
     func pop() { }
     func dismiss() { }
-    func dismissAnimated(completion:@escaping(() -> Void)) { }
+    func dismissAnimated(completion:(() -> Void)?) { }
 }
