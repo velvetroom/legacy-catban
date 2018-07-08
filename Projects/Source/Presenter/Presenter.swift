@@ -54,7 +54,7 @@ public class Presenter:NSObject, PresenterProtocol {
         let presenter:PresenterScan = PresenterScan()
         let view:ViewScan = ViewScan(presenter:presenter)
         view.presenter.interactor = self.interactor
-        self.transition?.present(view:view)
+        self.transition?.presentAnimated(view:view, completion:nil)
     }
     
     func openProjectCloud() {

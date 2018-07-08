@@ -56,7 +56,7 @@ class TestPresenter:XCTestCase {
     
     func testScanPresentsView() {
         var called:Bool = false
-        self.transition.onPresent = { called = true }
+        self.transition.onPresentAnimated = { called = true }
         self.view.presenter.openScanner()
         let view:ViewScan? = self.transition.view as? ViewScan
         XCTAssertTrue(called, "View not presented")

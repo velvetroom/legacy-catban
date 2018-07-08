@@ -2,7 +2,6 @@ import UIKit
 
 class ViewScanContent:UIView {
     weak var viewPreview:ViewScanPreview!
-    weak var viewBase:ViewScanBase!
     weak var viewBar:ViewScanBar!
     weak var viewLoading:ViewScanLoading!
     
@@ -17,14 +16,12 @@ class ViewScanContent:UIView {
     }
     
     private func makeOutlets() {
-        self.makeBase()
         self.makePreview()
         self.makeLoading()
         self.makeBar()
     }
     
     private func layoutOutlets() {
-        self.layoutBase()
         self.layoutPreview()
         self.layoutLoading()
         self.layoutBar()
@@ -34,12 +31,6 @@ class ViewScanContent:UIView {
         let viewPreview:ViewScanPreview = ViewScanPreview()
         self.viewPreview = viewPreview
         self.addSubview(viewPreview)
-    }
-    
-    private func makeBase() {
-        let viewBase:ViewScanBase = ViewScanBase()
-        self.viewBase = viewBase
-        self.addSubview(viewBase)
     }
     
     private func makeBar() {
@@ -55,31 +46,23 @@ class ViewScanContent:UIView {
     }
     
     private func layoutPreview() {
-        self.viewPreview.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
-        self.viewPreview.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
-        self.viewPreview.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
-        self.viewPreview.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
-    }
-    
-    private func layoutBase() {
-        self.viewBase.layoutTop = self.viewBase.topAnchor.constraint(equalTo:self.bottomAnchor)
-        self.viewBase.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        self.viewBase.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
-        self.viewBase.heightAnchor.constraint(equalTo:self.heightAnchor).isActive = true
-        self.viewBase.layoutTop.isActive = true
+        self.viewPreview.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        self.viewPreview.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        self.viewPreview.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.viewPreview.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
     
     private func layoutBar() {
-        self.viewBar.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
-        self.viewBar.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
-        self.viewBar.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
+        self.viewBar.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        self.viewBar.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.viewBar.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
         self.viewBar.heightAnchor.constraint(equalToConstant:ViewConstants.Scan.barHeight).isActive = true
     }
     
     private func layoutLoading() {
-        self.viewLoading.bottomAnchor.constraint(equalTo:self.viewBase.bottomAnchor).isActive = true
-        self.viewLoading.topAnchor.constraint(equalTo:self.viewBase.topAnchor).isActive = true
-        self.viewLoading.leftAnchor.constraint(equalTo:self.viewBase.leftAnchor).isActive = true
-        self.viewLoading.rightAnchor.constraint(equalTo:self.viewBase.rightAnchor).isActive = true
+        self.viewLoading.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        self.viewLoading.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        self.viewLoading.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.viewLoading.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

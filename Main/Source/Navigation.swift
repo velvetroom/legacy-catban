@@ -67,7 +67,7 @@ class Navigation:NavigationProtocol {
         self.view.present(view.viewController, animated:false, completion:nil)
     }
     
-    func presentAnimated(view: ViewProtocol, completion:(() -> Void)?) {
+    func presentAnimated(view:ViewProtocol, completion:(() -> Void)?) {
         self.injectTransition(view:view)
         self.view.present(view.viewController, animated:true, completion:completion)
     }

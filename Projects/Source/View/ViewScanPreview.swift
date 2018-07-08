@@ -29,5 +29,6 @@ class ViewScanPreview:UIView {
         self.clipsToBounds = true
         self.isUserInteractionEnabled = false
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = UIColor.black
     }
 }

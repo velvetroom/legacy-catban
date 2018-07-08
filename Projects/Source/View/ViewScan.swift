@@ -1,8 +1,17 @@
 import UIKit
+import AVFoundation
 import Architecture
 import Shared
 
 class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
+    var session:AVCaptureSession?
+    var input:AVCaptureInput?
+    var output:AVCaptureMetadataOutput?
+    
+    deinit {
+        self.cleanSession()
+    }
+    
     override var prefersStatusBarHidden:Bool {
         get {
             return true
@@ -11,7 +20,7 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
     
     override func initProperties() {
         super.initProperties()
-        self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.modalPresentationCapturesStatusBarAppearance = true
     }
@@ -19,37 +28,25 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
     override func didLoad() {
         super.didLoad()
         self.makeBarActions()
-        self.content.viewPreview.loadPreview(session:self.presenter.session!)
-    }
-    
-    override func didAppear() {
-        super.didAppear()
-        self.animateOpen()
+        self.startSession()
     }
     
     override func orientationChanged(size:CGSize) {
         super.orientationChanged(size:size)
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
-        self.animateOpen()
     }
     
     @objc func selectorClose() {
-        self.animateClose()
+        self.presenter.close()
     }
     
-    private func animateOpen() {
-        self.content.viewBase.layoutTop.constant = -self.content.bounds.height
-        UIView.animate(withDuration:ViewConstants.Scan.animationDuration) { [weak self] in
-            self?.content.layoutIfNeeded()
-        }
-    }
-    
-    private func animateClose() {
-        self.content.viewBase.layoutTop.constant = 0
-        UIView.animate(withDuration:ViewConstants.Scan.animationDuration, animations: { [weak self] in
-            self?.content.layoutIfNeeded()
-        }) { (done:Bool) in
-            self.presenter.close()
-        }
+    func metadataOutput(_:AVCaptureMetadataOutput, didOutput objects:[AVMetadataObject], from:AVCaptureConnection) {
+        guard
+            let object:AVMetadataMachineReadableCodeObject = objects.first as? AVMetadataMachineReadableCodeObject,
+            let string:String = object.stringValue
+        else { return }
+        self.cleanSession()
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        self.read(string:string)
     }
 }

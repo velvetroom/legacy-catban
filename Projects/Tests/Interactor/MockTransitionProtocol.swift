@@ -7,6 +7,7 @@ class MockTransitionProtocol:TransitionProtocol {
     var onTransitionToHome:(() -> Void)?
     var onTransitionToCloud:(() -> Void)?
     var onPresent:(() -> Void)?
+    var onPresentAnimated:(() -> Void)?
     var onPush:((ViewProtocol) -> Void)?
     var view:ViewProtocol?
     
@@ -20,6 +21,11 @@ class MockTransitionProtocol:TransitionProtocol {
     
     func transitionToCloud(board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToCloud?()
+    }
+    
+    func presentAnimated(view:ViewProtocol, completion:(() -> Void)?) {
+        self.view = view
+        self.onPresentAnimated?()
     }
     
     func present(view:ViewProtocol) {
