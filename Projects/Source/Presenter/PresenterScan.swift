@@ -43,16 +43,10 @@ class PresenterScan:NSObject, PresenterProtocol, AVCaptureMetadataOutputObjectsD
     
     private func startSession() {
         self.session = AVCaptureSession()
-        self.session!.sessionPreset = AVCaptureSession.Preset.hd1280x720
-        do { try self.input = AVCaptureDeviceInput(device:AVCaptureDevice.default(
-            AVCaptureDevice.DeviceType.builtInWideAngleCamera,
-            for:AVMediaType.video, position:AVCaptureDevice.Position.back)!) } catch { return }
-        self.output = AVCaptureMetadataOutput()
-        self.session!.addInput(self.input!)
-        self.session!.addOutput(self.output!)
-        self.output!.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-        self.output!.setMetadataObjectsDelegate(self, queue:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
-        self.session!.startRunning()
+        self.session?.sessionPreset = AVCaptureSession.Preset.hd1280x720
+        self.startInput()
+        self.startOutput()
+        self.session?.startRunning()
     }
     
     private func cleanSession() {
@@ -63,5 +57,26 @@ class PresenterScan:NSObject, PresenterProtocol, AVCaptureMetadataOutputObjectsD
         self.session = nil
         self.input = nil
         self.output = nil
+    }
+    
+    private func startInput() {
+        guard
+            let device:AVCaptureDevice = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera,
+                                                        for:AVMediaType.video, position:AVCaptureDevice.Position.back)
+        else { return }
+        let input:AVCaptureDeviceInput
+        do { try input = AVCaptureDeviceInput(device:device) } catch { return }
+        self.session?.addInput(input)
+        self.input = input
+    }
+    
+    private func startOutput() {
+        let output:AVCaptureMetadataOutput = AVCaptureMetadataOutput()
+        self.session?.addOutput(output)
+        if output.availableMetadataObjectTypes.contains(AVMetadataObject.ObjectType.qr) {
+            output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+        }
+        output.setMetadataObjectsDelegate(self, queue:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        self.output = output
     }
 }

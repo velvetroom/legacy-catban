@@ -36,4 +36,16 @@ class TestNavigation_Transitions_Detached:XCTestCase {
         self.model.present(view:MockView())
         XCTAssertTrue(transitioned, "Transition never happened")
     }
+    
+    func testPresentAnimatedInjectsTransition() {
+        var transitioned:Bool = false
+        self.view.onPresent = { (viewController:UIViewController) in
+            let view:MockView? = viewController as? MockView
+            XCTAssertNotNil(view?.transition, "Not transition injected")
+            transitioned = true
+        }
+        
+        self.model.presentAnimated(view:MockView(), completion:nil)
+        XCTAssertTrue(transitioned, "Transition never happened")
+    }
 }
