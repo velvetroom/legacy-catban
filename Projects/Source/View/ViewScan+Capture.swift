@@ -5,6 +5,7 @@ extension ViewScan:AVCaptureMetadataOutputObjectsDelegate {
     func read(string:String) {
         DispatchQueue.main.async { [weak self] in
             self?.animateToLoad()
+            self?.presenter.read(string:string)
         }
     }
     

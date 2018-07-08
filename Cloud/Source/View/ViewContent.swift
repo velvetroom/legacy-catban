@@ -79,8 +79,10 @@ public class ViewContent:UIView {
         buttonContinue.translatesAutoresizingMaskIntoConstraints = false
         buttonContinue.setTitleColor(UIColor.black, for:UIControlState.normal)
         buttonContinue.setTitleColor(UIColor(white:0, alpha:0.2), for:UIControlState.highlighted)
-        buttonContinue.setTitle(String.localized(key:"ViewContent_ButtonContinue", in:type(of:self)), for:UIControlState())
-        buttonContinue.titleLabel!.font = UIFont.systemFont(ofSize:Constants.Action.fontSize, weight:UIFont.Weight.bold)
+        buttonContinue.setTitle(String.localized(key:"ViewContent_ButtonContinue", in:type(of:self)),
+                                for:UIControlState())
+        buttonContinue.titleLabel!.font = UIFont.systemFont(ofSize:Constants.Action.fontSize,
+                                                            weight:UIFont.Weight.bold)
         buttonContinue.isHidden = true
         self.buttonContinue = buttonContinue
         self.addSubview(buttonContinue)

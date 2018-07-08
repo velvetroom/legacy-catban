@@ -24,12 +24,17 @@ class TestViewImages:XCTestCase {
     }
     
     func testEmptyImage() {
-        let image:UIImage? = UIImage(name:ViewConstants.Empty.icon, in:ViewEmpty.self)
+        let image:UIImage? = UIImage(name:ViewConstants.Empty.icon, in:View.self)
         XCTAssertNotNil(image, "Failed to load image")
     }
     
     func testQrImage() {
-        let image:UIImage? = UIImage(name:ViewConstants.Actions.assetQr, in:ViewEmpty.self)
+        let image:UIImage? = UIImage(name:ViewConstants.Actions.assetQr, in:View.self)
+        XCTAssertNotNil(image, "Failed to load image")
+    }
+    
+    func testScanActions() {
+        let image:UIImage? = UIImage(name:ViewConstants.ScanActions.assetContinue, in:View.self)
         XCTAssertNotNil(image, "Failed to load image")
     }
 }

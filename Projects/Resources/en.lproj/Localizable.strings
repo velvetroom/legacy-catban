@@ -1,5 +1,8 @@
 View_title="Boards";
 ViewEmpty_label="You have no projects";
+ViewScanLoading_ButtonContinue="Continue";
+ViewScanLoading_ButtonAccept="Accept";
+PresenterScan_Success="Board loaded";
 StateRename_ViewModel_Title="Rename Board";
 StateAdd_ViewModel_Title="New Board";
 StateDelete_ViewModel_Title="Delete Board?";

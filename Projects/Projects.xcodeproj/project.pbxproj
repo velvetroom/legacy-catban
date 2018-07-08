@@ -28,6 +28,7 @@
 		DA20A75120E3D8D40058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74F20E3D8CC0058A65A /* Architecture.framework */; };
 		DA34CAC620F20E48003BDBE7 /* ViewScan+Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA34CAC520F20E48003BDBE7 /* ViewScan+Capture.swift */; };
 		DA34CAC820F210DA003BDBE7 /* ViewScan+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA34CAC720F210DA003BDBE7 /* ViewScan+Animations.swift */; };
+		DA34CACA20F2157F003BDBE7 /* ViewModelScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA34CAC920F2157F003BDBE7 /* ViewModelScan.swift */; };
 		DA3BA75220C2C383004CB162 /* MockRepositoryProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA75120C2C383004CB162 /* MockRepositoryProjectProtocol.swift */; };
 		DA3D81AF20DB8474004E9E85 /* Interactor+Deleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81AE20DB8474004E9E85 /* Interactor+Deleter.swift */; };
 		DA3D81B120DB851B004E9E85 /* StateDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D81B020DB851B004E9E85 /* StateDelete.swift */; };
@@ -120,6 +121,7 @@
 		DA20A74F20E3D8CC0058A65A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA34CAC520F20E48003BDBE7 /* ViewScan+Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewScan+Capture.swift"; sourceTree = "<group>"; };
 		DA34CAC720F210DA003BDBE7 /* ViewScan+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewScan+Animations.swift"; sourceTree = "<group>"; };
+		DA34CAC920F2157F003BDBE7 /* ViewModelScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScan.swift; sourceTree = "<group>"; };
 		DA3BA75120C2C383004CB162 /* MockRepositoryProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProjectProtocol.swift; sourceTree = "<group>"; };
 		DA3D81AE20DB8474004E9E85 /* Interactor+Deleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor+Deleter.swift"; sourceTree = "<group>"; };
 		DA3D81B020DB851B004E9E85 /* StateDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDelete.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				DA435A7C20BAC5B4000C2E56 /* ViewModelListItem.swift */,
 				DA52105B20DA6C75008DE6DE /* ViewModelSelector.swift */,
 				DA52105D20DA6E1C008DE6DE /* ViewModelSelected.swift */,
+				DA34CAC920F2157F003BDBE7 /* ViewModelScan.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				DA44423320D26CBB00587AF3 /* StateProtocol.swift in Sources */,
 				DA5FE56D20EF4A7300F6BCF1 /* ViewScan+Bar.swift in Sources */,
 				DAD5F06F20BBCBC100CEC10A /* ViewModelFactory.swift in Sources */,
+				DA34CACA20F2157F003BDBE7 /* ViewModelScan.swift in Sources */,
 				DA3D81AF20DB8474004E9E85 /* Interactor+Deleter.swift in Sources */,
 				DA44423920D26D1F00587AF3 /* StateRename.swift in Sources */,
 				DA9313A020B83016008EDA07 /* Interactor.swift in Sources */,

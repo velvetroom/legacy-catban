@@ -28,7 +28,9 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
     override func didLoad() {
         super.didLoad()
         self.makeBarActions()
+        self.hookSelectors()
         self.startSession()
+        self.configureViewModel()
     }
     
     override func orientationChanged(size:CGSize) {
@@ -48,5 +50,29 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
     
     @objc func selectorClose() {
         self.presenter.close()
+    }
+    
+    private func hookSelectors() {
+        self.content.viewLoading.buttonAccept.addTarget(self, action:#selector(self.selectorClose),
+                                                        for:UIControlEvents.touchUpInside)
+    }
+    
+    private func configureViewModel() {
+        var viewModel:ViewModelScan = self.viewModel.property()
+        viewModel.observing = { [weak self] (property:ViewModelScan) in
+            self?.updated(viewModel:property)
+        }
+        self.viewModel.update(property:viewModel)
+    }
+    
+    private func updated(viewModel:ViewModelScan) {
+        self.content.viewLoading.buttonAccept.isHidden = viewModel.buttonAcceptHidden
+        self.content.viewLoading.buttonContinue.isHidden = viewModel.buttonContinueHidden
+        self.content.viewLoading.message.text = viewModel.message
+        if viewModel.spinnerAnimating {
+            self.content.viewLoading.spinner.startAnimating()
+        } else {
+            self.content.viewLoading.spinner.stopAnimating()
+        }
     }
 }

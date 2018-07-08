@@ -37,4 +37,17 @@ struct ViewConstants {
         static let barHeight:CGFloat = 44
         static let animationDuration:TimeInterval = 0.3
     }
+    
+    struct ScanMessage {
+        static let fontSize:CGFloat = 20
+        static let margin:CGFloat = 30
+    }
+    
+    struct ScanActions {
+        static let assetContinue:String = "assetAction"
+        static let width:CGFloat = 192
+        static let height:CGFloat = 64
+        static let bottom:CGFloat = -25
+        static let fontSize:CGFloat = 16
+    }
 }
