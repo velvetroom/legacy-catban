@@ -4,18 +4,18 @@ import AVFoundation
 extension ViewScan:AVCaptureMetadataOutputObjectsDelegate {
     func read(string:String) {
         DispatchQueue.main.async { [weak self] in
-            //            self?.close()
+            self?.animateToLoad()
         }
     }
     
     func startSession() {
         let session:AVCaptureSession = AVCaptureSession()
         session.sessionPreset = AVCaptureSession.Preset.hd1280x720
+        self.session = session
         self.startInput()
         self.startOutput()
-        session.startRunning()
         self.content.viewPreview.loadPreview(session:session)
-        self.session = session
+        session.startRunning()
     }
     
     func cleanSession() {
@@ -33,7 +33,7 @@ extension ViewScan:AVCaptureMetadataOutputObjectsDelegate {
             let device:AVCaptureDevice = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera,
                                                                  for:AVMediaType.video,
                                                                  position:AVCaptureDevice.Position.back)
-            else { return }
+        else { return }
         let input:AVCaptureDeviceInput
         do { try input = AVCaptureDeviceInput(device:device) } catch { return }
         self.session?.addInput(input)

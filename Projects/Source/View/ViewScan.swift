@@ -36,10 +36,6 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
         self.view.frame = CGRect(origin:CGPoint.zero, size:size)
     }
     
-    @objc func selectorClose() {
-        self.presenter.close()
-    }
-    
     func metadataOutput(_:AVCaptureMetadataOutput, didOutput objects:[AVMetadataObject], from:AVCaptureConnection) {
         guard
             let object:AVMetadataMachineReadableCodeObject = objects.first as? AVMetadataMachineReadableCodeObject,
@@ -48,5 +44,9 @@ class ViewScan:Architecture.View<PresenterScan, ViewScanContent> {
         self.cleanSession()
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
         self.read(string:string)
+    }
+    
+    @objc func selectorClose() {
+        self.presenter.close()
     }
 }

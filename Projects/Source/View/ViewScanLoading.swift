@@ -9,7 +9,6 @@ class ViewScanLoading:UIView {
         self.configureView()
         self.makeOutlets()
         self.layoutOutlets()
-        self.spinner.startAnimating()
     }
     
     required init?(coder:NSCoder) {
