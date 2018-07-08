@@ -40,6 +40,7 @@ public struct RepositoryConstants {
     }
     
     struct Remote {
-        static let maxRetry:Int = 3
+        static let prefix:String = "iturbide"
+        static let suffix:String = "catban"
     }
 }

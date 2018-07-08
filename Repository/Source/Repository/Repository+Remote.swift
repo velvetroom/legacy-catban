@@ -18,6 +18,13 @@ public extension Repository {
         }
     }
     
+    public func remoteLoad(hash:String, onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                           onError:@escaping((Error) -> Void)) {
+        self.dispatchQueue.async {
+            self.backgroundLoad(hash:hash, onCompletion:onCompletion, onError:onError)
+        }
+    }
+    
     private func backgroundStart(project:ProjectProtocol,
                                  onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
                                  onError:@escaping((Error) -> Void)) {
@@ -55,6 +62,13 @@ public extension Repository {
         self.save(project:project, data:data, onCompletion:onCompletion, onError:onError)
     }
     
+    private func backgroundLoad(hash:String, onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                                onError:@escaping((Error) -> Void)) {
+        self.remote.load(hash:hash, onCompletion: { [weak self] (data:Data) in
+            
+        }, onError:onError)
+    }
+    
     private func makeSynchedWith(project:ProjectProtocol, and remoteIdentifier:String) -> ProjectSynchedProtocol {
         var synched:ProjectSynchedProtocol = ProjectFactory.makeSynchable(project:project)
         synched.remoteIdentifier = remoteIdentifier
@@ -66,5 +80,18 @@ public extension Repository {
         self.remote.save(data:data, identifier:project.remoteIdentifier, onCompletion: {
             onCompletion()
         }, onError:onError)
+    }
+    
+    private func loaded(data:Data, onCompletion:@escaping((ProjectProtocol) -> Void),
+                        onError:@escaping((Error) -> Void)) {
+        self.deserialise.data = data
+        let project:ProjectProtocol
+        do {
+            try project = self.deserialise.makeProject()
+        } catch let error {
+            onError(error)
+            return
+        }
+        onCompletion(project)
     }
 }

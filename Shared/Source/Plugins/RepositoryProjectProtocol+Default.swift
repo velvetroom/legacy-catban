@@ -10,4 +10,7 @@ public extension RepositoryProjectProtocol {
     func remoteSave(project:ProjectSynchedProtocol,
                     onCompletion:@escaping(() -> Void),
                     onError:@escaping((Error) -> Void)) { }
+    func remoteLoad(hash:String,
+                    onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                    onError:@escaping((Error) -> Void)) { }
 }

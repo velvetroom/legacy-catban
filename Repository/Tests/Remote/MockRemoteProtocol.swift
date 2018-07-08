@@ -24,4 +24,8 @@ class MockRemoteProtocol:RemoteProtocol {
             onCompletion()
         }
     }
+    
+    func load(identifier:String, onCompletion:@escaping((Data) -> Void), onError:@escaping((Error) -> Void)) {
+        
+    }
 }

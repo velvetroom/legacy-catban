@@ -12,6 +12,10 @@ class Remote:RemoteProtocol {
         }
     }
     
+    func load(hash:String, onCompletion:@escaping((Data) -> Void), onError:@escaping((Error) -> Void)) {
+        
+    }
+    
     private func mainThreadSave(data:Data, identifier:String,
                                 onCompletion:@escaping(() -> Void), onError:@escaping((Error) -> Void)) {
         if let providerType:RemoteProviderProtocol.Type = Configuration.remoteProviderType {
