@@ -13,8 +13,8 @@ class StateRename:StateProtocol {
         viewModel.currentName = self.project.name
         viewModel.title = String.localized(key:"StateRename_ViewModel_Title", in:type(of:self))
         let namer:ViewProtocol = NamerFactory.makeWith(interactor:interactor, and:viewModel)
-        interactor.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.pushTo(view:namer)
+        interactor.presenter?.startTransition { (transition:TransitionProtocol) in
+            transition.pushTo(view:namer)
         }
     }
     

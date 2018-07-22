@@ -7,9 +7,15 @@ class MockPresenter:Presenter {
     var onRename:(() -> Void)?
     var onDelete:(() -> Void)?
     var onShouldUpdate:(() -> Void)?
+    var onOpenCloud:(() -> Void)?
+    var onOpenScanner:(() -> Void)?
     
     override func openProject() {
         self.onOpen?()
+    }
+    
+    override func openProjectCloud() {
+        self.onOpenCloud?()
     }
     
     override func addProject() {
@@ -26,5 +32,9 @@ class MockPresenter:Presenter {
     
     override func shouldUpdate() {
         self.onShouldUpdate?()
+    }
+    
+    override func openScanner() {
+        self.onOpenScanner?()
     }
 }

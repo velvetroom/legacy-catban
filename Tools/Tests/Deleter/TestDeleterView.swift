@@ -30,7 +30,7 @@ class TestDeleterView:XCTestCase {
             closed = true
             expect.fulfill()
         }
-        self.deleter.selectorCancel(button:UIButton())
+        self.deleter.selectorCancel()
         self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(closed, "Failed to close") }
     }
     
@@ -41,7 +41,7 @@ class TestDeleterView:XCTestCase {
             called = true
             expect.fulfill()
         }
-        self.deleter.selectorCancel(button:UIButton())
+        self.deleter.selectorCancel()
         self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(called, "Failed to call presenter") }
     }
     
@@ -52,7 +52,7 @@ class TestDeleterView:XCTestCase {
             closed = true
             expect.fulfill()
         }
-        self.deleter.selectorConfirm(button:UIButton())
+        self.deleter.selectorConfirm()
         self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(closed, "Failed to close") }
     }
     
@@ -63,7 +63,7 @@ class TestDeleterView:XCTestCase {
             called = true
             expect.fulfill()
         }
-        self.deleter.selectorConfirm(button:UIButton())
+        self.deleter.selectorConfirm()
         self.waitForExpectations(timeout:0.5) { (error:Error?) in XCTAssertTrue(called, "Failed to call presenter") }
     }
     

@@ -16,6 +16,20 @@ public class Presenter:NSObject, PresenterProtocol {
         super.init()
     }
     
+    public func willAppear() {
+        self.shouldUpdate()
+    }
+    
+    public func shouldUpdate() {
+        let navigation:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.interactor.board)
+        let content:ViewModelContent = ViewModelFactory.makeContentWith(board:self.interactor.board)
+        let list:ViewModelList = ViewModelFactory.makeListWith(board:self.interactor.board)
+        self.viewModel.update(property:navigation)
+        self.viewModel.update(property:content)
+        self.viewModel.update(property:list)
+        self.selectCurrentItem()
+    }
+    
     func identifierFor(indexPath:IndexPath) -> String {
         let viewModel:ViewModelList = self.viewModel.property()
         return viewModel.items[indexPath.item].identifier
@@ -36,6 +50,20 @@ public class Presenter:NSObject, PresenterProtocol {
         self.interactor.openProjectWith(identifier:selected)
     }
     
+    func openScanner() {
+        let presenter:PresenterScan = PresenterScan()
+        let view:ViewScan = ViewScan(presenter:presenter)
+        view.presenter.interactor = self.interactor
+        self.transition?.presentAnimated(view:view, completion:nil)
+    }
+    
+    func openProjectCloud() {
+        guard
+            let selected:String = self.state.selected
+        else { return }
+        self.interactor.openProjectCloudWith(identifier:selected)
+    }
+    
     func addProject() {
         self.interactor.stateAddProject()
         self.interactor.openNamer()
@@ -47,54 +75,5 @@ public class Presenter:NSObject, PresenterProtocol {
         else { return }
         self.interactor.stateDeleteProjectWith(identifier:selected)
         self.interactor.openDeleter()
-    }
-    
-    public func willAppear() {
-        self.shouldUpdate()
-    }
-    
-    public func shouldUpdate() {
-        let navigation:ViewModelNavigation = ViewModelFactory.makeNavigationWith(board:self.interactor.board)
-        let content:ViewModelContent = ViewModelFactory.makeContentWith(board:self.interactor.board)
-        let list:ViewModelList = ViewModelFactory.makeListWith(board:self.interactor.board)
-        self.viewModel.update(property:navigation)
-        self.viewModel.update(property:content)
-        self.viewModel.update(property:list)
-        self.selectCurrentItem()
-    }
-    
-    private func selectCurrentItem() {
-        let viewModel:ViewModelList = self.viewModel.property()
-        if viewModel.items.isEmpty == false {
-            if let identifier:String = self.state.selected {
-                self.selectItemWith(identifier:identifier, from:viewModel)
-            } else {
-                self.selectItemAt(index:0)
-            }
-        }
-    }
-    
-    private func selectItemWith(identifier:String, from viewModel:ViewModelList) {
-        var index:Int = 0
-        let countItems:Int = viewModel.items.count
-        for indexItem:Int in 0 ..< countItems {
-            if viewModel.items[indexItem].identifier == identifier {
-                index = indexItem
-                break
-            }
-        }
-        self.selectItemAt(index:index)
-    }
-    
-    private func selectItemAt(index:Int) {
-        var viewModel:ViewModelSelected = self.viewModel.property()
-        viewModel.indexPath = IndexPath(item:index, section:0)
-        self.viewModel.update(property:viewModel)
-        self.stateSelectAt(index:index)
-    }
-    
-    private func stateSelectAt(index:Int) {
-        let viewModel:ViewModelList = self.viewModel.property()
-        self.state.selected = viewModel.items[index].identifier
     }
 }

@@ -6,7 +6,7 @@ import Shared
 class TestView_FirstResponder:XCTestCase {
     private var view:Card.View!
     private var text:MockViewText!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     private var card:CardProtocol!
     private var column:ColumnProtocol!
     
@@ -15,7 +15,7 @@ class TestView_FirstResponder:XCTestCase {
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Card.View()
         self.text = MockViewText()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.card = CardFactory.newCard()
         self.column = ColumnFactory.newColumn()
         self.card.container = self.column
@@ -34,14 +34,14 @@ class TestView_FirstResponder:XCTestCase {
     func testTextResignsFirstResponderOnDone() {
         var resigns:Bool = false
         self.text.onResignsFirstResponder = { resigns = true }
-        self.view.selectorDone(button:UIBarButtonItem())
+        self.view.selectorDone()
         XCTAssertTrue(resigns, "Not resigning")
     }
     
     func testTextResignsFirstResponderOnDelete() {
         var resigns:Bool = false
         self.text.onResignsFirstResponder = { resigns = true }
-        self.view.selectorDelete(button:UIBarButtonItem())
+        self.view.selectorDelete()
         XCTAssertTrue(resigns, "Not resigning")
     }
 }

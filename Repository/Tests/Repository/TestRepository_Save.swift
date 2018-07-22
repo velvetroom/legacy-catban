@@ -58,7 +58,7 @@ class TestRepository_Save:XCTestCase {
     private func saveProject() {
         let repository:Repository = Repository()
         do { try repository.file.buildStructure() } catch { }
-        repository.save(project:self.project)
+        repository.localSave(project:self.project)
     }
     
     private func validateBoard() {

@@ -46,6 +46,19 @@ class TestPresenterMenu:XCTestCase {
         }
     }
     
+    func testOpenCloudDismissesView() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var dimissed:Bool = false
+        self.transition.onDimiss = {
+            dimissed = true
+            expect.fulfill()
+        }
+        self.view.presenter.openCloud()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(dimissed, "Not dismissed")
+        }
+    }
+    
     func testOpenAboutDismissesView() {
         let expect:XCTestExpectation = self.expectation(description:String())
         var dimissed:Bool = false
@@ -80,6 +93,19 @@ class TestPresenterMenu:XCTestCase {
             expect.fulfill()
         }
         self.view.presenter.openProjects()
+        self.waitForExpectations(timeout:0.5) { (error:Error?) in
+            XCTAssertTrue(called, "Not called")
+        }
+    }
+    
+    func testOpenCloudNotifiesInteractor() {
+        let expect:XCTestExpectation = self.expectation(description:String())
+        var called:Bool = false
+        self.interactor.onOpenCloud = {
+            called = true
+            expect.fulfill()
+        }
+        self.view.presenter.openCloud()
         self.waitForExpectations(timeout:0.5) { (error:Error?) in
             XCTAssertTrue(called, "Not called")
         }

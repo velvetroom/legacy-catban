@@ -1,6 +1,0 @@
-framework module Pods_Architecture_Load {
-  umbrella header "Pods-Architecture-Load-umbrella.h"
-
-  export *
-  module * { export * }
-}

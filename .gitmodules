@@ -1,0 +1,3 @@
+[submodule "VersionUpdater"]
+	path = VersionUpdater
+	url = https://github.com/velvetroom/VersionUpdater.git

@@ -20,28 +20,34 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.content.viewList.updateLayout()
     }
     
-    @objc func selectorOpen(button:UIBarButtonItem) {
+    @objc func selectorOpen() {
         self.presenter.openProject()
     }
     
-    @objc func selectorAddProject(button:UIBarButtonItem) {
+    @objc func selectorCloud() {
+        self.presenter.openProjectCloud()
+    }
+    
+    @objc func selectorAddProject() {
         self.presenter.addProject()
     }
     
-    @objc func selectorRename(button:UIBarButtonItem) {
+    @objc func selectorScan() {
+        self.presenter.openScanner()
+    }
+    
+    @objc func selectorRename() {
         self.presenter.rename()
     }
     
-    @objc func selectorDelete(button:UIBarButtonItem) {
+    @objc func selectorDelete() {
         self.presenter.delete()
     }
     
     private func configureView() {
         self.title = String.localized(key:"View_title", in:type(of:self))
-        self.setToolbarItems(self.makeToolbarItems(), animated:true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem:UIBarButtonSystemItem.add,
-            target:self, action:#selector(self.selectorAddProject(button:)))
+        self.makeToolbar()
+        self.makeActions()
     }
     
     private func hookDelegates() {

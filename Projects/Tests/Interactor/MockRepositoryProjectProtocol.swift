@@ -8,11 +8,23 @@ class MockRepositoryProjectProtocol:RepositoryProjectProtocol {
     
     required init() { }
     
-    func save(project:ProjectProtocol) {
+    func localSave(project:ProjectProtocol) {
         MockRepositoryProjectProtocol.onSave?()
     }
     
-    func delete(project:ProjectProtocol) {
+    func localDelete(project:ProjectProtocol) {
         MockRepositoryProjectProtocol.onDelete?()
+    }
+    
+    func startRemote(project:ProjectProtocol,
+                     onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                     onError:@escaping((Error) -> Void)) {
+        
+    }
+    
+    func remoteSave(project:ProjectSynchedProtocol,
+                    onCompletion:@escaping(() -> Void),
+                    onError:@escaping((Error) -> Void)) {
+        
     }
 }

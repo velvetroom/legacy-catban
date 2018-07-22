@@ -1,8 +1,8 @@
 workspace 'catban.xcworkspace'
-use_frameworks!
 platform :ios, '11.0'
+use_frameworks!
 
-abstract_target 'Architecture' do
+abstract_target 'Podlist' do
     pod 'CleanArchitecture'
     
     target 'Architecture' do
@@ -17,13 +17,6 @@ abstract_target 'Architecture' do
     end
     target 'TestsShared' do
         project 'Shared/Shared.xcodeproj'
-    end
-    
-    target 'Repository' do
-        project 'Repository/Repository.xcodeproj'
-    end
-    target 'TestsRepository' do
-        project 'Repository/Repository.xcodeproj'
     end
     
     target 'Template' do
@@ -81,11 +74,29 @@ abstract_target 'Architecture' do
     target 'TestsProjects' do
         project 'Projects/Projects.xcodeproj'
     end
-
+    
+    target 'Cloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
+    target 'TestsCloud' do
+        project 'Cloud/Cloud.xcodeproj'
+    end
+    
+    target 'Repository' do
+        project 'Repository/Repository.xcodeproj'
+    end
+    target 'TestsRepository' do
+        project 'Repository/Repository.xcodeproj'
+    end
+    
     target 'Main' do
-    project 'Main/Main.xcodeproj'
+        project 'Main/Main.xcodeproj'
+        pod 'Firebase/Core'
+        pod 'Firebase/Storage'
     end
     target 'TestsMain' do
         project 'Main/Main.xcodeproj'
+        pod 'Firebase/Core'
+        pod 'Firebase/Storage'
     end
 end

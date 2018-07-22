@@ -3,6 +3,15 @@ import Board
 
 public protocol RepositoryProjectProtocol {
     init()
-    func save(project:ProjectProtocol)
-    func delete(project:ProjectProtocol)
+    func localSave(project:ProjectProtocol)
+    func localDelete(project:ProjectProtocol)
+    func startRemote(project:ProjectProtocol,
+                     onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                     onError:@escaping((Error) -> Void))
+    func remoteSave(project:ProjectSynchedProtocol,
+                    onCompletion:@escaping(() -> Void),
+                    onError:@escaping((Error) -> Void))
+    func remoteLoad(hash:String,
+                    onCompletion:@escaping((ProjectSynchedProtocol) -> Void),
+                    onError:@escaping((Error) -> Void))
 }

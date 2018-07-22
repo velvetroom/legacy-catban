@@ -7,8 +7,9 @@ import Tools
 
 public class Interactor:InteractorColumnProtocol, NamerInteractorProtocol, DeleterInteractorProtocol {
     public weak var presenter:InteractorDelegateProtocol?
+    public weak var project:ProjectProtocol!
     public weak var column:ColumnProtocol!
-    public var project:ProjectManagedProtocol!
+    public var board:BoardProtocol!
     
     public required init() { }
     public func namerCancelled() { }
@@ -23,13 +24,17 @@ public class Interactor:InteractorColumnProtocol, NamerInteractorProtocol, Delet
     public func deleteConfirmed() {
         self.project.remove(column:self.column)
         self.save()
-        self.presenter?.shouldTransition { (transition:TransitionProtocol?) in
-            transition?.transitionToHome(project:self.project)
+        self.presenter?.startTransition { [weak self] (transition:TransitionProtocol) in
+            self?.transitionToHomeWith(transition:transition)
         }
     }
     
     private func save() {
         let repository:RepositoryProjectProtocol = Configuration.repositoryProjectType.init()
-        repository.save(project:self.project)
+        repository.localSave(project:self.project)
+    }
+    
+    private func transitionToHomeWith(transition:TransitionProtocol) {
+        transition.transitionToHome(board:self.board, project:self.project)
     }
 }

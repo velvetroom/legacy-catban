@@ -12,4 +12,8 @@ struct ErrorRepository:LocalizedError {
         String.localized(key:"ErrorRepository_corruptedData", in:Repository.self))
     static let malformedData:ErrorRepository = ErrorRepository(errorDescription:
         String.localized(key:"ErrorRepository_malformedData", in:Repository.self))
+    static let alreadyClouded:ErrorRepository = ErrorRepository(errorDescription:
+        String.localized(key:"ErrorRepository_alreadyClouded", in:Repository.self))
+    static let noRemoteProvider:ErrorRepository = ErrorRepository(errorDescription:
+        String.localized(key:"ErrorRepository_noRemoteProvider", in:Repository.self))
 }

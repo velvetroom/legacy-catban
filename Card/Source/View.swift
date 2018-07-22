@@ -19,23 +19,23 @@ public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate 
         self.presenter.update(content:textView.text)
     }
     
-    @objc func selectorDone(button:UIBarButtonItem) {
+    @objc func selectorDone() {
         self.content.viewText.resignFirstResponder()
         self.presenter.done()
     }
     
-    @objc func selectorDelete(button:UIBarButtonItem) {
+    @objc func selectorDelete() {
         self.content.viewText.resignFirstResponder()
         self.presenter.delete()
     }
     
     private func configureView() {
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done,
-                                                         target:self, action:#selector(self.selectorDone(button:)))
+                                                         target:self, action:#selector(self.selectorDone))
         let deleteIcon:UIImage = UIImage(name:ViewConstants.Navigation.iconDelete, in:type(of:self))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:deleteIcon,style:UIBarButtonItemStyle.plain,
                                                            target:self,
-                                                           action:#selector(self.selectorDelete(button:)))
+                                                           action:#selector(self.selectorDelete))
         self.navigationItem.rightBarButtonItems = [buttonDone, buttonDelete]
     }
     
@@ -46,12 +46,10 @@ public class View:Architecture.View<Presenter, ViewContent>, UITextViewDelegate 
     
     private func configureViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.title = property.title
+            self?.content.viewText.text = property.text
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.title = viewModel.title
-        self.content.viewText.text = viewModel.text
     }
 }

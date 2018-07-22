@@ -19,15 +19,10 @@ class TestView:XCTestCase {
         self.view.presenter = self.presenter
     }
     
-    func testLoadImage() {
-        let image:UIImage? = UIImage(name:ViewConstants.Menu.icon, in:Home.View.self)
-        XCTAssertNotNil(image, "Failed to load image")
-    }
-    
     func testMenuButtonCallsPresenter() {
         var called:Bool = false
         self.presenter.onShowMenu = { called = true }
-        self.view.selectorMenu(button:UIBarButtonItem())
+        self.view.selectorMenu()
         XCTAssertTrue(called, "Not called")
     }
     

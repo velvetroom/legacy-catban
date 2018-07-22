@@ -7,16 +7,16 @@ import Shared
 class TestInteractor_States:XCTestCase {
     private var view:Projects.View!
     private var interactor:Interactor!
-    private var board:MockBoardProjectsProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var board:MockBoardProtocol!
+    private var project:MockProjectProtocol!
     private var transition:MockTransitionProtocol!
     
     override func setUp() {
         super.setUp()
         self.view = Projects.View()
         self.interactor = self.view.presenter.interactor
-        self.board = MockBoardProjectsProtocol()
-        self.project = MockProjectManagedProtocol()
+        self.board = MockBoardProtocol()
+        self.project = MockProjectProtocol()
         self.transition = MockTransitionProtocol()
         var viewModelList:ViewModelList = ViewModelList()
         viewModelList.items.append(ViewModelListItem())
@@ -34,7 +34,7 @@ class TestInteractor_States:XCTestCase {
     
     func testRenameChangesStateToRename() {
         self.view.presenter.state.selected = String()
-        self.view.selectorRename(button:UIBarButtonItem())
+        self.view.selectorRename()
         let state:StateRename? = self.interactor.state as? StateRename
         XCTAssertNotNil(state, "Invalid state")
         XCTAssertNotNil(state?.project, "Failed to inject to project to state")
@@ -52,7 +52,7 @@ class TestInteractor_States:XCTestCase {
             transitioned = true
         }
         self.view.presenter.state.selected = String()
-        self.view.selectorRename(button:UIBarButtonItem())
+        self.view.selectorRename()
         XCTAssertTrue(transitioned, "No trasition")
     }
     

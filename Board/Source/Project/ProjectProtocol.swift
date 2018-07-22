@@ -4,7 +4,7 @@ public protocol ProjectProtocol:
     IdentifierProtocol,
     CreatedProtocol,
     ContainerProtocol,
-    ProjectColumnsProtocol,
+    ColumnManagerProtocol,
     CardManagerProtocol,
     ProjectOrderProtocol {
     

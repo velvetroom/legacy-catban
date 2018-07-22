@@ -17,7 +17,7 @@ class TestNamerView_Calls:XCTestCase {
     func testCancelledCallsInteractor() {
         var called:Bool = false
         self.interactor.onNamerCancelled = { called = true }
-        self.view.selectorCancel(button:UIBarButtonItem())
+        self.view.selectorCancel()
         XCTAssertTrue(called, "Not called")
     }
     
@@ -29,21 +29,21 @@ class TestNamerView_Calls:XCTestCase {
             XCTAssertEqual(name, newName, "Invalid name received")
             called = true
         }
-        self.view.selectorSave(button:UIBarButtonItem())
+        self.view.selectorSave()
         XCTAssertTrue(called, "Not called")
     }
     
     func testCancelledCallsPop() {
         var called:Bool = false
         self.transition.onPop = { called = true }
-        self.view.selectorCancel(button:UIBarButtonItem())
+        self.view.selectorCancel()
         XCTAssertTrue(called, "Not called")
     }
     
     func testFinishedCallsPop() {
         var called:Bool = false
         self.transition.onPop = { called = true }
-        self.view.selectorSave(button:UIBarButtonItem())
+        self.view.selectorSave()
         XCTAssertTrue(called, "Not called")
     }
 }

@@ -41,6 +41,9 @@
       location = "group:Projects/Projects.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Cloud/Cloud.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
@@ -48,6 +51,9 @@
    </FileRef>
    <FileRef
       location = "group:Scripts">
+   </FileRef>
+   <FileRef
+      location = "group:VersionUpdater">
    </FileRef>
    <FileRef
       location = "group:LICENSE">

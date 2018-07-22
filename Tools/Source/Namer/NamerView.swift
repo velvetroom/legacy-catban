@@ -13,12 +13,12 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<NamerPresenter<Interact
         self.content.viewField.becomeFirstResponder()
     }
     
-    @objc func selectorSave(button:UIBarButtonItem) {
+    @objc func selectorSave() {
         self.presenter.saveWith(name:self.content.viewField.text!)
         self.closeNamer()
     }
     
-    @objc func selectorCancel(button:UIBarButtonItem) {
+    @objc func selectorCancel() {
         self.presenter.cancel()
         self.closeNamer()
     }
@@ -27,10 +27,10 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<NamerPresenter<Interact
         self.content.viewField.delegate = self.presenter
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.cancel,
-            target:self, action:#selector(self.selectorCancel(button:)))
+            target:self, action:#selector(self.selectorCancel))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem:UIBarButtonSystemItem.save, target:self,
-            action:#selector(self.selectorSave(button:)))
+            action:#selector(self.selectorSave))
     }
     
     private func configureViewModel() {
@@ -40,26 +40,22 @@ class NamerView<Interactor:NamerInteractorProtocol>:View<NamerPresenter<Interact
     
     private func configureContentViewModel() {
         var viewModel:NamerViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:NamerViewModelContent) in
+            self?.title = property.title
+            self?.content.viewField.text = property.currentName
+        }
         self.viewModel.update(property:viewModel)
     }
     
     private func configureStateViewModel() {
         var viewModel:NamerViewModelState = NamerViewModelState()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:NamerViewModelState) in
+            self?.navigationItem.rightBarButtonItem?.isEnabled = property.saveEnabled
+            self?.content.labelMessage.text = property.message
+            self?.content.viewStatus.statusError.isHidden = property.statusErrorHidden
+            self?.content.viewStatus.statusValid.isHidden = property.statusValidHidden
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:NamerViewModelContent) {
-        self.title = viewModel.title
-        self.content.viewField.text = viewModel.currentName
-    }
-    
-    private func updated(viewModel:NamerViewModelState) {
-        self.navigationItem.rightBarButtonItem?.isEnabled = viewModel.saveEnabled
-        self.content.labelMessage.text = viewModel.message
-        self.content.viewStatus.statusError.isHidden = viewModel.statusErrorHidden
-        self.content.viewStatus.statusValid.isHidden = viewModel.statusValidHidden
     }
     
     private func closeNamer() {

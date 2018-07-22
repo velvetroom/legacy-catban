@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		238E071D3440E95D1FCEA422 /* Pods_Architecture_TestsArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9114DE4BDABAA9A60A168CA6 /* Pods_Architecture_TestsArchitecture.framework */; };
-		4F7F346BBBDFADB9792BD260 /* Pods_Architecture_Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D65DF40A8320AF5627C0D0 /* Pods_Architecture_Architecture.framework */; };
+		029110CB071C63E2FD8F864D /* Pods_Podlist_TestsArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC29F0235BB5CF7469F5A4 /* Pods_Podlist_TestsArchitecture.framework */; };
 		DACCF60420E3D142003AA65E /* MockInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */; };
 		DACCF60520E3D142003AA65E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60120E3D142003AA65E /* TestView.swift */; };
 		DACCF60620E3D142003AA65E /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60220E3D142003AA65E /* MockView.swift */; };
@@ -21,9 +20,11 @@
 		DACCF61620E3D149003AA65E /* InteractorProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */; };
 		DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */; };
 		DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */; };
+		DAD2526220E50D3300B97B2E /* TransitionProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */; };
 		DAEE43F020E3CDCB0005564C /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE43DC20E3CD4E0005564C /* Architecture.framework */; };
 		DAEE441320E3CEFE0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
 		DAEE441420E3CF0E0005564C /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEE441220E3CEFE0005564C /* Board.framework */; };
+		F97B3F9E743E04DD64727EEE /* Pods_Podlist_Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5554F8667644A3935FAE1FD /* Pods_Podlist_Architecture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16F195A5EE6FF698A2AE0D4C /* Pods-Architecture-Architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Architecture.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Architecture/Pods-Architecture-Architecture.release.xcconfig"; sourceTree = "<group>"; };
-		8BB84445CE26B69E2075C8BF /* Pods-Architecture-Architecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Architecture.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Architecture/Pods-Architecture-Architecture.debug.xcconfig"; sourceTree = "<group>"; };
-		9114DE4BDABAA9A60A168CA6 /* Pods_Architecture_TestsArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F75CD13415D4B782303EFA /* Pods-Architecture-TestsArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsArchitecture.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture.release.xcconfig"; sourceTree = "<group>"; };
-		C1D65DF40A8320AF5627C0D0 /* Pods_Architecture_Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1143C2125C01D722948E0239 /* Pods-Podlist-Architecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Architecture.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Architecture/Pods-Podlist-Architecture.debug.xcconfig"; sourceTree = "<group>"; };
+		14CC29F0235BB5CF7469F5A4 /* Pods_Podlist_TestsArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_TestsArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B20E9A84EAF35F93C2E7C23 /* Pods-Podlist-TestsArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsArchitecture.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsArchitecture/Pods-Podlist-TestsArchitecture.release.xcconfig"; sourceTree = "<group>"; };
+		967243225176AD4094CE083A /* Pods-Podlist-Architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Architecture.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Architecture/Pods-Podlist-Architecture.release.xcconfig"; sourceTree = "<group>"; };
+		AB5AD5A9498F51629DDF7830 /* Pods-Podlist-TestsArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsArchitecture.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsArchitecture/Pods-Podlist-TestsArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
+		D5554F8667644A3935FAE1FD /* Pods_Podlist_Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInteractorProtocol.swift; sourceTree = "<group>"; };
 		DACCF60120E3D142003AA65E /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DACCF60220E3D142003AA65E /* MockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
@@ -54,11 +56,11 @@
 		DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorProjectProtocol.swift; sourceTree = "<group>"; };
 		DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorBoardProtocol.swift; sourceTree = "<group>"; };
 		DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorColumnProtocol.swift; sourceTree = "<group>"; };
+		DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitionProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAEE43DC20E3CD4E0005564C /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43EB20E3CDCA0005564C /* TestsArchitecture.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsArchitecture.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE43F620E3CE270005564C /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAEE441220E3CEFE0005564C /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F57B4BAA94F11EB8C00838FE /* Pods-Architecture-TestsArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsArchitecture.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAEE441320E3CEFE0005564C /* Board.framework in Frameworks */,
-				4F7F346BBBDFADB9792BD260 /* Pods_Architecture_Architecture.framework in Frameworks */,
+				F97B3F9E743E04DD64727EEE /* Pods_Podlist_Architecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +79,7 @@
 			files = (
 				DAEE43F020E3CDCB0005564C /* Architecture.framework in Frameworks */,
 				DAEE441420E3CF0E0005564C /* Board.framework in Frameworks */,
-				238E071D3440E95D1FCEA422 /* Pods_Architecture_TestsArchitecture.framework in Frameworks */,
+				029110CB071C63E2FD8F864D /* Pods_Podlist_TestsArchitecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +89,10 @@
 		6245A703E44447D28C801E87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8BB84445CE26B69E2075C8BF /* Pods-Architecture-Architecture.debug.xcconfig */,
-				16F195A5EE6FF698A2AE0D4C /* Pods-Architecture-Architecture.release.xcconfig */,
-				F57B4BAA94F11EB8C00838FE /* Pods-Architecture-TestsArchitecture.debug.xcconfig */,
-				96F75CD13415D4B782303EFA /* Pods-Architecture-TestsArchitecture.release.xcconfig */,
+				1143C2125C01D722948E0239 /* Pods-Podlist-Architecture.debug.xcconfig */,
+				967243225176AD4094CE083A /* Pods-Podlist-Architecture.release.xcconfig */,
+				AB5AD5A9498F51629DDF7830 /* Pods-Podlist-TestsArchitecture.debug.xcconfig */,
+				4B20E9A84EAF35F93C2E7C23 /* Pods-Podlist-TestsArchitecture.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -100,8 +102,8 @@
 			children = (
 				DACCF60120E3D142003AA65E /* TestView.swift */,
 				DACCF60020E3D142003AA65E /* MockInteractorProtocol.swift */,
-				DACCF60220E3D142003AA65E /* MockView.swift */,
 				DACCF60320E3D142003AA65E /* MockPresenterProtocol.swift */,
+				DACCF60220E3D142003AA65E /* MockView.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -109,13 +111,14 @@
 		DACCF60820E3D149003AA65E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */,
 				DACCF60A20E3D149003AA65E /* View.swift */,
 				DACCF60B20E3D149003AA65E /* TransitionProtocol.swift */,
+				DAD2526120E50D3300B97B2E /* TransitionProtocol+Default.swift */,
 				DACCF60C20E3D149003AA65E /* ViewModelNavigation.swift */,
 				DACCF60D20E3D149003AA65E /* ViewNavigationProtocol.swift */,
-				DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */,
 				DACCF60F20E3D149003AA65E /* InteractorBoardProtocol.swift */,
+				DACCF60E20E3D149003AA65E /* InteractorProjectProtocol.swift */,
+				DACCF60920E3D149003AA65E /* InteractorCardProtocol.swift */,
 				DACCF61020E3D149003AA65E /* InteractorColumnProtocol.swift */,
 			);
 			path = Source;
@@ -146,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				DAEE441220E3CEFE0005564C /* Board.framework */,
-				C1D65DF40A8320AF5627C0D0 /* Pods_Architecture_Architecture.framework */,
-				9114DE4BDABAA9A60A168CA6 /* Pods_Architecture_TestsArchitecture.framework */,
+				D5554F8667644A3935FAE1FD /* Pods_Podlist_Architecture.framework */,
+				14CC29F0235BB5CF7469F5A4 /* Pods_Podlist_TestsArchitecture.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,7 +267,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsArchitecture/Pods-Podlist-TestsArchitecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CleanArchitecture/CleanArchitecture.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -273,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsArchitecture/Pods-Architecture-TestsArchitecture-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsArchitecture/Pods-Podlist-TestsArchitecture-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8CE8597FA1BC78B55B256846 /* [CP] Check Pods Manifest.lock */ = {
@@ -287,7 +290,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-TestsArchitecture-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-TestsArchitecture-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -305,7 +308,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-Architecture-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-Architecture-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,6 +326,7 @@
 				DACCF61420E3D149003AA65E /* ViewModelNavigation.swift in Sources */,
 				DACCF61720E3D149003AA65E /* InteractorBoardProtocol.swift in Sources */,
 				DACCF61320E3D149003AA65E /* TransitionProtocol.swift in Sources */,
+				DAD2526220E50D3300B97B2E /* TransitionProtocol+Default.swift in Sources */,
 				DACCF61820E3D149003AA65E /* InteractorColumnProtocol.swift in Sources */,
 				DACCF61220E3D149003AA65E /* View.swift in Sources */,
 				DACCF61120E3D149003AA65E /* InteractorCardProtocol.swift in Sources */,
@@ -476,7 +480,7 @@
 		};
 		DAEE43E520E3CD4E0005564C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BB84445CE26B69E2075C8BF /* Pods-Architecture-Architecture.debug.xcconfig */;
+			baseConfigurationReference = 1143C2125C01D722948E0239 /* Pods-Podlist-Architecture.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,7 +505,7 @@
 		};
 		DAEE43E620E3CD4E0005564C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F195A5EE6FF698A2AE0D4C /* Pods-Architecture-Architecture.release.xcconfig */;
+			baseConfigurationReference = 967243225176AD4094CE083A /* Pods-Podlist-Architecture.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -526,7 +530,7 @@
 		};
 		DAEE43F420E3CDCB0005564C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57B4BAA94F11EB8C00838FE /* Pods-Architecture-TestsArchitecture.debug.xcconfig */;
+			baseConfigurationReference = AB5AD5A9498F51629DDF7830 /* Pods-Podlist-TestsArchitecture.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
@@ -544,7 +548,7 @@
 		};
 		DAEE43F520E3CDCB0005564C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96F75CD13415D4B782303EFA /* Pods-Architecture-TestsArchitecture.release.xcconfig */;
+			baseConfigurationReference = 4B20E9A84EAF35F93C2E7C23 /* Pods-Podlist-TestsArchitecture.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;

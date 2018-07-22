@@ -22,14 +22,7 @@ class Serialise:SerialiseProtocol {
         self.dictionary[RepositoryConstants.Keys.Shared.identifier] = board.identifier
     }
     
-    private func makeDictionaryFrom(project:ProjectProtocol) {
-        self.dictionary[RepositoryConstants.Keys.Shared.identifier] = project.identifier
-        self.dictionary[RepositoryConstants.Keys.Shared.created] = project.created
-        self.dictionary[RepositoryConstants.Keys.Project.name] = project.name
-        self.dictionary[RepositoryConstants.Keys.Project.columns] = self.makeColumnArrayFrom(project:project)
-    }
-    
-    private func makeColumnArrayFrom(project:ProjectProtocol) -> [[String:Any]] {
+    func makeColumnArrayFrom(project:ProjectProtocol) -> [[String:Any]] {
         var array:[[String:Any]] = []
         project.iterate { (column:ColumnProtocol) in
             array.append(self.makeDictionaryFrom(column:column))

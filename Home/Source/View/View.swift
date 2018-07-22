@@ -23,14 +23,14 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.listenForOrientationChange()
     }
     
-    @objc func selectorMenu(button:UIBarButtonItem) {
+    @objc func selectorMenu() {
         self.presenter.showMenu()
     }
     
     private func configureView() {
         let icon:UIImage = UIImage(name:ViewConstants.Menu.icon, in:type(of:self))
         self.buttonMenu = UIBarButtonItem(image:icon, style:UIBarButtonItemStyle.done,
-                                          target:self, action:#selector(self.selectorMenu(button:)))
+                                          target:self, action:#selector(self.selectorMenu))
     }
     
     private func configureCanvas() {
@@ -47,26 +47,22 @@ public class View:Architecture.View<Presenter, ViewContent> {
     
     private func configureMenuViewModel() {
         var viewModel:ViewModelMenu = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelMenu) in
+            if property.show {
+                self?.navigationItem.rightBarButtonItem = self?.buttonMenu
+            } else {
+                self?.navigationItem.rightBarButtonItem = nil
+            }
+        }
         self.viewModel.update(property:viewModel)
     }
     
     private func configureContentViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
-        self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelMenu) {
-        if viewModel.show {
-            self.navigationItem.rightBarButtonItem = self.buttonMenu
-        } else {
-            self.navigationItem.rightBarButtonItem = nil
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.title = property.title
         }
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.title = viewModel.title
+        self.viewModel.update(property:viewModel)
     }
     
     private func listenForOrientationChange() {

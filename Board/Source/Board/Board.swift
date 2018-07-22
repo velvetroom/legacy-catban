@@ -21,16 +21,6 @@ class Board:BoardProtocol, Equatable {
         self.projects = []
     }
     
-    func manage(project:ProjectProtocol) -> ProjectManagedProtocol {
-        self.remove(project:project)
-        return ProjectManagedFactory.assign(manager:self, to:project)
-    }
-    
-    func unmanage(project:ProjectManagedProtocol) {
-        let unmanaged:ProjectProtocol = ProjectFactory.removeManagementFrom(project:project)
-        self.add(project:unmanaged)
-    }
-    
     func add(project:ProjectProtocol) {
         guard
             project.identifier.isEmpty == false

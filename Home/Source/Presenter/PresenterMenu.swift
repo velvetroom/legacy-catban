@@ -16,6 +16,12 @@ class PresenterMenu:PresenterProtocol {
         }
     }
     
+    func openCloud() {
+        self.closeWith { [weak self] in
+            self?.interactor.openCloud()
+        }
+    }
+    
     func openProjects() {
         self.closeWith { [weak self] in
             self?.interactor.openProjects()

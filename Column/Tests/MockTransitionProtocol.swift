@@ -8,13 +8,6 @@ class MockTransitionProtocol:TransitionProtocol {
     var onPresent:(() -> Void)?
     var onTransitionToHome:(() -> Void)?
     
-    func transitionToLoad() { }
-    func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) { }
-    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
-    func transitionToProjects(board:BoardProjectsProtocol) { }
-    func pop() { }
-    func dismiss() { }
-    
     func present(view:ViewProtocol) {
         self.onPresent?()
     }
@@ -23,7 +16,7 @@ class MockTransitionProtocol:TransitionProtocol {
         self.onPush?()
     }
     
-    func transitionToHome(project:ProjectManagedProtocol) {
+    func transitionToHome(board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToHome?()
     }
 }

@@ -7,8 +7,8 @@ class TestInteractor:XCTestCase {
     private var view:Projects.View!
     private var interactor:Interactor!
     private var transition:MockTransitionProtocol!
-    private var board:MockBoardProjectsProtocol!
-    private var project:MockProjectManagedProtocol!
+    private var board:MockBoardProtocol!
+    private var project:MockProjectProtocol!
     private var state:MockStateProtocol!
     
     override func setUp() {
@@ -16,8 +16,8 @@ class TestInteractor:XCTestCase {
         Configuration.repositoryProjectType = MockRepositoryProjectProtocol.self
         self.view = Projects.View()
         self.transition = MockTransitionProtocol()
-        self.board = MockBoardProjectsProtocol()
-        self.project = MockProjectManagedProtocol()
+        self.board = MockBoardProtocol()
+        self.project = MockProjectProtocol()
         self.state = MockStateProtocol()
         self.board.project = self.project
         self.interactor = self.view.presenter.interactor
@@ -39,6 +39,13 @@ class TestInteractor:XCTestCase {
         XCTAssertTrue(transitioned, "Failed")
     }
     
+    func testOpenCloudTransitions() {
+        var transitioned:Bool = false
+        self.transition.onTransitionToCloud = { transitioned = true }
+        self.interactor.openProjectCloudWith(identifier:String())
+        XCTAssertTrue(transitioned, "Failed")
+    }
+    
     func testDeleteCallsState() {
         var removed:Bool = false
         self.interactor.board = board
@@ -56,7 +63,7 @@ class TestInteractor:XCTestCase {
     
     func testAddProjectsAddsItToBoard() {
         var added:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.board.onAddProject = { added = true }
         self.interactor.add(project:project)
         XCTAssertTrue(added, "Not added")
@@ -64,7 +71,7 @@ class TestInteractor:XCTestCase {
     
     func testAddProjectSaves() {
         var added:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         MockRepositoryProjectProtocol.onSave = { added = true }
         self.interactor.add(project:project)
         XCTAssertTrue(added, "Not added")
@@ -72,7 +79,7 @@ class TestInteractor:XCTestCase {
     
     func testDeleteRemovesProject() {
         var removed:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         self.board.onRemoveProject = { removed = true }
         self.interactor.delete(project:project)
         XCTAssertTrue(removed, "Not removed")
@@ -80,7 +87,7 @@ class TestInteractor:XCTestCase {
     
     func testDeleteRemovesFromRepository() {
         var removed:Bool = false
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         MockRepositoryProjectProtocol.onDelete = { removed = true }
         self.interactor.delete(project:project)
         XCTAssertTrue(removed, "Not removed")
@@ -90,9 +97,14 @@ class TestInteractor:XCTestCase {
         var updated:Bool = false
         let presenter:MockPresenter = MockPresenter()
         self.interactor.presenter = presenter
-        let project:MockProjectManagedProtocol = MockProjectManagedProtocol()
+        let project:MockProjectProtocol = MockProjectProtocol()
         presenter.onShouldUpdate = { updated = true }
         self.interactor.delete(project:project)
         XCTAssertTrue(updated, "Not updated")
+    }
+    
+    func testRetainsBoard() {
+        self.interactor.board = BoardFactory.newBoard()
+        XCTAssertNotNil(self.interactor.board, "Not retaining")
     }
 }

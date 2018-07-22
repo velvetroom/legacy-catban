@@ -7,7 +7,7 @@ class TestView_Notification:XCTestCase {
     private var view:Home.View!
     private var notificationCenter:MockNotificationCenter!
     private var presenter:MockPresenter!
-    private var project:MockProjectManagedProtocol!
+    private var project:MockProjectProtocol!
     
     override func setUp() {
         super.setUp()
@@ -15,7 +15,7 @@ class TestView_Notification:XCTestCase {
         self.view = Home.View()
         self.notificationCenter = MockNotificationCenter()
         self.presenter = MockPresenter()
-        self.project = MockProjectManagedProtocol()
+        self.project = MockProjectProtocol()
         self.presenter.interactor = self.view.presenter.interactor
         self.presenter.viewModel = self.view.presenter.viewModel
         self.view.notificationCenter = self.notificationCenter

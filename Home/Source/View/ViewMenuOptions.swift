@@ -3,6 +3,7 @@ import Shared
 
 class ViewMenuOptions:UIView {
     weak var closeButton:UIButton!
+    weak var optionCloud:ViewMenuOption!
     weak var optionProjects:ViewMenuOption!
     weak var optionAbout:ViewMenuOption!
     weak var layoutRootTop:NSLayoutConstraint!
@@ -10,7 +11,8 @@ class ViewMenuOptions:UIView {
     init() {
         super.init(frame:CGRect.zero)
         self.configureView()
-        self.factoryViews()
+        self.makeOutlets()
+        self.layoutOutlets()
     }
     
     required init?(coder:NSCoder) {
@@ -35,49 +37,21 @@ class ViewMenuOptions:UIView {
         self.alpha = ViewConstants.Options.alphaClose
     }
     
-    private func factoryViews() {
-        self.factoryCloseButton()
-        self.factoryProjects()
-//        self.factoryAbout()
+    private func makeOutlets() {
+        self.makeCloseButton()
+        self.makeOptions()
     }
     
-    private func factoryCloseButton() {
+    private func layoutOutlets() {
+        self.layoutCloseButton()
+        self.layoutOptions()
+    }
+    
+    private func makeCloseButton() {
         let closeButton:UIButton = UIButton()
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         self.closeButton = closeButton
         self.addSubview(closeButton)
-        
-        closeButton.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-        closeButton.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
-        closeButton.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
-        closeButton.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
-    }
-    
-    private func factoryProjects() {
-        self.optionProjects = self.factoryOptionWith(
-            icon:ViewConstants.Projects.icon, name:String.localized(key:"ViewMenuOption_Projects", in:type(of:self)))
-        self.optionProjects.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
-        self.layoutRootTop = self.optionProjects.topAnchor.constraint(
-            equalTo:self.topAnchor, constant:ViewConstants.Options.rootTopClose)
-        self.layoutRootTop.isActive = true
-    }
-    
-    private func factoryAbout() {
-        
-        self.optionAbout = self.factoryOptionWith(
-            icon:ViewConstants.About.icon, name:String.localized(key:"ViewMenuOption_About", in:type(of:self)))
-        self.optionAbout.centerXAnchor.constraint(equalTo:self.optionProjects.centerXAnchor).isActive = true
-        self.optionAbout.topAnchor.constraint(
-            equalTo:self.optionProjects.bottomAnchor, constant:ViewConstants.About.top).isActive = true
-    }
-    
-    private func factoryOptionWith(icon:String, name:String) -> ViewMenuOption {
-        let option:ViewMenuOption = ViewMenuOption()
-        option.load(icon:icon)
-        option.nameLabel.text = name
-        self.addSubview(option)
-        option.layoutSize()
-        return option
     }
     
     private func animateAfterDelay() {
@@ -90,5 +64,12 @@ class ViewMenuOptions:UIView {
             self?.alpha = alpha
             self?.layoutIfNeeded()
         }
+    }
+
+    private func layoutCloseButton() {
+        self.closeButton.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
+        self.closeButton.bottomAnchor.constraint(equalTo:self.bottomAnchor).isActive = true
+        self.closeButton.leftAnchor.constraint(equalTo:self.leftAnchor).isActive = true
+        self.closeButton.rightAnchor.constraint(equalTo:self.rightAnchor).isActive = true
     }
 }

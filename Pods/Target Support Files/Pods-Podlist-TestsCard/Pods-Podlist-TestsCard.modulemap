@@ -1,0 +1,6 @@
+framework module Pods_Podlist_TestsCard {
+  umbrella header "Pods-Podlist-TestsCard-umbrella.h"
+
+  export *
+  module * { export * }
+}

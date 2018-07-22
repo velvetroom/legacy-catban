@@ -25,14 +25,14 @@ class TestNavigation_Transitions_Board:XCTestCase {
             XCTAssertNotNil(view?.transition, "Failed to assign transition")
             XCTAssertNotNil(view?.presenter.interactor.project, "Failed to inject project")
             XCTAssertNotNil(view?.presenter.interactor.card, "Failed to inject")
+            XCTAssertNotNil(view?.presenter.interactor.board, "Failed to inject")
             transition = true
         }
         
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
-        let managed:ProjectManagedProtocol = board.manage(project:project)
         let card:CardProtocol = CardFactory.newCard()
-        self.model.transitionTo(card:card, in:managed)
+        self.model.transitionTo(card:card, board:board, project:project)
         XCTAssertTrue(transition, "Transition never happened")
     }
     
@@ -44,14 +44,14 @@ class TestNavigation_Transitions_Board:XCTestCase {
             XCTAssertNotNil(view?.transition, "Failed to assign transition")
             XCTAssertNotNil(view?.presenter.interactor.project, "Failed to inject project")
             XCTAssertNotNil(view?.presenter.interactor.column, "Failed to inject")
+            XCTAssertNotNil(view?.presenter.interactor.board, "Failed to inject")
             transition = true
         }
         
         let board:BoardProtocol = BoardFactory.newBoard()
         let project:ProjectProtocol = ProjectFactory.newProject()
-        let managed:ProjectManagedProtocol = board.manage(project:project)
         let column:ColumnProtocol = ColumnFactory.newColumn()
-        self.model.transitionTo(column:column, in:managed)
+        self.model.transitionTo(column:column, board:board, project:project)
         XCTAssertTrue(transition, "Transition never happened")
     }
 }

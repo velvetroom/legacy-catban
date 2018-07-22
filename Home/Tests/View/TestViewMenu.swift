@@ -23,21 +23,28 @@ class TestViewMenu:XCTestCase {
     func testCloseCallsPresenter() {
         var called:Bool = false
         self.presenter.onClose = { called = true }
-        self.view.selectorClose(button:UIButton())
+        self.view.selectorClose()
         XCTAssertTrue(called, "Not called")
     }
     
     func testSelectorProjectsCallsPresenter() {
         var called:Bool = false
         self.presenter.onOpenProjects = { called = true }
-        self.view.selectorProjects(button:UIButton())
+        self.view.selectorProjects()
+        XCTAssertTrue(called, "Not called")
+    }
+    
+    func testSelectorCloudCallsPresenter() {
+        var called:Bool = false
+        self.presenter.onOpenCloud = { called = true }
+        self.view.selectorCloud()
         XCTAssertTrue(called, "Not called")
     }
     
     func testSelectorAboutCallsPresenter() {
         var called:Bool = false
         self.presenter.onOpenAbout = { called = true }
-        self.view.selectorAbout(button:UIButton())
+        self.view.selectorAbout()
         XCTAssertTrue(called, "Not called")
     }
 }

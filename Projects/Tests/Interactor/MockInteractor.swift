@@ -7,6 +7,7 @@ class MockInteractor:Interactor {
     var onAddProject:(() -> Void)?
     var onDelete:(() -> Void)?
     var onOpenProject:(() -> Void)?
+    var onOpenProjectCloud:(() -> Void)?
     
     override func updated(project:ProjectProtocol) {
         self.onUpdated?()
@@ -22,5 +23,9 @@ class MockInteractor:Interactor {
     
     override func openProjectWith(identifier:String) {
         self.onOpenProject?()
+    }
+    
+    override func openProjectCloudWith(identifier:String) {
+        self.onOpenProjectCloud?()
     }
 }

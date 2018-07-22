@@ -12,10 +12,10 @@ public class ProjectFactory {
         return Project()
     }
     
-    class func removeManagementFrom(project:ProjectManagedProtocol) -> ProjectProtocol {
-        let unmanaged:ProjectProtocol = blankProject()
-        unmanaged.copy(project:project)
-        return unmanaged
+    public class func makeSynchable(project:ProjectProtocol) -> ProjectSynchedProtocol {
+        let synchable:ProjectSynchedProtocol = ProjectSynched()
+        synchable.copy(project:project)
+        return synchable
     }
     
     private init() { }

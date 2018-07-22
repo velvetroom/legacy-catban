@@ -1,0 +1,5 @@
+View_Title="Cloud";
+ViewModelFactory_LabelNotClouded="Cloud not started for this Board";
+ViewModelFactory_LabelSaved="Last saved\n";
+ViewContent_ButtonStart="Start";
+ViewContent_ButtonContinue="Continue";

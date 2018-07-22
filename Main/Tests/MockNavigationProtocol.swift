@@ -6,13 +6,13 @@ import Board
 class MockNavigationProtocol:NavigationProtocol {
     var onLaunch:(() -> Void)?
     var onTransitionToLoad:(() -> Void)?
-    var onTransitionToHome:((ProjectManagedProtocol) -> Void)?
-    var onTransitionToCard:((CardProtocol, ProjectManagedProtocol) -> Void)?
+    var onTransitionToHome:((ProjectProtocol) -> Void)?
+    var onTransitionToCard:((CardProtocol, ProjectProtocol) -> Void)?
+    var onTransitionToColumn:(() -> Void)?
     
     required init() { }
     
-    func transitionTo(column:ColumnProtocol, in project:ProjectManagedProtocol) { }
-    func transitionToProjects(board:BoardProjectsProtocol) { }
+    func transitionToProjects(board:BoardProtocol) { }
     func present(view:ViewProtocol) { }
     func pushTo(view:ViewProtocol) { }
     func pop() { }
@@ -27,11 +27,15 @@ class MockNavigationProtocol:NavigationProtocol {
         self.onTransitionToLoad?()
     }
     
-    func transitionToHome(project:ProjectManagedProtocol) {
+    func transitionToHome(board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToHome?(project)
     }
     
-    func transitionTo(card:CardProtocol, in project:ProjectManagedProtocol) {
+    func transitionTo(card:CardProtocol, board:BoardProtocol, project:ProjectProtocol) {
         self.onTransitionToCard?(card, project)
+    }
+    
+    func transitionTo(column:ColumnProtocol, board:BoardProtocol, project:ProjectProtocol) {
+        self.onTransitionToColumn?()
     }
 }

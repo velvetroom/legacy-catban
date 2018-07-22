@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */; };
-		DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */; };
-		DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */; };
-		DA0E58C3209F453000AD4425 /* TestProjectManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */; };
+		DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */; };
 		DA0E58C5209F486100AD4425 /* ProjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C4209F486100AD4425 /* ProjectFactory.swift */; };
 		DA0E58C7209F487100AD4425 /* TestProjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */; };
 		DA0E58CE209F4AB500AD4425 /* TestDate_Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */; };
@@ -20,6 +17,10 @@
 		DA46315220A47CDC00070042 /* CardManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315120A47CDC00070042 /* CardManagerProtocol.swift */; };
 		DA46315420A47FBD00070042 /* TestProject_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315320A47FBD00070042 /* TestProject_Cards.swift */; };
 		DA46315620A4834D00070042 /* TestColumn_Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46315520A4834D00070042 /* TestColumn_Cards.swift */; };
+		DA49177820E63BC800416DD2 /* ProjectSynchedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49177720E63BC800416DD2 /* ProjectSynchedProtocol.swift */; };
+		DA49177A20E63C0900416DD2 /* ProjectSynched.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49177920E63C0900416DD2 /* ProjectSynched.swift */; };
+		DA49178220E6456800416DD2 /* TestProjectSynched.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49178120E6456800416DD2 /* TestProjectSynched.swift */; };
+		DA55194120E4AA0600A2609C /* SynchedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55194020E4AA0600A2609C /* SynchedProtocol.swift */; };
 		DA567B37209C70D5005D74EE /* TestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B36209C70D5005D74EE /* TestProject.swift */; };
 		DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B38209C7117005D74EE /* ProjectProtocol.swift */; };
 		DA567B3B209C7147005D74EE /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA567B3A209C7147005D74EE /* Project.swift */; };
@@ -39,15 +40,13 @@
 		DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */; };
 		DAB7551E20A5608100813E95 /* ContainedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7551D20A5608100813E95 /* ContainedProtocol.swift */; };
 		DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */; };
-		DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */; };
+		DAC67FF920A01B2200791B6A /* ColumnManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */; };
 		DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */; };
 		DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */; };
 		DAC67FFF20A01DEE00791B6A /* ColumnFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */; };
 		DAC6800120A022F200791B6A /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800020A022F200791B6A /* CardFactory.swift */; };
 		DAC6800320A0230700791B6A /* TestCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800220A0230700791B6A /* TestCardFactory.swift */; };
-		DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */; };
-		DAC6800720A036B600791B6A /* TestProjectManagedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */; };
-		DAC6800920A036C700791B6A /* ProjectManagedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */; };
+		DADB20FA20EA67B4000C89D9 /* ProjectManagerProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB20F920EA67B4000C89D9 /* ProjectManagerProtocol+Default.swift */; };
 		DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */; };
 		DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */; };
 		DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */; };
@@ -58,7 +57,6 @@
 		DAE3E7E2209F542C00F8240C /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7E1209F542C00F8240C /* IdentifierProtocol.swift */; };
 		DAE3E7E4209F545000F8240C /* IdentifierProtocol+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7E3209F545000F8240C /* IdentifierProtocol+Default.swift */; };
 		DAE3E7EA209F59F500F8240C /* CreatedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7E9209F59F500F8240C /* CreatedProtocol.swift */; };
-		DAE3E7EC209F5A1F00F8240C /* TestCreatedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3E7EB209F5A1F00F8240C /* TestCreatedProtocol.swift */; };
 		DAFEF2BB209AE18300740A88 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF2A7209AE0FE00740A88 /* Board.framework */; };
 		DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */; };
 		DAFEF30E209AEC7700740A88 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF2F7209AEC7700740A88 /* Board.swift */; };
@@ -78,10 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardProjectsProtocol.swift; sourceTree = "<group>"; };
-		DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagedProtocol.swift; sourceTree = "<group>"; };
-		DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManaged.swift; sourceTree = "<group>"; };
-		DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectManaged.swift; sourceTree = "<group>"; };
+		DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerProtocol.swift; sourceTree = "<group>"; };
 		DA0E58C4209F486100AD4425 /* ProjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFactory.swift; sourceTree = "<group>"; };
 		DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectFactory.swift; sourceTree = "<group>"; };
 		DA0E58CD209F4AB500AD4425 /* TestDate_Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDate_Timestamp.swift; sourceTree = "<group>"; };
@@ -91,6 +86,10 @@
 		DA46315120A47CDC00070042 /* CardManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManagerProtocol.swift; sourceTree = "<group>"; };
 		DA46315320A47FBD00070042 /* TestProject_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_Cards.swift; sourceTree = "<group>"; };
 		DA46315520A4834D00070042 /* TestColumn_Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_Cards.swift; sourceTree = "<group>"; };
+		DA49177720E63BC800416DD2 /* ProjectSynchedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSynchedProtocol.swift; sourceTree = "<group>"; };
+		DA49177920E63C0900416DD2 /* ProjectSynched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSynched.swift; sourceTree = "<group>"; };
+		DA49178120E6456800416DD2 /* TestProjectSynched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectSynched.swift; sourceTree = "<group>"; };
+		DA55194020E4AA0600A2609C /* SynchedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchedProtocol.swift; sourceTree = "<group>"; };
 		DA567B36209C70D5005D74EE /* TestProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject.swift; sourceTree = "<group>"; };
 		DA567B38209C7117005D74EE /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
 		DA567B3A209C7147005D74EE /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -110,15 +109,13 @@
 		DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 		DAB7551D20A5608100813E95 /* ContainedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedProtocol.swift; sourceTree = "<group>"; };
 		DAC67FF620A01A6600791B6A /* TestColumn_CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumn_CardsManager.swift; sourceTree = "<group>"; };
-		DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColumnsProtocol.swift; sourceTree = "<group>"; };
+		DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnManagerProtocol.swift; sourceTree = "<group>"; };
 		DAC67FFA20A01BD300791B6A /* TestProject_ColumnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProject_ColumnsManager.swift; sourceTree = "<group>"; };
 		DAC67FFC20A01DD200791B6A /* TestColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColumnFactory.swift; sourceTree = "<group>"; };
 		DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFactory.swift; sourceTree = "<group>"; };
 		DAC6800020A022F200791B6A /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		DAC6800220A0230700791B6A /* TestCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCardFactory.swift; sourceTree = "<group>"; };
-		DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBoard_Manage.swift; sourceTree = "<group>"; };
-		DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectManagedFactory.swift; sourceTree = "<group>"; };
-		DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagedFactory.swift; sourceTree = "<group>"; };
+		DADB20F920EA67B4000C89D9 /* ProjectManagerProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectManagerProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCardsProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7D6209F52EE00F8240C /* CardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 		DAE3E7E1209F542C00F8240C /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
 		DAE3E7E3209F545000F8240C /* IdentifierProtocol+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IdentifierProtocol+Default.swift"; sourceTree = "<group>"; };
 		DAE3E7E9209F59F500F8240C /* CreatedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedProtocol.swift; sourceTree = "<group>"; };
-		DAE3E7EB209F5A1F00F8240C /* TestCreatedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCreatedProtocol.swift; sourceTree = "<group>"; };
 		DAFEF2A7209AE0FE00740A88 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF2B6209AE18200740A88 /* TestsBoard.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsBoard.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF2C1209AE1F500740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -179,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE3E7D2209F52D500F8240C /* ColumnProtocol.swift */,
+				DAC67FF820A01B2200791B6A /* ColumnManagerProtocol.swift */,
 				DAE3E7D4209F52E400F8240C /* ColumnCardsProtocol.swift */,
 				DA8F5F0E20B2D206009DA097 /* ColumnOrderProtocol.swift */,
 				DAC67FFE20A01DEE00791B6A /* ColumnFactory.swift */,
@@ -204,16 +201,16 @@
 			isa = PBXGroup;
 			children = (
 				DA567B38209C7117005D74EE /* ProjectProtocol.swift */,
-				DA0E58BE209F447E00AD4425 /* ProjectManagedProtocol.swift */,
-				DAC67FF820A01B2200791B6A /* ProjectColumnsProtocol.swift */,
+				DA49177720E63BC800416DD2 /* ProjectSynchedProtocol.swift */,
+				DA0E58BC209F418000AD4425 /* ProjectManagerProtocol.swift */,
+				DADB20F920EA67B4000C89D9 /* ProjectManagerProtocol+Default.swift */,
 				DA8F5F0020B2C5A2009DA097 /* ProjectOrderProtocol.swift */,
 				DA0E58C4209F486100AD4425 /* ProjectFactory.swift */,
-				DAC6800820A036C700791B6A /* ProjectManagedFactory.swift */,
 				DA567B3A209C7147005D74EE /* Project.swift */,
 				DA8F5F0220B2C706009DA097 /* Project+Columns.swift */,
 				DA8F5F0420B2C75E009DA097 /* Project+Cards.swift */,
 				DA8F5F0620B2C789009DA097 /* Project+Order.swift */,
-				DA0E58C0209F449F00AD4425 /* ProjectManaged.swift */,
+				DA49177920E63C0900416DD2 /* ProjectSynched.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -227,9 +224,8 @@
 				DA8F5F0820B2C7F0009DA097 /* TestProject_Order_Columns.swift */,
 				DA8F5F0C20B2CD9C009DA097 /* TestProject_Order_Cards.swift */,
 				DA8F5F0A20B2CB85009DA097 /* TestProject_Map.swift */,
-				DA0E58C2209F453000AD4425 /* TestProjectManaged.swift */,
+				DA49178120E6456800416DD2 /* TestProjectSynched.swift */,
 				DA0E58C6209F487100AD4425 /* TestProjectFactory.swift */,
-				DAC6800620A036B600791B6A /* TestProjectManagedFactory.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -272,6 +268,7 @@
 				DAE3E7E9209F59F500F8240C /* CreatedProtocol.swift */,
 				DAB7551B20A55FE400813E95 /* ContainerProtocol.swift */,
 				DAB7551D20A5608100813E95 /* ContainedProtocol.swift */,
+				DA55194020E4AA0600A2609C /* SynchedProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -280,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				DA0E58D4209F4DB800AD4425 /* TestIdentifierProtocol.swift */,
-				DAE3E7EB209F5A1F00F8240C /* TestCreatedProtocol.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -335,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				DAFEF2FB209AEC7700740A88 /* BoardProtocol.swift */,
-				DA0E58BC209F418000AD4425 /* BoardProjectsProtocol.swift */,
 				DAFEF338209AF47600740A88 /* BoardFactory.swift */,
 				DAFEF2F7209AEC7700740A88 /* Board.swift */,
 			);
@@ -347,7 +342,6 @@
 			children = (
 				DAFEF2C4209AE2BB00740A88 /* TestBoard.swift */,
 				DA0E58D2209F4B6400AD4425 /* TestBoard_ProjectManager.swift */,
-				DAC6800420A02A9E00791B6A /* TestBoard_Manage.swift */,
 				DAFEF33C209AF71E00740A88 /* TestBoardFactory.swift */,
 			);
 			path = Board;
@@ -468,11 +462,12 @@
 				DAE3E7D5209F52E400F8240C /* ColumnCardsProtocol.swift in Sources */,
 				DAE3E7EA209F59F500F8240C /* CreatedProtocol.swift in Sources */,
 				DAC6800120A022F200791B6A /* CardFactory.swift in Sources */,
+				DADB20FA20EA67B4000C89D9 /* ProjectManagerProtocol+Default.swift in Sources */,
 				DA8F5F1120B2D24F009DA097 /* Column+Order.swift in Sources */,
 				DAFEF339209AF47600740A88 /* BoardFactory.swift in Sources */,
 				DA8F5F0320B2C706009DA097 /* Project+Columns.swift in Sources */,
 				DAE3E7DD209F53C900F8240C /* Column.swift in Sources */,
-				DA0E58BD209F418000AD4425 /* BoardProjectsProtocol.swift in Sources */,
+				DA0E58BD209F418000AD4425 /* ProjectManagerProtocol.swift in Sources */,
 				DA567B39209C7117005D74EE /* ProjectProtocol.swift in Sources */,
 				DAE3E7D3209F52D500F8240C /* ColumnProtocol.swift in Sources */,
 				DA8F5F0720B2C789009DA097 /* Project+Order.swift in Sources */,
@@ -482,18 +477,18 @@
 				DAE3E7E2209F542C00F8240C /* IdentifierProtocol.swift in Sources */,
 				DA0E58D1209F4AD900AD4425 /* Date+Timestamp.swift in Sources */,
 				DAE3E7D7209F52EE00F8240C /* CardProtocol.swift in Sources */,
-				DAC67FF920A01B2200791B6A /* ProjectColumnsProtocol.swift in Sources */,
+				DA55194120E4AA0600A2609C /* SynchedProtocol.swift in Sources */,
+				DAC67FF920A01B2200791B6A /* ColumnManagerProtocol.swift in Sources */,
 				DAB7551C20A55FE400813E95 /* ContainerProtocol.swift in Sources */,
 				DA8F5F0F20B2D206009DA097 /* ColumnOrderProtocol.swift in Sources */,
-				DA0E58C1209F449F00AD4425 /* ProjectManaged.swift in Sources */,
 				DA46315220A47CDC00070042 /* CardManagerProtocol.swift in Sources */,
 				DAFEF312209AEC7700740A88 /* BoardProtocol.swift in Sources */,
+				DA49177820E63BC800416DD2 /* ProjectSynchedProtocol.swift in Sources */,
 				DA8F5F0520B2C75E009DA097 /* Project+Cards.swift in Sources */,
-				DA0E58BF209F447E00AD4425 /* ProjectManagedProtocol.swift in Sources */,
-				DAC6800920A036C700791B6A /* ProjectManagedFactory.swift in Sources */,
 				DA8F5EFF20B2C4C4009DA097 /* OrderCard.swift in Sources */,
 				DAE3E7E4209F545000F8240C /* IdentifierProtocol+Default.swift in Sources */,
 				DA8F5F1320B2D273009DA097 /* Column+Cards.swift in Sources */,
+				DA49177A20E63C0900416DD2 /* ProjectSynched.swift in Sources */,
 				DA8F5F0120B2C5A2009DA097 /* ProjectOrderProtocol.swift in Sources */,
 				DA567B3B209C7147005D74EE /* Project.swift in Sources */,
 				DAFEF30E209AEC7700740A88 /* Board.swift in Sources */,
@@ -505,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC67FFD20A01DD200791B6A /* TestColumnFactory.swift in Sources */,
-				DAC6800520A02A9E00791B6A /* TestBoard_Manage.swift in Sources */,
 				DAFEF2C5209AE2BB00740A88 /* TestBoard.swift in Sources */,
 				DAC67FF720A01A6600791B6A /* TestColumn_CardsManager.swift in Sources */,
 				DAFEF33D209AF71E00740A88 /* TestBoardFactory.swift in Sources */,
@@ -513,10 +507,8 @@
 				DA0E58D3209F4B6400AD4425 /* TestBoard_ProjectManager.swift in Sources */,
 				DA46315620A4834D00070042 /* TestColumn_Cards.swift in Sources */,
 				DA8F5F0D20B2CD9C009DA097 /* TestProject_Order_Cards.swift in Sources */,
-				DA0E58C3209F453000AD4425 /* TestProjectManaged.swift in Sources */,
-				DAE3E7EC209F5A1F00F8240C /* TestCreatedProtocol.swift in Sources */,
 				DAC67FFB20A01BD300791B6A /* TestProject_ColumnsManager.swift in Sources */,
-				DAC6800720A036B600791B6A /* TestProjectManagedFactory.swift in Sources */,
+				DA49178220E6456800416DD2 /* TestProjectSynched.swift in Sources */,
 				DA8F5F0920B2C7F0009DA097 /* TestProject_Order_Columns.swift in Sources */,
 				DA0E58CE209F4AB500AD4425 /* TestDate_Timestamp.swift in Sources */,
 				DA8F5F0B20B2CB85009DA097 /* TestProject_Map.swift in Sources */,

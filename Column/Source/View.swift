@@ -9,15 +9,15 @@ public class View:Architecture.View<Presenter, ViewContent> {
         self.configureViewModel()
     }
     
-    @objc func selectorDone(button:UIBarButtonItem) {
+    @objc func selectorDone() {
         self.presenter.done()
     }
     
-    @objc func selectorRename(button:UIBarButtonItem) {
+    @objc func selectorRename() {
         self.presenter.rename()
     }
     
-    @objc func selectorDelete(button:UIBarButtonItem) {
+    @objc func selectorDelete() {
         self.presenter.delete()
     }
     
@@ -28,22 +28,20 @@ public class View:Architecture.View<Presenter, ViewContent> {
         let fixedSpace:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.fixedSpace,
                                                          target:nil, action:nil)
         let buttonDone:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.done, target:self,
-                                                         action:#selector(self.selectorDone(button:)))
+                                                         action:#selector(self.selectorDone))
         let buttonRename:UIBarButtonItem = UIBarButtonItem(image:imageRename, style:UIBarButtonItemStyle.plain,
-                                                           target:self, action:#selector(self.selectorRename(button:)))
+                                                           target:self, action:#selector(self.selectorRename))
         let buttonDelete:UIBarButtonItem = UIBarButtonItem(image:imageDelete, style:UIBarButtonItemStyle.plain,
-                                                           target:self, action:#selector(self.selectorDelete(button:)))
+                                                           target:self, action:#selector(self.selectorDelete))
         fixedSpace.width = ViewConstants.Navigation.fixedSpace
         self.navigationItem.rightBarButtonItems = [buttonDone, fixedSpace, buttonRename, buttonDelete]
     }
     
     private func configureViewModel() {
         var viewModel:ViewModelContent = self.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelContent) in
+            self?.content.labelName.text = property.name
+        }
         self.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelContent) {
-        self.content.labelName.text = viewModel.name
     }
 }

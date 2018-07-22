@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12BACEB07B666BA5039C1519 /* Pods_Architecture_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A20CE504851905651944425 /* Pods_Architecture_Home.framework */; };
+		98D20364A176111B5B1C84B0 /* Pods_Podlist_TestsHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFC1763D989A762F7BA12D4 /* Pods_Podlist_TestsHome.framework */; };
+		D4715369CC30277257EB99B6 /* Pods_Podlist_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16D3F18474B844313707411 /* Pods_Podlist_Home.framework */; };
 		DA15451320A468FC00CCC59D /* MockTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */; };
 		DA15451720A46DAD00CCC59D /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15451620A46DAD00CCC59D /* MockInteractor.swift */; };
 		DA20A74720E3D78D0058A65A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA20A74620E3D78D0058A65A /* Architecture.framework */; };
@@ -27,7 +28,7 @@
 		DA4B895220B6A97F00B67ED5 /* MockPresenterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */; };
 		DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58BD7C209B3AE10013DBF0 /* Shared.framework */; };
 		DA5A452920B7EE0E00F88DE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5A452720B7EE0E00F88DE4 /* Localizable.strings */; };
-		DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */; };
+		DA75B70A20A837D9000756C3 /* MockProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B70920A837D9000756C3 /* MockProjectProtocol.swift */; };
 		DA85C50220DD2955007CDF61 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85C50120DD2955007CDF61 /* MockNotificationCenter.swift */; };
 		DA85C50420DD2B6F007CDF61 /* TestView_Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85C50320DD2B6F007CDF61 /* TestView_Notification.swift */; };
 		DA914C7E20B6BA040025AE49 /* ViewMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA914C7D20B6BA040025AE49 /* ViewMenu.swift */; };
@@ -43,6 +44,8 @@
 		DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DA978FBC20A1A848002461E6 /* Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA978FBA20A1A838002461E6 /* Board.framework */; };
 		DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */; };
+		DAD2525E20E4F23F00B97B2E /* ViewMenuOptions+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */; };
+		DAD2526020E5092300B97B2E /* TestImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2525F20E5092300B97B2E /* TestImages.swift */; };
 		DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC3209B120F00CFFC9A /* TestView.swift */; };
 		DADB5EC6209B124700CFFC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB5EC5209B124700CFFC9A /* View.swift */; };
 		DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */; };
@@ -53,7 +56,6 @@
 		DAFEF35C209AF82B00740A88 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFEF348209AF7D800740A88 /* Home.framework */; };
 		DAFEF368209AF8C700740A88 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF367209AF8C700740A88 /* TestInteractor.swift */; };
 		DAFEF36A209AF90200740A88 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF369209AF90200740A88 /* Interactor.swift */; };
-		E98060DC13F0634BD5AAF47F /* Pods_Architecture_TestsHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2345D52598874D6A792E76 /* Pods_Architecture_TestsHome.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +69,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31781C0BCB07552CE4233DBB /* Pods-Architecture-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Home.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Home/Pods-Architecture-Home.debug.xcconfig"; sourceTree = "<group>"; };
-		4056BB23319C3E194E3AB18B /* Pods-Architecture-TestsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsHome.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome.release.xcconfig"; sourceTree = "<group>"; };
-		6A20CE504851905651944425 /* Pods_Architecture_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81C31DD1B4BB09CFE7668736 /* Pods-Architecture-TestsHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-TestsHome.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome.debug.xcconfig"; sourceTree = "<group>"; };
-		A0A61F11483B61E7FBDACC00 /* Pods-Architecture-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture-Home.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Architecture-Home/Pods-Architecture-Home.release.xcconfig"; sourceTree = "<group>"; };
-		BE2345D52598874D6A792E76 /* Pods_Architecture_TestsHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_TestsHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E1381F8877CB2570FE9179 /* Pods-Podlist-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Home.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Home/Pods-Podlist-Home.release.xcconfig"; sourceTree = "<group>"; };
+		0AFC1763D989A762F7BA12D4 /* Pods_Podlist_TestsHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_TestsHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A8DAEDE9DFFFD0C4B6DE279 /* Pods-Podlist-TestsHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsHome.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsHome/Pods-Podlist-TestsHome.debug.xcconfig"; sourceTree = "<group>"; };
+		87A602ACC5FA0839BF573BAF /* Pods-Podlist-TestsHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-TestsHome.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-TestsHome/Pods-Podlist-TestsHome.release.xcconfig"; sourceTree = "<group>"; };
+		D395147F679D9B7B9AA38719 /* Pods-Podlist-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlist-Home.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Podlist-Home/Pods-Podlist-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransitionProtocol.swift; sourceTree = "<group>"; };
 		DA15451620A46DAD00CCC59D /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
 		DA20A74620E3D78D0058A65A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +90,7 @@
 		DA4B895120B6A97F00B67ED5 /* MockPresenterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenterMenu.swift; sourceTree = "<group>"; };
 		DA58BD7C209B3AE10013DBF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5A452820B7EE0E00F88DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectManagedProtocol.swift; sourceTree = "<group>"; };
+		DA75B70920A837D9000756C3 /* MockProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectProtocol.swift; sourceTree = "<group>"; };
 		DA85C50120DD2955007CDF61 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		DA85C50320DD2B6F007CDF61 /* TestView_Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView_Notification.swift; sourceTree = "<group>"; };
 		DA914C7D20B6BA040025AE49 /* ViewMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenu.swift; sourceTree = "<group>"; };
@@ -103,6 +104,8 @@
 		DA914C8F20B7042A0025AE49 /* ViewMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMenuOption.swift; sourceTree = "<group>"; };
 		DA978FBA20A1A838002461E6 /* Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA9A89F20DD3CEC00327ED6 /* TestInteractor_Namer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor_Namer.swift; sourceTree = "<group>"; };
+		DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewMenuOptions+Option.swift"; sourceTree = "<group>"; };
+		DAD2525F20E5092300B97B2E /* TestImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImages.swift; sourceTree = "<group>"; };
 		DADB5EC3209B120F00CFFC9A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DADB5EC5209B124700CFFC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanvasProtocol.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		DAFEF362209AF85800740A88 /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
 		DAFEF367209AF8C700740A88 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		DAFEF369209AF90200740A88 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		E16D3F18474B844313707411 /* Pods_Podlist_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podlist_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +131,7 @@
 				DA3D81B920DBBAF7004E9E85 /* Tools.framework in Frameworks */,
 				DA978FBB20A1A838002461E6 /* Board.framework in Frameworks */,
 				DA58BD7D209B3AE10013DBF0 /* Shared.framework in Frameworks */,
-				12BACEB07B666BA5039C1519 /* Pods_Architecture_Home.framework in Frameworks */,
+				D4715369CC30277257EB99B6 /* Pods_Podlist_Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +145,7 @@
 				DA3D81BB20DBBB11004E9E85 /* Tools.framework in Frameworks */,
 				DA4B894420B6912200B67ED5 /* Canvas.framework in Frameworks */,
 				DA20A74820E3D79B0058A65A /* Architecture.framework in Frameworks */,
-				E98060DC13F0634BD5AAF47F /* Pods_Architecture_TestsHome.framework in Frameworks */,
+				98D20364A176111B5B1C84B0 /* Pods_Podlist_TestsHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +155,10 @@
 		22468B2EE2437AE43FBBCCC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31781C0BCB07552CE4233DBB /* Pods-Architecture-Home.debug.xcconfig */,
-				A0A61F11483B61E7FBDACC00 /* Pods-Architecture-Home.release.xcconfig */,
-				81C31DD1B4BB09CFE7668736 /* Pods-Architecture-TestsHome.debug.xcconfig */,
-				4056BB23319C3E194E3AB18B /* Pods-Architecture-TestsHome.release.xcconfig */,
+				D395147F679D9B7B9AA38719 /* Pods-Podlist-Home.debug.xcconfig */,
+				09E1381F8877CB2570FE9179 /* Pods-Podlist-Home.release.xcconfig */,
+				1A8DAEDE9DFFFD0C4B6DE279 /* Pods-Podlist-TestsHome.debug.xcconfig */,
+				87A602ACC5FA0839BF573BAF /* Pods-Podlist-TestsHome.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -176,8 +180,8 @@
 				DA4B894120B690FF00B67ED5 /* Canvas.framework */,
 				DA978FBA20A1A838002461E6 /* Board.framework */,
 				DA58BD7C209B3AE10013DBF0 /* Shared.framework */,
-				6A20CE504851905651944425 /* Pods_Architecture_Home.framework */,
-				BE2345D52598874D6A792E76 /* Pods_Architecture_TestsHome.framework */,
+				E16D3F18474B844313707411 /* Pods_Podlist_Home.framework */,
+				0AFC1763D989A762F7BA12D4 /* Pods_Podlist_TestsHome.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,7 +207,7 @@
 			children = (
 				DA85C50120DD2955007CDF61 /* MockNotificationCenter.swift */,
 				DA15451220A468FC00CCC59D /* MockTransitionProtocol.swift */,
-				DA75B70920A837D9000756C3 /* MockProjectManagedProtocol.swift */,
+				DA75B70920A837D9000756C3 /* MockProjectProtocol.swift */,
 				DA3BA75720C2D41F004CB162 /* MockRepositoryProjectProtocol.swift */,
 				DAE6B51B20DE570B0084E4CE /* MockCanvasProtocol.swift */,
 			);
@@ -222,6 +226,7 @@
 				DA914C8120B6CEF30025AE49 /* ViewMenuClose.swift */,
 				DA914C8320B6D7D00025AE49 /* ViewMenuCloseFactory.swift */,
 				DA914C8D20B7030A0025AE49 /* ViewMenuOptions.swift */,
+				DAD2525D20E4F23F00B97B2E /* ViewMenuOptions+Option.swift */,
 				DA914C8F20B7042A0025AE49 /* ViewMenuOption.swift */,
 			);
 			path = View;
@@ -230,6 +235,7 @@
 		DADB5EC2209B11F800CFFC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAD2525F20E5092300B97B2E /* TestImages.swift */,
 				DADB5EC3209B120F00CFFC9A /* TestView.swift */,
 				DA85C50320DD2B6F007CDF61 /* TestView_Notification.swift */,
 				DA914C8720B6E55C0025AE49 /* TestViewMenu.swift */,
@@ -438,7 +444,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome-frameworks.sh",
+				"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsHome/Pods-Podlist-TestsHome-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CleanArchitecture/CleanArchitecture.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -447,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Architecture-TestsHome/Pods-Architecture-TestsHome-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Podlist-TestsHome/Pods-Podlist-TestsHome-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832F0209CF43CBB05ADB0D04 /* [CP] Check Pods Manifest.lock */ = {
@@ -461,7 +467,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-Home-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-Home-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -479,7 +485,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Architecture-TestsHome-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Podlist-TestsHome-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -504,6 +510,7 @@
 				DA914C7E20B6BA040025AE49 /* ViewMenu.swift in Sources */,
 				DA914C8420B6D7D00025AE49 /* ViewMenuCloseFactory.swift in Sources */,
 				DA914C9020B7042A0025AE49 /* ViewMenuOption.swift in Sources */,
+				DAD2525E20E4F23F00B97B2E /* ViewMenuOptions+Option.swift in Sources */,
 				DA914C8E20B7030A0025AE49 /* ViewMenuOptions.swift in Sources */,
 				DA4B894620B69CC500B67ED5 /* PresenterMenu.swift in Sources */,
 				DAFEF36A209AF90200740A88 /* Interactor.swift in Sources */,
@@ -516,7 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB5EC4209B120F00CFFC9A /* TestView.swift in Sources */,
-				DA75B70A20A837D9000756C3 /* MockProjectManagedProtocol.swift in Sources */,
+				DA75B70A20A837D9000756C3 /* MockProjectProtocol.swift in Sources */,
 				DA914C8820B6E55C0025AE49 /* TestViewMenu.swift in Sources */,
 				DAF7E660209B064700B8A39A /* TestPresenter.swift in Sources */,
 				DA85C50420DD2B6F007CDF61 /* TestView_Notification.swift in Sources */,
@@ -528,6 +535,7 @@
 				DA15451720A46DAD00CCC59D /* MockInteractor.swift in Sources */,
 				DAE6B52020DE6D050084E4CE /* TestPresenterMenu.swift in Sources */,
 				DAE6B51C20DE570B0084E4CE /* MockCanvasProtocol.swift in Sources */,
+				DAD2526020E5092300B97B2E /* TestImages.swift in Sources */,
 				DA4B894A20B69E5000B67ED5 /* MockPresenter.swift in Sources */,
 				DA914C8A20B6E7280025AE49 /* TestViewMenuClose.swift in Sources */,
 				DAA9A8A020DD3CEC00327ED6 /* TestInteractor_Namer.swift in Sources */,
@@ -683,7 +691,7 @@
 		};
 		DAFEF351209AF7D800740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31781C0BCB07552CE4233DBB /* Pods-Architecture-Home.debug.xcconfig */;
+			baseConfigurationReference = D395147F679D9B7B9AA38719 /* Pods-Podlist-Home.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -709,7 +717,7 @@
 		};
 		DAFEF352209AF7D800740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A61F11483B61E7FBDACC00 /* Pods-Architecture-Home.release.xcconfig */;
+			baseConfigurationReference = 09E1381F8877CB2570FE9179 /* Pods-Podlist-Home.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -734,7 +742,7 @@
 		};
 		DAFEF360209AF82B00740A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81C31DD1B4BB09CFE7668736 /* Pods-Architecture-TestsHome.debug.xcconfig */;
+			baseConfigurationReference = 1A8DAEDE9DFFFD0C4B6DE279 /* Pods-Podlist-TestsHome.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
@@ -753,7 +761,7 @@
 		};
 		DAFEF361209AF82B00740A88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4056BB23319C3E194E3AB18B /* Pods-Architecture-TestsHome.release.xcconfig */;
+			baseConfigurationReference = 87A602ACC5FA0839BF573BAF /* Pods-Podlist-TestsHome.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;

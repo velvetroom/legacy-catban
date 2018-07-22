@@ -22,10 +22,6 @@ class NavigationView:UINavigationController {
         self.setViewControllers([view.viewController], animated:self.animated)
     }
     
-    func present(view:ViewProtocol) {
-        self.present(view.viewController, animated:false, completion:nil)
-    }
-    
     func pushTo(view:ViewProtocol) {
         self.configureViewModelFor(view:view)
         self.pushViewController(view.viewController, animated:true)
@@ -33,10 +29,6 @@ class NavigationView:UINavigationController {
     
     func pop() {
         self.popViewController(animated:true)
-    }
-    
-    func dismiss() {
-        self.dismiss(animated:false, completion:nil)
     }
     
     override func viewDidLoad() {
@@ -63,12 +55,10 @@ class NavigationView:UINavigationController {
     
     private func configureViewModelFor(view:ViewProtocol) {
         var viewModel:ViewModelNavigation = view.viewModel.property()
-        viewModel.observing = self.updated
+        viewModel.observing = { [weak self] (property:ViewModelNavigation) in
+            self?.setNavigationBarHidden(property.navigationbarHidden, animated:true)
+            self?.setToolbarHidden(property.toolbarHidden, animated:true)
+        }
         view.viewModel.update(property:viewModel)
-    }
-    
-    private func updated(viewModel:ViewModelNavigation) {
-        self.setNavigationBarHidden(viewModel.navigationbarHidden, animated:true)
-        self.setToolbarHidden(viewModel.toolbarHidden, animated:true)
     }
 }

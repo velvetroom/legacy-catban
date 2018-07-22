@@ -50,14 +50,14 @@ class TestView:XCTestCase {
     func testSelectorDone() {
         var calledController:Bool = false
         self.interactor.onDone = { calledController = true }
-        self.view.selectorDone(button:UIBarButtonItem())
+        self.view.selectorDone()
         XCTAssertTrue(calledController, "Not called")
     }
     
     func testSelectorDelete() {
         var calledPresenter:Bool = false
         self.presenter.onDelete = { calledPresenter = true }
-        self.view.selectorDelete(button:UIBarButtonItem())
+        self.view.selectorDelete()
         XCTAssertTrue(calledPresenter, "Not called")
     }
     
