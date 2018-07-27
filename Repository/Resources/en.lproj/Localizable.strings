@@ -1,5 +1,0 @@
-ErrorRepository_FileNotFound="Error repository: File not found";
-ErrorRepository_boardNotFound="Error repository: Board not found";
-ErrorRepository_corruptedData="Error repository: Corrupted data";
-ErrorRepository_alreadyClouded="Error repository: Cloud already started for Board";
-ErrorRepository_noRemoteProvider="Error repository: No remote provider";

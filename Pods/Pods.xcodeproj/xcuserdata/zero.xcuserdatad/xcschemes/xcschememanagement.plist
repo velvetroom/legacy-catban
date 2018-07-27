@@ -3,169 +3,58 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08B8BCEE152F5B4BFBA9DD9A234F39D0</key>
+		<key>CleanArchitecture.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
-		<key>0DD735B37375CCD19B61DDA59F4C6A9C</key>
+		<key>FirebaseCore.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
-		<key>1097C21526E628F7558CB22B9C03AF42</key>
+		<key>FirebaseStorage.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
-		<key>161C83EFD1B18354CD073E026966C48A</key>
+		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
-		<key>1BC96BED8E82CC4984352C8705A764D8</key>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
-		<key>21CBC20D8CFE15DC735C468B1DB5EEF0</key>
+		<key>Pods-Catban.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
-		<key>246FCEB8774994EC3AC71728B528006D</key>
+		<key>nanopb.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>377009CF7F885BD62FD2E6F1A3EE3537</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5C0383D5E9AA52D15341BBACF9EAA24F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67276B65B371F2405A096FE55B3CA986</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6965D5C456E0D0A960880E0C138B2A12</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6AB15B002FD3FC3EF4CEBE60C9B06F6C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8308EAC4B66EB7209DB9406CC366B8A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A00A57CCDFC8CD615CD697FE89EC1C68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A6E2BEBA13A445CC1B268842DB7AB372</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACDBADA4B69E3547AB98D7A43AC00F48</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B045787916552D2068857A9EC78F08CE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B3B29705E4044B1B054AE9697B67BF05</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B5A07D77102F973A81C4933A2891A386</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3CB067F0DC1EDBAAAA589C4CD8AD6CD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D48FB953586F47BE2111FF1D38374C26</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D59FDCB79516C326C3EBE915963CDFED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9952414F496A733D6477F853F652D1E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED50ECA1651B779448A6A3684B945D51</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F18105332E85379CBBE6E4D829EBA47E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F189BD48B86933DD90866031AADA3BF9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F336D3D5B421B3F42BBEC4F60CCDE631</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F3535EDFA606E7F458C510BC81D8F03A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F7E06138B02CBDDA50A6D73D8749DA34</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDC3A4166F4C3EB5C2B7C8A4998033D9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF81FBF2A23EB503239A28BB1B73CAE7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>

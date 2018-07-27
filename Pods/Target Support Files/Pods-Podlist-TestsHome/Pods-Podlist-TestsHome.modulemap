@@ -1,6 +1,0 @@
-framework module Pods_Podlist_TestsHome {
-  umbrella header "Pods-Podlist-TestsHome-umbrella.h"
-
-  export *
-  module * { export * }
-}

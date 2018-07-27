@@ -2,69 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Main/Main.xcodeproj">
+      location = "group:Catban.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Architecture/Architecture.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Shared/Shared.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Board/Board.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Tools/Tools.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Repository/Repository.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Template/Template.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Canvas/Canvas.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Load/Load.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Home/Home.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Card/Card.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Column/Column.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Projects/Projects.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Cloud/Cloud.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Design">
-   </FileRef>
-   <FileRef
-      location = "group:Scripts">
+      location = "group:Configuration">
    </FileRef>
    <FileRef
       location = "group:VersionUpdater">
    </FileRef>
    <FileRef
-      location = "group:LICENSE">
-   </FileRef>
-   <FileRef
-      location = "group:README.md">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Podfile">
    </FileRef>
    <FileRef
-      location = "group:Main/../.gitignore">
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:.gitignore">
+   </FileRef>
+   <FileRef
+      location = "group:.gitmodules">
    </FileRef>
 </Workspace>

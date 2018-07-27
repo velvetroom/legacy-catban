@@ -1,6 +1,0 @@
-framework module Pods_Podlist_Column {
-  umbrella header "Pods-Podlist-Column-umbrella.h"
-
-  export *
-  module * { export * }
-}
