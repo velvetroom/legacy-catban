@@ -3,58 +3,44 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CleanArchitecture.xcscheme</key>
+		<key>1A25CB7586984BF7FBB261005AEFBBE7</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>FirebaseCore.xcscheme</key>
+		<key>1BC96BED8E82CC4984352C8705A764D8</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>FirebaseStorage.xcscheme</key>
+		<key>4081283D283C2994D4770B7D113A2647</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>GTMSessionFetcher.xcscheme</key>
+		<key>A00A57CCDFC8CD615CD697FE89EC1C68</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
+		<key>B5A07D77102F973A81C4933A2891A386</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>Pods-Catban.xcscheme</key>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>nanopb.xcscheme</key>
+		<key>F3535EDFA606E7F458C510BC81D8F03A</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict/>
 </dict>
 </plist>
