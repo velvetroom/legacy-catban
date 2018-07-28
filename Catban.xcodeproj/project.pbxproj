@@ -98,12 +98,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DA511E5E210B651800ABD604 /* Catban */ = {
+		DA511E5E210B651800ABD604 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				DA511E5F210B651800ABD604 /* Application.swift */,
+				DA8EDE14210C51D20056B6B0 /* Shared */,
 			);
-			path = Catban;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		DA511E61210B652100ABD604 /* Entities */ = {
@@ -122,10 +122,18 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		DA8EDE14210C51D20056B6B0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DA511E5F210B651800ABD604 /* Application.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		DAD7ABCF210B6183008BDF4F = {
 			isa = PBXGroup;
 			children = (
-				DA511E5E210B651800ABD604 /* Catban */,
+				DA511E5E210B651800ABD604 /* Application */,
 				DA511E61210B652100ABD604 /* Entities */,
 				DA511E67210B655100ABD604 /* Tests */,
 				DAE68BFA210B6D2F000E5F31 /* Resources */,
