@@ -10,6 +10,10 @@
 		6EE153D2A59746E1713EDDD6 /* Pods_Catban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D75C04BC25C73FB666449 /* Pods_Catban.framework */; };
 		DA511E60210B651800ABD604 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E5F210B651800ABD604 /* Application.swift */; };
 		DA511E69210B655100ABD604 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* Tests.swift */; };
+		DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */; };
+		DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DB210DE04C00A07619 /* Repository.swift */; };
+		DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DD210DE0CF00A07619 /* Router.swift */; };
+		DA5C69E0210DE0FE00A07619 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DF210DE0FE00A07619 /* Injection.swift */; };
 		DA5D1019210DB518005E323A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
 		DA5D101A210DB518005E323A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA5D101F210DB545005E323A /* Board_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D101E210DB545005E323A /* Board_v1.swift */; };
@@ -50,6 +54,10 @@
 		60F2CCC791665504012E8AEE /* Pods-Catban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catban.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catban/Pods-Catban.release.xcconfig"; sourceTree = "<group>"; };
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA5C69DB210DE04C00A07619 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DA5C69DD210DE0CF00A07619 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DA5C69DF210DE0FE00A07619 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		DA5D1012210DB518005E323A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D101E210DB545005E323A /* Board_v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_v1.swift; sourceTree = "<group>"; };
 		DA5D1020210DB7BF005E323A /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
@@ -100,6 +108,7 @@
 		DA511E5E210B651800ABD604 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				DA5C69DA210DE03B00A07619 /* Repository */,
 				DA8EDE14210C51D20056B6B0 /* Shared */,
 			);
 			path = Application;
@@ -113,6 +122,14 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		DA5C69DA210DE03B00A07619 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA5C69DB210DE04C00A07619 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		DA5D1013210DB518005E323A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +138,7 @@
 				DA5D101E210DB545005E323A /* Board_v1.swift */,
 				DA5D1020210DB7BF005E323A /* Column.swift */,
 				DA5D1022210DB7D9005E323A /* Card.swift */,
+				DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -129,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				DA511E5F210B651800ABD604 /* Application.swift */,
+				DA5C69DD210DE0CF00A07619 /* Router.swift */,
+				DA5C69DF210DE0FE00A07619 /* Injection.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -375,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5D1025210DB8E0005E323A /* BoardProtocol.swift in Sources */,
+				DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */,
 				DA5D1027210DB913005E323A /* Configuration.swift in Sources */,
 				DA5D101F210DB545005E323A /* Board_v1.swift in Sources */,
 				DA5D1023210DB7D9005E323A /* Card.swift in Sources */,
@@ -387,6 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA511E60210B651800ABD604 /* Application.swift in Sources */,
+				DA5C69E0210DE0FE00A07619 /* Injection.swift in Sources */,
+				DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */,
+				DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +446,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Configuration/domain.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +473,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Configuration/domain.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
