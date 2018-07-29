@@ -12,9 +12,11 @@
 		DA511E69210B655100ABD604 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* Tests.swift */; };
 		DA5D1019210DB518005E323A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
 		DA5D101A210DB518005E323A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA5D101F210DB545005E323A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D101E210DB545005E323A /* Board.swift */; };
+		DA5D101F210DB545005E323A /* Board_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D101E210DB545005E323A /* Board_v1.swift */; };
 		DA5D1021210DB7BF005E323A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1020210DB7BF005E323A /* Column.swift */; };
 		DA5D1023210DB7D9005E323A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1022210DB7D9005E323A /* Card.swift */; };
+		DA5D1025210DB8E0005E323A /* BoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1024210DB8E0005E323A /* BoardProtocol.swift */; };
+		DA5D1027210DB913005E323A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1026210DB913005E323A /* Configuration.swift */; };
 		DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +51,11 @@
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		DA5D1012210DB518005E323A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA5D101E210DB545005E323A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		DA5D101E210DB545005E323A /* Board_v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_v1.swift; sourceTree = "<group>"; };
 		DA5D1020210DB7BF005E323A /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		DA5D1022210DB7D9005E323A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DA5D1024210DB8E0005E323A /* BoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardProtocol.swift; sourceTree = "<group>"; };
+		DA5D1026210DB913005E323A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DAD7ABD8210B6183008BDF4F /* Catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD7AC03210B61D5008BDF4F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,7 +116,9 @@
 		DA5D1013210DB518005E323A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D101E210DB545005E323A /* Board.swift */,
+				DA5D1026210DB913005E323A /* Configuration.swift */,
+				DA5D1024210DB8E0005E323A /* BoardProtocol.swift */,
+				DA5D101E210DB545005E323A /* Board_v1.swift */,
 				DA5D1020210DB7BF005E323A /* Column.swift */,
 				DA5D1022210DB7D9005E323A /* Card.swift */,
 			);
@@ -370,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5D101F210DB545005E323A /* Board.swift in Sources */,
+				DA5D1025210DB8E0005E323A /* BoardProtocol.swift in Sources */,
+				DA5D1027210DB913005E323A /* Configuration.swift in Sources */,
+				DA5D101F210DB545005E323A /* Board_v1.swift in Sources */,
 				DA5D1023210DB7D9005E323A /* Card.swift in Sources */,
 				DA5D1021210DB7BF005E323A /* Column.swift in Sources */,
 			);
