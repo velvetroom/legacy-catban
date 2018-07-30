@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6EE153D2A59746E1713EDDD6 /* Pods_Catban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D75C04BC25C73FB666449 /* Pods_Catban.framework */; };
+		DA36DEA3210EDE06008409E8 /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA2210EDE06008409E8 /* SessionProtocol.swift */; };
+		DA36DEA5210EDE22008409E8 /* Session_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA4210EDE22008409E8 /* Session_v1.swift */; };
+		DA36DEA7210EDE9C008409E8 /* LibraryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */; };
+		DA36DEA9210EDEAD008409E8 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA8210EDEAD008409E8 /* Library.swift */; };
 		DA511E60210B651800ABD604 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E5F210B651800ABD604 /* Application.swift */; };
 		DA511E69210B655100ABD604 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* Tests.swift */; };
 		DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */; };
@@ -52,6 +56,10 @@
 		1F6D75C04BC25C73FB666449 /* Pods_Catban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0596316A0FCD7974C6752E /* Pods-Catban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catban/Pods-Catban.debug.xcconfig"; sourceTree = "<group>"; };
 		60F2CCC791665504012E8AEE /* Pods-Catban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catban.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catban/Pods-Catban.release.xcconfig"; sourceTree = "<group>"; };
+		DA36DEA2210EDE06008409E8 /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
+		DA36DEA4210EDE22008409E8 /* Session_v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session_v1.swift; sourceTree = "<group>"; };
+		DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryProtocol.swift; sourceTree = "<group>"; };
+		DA36DEA8210EDEAD008409E8 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -134,6 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				DA5D1026210DB913005E323A /* Configuration.swift */,
+				DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */,
+				DA36DEA8210EDEAD008409E8 /* Library.swift */,
+				DA36DEA2210EDE06008409E8 /* SessionProtocol.swift */,
+				DA36DEA4210EDE22008409E8 /* Session_v1.swift */,
 				DA5D1024210DB8E0005E323A /* BoardProtocol.swift */,
 				DA5D101E210DB545005E323A /* Board_v1.swift */,
 				DA5D1020210DB7BF005E323A /* Column.swift */,
@@ -146,9 +158,9 @@
 		DA8EDE14210C51D20056B6B0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DA5C69DF210DE0FE00A07619 /* Injection.swift */,
 				DA511E5F210B651800ABD604 /* Application.swift */,
 				DA5C69DD210DE0CF00A07619 /* Router.swift */,
-				DA5C69DF210DE0FE00A07619 /* Injection.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -398,8 +410,12 @@
 				DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */,
 				DA5D1027210DB913005E323A /* Configuration.swift in Sources */,
 				DA5D101F210DB545005E323A /* Board_v1.swift in Sources */,
+				DA36DEA3210EDE06008409E8 /* SessionProtocol.swift in Sources */,
 				DA5D1023210DB7D9005E323A /* Card.swift in Sources */,
+				DA36DEA5210EDE22008409E8 /* Session_v1.swift in Sources */,
+				DA36DEA9210EDEAD008409E8 /* Library.swift in Sources */,
 				DA5D1021210DB7BF005E323A /* Column.swift in Sources */,
+				DA36DEA7210EDE9C008409E8 /* LibraryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
