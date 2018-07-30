@@ -12,6 +12,10 @@
 		DA36DEA5210EDE22008409E8 /* Session_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA4210EDE22008409E8 /* Session_v1.swift */; };
 		DA36DEA7210EDE9C008409E8 /* LibraryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */; };
 		DA36DEA9210EDEAD008409E8 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEA8210EDEAD008409E8 /* Library.swift */; };
+		DA36DEAC210EE1FC008409E8 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEAB210EE1FC008409E8 /* LibraryView.swift */; };
+		DA36DEAE210EE217008409E8 /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEAD210EE217008409E8 /* LibraryPresenter.swift */; };
+		DA36DEB0210EE22F008409E8 /* LibraryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEAF210EE22F008409E8 /* LibraryInteractor.swift */; };
+		DA36DEB2210EE260008409E8 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36DEB1210EE260008409E8 /* LibraryViewModel.swift */; };
 		DA511E60210B651800ABD604 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E5F210B651800ABD604 /* Application.swift */; };
 		DA511E69210B655100ABD604 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* Tests.swift */; };
 		DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */; };
@@ -60,6 +64,10 @@
 		DA36DEA4210EDE22008409E8 /* Session_v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session_v1.swift; sourceTree = "<group>"; };
 		DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryProtocol.swift; sourceTree = "<group>"; };
 		DA36DEA8210EDEAD008409E8 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		DA36DEAB210EE1FC008409E8 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		DA36DEAD210EE217008409E8 /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
+		DA36DEAF210EE22F008409E8 /* LibraryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInteractor.swift; sourceTree = "<group>"; };
+		DA36DEB1210EE260008409E8 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -113,11 +121,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA36DEAA210EE1DA008409E8 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DA36DEAF210EE22F008409E8 /* LibraryInteractor.swift */,
+				DA36DEAD210EE217008409E8 /* LibraryPresenter.swift */,
+				DA36DEB1210EE260008409E8 /* LibraryViewModel.swift */,
+				DA36DEAB210EE1FC008409E8 /* LibraryView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		DA511E5E210B651800ABD604 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				DA5C69DA210DE03B00A07619 /* Repository */,
 				DA8EDE14210C51D20056B6B0 /* Shared */,
+				DA36DEAA210EE1DA008409E8 /* Library */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -425,7 +445,11 @@
 			files = (
 				DA511E60210B651800ABD604 /* Application.swift in Sources */,
 				DA5C69E0210DE0FE00A07619 /* Injection.swift in Sources */,
+				DA36DEB2210EE260008409E8 /* LibraryViewModel.swift in Sources */,
 				DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */,
+				DA36DEB0210EE22F008409E8 /* LibraryInteractor.swift in Sources */,
+				DA36DEAC210EE1FC008409E8 /* LibraryView.swift in Sources */,
+				DA36DEAE210EE217008409E8 /* LibraryPresenter.swift in Sources */,
 				DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,7 +4,7 @@ class Router:UINavigationController {
     init() {
         super.init(nibName:nil, bundle:nil)
         self.configureNavigation()
-        self.setViewControllers([UIViewController()], animated:false)
+        self.setViewControllers([LibraryView()], animated:false)
     }
     
     required init?(coder:NSCoder) { return nil }
