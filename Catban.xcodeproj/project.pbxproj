@@ -22,6 +22,8 @@
 		DA511E69210B655100ABD604 /* TestsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* TestsLibrary.swift */; };
 		DA52931D21102B0100C5B8A5 /* MockRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52931C21102B0100C5B8A5 /* MockRepositoryProtocol.swift */; };
 		DA52931E21102C8500C5B8A5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
+		DA52932021102EB300C5B8A5 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52931F21102EB300C5B8A5 /* RepositoryError.swift */; };
+		DA52932321102F1A00C5B8A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA52932121102F1A00C5B8A5 /* Localizable.strings */; };
 		DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */; };
 		DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DB210DE04C00A07619 /* Repository.swift */; };
 		DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DD210DE0CF00A07619 /* Router.swift */; };
@@ -33,6 +35,7 @@
 		DA5D1023210DB7D9005E323A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1022210DB7D9005E323A /* Card.swift */; };
 		DA5D1025210DB8E0005E323A /* BoardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1024210DB8E0005E323A /* BoardProtocol.swift */; };
 		DA5D1027210DB913005E323A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1026210DB913005E323A /* Configuration.swift */; };
+		DA66C187211040A00025B710 /* SessionNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66C186211040A00025B710 /* SessionNil.swift */; };
 		DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,8 @@
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* TestsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsLibrary.swift; sourceTree = "<group>"; };
 		DA52931C21102B0100C5B8A5 /* MockRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA52931F21102EB300C5B8A5 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		DA52932221102F1A00C5B8A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA5C69DB210DE04C00A07619 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DA5C69DD210DE0CF00A07619 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		DA5D1022210DB7D9005E323A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DA5D1024210DB8E0005E323A /* BoardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardProtocol.swift; sourceTree = "<group>"; };
 		DA5D1026210DB913005E323A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DA66C186211040A00025B710 /* SessionNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNil.swift; sourceTree = "<group>"; };
 		DAD7ABD8210B6183008BDF4F /* Catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD7AC03210B61D5008BDF4F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5C69DB210DE04C00A07619 /* Repository.swift */,
+				DA52931F21102EB300C5B8A5 /* RepositoryError.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 				DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */,
 				DA36DEA8210EDEAD008409E8 /* Library.swift */,
 				DA36DEA2210EDE06008409E8 /* SessionProtocol.swift */,
+				DA66C186211040A00025B710 /* SessionNil.swift */,
 				DA36DEA4210EDE22008409E8 /* Session_v1.swift */,
 				DA5D1024210DB8E0005E323A /* BoardProtocol.swift */,
 				DA5D101E210DB545005E323A /* Board_v1.swift */,
@@ -223,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */,
+				DA52932121102F1A00C5B8A5 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -360,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */,
+				DA52932321102F1A00C5B8A5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,18 +421,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Catban/Pods-Catban-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/CleanArchitecture/CleanArchitecture.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableHero/CodableHero.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CleanArchitecture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableHero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +463,7 @@
 				DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */,
 				DA5D1027210DB913005E323A /* Configuration.swift in Sources */,
 				DA5D101F210DB545005E323A /* Board_v1.swift in Sources */,
+				DA66C187211040A00025B710 /* SessionNil.swift in Sources */,
 				DA36DEA3210EDE06008409E8 /* SessionProtocol.swift in Sources */,
 				DA5D1023210DB7D9005E323A /* Card.swift in Sources */,
 				DA36DEA5210EDE22008409E8 /* Session_v1.swift in Sources */,
@@ -458,6 +481,7 @@
 				DA36DEB6210EE412008409E8 /* Colors.swift in Sources */,
 				DA5C69E0210DE0FE00A07619 /* Injection.swift in Sources */,
 				DA36DEB2210EE260008409E8 /* LibraryViewModel.swift in Sources */,
+				DA52932021102EB300C5B8A5 /* RepositoryError.swift in Sources */,
 				DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */,
 				DA36DEB0210EE22F008409E8 /* LibraryInteractor.swift in Sources */,
 				DA36DEAC210EE1FC008409E8 /* LibraryView.swift in Sources */,
@@ -485,6 +509,17 @@
 			targetProxy = DA5D1017210DB518005E323A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA52932121102F1A00C5B8A5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA52932221102F1A00C5B8A5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA5D101C210DB518005E323A /* Debug */ = {
@@ -662,7 +697,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B0596316A0FCD7974C6752E /* Pods-Catban.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/application.plist;
@@ -680,7 +714,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60F2CCC791665504012E8AEE /* Pods-Catban.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = Configuration/application.plist;
