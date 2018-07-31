@@ -1,15 +1,15 @@
 import Foundation
 @testable import Domain
 
-class MockRepositoryProtocol:RepositoryProtocol {
+class MockRepositoryProtocol:RepositoryProtocol {    
     var error:Error?
     var onSaveSession:(() -> Void)?
     var session:Configuration.SessionType
-    var boards:[Data]
+    var board:Configuration.BoardType
     
     required init() {
         self.session = Configuration.SessionType()
-        self.boards = []
+        self.board = Configuration.BoardType()
     }
     
     func load<Model:Decodable>(session:@escaping((Model) -> Void), error:@escaping((Error) -> Void)) {
@@ -20,11 +20,12 @@ class MockRepositoryProtocol:RepositoryProtocol {
         }
     }
     
-    func loadBoards(identifiers:[String]) throws -> [Data] {
-        if let error:Error = self.error {
-            throw error
+    func load<Model:Decodable>(identifier:String, board:@escaping((Model) -> Void), error:@escaping((Error) -> Void)) {
+        if let throwingError:Error = self.error {
+            error(throwingError)
+        } else {
+            board(self.board as! Model)
         }
-        return self.boards
     }
     
     func save<Model:Encodable>(session:Model) {

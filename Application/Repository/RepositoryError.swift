@@ -5,4 +5,6 @@ struct RepositoryError:LocalizedError {
     
     static let sessionNotFound:RepositoryError = RepositoryError(errorDescription:NSLocalizedString(
         "RepositoryError.sessionNotFound", comment:String()))
+    static let boardNotFound:RepositoryError = RepositoryError(errorDescription:NSLocalizedString(
+        "RepositoryError.boardNotFound", comment:String()))
 }

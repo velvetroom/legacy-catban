@@ -1,1 +1,2 @@
 RepositoryError.sessionNotFound="Repository error: Session not found.";
+RepositoryError.boardNotFound="Repository error: Board not found.";

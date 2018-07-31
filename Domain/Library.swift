@@ -19,7 +19,7 @@ class Library:LibraryProtocol {
         })
     }
     
-    func loadBoards(completion: @escaping (() -> Void), error: @escaping ((Error) -> Void)) {
+    func loadBoards(completion:@escaping(() -> Void), error:@escaping((Error) -> Void)) {
         
     }
     
