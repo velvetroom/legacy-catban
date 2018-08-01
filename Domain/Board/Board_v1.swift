@@ -1,6 +1,6 @@
 import Foundation
 
-struct Board_v1:BoardProtocol, Codable {
+class Board_v1:BoardProtocol, Codable {
     var identifier:String
     var name:String
     var created:Date

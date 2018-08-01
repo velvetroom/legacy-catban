@@ -1,0 +1,2 @@
+DomainError.noSession="Error: No session.";
+DomainError.noBoardSelected="Error: no board selected.";
