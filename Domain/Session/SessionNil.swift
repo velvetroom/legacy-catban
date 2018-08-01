@@ -7,7 +7,7 @@ class SessionNil:SessionProtocol {
         self.boards = []
     }
     
-    func current(library:LibraryProtocol) throws -> BoardProtocol {
-        throw DomainError.noSession
-    }
+    func current(library:LibraryProtocol) throws -> BoardProtocol { throw DomainError.noSession }
+    func select(index:Int) { }
+    func clearSelection() { }
 }

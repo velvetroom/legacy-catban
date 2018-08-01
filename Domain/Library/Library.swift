@@ -1,37 +1,50 @@
 import Foundation
 
 class Library:LibraryProtocol {
+    weak var delegate:LibraryDelegate?
     var session:SessionProtocol
     var boards:[BoardProtocol]
     var repository:RepositoryProtocol
+    private let boardsLoader:LibraryBoardsLoader
     
     init() {
         self.session = SessionNil()
         self.boards = []
         self.repository = Configuration.repositoryType.init()
+        self.boardsLoader = LibraryBoardsLoader()
+        self.boardsLoader.library = self
     }
     
-    func loadSession(completion:@escaping(() -> Void)) {
-        self.repository.load(session: { [weak self] (session:Configuration.SessionType) in
-            self?.loaded(session:session, completion:completion)
+    func loadSession() {
+        self.repository.loadLocal(session: { [weak self] (session:Configuration.SessionType) in
+            self?.session = session
+            self?.notifySession()
         }, error: { [weak self] (_:Error) in
-            self?.loadSessionFailed(completion:completion)
+            self?.loadSessionFailed()
         })
     }
     
-    func loadBoards(completion:@escaping(() -> Void), error:@escaping((Error) -> Void)) {
-        
+    func loadBoards() {
+        self.boardsLoader.load(identifiers:self.session.boards)
     }
     
-    private func loaded(session:SessionProtocol, completion:(() -> Void)) {
-        self.session = session
-        completion()
+    func loaded(boards:[BoardProtocol]) {
+        self.boards = boards
+        self.notifyBoards()
     }
     
-    private func loadSessionFailed(completion:(() -> Void)) {
+    private func loadSessionFailed() {
         let session:Configuration.SessionType = Configuration.SessionType()
         self.session = session
-        self.repository.save(session:session)
-        completion()
+        self.repository.saveLocal(session:session)
+        self.notifySession()
+    }
+    
+    private func notifySession() {
+        DispatchQueue.main.async { [weak self] in self?.delegate?.librarySessionLoaded() }
+    }
+    
+    private func notifyBoards() {
+        DispatchQueue.main.async { [weak self] in self?.delegate?.libraryBoardsUpdated() }
     }
 }
