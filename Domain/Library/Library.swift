@@ -7,7 +7,7 @@ class Library:LibraryProtocol {
     var boards:[String:BoardProtocol]
     var cache:CacheServiceProtocol
     var database:DatabaseServiceProtocol
-    let boardsLoader:LibraryBoardsLoader
+    let loader:LibraryLoader
     static let stateDefault:LibraryStateProtocol = LibraryStateDefault()
     static let stateReady:LibraryStateProtocol = LibraryStateReady()
     
@@ -16,8 +16,8 @@ class Library:LibraryProtocol {
         self.boards = [:]
         self.cache = Factory.makeCache()
         self.database = Factory.makeDatabase()
-        self.boardsLoader = LibraryBoardsLoader()
-        self.boardsLoader.library = self
+        self.loader = LibraryLoader()
+        self.loader.library = self
         self.state = Library.stateDefault
     }
     

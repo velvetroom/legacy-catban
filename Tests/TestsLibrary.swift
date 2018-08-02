@@ -106,4 +106,21 @@ class TestsLibrary:XCTestCase {
         }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
+    
+    func testLoadFromCacheOnDatabaseError() {
+        self.library.state = Library.stateReady
+        self.library.loader.timeout = 0
+        let expect:XCTestExpectation = self.expectation(description:"Not loaded")
+        self.database.error = NSError()
+        self.library.session.boards = [String()]
+        self.delegate.onBoardsUpdated = {
+            XCTAssertEqual(self.library.boards.count, self.library.session.boards.count, "Invalid amount")
+            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+            expect.fulfill()
+        }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadBoards() } catch {}
+        }
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
 }

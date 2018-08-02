@@ -2,7 +2,7 @@ import Foundation
 
 class LibraryStateReady:LibraryStateProtocol {
     func loadBoards(context:Library) throws {
-        context.boardsLoader.load(identifiers:context.session.boards)
+        context.loader.load(identifiers:context.session.boards)
     }
     
     func newBoard(context:Library) throws {

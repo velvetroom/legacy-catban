@@ -1,13 +1,15 @@
 import Foundation
 
-class LibraryBoardsLoader {
+class LibraryLoader {
     weak var library:Library?
+    var timeout:TimeInterval
     private var identifiers:[String]
     private var boards:[String:BoardProtocol]
     private let group:DispatchGroup
     private let queue:DispatchQueue
     
     init() {
+        self.timeout = Constants.timeout
         self.identifiers = []
         self.boards = [:]
         self.group = DispatchGroup()
@@ -42,7 +44,7 @@ class LibraryBoardsLoader {
             self?.group.leave()
             self?.loaded(identifier:identifier, board:board)
         }
-        if group.wait(timeout:DispatchTime.now() + Constants.timeout) == DispatchTimeoutResult.timedOut {
+        if group.wait(timeout:DispatchTime.now() + self.timeout) == DispatchTimeoutResult.timedOut {
             self.timedout(identifier:identifier)
         }
     }

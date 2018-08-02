@@ -44,7 +44,7 @@
 		DA6E1D9F2111881300FDB6DF /* TestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1D9E2111881300FDB6DF /* TestSession.swift */; };
 		DA6E1DA12111925F00FDB6DF /* LibraryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1DA02111925F00FDB6DF /* LibraryDelegate.swift */; };
 		DA6E1DA32111933000FDB6DF /* MockLibraryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1DA22111933000FDB6DF /* MockLibraryDelegate.swift */; };
-		DA6E1DA5211194EF00FDB6DF /* LibraryBoardsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1DA4211194EF00FDB6DF /* LibraryBoardsLoader.swift */; };
+		DA6E1DA5211194EF00FDB6DF /* LibraryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1DA4211194EF00FDB6DF /* LibraryLoader.swift */; };
 		DA899B87211306CE00A23696 /* LibraryStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B86211306CE00A23696 /* LibraryStateProtocol.swift */; };
 		DA899B89211306E700A23696 /* LibraryStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B88211306E700A23696 /* LibraryStateReady.swift */; };
 		DA899B8B2113070E00A23696 /* LibraryStateDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */; };
@@ -117,7 +117,7 @@
 		DA6E1D9E2111881300FDB6DF /* TestSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSession.swift; sourceTree = "<group>"; };
 		DA6E1DA02111925F00FDB6DF /* LibraryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDelegate.swift; sourceTree = "<group>"; };
 		DA6E1DA22111933000FDB6DF /* MockLibraryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLibraryDelegate.swift; sourceTree = "<group>"; };
-		DA6E1DA4211194EF00FDB6DF /* LibraryBoardsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBoardsLoader.swift; sourceTree = "<group>"; };
+		DA6E1DA4211194EF00FDB6DF /* LibraryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryLoader.swift; sourceTree = "<group>"; };
 		DA899B86211306CE00A23696 /* LibraryStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateProtocol.swift; sourceTree = "<group>"; };
 		DA899B88211306E700A23696 /* LibraryStateReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateReady.swift; sourceTree = "<group>"; };
 		DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateDefault.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 				DA36DEA6210EDE9C008409E8 /* LibraryProtocol.swift */,
 				DA6E1DA02111925F00FDB6DF /* LibraryDelegate.swift */,
 				DA36DEA8210EDEAD008409E8 /* Library.swift */,
-				DA6E1DA4211194EF00FDB6DF /* LibraryBoardsLoader.swift */,
+				DA6E1DA4211194EF00FDB6DF /* LibraryLoader.swift */,
 				DA899B86211306CE00A23696 /* LibraryStateProtocol.swift */,
 				DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */,
 				DA899B88211306E700A23696 /* LibraryStateReady.swift */,
@@ -556,7 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5D1025210DB8E0005E323A /* BoardProtocol.swift in Sources */,
-				DA6E1DA5211194EF00FDB6DF /* LibraryBoardsLoader.swift in Sources */,
+				DA6E1DA5211194EF00FDB6DF /* LibraryLoader.swift in Sources */,
 				DA899B8B2113070E00A23696 /* LibraryStateDefault.swift in Sources */,
 				DA5C69D9210DDF8900A07619 /* CacheServiceProtocol.swift in Sources */,
 				DA5D1027210DB913005E323A /* Configuration.swift in Sources */,
