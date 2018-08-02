@@ -516,7 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/devel/iturbide/catban/VersionUpdater/bin/Main /devel/iturbide/catban/Configuration/application.plist\n";
+			shellScript = "VersionUpdater/bin/Main Configuration/application.plist\n";
 		};
 		E90D12C72E0B4EC4AB7CDC21 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
