@@ -2,12 +2,28 @@ import Foundation
 import CleanArchitecture
 import Domain
 
-class LibraryInteractor:Interactor {
+class LibraryInteractor:Interactor, LibraryDelegate {
     weak var delegate:InteractorDelegate?
+    let library:LibraryProtocol
     
-    required init() { }
+    required init() {
+        self.library = Factory.makeLibrary()
+        self.library.delegate = self
+    }
     
-    func didLoad() {
-        
+    func load() {
+        do {
+            try self.library.loadBoards()
+        } catch {
+            do { try self.library.loadSession() } catch { }
+        }
+    }
+    
+    func librarySessionLoaded() {
+        self.load()
+    }
+    
+    func libraryBoardsUpdated() {
+        self.delegate?.shouldUpdate()
     }
 }

@@ -2,64 +2,45 @@ import Foundation
 
 class Library:LibraryProtocol {
     weak var delegate:LibraryDelegate?
+    weak var state:LibraryStateProtocol!
     var session:SessionProtocol
     var boards:[String:BoardProtocol]
     var repository:RepositoryProtocol
-    private let boardsLoader:LibraryBoardsLoader
+    let boardsLoader:LibraryBoardsLoader
+    static let stateDefault:LibraryStateProtocol = LibraryStateDefault()
+    static let stateReady:LibraryStateProtocol = LibraryStateReady()
     
     init() {
         self.session = SessionNil()
         self.boards = [:]
         self.repository = Factory.makeRepository()
         self.boardsLoader = LibraryBoardsLoader()
+        self.state = Library.stateDefault
         self.boardsLoader.library = self
     }
     
-    func loadSession() {
-        self.repository.loadLocal(session: { [weak self] (session:Configuration.Session) in
-            self?.session = session
-            self?.notifySession()
-        }, error: { [weak self] (_:Error) in
-            self?.loadSessionFailed()
-        })
+    func loadSession() throws {
+        try self.state.loadSession(context:self)
     }
     
-    func loadBoards() {
-        self.boardsLoader.load(identifiers:self.session.boards)
+    func loadBoards() throws {
+        try self.state.loadBoards(context:self)
     }
     
-    func newBoard() {
-        let board:Configuration.Board = Configuration.Board()
-        self.repository.createRemote(board:board) { [weak self] (identifier:String) in
-            self?.boards[identifier] = board
-            self?.session.boards.append(identifier)
-            self?.repository.saveLocal(identifier:identifier, board:board)
-            self?.saveSession()
-            self?.notifyBoards()
-        }
+    func newBoard() throws {
+        try self.state.newBoard(context:self)
     }
     
-    func loaded(boards:[String:BoardProtocol]) {
-        self.boards = boards
-        self.notifyBoards()
-    }
-    
-    private func loadSessionFailed() {
-        let session:Configuration.Session = Configuration.Session()
-        self.session = session
-        self.repository.saveLocal(session:session)
-        self.notifySession()
-    }
-    
-    private func saveSession() {
-        self.repository.saveLocal(session:self.session as! Configuration.Session)
-    }
-    
-    private func notifySession() {
+    func sessionLoaded() {
+        self.state = Library.stateReady
         DispatchQueue.main.async { [weak self] in self?.delegate?.librarySessionLoaded() }
     }
     
-    private func notifyBoards() {
+    func saveSession() {
+        self.repository.saveLocal(session:self.session as! Configuration.Session)
+    }
+    
+    func notifyBoards() {
         DispatchQueue.main.async { [weak self] in self?.delegate?.libraryBoardsUpdated() }
     }
 }

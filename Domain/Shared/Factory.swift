@@ -1,6 +1,10 @@
 import Foundation
 
 public class Factory {
+    public class func makeLibrary() -> LibraryProtocol {
+        return Library()
+    }
+    
     class func makeSession() -> SessionProtocol {
         return Configuration.Session()
     }

@@ -30,12 +30,9 @@ class LibraryBoardsLoader {
                 self?.loaded(identifier:identifier, board:board)
             }
         } else {
-            self.loadFinished()
+            self.library?.boards = boards
+            self.library?.notifyBoards()
         }
-    }
-    
-    private func loadFinished() {
-        self.library?.loaded(boards:self.boards)
     }
     
     private func loaded(identifier:String, board:BoardProtocol) {

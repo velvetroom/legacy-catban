@@ -14,6 +14,7 @@ class TestsLibrary:XCTestCase {
         self.library.delegate = self.delegate
         self.repository = self.library.repository as? MockRepositoryProtocol
         self.library.session = Factory.makeSession()
+        self.library.state = Library.stateDefault
     }
     
     func testSessionStartsWithNullObject() {
@@ -27,9 +28,12 @@ class TestsLibrary:XCTestCase {
             let sessionNil:SessionNil? = self.library.session as? SessionNil
             XCTAssertNil(sessionNil, "Session not loaded")
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+            XCTAssertTrue(self.library.state === Library.stateReady, "Should be ready")
             expect.fulfill()
         }
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.loadSession() }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadSession() } catch {}
+        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
@@ -42,23 +46,30 @@ class TestsLibrary:XCTestCase {
             let sessionNil:SessionNil? = self.library.session as? SessionNil
             XCTAssertNil(sessionNil, "Session not loaded")
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+            XCTAssertTrue(self.library.state === Library.stateReady, "Should be ready")
             expectLoad.fulfill()
         }
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.loadSession() }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadSession() } catch {}
+        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testLoadUpdatesEmptyBoards() {
+        self.library.state = Library.stateReady
         let expect:XCTestExpectation = self.expectation(description:"Not loaded")
         self.delegate.onBoardsUpdated = {
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expect.fulfill()
         }
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.loadBoards() }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadBoards() } catch {}
+        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testLoadUpdatesNonEmptyBoards() {
+        self.library.state = Library.stateReady
         let expect:XCTestExpectation = self.expectation(description:"Not loaded")
         self.library.session.boards = ["a", "b"]
         self.delegate.onBoardsUpdated = {
@@ -66,11 +77,14 @@ class TestsLibrary:XCTestCase {
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expect.fulfill()
         }
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.loadBoards() }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadBoards() } catch {}
+        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
     
     func testNewBoardAddsBoardAndNotifiesDelegate() {
+        self.library.state = Library.stateReady
         let expectLoad:XCTestExpectation = self.expectation(description:"Not loaded")
         let expectCreate:XCTestExpectation = self.expectation(description:"Board not created on remote")
         let expectSaveBoard:XCTestExpectation = self.expectation(description:"Board not saved")
@@ -84,7 +98,9 @@ class TestsLibrary:XCTestCase {
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expectLoad.fulfill()
         }
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.newBoard() }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.newBoard() } catch {}
+        }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
 }

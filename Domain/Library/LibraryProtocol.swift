@@ -5,7 +5,7 @@ public protocol LibraryProtocol:AnyObject {
     var session:SessionProtocol { get }
     var boards:[String:BoardProtocol] { get }
     
-    func loadSession()
-    func loadBoards()
-    func newBoard()
+    func loadSession() throws
+    func loadBoards() throws
+    func newBoard() throws
 }
