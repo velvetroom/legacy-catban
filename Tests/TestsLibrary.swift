@@ -123,4 +123,19 @@ class TestsLibrary:XCTestCase {
         }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
+    
+    func testLoadRemoteSavesToCache() {
+        self.library.state = Library.stateReady
+        let expectLoaded:XCTestExpectation = self.expectation(description:"Not loaded")
+        let expectSaved:XCTestExpectation = self.expectation(description:"Not saved")
+        self.library.session.boards = [String()]
+        self.repository.onSaveBoard = { expectSaved.fulfill() }
+        self.delegate.onBoardsUpdated = {
+            expectLoaded.fulfill()
+        }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async {
+            do { try self.library.loadBoards() } catch {}
+        }
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
 }
