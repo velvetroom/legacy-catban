@@ -26,7 +26,7 @@ class LibraryBoardsLoader {
     private func next() {
         if let identifier:String = self.identifiers.first {
             self.identifiers.removeFirst()
-            self.library?.repository.loadLocal(identifier:identifier) { [weak self] (board:Configuration.BoardType) in
+            self.library?.repository.loadLocal(identifier:identifier) { [weak self] (board:Configuration.Board) in
                 self?.loaded(board:board)
             }
         } else {

@@ -10,13 +10,13 @@ class Library:LibraryProtocol {
     init() {
         self.session = SessionNil()
         self.boards = []
-        self.repository = Configuration.repositoryType.init()
+        self.repository = Factory.makeRepository()
         self.boardsLoader = LibraryBoardsLoader()
         self.boardsLoader.library = self
     }
     
     func loadSession() {
-        self.repository.loadLocal(session: { [weak self] (session:Configuration.SessionType) in
+        self.repository.loadLocal(session: { [weak self] (session:Configuration.Session) in
             self?.session = session
             self?.notifySession()
         }, error: { [weak self] (_:Error) in
@@ -34,7 +34,7 @@ class Library:LibraryProtocol {
     }
     
     private func loadSessionFailed() {
-        let session:Configuration.SessionType = Configuration.SessionType()
+        let session:Configuration.Session = Configuration.Session()
         self.session = session
         self.repository.saveLocal(session:session)
         self.notifySession()

@@ -8,7 +8,7 @@ class TestsLibrary:XCTestCase {
     
     override func setUp() {
         super.setUp()
-        Configuration.repositoryType = MockRepositoryProtocol.self
+        Configuration.repository = MockRepositoryProtocol.self
         self.library = Library()
         self.delegate = MockLibraryDelegate()
         self.library.delegate = self.delegate

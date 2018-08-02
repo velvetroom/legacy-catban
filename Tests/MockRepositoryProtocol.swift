@@ -5,12 +5,12 @@ class MockRepositoryProtocol:RepositoryProtocol {
     var error:Error?
     var onSaveSession:(() -> Void)?
     var onSaveBoard:(() -> Void)?
-    var session:Configuration.SessionType
-    var board:Configuration.BoardType
+    var session:Configuration.Session
+    var board:Configuration.Board
     
     required init() {
-        self.session = Configuration.SessionType()
-        self.board = Configuration.BoardType()
+        self.session = Configuration.Session()
+        self.board = Configuration.Board()
     }
     
     func loadLocal<Model:Decodable>(session:@escaping((Model) -> Void), error:@escaping((Error) -> Void)) {
