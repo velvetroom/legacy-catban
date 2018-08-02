@@ -13,8 +13,12 @@ public class Factory {
         return Configuration.Board()
     }
     
-    class func makeRepository() -> RepositoryProtocol {
-        return Configuration.repository.init()
+    class func makeCache() -> CacheServiceProtocol {
+        return Configuration.cacheService.init()
+    }
+    
+    class func makeDatabase() -> DatabaseServiceProtocol {
+        return Configuration.databaseService.init()
     }
     
     private init() { }

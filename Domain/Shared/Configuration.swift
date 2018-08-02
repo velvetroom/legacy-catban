@@ -5,7 +5,8 @@ public struct Configuration:ConfigurationProtocol {
     typealias Board = Board_v1
     
     public static var library:LibraryProtocol.Type = Library.self
-    public static var repository:RepositoryProtocol.Type!
+    public static var cacheService:CacheServiceProtocol.Type!
+    public static var databaseService:DatabaseServiceProtocol.Type!
 }
 
 private protocol ConfigurationProtocol {

@@ -4,15 +4,15 @@ import XCTest
 class TestsLibrary:XCTestCase {
     private var library:Library!
     private var delegate:MockLibraryDelegate!
-    private var repository:MockRepositoryProtocol!
+    private var repository:MockLocalRepositoryProtocol!
     
     override func setUp() {
         super.setUp()
-        Configuration.repository = MockRepositoryProtocol.self
+        Configuration.localRepository = MockLocalRepositoryProtocol.self
         self.library = Library()
         self.delegate = MockLibraryDelegate()
         self.library.delegate = self.delegate
-        self.repository = self.library.repository as? MockRepositoryProtocol
+        self.repository = self.library.repository as? MockLocalRepositoryProtocol
         self.library.session = Factory.makeSession()
         self.library.state = Library.stateDefault
     }

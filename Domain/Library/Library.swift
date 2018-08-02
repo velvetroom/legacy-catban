@@ -5,7 +5,8 @@ class Library:LibraryProtocol {
     weak var state:LibraryStateProtocol!
     var session:SessionProtocol
     var boards:[String:BoardProtocol]
-    var repository:RepositoryProtocol
+    var cache:CacheServiceProtocol
+    var database:DatabaseServiceProtocol
     let boardsLoader:LibraryBoardsLoader
     static let stateDefault:LibraryStateProtocol = LibraryStateDefault()
     static let stateReady:LibraryStateProtocol = LibraryStateReady()
@@ -13,10 +14,11 @@ class Library:LibraryProtocol {
     init() {
         self.session = SessionNil()
         self.boards = [:]
-        self.repository = Factory.makeRepository()
+        self.cache = Factory.makeCache()
+        self.database = Factory.makeDatabase()
         self.boardsLoader = LibraryBoardsLoader()
-        self.state = Library.stateDefault
         self.boardsLoader.library = self
+        self.state = Library.stateDefault
     }
     
     func loadSession() throws {
@@ -37,7 +39,7 @@ class Library:LibraryProtocol {
     }
     
     func saveSession() {
-        self.repository.saveLocal(session:self.session as! Configuration.Session)
+        self.cache.save(session:self.session as! Configuration.Session)
     }
     
     func notifyBoards() {

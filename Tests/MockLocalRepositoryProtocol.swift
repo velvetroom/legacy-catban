@@ -1,7 +1,7 @@
 import Foundation
 @testable import Domain
 
-class MockRepositoryProtocol:RepositoryProtocol {
+class MockLocalRepositoryProtocol:CacheServiceProtocol {
     var error:Error?
     var onSaveSession:(() -> Void)?
     var onSaveBoard:(() -> Void)?
@@ -14,7 +14,7 @@ class MockRepositoryProtocol:RepositoryProtocol {
         self.board = Configuration.Board()
     }
     
-    func loadLocal<Model>(session:@escaping((Model) -> Void),
+    func load<Model>(session:@escaping((Model) -> Void),
                           error:@escaping((Error) -> Void)) where Model:Decodable, Model:SessionProtocol {
         if let throwingError:Error = self.error {
             error(throwingError)
@@ -23,7 +23,7 @@ class MockRepositoryProtocol:RepositoryProtocol {
         }
     }
     
-    func loadLocal<Model>(identifier:String,
+    func load<Model>(identifier:String,
                           board:@escaping((Model) -> Void)) where Model:Decodable, Model:BoardProtocol {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
             guard let item:Model = self?.board as? Model else { return }
@@ -31,12 +31,20 @@ class MockRepositoryProtocol:RepositoryProtocol {
         }
     }
     
-    func saveLocal<Model>(session:Model) where Model:SessionProtocol, Model:Encodable {
+    func save<Model>(session:Model) where Model:SessionProtocol, Model:Encodable {
         self.onSaveSession?()
     }
     
-    func saveLocal<Model>(identifier:String, board:Model) where Model:Encodable, Model:BoardProtocol {
+    func save<Model>(identifier:String, board:Model) where Model:Encodable, Model:BoardProtocol {
         self.onSaveBoard?()
+    }
+    
+    func loadRemote<Model>(identifier:String,
+                           board:@escaping((Model) -> Void)) where Model:Decodable, Model:BoardProtocol {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { [weak self] in
+            guard let item:Model = self?.board as? Model else { return }
+            board(item)
+        }
     }
     
     func createRemote<Model>(board:Model,

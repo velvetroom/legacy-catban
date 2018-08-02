@@ -7,7 +7,7 @@ class TestSession:XCTestCase {
 
     override func setUp() {
         super.setUp()
-        Configuration.repository = MockRepositoryProtocol.self
+        Configuration.localRepository = MockLocalRepositoryProtocol.self
         self.session = Configuration.Session()
         self.library = Library()
     }

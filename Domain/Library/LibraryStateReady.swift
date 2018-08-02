@@ -7,10 +7,10 @@ class LibraryStateReady:LibraryStateProtocol {
     
     func newBoard(context:Library) throws {
         let board:Configuration.Board = Configuration.Board()
-        context.repository.createRemote(board:board) { (identifier:String) in
+        context.database.create(board:board) { (identifier:String) in
             context.boards[identifier] = board
             context.session.boards.append(identifier)
-            context.repository.saveLocal(identifier:identifier, board:board)
+            context.cache.save(identifier:identifier, board:board)
             context.saveSession()
             context.notifyBoards()
         }

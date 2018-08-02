@@ -26,7 +26,7 @@ class LibraryBoardsLoader {
     private func next() {
         if let identifier:String = self.identifiers.first {
             self.identifiers.removeFirst()
-            self.library?.repository.loadLocal(identifier:identifier) { [weak self] (board:Configuration.Board) in
+            self.library?.cache.load(identifier:identifier) { [weak self] (board:Configuration.Board) in
                 self?.loaded(identifier:identifier, board:board)
             }
         } else {
@@ -34,8 +34,18 @@ class LibraryBoardsLoader {
             self.library?.notifyBoards()
         }
     }
+    /*
+    private func loaded(identifier:String, local:BoardProtocol) {
+        self.library?.repository.loadRemote(identifier:identifier) { [weak self] (board:Configuration.Board) in
+            
+            self?.loaded(identifier:identifier, board:board)
+        }
+    }*/
     
     private func loaded(identifier:String, board:BoardProtocol) {
+        
+        
+        
         self.queue.async { [weak self] in
             self?.boards[identifier] = board
             self?.next()

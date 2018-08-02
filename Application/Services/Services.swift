@@ -6,6 +6,7 @@ class Services {
         if FirebaseApp.app() == nil {
             FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
             FirebaseApp.configure()
+            Firestore.firestore().settings.isPersistenceEnabled = false
         }
     }
     
