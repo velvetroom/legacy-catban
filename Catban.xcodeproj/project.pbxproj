@@ -24,7 +24,7 @@
 		DA497C782112CEFB0022ADFD /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA497C772112CEFB0022ADFD /* Factory.swift */; };
 		DA511E60210B651800ABD604 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E5F210B651800ABD604 /* Application.swift */; };
 		DA511E69210B655100ABD604 /* TestsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511E68210B655100ABD604 /* TestsLibrary.swift */; };
-		DA52931D21102B0100C5B8A5 /* MockLocalRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52931C21102B0100C5B8A5 /* MockLocalRepositoryProtocol.swift */; };
+		DA52931D21102B0100C5B8A5 /* MockCacheServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52931C21102B0100C5B8A5 /* MockCacheServiceProtocol.swift */; };
 		DA52931E21102C8500C5B8A5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
 		DA52932321102F1A00C5B8A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA52932121102F1A00C5B8A5 /* Localizable.strings */; };
 		DA5C69D9210DDF8900A07619 /* CacheServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* CacheServiceProtocol.swift */; };
@@ -50,6 +50,7 @@
 		DA899B8B2113070E00A23696 /* LibraryStateDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */; };
 		DA899B932113301200A23696 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA899B922113300200A23696 /* GoogleService-Info.plist */; };
 		DA899B97211330A600A23696 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B942113302C00A23696 /* Services.swift */; };
+		DAB5C24A21135CC5004611AC /* MockDatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5C24921135CC5004611AC /* MockDatabaseServiceProtocol.swift */; };
 		DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */; };
 		DAFD730A21135176004718FE /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD730921135176004718FE /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
@@ -98,7 +99,7 @@
 		DA497C772112CEFB0022ADFD /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		DA511E5F210B651800ABD604 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		DA511E68210B655100ABD604 /* TestsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsLibrary.swift; sourceTree = "<group>"; };
-		DA52931C21102B0100C5B8A5 /* MockLocalRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalRepositoryProtocol.swift; sourceTree = "<group>"; };
+		DA52931C21102B0100C5B8A5 /* MockCacheServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCacheServiceProtocol.swift; sourceTree = "<group>"; };
 		DA52932221102F1A00C5B8A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA5C69D8210DDF8900A07619 /* CacheServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceProtocol.swift; sourceTree = "<group>"; };
 		DA5C69DB210DE04C00A07619 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		DA899B912113300200A23696 /* application.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = application.plist; sourceTree = "<group>"; };
 		DA899B922113300200A23696 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA899B942113302C00A23696 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		DAB5C24921135CC5004611AC /* MockDatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		DAD7ABD8210B6183008BDF4F /* Catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD7AC03210B61D5008BDF4F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -196,7 +198,8 @@
 			children = (
 				DA511E68210B655100ABD604 /* TestsLibrary.swift */,
 				DA6E1D9E2111881300FDB6DF /* TestSession.swift */,
-				DA52931C21102B0100C5B8A5 /* MockLocalRepositoryProtocol.swift */,
+				DA52931C21102B0100C5B8A5 /* MockCacheServiceProtocol.swift */,
+				DAB5C24921135CC5004611AC /* MockDatabaseServiceProtocol.swift */,
 				DA6E1DA22111933000FDB6DF /* MockLibraryDelegate.swift */,
 			);
 			path = Tests;
@@ -601,8 +604,9 @@
 			files = (
 				DA511E69210B655100ABD604 /* TestsLibrary.swift in Sources */,
 				DA6E1D9F2111881300FDB6DF /* TestSession.swift in Sources */,
+				DAB5C24A21135CC5004611AC /* MockDatabaseServiceProtocol.swift in Sources */,
 				DA6E1DA32111933000FDB6DF /* MockLibraryDelegate.swift in Sources */,
-				DA52931D21102B0100C5B8A5 /* MockLocalRepositoryProtocol.swift in Sources */,
+				DA52931D21102B0100C5B8A5 /* MockCacheServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,15 +4,18 @@ class LibraryBoardsLoader {
     weak var library:Library?
     private var identifiers:[String]
     private var boards:[String:BoardProtocol]
+    private let group:DispatchGroup
     private let queue:DispatchQueue
     
     init() {
         self.identifiers = []
         self.boards = [:]
+        self.group = DispatchGroup()
         self.queue = DispatchQueue(label:Constants.identifier, qos:DispatchQoS.background,
                                    attributes:DispatchQueue.Attributes(),
                                    autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
                                    target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        self.group.setTarget(queue:self.queue)
     }
     
     func load(identifiers:[String]) {
@@ -26,26 +29,31 @@ class LibraryBoardsLoader {
     private func next() {
         if let identifier:String = self.identifiers.first {
             self.identifiers.removeFirst()
-            self.library?.cache.load(identifier:identifier) { [weak self] (board:Configuration.Board) in
-                self?.loaded(identifier:identifier, board:board)
-            }
+            self.loadRemote(identifier:identifier)
         } else {
             self.library?.boards = boards
             self.library?.notifyBoards()
         }
     }
-    /*
-    private func loaded(identifier:String, local:BoardProtocol) {
-        self.library?.repository.loadRemote(identifier:identifier) { [weak self] (board:Configuration.Board) in
-            
+    
+    private func loadRemote(identifier:String) {
+        self.group.enter()
+        self.library?.database.load(identifier:identifier) { [weak self] (board:Configuration.Board) in
+            self?.group.leave()
             self?.loaded(identifier:identifier, board:board)
         }
-    }*/
+        if group.wait(timeout:DispatchTime.now() + Constants.timeout) == DispatchTimeoutResult.timedOut {
+            self.timedout(identifier:identifier)
+        }
+    }
+    
+    private func timedout(identifier:String) {
+        self.library?.cache.load(identifier:identifier) { [weak self] (board:Configuration.Board) in
+            self?.loaded(identifier:identifier, board:board)
+        }
+    }
     
     private func loaded(identifier:String, board:BoardProtocol) {
-        
-        
-        
         self.queue.async { [weak self] in
             self?.boards[identifier] = board
             self?.next()
@@ -55,4 +63,5 @@ class LibraryBoardsLoader {
 
 private struct Constants {
     static let identifier:String = "iturbide.catban.libraryBoardsLoader"
+    static let timeout:TimeInterval = 5
 }

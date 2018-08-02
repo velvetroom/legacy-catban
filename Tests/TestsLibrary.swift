@@ -4,15 +4,18 @@ import XCTest
 class TestsLibrary:XCTestCase {
     private var library:Library!
     private var delegate:MockLibraryDelegate!
-    private var repository:MockLocalRepositoryProtocol!
+    private var repository:MockCacheServiceProtocol!
+    private var database:MockDatabaseServiceProtocol!
     
     override func setUp() {
         super.setUp()
-        Configuration.localRepository = MockLocalRepositoryProtocol.self
+        Configuration.cacheService = MockCacheServiceProtocol.self
+        Configuration.databaseService = MockDatabaseServiceProtocol.self
         self.library = Library()
         self.delegate = MockLibraryDelegate()
         self.library.delegate = self.delegate
-        self.repository = self.library.repository as? MockLocalRepositoryProtocol
+        self.repository = self.library.cache as? MockCacheServiceProtocol
+        self.database = self.library.database as? MockDatabaseServiceProtocol
         self.library.session = Factory.makeSession()
         self.library.state = Library.stateDefault
     }
@@ -89,7 +92,7 @@ class TestsLibrary:XCTestCase {
         let expectCreate:XCTestExpectation = self.expectation(description:"Board not created on remote")
         let expectSaveBoard:XCTestExpectation = self.expectation(description:"Board not saved")
         let expectSaveSession:XCTestExpectation = self.expectation(description:"Session not saved")
-        self.repository.onCreateRemote = { expectCreate.fulfill() }
+        self.database.onCreate = { expectCreate.fulfill() }
         self.repository.onSaveBoard = { expectSaveBoard.fulfill() }
         self.repository.onSaveSession = { expectSaveSession.fulfill() }
         self.delegate.onBoardsUpdated = {

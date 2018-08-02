@@ -24,11 +24,7 @@ class DatabaseService:DatabaseServiceProtocol {
     func create<M>(board:M, completion:@escaping((String) -> Void)) where M:Codable & BoardProtocol {
         let document:DocumentReference = Firestore.firestore().collection(Constants.boards).document()
         document.setData(self.json(model:board)) { (error:Error?) in
-            if let error:Error = error {
-                assertionFailure(error.localizedDescription)
-            } else {
-                completion(document.documentID)
-            }
+            completion(document.documentID)
         }
     }
     
