@@ -3,12 +3,12 @@ import Foundation
 class LibraryBoardsLoader {
     weak var library:Library?
     private var identifiers:[String]
-    private var boards:[BoardProtocol]
+    private var boards:[String:BoardProtocol]
     private let queue:DispatchQueue
     
     init() {
         self.identifiers = []
-        self.boards = []
+        self.boards = [:]
         self.queue = DispatchQueue(label:Constants.identifier, qos:DispatchQoS.background,
                                    attributes:DispatchQueue.Attributes(),
                                    autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
@@ -17,7 +17,7 @@ class LibraryBoardsLoader {
     
     func load(identifiers:[String]) {
         self.queue.async { [weak self] in
-            self?.boards = []
+            self?.boards = [:]
             self?.identifiers = identifiers
             self?.next()
         }
@@ -27,7 +27,7 @@ class LibraryBoardsLoader {
         if let identifier:String = self.identifiers.first {
             self.identifiers.removeFirst()
             self.library?.repository.loadLocal(identifier:identifier) { [weak self] (board:Configuration.Board) in
-                self?.loaded(board:board)
+                self?.loaded(identifier:identifier, board:board)
             }
         } else {
             self.loadFinished()
@@ -38,9 +38,9 @@ class LibraryBoardsLoader {
         self.library?.loaded(boards:self.boards)
     }
     
-    private func loaded(board:BoardProtocol) {
+    private func loaded(identifier:String, board:BoardProtocol) {
         self.queue.async { [weak self] in
-            self?.boards.append(board)
+            self?.boards[identifier] = board
             self?.next()
         }
     }

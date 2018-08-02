@@ -4,6 +4,6 @@ public protocol SessionProtocol:AnyObject {
     var boards:[String] { get set }
     
     func current(library:LibraryProtocol) throws -> BoardProtocol
-    func select(index:Int)
+    func select(identifier:String)
     func clearSelection()
 }

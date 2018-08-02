@@ -8,6 +8,6 @@ class SessionNil:SessionProtocol {
     }
     
     func current(library:LibraryProtocol) throws -> BoardProtocol { throw DomainError.noSession }
-    func select(index:Int) { }
+    func select(identifier:String) { }
     func clearSelection() { }
 }

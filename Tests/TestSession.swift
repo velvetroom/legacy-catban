@@ -16,10 +16,12 @@ class TestSession:XCTestCase {
         let boardA:Configuration.Board = Configuration.Board()
         let boardB:Configuration.Board = Configuration.Board()
         let boardC:Configuration.Board = Configuration.Board()
-        self.library.boards = [boardA, boardB, boardC]
+        self.library.boards["a"] = boardA
+        self.library.boards["b"] = boardB
+        self.library.boards["c"] = boardC
         XCTAssertThrowsError(try self.session.current(library:self.library), "Should be no selection")
         
-        self.session.select(index:1)
+        self.session.select(identifier:"b")
         var board:BoardProtocol!
         XCTAssertNoThrow(try board = self.session.current(library:self.library), "Failed to select")
         XCTAssertTrue(board === boardB, "Invalid board returned")

@@ -3,13 +3,13 @@ import Foundation
 class Library:LibraryProtocol {
     weak var delegate:LibraryDelegate?
     var session:SessionProtocol
-    var boards:[BoardProtocol]
+    var boards:[String:BoardProtocol]
     var repository:RepositoryProtocol
     private let boardsLoader:LibraryBoardsLoader
     
     init() {
         self.session = SessionNil()
-        self.boards = []
+        self.boards = [:]
         self.repository = Factory.makeRepository()
         self.boardsLoader = LibraryBoardsLoader()
         self.boardsLoader.library = self
@@ -28,7 +28,18 @@ class Library:LibraryProtocol {
         self.boardsLoader.load(identifiers:self.session.boards)
     }
     
-    func loaded(boards:[BoardProtocol]) {
+    func newBoard() {
+        let board:Configuration.Board = Configuration.Board()
+        self.repository.createRemote(board:board) { [weak self] (identifier:String) in
+            self?.boards[identifier] = board
+            self?.session.boards.append(identifier)
+            self?.repository.saveLocal(identifier:identifier, board:board)
+            self?.saveSession()
+            self?.notifyBoards()
+        }
+    }
+    
+    func loaded(boards:[String:BoardProtocol]) {
         self.boards = boards
         self.notifyBoards()
     }
@@ -38,6 +49,10 @@ class Library:LibraryProtocol {
         self.session = session
         self.repository.saveLocal(session:session)
         self.notifySession()
+    }
+    
+    private func saveSession() {
+        self.repository.saveLocal(session:self.session as! Configuration.Session)
     }
     
     private func notifySession() {

@@ -1,7 +1,7 @@
 import Foundation
 
 class Session_v1:SessionProtocol, Codable {
-    var selected:Int?
+    var selected:String?
     var boards:[String]
     
     init() {
@@ -9,12 +9,15 @@ class Session_v1:SessionProtocol, Codable {
     }
     
     func current(library:LibraryProtocol) throws -> BoardProtocol {
-        guard let selected:Int = self.selected else { throw DomainError.noBoardSelected }
-        return library.boards[selected]
+        guard
+            let selected:String = self.selected,
+            let board:BoardProtocol = library.boards[selected]
+        else { throw DomainError.noBoardSelected }
+        return board
     }
     
-    func select(index:Int) {
-        self.selected = index
+    func select(identifier:String) {
+        self.selected = identifier
     }
     
     func clearSelection() {

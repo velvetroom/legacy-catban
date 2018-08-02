@@ -13,10 +13,11 @@ class TestsLibrary:XCTestCase {
         self.delegate = MockLibraryDelegate()
         self.library.delegate = self.delegate
         self.repository = self.library.repository as? MockRepositoryProtocol
+        self.library.session = Factory.makeSession()
     }
     
     func testSessionStartsWithNullObject() {
-        let sessionNil:SessionNil? = self.library.session as? SessionNil
+        let sessionNil:SessionNil? = Library().session as? SessionNil
         XCTAssertNotNil(sessionNil, "Session is not the null object")
     }
     
@@ -59,13 +60,31 @@ class TestsLibrary:XCTestCase {
     
     func testLoadUpdatesNonEmptyBoards() {
         let expect:XCTestExpectation = self.expectation(description:"Not loaded")
-        self.library.session.boards = [String(), String()]
+        self.library.session.boards = ["a", "b"]
         self.delegate.onBoardsUpdated = {
             XCTAssertEqual(self.library.boards.count, self.library.session.boards.count, "Invalid amount")
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expect.fulfill()
         }
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.loadBoards() }
+        self.waitForExpectations(timeout:0.3, handler:nil)
+    }
+    
+    func testNewBoardAddsBoardAndNotifiesDelegate() {
+        let expectLoad:XCTestExpectation = self.expectation(description:"Not loaded")
+        let expectCreate:XCTestExpectation = self.expectation(description:"Board not created on remote")
+        let expectSaveBoard:XCTestExpectation = self.expectation(description:"Board not saved")
+        let expectSaveSession:XCTestExpectation = self.expectation(description:"Session not saved")
+        self.repository.onCreateRemote = { expectCreate.fulfill() }
+        self.repository.onSaveBoard = { expectSaveBoard.fulfill() }
+        self.repository.onSaveSession = { expectSaveSession.fulfill() }
+        self.delegate.onBoardsUpdated = {
+            XCTAssertFalse(self.library.session.boards.isEmpty, "Not added to session")
+            XCTAssertFalse(self.library.boards.isEmpty, "Board not added")
+            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+            expectLoad.fulfill()
+        }
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async { self.library.newBoard() }
         self.waitForExpectations(timeout:0.3, handler:nil)
     }
 }
