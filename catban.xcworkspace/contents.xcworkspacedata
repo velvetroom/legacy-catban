@@ -5,9 +5,6 @@
       location = "group:Catban.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Configuration">
-   </FileRef>
-   <FileRef
       location = "group:VersionUpdater">
    </FileRef>
    <FileRef

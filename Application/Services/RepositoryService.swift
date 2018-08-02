@@ -3,7 +3,7 @@ import Domain
 import CodableHero
 import Firebase
 
-class Repository:RepositoryProtocol {
+class RepositoryService:RepositoryProtocol {
     private let codableHero:CodableHero
     
     required init() {

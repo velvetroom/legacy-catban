@@ -27,7 +27,7 @@
 		DA52931E21102C8500C5B8A5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
 		DA52932321102F1A00C5B8A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA52932121102F1A00C5B8A5 /* Localizable.strings */; };
 		DA5C69D9210DDF8900A07619 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */; };
-		DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DB210DE04C00A07619 /* Repository.swift */; };
+		DA5C69DC210DE04C00A07619 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DB210DE04C00A07619 /* RepositoryService.swift */; };
 		DA5C69DE210DE0CF00A07619 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DD210DE0CF00A07619 /* Router.swift */; };
 		DA5C69E0210DE0FE00A07619 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C69DF210DE0FE00A07619 /* Injection.swift */; };
 		DA5D1019210DB518005E323A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1012210DB518005E323A /* Domain.framework */; };
@@ -47,6 +47,8 @@
 		DA899B87211306CE00A23696 /* LibraryStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B86211306CE00A23696 /* LibraryStateProtocol.swift */; };
 		DA899B89211306E700A23696 /* LibraryStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B88211306E700A23696 /* LibraryStateReady.swift */; };
 		DA899B8B2113070E00A23696 /* LibraryStateDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */; };
+		DA899B932113301200A23696 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA899B922113300200A23696 /* GoogleService-Info.plist */; };
+		DA899B97211330A600A23696 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899B942113302C00A23696 /* Services.swift */; };
 		DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +98,7 @@
 		DA52931C21102B0100C5B8A5 /* MockRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryProtocol.swift; sourceTree = "<group>"; };
 		DA52932221102F1A00C5B8A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA5C69D8210DDF8900A07619 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
-		DA5C69DB210DE04C00A07619 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DA5C69DB210DE04C00A07619 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		DA5C69DD210DE0CF00A07619 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DA5C69DF210DE0FE00A07619 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		DA5D1012210DB518005E323A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,11 @@
 		DA899B86211306CE00A23696 /* LibraryStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateProtocol.swift; sourceTree = "<group>"; };
 		DA899B88211306E700A23696 /* LibraryStateReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateReady.swift; sourceTree = "<group>"; };
 		DA899B8A2113070E00A23696 /* LibraryStateDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryStateDefault.swift; sourceTree = "<group>"; };
+		DA899B8F2113300200A23696 /* domain.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = domain.plist; sourceTree = "<group>"; };
+		DA899B902113300200A23696 /* tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tests.plist; sourceTree = "<group>"; };
+		DA899B912113300200A23696 /* application.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = application.plist; sourceTree = "<group>"; };
+		DA899B922113300200A23696 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA899B942113302C00A23696 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		DAD7ABD8210B6183008BDF4F /* Catban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD7AC03210B61D5008BDF4F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE68BFB210B6D3C000E5F31 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,7 +180,7 @@
 		DA511E5E210B651800ABD604 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				DA5C69DA210DE03B00A07619 /* Repository */,
+				DA5C69DA210DE03B00A07619 /* Services */,
 				DA8EDE14210C51D20056B6B0 /* Shared */,
 				DA36DEAA210EE1DA008409E8 /* Library */,
 			);
@@ -191,12 +198,13 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		DA5C69DA210DE03B00A07619 /* Repository */ = {
+		DA5C69DA210DE03B00A07619 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DA5C69DB210DE04C00A07619 /* Repository.swift */,
+				DA899B942113302C00A23696 /* Services.swift */,
+				DA5C69DB210DE04C00A07619 /* RepositoryService.swift */,
 			);
-			path = Repository;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DA5D1013210DB518005E323A /* Domain */ = {
@@ -256,6 +264,17 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		DA899B8E2113300200A23696 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DA899B8F2113300200A23696 /* domain.plist */,
+				DA899B902113300200A23696 /* tests.plist */,
+				DA899B912113300200A23696 /* application.plist */,
+				DA899B922113300200A23696 /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		DA8EDE14210C51D20056B6B0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +294,7 @@
 				DA5D1013210DB518005E323A /* Domain */,
 				DA511E67210B655100ABD604 /* Tests */,
 				DAE68BFA210B6D2F000E5F31 /* Resources */,
+				DA899B8E2113300200A23696 /* Configuration */,
 				DAD7ABD9210B6183008BDF4F /* Products */,
 				7E3922C8E94564B3315BCBED /* Pods */,
 				FB0124EE1C9F6F31EAA746DC /* Frameworks */,
@@ -436,6 +456,7 @@
 			files = (
 				DAE68BFC210B6D3C000E5F31 /* LaunchScreen.storyboard in Resources */,
 				DA52932321102F1A00C5B8A5 /* Localizable.strings in Resources */,
+				DA899B932113301200A23696 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA899B97211330A600A23696 /* Services.swift in Sources */,
 				DA135C6F2112EF7300B536CB /* LibraryCellView.swift in Sources */,
 				DA511E60210B651800ABD604 /* Application.swift in Sources */,
 				DA36DEB6210EE412008409E8 /* Colors.swift in Sources */,
@@ -560,7 +582,7 @@
 				DA36DEB0210EE22F008409E8 /* LibraryInteractor.swift in Sources */,
 				DA36DEAC210EE1FC008409E8 /* LibraryView.swift in Sources */,
 				DA36DEAE210EE217008409E8 /* LibraryPresenter.swift in Sources */,
-				DA5C69DC210DE04C00A07619 /* Repository.swift in Sources */,
+				DA5C69DC210DE04C00A07619 /* RepositoryService.swift in Sources */,
 				DA36DEB4210EE34C008409E8 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

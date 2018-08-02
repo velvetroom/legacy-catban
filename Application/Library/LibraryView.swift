@@ -14,6 +14,11 @@ class LibraryView:View<LibraryPresenter> {
         self.configureViewModel()
     }
     
+    override func viewWillTransition(to size:CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to:size, with:coordinator)
+        self.layoutCells(size:size)
+    }
+    
     private func makeOutlets() {
         let scroll:UIScrollView = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
@@ -36,6 +41,10 @@ class LibraryView:View<LibraryPresenter> {
         loading.tintColor = Colors.navyBlue
         self.loading = loading
         self.view.addSubview(loading)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem:UIBarButtonItem.SystemItem.add, target:self.presenter,
+            action:#selector(self.presenter.newBoard))
     }
     
     private func layoutOutlets() {
@@ -70,11 +79,29 @@ class LibraryView:View<LibraryPresenter> {
     }
     
     private func update(items:[LibraryItemViewModel]) {
-        
+        self.scroll.subviews.forEach { (view:UIView) in view.removeFromSuperview() }
+        items.forEach { (item:LibraryItemViewModel) in
+            let cell:LibraryCellView = LibraryCellView()
+            cell.viewModel = item
+            cell.addTarget(self.presenter, action:#selector(self.presenter.selected(cell:)),
+                           for:UIControl.Event.touchUpInside)
+            self.scroll.addSubview(cell)
+        }
+        self.layoutCells(size:self.view.bounds.size)
+    }
+    
+    private func layoutCells(size:CGSize) {
+        var y:CGFloat = 0
+        self.scroll.subviews.forEach { (view:UIView) in
+            view.frame = CGRect(x:0, y:y, width:size.width, height:Constants.cellHeight)
+            y += Constants.cellHeight
+        }
+        self.scroll.contentSize = CGSize(width:size.width, height:y)
     }
 }
 
 private struct Constants {
     static let font:CGFloat = 16
     static let margin:CGFloat = 20
+    static let cellHeight:CGFloat = 52
 }

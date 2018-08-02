@@ -3,7 +3,7 @@ import Domain
 
 class Injection {
     class func configure() {
-        Configuration.repository = Repository.self
+        Configuration.repository = RepositoryService.self
     }
     
     private init() { }
