@@ -41,12 +41,16 @@ class LibraryLoader {
     private func loadRemote(identifier:String) {
         self.group.enter()
         self.library?.database.load(identifier:identifier) { [weak self] (board:Configuration.Board) in
-            self?.group.leave()
-            self?.loaded(identifier:identifier, board:board)
+            
         }
         if group.wait(timeout:DispatchTime.now() + self.timeout) == DispatchTimeoutResult.timedOut {
             self.timedout(identifier:identifier)
         }
+    }
+    
+    private func loaded(identifier, remote:Configuration.Board) {
+        self.group.leave()
+        self.loaded(identifier:identifier, board:remote)
     }
     
     private func timedout(identifier:String) {

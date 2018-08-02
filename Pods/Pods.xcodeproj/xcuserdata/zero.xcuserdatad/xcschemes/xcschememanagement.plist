@@ -3,84 +3,84 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BoringSSL.xcscheme</key>
+		<key>13B91CE3118C83BE4DB2848DF469B015</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>CleanArchitecture.xcscheme</key>
+		<key>1BC96BED8E82CC4984352C8705A764D8</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>CodableHero.xcscheme</key>
+		<key>2E02AA559512756C568E858D95E5660B</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>FirebaseCore.xcscheme</key>
+		<key>39303F46A8C2234ACE36E8D66481EFCE</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>FirebaseFirestore.xcscheme</key>
+		<key>4081283D283C2994D4770B7D113A2647</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
+		<key>4371CCBF3CD80DCA32276995619CAF6B</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>Pods-Catban.xcscheme</key>
+		<key>609DACC69E8D766BE18B9776830BA04F</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>Protobuf.xcscheme</key>
+		<key>768911DD610C6B369E85AE56FAF6A263</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>gRPC-Core.xcscheme</key>
+		<key>9848213CB17EA84A7C6F97570F8C39A9</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>gRPC-ProtoRPC.xcscheme</key>
+		<key>D06047B7BFCCB62748DC87578A1FF324</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>gRPC-RxLibrary.xcscheme</key>
+		<key>E14E9D32DB7036E370660886E7268F0B</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>gRPC-gRPCCertificates.xcscheme</key>
+		<key>E3CEC92FCE44F7640F8EDFA86060AE28</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>gRPC.xcscheme</key>
+		<key>F3535EDFA606E7F458C510BC81D8F03A</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>leveldb-library.xcscheme</key>
+		<key>F6C7B8F46F08066F87D606DC2A0CC249</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>nanopb.xcscheme</key>
+		<key>FBB104EEF4E5C81D900B79C9993E1238</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict/>
 </dict>
 </plist>
