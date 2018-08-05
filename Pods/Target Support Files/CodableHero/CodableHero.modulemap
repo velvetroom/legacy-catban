@@ -1,0 +1,6 @@
+framework module CodableHero {
+  umbrella header "CodableHero-umbrella.h"
+
+  export *
+  module * { export * }
+}

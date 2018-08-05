@@ -1,6 +1,0 @@
-framework module Pods_Podlist_Main {
-  umbrella header "Pods-Podlist-Main-umbrella.h"
-
-  export *
-  module * { export * }
-}

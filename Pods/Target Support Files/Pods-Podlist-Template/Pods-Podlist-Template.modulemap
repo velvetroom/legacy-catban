@@ -1,6 +1,0 @@
-framework module Pods_Podlist_Template {
-  umbrella header "Pods-Podlist-Template-umbrella.h"
-
-  export *
-  module * { export * }
-}
