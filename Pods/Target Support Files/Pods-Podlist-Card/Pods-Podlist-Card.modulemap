@@ -1,6 +1,0 @@
-framework module Pods_Podlist_Card {
-  umbrella header "Pods-Podlist-Card-umbrella.h"
-
-  export *
-  module * { export * }
-}

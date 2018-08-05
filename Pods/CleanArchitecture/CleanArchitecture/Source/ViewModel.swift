@@ -1,36 +1,44 @@
 import Foundation
 
-open class ViewModel {
-    var properties:[ObjectIdentifier:Any]
+public class ViewModels {
+    var items:[ObjectIdentifier:Any]
     
-    public init() {
-        self.properties = [:]
+    init() {
+        self.items = [:]
     }
     
-    open func update<ViewModelProperty:ViewModelPropertyProtocol>(property:ViewModelProperty) {
-        let property:ViewModelProperty = self.observedProperty(property:property)
-        let identifier:ObjectIdentifier = ObjectIdentifier(type(of:property))
-        self.properties[identifier] = property
-        property.notifyObserver()
+    public func update<ViewModelType:ViewModel>(viewModel:ViewModelType) {
+        var item:Item<ViewModelType> = Item<ViewModelType>()
+        item.viewModel = viewModel
+        item.observer = self.item().observer
+        self.items[ObjectIdentifier(ViewModelType.self)] = item
+        DispatchQueue.main.async { item.observer?(viewModel) }
     }
     
-    open func property<ViewModelProperty:ViewModelPropertyProtocol>() -> ViewModelProperty {
-        let identifier:ObjectIdentifier = ObjectIdentifier(ViewModelProperty.self)
+    public func observe<ViewModelType:ViewModel>(observer:@escaping((ViewModelType) -> Void)) {
+        var item:Item<ViewModelType> = self.item()
+        item.observer = observer
+        self.items[ObjectIdentifier(ViewModelType.self)] = item
+    }
+    
+    private func item<ViewModelType:ViewModel>() -> Item<ViewModelType> {
         guard
-            let viewModel:ViewModelProperty = self.properties[identifier] as? ViewModelProperty
-        else { return ViewModelProperty() }
-        return viewModel
-    }
-    
-    private func observedProperty<ViewModelProperty:ViewModelPropertyProtocol>(
-        property:ViewModelProperty) -> ViewModelProperty {
-        var property:ViewModelProperty = property
-        if property.observing == nil {
-            let previousProperty:ViewModelProperty = self.property()
-            if previousProperty.observing != nil {
-                property.observing = previousProperty.observing
-            }
-        }
-        return property
+            let item:Item<ViewModelType> = self.items[ObjectIdentifier(ViewModelType.self)] as? Item<ViewModelType>
+        else { return Item<ViewModelType>() }
+        return item
     }
 }
+
+public protocol ViewModel {
+    init()
+}
+
+private struct Item<ViewModelType:ViewModel> {
+    var viewModel:ViewModelType
+    var observer:((ViewModelType) -> Void)?
+    
+    init() {
+        self.viewModel = ViewModelType()
+    }
+}
+

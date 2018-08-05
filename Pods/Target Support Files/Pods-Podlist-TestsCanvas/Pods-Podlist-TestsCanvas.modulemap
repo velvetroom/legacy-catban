@@ -1,6 +1,0 @@
-framework module Pods_Podlist_TestsCanvas {
-  umbrella header "Pods-Podlist-TestsCanvas-umbrella.h"
-
-  export *
-  module * { export * }
-}
